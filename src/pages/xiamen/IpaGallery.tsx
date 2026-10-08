@@ -200,7 +200,7 @@ export default function IpaGallery() {
     <div className="ipa-gallery">
       <header className="ipa-gallery-header">
         <h1>IPA gallery</h1>
-        <p>Xiamen · {gallerySounds.length} symbols from {xiamenWords.length} cited words. This is a guide to this collection, not a complete sound inventory.</p>
+        <p>Amoy · {gallerySounds.length} symbols from {xiamenWords.length} cited words. This is a guide to this collection, not a complete sound inventory.</p>
       </header>
 
       <section aria-labelledby="ipa-sounds-heading" className="ipa-gallery-section">

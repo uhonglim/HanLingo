@@ -227,7 +227,7 @@ export default function CultureGallery() {
   }
   return <div className="xc-gallery">
     <header className="xc-heading">
-      <div><h1 ref={headingRef} tabIndex={-1}>Xiamen photographs</h1>
+      <div><h1 ref={headingRef} tabIndex={-1}>Amoy photographs</h1>
         <p role="status" aria-live="polite">{filtered.length} {filtered.length === 1 ? "photograph" : "photographs"}{query.trim() && ` matching “${query.trim()}”`}</p></div>
       <div className="xc-search"><Search size={18} aria-hidden="true" />
         <label className="sr-only" htmlFor="xc-photo-search">Search photographs, places, or related words</label>

@@ -1,4 +1,5 @@
 import { groupPath, resolveReferenceRoute, subgroupPath, varietyPath } from './routing';
+import { placeLabel } from './data/language-names';
 
 export type Breadcrumb = { label: string; path: string };
 const pages: Record<string, string> = {
@@ -21,7 +22,7 @@ export function getBreadcrumbs(pathname: string): Breadcrumb[] {
   }
   const crumbs = [{ label: 'Han', path: '/' }, { label: route.language.name, path: groupPath(route.language.id) }];
   if (route.subgroup) crumbs.push({ label: route.subgroup.name, path: subgroupPath(route.language.id, route.subgroup.id) });
-  if (route.point) crumbs.push({ label: route.point.name, path: varietyPath(route.point) });
+  if (route.point) crumbs.push({ label: placeLabel(route.point), path: varietyPath(route.point) });
   if (parts[3]) crumbs.push({ label: xiamenSections[parts[3]], path });
   return crumbs;
 }

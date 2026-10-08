@@ -9,7 +9,11 @@
 - Start the left navigation directly with Mandarin, Min, Yue, Hakka, and Wu. Do not display a Han / Sinitic wrapper above them; the homepage remains the family root.
 - Navigation must be immediate and spatially stable: no slide, jump, entrance, page-transition, automatic smooth-scroll, or hover-translation effects. Only the content panel changes when opening a node. Restore the content position on browser Back.
 - On mobile, use the same tree in an accessible expandable panel, with separate disclosure controls and links.
-- Classification and URL parents must be valid. Show Quanzhang as a cluster under Southern Min; do not fabricate an article just to add a URL segment.
+- Classification and URL parents must be valid. Show the geographically specific Tsuan-Chiang cluster under Southern Min; Quanzhang is its Mandarin spelling alias. Do not fabricate an article just to add a URL segment.
+- Use one familiar or local name in visible navigation, without parenthetical alternative names. Use local names for geographically specific nodes, such as Tsuan-Chiang for 泉漳 and Amoy for 廈門. Do not replace a specific cluster with a broader label or treat Min, Southern Min, Hokkien, and Hoklo as interchangeable. Preserve alternate names in search and source notes; stable URL identifiers need not change with display names.
+- Priority: equal levels, linguistic/geographic precision, and community-owned names. Locality leaves must be comparable places: Taipak, Singapore, and George Town belong alongside Amoy under Tsuan-Chiang. Do not put a whole regional language such as Taigi at the same level as a city. Explain regional context inside the locality article.
+- Prefer documented names used in the language being described, not automatic Mandarin pinyin or English replacement. Keep source romanizations distinct from HanLingo’s trial spelling. Do not invent an endonym when evidence is missing.
+- Classifications must be sourced; mutual intelligibility is relevant evidence, not an assumed property of a shared label. Map markers locate reference places, not language boundaries or a claim that all residents speak identically.
 
 ## Presentation
 

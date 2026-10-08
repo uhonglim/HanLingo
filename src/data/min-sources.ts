@@ -11,4 +11,8 @@ export const minSources = [
     title: "Wu and Lin: Historical analysis of Min consonant endings",
     url: "https://www.ling.sinica.edu.tw/upload/researcher_manager_result/80f9788d396d35b0e8c32ebd19416ac5.pdf",
   },
+  {
+    title: "You Rujie: Southern Min, Teo Swa, and Swatow",
+    url: "https://xbzs.ecnu.edu.cn/CN/html/201601010.htm",
+  },
 ];

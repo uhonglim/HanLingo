@@ -2,6 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import AtlasMap from "../components/AtlasMap";
 import { languages, mapPoints } from "../data/languages";
+import { legacyMinPlaces, placeClusterLabel, placeLabel } from "../data/language-names";
 import { minSources } from "../data/min-sources";
 import { groupPhotos } from "../data/photography";
 import { xiamenPhotos } from "../data/xiamen-photos";
@@ -47,7 +48,8 @@ export default function MinPage() {
   const [params, setParams] = useSearchParams();
   const requestedBranch = params.get("branch");
   const branch = min.subgroups.some((item) => item.id === requestedBranch) ? requestedBranch! : "all";
-  const selectedId = params.get("place") ?? "xiamen";
+  const requestedPlace = params.get("place") ?? "xiamen";
+  const selectedId = legacyMinPlaces[requestedPlace] ?? requestedPlace;
   function setSelectedId(id: string) {
     setParams((current) => { current.set("place", id); return current; }, { replace: true });
   }
@@ -79,14 +81,14 @@ export default function MinPage() {
             Min <span lang="zh-Hant">閩語</span>
           </h1>
           <p>
-            Min includes several distinct branches rooted in Fujian. Xiamen
-            belongs to Southern Min; Fuzhou belongs to Eastern Min.
+            From Fujian to Taiwan, Singapore, and Penang. Explore Min’s branches
+            and the Hokkien varieties shaped by different communities.
           </p>
         </header>
 
         <section className="min-feature" aria-labelledby="min-xiamen-title">
           <figure className="min-feature-photo">
-            <Link to={xiamenPath} aria-label="Open the Xiamen learning chapter">
+            <Link to={xiamenPath} aria-label="Open the Amoy learning chapter">
               <img
                 src={streetPhoto.src}
                 alt={streetPhoto.alt}
@@ -99,12 +101,12 @@ export default function MinPage() {
             <Credit photo={streetPhoto} />
           </figure>
           <div className="min-feature-content">
-            <p className="min-feature-location">Southern Min · Quanzhang</p>
+            <p className="min-feature-location">Southern Min · Tsuan-Chiang</p>
             <h2 id="min-xiamen-title">
-              Xiamen <span lang="zh-Hant">廈門</span>
+              Amoy <span lang="zh-Hant">廈門</span>
             </h2>
             <Link className="min-primary-link" to={xiamenPath}>
-              Learn Xiamen <ArrowRight size={18} />
+              Learn Amoy <ArrowRight size={18} />
             </Link>
             <ul className="min-chapter-links">
               <li>
@@ -137,7 +139,7 @@ export default function MinPage() {
 
         <section className="min-regions" aria-labelledby="min-regions-title">
           <div className="min-section-heading">
-            <h2 id="min-regions-title">Regions and varieties</h2>
+            <h2 id="min-regions-title">Places and communities</h2>
             <label className="min-region-select">
               <span>Branch</span>
               <select
@@ -167,12 +169,12 @@ export default function MinPage() {
               <div className="min-map-selection" aria-live="polite">
                 <div>
                   <h3>
-                    {selected.name}{" "}
+                    {placeLabel(selected)}{" "}
                     <span lang="zh-Hant">{selected.nativeName}</span>
                   </h3>
                   <p>
                     {selectedBranch.name}
-                    {selected.subgroupId === "southern-min" && " · Quanzhang"}
+                    {placeClusterLabel(selected) && ` · ${placeClusterLabel(selected)}`}
                   </p>
                 </div>
                 <Link to={varietyPath(selected)}>
@@ -205,11 +207,11 @@ export default function MinPage() {
                     >
                       <Link className="min-place-link" to={varietyPath(point)}>
                         <span className="min-place-name">
-                          {point.name}{" "}
+                          {placeLabel(point)}{" "}
                           <span lang="zh-Hant">{point.nativeName}</span>
                         </span>
                         <span className="min-place-description">
-                          {subgroup.name} ·{" "}
+                          {placeClusterLabel(point) ?? subgroup.name} ·{" "}
                           {point.id === "xiamen"
                             ? "Learning chapter"
                             : "Reference article"}
@@ -249,7 +251,7 @@ export default function MinPage() {
           aria-labelledby="min-photos-title"
         >
           <div className="min-section-heading">
-            <h2 id="min-photos-title">Xiamen in photographs</h2>
+            <h2 id="min-photos-title">Amoy in photographs</h2>
             <Link className="min-text-link" to={`${xiamenPath}/culture`}>
               All photographs <ArrowRight size={17} />
             </Link>
@@ -282,14 +284,19 @@ export default function MinPage() {
           aria-labelledby="min-classification-title"
         >
           <div>
-            <h2 id="min-classification-title">Classification</h2>
+            <h2 id="min-classification-title">Names and branches</h2>
             <p>
-              These five branches and seven places are a selection, not the full
-              extent of Min. Quanzhou, Zhangzhou, and Xiamen belong to the
-              Quanzhang cluster within Southern Min. The other branches have
-              their own local sound systems; Xiamen readings do not represent
-              every Min variety.
+              Min → Southern Min → a cluster → a locality.
+              These {min.subgroups.length} branches and {places.length} places are a selection from Min.
+              Each community needs its own pronunciation evidence.
             </p>
+            <dl className="min-name-guide">
+              <div><dt>Tsuan-Chiang · 泉漳</dt><dd>The geographically specific Quanzhou–Zhangzhou cluster. This Hokkien-style name replaces the Mandarin spelling “Quanzhang” in navigation.</dd></div>
+              <div><dt>Teo Swa · 潮汕</dt><dd>A separate Southern Min cluster, including Teochew and Swatow. This name is also used by the <a href="https://www.csga.co.nz/about-us/" target="_blank" rel="noreferrer">Teo Swa community association</a>.</dd></div>
+              <div><dt>Hokkien · Hoklo · Taigi</dt><dd>Names whose usage depends on the community and source. They do not name all Min, and they are not extra levels in the tree.</dd></div>
+              <div><dt>Amoy · 廈門</dt><dd>An established name for Xiamen and its speech. Both names lead to the same learning chapter.</dd></div>
+            </dl>
+            <p className="min-name-sources"><a href="https://english.moe.gov.tw/fp-117-40171-b21aa-1.html" target="_blank" rel="noreferrer">Taiwan language names</a>{" · "}<a href="https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/" target="_blank" rel="noreferrer">Hokkien in Singapore</a></p>
           </div>
           <div className="min-sources">
             <h3>Sources</h3>

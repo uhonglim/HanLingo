@@ -2,6 +2,7 @@ import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Search, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { languages, mapPoints } from "../data/languages";
+import { clusterLabel, communityAliases, hokkienAliases, placeLabel } from "../data/language-names";
 import { groupPath, subgroupPath, varietyPath } from "../routing";
 import "./LanguageTree.css";
 
@@ -17,7 +18,7 @@ type TreeNode = {
 const aliases: Record<string, string> = {
   mandarin: "官话 guanhua 国语 國語 普通话 普通話 guoyu putonghua",
   min: "闽语",
-  yue: "粤语 广东话 廣東話 cantonese",
+  yue: "yue 粤语 广东话 廣東話 cantonese",
   hakka: "客家 kejia",
   wu: "吴语 wuyu",
   "min/southern-min": "闽南 hokkien hoklo minnan 泉漳 quanzhang",
@@ -63,17 +64,18 @@ function buildTree(): TreeNode {
             const id = `cluster/${language.id}/${subgroup.id}/${cluster}`;
             let clusterNode = parent.find((node) => node.id === id);
             if (!clusterNode) {
-              clusterNode = { id, name: cluster, children: [] };
+              clusterNode = { id, name: clusterLabel(cluster),
+                aliases: cluster === "Quanzhang cluster" ? hokkienAliases : cluster === "Chaoshan cluster" ? "chaoshan chao shan 潮汕 teochew swatow" : undefined, children: [] };
               parent.push(clusterNode);
             }
             parent = clusterNode.children!;
           }
           parent.push({
             id: `place/${point.id}`,
-            name: point.name,
+            name: placeLabel(point),
             nativeName: point.nativeName,
             href: varietyPath(point),
-            aliases: aliases[point.id],
+            aliases: [point.name, aliases[point.id], communityAliases[point.id]].filter(Boolean).join(" "),
             ...(point.id === "xiamen"
               ? {
                   children: [

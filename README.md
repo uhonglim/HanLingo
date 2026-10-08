@@ -2,7 +2,7 @@
 
 Learn Sinitic languages through useful words, pronunciation, and photographs of everyday culture. English is the interface language.
 
-HanLingo begins with five groups—Mandarin 官, Min 閩, Yue 粵, Hakka 客, and Wu 吳—and a separate comparison with Modern Standard Written Chinese. Its reference library connects **5 group pages, 18 subgroup pages, and 23 local-variety pages** through interactive maps, classification paths, and sourced articles. This edition focuses on present-day geography and selected communities.
+HanLingo begins with five groups—Mandarin 官, Min 閩, Yue 粵, Hakka 客, and Wu 吳—and a separate comparison with Modern Standard Written Chinese. Its reference library connects **5 group pages, 18 subgroup pages, and 33 locality pages** through interactive maps, classification paths, and sourced articles. This edition focuses on present-day geography and selected communities.
 
 ## Run locally
 
@@ -25,10 +25,11 @@ npm run preview
 
 ## Explore the site
 
-- Start learning in the [Xiamen chapter](http://127.0.0.1:5173/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Photos, IPA & tones, and Practice pages.
+- Start learning in the [Amoy chapter](http://127.0.0.1:5173/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Photos, IPA & tones, and Practice pages.
 - Filter photographs by subject or related vocabulary, open full images, and browse with the arrow keys. Photo details include cultural context, credits, and words with IPA and trial spelling.
 - Explore **27 attested IPA symbols and seven reference tone contours**. Selecting a sound or tone highlights it in matching sourced words; the collection is not a complete Xiamen sound inventory.
 - Search or save words, follow photographs to related vocabulary, explore pitch contours and a tone-sandhi example, and complete short practice rounds. Saved words and learning progress stay in this browser.
+- Min now has 17 locality entries, including 13 in Southern Min. Tsuan-Chiang includes six Taiwan locality references alongside Amoy, Tsuân-tsiu, Tsiang-tsiu, Sin-ka-pho, and Pho Te. Teo Swa separately contains Teochew and Swatow. Four new locality photographs retain full credits and licenses. The tree labels the 泉漳 cluster **Tsuan-Chiang** and the flagship chapter **Amoy**; alternate names remain searchable.
 - The homepage is the Han family tree. Open a group, then its subgroup and locality; the same tree stays in place as the adjacent content changes. The Min map remains available at `/min`.
 - Follow a map point to a dedicated local article, or pan and zoom to compare reference places.
 - Read group introductions with credited photographs, then follow the scholarly sources attached to individual articles.
@@ -46,7 +47,7 @@ npm run preview
 | `/written-chinese` | Modern Standard Written Chinese as a written reference |
 | `/about` | Project scope, method, and credits |
 
-`/min/southern-min/xiamen` opens the flagship learning chapter; append `/words`, `/culture`, `/sounds`, or `/practice` for its learning sections. Search and photograph selections have shareable URLs. The Xiamen overview connects photographs to reveal-meaning practice cards and bookmarks. Other localities retain reference articles. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
+`/min/southern-min/xiamen` opens the flagship learning chapter; append `/words`, `/culture`, `/sounds`, or `/practice` for its learning sections. Search and photograph selections have shareable URLs. The Amoy overview connects photographs to reveal-meaning practice cards and bookmarks. Other localities retain reference articles. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
 
 Navigation follows `/min` → `/min/southern-min` → `/min/southern-min/xiamen`, without a Languages layer or animated page transitions. Old `/languages/...` links redirect to the corresponding canonical path. The tree and content scroll independently, and browser Back restores the reading position. See [the navigation rules](AGENTS.md) and [navigation architecture](docs/NAVIGATION.md).
 
@@ -58,7 +59,7 @@ The interface uses a white reading surface, sans-serif type, and a cobalt H mark
 
 ## Content principles
 
-The five groups are a curated introduction, not an exhaustive classification of Sinitic. Navigation uses **group → subgroup → local variety**, with extra classification levels explained where needed: Min → Southern Min → Quanzhang cluster → Xiamen, for example. Scholarly schemes can differ; the articles identify relevant limits rather than treating every navigation level as a universally accepted taxonomic rank.
+The five groups are a curated introduction, not an exhaustive classification of Sinitic. Navigation uses **group → subgroup → local variety**, with extra classification levels explained where needed: Min → Southern Min → Tsuan-Chiang → Amoy, for example. Scholarly schemes can differ; the articles identify relevant limits rather than treating every navigation level as a universally accepted taxonomic rank.
 
 Modern Standard Written Chinese is a written reference, not a sixth spoken branch. The six letters are contributor-supplied examples awaiting linguistic and speaker review. They are not a verified dialect corpus, and the shared English text is a meaning guide rather than a word-by-word gloss. A Standard Mandarin sample is not presented as a transcription of local Beijing speech.
 

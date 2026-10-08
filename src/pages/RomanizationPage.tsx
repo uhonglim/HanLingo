@@ -207,7 +207,7 @@ export default function RomanizationPage() {
         </div>
         <div className="word-study">
           <div>
-            <span>Xiamen</span>
+            <span>Amoy</span>
             <span className="example-han" lang="zh-Hant">
               茶 · tea
             </span>
@@ -215,7 +215,7 @@ export default function RomanizationPage() {
             <span className="example-ipa">[te˨˦]</span>
           </div>
           <p>
-            The Xiamen word for tea pairs the sounds <b>[te]</b> with a rising
+            The Amoy word for tea pairs the sounds <b>[te]</b> with a rising
             citation tone <b>[˨˦]</b>, written <b>24</b>.{" "}
             <Link to="/min/southern-min/xiamen/words?q=茶">
               Word source

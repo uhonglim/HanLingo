@@ -35,6 +35,14 @@ const xiamenPath = varietyPath(xiamen);
 const lessons = ["words", "culture", "sounds", "practice"];
 
 describe("persistent language tree", () => {
+  it("keeps Teo Swa separate from Tsuan-Chiang and opens its own locality", () => {
+    const html = renderTree("/min/southern-min/shantou");
+    expectExpanded(html, "Teo Swa");
+    const current = links(html).filter(link => link.attrs["aria-current"] === "page");
+    expect(current).toHaveLength(1);
+    expect(current[0].content).toContain("Swatow");
+    expect(openingTags(html, "button").find(item => item["aria-label"] === "Expand Tsuan-Chiang")?.["aria-expanded"]).toBe("false");
+  });
   it("exposes five groups at the family root without opening an arbitrary branch", () => {
     const html = renderTree("/");
     const renderedLinks = links(html);
@@ -61,7 +69,7 @@ describe("persistent language tree", () => {
     expect(current).toHaveLength(1);
     expect(current[0].attrs.href).toBe(path);
     expect(current[0].content).toContain("Photos");
-    for (const name of ["Min", "Southern Min", "Quanzhang cluster", "Xiamen"])
+    for (const name of ["Min", "Southern Min", "Tsuan-Chiang", "Amoy"])
       expectExpanded(html, name);
 
     const targets = [...openingTags(html, "ul"), ...openingTags(html, "div")];

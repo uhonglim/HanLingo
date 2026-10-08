@@ -1,5 +1,4 @@
 import {
-  useEffect,
   useId,
   useLayoutEffect,
   useMemo,
@@ -7,7 +6,7 @@ import {
   useState,
 } from "react";
 import type { KeyboardEvent, PointerEvent } from "react";
-import { geoGraticule, geoMercator, geoPath } from "d3-geo";
+import { geoGraticule, geoPath } from "d3-geo";
 import { merge, mesh } from "topojson-client";
 import type {
   GeometryCollection,
@@ -16,6 +15,9 @@ import type {
   Topology,
 } from "topojson-specification";
 import world from "../data/east-asia-50m.json";
+import { placeLabel } from "../data/language-names";
+import { ATLAS_WIDTH as WIDTH, ATLAS_HEIGHT as HEIGHT, atlasProjection as projection, atlasPointPosition, fitAtlasPoints, revealAtlasPoint, zoomAtlasView } from "./atlasGeometry";
+import type { AtlasView as View } from "./atlasGeometry";
 import "./AtlasMap.css";
 
 export type MapPoint = {
@@ -34,11 +36,8 @@ type AtlasMapProps = {
   compact?: boolean;
 };
 
-type View = { x: number; y: number; zoom: number };
 type Label = { x: number; y: number; width: number; height: number };
 
-const WIDTH = 800;
-const HEIGHT = 640;
 const COLORS: Record<string, string> = {
   mandarin: "#b77938",
   min: "#cf593c",
@@ -46,14 +45,9 @@ const COLORS: Record<string, string> = {
   hakka: "#92769b",
   wu: "#588785",
 };
-const DEFAULT_VIEW: View = { x: 0, y: 0, zoom: 1 };
 const topology = world as unknown as Topology<{
   countries: GeometryCollection;
 }>;
-const projection = geoMercator()
-  .center([114, 31])
-  .scale(1390)
-  .translate([WIDTH / 2, HEIGHT / 2]);
 const path = geoPath(projection);
 const countryPolygons = topology.objects.countries.geometries.filter(
   (geometry): geometry is Polygon | MultiPolygon =>
@@ -66,7 +60,7 @@ const gridPath =
   path(
     geoGraticule()
       .extent([
-        [95, 10],
+        [90, -10],
         [140, 50],
       ])
       .step([5, 5])(),
@@ -120,35 +114,16 @@ export default function AtlasMap({
   // The parent may build a fresh points array on every render. A geometry key
   // keeps a reader's pan/zoom intact until the actual mapped places change.
   const geometryKey = JSON.stringify(
-    points.map((point) => [point.id, ...point.coordinates]),
+    points.map((point) => [point.id, ...point.coordinates] as const)
+      .sort((a, b) => a[0].localeCompare(b[0])),
   );
   const maxZoom = compact ? 5 : 3.2;
   const initialView = useMemo<View>(() => {
-    if (!compact) return DEFAULT_VIEW;
     const coordinates = (JSON.parse(geometryKey) as [string, number, number][])
-      .map(([, longitude, latitude]) => projection([longitude, latitude]))
-      .filter((position): position is [number, number] => position !== null);
-    if (coordinates.length === 0) return DEFAULT_VIEW;
-    const xs = coordinates.map((position) => position[0]);
-    const ys = coordinates.map((position) => position[1]);
-    const minX = Math.min(...xs),
-      maxX = Math.max(...xs);
-    const minY = Math.min(...ys),
-      maxY = Math.max(...ys);
-    const zoom = Math.max(
-      0.8,
-      Math.min(
-        5,
-        560 / Math.max(1, maxX - minX),
-        430 / Math.max(1, maxY - minY),
-      ),
-    );
-    return {
-      zoom,
-      x: WIDTH / 2 - ((minX + maxX) / 2) * zoom,
-      y: HEIGHT * 0.48 - ((minY + maxY) / 2) * zoom,
-    };
+      .map(([, longitude, latitude]): [number, number] => [longitude, latitude]);
+    return fitAtlasPoints(coordinates, compact);
   }, [compact, geometryKey]);
+  const minZoom = Math.min(0.8, initialView.zoom * 0.8);
   const svgRef = useRef<SVGSVGElement>(null);
   const drag = useRef<{
     pointerId: number;
@@ -166,7 +141,7 @@ export default function AtlasMap({
   const id = useId().replace(/:/g, "");
   const clipId = `atlas-clip-${id}`;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setView(initialView);
   }, [initialView]);
 
@@ -210,22 +185,10 @@ export default function AtlasMap({
   )?.coordinates;
   const selectedLongitude = selectedCoordinates?.[0];
   const selectedLatitude = selectedCoordinates?.[1];
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (selectedLongitude === undefined || selectedLatitude === undefined)
       return;
-    const projected = projection([selectedLongitude, selectedLatitude]);
-    if (!projected) return;
-    setView((previous) => {
-      const x = projected[0] * previous.zoom + previous.x;
-      const y = projected[1] * previous.zoom + previous.y;
-      if (x > 65 && x < WIDTH - 100 && y > 90 && y < HEIGHT - 100)
-        return previous;
-      return {
-        ...previous,
-        x: WIDTH * 0.56 - projected[0] * previous.zoom,
-        y: HEIGHT * 0.48 - projected[1] * previous.zoom,
-      };
-    });
+    setView((previous) => revealAtlasPoint(previous, [selectedLongitude, selectedLatitude]));
   }, [selectedPoint, selectedGroup, selectedLongitude, selectedLatitude]);
 
   const projectedPoints = useMemo(
@@ -234,6 +197,7 @@ export default function AtlasMap({
         const position = projection(point.coordinates) ?? [0, 0];
         return {
           ...point,
+          displayName: placeLabel(point),
           x: position[0] * view.zoom + view.x,
           y: position[1] * view.zoom + view.y,
         };
@@ -271,7 +235,7 @@ export default function AtlasMap({
       )
         continue;
       const width =
-        (Math.max(40, point.name.length * (active ? 7.2 : 6.4)) +
+        (Math.max(40, point.displayName.length * (active ? 7.2 : 6.4)) +
           (active ? 19 : 0)) /
         layout.scale;
       const height = (active ? 26 : 19) / layout.scale;
@@ -313,13 +277,9 @@ export default function AtlasMap({
 
   function zoom(factor: number) {
     setView((previous) => {
-      const nextZoom = Math.max(0.8, Math.min(maxZoom, previous.zoom * factor));
-      const ratio = nextZoom / previous.zoom;
-      return {
-        zoom: nextZoom,
-        x: WIDTH / 2 + (previous.x - WIDTH / 2) * ratio,
-        y: HEIGHT / 2 + (previous.y - HEIGHT / 2) * ratio,
-      };
+      const selected = selectedCoordinates ? atlasPointPosition(selectedCoordinates, previous) : null;
+      const anchor: [number, number] = selected && selected[0] >= 0 && selected[0] <= WIDTH && selected[1] >= 0 && selected[1] <= HEIGHT ? selected : [WIDTH / 2, HEIGHT / 2];
+      return zoomAtlasView(previous, factor, minZoom, maxZoom, anchor);
     });
   }
 
@@ -373,7 +333,7 @@ export default function AtlasMap({
         ref={svgRef}
         className="atlas-map-canvas"
         viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-        aria-label="Interactive map of selected Han language varieties. Select a city to explore its language."
+        aria-label="Interactive map of selected Han language varieties and communities. Select a reference point to explore."
         onPointerDown={startDrag}
         onPointerMove={moveDrag}
         onPointerUp={endDrag}
@@ -469,14 +429,14 @@ export default function AtlasMap({
                       ? 0
                       : -1
                   }
-                  aria-label={`Explore ${point.name}, ${point.nativeName}`}
+                  aria-label={`Explore ${point.displayName}, ${point.nativeName}`}
                   aria-pressed={active}
                   onPointerDown={(event) => event.stopPropagation()}
                   onClick={() => onSelectPoint(point.id)}
                   onKeyDown={(event) => selectWithKeyboard(event, point.id)}
                 >
                   <title>
-                    {point.name} · {point.nativeName}
+                    {point.displayName} · {point.nativeName}
                   </title>
                   <circle
                     className="atlas-place-hit"
@@ -534,7 +494,7 @@ export default function AtlasMap({
                         dominantBaseline="central"
                         fill={active ? color : undefined}
                       >
-                        {point.name}
+                        {point.displayName}
                       </text>
                     </g>
                   )}
@@ -567,7 +527,7 @@ export default function AtlasMap({
           aria-label="Zoom out"
           title="Zoom out"
           onClick={() => zoom(1 / 1.3)}
-          disabled={view.zoom <= 0.8}
+          disabled={view.zoom <= minZoom}
         >
           <svg viewBox="0 0 20 20" aria-hidden="true">
             <path d="M4 10h12" />

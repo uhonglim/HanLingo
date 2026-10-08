@@ -1,3 +1,5 @@
+import { chaoshanPoints } from "./chaoshan";
+
 export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu";
 
 export interface Language {
@@ -85,8 +87,22 @@ export const languages: Language[] = [
         name: "Southern Min",
         nativeName: "閩南語",
         description:
-          "Includes the Quanzhang cluster: Quanzhou, Zhangzhou, and Xiamen. Southern Min extends beyond this cluster.",
-        places: ["Xiamen", "Quanzhou", "Zhangzhou"],
+          "Includes Tsuan-Chiang and Teo Swa, represented by separate clusters of localities.",
+        places: [
+          "Xiamen",
+          "Quanzhou",
+          "Zhangzhou",
+          "Taipak",
+          "Tâi-lâm",
+          "Ko-hiông",
+          "Gî-lân",
+          "Lo̍k-káng",
+          "Sam-kiap",
+          "Singapore",
+          "George Town",
+          "Teochew",
+          "Swatow",
+        ],
       },
       {
         id: "eastern-min",
@@ -338,6 +354,96 @@ export const mapPoints: MapPoint[] = [
     ],
   },
   {
+    id: "taipak",
+    name: "Taipak",
+    nativeName: "臺北",
+    coordinates: [121.5654, 25.033],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Taipak",
+    ],
+  },
+  {
+    id: "tainan",
+    name: "Tâi-lâm",
+    nativeName: "臺南",
+    coordinates: [120.205, 22.997],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Tâi-lâm"],
+  },
+  {
+    id: "kaohsiung",
+    name: "Ko-hiông",
+    nativeName: "高雄",
+    coordinates: [120.3014, 22.6273],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Ko-hiông"],
+  },
+  {
+    id: "yilan",
+    name: "Gî-lân",
+    nativeName: "宜蘭",
+    coordinates: [121.753, 24.7554],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Gî-lân"],
+  },
+  {
+    id: "lukang",
+    name: "Lo̍k-káng",
+    nativeName: "鹿港",
+    coordinates: [120.435, 24.052],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Lo̍k-káng"],
+  },
+  {
+    id: "sanxia",
+    name: "Sam-kiap",
+    nativeName: "三峽",
+    coordinates: [121.369, 24.934],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Sam-kiap"],
+  },
+  {
+    id: "singapore",
+    name: "Singapore",
+    nativeName: "新加坡",
+    coordinates: [103.8198, 1.3521],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Singapore",
+    ],
+  },
+  {
+    id: "george-town",
+    name: "George Town",
+    nativeName: "喬治市",
+    coordinates: [100.3327, 5.4141],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "George Town",
+    ],
+  },
+  {
     id: "fuzhou",
     name: "Fuzhou",
     nativeName: "福州",
@@ -481,6 +587,7 @@ export const mapPoints: MapPoint[] = [
     subgroupId: "chuqu",
     hierarchy: ["Sinitic", "Wu", "Chuqu", "Lishui"],
   },
+  ...chaoshanPoints,
 ];
 
 export interface Letter {

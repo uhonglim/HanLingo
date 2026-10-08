@@ -1,4 +1,5 @@
 import { minSources } from "./min-sources";
+import { chaoshanArticles } from "./chaoshan";
 import type { LanguageId } from "./languages";
 
 export type ArticleSection = { heading: string; paragraphs: string[] };
@@ -111,6 +112,98 @@ const S = {
   zhangzhou: source(
     "Huang: Suffixation in Zhangzhou",
     "https://www.degruyterbrill.com/document/doi/10.1515/opli-2024-0004/pdf",
+  ),
+  taiwanNames: source(
+    "Taiwan Ministry of Education: Taiwanese Taigi language proficiency testing",
+    "https://english.moe.gov.tw/fp-117-40171-b21aa-1.html",
+  ),
+  taiwanVariation: source(
+    "Taiwan Ministry of Education: Taigi varieties, readings, and learning resources",
+    "https://mhi.moe.edu.tw/faq/index.html?lang=/003/&page=2&reloaded=",
+  ),
+  taiwanDictionary: source(
+    "Ministry of Education Taigi dictionary: 相 and its regional readings",
+    "https://sutian.moe.edu.tw/zh-hant/su/15319/",
+  ),
+  taiwanDictionaryGuide: source(
+    "Ministry of Education Taigi dictionary: editorial aims and principles",
+    "https://sutian.moe.edu.tw/zh-hant/piantsip/piantsip-bokphiau/",
+  ),
+  tainanName: source(
+    "MOE Taigi dictionary: 臺南, Tâi-lâm",
+    "https://sutian.moe.edu.tw/zh-hant/su/20696/",
+  ),
+  kaohsiungNames: source(
+    "MOE Taigi dictionary: Kaohsiung Red Line place names",
+    "https://sutian.moe.edu.tw/zh-hant/huliok/155/",
+  ),
+  yilanName: source(
+    "MOE Taigi dictionary: 宜蘭 place-name entries",
+    "https://sutian.moe.edu.tw/zh-hant/tshiau/?lui=tai_su&tsha=%E5%AE%9C%E8%98%AD",
+  ),
+  lukangName: source(
+    "MOE Taigi dictionary: 鹿港鎮, Lo̍k-káng-tìn",
+    "https://sutian.moe.edu.tw/zh-hant/siannuntiau/tiau/8/_/lok8/%E9%B9%BF/",
+  ),
+  sanxiaName: source(
+    "MOE Taigi dictionary: New Taipei locality names, including 三峽區",
+    "https://sutian.moe.edu.tw/zh-hant/huliok/124/?iahbe=1&pitsoo=50",
+  ),
+  taiwanBox: source(
+    "MOE Taigi dictionary: 箱 and its locality readings",
+    "https://sutian.moe.edu.tw/und-hani/su/11250/",
+  ),
+  taiwanRice: source(
+    "MOE Taigi dictionary: 飯, cooked rice, and locality comparisons",
+    "https://sutian.moe.edu.tw/zh-hant/su/9222/",
+  ),
+  taiwanLunchbox: source(
+    "MOE Taigi dictionary: 飯包 and local words for a lunchbox",
+    "https://sutian.moe.edu.tw/zh-hant/su/9233/",
+  ),
+  taiwanShu: source(
+    "MOE Taigi dictionary: 殊 and its locality readings",
+    "https://sutian.moe.edu.tw/zh-hant/su/15515/",
+  ),
+  singaporeName: source(
+    "Taipei Municipal Song Shan High School of Agriculture and Industry: Taigi word list including 新加坡",
+    "https://www.saihs.edu.tw/uploads/1678269782302fhjagTST.pdf",
+  ),
+  georgeTownName: source(
+    "Timothy Tye: Place Names in Penang Hokkien, using Taiji Romanisation",
+    "https://www.penang-traveltips.com/hokkien/place-names.htm",
+  ),
+  singaporeHokkien: source(
+    "Luo Futeng, Singapore Chinese Cultural Centre: The Hokkien dialect in Singapore",
+    "https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/",
+  ),
+  singaporeCommunity: source(
+    "National Library Board: Hokkien community",
+    "https://www.nlb.gov.sg/main/article-detail?cmsuuid=4fd3409a-79c9-4b3e-85e4-e321f764f91f",
+  ),
+  singaporeCourse: source(
+    "Singapore Hokkien Huay Kuan Cultural Academy: Basic Conversational Hokkien",
+    "https://www.shhkca.com.sg/basic-conversational-hokkien-course",
+  ),
+  singaporeOralHistory: source(
+    "National Archives of Singapore: Koh Teong Koo, Hokkien oral history",
+    "https://www.nas.gov.sg/archivesonline/oral_history_interviews/record-details/3a2f5cae-1160-11e3-83d5-0050568939ad",
+  ),
+  penangFieldwork: source(
+    "Ông Kuì-lân: On the Penang Hokkien Phonetic System and Vocabulary",
+    "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf",
+  ),
+  penangDictionary: source(
+    "Penang Hokkien Dictionary: community dictionary using Taiji Romanisation",
+    "https://www.penang-traveltips.com/dictionary/index.htm",
+  ),
+  penangPhrasebook: source(
+    "Areca Books: Speak Hokkien! Penang Hokkien Dictionary & Phrasebook",
+    "https://arecabooks.com/product/speak-hokkien/",
+  ),
+  georgeTownStreets: source(
+    "Penang Global Tourism: Marking George Town",
+    "https://mypenang.gov.my/uploads/downloads/SFA_Marking-George-Town_V04Jul24-EN.pdf",
   ),
   fuzhou: source(
     "Chan: Prelinked and floating glottal stops in Fuzhou",
@@ -323,7 +416,7 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
   ),
   yue: article(
     "Yue",
-    "Cantonese is a powerful introduction to Yue. Taishan and inland Guangxi reveal why the wider group needs more than one reference voice.",
+    "The Yue group includes Guangzhou and Hong Kong Cantonese, Taishanese, and other regional varieties. Each local page identifies its own variety.",
     [
       section(
         "Cantonese within a wider group",
@@ -539,11 +632,11 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "min/southern-min": article(
     "Southern Min",
-    "A major Min branch with Quanzhang as one important cluster, not its entire extent.",
+    "A major Min branch represented here by localities in two clusters: Tsuan-Chiang and Teo Swa.",
     [
       section(
-        "The Quanzhang connection",
-        "Quanzhou, Zhangzhou, and Xiamen form the atlas’s three Southern Min reference points. They sit within the Quanzhang cluster, which is why their paths include an extra classification level. Southern Min extends beyond this cluster, including varieties in other regions; the three points are a focused starting set rather than its complete geography.",
+        "Two clusters of localities",
+        "Tsuan-Chiang, called Quanzhang in linguistic sources, connects Quanzhou, Zhangzhou, and Xiamen with selected localities in Taiwan, Singapore, and George Town. Teo Swa, also called Chaoshan, forms a separate regional cluster represented here by Teochew and Swatow in eastern Guangdong. These locality references include cities, towns, and districts; a shared place label does not imply a uniform accent.",
       ),
       section(
         "Readings and connected speech",
@@ -552,10 +645,10 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Min"],
-      ["Selected cluster", "Quanzhang"],
-      ["Mapped localities", "Xiamen · Quanzhou · Zhangzhou"],
+      ["Selected clusters", "Tsuan-Chiang · Teo Swa"],
+      ["Taiwan references", "Taipak · Tâi-lâm · Ko-hiông · Gî-lân · Lo̍k-káng · Sam-kiap"],
     ],
-    [S.minIntro, S.minGuide, S.xiamen, S.zhangzhou],
+    [S.minIntro, S.minGuide, S.xiamen, S.zhangzhou, S.taiwanVariation, S.singaporeHokkien, S.penangFieldwork, chaoshanArticles.chaozhou.sources[0], chaoshanArticles.chaozhou.sources[2]],
   ),
   "min/eastern-min": article(
     "Eastern Min",
@@ -820,6 +913,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
 };
 
 export const varietyArticles: Record<string, EncyclopediaEntry> = {
+  ...chaoshanArticles,
   "beijing-city": article(
     "Beijing Mandarin",
     "Local Beijing speech belongs in the atlas alongside, not underneath, the standardized Mandarin reference.",
@@ -933,7 +1027,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [S.minGuide, S.minIntro, S.xiamen],
   ),
   quanzhou: article(
-    "Quanzhou",
+    "Tsuân-tsiu",
     "A Quanzhang locality where different reading layers make sound comparison especially revealing.",
     [
       section(
@@ -957,12 +1051,12 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [S.minIntro, S.minCodas, S.minGuide],
   ),
   zhangzhou: article(
-    "Zhangzhou",
+    "Tsiang-tsiu",
     "A Southern Min locality where tone patterns interact with how words are formed.",
     [
       section(
         "The Quanzhang route",
-        "Zhangzhou is one of the three mapped Quanzhang reference points, alongside Quanzhou and Xiamen. The cluster label helps locate related varieties without erasing their individual descriptions. It also avoids calling Quanzhang itself a single city dialect.",
+        "Zhangzhou is one of the atlas’s three Fujian localities in the Quanzhang cluster, alongside Quanzhou and Xiamen. The cluster label also connects regional and community Hokkien entries while preserving their individual descriptions. Quanzhang itself is not a single city dialect.",
       ),
       section(
         "Word formation and tone",
@@ -979,6 +1073,220 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["Study focus", "Suffixation and tone sandhi"],
     ],
     [S.minIntro, S.zhangzhou],
+  ),
+  "taipak": article(
+    "Taipak",
+    "The Taipei locality reference, with a named city reading in the Ministry of Education’s Taigi dictionary.",
+    [
+      section(
+        "A Taipei reference reading",
+        "The Ministry of Education’s Taigi dictionary names Taipei among its local pronunciation references. In the entry for 相, the Taipei column is labeled Quanzhou-leaning, beside separate columns for Lukang, Sanxia, Yilan, Tainan, and Kaohsiung. This provides a concrete city reference for comparison without assigning the same accent to every Taipei speaker. The table also includes Zhangzhou-leaning and mixed reference varieties, making variation visible within a single dictionary entry.",
+      ),
+      section(
+        "The wider Taiwan context",
+        "Taiwan’s Ministry of Education uses Taiwanese Taigi in its English-language materials. Its account of regional variation describes a continuum shaped by migration from Quanzhou and Zhangzhou, with different local mixtures of features. Taipak is one locality within that wider picture. The dictionary’s literary and colloquial readings add another distinction: pronunciation depends on the word and its use as well as the place associated with a reading.",
+      ),
+      section(
+        "Resources for reading and learning",
+        "The dictionary was developed for language education and general reference, with several stages of editorial review. It provides definitions, example sentences, readings, and regional comparisons. The Ministry’s learning resources also cover Tâi-lô spelling, tones, and tone changes in connected speech. Its FAQ explains why literary and colloquial readings can occur in different words and cannot always replace each other. Together, these resources support study of both everyday vocabulary and written forms, while keeping regional differences visible.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["Map anchor", "Taipak — city reference, not a dialect boundary"],
+      ["Dictionary reference", "Taipei, Quanzhou-leaning reading"],
+    ],
+    [S.taiwanNames, S.taiwanVariation, S.taiwanDictionary, S.taiwanDictionaryGuide],
+  ),
+  tainan: article(
+    "Tâi-lâm",
+    "The Tainan locality reference, named separately in the Ministry of Education’s comparison of Taiwan pronunciations.",
+    [
+      section(
+        "Tainan’s dictionary reference",
+        "Tâi-lâm is the local place-name form recorded in the Ministry of Education’s dictionary. Its pronunciation tables identify a Tainan mixed reference variety, separately from the Kaohsiung mixed reference. The shared label describes a broad combination of features; it does not mean that the two locality columns always give the same reading.",
+      ),
+      section(
+        "A comparison with 箱",
+        "For 箱, meaning a box or container, the dictionary records a different colloquial reading in its Tainan column from its Kaohsiung column. The entry also distinguishes a literary reading and illustrates the word as a measure for boxed quantities, such as a box of books. This gives a specific comparison with a known meaning and reading type, rather than a general claim that every Tainan vowel differs from every Kaohsiung vowel.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["English name", "Tainan"],
+      ["Name convention", "Tâi-lâm — MOE Tâi-lô place name"],
+      ["Dictionary reference", "臺南混合腔 — Tainan mixed reference"],
+      ["Map anchor", "Tainan urban center; not a dialect boundary"],
+    ],
+    [S.tainanName, S.taiwanBox],
+  ),
+  kaohsiung: article(
+    "Ko-hiông",
+    "The Kaohsiung locality reference, with dictionary comparisons and local names used across the city’s transport network.",
+    [
+      section(
+        "Kaohsiung’s dictionary reference",
+        "The Ministry’s dictionary labels its Kaohsiung column as a mixed reference variety. Tainan has a separate mixed column: the entry for 箱, a box, records different colloquial readings for the two localities. For lunchbox vocabulary, the Kaohsiung column lists 便當篋仔 and 飯篋仔. The comparison table also includes different choices elsewhere, showing that local comparison involves word choice as well as pronunciation.",
+      ),
+      section(
+        "Names encountered in the city",
+        "The Ministry’s Kaohsiung Red Line appendix records Ko-hiông in the names of the railway station and international airport. It also supplies local readings for stations including 美麗島 and 左營. These place-name entries provide a practical companion to everyday vocabulary: they identify particular destinations and preserve the dictionary’s own spelling convention. The map marker here locates the urban reference, rather than the full extent of the municipality or a uniform accent area.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["English name", "Kaohsiung"],
+      ["Name convention", "Ko-hiông — MOE Tâi-lô place name"],
+      ["Dictionary reference", "高雄混合腔 — Kaohsiung mixed reference"],
+      ["Map anchor", "Kaohsiung urban center; not a dialect boundary"],
+    ],
+    [S.kaohsiungNames, S.taiwanBox, S.taiwanLunchbox],
+  ),
+  yilan: article(
+    "Gî-lân",
+    "The Yilan locality reference, with a distinct named column in the Ministry of Education’s regional dictionary tables.",
+    [
+      section(
+        "The Yilan reference",
+        "The Ministry’s place-name entries record Gî-lân and distinguish the city and county names with their administrative endings. Its pronunciation tables label the Yilan reference as Zhangzhou-leaning. This map selects the city center as a locality anchor; the dictionary’s regional label is retained in the facts below rather than treated as a boundary around all local speakers.",
+      ),
+      section(
+        "An everyday comparison: cooked rice",
+        "In the entry for 飯, cooked rice, the Yilan column has a different recorded colloquial form from the Taipei, Tainan, and Kaohsiung columns. The dictionary keeps that comparison beside the meaning, examples for white rice and eating a meal, and a separate literary reading. A second entry, 飯包, lists 便當篋仔 for a lunchbox in its Yilan vocabulary column. Together these entries connect locality differences with ordinary food and meal vocabulary.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["English name", "Yilan"],
+      ["Name convention", "Gî-lân — MOE Tâi-lô place name"],
+      ["Dictionary reference", "宜蘭偏漳腔 — Yilan Zhangzhou-leaning reference"],
+      ["Map anchor", "Yilan city center; not a dialect boundary"],
+    ],
+    [S.yilanName, S.taiwanRice, S.taiwanLunchbox],
+  ),
+  lukang: article(
+    "Lo̍k-káng",
+    "The Lukang town reference, kept distinct from the other Quanzhou-leaning localities in the dictionary.",
+    [
+      section(
+        "Lukang as a named locality",
+        "The Ministry’s place-name entry gives Lo̍k-káng-tìn for Lukang Township; Lo̍k-káng is the short place name used here. Its pronunciation tables identify Lukang as a Quanzhou-leaning reference. Sanxia and Taipei are separately labeled Quanzhou-leaning references, so the dictionary preserves each locality instead of combining them into a single Taiwan-wide accent.",
+      ),
+      section(
+        "Shared features and local differences",
+        "The entry for 殊 records the same form for Lukang and Sanxia, while the Taipei column differs. In the entry for 飯, cooked rice, Lukang and Sanxia have different recorded readings. These two examples show why a shared broad reference label does not predict agreement on every word. The individual locality columns provide the evidence for each comparison, with the word’s meaning and reading context alongside it.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["English name", "Lukang"],
+      ["Administrative unit", "Township"],
+      ["Name convention", "Lo̍k-káng-tìn — MOE Tâi-lô; short name Lo̍k-káng"],
+      ["Dictionary reference", "鹿港偏泉腔 — Lukang Quanzhou-leaning reference"],
+      ["Map anchor", "Lukang town center; not a dialect boundary"],
+    ],
+    [S.lukangName, S.taiwanShu, S.taiwanRice],
+  ),
+  sanxia: article(
+    "Sam-kiap",
+    "The Sanxia locality in New Taipei, with its own Quanzhou-leaning reference in the Ministry of Education dictionary.",
+    [
+      section(
+        "A separate New Taipei locality",
+        "The Ministry’s administrative-name appendix records Sam-kiap-khu for Sanxia District in New Taipei. Sam-kiap is the short place label here. The dictionary’s Sanxia reference appears separately from its Taipei reference even though both are labeled Quanzhou-leaning. For the character 殊, Sanxia shares the recorded Lukang form while the Taipei form differs, providing a specific comparison within that broad label.",
+      ),
+      section(
+        "Local lunchbox vocabulary",
+        "The entry for 飯包 compares words for a lunchbox across localities. It lists 飯包 in the Sanxia column and 便當盒仔 in the Taipei column; Yilan has 便當篋仔. The entry’s meaning and meal-related example make this a useful everyday vocabulary comparison. These are the dictionary’s selected local forms, with Sanxia retained as its own reference rather than folded into the neighboring Taipei entry.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["English name", "Sanxia"],
+      ["Administrative unit", "District of New Taipei"],
+      ["Name convention", "Sam-kiap-khu — MOE Tâi-lô; short name Sam-kiap"],
+      ["Dictionary reference", "三峽偏泉腔 — Sanxia Quanzhou-leaning reference"],
+      ["Map anchor", "Sanxia district center; not a dialect boundary"],
+    ],
+    [S.sanxiaName, S.taiwanShu, S.taiwanLunchbox],
+  ),
+  "singapore": article(
+    "Sin-ka-pho",
+    "Hokkien in the city-state of Singapore, connected with several southern Fujian accents and a multilingual local environment.",
+    [
+      section(
+        "What Hokkien means in Singapore",
+        "Hokkien is the customary local name for this Southern Min community language. Linguist Luo Futeng’s account for the Singapore Chinese Cultural Centre connects Singapore Hokkien with migration from Quanzhou, Zhangzhou, and Xiamen, and describes the blending of features from those accents. The local name refers to this language community, rather than to every language spoken in Fujian. Singapore Hokkien has connections with several Fujian varieties instead of a single urban accent.",
+      ),
+      section(
+        "A local multilingual vocabulary",
+        "Singapore Hokkien has developed in contact with Malay, English, and Cantonese, and Luo’s account documents words borrowed from all three. Hokkien has also contributed expressions to Singapore Mandarin. Its influence appears in local geography: Lim Chu Kang, Yio Chu Kang, and Choa Chu Kang contain an element meaning house. These place names offer familiar examples of Hokkien’s presence in Singapore’s multilingual environment.",
+      ),
+      section(
+        "Community institutions and learning",
+        "The National Library Board traces Hokkien community connections around the Singapore River and Telok Ayer, including the social and religious role of Thian Hock Keng. The Singapore Hokkien Huay Kuan Cultural Academy offers a conversational course centered on speaking and listening for family and community settings.",
+        "For recorded speech, the National Archives of Singapore catalogues Hokkien oral histories, including Koh Teong Koo’s interview in the Chinese Dialect Groups collection. Its record provides interview and language metadata, with recording access governed by the archive’s conditions.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["English name", "Singapore"],
+      ["Name source", "Sin-ka-pho — Taigi educational word list"],
+      ["Map anchor", "Singapore — city reference, not a dialect boundary"],
+      ["Documented contact", "Malay · English · Cantonese"],
+    ],
+    [S.singaporeHokkien, S.singaporeCommunity, S.singaporeCourse, S.singaporeOralHistory, S.singaporeName],
+  ),
+  "george-town": article(
+    "Pho Te",
+    "George Town on Penang Island, introduced through research and learning resources for Penang Hokkien.",
+    [
+      section(
+        "George Town and Penang Hokkien",
+        "George Town is on Penang Island; the wider state also includes mainland communities. Penang Hokkien research supplies the regional context for this city page. Ông Kuì-lân’s fieldwork compares Penang speech with Zhangzhou, Longhai, Tong’an, Xiamen, and Quanzhou, identifying Zhangzhou-related features alongside local developments. The study also documents Malay and English loanwords. These findings describe Penang Hokkien rather than establishing a single accent used by every George Town speaker.",
+      ),
+      section(
+        "Two dictionary approaches",
+        "The online Penang Hokkien Dictionary is an independent community resource using Taiji Romanisation. Its search accepts several input languages and spelling systems; selecting the input mode helps locate entries. English, Malay, and Chinese explanations connect local expressions with their meanings.",
+        "Luc de Gijzel’s Speak Hokkien! Penang Hokkien Dictionary & Phrasebook is a separate resource whose publisher describes a spelling system based on Pe̍h-ōe-jī. Its practical topics include family, time, and health. These resources use different spelling conventions, so matching letters alone is insufficient for a pronunciation comparison.",
+      ),
+      section(
+        "Language in the city’s streets",
+        "Penang’s official tourism brochure describes a sculpture on Transfer Road that uses a local Hokkien–Malay expression for covered five-foot walkways. It also records a Hokkien and Cantonese name for Lebuh Acheh referring to a prominent tall building. These examples connect language with particular George Town streets and with the public artworks that document residents’ stories.",
+      ),
+    ],
+    [
+      ["Group", "Min"],
+      ["Branch", "Southern Min"],
+      ["Cluster", "Tsuan-Chiang"],
+      ["Entry type", "Locality reference"],
+      ["English name", "George Town"],
+      ["Name source", "Pho3 Te4 — Taiji Romanisation; Pho Te omits the source’s tone-category digits"],
+      ["Map anchor", "George Town — city reference, not a dialect boundary"],
+      ["Country", "Malaysia"],
+    ],
+    [S.penangFieldwork, S.penangDictionary, S.penangPhrasebook, S.georgeTownStreets, S.georgeTownName],
   ),
   fuzhou: article(
     "Fuzhou",

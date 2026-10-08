@@ -236,7 +236,7 @@ function Overview({
       <section className="xm-hero">
         <div className="xm-hero-copy">
           <h1>
-            Xiamen <span lang="zh-Hant">廈門</span>
+            Amoy <span lang="zh-Hant">廈門</span>
           </h1>
         </div>
         <Link to={`${BASE}/words`}>
@@ -290,8 +290,8 @@ function Overview({
         <div>
           <h2>Southern Min</h2>
           <p>
-            These readings follow urban Xiamen Southern Min. Quanzhou and
-            Zhangzhou have their own varieties.
+            These readings follow urban Amoy Hokkien. Tsuân-tsiu and
+            Tsiang-tsiu have their own varieties.
           </p>
           <Link to="/min/southern-min">
             Southern Min varieties <ArrowRight size={15} />
@@ -342,14 +342,14 @@ function Vocabulary({
   return (
     <div className="xm-inner">
       <header className="xm-page-heading">
-        <div><h1>Xiamen words</h1><p role="status">{words.length} of {xiamenWords.length} words{onlySaved ? " · saved" : ""}</p></div>
+        <div><h1>Amoy words</h1><p role="status">{words.length} of {xiamenWords.length} words{onlySaved ? " · saved" : ""}</p></div>
         {hasFilters && <button className="xm-clear-view" onClick={() => setParams({}, { replace: true })}>Show all words</button>}
       </header>
       <div className="xm-word-tools">
         <div className="xm-search">
           <Search size={18} />
           <label htmlFor="xiamen-word-search" className="sr-only">
-            Search Xiamen words
+            Search Amoy words
           </label>
           <input
             id="xiamen-word-search"
@@ -457,7 +457,7 @@ function Practice({
   return (
     <div className="xm-inner xm-practice">
       <header className="xm-page-heading">
-        <h1>Xiamen practice</h1>
+        <h1>Amoy practice</h1>
         {(current || finished) && <button className="xm-clear-view" onClick={() => { setRound([]); setFinished(false); setIndex(0); setAnswer(null); }}>Change practice</button>}
       </header>
       {!current && !finished ? (
@@ -625,7 +625,7 @@ export default function XiamenPage() {
             <div className="xm-inner xm-empty">
               <h1>This lesson wasn’t found.</h1>
               <Link to={BASE}>
-                <ArrowLeft size={16} /> Back to Xiamen
+                <ArrowLeft size={16} /> Back to Amoy
               </Link>
             </div>
           }

@@ -3,12 +3,14 @@ import type { CSSProperties } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, MapPin } from "lucide-react";
 import { languages, letters, mapPoints } from "../data/languages";
+import { placeLabel } from "../data/language-names";
 import {
   groupArticles,
   subgroupArticles,
   varietyArticles,
 } from "../data/encyclopedia";
 import { groupPhotos } from "../data/photography";
+import { minCommunityPhotos } from "../data/min-community-photos";
 import {
   groupPath,
   resolveReferenceRoute,
@@ -42,8 +44,9 @@ export default function ReferencePage() {
   const group = route?.language;
   const point = route?.point;
   const subgroup = route?.subgroup;
-  const photo =
-    group && route?.level === "group" ? groupPhotos[group.id] : undefined;
+  const localCluster = point && point.hierarchy.length > 4 ? point.hierarchy[3] : undefined;
+  const photo = point ? minCommunityPhotos[point.id]
+    : group && route?.level === "group" ? groupPhotos[group.id] : undefined;
   const localLetter =
     point && ["xiamen", "guangzhou", "meixian", "shanghai"].includes(point.id)
       ? letters.find((letter) => letter.id === point.groupId)
@@ -52,7 +55,8 @@ export default function ReferencePage() {
     ? mapPoints.filter(
         (place) =>
           place.groupId === group.id &&
-          (!subgroup || place.subgroupId === subgroup.id),
+          (!subgroup || place.subgroupId === subgroup.id) &&
+          (!localCluster || place.hierarchy[3] === localCluster),
       )
     : [];
   const childSubgroups = group && !subgroup ? group.subgroups : [];
@@ -61,6 +65,7 @@ export default function ReferencePage() {
         (place) =>
           place.groupId === point.groupId &&
           place.subgroupId === point.subgroupId &&
+          (!localCluster || place.hierarchy[3] === localCluster) &&
           place.id !== point.id,
       )
     : [];
@@ -103,9 +108,9 @@ export default function ReferencePage() {
               <MapPin size={14} />
               <span>
                 {point
-                  ? `${point.name} · ${subgroup?.name} · ${group.name}`
+                  ? `${placeLabel(point)} · ${subgroup?.name} · ${group.name}`
                   : subgroup
-                    ? `${subgroup.places.join(" · ")} · selected places`
+                    ? `${localPoints.map(placeLabel).join(" · ")} · selected places`
                     : group.geography}
               </span>
             </div>
@@ -205,7 +210,7 @@ export default function ReferencePage() {
                         {String(index + 1).padStart(2, "0")}
                         <span lang="zh-Hant">{child.nativeName}</span>
                       </span>
-                      <h3>{child.name}</h3>
+                      <h3>{placeLabel(child)}</h3>
                       <p>{child.description}</p>
                       <span className="reference-child-footer">
                         {childPoints.length}{" "}
@@ -228,7 +233,7 @@ export default function ReferencePage() {
                         {String(index + 1).padStart(2, "0")}
                         <span lang="zh-Hant">{child.nativeName}</span>
                       </span>
-                      <h3>{child.name}</h3>
+                      <h3>{placeLabel(child)}</h3>
                       <p>
                         {varietyArticles[child.id]?.dek ??
                           child.hierarchy.join(" · ")}
@@ -251,7 +256,7 @@ export default function ReferencePage() {
           <section className="reference-map-section" id="reference-map">
             <div className="reference-section-heading">
               <div>
-                <h2>{point ? `${point.name} on the map` : "Map"}</h2>
+                <h2>{point ? `${placeLabel(point)} on the map` : "Map"}</h2>
               </div>
             </div>
             <div className="reference-map-frame">
@@ -346,14 +351,14 @@ export default function ReferencePage() {
           {point && (
             <section className="reference-continue">
               <h2>
-                {relatedPoints.length ? "Nearby varieties" : "Related branches"}
+                {relatedPoints.length ? "Related varieties" : "Related branches"}
               </h2>
               <div className="reference-continue-links">
                 {relatedPoints.map((place) => (
                   <Link key={place.id} to={varietyPath(place)}>
                     <span>
                       <small>{subgroup?.name}</small>
-                      {place.name}
+                      {placeLabel(place)}
                       <span lang="zh-Hant">{place.nativeName}</span>
                     </span>
                     <ArrowRight size={18} />

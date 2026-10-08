@@ -10,6 +10,7 @@ import {
 import type { EncyclopediaEntry } from "./encyclopedia";
 import { languages, mapPoints } from "./languages";
 import { groupPhotos } from "./photography";
+import { minCommunityPhotos } from "./min-community-photos";
 
 function expectHttpsUrl(value: string, context: string) {
   expect(value.trim(), `${context} must have a URL`).not.toBe("");
@@ -130,6 +131,78 @@ describe("reference page coverage", () => {
       );
     }
   });
+
+  it("keeps new locality references at city scope with primary pronunciation evidence for Taipak", () => {
+    const localAnchors = [
+      ["taipak", "Taipak", "Taipak"],
+      ["singapore", "Singapore", "Sin-ka-pho"],
+      ["george-town", "George Town", "Pho Te"],
+    ] as const;
+
+    for (const [id, anchor, title] of localAnchors) {
+      const entry = varietyArticles[id];
+      expectCompleteArticle(entry, `${id} locality reference`, 200);
+      const facts = Object.fromEntries(
+        entry.facts.map((fact) => [fact.label, fact.value]),
+      );
+      expect(entry.title).toBe(title);
+      expect(facts["Entry type"]).toBe("Locality reference");
+      expect(facts["Map anchor"]).toContain(anchor);
+      expect(facts["Map anchor"]).toMatch(/city reference/i);
+      expect(facts["Map anchor"]).toMatch(/not a dialect boundary/i);
+      expect(entry.sources.length).toBeGreaterThanOrEqual(3);
+      expect(new Set(entry.sources.map((source) => source.url)).size).toBe(
+        entry.sources.length,
+      );
+    }
+
+    const taipak = varietyArticles["taipak"];
+    expect(taipak.facts.find((fact) => fact.label === "Dictionary reference")?.value).toMatch(
+      /Taipei/i,
+    );
+    expect(
+      taipak.sources.some((source) =>
+        source.url.startsWith("https://sutian.moe.edu.tw/"),
+      ),
+      "Taipak's named local reading must retain its primary dictionary source",
+    ).toBe(true);
+  });
+
+  it("preserves five distinct Taiwan locality references with sourced local names", () => {
+    const references = [
+      ["tainan", "Tâi-lâm", "Tainan", "臺南混合腔"],
+      ["kaohsiung", "Ko-hiông", "Kaohsiung", "高雄混合腔"],
+      ["yilan", "Gî-lân", "Yilan", "宜蘭偏漳腔"],
+      ["lukang", "Lo̍k-káng", "Lukang", "鹿港偏泉腔"],
+      ["sanxia", "Sam-kiap", "Sanxia", "三峽偏泉腔"],
+    ] as const;
+
+    for (const [id, localName, englishName, dictionaryLabel] of references) {
+      const point = mapPoints.find((candidate) => candidate.id === id);
+      expect(point?.name).toBe(localName);
+      expect(point?.hierarchy.at(-1)).toBe(localName);
+      const entry = varietyArticles[id];
+      expectCompleteArticle(entry, `${id} local reference`, 80);
+      expect(entry.title).toBe(localName);
+      const facts = Object.fromEntries(
+        entry.facts.map((fact) => [fact.label, fact.value]),
+      );
+      expect(facts["English name"]).toBe(englishName);
+      expect(facts["Dictionary reference"]).toContain(dictionaryLabel);
+      expect(facts["Name convention"]).toContain("MOE Tâi-lô");
+      expect(
+        entry.sources.filter((source) => new URL(source.url).hostname === "sutian.moe.edu.tw").length,
+        `${localName} needs its primary name and dictionary evidence`,
+      ).toBeGreaterThanOrEqual(2);
+    }
+
+    expect(varietyArticles.lukang.facts).toContainEqual({
+      label: "Administrative unit", value: "Township",
+    });
+    expect(varietyArticles.sanxia.facts).toContainEqual({
+      label: "Administrative unit", value: "District of New Taipei",
+    });
+  });
 });
 
 describe("documentary photo integration", () => {
@@ -139,9 +212,8 @@ describe("documentary photo integration", () => {
     );
     const publicRoot = fileURLToPath(new URL("../../public/", import.meta.url));
 
-    for (const group of languages) {
-      const photo = groupPhotos[group.id];
-      expect(photo.src, `${group.name} needs a local photo asset`).toMatch(
+    for (const [name, photo] of [...Object.entries(groupPhotos), ...Object.entries(minCommunityPhotos)]) {
+      expect(photo.src, `${name} needs a local photo asset`).toMatch(
         /^\/images\/[a-z0-9][a-z0-9._-]*\.(?:webp|jpe?g|png)$/i,
       );
       const filePath = resolve(publicRoot, `.${photo.src}`);

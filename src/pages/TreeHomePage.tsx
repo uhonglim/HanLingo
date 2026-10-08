@@ -21,12 +21,12 @@ export default function TreeHomePage() {
       </header>
       <section className="thp-xiamen" aria-labelledby="thp-xiamen-title">
         <div className="thp-entry-heading">
-          <h2 id="thp-xiamen-title">Xiamen <span lang="zh-Hant">廈門</span></h2>
-          <Link className="thp-learn" to={xiamenPath}>Learn Xiamen <ArrowRight size={17} aria-hidden="true" /></Link>
+          <h2 id="thp-xiamen-title">Amoy <span lang="zh-Hant">廈門</span></h2>
+          <Link className="thp-learn" to={xiamenPath}>Learn Amoy <ArrowRight size={17} aria-hidden="true" /></Link>
         </div>
         <div className="thp-entry-content">
           <figure className="thp-photo">
-            <Link to={xiamenPath} aria-label="Open Xiamen learning">
+            <Link to={xiamenPath} aria-label="Open Amoy learning">
               <img src={photo.src} alt={photo.alt} width="1920" height="1440" fetchPriority="high" />
             </Link>
             <figcaption>
@@ -37,7 +37,7 @@ export default function TreeHomePage() {
           </figure>
           <div className="thp-vocabulary">
             <table>
-              <caption className="sr-only">Xiamen words with citation tones</caption>
+              <caption className="sr-only">Amoy words with citation tones</caption>
               <thead><tr><th scope="col">Word</th><th scope="col">Trial spelling</th><th scope="col">IPA</th></tr></thead>
               <tbody>
                 {words.map(word => <tr key={word.id}>

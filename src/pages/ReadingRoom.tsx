@@ -7,7 +7,7 @@ import "./ReadingRoom.css";
 
 const names: Record<Letter["id"], string> = {
   mandarin: "Standard Mandarin",
-  min: "Xiamen Southern Min",
+  min: "Amoy Southern Min",
   yue: "Guangfu Cantonese",
   hakka: "Meixian Hakka",
   wu: "Shanghai Wu",

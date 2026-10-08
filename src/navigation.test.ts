@@ -7,7 +7,7 @@ describe('hierarchical navigation', () => {
       { label: 'Han', path: '/' },
       { label: 'Min', path: '/min' },
       { label: 'Southern Min', path: '/min/southern-min' },
-      { label: 'Xiamen', path: '/min/southern-min/xiamen' },
+      { label: 'Amoy', path: '/min/southern-min/xiamen' },
       { label: 'Words', path: '/min/southern-min/xiamen/words' },
     ]);
   });

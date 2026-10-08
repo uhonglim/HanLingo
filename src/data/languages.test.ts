@@ -119,6 +119,34 @@ describe("atlas data integrity", () => {
 
     expect(mapPoints.some((point) => point.name === "Quanzhang")).toBe(false);
   });
+
+  it("keeps Tsuan-Chiang localities as peers with distinct map anchors", () => {
+    const anchors = [
+      ["taipak", 121.5654, 25.033],
+      ["tainan", 120.205, 22.997],
+      ["kaohsiung", 120.3014, 22.6273],
+      ["yilan", 121.753, 24.7554],
+      ["lukang", 120.435, 24.052],
+      ["sanxia", 121.369, 24.934],
+      ["singapore", 103.8198, 1.3521],
+      ["george-town", 100.3327, 5.4141],
+    ] as const;
+
+    for (const [id, longitude, latitude] of anchors) {
+      const point = mapPoints.find((candidate) => candidate.id === id);
+      expect(point, `${id} must remain reachable from the map`).toBeDefined();
+      expect(point!.coordinates).toEqual([longitude, latitude]);
+      expect(point!.groupId).toBe("min");
+      expect(point!.subgroupId).toBe("southern-min");
+      expect(point!.hierarchy.slice(0, -1)).toEqual([
+        "Sinitic",
+        "Min",
+        "Southern Min",
+        "Quanzhang cluster",
+      ]);
+      expect(point!.hierarchy).not.toContain("Xiamen");
+    }
+  });
 });
 
 describe("letter comparison data", () => {

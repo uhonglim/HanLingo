@@ -455,6 +455,11 @@
   line-height: 1.85;
   color: var(--min-muted);
 }
+.min-name-guide { margin: 22px 0 0; }
+.min-name-guide > div { padding: 15px 0; border-top: 1px solid var(--min-line); }
+.min-name-guide dt { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+.min-name-guide dd { margin: 0; color: var(--min-muted); font-size: 14px; line-height: 1.7; }
+.min-name-sources a { text-decoration: underline; text-underline-offset: 3px; }
 .min-sources h3 {
   font-size: 16px;
   letter-spacing: -0.01em;

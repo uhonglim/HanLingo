@@ -47,7 +47,7 @@ export default function WrittenChinesePage() {
             literary, or technical.
           </p>
           <Link to="/compare?left=min&right=formal" className="text-link">
-            Compare with Xiamen <ArrowRight size={16} />
+            Compare with Amoy <ArrowRight size={16} />
           </Link>
           <div className="written-sources">
             <h3>Sources</h3>

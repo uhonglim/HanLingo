@@ -4,6 +4,7 @@ import { ArrowRight, Github, Menu, X } from "lucide-react";
 import MinPage from "./pages/MinPage";
 import { getBreadcrumbs } from "./navigation";
 import { languages } from "./data/languages";
+import { legacyMinPlaces } from "./data/language-names";
 import "./pages/pages.css";
 const TreeHomePage = lazy(() => import("./pages/TreeHomePage"));
 import LanguageTree from "./components/LanguageTree";
@@ -95,6 +96,10 @@ function LegacyLanguageRoute() {
   const { pathname, search, hash } = useLocation();
   return <Navigate to={`${pathname.replace(/^\/languages/, '') || '/'}${search}${hash}`} replace />;
 }
+function LegacyMinPlaceRoute({ place }: { place: string }) {
+  const { search, hash } = useLocation();
+  return <Navigate to={`/min/southern-min/${place}${search}${hash}`} replace />;
+}
 function NotFound() {
   return (
     <section className="not-found-page">
@@ -182,6 +187,9 @@ export default function App() {
             <Route path="/" element={<TreeHomePage />} />
             <Route path="/languages/*" element={<LegacyLanguageRoute />} />
             <Route path="/min" element={<MinPage />} />
+            {Object.entries(legacyMinPlaces).map(([oldId, place]) =>
+              <Route key={oldId} path={`/min/southern-min/${oldId}`} element={<LegacyMinPlaceRoute place={place} />} />
+            )}
             <Route
               path="/min/southern-min/xiamen/*"
               element={<XiamenPage />}

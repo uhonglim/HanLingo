@@ -1,13 +1,18 @@
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import AtlasMap from "../components/AtlasMap";
 import { languages, mapPoints } from "../data/languages";
-import { legacyMinPlaces, placeClusterLabel, placeLabel } from "../data/language-names";
+import {
+  legacyMinPlaces,
+  placeClusterLabel,
+  placeLabel,
+} from "../data/language-names";
 import { minSources } from "../data/min-sources";
 import { groupPhotos } from "../data/photography";
 import { xiamenPhotos } from "../data/xiamen-photos";
+import { romanizeXiamen } from "../data/xiamen-romanization";
 import { xiamenWords } from "../data/xiamen-lexicon";
-import { subgroupPath, varietyPath } from "../routing";
+import { varietyPath } from "../routing";
 import "./MinPage.css";
 
 const min = languages.find((language) => language.id === "min")!;
@@ -47,11 +52,19 @@ function Credit({ photo }: { photo: CreditedPhoto }) {
 export default function MinPage() {
   const [params, setParams] = useSearchParams();
   const requestedBranch = params.get("branch");
-  const branch = min.subgroups.some((item) => item.id === requestedBranch) ? requestedBranch! : "all";
+  const branch = min.subgroups.some((item) => item.id === requestedBranch)
+    ? requestedBranch!
+    : "all";
   const requestedPlace = params.get("place") ?? "xiamen";
   const selectedId = legacyMinPlaces[requestedPlace] ?? requestedPlace;
   function setSelectedId(id: string) {
-    setParams((current) => { current.set("place", id); return current; }, { replace: true });
+    setParams(
+      (current) => {
+        current.set("place", id);
+        return current;
+      },
+      { replace: true },
+    );
   }
   const visiblePlaces =
     branch === "all"
@@ -66,11 +79,16 @@ export default function MinPage() {
   function changeBranch(id: string) {
     const nextPlaces =
       id === "all" ? places : places.filter((point) => point.subgroupId === id);
-    setParams((current) => {
-      if (id === "all") current.delete("branch"); else current.set("branch", id);
-      if (!nextPlaces.some((point) => point.id === selectedId)) current.set("place", nextPlaces[0].id);
-      return current;
-    }, { replace: true });
+    setParams(
+      (current) => {
+        if (id === "all") current.delete("branch");
+        else current.set("branch", id);
+        if (!nextPlaces.some((point) => point.id === selectedId))
+          current.set("place", nextPlaces[0].id);
+        return current;
+      },
+      { replace: true },
+    );
   }
 
   return (
@@ -81,8 +99,8 @@ export default function MinPage() {
             Min <span lang="zh-Hant">閩語</span>
           </h1>
           <p>
-            From Fujian to Taiwan, Singapore, and Penang. Explore Min’s branches
-            and the Hokkien varieties shaped by different communities.
+            Min’s branches span Fujian and neighboring regions, Taiwan, and
+            communities overseas.
           </p>
         </header>
 
@@ -103,57 +121,71 @@ export default function MinPage() {
           <div className="min-feature-content">
             <p className="min-feature-location">Southern Min · Tsuan-Chiang</p>
             <h2 id="min-xiamen-title">
-              Amoy <span lang="zh-Hant">廈門</span>
+              <Link to={xiamenPath}>
+                Amoy <span lang="zh-Hant">廈門</span>
+              </Link>
             </h2>
-            <Link className="min-primary-link" to={xiamenPath}>
-              Learn Amoy <ArrowRight size={18} />
-            </Link>
-            <ul className="min-chapter-links">
-              <li>
-                <Link to={`${xiamenPath}/words`}>
-                  <span>{xiamenWords.length} words</span>
-                  <ArrowRight size={17} />
-                </Link>
-              </li>
-              <li>
-                <Link to={`${xiamenPath}/sounds`}>
-                  <span>Pronunciation & tones</span>
-                  <ArrowRight size={17} />
-                </Link>
-              </li>
-              <li>
-                <Link to={`${xiamenPath}/culture`}>
-                  <span>{xiamenPhotos.length} photographs</span>
-                  <ArrowRight size={17} />
-                </Link>
-              </li>
-              <li>
-                <Link to={`${xiamenPath}/practice`}>
-                  <span>Vocabulary practice</span>
-                  <ArrowRight size={17} />
-                </Link>
-              </li>
-            </ul>
+            <dl className="min-preview-words">
+              {["tea", "water", "person"]
+                .map((id) => xiamenWords.find((word) => word.id === id)!)
+                .map((word) => (
+                  <div key={word.id}>
+                    <dt>
+                      <a
+                        href={word.sourceUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${word.han}: reading source`}
+                        lang="zh-Hant"
+                      >
+                        {word.han}
+                      </a>
+                      <span>{word.english}</span>
+                    </dt>
+                    <dd>
+                      <strong>
+                        {romanizeXiamen(word.segments, word.tones)}
+                      </strong>
+                      <span>{word.ipa}</span>
+                    </dd>
+                  </div>
+                ))}
+            </dl>
           </div>
         </section>
 
         <section className="min-regions" aria-labelledby="min-regions-title">
           <div className="min-section-heading">
             <h2 id="min-regions-title">Places and communities</h2>
-            <label className="min-region-select">
-              <span>Branch</span>
-              <select
-                value={branch}
-                onChange={(event) => changeBranch(event.target.value)}
-              >
-                <option value="all">All branches</option>
-                {min.subgroups.map((subgroup) => (
-                  <option key={subgroup.id} value={subgroup.id}>
-                    {subgroup.name}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <div className="min-map-filters">
+              <label className="min-region-select">
+                <span>Branch</span>
+                <select
+                  value={branch}
+                  onChange={(event) => changeBranch(event.target.value)}
+                >
+                  <option value="all">All branches</option>
+                  {min.subgroups.map((subgroup) => (
+                    <option key={subgroup.id} value={subgroup.id}>
+                      {subgroup.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="min-region-select">
+                <span>Place</span>
+                <select
+                  value={selected.id}
+                  onChange={(event) => setSelectedId(event.target.value)}
+                >
+                  {visiblePlaces.map((point) => (
+                    <option key={point.id} value={point.id}>
+                      {placeLabel(point)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
           </div>
           <div className="min-region-content">
             <div className="min-map-column">
@@ -174,7 +206,8 @@ export default function MinPage() {
                   </h3>
                   <p>
                     {selectedBranch.name}
-                    {placeClusterLabel(selected) && ` · ${placeClusterLabel(selected)}`}
+                    {placeClusterLabel(selected) &&
+                      ` · ${placeClusterLabel(selected)}`}
                   </p>
                 </div>
                 <Link to={varietyPath(selected)}>
@@ -182,66 +215,6 @@ export default function MinPage() {
                   <ArrowRight size={17} />
                 </Link>
               </div>
-            </div>
-            <div className="min-place-directory">
-              <div className="min-directory-heading">
-                <h3>Places</h3>
-                <span>
-                  {visiblePlaces.length}{" "}
-                  {visiblePlaces.length === 1 ? "entry" : "entries"}
-                </span>
-              </div>
-              <ul>
-                {visiblePlaces.map((point) => {
-                  const subgroup = min.subgroups.find(
-                    (item) => item.id === point.subgroupId,
-                  )!;
-                  return (
-                    <li
-                      key={point.id}
-                      className={
-                        point.id === selected.id
-                          ? "min-place-selected"
-                          : undefined
-                      }
-                    >
-                      <Link className="min-place-link" to={varietyPath(point)}>
-                        <span className="min-place-name">
-                          {placeLabel(point)}{" "}
-                          <span lang="zh-Hant">{point.nativeName}</span>
-                        </span>
-                        <span className="min-place-description">
-                          {placeClusterLabel(point) ?? subgroup.name} ·{" "}
-                          {point.id === "xiamen"
-                            ? "Learning chapter"
-                            : "Reference article"}
-                        </span>
-                      </Link>
-                      <button
-                        type="button"
-                        onClick={() => setSelectedId(point.id)}
-                        aria-label={`Locate ${point.name} on the map`}
-                        aria-pressed={selected.id === point.id}
-                        title={`Locate ${point.name}`}
-                      >
-                        <MapPin size={18} />
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-          <div className="min-branch-directory">
-            <h3>Branch reference articles</h3>
-            <div>
-              {min.subgroups.map((subgroup) => (
-                <Link key={subgroup.id} to={subgroupPath("min", subgroup.id)}>
-                  <span>{subgroup.name}</span>
-                  <span lang="zh-Hant">{subgroup.nativeName}</span>
-                  <ArrowRight size={16} />
-                </Link>
-              ))}
             </div>
           </div>
         </section>
@@ -252,9 +225,6 @@ export default function MinPage() {
         >
           <div className="min-section-heading">
             <h2 id="min-photos-title">Amoy in photographs</h2>
-            <Link className="min-text-link" to={`${xiamenPath}/culture`}>
-              All photographs <ArrowRight size={17} />
-            </Link>
           </div>
           <div className="min-photo-grid">
             {photoStories.map((photo) => (
@@ -286,17 +256,67 @@ export default function MinPage() {
           <div>
             <h2 id="min-classification-title">Names and branches</h2>
             <p>
-              Min → Southern Min → a cluster → a locality.
-              These {min.subgroups.length} branches and {places.length} places are a selection from Min.
-              Each community needs its own pronunciation evidence.
+              Min → Southern Min → a cluster → a locality. These{" "}
+              {min.subgroups.length} branches and {places.length} places are a
+              selection from Min. Each community needs its own pronunciation
+              evidence.
             </p>
             <dl className="min-name-guide">
-              <div><dt>Tsuan-Chiang · 泉漳</dt><dd>The geographically specific Quanzhou–Zhangzhou cluster. This Hokkien-style name replaces the Mandarin spelling “Quanzhang” in navigation.</dd></div>
-              <div><dt>Teo Swa · 潮汕</dt><dd>A separate Southern Min cluster, including Teochew and Swatow. This name is also used by the <a href="https://www.csga.co.nz/about-us/" target="_blank" rel="noreferrer">Teo Swa community association</a>.</dd></div>
-              <div><dt>Hokkien · Hoklo · Taigi</dt><dd>Names whose usage depends on the community and source. They do not name all Min, and they are not extra levels in the tree.</dd></div>
-              <div><dt>Amoy · 廈門</dt><dd>An established name for Xiamen and its speech. Both names lead to the same learning chapter.</dd></div>
+              <div>
+                <dt>Tsuan-Chiang · 泉漳</dt>
+                <dd>
+                  The geographically specific Quanzhou–Zhangzhou cluster. This
+                  Hokkien-style name replaces the Mandarin spelling “Quanzhang”
+                  in navigation.
+                </dd>
+              </div>
+              <div>
+                <dt>Teo Swa · 潮汕</dt>
+                <dd>
+                  A separate Southern Min cluster, including Teochew and Swatow.
+                  This name is also used by the{" "}
+                  <a
+                    href="https://www.csga.co.nz/about-us/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Teo Swa community association
+                  </a>
+                  .
+                </dd>
+              </div>
+              <div>
+                <dt>Hokkien · Hoklo · Taigi</dt>
+                <dd>
+                  Names whose usage depends on the community and source. They do
+                  not name all Min, and they are not extra levels in the tree.
+                </dd>
+              </div>
+              <div>
+                <dt>Amoy · 廈門</dt>
+                <dd>
+                  An established name for Xiamen and its speech. Both names lead
+                  to the same learning chapter.
+                </dd>
+              </div>
             </dl>
-            <p className="min-name-sources"><a href="https://english.moe.gov.tw/fp-117-40171-b21aa-1.html" target="_blank" rel="noreferrer">Taiwan language names</a>{" · "}<a href="https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/" target="_blank" rel="noreferrer">Hokkien in Singapore</a></p>
+            <p className="min-name-sources">
+              <a
+                href="https://english.moe.gov.tw/fp-117-40171-b21aa-1.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Taiwan language names
+              </a>
+              {" · "}
+              <a
+                href="https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Hokkien in Singapore
+              </a>
+            </p>
           </div>
           <div className="min-sources">
             <h3>Sources</h3>

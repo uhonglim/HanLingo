@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { ArrowLeftRight, ArrowRight } from "lucide-react";
+import { ArrowLeftRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { letters } from "../data/languages";
 import type { Letter } from "../data/languages";
@@ -71,105 +71,92 @@ export default function ReadingRoom() {
         <h1>Compare</h1>
       </header>
 
-      <div className="rr-controls">
-        <div className="rr-selectors">
-          {selected.map((letter, index) => {
-            const side = index === 0 ? "left" : "right";
-            return (
-              <label key={side} htmlFor={`rr-${side}`}>
-                <span>{index === 0 ? "First text" : "Second text"}</span>
-                <select id={`rr-${side}`} value={letter.id} onChange={(event) => selectLetter(side, event.target.value)}>
-                  {letters.map((option) => <option key={option.id} value={option.id}>{names[option.id]}</option>)}
-                </select>
-              </label>
-            );
-          })}
-        </div>
-        <div className="rr-tools">
-          <label className="rr-english-toggle">
-            <input type="checkbox" checked={showEnglish} onChange={(event) => setShowEnglish(event.target.checked)} />
-            <span>Show English meaning</span>
-          </label>
-          <button type="button" className="rr-swap" onClick={swapLetters} disabled={left.id === right.id}>
-            <ArrowLeftRight size={16} aria-hidden="true" /> Swap texts
-          </button>
-        </div>
+      <div className="rr-tools">
+        <label className="rr-english-toggle">
+          <input type="checkbox" checked={showEnglish} onChange={(event) => setShowEnglish(event.target.checked)} />
+          <span>English meaning</span>
+        </label>
+        <button type="button" className="rr-swap" onClick={swapLetters} disabled={left.id === right.id}>
+          <ArrowLeftRight size={16} aria-hidden="true" /> Swap texts
+        </button>
       </div>
 
-      <div className="rr-letter-frame">
-        <table className="rr-passages">
-          <caption className="sr-only">{names[left.id]} and {names[right.id]}, aligned by paragraph</caption>
-          <thead>
-            <tr>
-              {selected.map((letter, index) => (
-                <th key={index} scope="col" id={`rr-column-${index}`}>
-                  <span>{names[letter.id]}</span>
-                  <span className="rr-reference-type">{letter.id === "formal" ? "Written register" : "Contributor sample"}</span>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="rr-greeting-row">
-              {selected.map((letter, index) => (
-                <td key={index} headers={`rr-column-${index}`}>
-                  <span className="rr-mobile-name">{names[letter.id]}</span>
-                  <p className="rr-han" lang="zh-Hant">{letter.salutation}</p>
-                </td>
-              ))}
-            </tr>
-            {left.paragraphs.map((_, paragraphIndex) => (
-              <Fragment key={paragraphIndex}>
-                <tr className="rr-paragraph-row">
-                  {selected.map((letter, index) => (
-                    <td key={index} headers={`rr-column-${index}`}>
-                      <span className="rr-mobile-name">{names[letter.id]}</span>
-                      <p className="rr-han" lang="zh-Hant">{letter.paragraphs[paragraphIndex]}</p>
-                    </td>
-                  ))}
-                </tr>
-                {showEnglish && (
-                  <tr className="rr-english-row">
-                    <td colSpan={2}>
-                      <span>English meaning</span>
-                      {left.english[paragraphIndex] === right.english[paragraphIndex] ? (
-                        <p>{left.english[paragraphIndex]}</p>
-                      ) : (
-                        <div className="rr-different-meanings">
-                          {selected.map((letter, index) => <p key={index}><b>{names[letter.id]}:</b> {letter.english[paragraphIndex]}</p>)}
-                        </div>
-                      )}
-                    </td>
-                  </tr>
-                )}
-              </Fragment>
+      <table className="rr-passages">
+        <caption className="sr-only">{names[left.id]} and {names[right.id]}, aligned by paragraph</caption>
+        <thead>
+          <tr>
+            {selected.map((letter, index) => (
+              <th key={index} scope="col" id={`rr-column-${index}`}>
+                <label htmlFor={`rr-${index === 0 ? "left" : "right"}`}>
+                  <span className="sr-only">{index === 0 ? "First text" : "Second text"}</span>
+                  <select id={`rr-${index === 0 ? "left" : "right"}`} value={letter.id} onChange={(event) => selectLetter(index === 0 ? "left" : "right", event.target.value)}>
+                    {letters.map((option) => <option key={option.id} value={option.id}>{names[option.id]}</option>)}
+                  </select>
+                </label>
+              </th>
             ))}
-            <tr className="rr-closing-row">
-              {selected.map((letter, index) => (
-                <td key={index} headers={`rr-column-${index}`}>
-                  <span className="rr-mobile-name">{names[letter.id]}</span>
-                  <p className="rr-han" lang="zh-Hant">{letter.closing}</p>
-                </td>
-              ))}
-            </tr>
-            <tr className="rr-review-row">
-              {selected.map((letter, index) => (
-                <td key={index} headers={`rr-column-${index}`}>
-                  <span className="rr-mobile-name">{names[letter.id]}</span>
-                  <p>{letter.note}</p>
-                </td>
-              ))}
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="rr-greeting-row">
+            {selected.map((letter, index) => (
+              <td key={index} headers={`rr-column-${index}`}>
+                <span className="rr-mobile-name">{names[letter.id]}</span>
+                <p className="rr-han" lang="zh-Hant">{letter.salutation}</p>
+              </td>
+            ))}
+          </tr>
+          {left.paragraphs.map((_, paragraphIndex) => (
+            <Fragment key={paragraphIndex}>
+              <tr className="rr-paragraph-row">
+                {selected.map((letter, index) => (
+                  <td key={index} headers={`rr-column-${index}`}>
+                    <span className="rr-mobile-name">{names[letter.id]}</span>
+                    <p className="rr-han" lang="zh-Hant">{letter.paragraphs[paragraphIndex]}</p>
+                  </td>
+                ))}
+              </tr>
+              {showEnglish && (
+                <tr className="rr-english-row">
+                  <td colSpan={2}>
+                    <span>English meaning</span>
+                    {left.english[paragraphIndex] === right.english[paragraphIndex] ? (
+                      <p>{left.english[paragraphIndex]}</p>
+                    ) : (
+                      <div className="rr-different-meanings">
+                        {selected.map((letter, index) => <p key={index}><b>{names[letter.id]}:</b> {letter.english[paragraphIndex]}</p>)}
+                      </div>
+                    )}
+                  </td>
+                </tr>
+              )}
+            </Fragment>
+          ))}
+          <tr className="rr-closing-row">
+            {selected.map((letter, index) => (
+              <td key={index} headers={`rr-column-${index}`}>
+                <span className="rr-mobile-name">{names[letter.id]}</span>
+                <p className="rr-han" lang="zh-Hant">{letter.closing}</p>
+              </td>
+            ))}
+          </tr>
+          <tr className="rr-review-row">
+            {selected.map((letter, index) => (
+              <td key={index} headers={`rr-column-${index}`}>
+                <span className="rr-mobile-name">{names[letter.id]}</span>
+                <p>{letter.note}</p>
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
       <p className="rr-provenance">
         Chinese texts are preserved as supplied. English summarizes their shared meaning;
         it is not a word-for-word gloss. No pronunciation is inferred from these samples.
       </p>
 
       <section className="rr-expressions" aria-labelledby="rr-expressions-title">
-        <h2 id="rr-expressions-title">Expressions in these letters</h2>
+        <h2 id="rr-expressions-title">Expressions</h2>
         <table className="rr-expression-table">
           <thead><tr><th scope="col">Context</th><th scope="col">{names[left.id]}</th><th scope="col">{names[right.id]}</th></tr></thead>
           <tbody>
@@ -189,13 +176,9 @@ export default function ReadingRoom() {
         <p className="rr-expression-note">These excerpts show wording in context. A shared character does not guarantee a shared pronunciation.</p>
       </section>
 
-      <section className="rr-written-reference" aria-labelledby="rr-written-title">
-        <div>
-          <h2 id="rr-written-title">Modern Standard Written Chinese</h2>
-          <p>The formal letter is a shared written register closely associated with Mandarin. It is not a sixth spoken group or a transcript of every community’s everyday speech.</p>
-        </div>
-        <Link to="/written-chinese">Read the reference <ArrowRight size={17} aria-hidden="true" /></Link>
-      </section>
+      <p className="rr-written-reference">
+        <Link to="/written-chinese">Formal written Chinese</Link> is a shared written register closely associated with Mandarin, not a sixth spoken group.
+      </p>
     </div>
   );
 }

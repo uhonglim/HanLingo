@@ -6,7 +6,7 @@
   color: var(--ipa-ink);
   min-width: 0;
 }
-.ipa-gallery-header { margin-bottom: 32px; }
+.ipa-gallery-header { margin-bottom: 28px; }
 .ipa-gallery-header > p { max-width: 660px; margin-top: 14px; color: var(--ipa-muted); font-size: 15px; }
 .ipa-gallery-section + .ipa-gallery-section { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--ipa-line); }
 .ipa-gallery h2 { scroll-margin-top: calc(var(--site-sticky-offset, 72px) + 24px); }
@@ -39,11 +39,11 @@
 .ipa-gallery-transcription { display: block; font-size: 21px; line-height: 1.55; overflow-wrap: anywhere; }
 .ipa-gallery mark { color: var(--ipa-accent); background: #eaf0ff; border-radius: 2px; }
 .ipa-gallery .ipa-gallery-romanization { color: var(--ipa-muted); font-size: 16px; margin-top: 5px; overflow-wrap: anywhere; }
-.ipa-gallery-reading-mode { display: block; color: var(--ipa-muted); font-size: 12px; margin-top: 12px; }
-.ipa-gallery-words details { margin-top: 10px; font-size: 12px; color: var(--ipa-muted); }
-.ipa-gallery-words summary { cursor: pointer; min-height: 28px; display: list-item; }
+.ipa-gallery-reading-mode { display: block; color: var(--ipa-muted); font-size: 13px; margin-top: 12px; }
+.ipa-gallery-words details { margin-top: 10px; font-size: 13px; color: var(--ipa-muted); }
+.ipa-gallery-words summary { cursor: pointer; min-height: 36px; display: list-item; }
 .ipa-gallery-words details p { margin: 8px 0; font-size: 13px; }
-.ipa-gallery-words details a { font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+.ipa-gallery-words details a { font-size: 13px; line-height: 1.65; overflow-wrap: anywhere; }
 .ipa-gallery-original span { white-space: nowrap; }
 .ipa-gallery-more { border: 1px solid #ccd5e2; border-radius: 6px; background: #fff; color: var(--ipa-accent); padding: 11px 16px; min-height: 44px; font-size: 14px; margin-top: 8px; }
 .ipa-gallery .ipa-gallery-caption { color: var(--ipa-muted); font-size: 13px; line-height: 1.65; margin-top: 16px; }
@@ -109,4 +109,16 @@
   .ipa-gallery-word-title { flex-direction: row; align-items: baseline; gap: 14px; }
   .ipa-gallery-word-title > span { min-height: auto; }
   .ipa-gallery-tone-detail { grid-template-columns: 1fr; }
+}
+
+@container (max-width: 540px) {
+  .ipa-gallery-tones { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .ipa-gallery-sandhi { grid-template-columns: 1fr; gap: 24px; }
+}
+@container (max-width: 420px) {
+  .ipa-gallery-words { grid-template-columns: 1fr; }
+  .ipa-gallery-word-title { flex-direction: row; align-items: baseline; gap: 14px; }
+  .ipa-gallery-word-title > span { min-height: auto; }
+  .ipa-gallery-selected { flex-wrap: wrap; gap: 14px; }
+  .ipa-gallery-match-count { width: 100%; padding: 0; }
 }

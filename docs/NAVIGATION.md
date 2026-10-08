@@ -20,3 +20,9 @@ Taipak, Singapore, and George Town are locality peers alongside Amoy, Tsuân-tsi
 Use the shared tree for navigation. Do not introduce another reference sidebar, chapter tab bar, or duplicate directory page. Breadcrumbs show ancestry; Compare and Romanization remain shared tools in the top bar.
 
 Southern Min also contains the **Teo Swa** cluster, with Teochew and Swatow locality pages. Expanded Tsuan-Chiang places include Tâi-lâm, Ko-hiông, Gî-lân, Lo̍k-káng, and Sam-kiap. Use community spellings in display labels; familiar Mandarin and English names remain searchable. A town or district can be a documented locality reference without being treated as an entire regional language.
+
+## Final presentation structure
+
+The three shared destinations are always visible in the top bar, including on mobile. The tree is the only persistent hierarchical navigator; breadcrumbs retain the requested ancestry. The homepage gives a compact overview of the five featured groups and an Amoy sample. Min uses a single map with branch and locality selectors, rather than a second locality directory. Its selected place opens through the existing article link.
+
+Reference articles use simple content rows for child summaries and end at their sources. Do not append a second related-links directory or repeat the site navigation in a footer. Learning pages retain only controls that operate the current lesson; avoid duplicate overview buttons pointing to destinations already in the tree. The romanization workshop uses its one word selector instead of duplicate sample buttons.

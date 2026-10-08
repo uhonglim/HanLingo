@@ -6,15 +6,6 @@ import { pitchLetters, xiamenSpellingKey } from "../data/xiamen-romanization";
 import { convertIpa } from "../data/romanization-method";
 import "./RomanizationPage.css";
 
-const sampleIds = [
-  "tea",
-  "water",
-  "vegetables",
-  "cooked-rice",
-  "noodles",
-  "one",
-  "airplane",
-];
 const marks = [
   [
     "[ã]",
@@ -76,7 +67,10 @@ export default function RomanizationPage() {
     <div className="roman-method">
       <header className="roman-header">
         <h1>HanLingo romanization</h1>
-        <p>One sound, one spelling. Write each variety as it is pronounced.</p>
+        <p>
+          Shared sound-to-spelling rules for Han languages, with each locality’s
+          pronunciation and pitch preserved. The current implementation covers Amoy.
+        </p>
         <div className="roman-core" aria-label="Agreed stop consonants">
           {[
             ["[p]", "p", "Unaspirated"],
@@ -91,12 +85,6 @@ export default function RomanizationPage() {
             </div>
           ))}
         </div>
-        <p className="roman-note">
-          A shared spelling system for Mandarin, Min, Yue, Hakka, and Wu. The
-          sound mapping is shared; pronunciations and tone contours belong to a
-          named local variety. The current working implementation supports the
-          Amoy learning material.
-        </p>
       </header>
 
       <section
@@ -105,64 +93,54 @@ export default function RomanizationPage() {
       >
         <h2 id="roman-converter-title">IPA → HanLingo</h2>
         <div className="roman-converter">
-          <div className="roman-input-heading">
-            <label htmlFor="roman-ipa">IPA with tones</label>
-            <select
-              aria-label="Load an Amoy word"
-              value={wordId}
-              onChange={(event) => loadWord(event.target.value)}
-            >
-              <option value="">Custom IPA</option>
-              {xiamenWords.map((word) => (
-                <option key={word.id} value={word.id}>
-                  {word.han} · {word.english}
-                </option>
-              ))}
-            </select>
-          </div>
-          <textarea
-            id="roman-ipa"
-            value={input}
-            onChange={(event) => {
-              setInput(event.target.value);
-              setWordId("");
-            }}
-            rows={2}
-            spellCheck={false}
-            aria-describedby="roman-input-help"
-            maxLength={500}
-          />
-          <p id="roman-input-help" className="roman-note">
-            Use pitch letters or numbers: [te˨˦] or te24. Separate syllables
-            with spaces. This converts supplied sounds; it does not predict a
-            word’s pronunciation.
-          </p>
-          <div className="roman-samples">
-            {sampleIds.map((id) => {
-              const word = xiamenWords.find((item) => item.id === id);
-              return (
-                word && (
-                  <button type="button" key={id} onClick={() => loadWord(id)}>
-                    {word.han}
-                    <span>{word.english}</span>
-                  </button>
-                )
-              );
-            })}
-          </div>
-          <div className="roman-result" aria-live="polite" aria-atomic="true">
-            {conversion.error ? (
-              <p className="roman-error">{conversion.error}</p>
-            ) : (
-              <>
-                <span>HanLingo · working spelling</span>
-                <output htmlFor="roman-ipa">
-                  {conversion.syllables
-                    .map((syllable) => syllable.spelling)
-                    .join(" ")}
-                </output>
-              </>
-            )}
+          <div className="roman-conversion-grid">
+            <div className="roman-input">
+              <div className="roman-input-heading">
+                <label htmlFor="roman-ipa">IPA with tones</label>
+                <select
+                  aria-label="Load an Amoy word"
+                  value={wordId}
+                  onChange={(event) => loadWord(event.target.value)}
+                >
+                  <option value="">Custom IPA</option>
+                  {xiamenWords.map((word) => (
+                    <option key={word.id} value={word.id}>
+                      {word.han} · {word.english}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <textarea
+                id="roman-ipa"
+                value={input}
+                onChange={(event) => {
+                  setInput(event.target.value);
+                  setWordId("");
+                }}
+                rows={3}
+                spellCheck={false}
+                aria-describedby="roman-input-help"
+                maxLength={500}
+              />
+              <p id="roman-input-help" className="roman-note">
+                [te˨˦] or te24 · Separate syllables with spaces. Supplied sounds only;
+                the converter does not predict pronunciation.
+              </p>
+            </div>
+            <div className="roman-result" aria-live="polite" aria-atomic="true">
+              {conversion.error ? (
+                <p className="roman-error">{conversion.error}</p>
+              ) : (
+                <>
+                  <span>HanLingo <small>Working spelling</small></span>
+                  <output htmlFor="roman-ipa">
+                    {conversion.syllables
+                      .map((syllable) => syllable.spelling)
+                      .join(" ")}
+                  </output>
+                </>
+              )}
+            </div>
           </div>
           {conversion.syllables.length > 0 && (
             <div className="roman-breakdown">
@@ -215,7 +193,7 @@ export default function RomanizationPage() {
 
       <section className="roman-section" aria-labelledby="roman-rules-title">
         <div className="roman-section-heading">
-          <h2 id="roman-rules-title">The sound key</h2>
+          <h2 id="roman-rules-title">Sound key</h2>
           <input
             aria-label="Search sound mappings"
             type="search"
@@ -225,55 +203,57 @@ export default function RomanizationPage() {
           />
         </div>
         <p>
-          <b>Agreed</b> rules are our settled starting points. <b>Trial</b>{" "}
-          spellings are implemented for testing and remain open to revision.
+          <b>Agreed</b> rules are settled starting points. <b>Trial</b> spellings
+          remain open to revision.
         </p>
-        <div className="roman-table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">IPA</th>
-                <th scope="col">HanLingo</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rules.map((rule) => (
-                <tr key={rule.ipa}>
-                  <td className="roman-symbol">[{rule.ipa}]</td>
-                  <td>
-                    <strong>{rule.spelling}</strong>
-                  </td>
-                  <td>{rule.status}</td>
+        <div className="roman-key-layout">
+          <div className="roman-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">IPA</th>
+                  <th scope="col">HanLingo</th>
+                  <th scope="col">Status</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          {!rules.length && <p>No matching sound.</p>}
-        </div>
-        <div className="roman-rule-notes">
-          <div>
-            <h3>h marks aspiration</h3>
-            <p>
-              p → ph, ts → tsh, ch → chh. The whole base spelling receives h. A
-              standalone h still represents [h] in the working key.
-            </p>
+              </thead>
+              <tbody>
+                {rules.map((rule) => (
+                  <tr key={rule.ipa}>
+                    <td className="roman-symbol">[{rule.ipa}]</td>
+                    <td>
+                      <strong>{rule.spelling}</strong>
+                    </td>
+                    <td>{rule.status}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {!rules.length && <p>No matching sound.</p>}
           </div>
-          <div>
-            <h3>Different places of articulation</h3>
-            <p>
-              ts / tsh represent [t͡s] / [t͡sʰ]; ch / chh represent [tɕ] / [tɕʰ].
-              They remain separate even when another spelling system uses the
-              same letters.
-            </p>
-          </div>
-          <div>
-            <h3>Vowels stay separate from tone</h3>
-            <p>
-              Trial â represents [ɐ], not a tone. Trial oo, oe, er, and ae
-              represent [ɔ], [ɤ], [ə], and [ɛ]. Tone follows the syllable as
-              numbers.
-            </p>
+          <div className="roman-rule-notes roman-key-notes">
+            <div>
+              <h3>h marks aspiration</h3>
+              <p>
+                p → ph, ts → tsh, ch → chh. The whole base spelling receives h. A
+                standalone h still represents [h] in the working key.
+              </p>
+            </div>
+            <div>
+              <h3>Different places of articulation</h3>
+              <p>
+                ts / tsh represent [t͡s] / [t͡sʰ]; ch / chh represent [tɕ] / [tɕʰ].
+                They remain separate even when another spelling system uses the
+                same letters.
+              </p>
+            </div>
+            <div>
+              <h3>Vowels stay separate from tone</h3>
+              <p>
+                Trial â represents [ɐ], not a tone. Trial oo, oe, er, and ae
+                represent [ɔ], [ɤ], [ə], and [ɛ]. Tone follows the syllable as
+                numbers.
+              </p>
+            </div>
           </div>
         </div>
         <details className="roman-details">
@@ -289,7 +269,7 @@ export default function RomanizationPage() {
       </section>
 
       <section className="roman-section" aria-labelledby="roman-tones-title">
-        <h2 id="roman-tones-title">Write the pitch, not a tone category</h2>
+        <h2 id="roman-tones-title">Pitch contours</h2>
         <p>
           Append the supplied contour to each syllable. 1 is low and 5 is high,
           relative to the speaker’s range. These are pitch levels, not
@@ -365,7 +345,7 @@ export default function RomanizationPage() {
       </section>
 
       <section className="roman-section">
-        <h2>Keep the detail</h2>
+        <h2>Phonetic detail</h2>
         <p>
           The working spelling retains these IPA marks until we settle dedicated
           conventions.
@@ -398,16 +378,8 @@ export default function RomanizationPage() {
       </section>
 
       <section className="roman-section">
-        <h2>Where the system stands</h2>
-        <div className="roman-rule-notes">
-          <div>
-            <h3>Shared rules</h3>
-            <p>
-              p / ph / b, ch / chh, ts / tsh, h for aspiration, and
-              pitch-contour suffixes. A common character does not require a
-              common spelling when its local sounds differ.
-            </p>
-          </div>
+        <h2>Scope and open decisions</h2>
+        <div className="roman-rule-notes roman-scope">
           <div>
             <h3>Working material</h3>
             <p>
@@ -415,7 +387,7 @@ export default function RomanizationPage() {
               this page. Their broad dictionary IPA, source readings, and
               citation or connected-speech status remain attached to each word.
             </p>
-            <Link to="/min/southern-min/xiamen/words">Amoy words →</Link>
+            <Link to="/min/southern-min/xiamen/words">Amoy words</Link>
           </div>
           <div>
             <h3>Next decisions</h3>
@@ -429,8 +401,9 @@ export default function RomanizationPage() {
           </div>
         </div>
         <p>
-          Min, Mandarin, Yue, Hakka, and Wu need locality-specific inventories
-          and pronunciation evidence. This is our working proposal, not a
+          A shared character can have different spellings when its local sounds
+          differ. Min, Mandarin, Yue, Hakka, and Wu each need locality-specific
+          inventories and pronunciation evidence. This is our working proposal, not a
           completed standard or an automatic character-to-speech system.
           Documented place names such as Ko-hiông retain their source spelling;
           they are not silently converted into HanLingo spelling.

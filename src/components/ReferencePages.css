@@ -110,32 +110,55 @@
   text-underline-offset: 2px;
 }
 
-.reference-reading-layout { max-width: 760px; }
-.reference-prose { min-width: 0; }
+.reference-reading-layout {
+  max-width: 760px;
+}
+.reference-prose {
+  min-width: 0;
+}
 .reference-english-name {
   margin: -4px 0 18px;
   color: #616e80;
   font-size: 16px;
 }
-.reference-notes { margin-top: 24px; border-block: 1px solid #e5e8eb; }
+.reference-notes {
+  margin-top: 24px;
+  border-block: 1px solid #e5e8eb;
+}
 .reference-notes summary {
   padding: 18px 0;
   font-size: 15px;
   font-weight: 650;
   cursor: pointer;
 }
-.reference-notes summary:hover { color: var(--reference-color); }
-.reference-notes dl { margin: 0 0 20px; }
+.reference-notes summary:hover {
+  color: var(--reference-color);
+}
+.reference-notes dl {
+  margin: 0 0 20px;
+}
 .reference-notes dl > div {
   display: grid;
   grid-template-columns: 170px minmax(0, 1fr);
   gap: 20px;
   padding: 12px 0;
 }
-.reference-notes dt { font-size: 14px; font-weight: 650; line-height: 1.6; }
-.reference-notes dd { margin: 0; color: #626b73; font-size: 14px; line-height: 1.6; }
+.reference-notes dt {
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.6;
+}
+.reference-notes dd {
+  margin: 0;
+  color: #626b73;
+  font-size: 14px;
+  line-height: 1.6;
+}
 @media (max-width: 600px) {
-  .reference-notes dl > div { grid-template-columns: 1fr; gap: 5px; }
+  .reference-notes dl > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
 }
 .reference-prose section {
   position: relative;
@@ -214,21 +237,6 @@
   border-color: var(--reference-color);
   background: color-mix(in srgb, var(--reference-color) 3%, transparent);
 }
-.reference-child-index {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #626b73;
-  font-size: 12px;
-  letter-spacing: 0;
-}
-.reference-child-index > span {
-  font-family: "Songti SC", serif;
-  font-size: 18px;
-  line-height: 1.3;
-  color: var(--reference-color);
-  letter-spacing: 0;
-}
 .reference-child-card h3 {
   font-family: var(--serif, Georgia, serif);
   font-size: 25px;
@@ -239,16 +247,6 @@
   font-size: 12px;
   line-height: 1.9;
   color: #626b73;
-}
-.reference-child-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  margin-top: auto;
-  padding-top: 23px;
-  font-size: 12px;
-  color: var(--reference-color);
 }
 .reference-curation-note {
   font-size: 12px;
@@ -391,72 +389,6 @@
   color: #626b73;
   margin-top: 2px;
 }
-.reference-continue {
-  padding-top: 28px;
-  margin-top: 32px;
-  border-top: 1px solid var(--line, #e5e8eb);
-}
-.reference-continue h2 {
-  font-family: var(--serif, Georgia, serif);
-  font-size: 30px;
-  margin: 11px 0 19px;
-}
-.reference-continue-links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-.reference-continue-links > a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-  padding: 19px;
-  border: 1px solid #e5e8eb;
-  border-radius: 4px;
-  font-family: var(--serif, Georgia, serif);
-  font-size: 23px;
-  line-height: 1.4;
-}
-.reference-continue-links > a:hover {
-  border-color: var(--reference-color);
-}
-.reference-continue-links small {
-  display: block;
-  font-family: var(--sans, Arial, sans-serif);
-  font-size: 12px;
-  letter-spacing: 0;
-  color: #626b73;
-  margin-bottom: 8px;
-}
-.reference-continue-links > a > span > span {
-  font-family: "Songti SC", serif;
-  color: var(--reference-color);
-  font-size: 17px;
-  margin-left: 12px;
-}
-.reference-continue-links svg {
-  color: var(--reference-color);
-}
-.reference-entry-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-top: 1px solid var(--line, #e5e8eb);
-  margin-top: 38px;
-  padding-top: 22px;
-  font-size: 12px;
-  color: #626b73;
-  background: white;
-}
-.reference-entry-footer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  color: #626b73;
-}
 .reference-not-found {
   padding: 50px 0 100px;
   max-width: 700px;
@@ -522,7 +454,6 @@
 }
 
 @media (max-width: 1000px) {
-
   .reference-prose p {
     font-size: 15px;
   }
@@ -646,13 +577,6 @@
   .reference-child-card p {
     font-size: 12px;
   }
-  .reference-child-index > span {
-    font-size: 22px;
-  }
-  .reference-child-footer {
-    font-size: 12px;
-    padding-top: 20px;
-  }
   .reference-curation-note {
     font-size: 12px;
   }
@@ -684,17 +608,6 @@
     font-size: 12px;
     overflow-wrap: anywhere;
   }
-  .reference-continue h2 {
-    font-size: 29px;
-  }
-  .reference-continue-links {
-    grid-template-columns: 1fr;
-  }
-  .reference-entry-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
   .reference-not-found {
     padding-top: 15px;
   }
@@ -709,5 +622,58 @@
 @media (prefers-reduced-motion: reduce) {
   .reference-child-card {
     transition: none;
+  }
+}
+
+.reference-child-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.reference-child-card {
+  position: relative;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  padding: 20px 0;
+  background: transparent;
+}
+.reference-child-card:hover {
+  border-color: var(--line);
+  background: transparent;
+}
+.reference-child-card:hover h3 {
+  color: var(--accent);
+}
+.reference-child-card h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+.reference-child-card p {
+  max-width: 740px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.reference-child-native {
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 12px;
+}
+.reference-title-row h1 {
+  font-size: 38px;
+}
+.reference-section-heading h2 {
+  font-size: 28px;
+}
+.reference-prose h2 {
+  font-size: 26px;
+}
+.reference-entry-header {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+}
+@media (max-width: 600px) {
+  .reference-title-row h1 {
+    font-size: 32px;
   }
 }

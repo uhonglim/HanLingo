@@ -44,14 +44,31 @@ export default function ReferencePage() {
   const group = route?.language;
   const point = route?.point;
   const subgroup = route?.subgroup;
-  const englishName = entry?.facts.find((fact) => fact.label === "English name")?.value;
-  const mapAnchor = entry?.facts.find((fact) => fact.label === "Map anchor")?.value;
-  const referenceFacts = entry?.facts.filter((fact) =>
-    !["Group", "Branch", "Cluster", "Entry type", "English name", "Map anchor"].includes(fact.label),
-  ) ?? [];
-  const localCluster = point && point.hierarchy.length > 4 ? point.hierarchy[3] : undefined;
-  const photo = point ? minCommunityPhotos[point.id]
-    : group && route?.level === "group" ? groupPhotos[group.id] : undefined;
+  const englishName = entry?.facts.find(
+    (fact) => fact.label === "English name",
+  )?.value;
+  const mapAnchor = entry?.facts.find(
+    (fact) => fact.label === "Map anchor",
+  )?.value;
+  const referenceFacts =
+    entry?.facts.filter(
+      (fact) =>
+        ![
+          "Group",
+          "Branch",
+          "Cluster",
+          "Entry type",
+          "English name",
+          "Map anchor",
+        ].includes(fact.label),
+    ) ?? [];
+  const localCluster =
+    point && point.hierarchy.length > 4 ? point.hierarchy[3] : undefined;
+  const photo = point
+    ? minCommunityPhotos[point.id]
+    : group && route?.level === "group"
+      ? groupPhotos[group.id]
+      : undefined;
   const localLetter =
     point && ["xiamen", "guangzhou", "meixian", "shanghai"].includes(point.id)
       ? letters.find((letter) => letter.id === point.groupId)
@@ -65,15 +82,6 @@ export default function ReferencePage() {
       )
     : [];
   const childSubgroups = group && !subgroup ? group.subgroups : [];
-  const relatedPoints = point
-    ? mapPoints.filter(
-        (place) =>
-          place.groupId === point.groupId &&
-          place.subgroupId === point.subgroupId &&
-          (!localCluster || place.hierarchy[3] === localCluster) &&
-          place.id !== point.id,
-      )
-    : [];
 
   return (
     <div
@@ -108,13 +116,17 @@ export default function ReferencePage() {
                 {point?.nativeName ?? subgroup?.nativeName ?? group.nativeName}
               </span>
             </div>
-            {englishName && <p className="reference-english-name">{englishName}</p>}
+            {englishName && (
+              <p className="reference-english-name">{englishName}</p>
+            )}
             <p className="reference-dek">{entry.dek}</p>
             <div className="reference-geography">
               <MapPin size={14} />
               <span>
                 {point
-                  ? localCluster ? clusterLabel(localCluster) : subgroup?.name
+                  ? localCluster
+                    ? clusterLabel(localCluster)
+                    : subgroup?.name
                   : subgroup
                     ? `${localPoints.map(placeLabel).join(" · ")} · selected places`
                     : group.geography}
@@ -156,7 +168,6 @@ export default function ReferencePage() {
                 </section>
               ))}
             </div>
-
           </div>
 
           {!point && (
@@ -172,54 +183,40 @@ export default function ReferencePage() {
                 </span>
               </div>
               <div className="reference-child-grid">
-                {childSubgroups.map((child, index) => {
-                  const childPoints = mapPoints.filter(
-                    (place) =>
-                      place.groupId === group.id &&
-                      place.subgroupId === child.id,
-                  );
+                {childSubgroups.map((child) => {
                   return (
                     <Link
                       to={subgroupPath(group.id, child.id)}
                       className="reference-child-card"
                       key={child.id}
                     >
-                      <span className="reference-child-index">
-                        {String(index + 1).padStart(2, "0")}
-                        <span lang="zh-Hant">{child.nativeName}</span>
-                      </span>
-                      <h3>{placeLabel(child)}</h3>
+                      <h3>
+                        {placeLabel(child)}
+                        <span className="reference-child-native" lang="zh-Hant">
+                          {child.nativeName}
+                        </span>
+                      </h3>
                       <p>{child.description}</p>
-                      <span className="reference-child-footer">
-                        {childPoints.length}{" "}
-                        {childPoints.length === 1
-                          ? "local variety"
-                          : "local varieties"}
-                        <ArrowRight size={17} />
-                      </span>
                     </Link>
                   );
                 })}
                 {subgroup &&
-                  localPoints.map((child, index) => (
+                  localPoints.map((child) => (
                     <Link
                       to={varietyPath(child)}
                       className="reference-child-card"
                       key={child.id}
                     >
-                      <span className="reference-child-index">
-                        {String(index + 1).padStart(2, "0")}
-                        <span lang="zh-Hant">{child.nativeName}</span>
-                      </span>
-                      <h3>{placeLabel(child)}</h3>
+                      <h3>
+                        {placeLabel(child)}
+                        <span className="reference-child-native" lang="zh-Hant">
+                          {child.nativeName}
+                        </span>
+                      </h3>
                       <p>
                         {varietyArticles[child.id]?.dek ??
                           child.hierarchy.join(" · ")}
                       </p>
-                      <span className="reference-child-footer">
-                        Read the local guide
-                        <ArrowRight size={17} />
-                      </span>
                     </Link>
                   ))}
               </div>
@@ -244,13 +241,15 @@ export default function ReferencePage() {
                 selectedPoint={point?.id ?? null}
                 onSelectPoint={(id) => {
                   const selected = mapPoints.find((place) => place.id === id);
-                  if (selected && selected.id !== point?.id) navigate(varietyPath(selected));
+                  if (selected && selected.id !== point?.id)
+                    navigate(varietyPath(selected));
                 }}
                 compact
               />
             </div>
             <p className="reference-curation-note">
-              {mapAnchor ?? "Map markers locate reference places, not dialect boundaries."}
+              {mapAnchor ??
+                "Map markers locate reference places, not dialect boundaries."}
             </p>
           </section>
 
@@ -337,42 +336,6 @@ export default function ReferencePage() {
               ))}
             </ol>
           </section>
-
-          {point && (
-            <section className="reference-continue">
-              <h2>
-                {relatedPoints.length ? "Related varieties" : "Related branches"}
-              </h2>
-              <div className="reference-continue-links">
-                {relatedPoints.map((place) => (
-                  <Link key={place.id} to={varietyPath(place)}>
-                    <span>
-                      <small>{subgroup?.name}</small>
-                      {placeLabel(place)}
-                      <span lang="zh-Hant">{place.nativeName}</span>
-                    </span>
-                    <ArrowRight size={18} />
-                  </Link>
-                ))}
-                <Link to={subgroupPath(group.id, subgroup!.id)}>
-                  <span>
-                    <small>Regional branch</small>
-                    {subgroup?.name}
-                  </span>
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
-            </section>
-          )}
-          <footer className="reference-entry-footer">
-            <span>HanLingo field guide · Present-day edition</span>
-            <Link to={route.level === "group" ? "/" : groupPath(group.id)}>
-              <ArrowLeft size={13} />
-              {route.level === "group"
-                ? "Back to the atlas"
-                : `All about ${group.name}`}
-            </Link>
-          </footer>
         </article>
       )}
     </div>

@@ -239,9 +239,6 @@ function Overview({
             Amoy <span lang="zh-Hant">廈門</span>
           </h1>
         </div>
-        <Link to={`${BASE}/words`}>
-          All words <ArrowRight size={16} />
-        </Link>
       </section>
       <section className="xm-section xm-scenes">
         <h2 className="sr-only">Photo vocabulary</h2>
@@ -277,14 +274,6 @@ function Overview({
             </article>
           ))}
         </div>
-        <div className="xm-bottom-link">
-          <Link to={`${BASE}/practice`}>
-            Practice <ArrowRight size={16} />
-          </Link>
-          <Link to={`${BASE}/culture`}>
-            More photographs <ArrowRight size={16} />
-          </Link>
-        </div>
       </section>
       <section className="xm-section xm-location">
         <div>
@@ -293,9 +282,6 @@ function Overview({
             These readings follow urban Amoy Hokkien. Tsuân-tsiu and
             Tsiang-tsiu have their own varieties.
           </p>
-          <Link to="/min/southern-min">
-            Southern Min varieties <ArrowRight size={15} />
-          </Link>
         </div>
         <AtlasMap
           compact

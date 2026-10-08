@@ -1,5 +1,9 @@
 # HanLingo rules
 
+## Reusable workflow
+
+For HanLingo work, automatically read and apply [the HanLingo skill](.agents/skills/hanlingo-workflow/SKILL.md), then load only the references relevant to the task. It is also installed locally as `$hanlingo-workflow`. Current user instructions and current project rules take precedence; the skill does not grant new publishing, credential, spending, or background-task authority.
+
 ## Navigation — user decision
 
 - The homepage `/` is the Han family tree. Never redirect it automatically into Min or another branch.

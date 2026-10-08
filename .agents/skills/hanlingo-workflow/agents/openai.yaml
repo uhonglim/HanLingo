@@ -1,0 +1,6 @@
+interface:
+  display_name: "HanLingo"
+  short_description: "Build HanLingo with precise language and design rules"
+  default_prompt: "Use $hanlingo-workflow to continue this HanLingo task using its naming, evidence, design, romanization, translation, and verification rules."
+policy:
+  allow_implicit_invocation: true

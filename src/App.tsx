@@ -10,6 +10,7 @@ const ReadingRoom = lazy(() => import("./pages/ReadingRoom"));
 const RomanizationPage = lazy(() => import("./pages/RomanizationPage"));
 const WrittenChinesePage = lazy(() => import("./pages/WrittenChinesePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
+const XiamenPage = lazy(() => import("./pages/XiamenPage"));
 
 function PageLocation() {
   const { pathname, hash } = useLocation();
@@ -129,6 +130,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/languages" element={<LibraryPage />} />
+            <Route
+              path="/languages/min/southern-min/xiamen/*"
+              element={<XiamenPage />}
+            />
             <Route path="/languages/:languageId" element={<ReferencePage />} />
             <Route
               path="/languages/:languageId/:subgroupId"

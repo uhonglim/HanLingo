@@ -7,6 +7,7 @@ Status: decisions recorded on 2026-10-09. This is a design record, not a complet
 - The system is based on sounds and their IPA correspondence. A spelling has the same assigned sound value across the varieties represented; it is not inherited automatically from Pinyin, Jyutping, or another existing spelling system.
 - The core stop distinction is **p → [p]**, **ph → [pʰ]**, **b → [b]**: voiceless unaspirated, voiceless aspirated, and voiced respectively.
 - Aspiration is marked consistently by appending **h** to the consonant spelling. In the current working application, **ch → [tɕ]** therefore pairs with **chh → [tɕʰ]**. The aspiration rule and this application were accepted explicitly; the complete consonant inventory is still unfinished.
+- **ts → [t͡s]** and **tsh → [t͡sʰ]** were accepted for the Xiamen prototype. They stay distinct from **ch/chh → [tɕ]/[tɕʰ]**.
 - **â → [ɐ]** is a vowel spelling. Its circumflex does not mark a tone.
 - Tone is represented separately from vowel quality using **pitch-contour numbers for now**: **1 is low**, **5 is high**, **35 → [˧˥]**, and **51 → [˥˩]**. Thus the current Mandarin example can be written **Shi35 Chin51 Phing35**, conditional on the candidate `sh → [ɕ]` assignment. These are pitch values, not the numbered tone categories of Pinyin or Jyutping.
 - IPA remains the phonetic reference. The custom romanization is a separate notation and should be identified as such.
@@ -43,4 +44,8 @@ Consequently, the draft spelling `Phing` cannot quietly give `i` the value [i] i
 
 **Length and tone contours also depend on the transcription level.** The Cantonese /aː/ category contrasts with /ɐ/, while the former is shorter before a stop coda than in an open syllable. The unreleased final [p̚] and the displayed tone contours describe a reference pronunciation; they are not measurements of every spoken token. The Hong Kong example should not be relabelled an exact pronunciation for all Guangzhou and Hong Kong speakers.
 
-No automatic transliteration, text-to-speech pronunciation, or final spelling table follows from this record yet.
+No general Han-character transliteration, text-to-speech pronunciation, or final cross-Sinitic spelling table follows from this record yet. The Xiamen prototype below converts only its explicitly sourced IPA.
+
+## Xiamen learning prototype
+
+The 35-entry collection shows source-based Xiamen IPA alongside trial HanLingo spellings. Confirmed rules are kept separate from trial extensions: `ng → [ŋ]`, `oo → [ɔ]`, `q → [ʔ]`, `th → [tʰ]`, `kh → [kʰ]`, `g → [ɡ]`. Nasal-vowel tildes, unreleased-stop marks, and syllabicity marks are retained. These extensions have not been accepted as the final cross-Sinitic inventory. The converter rejects unmapped IPA instead of silently substituting a different sound. See [Xiamen source notes](XIAMEN-LANGUAGE-SOURCES.md).

@@ -87,21 +87,22 @@ export default function HomePage() {
         <div className="hero-copy">
           <div className="eyebrow">
             <span className="small-line" />
-            MANY VOICES. CONNECTED ROOTS.
+            LANGUAGE · CULTURE · PRONUNCIATION
           </div>
           <h1 id="hero-title">
-            A shared script.
-            <br />A world of
+            Learn the Han
             <br />
-            <em>voices.</em>
+            <em>languages.</em>
           </h1>
           <p className="hero-description">
-            Travel through the Han language family.
-            <br className="desktop-br" /> Discover the languages, the places,
-            and the people behind a shared heritage.
+            Start with Xiamen: useful words, IPA pronunciation, photographs, and
+            short practice sessions.
           </p>
-          <Link className="primary-button" to="/languages">
-            Explore the language library <ArrowRight size={17} />
+          <Link
+            className="primary-button"
+            to="/languages/min/southern-min/xiamen"
+          >
+            Start learning Xiamen <ArrowRight size={17} />
           </Link>
           <div className="hero-note">
             <span className="edition-dot" />A living atlas · Present-day edition
@@ -148,7 +149,7 @@ export default function HomePage() {
         <div className="section-heading">
           <div>
             <div className="eyebrow">THE LANGUAGE LIBRARY</div>
-            <h2>Five doors. A world within each.</h2>
+            <h2>Explore five language groups.</h2>
           </div>
           <Link to="/languages" className="text-link">
             Browse all varieties <ArrowRight size={16} />
@@ -164,14 +165,13 @@ export default function HomePage() {
         <div>
           <div className="eyebrow">FOLLOW THE CONNECTIONS</div>
           <h2>
-            Go a little deeper.
+            How Xiamen fits
             <br />
-            <em>Then deeper still.</em>
+            <em>in the family.</em>
           </h2>
           <p>
-            Start with a language group. Follow a regional branch, then meet a
-            local variety through its places, sound patterns, written examples,
-            and sources.
+            Min → Southern Min → Quanzhang → Xiamen. Follow the links to compare
+            neighboring varieties.
           </p>
         </div>
         <div className="depth-path">
@@ -218,9 +218,9 @@ export default function HomePage() {
             THE READING ROOM
           </div>
           <h2>
-            The same feeling.
+            Compare a letter
             <br />
-            <em>Different words.</em>
+            <em>across five varieties.</em>
           </h2>
           <p>
             A letter home, written in five local voices. Read them side by side,

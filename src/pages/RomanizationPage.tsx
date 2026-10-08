@@ -211,6 +211,11 @@ export default function RomanizationPage() {
                 </td>
               </tr>
               <tr>
+                <td>ts / tsh</td>
+                <td>[t͡s] / [t͡sʰ]</td>
+                <td>Keep alveolar affricates distinct from ch / chh.</td>
+              </tr>
+              <tr>
                 <td>â</td>
                 <td>[ɐ]</td>
                 <td>A vowel-quality symbol. Tone is written separately.</td>
@@ -299,9 +304,9 @@ export default function RomanizationPage() {
             <span>03</span>
             <h3>Build the rules together.</h3>
             <p>
-              The first rules cover p / ph / b, ch / chh, â, and pitch-contour
-              suffixes. The remaining consonants, vowels, syllable boundaries,
-              and connected speech still need decisions and testing.
+              The first rules cover p / ph / b, ch / chh, ts / tsh, â, and
+              pitch-contour suffixes. The remaining consonants, vowels, syllable
+              boundaries, and connected speech still need decisions and testing.
             </p>
           </article>
         </div>

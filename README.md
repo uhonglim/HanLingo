@@ -1,6 +1,6 @@
 # HanLingo
 
-An English-language introduction to the Sinitic languages, explored through places, local varieties, and a shared letter home.
+Learn Sinitic languages through useful words, pronunciation, and photographs of everyday culture. English is the interface language.
 
 HanLingo begins with five groups—Mandarin 官, Min 閩, Yue 粵, Hakka 客, and Wu 吳—and a separate comparison with Modern Standard Written Chinese. Its reference library connects **5 group pages, 18 subgroup pages, and 23 local-variety pages** through interactive maps, classification paths, and sourced articles. This edition focuses on present-day geography and selected communities.
 
@@ -25,6 +25,8 @@ npm run preview
 
 ## Explore the site
 
+- Start learning in the [Xiamen chapter](http://127.0.0.1:5173/languages/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Culture, Sounds, and Practice pages.
+- Search or save words, follow photographs to related vocabulary, explore pitch contours and a tone-sandhi example, and complete short practice rounds. Saved words and learning progress stay in this browser.
 - Start with the homepage, then browse the language library by group, subgroup, and locality.
 - Follow a map point to a dedicated local article, or pan and zoom to compare reference places.
 - Read group introductions with credited photographs, then follow the scholarly sources attached to individual articles.
@@ -43,7 +45,7 @@ npm run preview
 | `/written-chinese` | Modern Standard Written Chinese as a written reference |
 | `/about` | Project scope, method, and credits |
 
-For example, `/languages/min/southern-min/xiamen` opens the Xiamen article. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
+`/languages/min/southern-min/xiamen` opens the flagship learning chapter; append `/words`, `/culture`, `/sounds`, or `/practice` for its learning sections. Search and photograph selections have shareable URLs. Other localities retain reference articles. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
 
 The application uses React Router’s browser history. Vite supports development navigation and direct page refreshes. A future production host must **rewrite application routes to `index.html` while serving asset files normally**, so opening or refreshing a deep URL works. This repository does not establish a production deployment.
 
@@ -53,7 +55,7 @@ The five groups are a curated introduction, not an exhaustive classification of 
 
 Modern Standard Written Chinese is a written reference, not a sixth spoken branch. The six letters are contributor-supplied examples awaiting linguistic and speaker review. They are not a verified dialect corpus, and the shared English text is a meaning guide rather than a word-by-word gloss. A Standard Mandarin sample is not presented as a transcription of local Beijing speech.
 
-Pronunciation belongs in **IPA**. The developing HanLingo romanization is a separate notation. Accepted decisions include `p → [p]`, `ph → [pʰ]`, and `b → [b]`, consistent aspiration marking, and separate pitch-contour numbers; the complete inventory and transcription conventions remain unfinished. See [the romanization discussion record](docs/ROMANIZATION.md) for the current decisions, candidate mappings, and sourced examples. No full-letter IPA or audio has been invented.
+Pronunciation belongs in **IPA**. The developing HanLingo romanization is a separate notation. Accepted decisions include `p → [p]`, `ph → [pʰ]`, `b → [b]`, `ts / tsh → [t͡s] / [t͡sʰ]`, consistent aspiration marking, and separate pitch-contour numbers. Xiamen spellings are generated from the sourced IPA; unconfirmed extensions remain marked as trial. Citation tones and attested connected speech are distinguished. See [the romanization discussion record](docs/ROMANIZATION.md) and [Xiamen language sources](docs/XIAMEN-LANGUAGE-SOURCES.md). No full-letter IPA or audio has been invented.
 
 Map points mark approximate reference localities, not exclusive language territories or survey boundaries. The selection does not cover every community or the full diaspora. Historical comparison remains future work and requires dated, place-specific evidence. Photographs illustrate identified places, performances, or events; they do not establish the identity or everyday language of people shown.
 
@@ -91,6 +93,6 @@ Built with React, TypeScript, Vite, and React Router. The SVG atlas uses D3 Geo 
 node scripts/build-atlas.mjs
 ```
 
-Tests cover the taxonomy, comparison letters, reference content, and route integrity. Use the commands above to check the current checkout.
+Tests cover the taxonomy, comparison letters, reference content, route integrity, Xiamen IPA-to-spelling conversion, photo assets and credits, and quiz generation. The 11 additional Xiamen photographs have their own [source and license register](docs/XIAMEN-PHOTOS.md). Use the commands above to check the current checkout.
 
 Repository: [uhonglim/HanLingo](https://github.com/uhonglim/HanLingo). Project licensing is recorded in [LICENSE](LICENSE). Photograph licenses apply independently of the code license; font license notices remain under `public/fonts/`.

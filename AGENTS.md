@@ -28,4 +28,7 @@
 - Local photo galleries should have comparable depth to Amoy (11 photographs): aim for 9–11 distinct, documented scenes per published locality. Do not pad counts with duplicate images, crops, or repeated views of one subject. Every image needs a source, attribution, license, and accurate place caption. Use the shared immersive gallery and preserve keyboard and direct-link access.
 - Teach local differences explicitly. A regional word choice is different from a pronunciation difference; link every form to its documented locality and source. A local attestation never means that all residents use it or that other places do not. Keep source romanization separate from HanLingo spelling, and never infer IPA or pitch values from spelling alone.
 
+- Maintain the reproducible content inventory with `npm run audit:content`. Every published branch needs a learning pack, and every mapped locality needs at least two specific sound/learning notes, two documented culture topics, and two useful source links. More photographs or repeated prose do not close a vocabulary gap.
+- Display consequential reading qualifications beside pronunciation: a formal Standard Mandarin speaker reference is not an unqualified vernacular city sample; source segment lists with omitted tones are not complete tonal pronunciations. Keep these qualifications visible in overview cards, comparisons, and practice.
+
 See `docs/NAVIGATION.md` for the architecture. Local review uses `http://127.0.0.1:5173/`.

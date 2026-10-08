@@ -1,0 +1,1164 @@
+import type { BranchLearning } from "./types";
+
+// Locality scope and source spellings are intentional; see docs/MIN-DEPTH-EXPANSION.md.
+export const southernMinLearning: BranchLearning[] = [
+  {
+    branchId: "min/southern-min",
+    words: [
+      {
+        id: "shantou-六",
+        han: "六",
+        english: "six",
+        ipa: "[lak˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-七",
+        han: "七",
+        english: "seven",
+        ipa: "[t͡sʰik˨]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-八",
+        han: "八",
+        english: "eight",
+        ipa: "[poiʔ˨]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-十",
+        han: "十",
+        english: "ten",
+        ipa: "[t͡sap˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-日",
+        han: "日",
+        english: "sun; day",
+        ipa: "[zik˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-月",
+        han: "月",
+        english: "moon",
+        ipa: "[ɡueʔ˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-山",
+        han: "山",
+        english: "mountain",
+        ipa: "[suã˧˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-火",
+        han: "火",
+        english: "fire",
+        ipa: "[hue˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-土",
+        han: "土",
+        english: "earth; soil",
+        ipa: "[tʰou˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-木",
+        han: "木",
+        english: "wood",
+        ipa: "[bak˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-金",
+        han: "金",
+        english: "gold",
+        ipa: "[kim˧˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-魚",
+        han: "魚",
+        english: "fish",
+        ipa: "[hɯ˥˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-鳥",
+        han: "鳥",
+        english: "bird",
+        ipa: "[t͡siau˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-牛",
+        han: "牛",
+        english: "cow",
+        ipa: "[ɡu˥˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-雞",
+        han: "雞",
+        english: "chicken",
+        ipa: "[koi˧˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-狗",
+        han: "狗",
+        english: "dog",
+        ipa: "[kau˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-豬",
+        han: "豬",
+        english: "pig",
+        ipa: "[tɯ˧˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-海",
+        han: "海",
+        english: "sea",
+        ipa: "[hai˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-花",
+        han: "花",
+        english: "flower",
+        ipa: "[hue˧˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-米",
+        han: "米",
+        english: "rice",
+        ipa: "[bi˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-茶",
+        han: "茶",
+        english: "tea",
+        ipa: "[te˥˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-酒",
+        han: "酒",
+        english: "wine",
+        ipa: "[t͡siu˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-食",
+        han: "食",
+        english: "eat",
+        ipa: "[t͡siaʔ˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-門",
+        han: "門",
+        english: "door",
+        ipa: "[muŋ˥˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-手",
+        han: "手",
+        english: "hand",
+        ipa: "[t͡sʰiu˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-心",
+        han: "心",
+        english: "heart",
+        ipa: "[sim˧˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-目",
+        han: "目",
+        english: "eye",
+        ipa: "[mak˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-口",
+        han: "口",
+        english: "mouth",
+        ipa: "[kʰau˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-白",
+        han: "白",
+        english: "white",
+        ipa: "[peʔ˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-紅",
+        han: "紅",
+        english: "red",
+        ipa: "[aŋ˥˥]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-黑",
+        han: "黑",
+        english: "black",
+        ipa: "[hek˨]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        id: "shantou-買",
+        han: "買",
+        english: "buy",
+        ipa: "[boi˥˧]",
+        localityId: "shantou",
+        reading: "Citation reading",
+        toneNotation: "pitch-contour",
+        note: "CUHK dictionary character reading; phrase pronunciation may differ.",
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+    ],
+    soundNotes: [
+      {
+        title: "A word has a citation tone and a phrase tone",
+        text: "Read a word on its own first, then listen to it in a phrase. Amoy tone sandhi depends on the structure of the phrase; joining isolated dictionary recordings does not reproduce connected speech.",
+        localityIds: ["xiamen"],
+        source: {
+          title: "Chen: The syntax of Xiamen tone sandhi",
+          url: "https://www.cambridge.org/core/journals/phonology/article/syntax-of-xiamen-tone-sandhi/F5EE066B0215ED48A28C2476BA4DFC9C",
+        },
+      },
+      {
+        title: "Chicken across three places",
+        text: "Wang’s comparison gives 雞 as Amoy [kue˥˥], Tsiang-tsiu [ke˦˦], and Tsuân-tsiu [kue˧˧]. Compare the vowel separately from the pitch: the shared character does not guarantee the same sound.",
+        localityIds: ["xiamen"],
+        source: {
+          title:
+            "Wang Kuei-lan: Penang Hokkien phonology and vocabulary, table 17",
+          url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36",
+        },
+      },
+      {
+        title: "A central vowel in “fire”",
+        text: "The comparison records 火 as Tsuân-tsiu [hə˥˥], beside Amoy [he˥˧]. [ə] is central and unrounded. This is a locality reference reading, not a rule for every word with the same spelling.",
+        localityIds: ["quanzhou"],
+        source: {
+          title:
+            "Wang Kuei-lan: Penang Hokkien phonology and vocabulary, table 17",
+          url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36",
+        },
+      },
+      {
+        title: "The same syllable, a different tone",
+        text: "雞 is [kue˧˧] in the Tsuân-tsiu column and [kue˥˥] in the Amoy column. Keep the consonants and vowel steady while comparing the mid and high level tones.",
+        localityIds: ["quanzhou"],
+        source: {
+          title:
+            "Wang Kuei-lan: Penang Hokkien phonology and vocabulary, table 17",
+          url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36",
+        },
+      },
+      {
+        title: "Listen for the missing glide",
+        text: "雞 is [ke˦˦] in the Tsiang-tsiu comparison, beside Amoy [kue˥˥]. Practise the vowel difference before adding each locality’s tone.",
+        localityIds: ["zhangzhou"],
+        source: {
+          title:
+            "Wang Kuei-lan: Penang Hokkien phonology and vocabulary, table 17",
+          url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36",
+        },
+      },
+      {
+        title: "A nasal vowel in “cooked rice”",
+        text: "飯 is recorded as Tsiang-tsiu [puĩ˨˨], beside Amoy [pŋ̍˩˩]. The tilde marks a nasalized vowel; the syllabic mark on [ŋ̍] means that the nasal itself forms the syllable.",
+        localityIds: ["zhangzhou"],
+        source: {
+          title:
+            "Wang Kuei-lan: Penang Hokkien phonology and vocabulary, table 17",
+          url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36",
+        },
+      },
+      {
+        title: "Two recorded words for soap",
+        text: "The MOE’s Taipei reference lists both sap-muî and sap-bûn for 雪文. Keep both as documented local forms rather than forcing one spelling to represent every speaker. These are source Tâi-lô spellings.",
+        localityIds: ["taipak"],
+        source: {
+          title: "MOE dictionary: 雪文, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/8021/",
+        },
+      },
+      {
+        title: "A local word for tomato",
+        text: "The Taipei reference gives 臭柿仔, tshàu-khī-á, where the Tainan reference has 柑仔蜜, kam-á-bi̍t. This is a vocabulary difference as well as a pronunciation comparison; the spellings here are MOE Tâi-lô.",
+        localityIds: ["taipak"],
+        source: {
+          title: "MOE dictionary: 柑仔蜜, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+        },
+      },
+      {
+        title: "The vowel in “market”",
+        text: "The MOE’s Tainan reference spells 市場 tshī-tiônn; its Kaohsiung reference has tshī-tiûnn. Listen to the dictionary’s regional recordings to compare the vowel in the second syllable. The spelling is source Tâi-lô.",
+        localityIds: ["tainan"],
+        source: {
+          title: "MOE dictionary: 市場, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/1772/",
+        },
+      },
+      {
+        title: "Chicken: ke",
+        text: "The Tainan reference gives 雞 as ke, while the Taipei reference has kue. These are MOE Tâi-lô forms. Start with this familiar word when listening for a local vowel difference.",
+        localityIds: ["tainan"],
+        source: {
+          title: "MOE dictionary: 雞, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/12657/",
+        },
+      },
+      {
+        title: "Chopsticks: tī",
+        text: "The MOE’s Kaohsiung reference gives 箸 as tī, alongside Taipei tū. Compare the final vowel in the regional recordings; both forms mean chopsticks. These are source Tâi-lô spellings.",
+        localityIds: ["kaohsiung"],
+        source: {
+          title: "MOE dictionary: 箸, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/10689/",
+        },
+      },
+      {
+        title: "Tomato: kam-á-bi̍t",
+        text: "The Kaohsiung reference gives 柑仔蜜, kam-á-bi̍t. Taipei’s entry uses 臭柿仔, tshàu-khī-á. Learn the whole local word instead of changing only the tone of another locality’s form. Spellings follow MOE Tâi-lô.",
+        localityIds: ["kaohsiung"],
+        source: {
+          title: "MOE dictionary: 柑仔蜜, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+        },
+      },
+      {
+        title: "A shared word does not define an accent",
+        text: "The Yilan reference shares 臭柿仔, tshàu-khī-á, with Taipei for tomato. That agreement belongs to this word; it does not make their whole sound systems identical. The forms use source Tâi-lô.",
+        localityIds: ["yilan"],
+        source: {
+          title: "MOE dictionary: 柑仔蜜, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+        },
+      },
+      {
+        title: "Compare ke with kue",
+        text: "For 雞, the MOE lists Yilan ke and Taipei kue. Play the regional examples in sequence and listen for the glide. The source spells these forms in Tâi-lô.",
+        localityIds: ["yilan"],
+        source: {
+          title: "MOE dictionary: 雞, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/12657/",
+        },
+      },
+      {
+        title: "A different tomato word",
+        text: "Lukang’s reference entry gives the Japanese-derived form トマト, thoo-má-tooh, for tomato. The MOE table lets you compare it with kam-á-bi̍t and tshàu-khī-á elsewhere; these are source spellings.",
+        localityIds: ["lukang"],
+        source: {
+          title: "MOE dictionary: 柑仔蜜, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+        },
+      },
+      {
+        title: "Keep the source’s vowel distinction",
+        text: "The MOE records 箸 as Lukang tǐr, alongside Sanxia tīr and Taipei tū. Use the regional audio to hear the contrast; the dictionary’s ir is a Tâi-lô spelling, not an IPA symbol.",
+        localityIds: ["lukang"],
+        source: {
+          title: "MOE dictionary: 箸, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/10689/",
+        },
+      },
+      {
+        title: "Chicken in Sanxia",
+        text: "The Sanxia reference writes 雞 as kere, beside Taipei kue and Tainan ke. Read this as the MOE’s regional Tâi-lô notation and follow its recording instead of pronouncing it as an English word.",
+        localityIds: ["sanxia"],
+        source: {
+          title: "MOE dictionary: 雞, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/12657/",
+        },
+      },
+      {
+        title: "Soap: sap-muî",
+        text: "The Sanxia reference gives 雪文 as sap-muî, shared with Lukang; Kaohsiung has sap-bûn. This comparison preserves the source’s whole words and Tâi-lô spelling.",
+        localityIds: ["sanxia"],
+        source: {
+          title: "MOE dictionary: 雪文, regional readings",
+          url: "https://sutian.moe.edu.tw/zh-hant/su/8021/",
+        },
+      },
+      {
+        title: "Hokkien inside place names",
+        text: "厝 means house in the Hokkien names Lim Chu Kang, Yio Chu Kang, and Choa Chu Kang. Look for the recurring word when reading Singapore’s place names; an English map spelling is not a full phonetic transcription.",
+        localityIds: ["singapore"],
+        source: {
+          title: "Singapore Chinese Cultural Centre: Hokkien in Singapore",
+          url: "https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/",
+        },
+      },
+      {
+        title: "A market name preserves a loanword",
+        text: "The National Heritage Board explains Lau Pa Sat as “old market”. The name preserves pa sat for market. Keep the documented heritage spelling separate from HanLingo IPA until a locality-specific pronunciation is sourced.",
+        localityIds: ["singapore"],
+        source: {
+          title: "National Heritage Board: Singapore River Walk, p. 43",
+          url: "https://www.roots.gov.sg/~/media/Roots/Files/singapore-river-walk/nhb_singpaore-river-walk_2018.pdf",
+        },
+      },
+      {
+        title: "Malay contact in the vocabulary",
+        text: "Wang’s Penang fieldwork documents vocabulary shaped by language contact, including Malay. Use it to investigate loanwords and compare speakers; the study covers Penang and is regional context for George Town.",
+        localityIds: ["george-town"],
+        source: {
+          title: "Wang Kuei-lan: Penang Hokkien phonology and vocabulary",
+          url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf",
+        },
+      },
+      {
+        title: "Compare the rhyme, not just the label",
+        text: "The Penang study compares rhyme patterns with Tsiang-tsiu, Tong’an, Amoy, and Tsuân-tsiu. A shared Hokkien label can contain different vowels and tones. Its Penang data should not automatically stand for every George Town speaker.",
+        localityIds: ["george-town"],
+        source: {
+          title: "Wang Kuei-lan: Penang Hokkien phonology and vocabulary",
+          url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf",
+        },
+      },
+      {
+        title: "A tone changes inside a phrase",
+        text: "Zhang and Cross describe eight Chaozhou tone categories and extensive tone sandhi. Learn a word’s isolated reading and its phrase reading together; a category number is not a pitch-contour number.",
+        localityIds: ["chaozhou"],
+        source: {
+          title:
+            "Zhang and Cross: tone and melody in Chaozhou, research poster",
+          url: "https://www.cambridge.org/engage/coe/article-details/618c29dada150629539daec9",
+        },
+      },
+      {
+        title: "Singing is a second listening task",
+        text: "A Chaozhou research poster compares speech tones with song melodies and finds closer matching when sandhi forms are considered. Use speech recordings for pronunciation first, then listen for what melody changes.",
+        localityIds: ["chaozhou"],
+        source: {
+          title:
+            "Zhang and Cross: tone and melody in Chaozhou, research poster",
+          url: "https://www.cambridge.org/engage/coe/article-details/618c29dada150629539daec9",
+        },
+      },
+      {
+        title: "An unrounded back vowel",
+        text: "The dictionary gives 魚 [hɯ˥˥] and 豬 [tɯ˧˧]. [ɯ] is a close back unrounded vowel: keep the tongue high and back without rounding the lips. Notice that their tones also differ.",
+        localityIds: ["shantou"],
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        title: "Three short endings",
+        text: "Compare 十 [t͡sap˥], 木 [bak˥], and 八 [poiʔ˨]. The endings [p], [k], and [ʔ] close the syllable in different places. Do not append a vowel after the closure.",
+        localityIds: ["shantou"],
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+      {
+        title: "Hear the breath in tsh",
+        text: "手 is [t͡sʰiu˥˧]. The raised [ʰ] marks aspiration, represented by tsh in HanLingo. Compare its onset with unaspirated [t͡s] in 十 [t͡sap˥], represented by ts.",
+        localityIds: ["shantou"],
+        source: {
+          title: "CUHK: Swatow character readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+        },
+      },
+    ],
+    culture: [
+      {
+        title: "Boats, ritual, and the sea",
+        text: "Ong Chun ceremonies connect coastal communities with the sea. UNESCO documents the practice around Amoy Bay and Tsuân-tsiu Bay, as well as Melaka; it is a shared maritime tradition.",
+        localityIds: ["xiamen"],
+        source: {
+          title: "UNESCO: Ong Chun ceremony",
+          url: "https://ich.unesco.org/en/RL/ong-chun-wangchuan-wangkang-ceremony-rituals-and-related-practices-for-maintaining-the-sustainable-connection-between-man-and-the-ocean-01608",
+        },
+      },
+      {
+        title: "A shared Minnan sound: Nanyin",
+        text: "Listen for the bamboo flute and the horizontally held pipa in Nanyin. This regional musical tradition links singing, instruments, and community occasions across Minnan; its sung words also invite comparison with everyday speech.",
+        localityIds: ["xiamen"],
+        source: {
+          title: "UNESCO: Nanyin",
+          url: "https://ich.unesco.org/en/RL/nanyin-00199",
+        },
+      },
+      {
+        title: "Nanyin: voice, flute, and pipa",
+        text: "Nanyin ballads use the Quanzhou dialect. A singer marks time with clappers alongside instruments including a bamboo flute and a horizontally held pipa. UNESCO records performances at weddings, temple festivals, and other community occasions.",
+        localityIds: ["quanzhou"],
+        source: {
+          title: "UNESCO: Nanyin",
+          url: "https://ich.unesco.org/en/RL/nanyin-00199",
+        },
+      },
+      {
+        title: "Puppet theatre passed between generations",
+        text: "Quanzhou’s puppetry troupe participates in the Fujian training programme documented by UNESCO. Apprentices learn performance, music, and puppet-making; school performances connect the theatre with new audiences.",
+        localityIds: ["quanzhou"],
+        source: {
+          title: "UNESCO: Fujian puppetry training programme",
+          url: "https://ich.unesco.org/doc/src/2003_Convention-Register-2012%2B2013-EN.pdf?t=1414615365",
+        },
+      },
+      {
+        title: "Handcraft on the puppet stage",
+        text: "Zhangzhou’s puppetry troupe is part of the UNESCO-documented Fujian training programme. Making puppets, learning music, and practising movement belong together: the objects in a museum are only one part of the theatre.",
+        localityIds: ["zhangzhou"],
+        source: {
+          title: "UNESCO: Fujian puppetry training programme",
+          url: "https://ich.unesco.org/doc/src/2003_Convention-Register-2012%2B2013-EN.pdf?t=1414615365",
+        },
+      },
+      {
+        title: "Pictures for the New Year",
+        text: "Woodblock New Year pictures are associated especially with Zhangzhou’s Xiangcheng district. Their household and ritual uses connect printmaking with seasonal life; the Fujian cultural department also traces their circulation overseas.",
+        localityIds: ["zhangzhou"],
+        source: {
+          title:
+            "Fujian Department of Culture: Zhangzhou woodblock New Year pictures",
+          url: "https://wlt.fujian.gov.cn/hdjl/wdxd/202109/t20210928_5697174.htm",
+        },
+      },
+      {
+        title: "Dihua Street’s trading houses",
+        text: "Dadaocheng brings old commercial buildings, groceries, and New Year goods into the same streets. The nearby wharf connects the district’s trading history to the Tamsui River.",
+        localityIds: ["taipak"],
+        source: {
+          title: "Taipei Travel: Dadaocheng",
+          url: "https://www.travel.taipei/en/fun/tour/details/1316",
+        },
+      },
+      {
+        title: "A City God festival in the streets",
+        text: "Xia-Hai City God Temple stands on Dihua Street. Its annual celebration on the thirteenth day of the fifth lunar month connects the temple with the surrounding Dadaocheng neighbourhood.",
+        localityIds: ["taipak"],
+        source: {
+          title: "Taipei Travel: Xia-Hai City God Temple audio guide",
+          url: "https://travel.taipei/en/media/audio-guide/details/48",
+        },
+      },
+      {
+        title: "A warehouse grown into a tree house",
+        text: "At Anping Tree House, banyan roots cover former warehouse walls and branches spread over the roof. The site preserves layers of trade and salt-industry history within a living landscape.",
+        localityIds: ["tainan"],
+        source: {
+          title: "Tainan Travel: Anping Tree House",
+          url: "https://twtainan.net/en/attractions/detail/4486",
+        },
+      },
+      {
+        title: "Oyster shells became building material",
+        text: "Anping’s surviving kiln records the use of oyster shells to make lime for construction. Follow the material from coast to kiln to house: everyday buildings also preserve a port town’s working history.",
+        localityIds: ["tainan"],
+        source: {
+          title: "Tainan Travel: Anping itinerary",
+          url: "https://www.twtainan.net/en/tours/tour/297",
+        },
+      },
+      {
+        title: "Art along a working harbour",
+        text: "Pier-2’s warehouse area, the Great Harbor Bridge, and the waterfront around the Kaohsiung Music Center place arts venues beside the port. The city’s tourism bureau connects these places in its harbour route.",
+        localityIds: ["kaohsiung"],
+        source: {
+          title: "Kaohsiung Travel: harbour arts and waterfront",
+          url: "https://khh.travel/en/event/news/6769/",
+        },
+      },
+      {
+        title: "A street becomes a night market",
+        text: "Liuhe Night Market occupies Liuhe Second Road in the city’s Xinxing district. Read the stall signs and compare food names with the local dictionary; the market is a place to encounter the city’s mixed everyday voices.",
+        localityIds: ["kaohsiung"],
+        source: {
+          title: "Kaohsiung Travel: city visitor guide",
+          url: "https://khh.travel/file/1809/",
+        },
+      },
+      {
+        title: "Red yeast rice and brewing",
+        text: "Yilan’s distillery presents red yeast rice wine and its production process. Brewing connects a familiar grain with fermentation, industrial work, and the tasting vocabulary used around food and drink.",
+        localityIds: ["yilan"],
+        source: {
+          title: "Taiwan Tobacco and Liquor: Yilan distillery",
+          url: "https://event.ttl.com.tw/yl/travel/01main.aspx",
+        },
+      },
+      {
+        title: "A house saved with its camphor tree",
+        text: "The former magistrates’ residence became Yilan’s historical memorial hall after restoration. Preservation of a large old camphor tree helped prompt the project; the house now tells the history of local administration.",
+        localityIds: ["yilan"],
+        source: {
+          title:
+            "Yilan County: Memorial Hall of Founding of Yilan Administration",
+          url: "https://memorial.e-land.gov.tw/cp.aspx?n=6636",
+        },
+      },
+      {
+        title: "Carving above a festival stage",
+        text: "Longshan Temple has granite dragon columns, painted carvings, and a theatre stage used for traditional plays at festivals. Look upward at the stage’s octagonal caisson ceiling as well as at the main shrine.",
+        localityIds: ["lukang"],
+        source: {
+          title: "Tourism Administration: Lukang Longshan Temple",
+          url: "https://eng.taiwan.net.tw/m1.aspx?id=2156&sNo=0002016",
+        },
+      },
+      {
+        title: "Narrow houses and old lanes",
+        text: "Lukang’s old streets preserve deep, narrow houses and lanes. The town’s Folk Arts Museum adds another view of domestic and craft history; these streets are a setting for local language, not a boundary around its speakers.",
+        localityIds: ["lukang"],
+        source: {
+          title: "Tourism Administration: Taiwan tourist manual, Lukang",
+          url: "https://eng.taiwan.net.tw/att/files/Taiwan%20-%20The%20Heart%20of%20Asia%20%28Taiwan%20Tourist%20Manual%29.pdf",
+        },
+      },
+      {
+        title: "Indigo crosses community histories",
+        text: "Sanxia’s indigo-dyeing history connects river transport, tea, camphor, and Hakka settlement. Present-day workshops revive the craft. The cultural life of this locality includes several language communities.",
+        localityIds: ["sanxia"],
+        source: {
+          title: "New Taipei Travel: Sanxia indigo and Hakka heritage",
+          url: "https://newtaipei.travel/en/tour/947",
+        },
+      },
+      {
+        title: "An old street with horn-shaped bread",
+        text: "Sanxia Old Street’s red-brick arcades and ornate shopfronts now sit beside food shops. The city’s guide highlights horn-shaped bread, almond tea, and handmade tofu pudding along the street.",
+        localityIds: ["sanxia"],
+        source: {
+          title: "New Taipei Travel: Sanxia Old Street",
+          url: "https://newtaipei.travel/en/attractions/detail/111839",
+        },
+      },
+      {
+        title: "A temple built through migration",
+        text: "Thian Hock Keng is closely associated with Singapore’s Hokkien community. The National Heritage Board also records the founders’ intention that it serve Chinese communities beyond a single dialect group.",
+        localityIds: ["singapore"],
+        source: {
+          title: "National Heritage Board: Thian Hock Keng",
+          url: "https://www.roots.gov.sg/places/places-landing/Places/national-monuments/thian-hock-keng",
+        },
+      },
+      {
+        title: "Hawker centres are shared dining rooms",
+        text: "Singapore’s hawker culture brings Chinese, Malay, Indian, and other food traditions into shared eating places. UNESCO describes skills passed through apprenticeship and dishes adapted to local tastes.",
+        localityIds: ["singapore"],
+        source: {
+          title: "UNESCO: Hawker culture in Singapore",
+          url: "https://ich.unesco.org/en/RL/hawker-culture-in-singapore-community-dining-and-multicultural-living-01568",
+        },
+      },
+      {
+        title: "Life over the water",
+        text: "George Town’s clan jetties have timber houses along planked walkways, with temples and other shared spaces. They remain living communities; their buildings record work, kinship, and the waterfront.",
+        localityIds: ["george-town"],
+        source: {
+          title: "George Town World Heritage Incorporated: Special Area Plan",
+          url: "https://gtwhi.com.my/ms/wp-content/uploads/2024/09/Special-Area-Plan_WHSGT_20160109.pdf",
+        },
+      },
+      {
+        title: "Craft, food, and many performance traditions",
+        text: "George Town’s Heritage Celebrations have included food and craft demonstrations, clan-jetty visits, Boria, and Teochew opera. This is a multilingual city’s cultural programme, not a list of exclusively Hokkien traditions.",
+        localityIds: ["george-town"],
+        source: {
+          title:
+            "George Town World Heritage Incorporated: Heritage Celebrations",
+          url: "https://gtwhi.com.my/george-town-heritage-celebrations/",
+        },
+      },
+      {
+        title: "A bridge into the old city",
+        text: "Guangji Bridge spans the Han River beside Chaozhou’s old city. The city’s heritage route connects the bridge with the archway street and workshops associated with carving, ceramics, and embroidery.",
+        localityIds: ["chaozhou"],
+        source: {
+          title: "Chaozhou government: old-city heritage route",
+          url: "https://www.chaozhou.gov.cn/ywdt/czyw/content/post_3707534.html",
+        },
+      },
+      {
+        title: "Gongfu tea in a public setting",
+        text: "Chaozhou’s cultural programme at Guangji Bridge includes demonstrations of the local tea tradition. Watch the sequence of preparation alongside the spoken names for vessels, tea, and serving.",
+        localityIds: ["chaozhou"],
+        source: {
+          title: "Chaozhou government: heritage at Guangji Bridge",
+          url: "https://www.chaozhou.gov.cn/zwgk/szfgz/swhgdxw/bmdt/content/mpost_3703189.html",
+        },
+      },
+      {
+        title: "Arcades around Small Park",
+        text: "Small Park’s arcaded streets preserve the built form of Swatow’s port-era commercial centre. The city’s heritage route connects these streets with museums and stories of migration.",
+        localityIds: ["shantou"],
+        source: {
+          title: "Swatow Culture and Tourism Bureau: Small Park heritage route",
+          url: "https://www.shantou.gov.cn/wgxj/zwgk/gzdt/content/post_2547879.html",
+        },
+      },
+      {
+        title: "Letters that travelled with remittances",
+        text: "The Small Park heritage route includes the Qiaopi museum, devoted to overseas letters and remittances. These documents connect migration with household life, money, and the language of messages sent home.",
+        localityIds: ["shantou"],
+        source: {
+          title: "Swatow Culture and Tourism Bureau: Small Park heritage route",
+          url: "https://www.shantou.gov.cn/wgxj/zwgk/gzdt/content/post_2547879.html",
+        },
+      },
+    ],
+    resources: [
+      {
+        title: "Amoy dictionary",
+        description:
+          "Character readings with IPA, pitch values, and dictionary audio.",
+        localityIds: ["xiamen"],
+        kind: "Dictionary",
+        url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=P",
+      },
+      {
+        title: "Amoy tone sandhi",
+        description:
+          "A linguistic account of how phrase structure affects tone.",
+        localityIds: ["xiamen"],
+        kind: "Study",
+        url: "https://www.cambridge.org/core/journals/phonology/article/syntax-of-xiamen-tone-sandhi/F5EE066B0215ED48A28C2476BA4DFC9C",
+      },
+      {
+        title: "Tsuân-tsiu in comparison",
+        description:
+          "Table 17 places four familiar words beside Amoy and Tsiang-tsiu readings.",
+        localityIds: ["quanzhou"],
+        kind: "Study",
+        url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36",
+        scope: "branch-comparison",
+      },
+      {
+        title: "Nanyin performances and instruments",
+        description:
+          "UNESCO’s account of the music, community occasions, and transmission.",
+        localityIds: ["quanzhou"],
+        kind: "Culture",
+        url: "https://ich.unesco.org/en/RL/nanyin-00199",
+      },
+      {
+        title: "Tsiang-tsiu in comparison",
+        description:
+          "Compare vowels and pitch contours with Amoy and Tsuân-tsiu in table 17.",
+        localityIds: ["zhangzhou"],
+        kind: "Study",
+        url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36",
+        scope: "branch-comparison",
+      },
+      {
+        title: "Diminutives in Tsiang-tsiu",
+        description:
+          "Experimental research on the sounds of local diminutive suffixation.",
+        localityIds: ["zhangzhou"],
+        kind: "Study",
+        url: "https://www.degruyterbrill.com/document/doi/10.1515/opli-2024-0004/pdf",
+      },
+      {
+        title: "Compare 雪文, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["taipak"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/8021/",
+      },
+      {
+        title: "Compare 柑仔蜜, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["taipak"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+      },
+      {
+        title: "Compare 市場, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["tainan"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/1772/",
+      },
+      {
+        title: "Compare 雞, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["tainan"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/12657/",
+      },
+      {
+        title: "Compare 箸, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["kaohsiung"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/10689/",
+      },
+      {
+        title: "Compare 柑仔蜜, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["kaohsiung"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+      },
+      {
+        title: "Compare 柑仔蜜, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["yilan"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+      },
+      {
+        title: "Compare 雞, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["yilan"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/12657/",
+      },
+      {
+        title: "Compare 柑仔蜜, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["lukang"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/5090/",
+      },
+      {
+        title: "Compare 箸, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["lukang"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/10689/",
+      },
+      {
+        title: "Compare 雞, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["sanxia"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/12657/",
+      },
+      {
+        title: "Compare 雪文, regional readings",
+        description:
+          "Open the regional table and select this locality’s reference recording; spellings follow MOE Tâi-lô.",
+        localityIds: ["sanxia"],
+        kind: "Dictionary",
+        url: "https://sutian.moe.edu.tw/zh-hant/su/8021/",
+      },
+      {
+        title: "Hokkien in Singapore",
+        description:
+          "A local account of vocabulary, place names, and contact with other languages.",
+        localityIds: ["singapore"],
+        kind: "Study",
+        url: "https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/",
+      },
+      {
+        title: "Words along the Singapore River",
+        description:
+          "The National Heritage Board’s walk explains Lau Pa Sat and the port’s communities.",
+        localityIds: ["singapore"],
+        kind: "Culture",
+        url: "https://www.roots.gov.sg/~/media/Roots/Files/singapore-river-walk/nhb_singpaore-river-walk_2018.pdf",
+      },
+      {
+        title: "Penang phonology and vocabulary",
+        description:
+          "Fieldwork-based study of Penang Hokkien; regional evidence, not a city-wide standard.",
+        localityIds: ["george-town"],
+        kind: "Study",
+        url: "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf",
+        scope: "branch-comparison",
+      },
+      {
+        title: "Penang Hokkien dictionary",
+        description:
+          "Community dictionary using its own Taiji Romanisation; keep it distinct from IPA and HanLingo spelling.",
+        localityIds: ["george-town"],
+        kind: "Dictionary",
+        url: "https://www.penang-traveltips.com/dictionary/index.htm",
+        scope: "branch-comparison",
+      },
+      {
+        title: "Chaozhou tones in speech and song",
+        description:
+          "Research poster comparing tone sandhi and melodic patterns; preliminary research rather than a pronunciation course.",
+        localityIds: ["chaozhou"],
+        kind: "Study",
+        url: "https://www.cambridge.org/engage/coe/article-details/618c29dada150629539daec9",
+      },
+      {
+        title: "Teochew learning guide",
+        description:
+          "Community introduction to the wider Teochew language; not a single Chaozhou-city accent model.",
+        localityIds: ["chaozhou"],
+        kind: "Study",
+        url: "https://learnteochew.com/pages/introduction.html",
+        scope: "branch-comparison",
+      },
+      {
+        title: "Swatow character dictionary",
+        description:
+          "Browse IPA readings, tone values, and dictionary recordings for individual characters.",
+        localityIds: ["shantou"],
+        kind: "Dictionary",
+        url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=R",
+      },
+      {
+        title: "Small Park and overseas letters",
+        description:
+          "An official heritage route through arcaded streets and the Qiaopi museum.",
+        localityIds: ["shantou"],
+        kind: "Culture",
+        url: "https://www.shantou.gov.cn/wgxj/zwgk/gzdt/content/post_2547879.html",
+      },
+    ],
+  },
+];

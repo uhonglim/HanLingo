@@ -19,6 +19,9 @@ import "./BranchLearning.css";
 function SourceReading({ reading }: { reading: RegionalReading }) {
   return (
     <>
+      {reading.registerLabel && (
+        <p className="learning-register">{reading.registerLabel}</p>
+      )}
       {reading.ipa && (
         <Pronunciation
           ipa={reading.ipa}

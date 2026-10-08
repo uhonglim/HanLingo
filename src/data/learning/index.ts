@@ -1,7 +1,9 @@
+import { xiamenWords } from "../xiamen-lexicon";
 import { ipaSearchForms } from "../ipa-display";
 import { localityPhotos } from "./locality-photos";
 import { mapPoints } from "../languages";
 import { siteTerms } from "../site-terms";
+import { southernMinLearning } from "./southern-min";
 import { minLearning } from "./min";
 import { mandarinYueLearning } from "./mandarin-yue";
 import { hakkaWuLearning } from "./hakka-wu";
@@ -14,6 +16,7 @@ import { getLocalGallery } from "../galleries";
 
 export const branchLearning: BranchLearning[] = [
   ...minLearning,
+  ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
 ].map((pack) => ({
@@ -52,8 +55,23 @@ export function getBranchLearning(groupId: string, subgroupId: string) {
 }
 export function getLocalLearning(point: MapPoint) {
   const pack = getBranchLearning(point.groupId, point.subgroupId);
-  const baseWords =
-    pack?.words.filter((item) => item.localityId === point.id) ?? [];
+  const baseWords: AttestedWord[] =
+    point.id === "xiamen"
+      ? xiamenWords.map((word) => ({
+          id: `xiamen-${word.id}`,
+          han: word.han,
+          english: word.english,
+          ipa: word.ipa,
+          toneNotation: "pitch-contour",
+          localityId: "xiamen",
+          reading:
+            word.readingMode === "Citation"
+              ? "Citation reading"
+              : "Connected speech",
+          note: word.note,
+          source: { title: word.sourceLabel, url: word.sourceUrl },
+        }))
+      : (pack?.words.filter((item) => item.localityId === point.id) ?? []);
   const existing = new Set(baseWords.map((word) => wordMeaning(word.english)));
   const additions = regionalReadingsFor(point.id).filter(
     (reading) => reading.ipa && !existing.has(wordMeaning(reading.english)),
@@ -69,6 +87,7 @@ export function getLocalLearning(point: MapPoint) {
         toneNotation: reading.toneNotation,
         localityId: reading.localityId,
         reading: reading.scope,
+        registerLabel: reading.registerLabel,
         note: reading.note,
         source: reading.source,
       })),

@@ -19,6 +19,7 @@ Open **[http://127.0.0.1:5173](http://127.0.0.1:5173)**. Use this exact IPv4 add
 npm test        # Run the Vitest suite
 npm run build  # Type-check and generate the production bundle in dist/
 npm run preview
+npm run audit:content  # Regenerate the branch and locality depth inventory
 ```
 
 `preview` serves the production build locally; use the URL printed in the terminal. No API keys or backend services are required. Building or previewing the site does not deploy it.
@@ -30,6 +31,7 @@ npm run preview
 - Compare documented local word choices and pronunciations, including Amoy–Tsiang-tsiu–Tsuân-tsiu vowel and tone differences, Taiwan tomato and soap variants, and Singapore market terminology. Source romanizations stay separate from IPA and HanLingo spelling.
 - Explore **27 attested IPA symbols and seven reference tone contours**. Selecting a sound or tone highlights it in matching sourced words; the collection is not a complete Xiamen sound inventory.
 - Search or save words, follow photographs to related vocabulary, explore pitch contours and a tone-sandhi example, and complete short practice rounds. Saved words and learning progress stay in this browser.
+- All 18 branches have learning packs. Group and branch overviews expose locally labelled words, sound notes, photo galleries, culture, and primary learning resources. See the reproducible [content depth audit](docs/CONTENT-DEPTH.md) for exact coverage and remaining lexical gaps.
 - Min now has 17 locality entries, including 13 in Southern Min. Tsuan-Chiang includes six Taiwan locality references alongside Amoy, Tsuân-tsiu, Tsiang-tsiu, Sin-ka-pho, and Pho Te. Teo Swa separately contains Teochew and Swatow. Every mapped locality has a licensed photo gallery, with 9–11 distinct images. The tree labels the 泉漳 cluster **Tsuan-Chiang** and the flagship chapter **Amoy**; alternate names remain searchable.
 - The homepage is the Han family tree. Open a group, then its subgroup and locality; the same tree stays in place as the adjacent content changes. The Min map remains available at `/min`.
 - Follow a map point to a dedicated local article, or pan and zoom to compare reference places.

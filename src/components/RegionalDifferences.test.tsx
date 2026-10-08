@@ -6,7 +6,7 @@ import RegionalDifferences, {
   RegionalWord,
 } from "./RegionalDifferences";
 import Pronunciation, { pitchContours, displayIpa } from "./Pronunciation";
-import { regionalReadingsFor } from "../data/regional-words";
+import { regionalReadingsFor, regionalConcepts } from "../data/regional-words";
 import { getLocalLearning } from "../data/learning";
 import { mapPoints } from "../data/languages";
 
@@ -54,5 +54,27 @@ describe("local references and IPA", () => {
     );
     expect(categories).toContain("source tone categories");
     expect(categories).not.toContain("<svg");
+  });
+  it("keeps omitted tones visible instead of plotting an invented contour", () => {
+    const html = renderToStaticMarkup(
+      <Pronunciation ipa="[pa]" toneNotation="unspecified" />,
+    );
+    expect(html).toContain("tones not given");
+    expect(html).not.toContain("<svg");
+    expect(html).not.toContain("HanLingo spelling");
+  });
+
+  it("does not repeat identical Shanghai dictionary entries after vocabulary expansion", () => {
+    for (const id of ["mountain", "uncooked-rice"]) {
+      const readings = regionalConcepts
+        .find((concept) => concept.id === id)!
+        .readings.filter(
+          (reading) =>
+            reading.localityId === "shanghai" &&
+            reading.source.url.includes("cuhk"),
+        );
+      expect(readings).toHaveLength(1);
+    }
+    expect(regionalReadingsFor("shantou").length).toBeGreaterThan(0);
   });
 });

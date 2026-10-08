@@ -65,6 +65,7 @@ function words(
   source: LearningSource,
   reading: string,
   note: string,
+  toneNotation: AttestedWord["toneNotation"] = "pitch-contour",
 ): AttestedWord[] {
   return entries.map(([id, han, english, ipa]) => ({
     id: `${localityId}-${id}`,
@@ -72,37 +73,221 @@ function words(
     english,
     ipa,
     localityId,
-    toneNotation: "pitch-contour",
+    toneNotation,
     reading,
+    registerLabel:
+      localityId === "haifeng"
+        ? "Haifeng Hakka survey · segments only"
+        : undefined,
     note,
     source,
   }));
 }
 
+// CUHK character readings: pitch numbers are those printed by this source,
+// not tone-category numbers or predictions from another locality.
+function cuhkWords(
+  localityId: string,
+  entries: [string, string, string][],
+): AttestedWord[] {
+  return entries.map(([han, english, ipa]) => ({
+    id: `${localityId}-cuhk-${han.codePointAt(0)}`,
+    han,
+    english,
+    ipa: `[${ipa}]`,
+    localityId,
+    toneNotation: "pitch-contour",
+    reading: "Dictionary character reading",
+    note: "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+    source: source(
+      "CUHK Multi-function Chinese Character Database: " + han,
+      "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=" +
+        encodeURIComponent(han),
+    ),
+  }));
+}
+
+const depthWords: Record<string, AttestedWord[]> = {
+  meixian: cuhkWords("meixian", [
+    ["山", "mountain", "san44"],
+    ["水", "water", "sui31"],
+    ["米", "rice", "mi31"],
+    ["手", "hand", "su31"],
+    ["魚", "fish", "n̍11"],
+    ["肉", "meat", "ŋiuk1"],
+    ["飯", "cooked rice", "fan53"],
+    ["天", "sky", "tʰien44"],
+    ["地", "ground", "tʰi53"],
+    ["日", "sun; day", "ŋit1"],
+    ["月", "moon", "ŋiat5"],
+    ["火", "fire", "fo31"],
+    ["風", "wind", "fuŋ44"],
+    ["花", "flower", "fa44"],
+    ["狗", "dog", "keu31"],
+    ["牛", "ox", "ŋiu11"],
+    ["貓", "cat", "miau53"],
+    ["雞", "chicken", "ke44"],
+    ["門", "door", "mun11"],
+    ["白", "white", "pʰak5"],
+    ["黑", "black", "het1"],
+    ["大", "big", "tʰai53"],
+    ["小", "small", "siau31"],
+    ["多", "many", "to44"],
+    ["來", "come", "loi11"],
+    ["去", "go", "hi53"],
+    ["好", "good", "hau31"],
+  ]),
+  shanghai: cuhkWords("shanghai", [
+    ["山", "mountain", "se53"],
+    ["米", "rice", "mi13"],
+    ["手", "hand", "sɤ35"],
+    ["肉", "meat", "ȵioʔ1"],
+    ["飯", "cooked rice", "ve13"],
+    ["天", "sky", "tʰi53"],
+    ["地", "ground", "di13"],
+    ["火", "fire", "hu35"],
+    ["風", "wind", "foŋ53"],
+    ["狗", "dog", "kɤ35"],
+    ["牛", "ox", "ȵiɤ13"],
+    ["雞", "chicken", "t͡ɕi53"],
+    ["門", "door", "məŋ13"],
+    ["白", "white", "baʔ1"],
+    ["黑", "black", "həʔ5"],
+    ["紅", "red", "ɦoŋ13"],
+    ["小", "small", "ɕiɔ35"],
+    ["多", "many", "tu53"],
+    ["來", "come", "le13"],
+    ["好", "good", "hɔ35"],
+    ["你", "you", "ni53"],
+  ]),
+  wenzhou: cuhkWords("wenzhou", [
+    ["山", "mountain", "sa33"],
+    ["米", "rice", "mei35"],
+    ["手", "hand", "ɕɤu35"],
+    ["魚", "fish", "ŋøy31"],
+    ["飯", "cooked rice", "va22"],
+    ["天", "sky", "tʰi33"],
+    ["地", "ground", "dei22"],
+    ["月", "moon", "ȵy213"],
+    ["火", "fire", "fu35"],
+    ["風", "wind", "hoŋ33"],
+    ["花", "flower", "ho33"],
+    ["狗", "dog", "kau35"],
+    ["白", "white", "ba213"],
+    ["黑", "black", "he213"],
+    ["小", "small", "ɕiɛ35"],
+    ["多", "many", "tɤu33"],
+    ["好", "good", "hɜ35"],
+    ["我", "I; me", "ŋ̍35"],
+    ["你", "you", "ȵi35"],
+  ]),
+  suzhou: words(
+    "suzhou",
+    [
+      ["this", "斯", "this", "[sɿ44]"],
+      ["book", "書", "book", "[sʮ44]"],
+      ["clothes", "衣", "clothes", "[i44]"],
+      ["winding", "迂", "winding", "[y44]"],
+      ["husband", "夫", "husband", "[fu44]"],
+      ["smoke", "煙", "smoke", "[ɪ44]"],
+      ["excellent", "優", "excellent", "[ʏ44]"],
+      ["safety", "安", "safety", "[ø44]"],
+      ["sadness", "哀", "sadness", "[ɛ44]"],
+      ["fork", "丫", "fork; branch junction", "[o44]"],
+      ["fold", "拗", "fold", "[æ44]"],
+      ["in-turn", "挨", "in turn", "[ɑ44]"],
+      ["grace", "恩", "grace", "[ən44]"],
+      ["water-spinach", "蕹", "water spinach", "[oŋ44]"],
+      ["cherry", "櫻", "cherry", "[ã44]"],
+      ["dirty", "骯", "dirty", "[ɑ̃44]"],
+      ["check", "遏", "check; restrain", "[əʔ5]"],
+      ["evil", "惡", "evil", "[oʔ5]"],
+      ["duck", "鴨", "duck", "[aʔ5]"],
+      ["press", "壓", "press", "[ɑʔ5]"],
+    ],
+    source(
+      "Ling Feng: A phonetic study of the vowel system in Suzhou Chinese, Tables 2-1 and 3-1 (2009)",
+      "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b39479298f.pdf#page=34",
+    ),
+    "Vowel-study character reading",
+    "Metropolitan Suzhou speakers in their fifties; word tables on pp. 14 and 74. The author’s broad transcription, including sinological apical-vowel symbols ɿ and ʮ, is retained. 44 and 5 are pitch values. These elicitation characters are not all independent everyday words.",
+  ),
+  haifeng: words(
+    "haifeng",
+    [
+      ["cup", "杯", "cup", "[pui]"],
+      ["eight", "八", "eight", "[pat]"],
+      ["hundred", "百", "hundred", "[pak]"],
+      ["plum", "梅", "plum", "[moi]"],
+      ["tail", "尾", "tail", "[mui]"],
+      ["mosquito", "蚊", "mosquito", "[mun]"],
+      ["ash", "灰", "ash", "[foi]"],
+      ["rice-plant", "禾", "rice plant", "[vo]"],
+      ["house", "屋", "house", "[vuk]"],
+      ["push", "推", "push", "[tʰui]"],
+      ["soup", "湯", "soup", "[tʰoŋ]"],
+      ["thunder", "雷", "thunder", "[lui]"],
+      ["egg", "卵", "egg", "[lon]"],
+      ["boat", "船", "boat", "[ʃon]"],
+      ["cloud", "雲", "cloud", "[ʒun]"],
+      ["leaf", "葉", "leaf", "[ʒiap]"],
+      ["song", "歌", "song", "[ko]"],
+      ["chicken", "雞", "chicken", "[kai]"],
+      ["mouth", "口", "mouth", "[kʰeu]"],
+      ["goose", "鵝", "goose", "[ŋo]"],
+      ["day", "日", "sun; day", "[ŋit]"],
+      ["tea", "茶", "tea", "[tsʰa]"],
+      ["dog", "狗", "dog", "[keu]"],
+      ["head", "頭", "head", "[tʰeu]"],
+    ],
+    source(
+      "Chang Wei-min: On the dialectal variations in Haifeng Hakka, pp. 30–31 (2008)",
+      "https://cloud.hakka.gov.tw/Attachment/1/921210533771.pdf#page=45",
+    ),
+    "Haifeng Hakka survey · segments only",
+    "Guangdong Haifeng Hakka examples from the consonant and vowel tables, not Taiwan Hailu. The chapter surveys Pingdong, Huangqiang and Xikeng rather than one county-seat accent; their tone values differ. Tones are deliberately omitted here, so these are sound-shape examples, not complete pronunciations to imitate.",
+    "unspecified",
+  ),
+};
+
 export const hakkaWuLearning: BranchLearning[] = [
   {
     branchId: "hakka/yuetai",
-    words: words(
-      "meixian",
-      [
-        ["tea", "茶", "tea", "[tsʰa11]"],
-        ["car", "車", "car", "[tsʰa33]"],
-        ["rain", "雨", "rain", "[i41]"],
-        ["one", "一", "one", "[it41]"],
-        ["seven", "七", "seven", "[tsʰit41]"],
-        ["wing", "翼", "wing", "[it55]"],
-        ["tongue", "舌", "tongue", "[sat55]"],
-        ["rice-cake", "糍", "glutinous rice cake", "[tsʰi11]"],
-        ["take", "取", "take", "[tsʰi41]"],
-        ["pull", "扯", "pull", "[tsʰa41]"],
-        ["come-out", "出", "come out", "[tsʰut41]"],
-        ["summer-heat", "暑", "hot weather", "[tsʰu41]"],
-      ],
-      meixian,
-      "Citation reading",
-      "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
-    ),
+    words: [
+      ...depthWords.meixian,
+      ...words(
+        "meixian",
+        [
+          ["tea", "茶", "tea", "[tsʰa11]"],
+          ["car", "車", "car", "[tsʰa33]"],
+          ["rain", "雨", "rain", "[i41]"],
+          ["one", "一", "one", "[it41]"],
+          ["seven", "七", "seven", "[tsʰit41]"],
+          ["wing", "翼", "wing", "[it55]"],
+          ["tongue", "舌", "tongue", "[sat55]"],
+          ["rice-cake", "糍", "glutinous rice cake", "[tsʰi11]"],
+          ["take", "取", "take", "[tsʰi41]"],
+          ["pull", "扯", "pull", "[tsʰa41]"],
+          ["come-out", "出", "come out", "[tsʰut41]"],
+          ["summer-heat", "暑", "hot weather", "[tsʰu41]"],
+        ],
+        meixian,
+        "Citation reading",
+        "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      ),
+    ],
     soundNotes: [
+      {
+        title: "Fish without a vowel",
+        text: "CUHK records 魚 as [n̍11] in its Meixian column. The vertical mark makes the nasal syllabic: the nasal itself carries the syllable. Keep this dictionary reading separate from the Meijiang speaker sample used elsewhere on this page.",
+        localityIds: ["meixian"],
+        source: {
+          title:
+            "CUHK Multi-function Chinese Character Database: locality readings",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%B1%B1",
+        },
+      },
+
       {
         title: "Tea and a car",
         text: "茶 [tsʰa11] and 車 [tsʰa33] have the same consonant and vowel here. The pitch distinguishes them: 11 is low and 33 is mid. Read each as one syllable.",
@@ -118,6 +303,16 @@ export const hakkaWuLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Mountain songs from Songkou",
+        text: "Songkou in Meixian has a documented Hakka mountain-song tradition built around four-line song forms, with narrative singing at different speeds. Listen for the phrasing of a performed verse: sung melody is not a substitute for a spoken tone recording.",
+        localityIds: ["meixian"],
+        source: {
+          title: "Guangdong Cultural Centre: Songkou Hakka mountain songs",
+          url: "https://www.gd.gov.cn/zjgd/lnwh/fywh/ctyy/content/post_157920.html",
+        },
+      },
+
+      {
         title: "Courtyards and curved houses",
         text: "Qiaoxiang village in Nankou, Meixian, preserves large Hakka houses, including the curved compounds called 圍龍屋. The buildings connect family history with migration overseas and return visits.",
         localityIds: ["meixian"],
@@ -125,6 +320,15 @@ export const hakkaWuLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Meixian character readings",
+        description:
+          "Choose the Meixian row to compare isolated character readings. The database prints source pitch values.",
+        localityIds: ["meixian"],
+        kind: "Dictionary",
+        url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%B1%B1",
+      },
+
       {
         title: "Meixian vowels and tones",
         description:
@@ -154,18 +358,69 @@ export const hakkaWuLearning: BranchLearning[] = [
   },
   {
     branchId: "hakka/hailu",
-    words: words(
-      "lufeng",
-      [
-        ["younger-brother", "老弟", "younger brother", "[lau11 tʰai53]"],
-        ["younger-sister", "老妹", "younger sister", "[lau11 moi22]"],
-        ["loach", "湖鰍", "loach", "[pʰui55 tsʰiu53]"],
-      ],
-      lufeng,
-      "Fieldwork reading",
-      "Guangdong Lufeng column, August 2007. Source aspiration marks are normalized to IPA ʰ. The report does not identify a single town for this table; do not generalize it to all Lufeng or Taiwan Hailu.",
-    ),
+    words: [
+      ...depthWords.haifeng,
+      ...words(
+        "lufeng",
+        [
+          ["younger-brother", "老弟", "younger brother", "[lau11 tʰai53]"],
+          ["younger-sister", "老妹", "younger sister", "[lau11 moi22]"],
+          ["loach", "湖鰍", "loach", "[pʰui55 tsʰiu53]"],
+          ["lightning", "火蛇", "lightning", "[fo11 ʃa55]"],
+          ["riverbank", "坑邊", "riverbank", "[haŋ53 pen53]"],
+          ["embankment", "坑剝", "river embankment", "[haŋ53 pok13]"],
+          ["asphalt-road", "瀝青路", "asphalt road", "[lit32 tsʰiaŋ53 lu22]"],
+          ["dust", "塵灰", "dust", "[tsʰin55 foi53]"],
+          ["stream", "坑壢", "stream", "[haŋ53 lak32]"],
+          ["tunnel", "涵孔", "tunnel", "[ham55 kʰuŋ53]"],
+          ["straw-ash", "禾槁灰", "rice-straw ash", "[vo55 kau11 foi53]"],
+          ["earthworm", "蟲憲", "earthworm", "[tʃʰuŋ55 kʰien13]"],
+          ["cricket", "土猴", "cricket", "[tʰu11 heu13]"],
+          ["firefly", "火焰蟲", "firefly", "[fo11 ʒiam11 tʃʰuŋ55]"],
+          ["chimney", "煙囪", "chimney", "[an53 tʰuŋ13]"],
+          ["chopstick-holder", "箸簍", "chopstick holder", "[tʃʰu11 lui13]"],
+          ["aunt", "阿嬸", "aunt", "[a11 sim13]"],
+          ["son-in-law", "阿郎", "son-in-law", "[a11 loŋ13]"],
+          ["weather", "天時", "weather", "[tʰen53 ʃi55]"],
+          ["terraced-field", "山田", "terraced field", "[son53 tʰen55]"],
+          ["noon", "當晝心", "noon", "[toŋ53 tʃiu11 sim53]"],
+        ],
+        lufeng,
+        "Fieldwork reading",
+        "Guangdong Lufeng column, August 2007. Source aspiration marks are normalized to IPA ʰ. The report does not identify a single town for this table; do not generalize it to all Lufeng or Taiwan Hailu.",
+      ),
+    ],
     soundNotes: [
+      {
+        title: "Three Haifeng Hakka towns",
+        text: "Chang’s survey distinguishes Pingdong, Huangqiang and Xikeng. Their corresponding tone categories can have different pitch shapes. The shared consonant-and-vowel examples here omit tones; a complete reading needs a named town and its recorded tone.",
+        localityIds: ["haifeng"],
+        source: {
+          title:
+            "Chang Wei-min: Haifeng Hakka variation, pp.30–35 and 172–173 (2008)",
+          url: "https://cloud.hakka.gov.tw/Attachment/1/921210533771.pdf",
+        },
+      },
+      {
+        title: "Rain, water and rain falling",
+        text: "The Haifeng Huangqiang and Xikeng columns use 雨 for rain. The study separately notes 落水 for rain falling, while the surveyed Hsinchu localities use 水 for rain itself. Learn the whole expression rather than replacing every occurrence of “rain” with one character.",
+        localityIds: ["haifeng"],
+        source: {
+          title:
+            "Chang Wei-min: Haifeng Hakka variation, pp.30–35 and 172–173 (2008)",
+          url: "https://cloud.hakka.gov.tw/Attachment/1/921210533771.pdf",
+        },
+      },
+      {
+        title: "Lightning has a local name",
+        text: "The Guangdong Lufeng table records 火蛇, literally “fire snake”, for lightning. It also records 湖鰍 for loach with initial [pʰ]. Both the word choice and its consonants matter; the Taiwan comparison column is a separate reading.",
+        localityIds: ["lufeng"],
+        source: {
+          title: "Lü Wan-yun: Guangdong Lufeng fieldwork, pp.106–107",
+          url: "https://cloud.hakka.gov.tw/Attachment/1/84178533971.pdf#page=106",
+        },
+      },
+
       {
         title: "Lufeng and Taiwan Hailu",
         text: "The 2007 comparison records 老弟 with [lau] in Guangdong Lufeng and [lo] in Hsinchu. A shared Hailu name does not make the two pronunciations identical. Compare the locality columns before learning a form.",
@@ -181,6 +436,25 @@ export const hakkaWuLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Making and dancing a qilin",
+        text: "Haifeng’s qilin dance combines a crafted animal head, two dancers, percussion and martial-arts routines. Bamboo strips form the head beneath layers of paper and paint. This is a tradition of the multilingual Haifeng area, not evidence of one uniform Hakka-speaking community.",
+        localityIds: ["haifeng"],
+        source: {
+          title: "Shanwei: Haifeng qilin dance",
+          url: "https://www.shanwei.gov.cn/shanwei/swly/yswh/content/post_1103646.html",
+        },
+      },
+      {
+        title: "Stories behind a lit screen",
+        text: "Lufeng shadow theatre brings cut figures, moving shadows and live performers together. Its local troupe also teaches puppet-making alongside performances. The stage tradition belongs to Lufeng’s cultural landscape; its performance language should not be assumed to match the Hakka fieldwork words.",
+        localityIds: ["lufeng"],
+        source: {
+          title: "Shanwei Cultural Affairs: Lufeng shadow theatre",
+          url: "https://www.shanwei.gov.cn/swwgltj/zhengwu/0800/0801/content/post_1146498.html",
+        },
+      },
+
+      {
         title: "A bowl of salted tea",
         text: "In Haifeng and Lufeng, tea leaves are ground with ingredients such as peanuts, sesame, and mint, then mixed with hot water and salt. Bowls may include puffed rice. Sharing tea accompanies visits and family occasions across the region’s communities.",
         localityIds: ["haifeng", "lufeng"],
@@ -188,6 +462,15 @@ export const hakkaWuLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Haifeng Hakka: three surveyed towns",
+        description:
+          "Chang’s thesis distinguishes Pingdong, Huangqiang and Xikeng, with sound tables and Guangdong–Taiwan vocabulary comparisons.",
+        localityIds: ["haifeng"],
+        kind: "Study",
+        url: "https://cloud.hakka.gov.tw/Attachment/1/921210533771.pdf",
+      },
+
       {
         title: "Lufeng fieldwork and comparison",
         description:
@@ -219,6 +502,16 @@ export const hakkaWuLearning: BranchLearning[] = [
     branchId: "hakka/tingzhou",
     words: [],
     soundNotes: [
+      {
+        title: "Five tones do not make one sandhi rule",
+        text: "Lin’s comparison uses five citation-tone categories, then tests all 125 three-syllable category combinations. Some sequences change from left to right, others from right to left, and some require a separate analysis. The paper’s H, M and L labels describe tonal height, not HanLingo spelling.",
+        localityIds: ["changting"],
+        source: {
+          title: "Lin Hui-shan: Changting Hakka Tone Sandhi, pp.177–188 (2007)",
+          url: "https://thjcs.site.nthu.edu.tw/var/file/452/1452/img/1300/THJCS371-6.pdf",
+        },
+      },
+
       {
         title: "Learn the whole phrase",
         text: "Changting fieldwork compares words spoken alone, in pairs, and in three-syllable sequences. The same syllable can change tone with its neighbors, and the order of changes matters. An isolated reading cannot supply the pronunciation of a phrase.",
@@ -281,23 +574,55 @@ export const hakkaWuLearning: BranchLearning[] = [
   },
   {
     branchId: "wu/taihu",
-    words: words(
-      "shanghai",
-      [
-        ["knife", "刀", "knife", "[tɔ51]"],
-        ["island", "島", "island", "[tɔ35]"],
-        ["peach", "桃", "peach", "[dɔ213]"],
-        ["read", "讀", "read", "[dʊʔ213]"],
-        ["low", "低", "low", "[ti51]"],
-        ["melon", "瓜", "melon", "[ko51]"],
-        ["tall", "高", "tall", "[kɔ51]"],
-        ["street", "街", "street", "[ka51]"],
-      ],
-      shanghai,
-      "Citation reading",
-      "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
-    ),
+    words: [
+      ...depthWords.suzhou,
+      ...depthWords.shanghai,
+      ...words(
+        "shanghai",
+        [
+          ["knife", "刀", "knife", "[tɔ51]"],
+          ["island", "島", "island", "[tɔ35]"],
+          ["peach", "桃", "peach", "[dɔ213]"],
+          ["read", "讀", "read", "[dʊʔ213]"],
+          ["low", "低", "low", "[ti51]"],
+          ["melon", "瓜", "melon", "[ko51]"],
+          ["tall", "高", "tall", "[kɔ51]"],
+          ["street", "街", "street", "[ka51]"],
+        ],
+        shanghai,
+        "Citation reading",
+        "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      ),
+    ],
     soundNotes: [
+      {
+        title: "A character can have two readings",
+        text: "CUHK labels Shanghai 花 [ho53] colloquial and [hua53] literary. These are usage layers within one locality, not different cities. A written character alone does not determine which reading fits a spoken expression.",
+        localityIds: ["shanghai"],
+        source: {
+          title: "CUHK: 花, Shanghai locality column",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E8%8A%B1",
+        },
+      },
+      {
+        title: "Hear the ending in duck",
+        text: "Suzhou 鴨 [aʔ5] ends with a glottal stop, while 恩 [ən44] ends with a nasal. The vowel study places these words in separate syllable groups. Finish the closure without adding another vowel.",
+        localityIds: ["suzhou"],
+        source: {
+          title: "Ling Feng: Suzhou vowels, pp.11,14,74 (2009)",
+          url: "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b39479298f.pdf#page=34",
+        },
+      },
+      {
+        title: "Which Suzhou generation?",
+        text: "Feng’s main sample consists of metropolitan Suzhou speakers in their fifties. The thesis discusses younger speakers’ merger of older [ts tsʰ s] before [i y] with [tɕ tɕʰ ɕ]. The word tables therefore represent a specified generation, not a timeless city standard.",
+        localityIds: ["suzhou"],
+        source: {
+          title: "Ling Feng: Suzhou vowels, pp.11,14,74 (2009)",
+          url: "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b39479298f.pdf#page=34",
+        },
+      },
+
       {
         title: "Tone belongs to the word",
         text: "In Shanghai, the first syllable can determine the pitch pattern across a tone unit. Learn a compound from its full recording rather than joining isolated syllable tones.",
@@ -319,6 +644,25 @@ export const hakkaWuLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Huju: Shanghai on stage",
+        text: "Huju draws on local Shanghai speech and folk-song traditions. Spoken dialogue, singing and changing theatrical styles make it a useful way to encounter the language in performance. A stage voice is a performance convention rather than a neutral pronunciation model.",
+        localityIds: ["shanghai"],
+        source: {
+          title: "Shanghai Municipal Government: Baoshan cultural traditions",
+          url: "https://www.shanghai.gov.cn/baoshan/index.html",
+        },
+      },
+      {
+        title: "Life around a shikumen doorway",
+        text: "Shikumen houses connect stone-framed entrances with Shanghai’s lane neighborhoods. Huangpu preserves examples such as Shangxianfang and Bugao Li. Look beyond individual façades to the lanes, shared entrances and closely spaced homes.",
+        localityIds: ["shanghai"],
+        source: {
+          title: "Shanghai Municipal Government: Huangpu cultural heritage",
+          url: "https://www.shanghai.gov.cn/huangpu/index.html",
+        },
+      },
+
+      {
         title: "Pingtan: stories with strings",
         text: "Suzhou Pingtan combines storytelling and song. Performers accompany themselves on the three-stringed sanxian and the pipa, with distinct singing styles passed between teachers and students.",
         localityIds: ["suzhou"],
@@ -333,6 +677,15 @@ export const hakkaWuLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Suzhou vowel system: full dissertation",
+        description:
+          "Speaker scope, sound changes and the exact character tables used here. Includes acoustic and articulatory measurements.",
+        localityIds: ["suzhou"],
+        kind: "Study",
+        url: "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b39479298f.pdf#page=34",
+      },
+
       {
         title: "Shanghai Chinese: IPA illustration",
         description:
@@ -369,27 +722,40 @@ export const hakkaWuLearning: BranchLearning[] = [
   },
   {
     branchId: "wu/oujiang",
-    words: words(
-      "wenzhou",
-      [
-        ["send", "派", "send; dispatch", "[pʰa42]"],
-        ["dress-up", "扮", "dress up", "[pa42]"],
-        ["arrange", "排", "arrange", "[ba31]"],
-        ["too", "太", "too; excessively", "[tʰa42]"],
-        ["belt", "帶", "belt", "[ta42]"],
-        ["chat", "談", "talk; chat", "[da31]"],
-        ["fast", "快", "fast", "[kʰa42]"],
-        ["thick", "厚", "thick", "[ɡau24]"],
-        ["tooth", "牙", "tooth", "[ŋu31]"],
-        ["ox", "牛", "ox", "[ŋau31]"],
-        ["door", "門", "door", "[maŋ31]"],
-        ["face", "面", "face", "[mi11]"],
-      ],
-      wenzhou,
-      "Citation reading",
-      "Scholz’s 2012 description of young Lucheng speakers, pp. 15 and 20. Broad IPA and source pitch numbers are retained; these forms do not represent every age group or all Wenzhou districts.",
-    ),
+    words: [
+      ...depthWords.wenzhou,
+      ...words(
+        "wenzhou",
+        [
+          ["send", "派", "send; dispatch", "[pʰa42]"],
+          ["dress-up", "扮", "dress up", "[pa42]"],
+          ["arrange", "排", "arrange", "[ba31]"],
+          ["too", "太", "too; excessively", "[tʰa42]"],
+          ["belt", "帶", "belt", "[ta42]"],
+          ["chat", "談", "talk; chat", "[da31]"],
+          ["fast", "快", "fast", "[kʰa42]"],
+          ["thick", "厚", "thick", "[ɡau24]"],
+          ["tooth", "牙", "tooth", "[ŋu31]"],
+          ["ox", "牛", "ox", "[ŋau31]"],
+          ["door", "門", "door", "[maŋ31]"],
+          ["face", "面", "face", "[mi11]"],
+        ],
+        wenzhou,
+        "Citation reading",
+        "Scholz’s 2012 description of young Lucheng speakers, pp. 15 and 20. Broad IPA and source pitch numbers are retained; these forms do not represent every age group or all Wenzhou districts.",
+      ),
+    ],
     soundNotes: [
+      {
+        title: "Short does not always mean a final stop",
+        text: "In CUHK’s Wenzhou column, 白 [ba213] and 黑 [he213] belong to the historical entering-tone category but are printed without final [p], [t], [k] or [ʔ]. A historical tone-category name alone cannot tell you the modern ending.",
+        localityIds: ["wenzhou"],
+        source: {
+          title: "CUHK: 白, Wenzhou locality column",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%99%BD",
+        },
+      },
+
       {
         title: "One vowel, three beginnings",
         text: "派 [pʰa42], 扮 [pa42], and 排 [ba31] illustrate the three consonant series in the source. Aspiration separates [pʰ] from [p]; the voiced series also differs in tonal register and phonation.",
@@ -404,6 +770,16 @@ export const hakkaWuLearning: BranchLearning[] = [
       },
     ],
     culture: [
+      {
+        title: "Ou crafts in Lucheng",
+        text: "Lucheng collections bring together Ou embroidery, Ou relief sculpture, Ou ceramics and wood carving. Compare how a flower or figure is built from stitches, modeled material or carved wood. These crafts offer a different view of the city from its skyline.",
+        localityIds: ["wenzhou"],
+        source: {
+          title: "Wenzhou: local crafts in Lucheng exhibition collections",
+          url: "https://wzstb.wenzhou.gov.cn/art/2023/6/15/art_1234528_58902225.html",
+        },
+      },
+
       {
         title: "Printing a family history",
         text: "In Rui’an, within the wider Wenzhou area, craftspeople carve reusable wooden characters and arrange them to print clan genealogies. Printing equipment travels to ancestral halls. This is regional cultural context, distinct from the Lucheng pronunciation sample.",
@@ -443,6 +819,16 @@ export const hakkaWuLearning: BranchLearning[] = [
     words: [],
     soundNotes: [
       {
+        title: "Real words and unfamiliar combinations",
+        text: "The 2023 experiment compared familiar two-syllable words with newly assembled syllable pairs. The first syllable’s pitch depended on both the item and the speaker. Learning a familiar compound gives evidence that a tone chart by itself cannot provide.",
+        localityIds: ["lishui"],
+        source: {
+          title: "Lan, Chen & Zhang: Lishui tone sandhi (2023)",
+          url: "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2023/full_papers/542.pdf",
+        },
+      },
+
+      {
         title: "Listen to both syllables",
         text: "Lishui tone sandhi is often described as right-dominant: the last syllable tends to keep its citation tone while the first changes. The 2023 study found variation across words and speakers, so a single automatic conversion rule would hide real differences.",
         localityIds: ["lishui"],
@@ -456,6 +842,16 @@ export const hakkaWuLearning: BranchLearning[] = [
       },
     ],
     culture: [
+      {
+        title: "Green glaze from Longquan",
+        text: "In Longquan, within the wider Lishui prefecture, celadon makers repeatedly heat and cool glazed vessels to control their surface and color. Recipes and kiln judgment pass through families and apprenticeships. This is regional craft context; Longquan speech is distinct from the urban Liandu sample.",
+        localityIds: ["lishui"],
+        source: {
+          title: "UNESCO: Traditional firing technology of Longquan celadon",
+          url: "https://ich.unesco.org/en/RL/traditional-firing-technology-of-longquan-celadon-00205",
+        },
+      },
+
       {
         title: "Water through Tongji Weir",
         text: "Tongji Weir, southwest of central Lishui in Liandu, combines a dam, gates, channels, and a stone water bridge. Its irrigation system connects the landscape with farming and settlement. Nearby villages are cultural context, not evidence of identical urban pronunciation.",

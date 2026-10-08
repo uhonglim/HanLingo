@@ -9,6 +9,7 @@ export type AttestedWord = {
   toneNotation?: "pitch-contour" | "source-category" | "unspecified";
   localityId: string;
   reading: string;
+  registerLabel?: string;
   note?: string;
   source: LearningSource;
 };

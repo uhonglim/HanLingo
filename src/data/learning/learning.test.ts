@@ -11,17 +11,18 @@ import {
 } from "./index";
 import { getBreadcrumbs } from "../../navigation";
 import { varietyPath } from "../../routing";
+import { getLocalGallery } from "../galleries";
+import { regionalReadingsFor } from "../regional-words";
 
 function sourceUrl(value: string) {
   expect(new URL(value).protocol).toBe("https:");
 }
-describe("learning coverage beyond Southern Min", () => {
-  it("covers every other published branch with scoped sound, culture, and learning sources", () => {
+describe("learning coverage across every branch", () => {
+  it("covers every published branch with scoped sound, culture, and learning sources", () => {
     const expected = languages
       .flatMap((group) =>
         group.subgroups.map((branch) => `${group.id}/${branch.id}`),
       )
-      .filter((id) => id !== "min/southern-min")
       .sort();
     expect(branchLearning.map((pack) => pack.branchId).sort()).toEqual(
       expected,
@@ -69,19 +70,24 @@ describe("learning coverage beyond Southern Min", () => {
     }
   });
   it("only exposes usable local chapters and validates their breadcrumbs", () => {
-    for (const point of mapPoints.filter(
-      (point) => point.subgroupId !== "southern-min",
-    )) {
+    for (const point of mapPoints) {
       const data = getLocalLearning(point);
-      expect(data.resources.length, point.id).toBeGreaterThan(0);
+      expect(data.resources.length, point.id).toBeGreaterThanOrEqual(2);
+      expect(data.soundNotes.length, point.id).toBeGreaterThanOrEqual(2);
       expect(
-        data.culture.some((item) => item.photo),
+        data.culture.filter((item) => item.text.trim()).length,
         point.id,
-      ).toBe(true);
+      ).toBeGreaterThanOrEqual(2);
+      expect(getLocalGallery(point.id).length, point.id).toBeGreaterThanOrEqual(
+        9,
+      );
       const sections = availableSections(point);
-      expect(sections.includes("words")).toBe(data.words.length > 0);
+      expect(sections.includes("words")).toBe(
+        data.words.length > 0 || regionalReadingsFor(point.id).length > 0,
+      );
       expect(sections.includes("culture")).toBe(
-        data.culture.some((item) => item.photo),
+        getLocalGallery(point.id).length > 0 ||
+          data.culture.some((item) => item.photo),
       );
       expect(sections.includes("practice")).toBe(
         new Set(data.words.map((word) => word.english)).size >= 4,

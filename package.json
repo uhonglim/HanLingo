@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
-    "deploy": "node scripts/publish-pages.mjs"
+    "deploy": "node scripts/publish-pages.mjs",
+    "audit:content": "node scripts/audit-content.mjs"
   },
   "dependencies": {
     "d3-geo": "^3.1.1",

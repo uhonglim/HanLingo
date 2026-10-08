@@ -1,0 +1,69 @@
+import { createServer } from "vite";
+import { writeFile } from "node:fs/promises";
+const server = await createServer({
+  server: { middlewareMode: true },
+  appType: "custom",
+});
+try {
+  const { contentDepth } = await server.ssrLoadModule(
+    "/src/data/content-depth.ts",
+  );
+  const branches = contentDepth();
+  const places = branches.flatMap((branch) => branch.places);
+  const total = (key) => places.reduce((sum, place) => sum + place[key], 0);
+  const lines = [
+    "# Content depth audit",
+    "",
+    "Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.",
+    "",
+    `Coverage: **${branches.length} branches**, **${places.length} localities**, **${total("ipaWords")} IPA entries**, **${total("sourceSpellingWords")} additional source-spelling entries**, and **${total("photos")} photographs**.`,
+    "",
+    `Of the IPA entries, ${total("segmentalEntries")} reproduce source segment lists without tones. Their cards explicitly say that tones are not given.`,
+    "",
+    "## Branch inventory",
+    "",
+    "| Branch | Places | IPA entries | All word entries | Photos | Sound notes | Culture topics | Local source links |",
+    "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+    ...branches.map(
+      (branch) =>
+        `| ${branch.branchId} | ${branch.localities} | ${branch.ipaWords} | ${branch.words} | ${branch.photos} | ${branch.soundNotes} | ${branch.cultureTopics} | ${branch.learningSources} |`,
+    ),
+    "",
+    "Source links are counted per locality; a shared dictionary may appear under multiple appropriate locality references. A multi-locality learning note is likewise counted for each locality it explicitly supports.",
+    "",
+    "## Locality inventory",
+    "",
+    "| Locality | IPA entries | Source-spelling entries | IPA with tones omitted | Photos | Sound notes | Culture topics | Source links | Chapters |",
+    "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+    ...places.map(
+      (place) =>
+        `| ${place.localityId} | ${place.ipaWords} | ${place.sourceSpellingWords} | ${place.segmentalEntries} | ${place.photos} | ${place.soundNotes} | ${place.cultureTopics} | ${place.learningSources} | ${place.sections.join(", ")} |`,
+    ),
+    "",
+    "## Research priorities",
+    "",
+    "A working starter target is 20 attested readings, 3 specific sound notes, 2 cultural topics and 2 useful source links per locality. This is a research queue, not permission to add unverified forms or pad the prose. Amoy additionally has its dedicated sound, tone and practice material. Lower counts remain visible here so photo-rich pages cannot be mistaken for complete language courses.",
+    "",
+    ...places
+      .filter((place) => place.ipaWords < 20)
+      .map(
+        (place) =>
+          `- **${place.localityId}:** ${place.ipaWords} attested IPA entries${place.sourceSpellingWords ? ` and ${place.sourceSpellingWords} separately labelled source-spelling entries` : ""}. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.`,
+      ),
+    "",
+    "## Evidence rules",
+    "",
+    "- Every word retains its locality, reading convention and source. Source tone categories are not pitch contours.",
+    "- Regional spelling-only forms remain under their original notation; they do not generate invented IPA or HanLingo pitch numbers.",
+    "- The shared tree remains the navigation structure. Group and branch overviews surface sampled learning material; complete available word collections remain under locality Words pages.",
+    "- Galleries retain 9–11 distinct licensed photos per mapped locality. Photo subjects never establish the language or identity of the people pictured.",
+    "",
+  ];
+  await writeFile("docs/CONTENT-DEPTH.md", lines.join("\n"));
+  console.log(
+    `Audited ${branches.length} branches and ${places.length} localities: ${total("ipaWords")} IPA entries, ${total("sourceSpellingWords")} source-spelling entries, ${total("photos")} photos.`,
+  );
+  console.log("Written docs/CONTENT-DEPTH.md");
+} finally {
+  await server.close();
+}

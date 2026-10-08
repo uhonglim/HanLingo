@@ -4,7 +4,7 @@ import type { AttestedWord, BranchLearning, LearningSource } from "./types";
 const source = (title: string, url: string): LearningSource => ({ title, url });
 const S = {
   beijing: source(
-    "Han Hu: The Sociophonetics of Rhotacization in the Beijing Speech Community, 2022",
+    "Han Hu: The Sociolinguistics of Rhotacization in the Beijing Speech Community, 2022",
     "https://www.lotpublications.nl/Documents/624_fulltext.pdf",
   ),
   jinan: source(
@@ -28,7 +28,7 @@ const S = {
     "https://pmc.ncbi.nlm.nih.gov/articles/PMC10851145/",
   ),
   yulin: source(
-    "Wenmin Hu: Yulin kinship terminology, Table 1, pp. 11–12",
+    "Wenmin Hu: Yulin kinship terminology, Tables 1–2, pp. 11–13",
     "https://pressto.amu.edu.pl/index.php/linpo/article/view/linpo-2020-0001",
   ),
   taishan: source(
@@ -61,6 +61,15 @@ const S = {
   ),
 };
 
+const beijingIpaSource = source(
+  "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+  "https://doi.org/10.1017/S0025100303001208",
+);
+const hongKongIpaSource = source(
+  "Eric Zee: Chinese (Hong Kong Cantonese), 1991, pp. 46–47",
+  "https://doi.org/10.1017/S0025100300006058",
+);
+
 // The source explicitly prints IPA and the numeric pitch values together.
 // Kinship roots are not necessarily complete forms of address; keep that distinction visible.
 const yulinRoots: [string, string, string, string][] = [
@@ -76,6 +85,19 @@ const yulinRoots: [string, string, string, string][] = [
   ["elder-sister", "姐", "older sister", "tɛ33"],
   ["younger-sister", "妹", "younger sister", "mɔi21"],
   ["grandson", "孙", "grandson", "ɬyn54"],
+  ["paternal-younger-uncle", "叔", "father’s younger brother", "ʃok5"],
+  ["maternal-grandfather", "公", "maternal grandfather", "koȵ54"],
+  ["maternal-uncle", "舅", "mother’s brother", "tʃau21"],
+  ["maternal-uncles-wife", "妗", "mother’s brother’s wife", "tʃam21"],
+  ["elder-brother-reference", "兄", "older brother, in reference", "uɛŋ54"],
+  ["elder-brothers-wife", "嫂", "older brother’s wife", "ɬau33"],
+  [
+    "younger-brothers-wife",
+    "婶",
+    "younger brother’s wife, in reference",
+    "ʃam33",
+  ],
+  ["eldest", "大", "eldest, in a kinship term", "tɔi21"],
 ];
 const yulinWords: AttestedWord[] = yulinRoots.map(
   ([id, han, english, ipa]) => ({
@@ -85,11 +107,14 @@ const yulinWords: AttestedWord[] = yulinRoots.map(
     ipa,
     localityId: "yulin",
     toneNotation: "pitch-contour",
-    reading: "Kinship root · Yuzhou and Fumian reference",
+    reading:
+      id === "eldest"
+        ? "Kinship ranking element · Yuzhou and Fumian reference"
+        : "Kinship root · Yuzhou and Fumian reference",
     note:
       id === "grandmother"
         ? "Used for both maternal and paternal grandmother in this table. Complete address terms can add prefixes and change tone."
-        : "A kinship root from the source table; complete address terms can add prefixes and change tone.",
+        : "A kinship element from the source table; complete address terms can add prefixes and change tone.",
     source: S.yulin,
   }),
 );
@@ -146,6 +171,31 @@ const jinanWords = dictionaryWords("jinan", "濟南", [
   ["mountain", "山", "mountain", "ʂã213"],
   ["person", "人", "person", "ʐẽ42"],
   ["flower", "花", "flower", "xua213"],
+  ["ear", "耳", "ear", "ər55"],
+  ["two", "二", "two", "ər21"],
+  ["clothing", "衣", "clothing", "i213"],
+  ["chair", "椅", "chair", "i55"],
+  ["five", "五", "five", "u55"],
+  ["fish", "魚", "fish", "y42"],
+  ["rain", "雨", "rain", "y55"],
+  ["moon", "月", "moon", "yə21"],
+  ["oil", "油", "oil", "iou42"],
+  ["eye", "眼", "eye", "iã55"],
+  ["sheep", "羊", "sheep", "iaŋ42"],
+  ["nose", "鼻", "nose", "pi42"],
+  ["cloth", "布", "cloth", "pu21"],
+  ["cup", "杯", "cup", "pei213"],
+  ["bag", "包", "bag; bundle", "pɔ213"],
+  ["bird", "鳥", "bird", "ȵiɔ55"],
+  ["cow", "牛", "cow", "ȵiou42"],
+  ["dog", "狗", "dog", "kou55"],
+  ["horse", "馬", "horse", "ma55"],
+  ["heart", "心", "heart", "ɕiẽ213"],
+  ["fire", "火", "fire", "xuə55"],
+  ["soil", "土", "soil", "tʰu55"],
+  ["boat", "船", "boat", "tʂʰuã42"],
+  ["mouth", "口", "mouth", "kʰou55"],
+  ["tooth", "牙", "tooth", "ia42"],
 ]);
 const nanjingWords = dictionaryWords("nanjing", "南京", [
   ["rice", "米", "uncooked rice", "mi212"],
@@ -157,13 +207,136 @@ const nanjingWords = dictionaryWords("nanjing", "南京", [
   ["hand", "手", "hand", "ʂəɯ212"],
   ["mountain", "山", "mountain", "ʂaŋ31"],
   ["flower", "花", "flower", "xuɑ31"],
+  ["ear", "耳", "ear", "ər212"],
+  ["two", "二", "two", "ər44"],
+  ["clothing", "衣", "clothing", "i31"],
+  ["chair", "椅", "chair", "i212"],
+  ["five", "五", "five", "u212"],
+  ["fish", "魚", "fish", "y24"],
+  ["rain", "雨", "rain", "y212"],
+  ["moon", "月", "moon", "yeʔ5"],
+  ["oil", "油", "oil", "iəɯ24"],
+  ["eye", "眼", "eye", "ien212"],
+  ["sheep", "羊", "sheep", "iaŋ24"],
+  ["nose", "鼻", "nose", "piʔ5"],
+  ["cloth", "布", "cloth", "pu44"],
+  ["cup", "杯", "cup", "pəi31"],
+  ["bag", "包", "bag; bundle", "pɔo31"],
+  ["bird", "鳥", "bird", "liɔo212"],
+  ["cow", "牛", "cow", "liəɯ24"],
+  ["dog", "狗", "dog", "kəɯ212"],
+  ["horse", "馬", "horse", "mɑ212"],
+  ["heart", "心", "heart", "sin31"],
+  ["fire", "火", "fire", "xo212"],
+  ["soil", "土", "soil", "tʰu212"],
+  ["boat", "船", "boat", "tʂʰuaŋ24"],
+  ["mouth", "口", "mouth", "kʰəɯ212"],
+  ["tooth", "牙", "tooth", "iɑ24"],
 ]);
+
+const beijingWords: AttestedWord[] = (
+  [
+    ["eight", "八", "eight", "pa˥"],
+    ["lie-prone", "趴", "lie prone", "pʰa˥"],
+    ["mother", "媽", "mother", "ma˥"],
+    ["send", "發", "send", "fa˥"],
+    ["build", "搭", "build", "ta˥"],
+    ["he", "他", "he", "tʰa˥"],
+    ["scatter", "撒", "scatter; cast", "sa˥"],
+    ["wipe", "擦", "wipe", "tsʰa˥"],
+    ["shrimp", "蝦", "shrimp", "ɕia˥"],
+    ["add", "加", "add", "tɕia˥"],
+    ["nip", "掐", "nip off", "tɕʰia˥"],
+    ["frog", "蛙", "frog", "wa˥"],
+    ["pull", "拉", "pull", "la˥"],
+    ["duck", "鴨", "duck", "ja˥"],
+    ["song", "歌", "song", "kɤ˥"],
+    ["subject", "科", "subject of study", "kʰɤ˥"],
+    ["drink", "喝", "drink", "xɤ˥"],
+    ["clothes", "衣", "clothes", "i˥"],
+    ["house", "屋", "house", "u˥"],
+    ["sound", "音", "sound", "in˥"],
+    ["safe", "安", "safe", "an˥"],
+    ["favour", "恩", "favour", "ən˥"],
+    ["flower", "花", "flower", "xua˥"],
+    ["black", "黑", "black", "xei˥"],
+    ["ash", "灰", "ash", "xuei˥"],
+  ] as [string, string, string, string][]
+).map(([id, han, english, ipa]) => ({
+  id: `beijing-city-ipa-${id}`,
+  han,
+  english,
+  ipa,
+  localityId: "beijing-city",
+  toneNotation: "pitch-contour",
+  registerLabel: "Standard Mandarin · Beijing speaker",
+  reading: "Standard Mandarin citation examples · Beijing speaker, 2003",
+  note: "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+  source: beijingIpaSource,
+}));
+
+const hongKongIpaWords: AttestedWord[] = (
+  [
+    ["flower", "花", "flower", "fa˥"],
+    ["frog", "蛙", "frog", "wa˥"],
+    ["dozen", "打", "dozen", "ta˥"],
+    ["he", "他", "he; she, literary", "tʰa˥"],
+    ["sand", "沙", "sand", "sa˥"],
+    ["hold", "揸", "hold", "tsa˥"],
+    ["add", "加", "add", "ka˥"],
+    ["truck", "卡", "truck", "kʰa˥"],
+    ["melon", "瓜", "melon", "kʷa˥"],
+    ["boast", "誇", "boast", "kʷʰa˥"],
+    ["shrimp", "蝦", "shrimp", "ha˥"],
+    ["silk", "絲", "silk", "si˥"],
+    ["lose", "輸", "lose", "sy˥"],
+    ["boot", "靴", "boot", "hœ˥"],
+    ["wet", "濕", "wet", "sɐp˥"],
+    ["comb", "梳", "comb", "sɔ˥"],
+    ["husband", "夫", "husband", "fu˥"],
+    ["uncle", "叔", "uncle", "sʊk˥"],
+    ["waste", "嘥", "waste", "sai˥"],
+    ["west", "西", "west", "sɐi˥"],
+    ["basket", "筲", "basket", "sau˥"],
+    ["receive", "收", "receive", "sɐu˥"],
+    ["grey", "灰", "grey", "fui˥"],
+    ["burn", "燒", "burn", "siu˥"],
+  ] as [string, string, string, string][]
+).map(([id, han, english, ipa]) => ({
+  id: `hong-kong-ipa-${id}`,
+  han,
+  english,
+  ipa,
+  localityId: "hong-kong",
+  toneNotation: "pitch-contour",
+  reading: "Hong Kong citation examples · Zee 1991",
+  note: "Broad reference transcription from a lifelong Hong Kong speaker, a 22-year-old woman. Vowel lengths are unmarked, following the source’s first notation option. The original tone letter is retained; final stops are unreleased.",
+  source: hongKongIpaSource,
+}));
 
 export const mandarinYueLearning: BranchLearning[] = [
   {
     branchId: "mandarin/beijing",
-    words: [],
+    words: beijingWords,
     soundNotes: [
+      {
+        title: "Feel the puff of air",
+        text: "八 [pa˥] and 趴 [pʰa˥] differ in aspiration. Keep the same high pitch, and compare the air released after opening your lips. The source also contrasts unaspirated [t k] with aspirated [tʰ kʰ].",
+        localityIds: ["beijing-city"],
+        source: {
+          title: "Lee and Zee: Standard Chinese (Beijing), 2003",
+          url: "https://doi.org/10.1017/S0025100303001208",
+        },
+      },
+      {
+        title: "Read the register with the example",
+        text: "The 25 citation words here come from a lifelong Beijing speaker in Lee and Zee’s Standard Chinese illustration. They show one formal reference style. Hu’s separate study addresses how local conversational rhotacization varies.",
+        localityIds: ["beijing-city"],
+        source: {
+          title: "Lee and Zee: Standard Chinese (Beijing), 2003",
+          url: "https://doi.org/10.1017/S0025100303001208",
+        },
+      },
       {
         title: "Hear the vowel change in 儿化",
         text: "Rhotacization gives a syllable an r-coloured ending. Han Hu’s study examines how speakers in the Beijing speech community produce and evaluate it; it is a variable feature, not an ending to add to every word.",
@@ -179,6 +352,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Collecting the sounds of a hutong",
+        text: "Shijia Hutong Museum preserves residents’ furniture, photographs and everyday objects, together with recordings of voices and insect sounds. These neighbourhood sounds place spoken language in the courtyards and lanes where people meet.",
+        localityIds: ["beijing-city"],
+        source: {
+          title: "Beijing: Shijia Hutong Museum and neighbourhood memory",
+          url: "https://english.beijing.gov.cn/latest/news/202307/t20230701_3152487.html",
+        },
+      },
+      {
         title: "Peking opera",
         text: "Singing, speech, movement and combat share the stage. Facial painting and costume help identify roles. Listen to the spoken passages as well as the melodies: stage diction is a performance tradition, not a transcript of everyday Beijing speech.",
         localityIds: ["beijing-city"],
@@ -186,6 +368,22 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Beijing IPA illustration",
+        description:
+          "Consonant contrasts, vowels, citation tones and a transcribed passage from one lifelong Beijing speaker. Formal Standard Mandarin reference.",
+        localityIds: ["beijing-city"],
+        kind: "Study",
+        url: "https://doi.org/10.1017/S0025100303001208",
+      },
+      {
+        title: "Hutong voices and neighbourhood history",
+        description:
+          "The city’s account of Shijia Hutong Museum and its collection of everyday sounds.",
+        localityIds: ["beijing-city"],
+        kind: "Culture",
+        url: "https://english.beijing.gov.cn/latest/news/202307/t20230701_3152487.html",
+      },
       {
         title: "Beijing rhotacization",
         description:
@@ -209,6 +407,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     words: jinanWords,
     soundNotes: [
       {
+        title: "Listen for nasal vowels",
+        text: "The CUHK reference writes 門 [mẽ42] and 眼 [iã55] with nasalized vowels. The tilde marks airflow through the nose during the vowel; it is not an extra final [n].",
+        localityIds: ["jinan"],
+        source: {
+          title: "CUHK Chinese Character Database: Jinan sound index",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=B",
+        },
+      },
+      {
         title: "Jinan’s falling tone",
         text: "Huang’s study describes Tone 4 as 41; the CUHK dictionary gives 21, as in 飯. These are source-specific pitch descriptions on a five-level scale, not different names for numbered tone categories. Keep the source with the reading.",
         localityIds: ["jinan"],
@@ -223,6 +430,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Making a dough lotus",
+        text: "At Jinan Cultural Center, practitioner Luo Sui teaches kneading, pinching and carving coloured dough into lotus flowers and koi. Small hand movements build the petals and scales: an everyday material becomes a miniature sculpture.",
+        localityIds: ["jinan"],
+        source: {
+          title: "Jinan Cultural Center: dough figurine workshop",
+          url: "https://english.jinan.gov.cn/col/col108306/art/2026/art_9d5adc9b9332497e97b69892401b9217.html",
+        },
+      },
+      {
         title: "Life around the springs",
         text: "Spring water has been used for drinking, cooking and washing in Jinan. Baotu Spring and the spring-fed Daming Lake connect the city’s water system with its everyday public spaces.",
         localityIds: ["jinan"],
@@ -230,6 +446,14 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Dough figurines in practice",
+        description:
+          "A local workshop documents tools, hand techniques and the maker teaching them.",
+        localityIds: ["jinan"],
+        kind: "Culture",
+        url: "https://english.jinan.gov.cn/col/col108306/art/2026/art_9d5adc9b9332497e97b69892401b9217.html",
+      },
       {
         title: "CUHK locality readings",
         description:
@@ -261,6 +485,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     words: nanjingWords,
     soundNotes: [
       {
+        title: "A short closure at the end",
+        text: "月 [yeʔ5] and 鼻 [piʔ5] end with [ʔ] in the CUHK reference. Close the vocal folds to stop the syllable; do not add a final vowel. Here 5 is the source’s short high checked-tone value.",
+        localityIds: ["nanjing"],
+        source: {
+          title: "CUHK Chinese Character Database: Nanjing sound index",
+          url: "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=D",
+        },
+      },
+      {
         title: "Five lexical tones in Nanjing",
         text: "The Nanjing study distinguishes five lexical tones, excluding neutral tone. Earlier descriptions disagree on some pitch values; a tone label alone does not fix one exact contour.",
         localityIds: ["nanjing"],
@@ -281,6 +514,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Lanterns along the Qinhuai",
+        text: "The Qinhuai Lantern Fair brings illuminated displays to the Confucius Temple area, Bailuzhou Park and the river. In 2025, its five exhibition zones also included Laomendong and Xiaoxihu, connecting streets, public spaces and water during the New Year season.",
+        localityIds: ["nanjing"],
+        source: {
+          title: "Nanjing municipal government: Qinhuai Lantern Fair, 2025",
+          url: "https://www.nanjing.gov.cn/bmdt/202501/t20250123_5064892.html",
+        },
+      },
+      {
         title: "Weaving Yunjin brocade",
         text: "Two weavers work a large wooden loom to make patterned silk, sometimes with gold or peacock-feather thread. The craft passes on designs and coordinated handwork in Nanjing.",
         localityIds: ["nanjing"],
@@ -288,6 +530,14 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Qinhuai lanterns and their city setting",
+        description:
+          "Nanjing’s municipal account identifies the festival’s river and neighbourhood exhibition sites.",
+        localityIds: ["nanjing"],
+        kind: "Culture",
+        url: "https://www.nanjing.gov.cn/bmdt/202501/t20250123_5064892.html",
+      },
       {
         title: "CUHK locality readings",
         description:
@@ -319,6 +569,24 @@ export const mandarinYueLearning: BranchLearning[] = [
     words: [],
     soundNotes: [
       {
+        title: "Four tones in Qin’s description",
+        text: "Qin gives citation contours 45, 31, 53 and 213 for Chengdu’s four tones. They describe isolated forms in that study. Within a prosodic word, the first rising tone can become high level after another syllable.",
+        localityIds: ["chengdu"],
+        source: {
+          title: "Zuxuan Qin: Prosodic Word in Chengdu Dialect, 2012",
+          url: "https://www.isca-archive.org/speechprosody_2012/qin12_speechprosody.pdf",
+        },
+      },
+      {
+        title: "Listen for a longer first syllable",
+        text: "In Qin’s spontaneous-speech material, a prosodic word normally starts with a longer syllable followed by shorter ones. Its boundaries also limit tone changes, so practising a whole phrase reveals patterns that isolated syllables miss.",
+        localityIds: ["chengdu"],
+        source: {
+          title: "Zuxuan Qin: Prosodic Word in Chengdu Dialect, 2012",
+          url: "https://www.isca-archive.org/speechprosody_2012/qin12_speechprosody.pdf",
+        },
+      },
+      {
         title: "Chengdu vowels vary by speaker",
         text: "In the studied /an/ sequences, younger speakers generally raised the vowel towards [ɛ], while older speakers more often used [æ]. The study records 17 native speakers; this is a documented pattern, not one compulsory city-wide pronunciation.",
         localityIds: ["chengdu"],
@@ -333,6 +601,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Learning a balance of flavours",
+        text: "UNESCO’s Chengdu entry describes combinations of sweet, sour, bitter, spicy and salty tastes. Its food culture includes public festivals, cookery training and cuisine research. A useful tasting exercise is to name each flavour separately before calling a dish simply “hot”.",
+        localityIds: ["chengdu"],
+        source: {
+          title: "UNESCO Creative Cities Network: Chengdu",
+          url: "https://www.unesco.org/en/creative-cities/chengdu",
+        },
+      },
+      {
         title: "A Chengdu teahouse",
         text: "At Baihuatan Park, tables and chairs fill a shaded outdoor teahouse. The photograph records a place for tea and conversation; it does not identify the languages of the people pictured.",
         localityIds: ["chengdu"],
@@ -345,6 +622,22 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     resources: [
       {
+        title: "Chengdu phrase rhythm and tone changes",
+        description:
+          "A four-page study shows how speech rhythm and tone changes align within prosodic words.",
+        localityIds: ["chengdu"],
+        kind: "Study",
+        url: "https://www.isca-archive.org/speechprosody_2012/qin12_speechprosody.pdf",
+      },
+      {
+        title: "Chengdu’s food culture",
+        description:
+          "UNESCO documents the city’s cuisine, public participation and culinary education.",
+        localityIds: ["chengdu"],
+        kind: "Culture",
+        url: "https://www.unesco.org/en/creative-cities/chengdu",
+      },
+      {
         title: "Chengdu vowel raising",
         description:
           "An acoustic study with vowel plots, speaker information and experimental syllables.",
@@ -356,8 +649,36 @@ export const mandarinYueLearning: BranchLearning[] = [
   },
   {
     branchId: "yue/guangfu",
-    words: hongKongWords,
+    words: [...hongKongWords, ...hongKongIpaWords],
     soundNotes: [
+      {
+        title: "Guangzhou tone contrasts are changing",
+        text: "The PolyU study tests production and perception in Guangzhou. It documents speakers merging the mid and low level tones, with differences between speaking and listening. Preserve the speaker and study context instead of declaring one merged inventory for the whole city.",
+        localityIds: ["guangzhou"],
+        source: {
+          title: "PolyU: Tone merger in Guangzhou Cantonese, 2012",
+          url: "https://theses.lib.polyu.edu.hk/handle/200/6794",
+        },
+      },
+      {
+        title: "Compare the quality of the voice",
+        text: "A study of 191 speakers examines Hong Kong and Guangzhou across three age groups. It investigates phonation—the way the vocal folds vibrate—in addition to consonants, vowels and tones. Accent differences can involve this voice quality even when a phoneme chart is shared.",
+        localityIds: ["guangzhou"],
+        source: {
+          title:
+            "Roxana S. Y. Fung and Eugene Y. C. Wong: Voice quality in Hong Kong and Guangzhou Cantonese, 2023",
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10584129/",
+        },
+      },
+      {
+        title: "Keep final stops closed",
+        text: "In Zee’s Hong Kong reference, 濕 [sɐp˥] and 叔 [sʊk˥] end in unreleased stops. Finish the syllable with the lips or tongue still closing the airflow. Their short checked syllables contrast with open syllables such as 花 [fa˥].",
+        localityIds: ["hong-kong"],
+        source: {
+          title: "Eric Zee: Chinese (Hong Kong Cantonese), 1991",
+          url: "https://doi.org/10.1017/S0025100300006058",
+        },
+      },
       {
         title: "One syllable, six meanings",
         text: "The six Hong Kong examples keep [siː] constant and change pitch. Read their contours separately: 55, 35, 33, 21, 24 and 22. These are pitch values, not Jyutping’s tone-category numbers.",
@@ -379,6 +700,24 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Canton embroidery",
+        text: "Guangzhou embroidery belongs to the Pearl River Delta craft tradition. Museum objects supply patterns for studying composition, colour and stitches, while makers reproduce older pieces to learn their techniques. Guangzhou embroidery and Chaoshan embroidery are distinct traditions within the broader Yue embroidery label.",
+        localityIds: ["guangzhou"],
+        source: {
+          title: "Guangzhou culture bureau: Canton embroidery, 2024",
+          url: "https://wglj.gz.gov.cn/xxgk/qt/rdjyzxta/zxta/content/post_9744566.html",
+        },
+      },
+      {
+        title: "Pulling milk tea",
+        text: "Hong Kong milk-tea makers mix black teas, brew them through a cloth bag and pour the tea between metal pots before adding milk. The heritage record describes variations between makers in the blend and brewing process; there is no single fixed recipe.",
+        localityIds: ["hong-kong"],
+        source: {
+          title: "Hong Kong Memory: Milk-tea ingredients, tools and brewing",
+          url: "https://slscdn.hkmemory.hk/en/collections-ichhk_ii-hong_kong_style_milk_tea_making_technique-ingredients_utensils_and_brewing_process.html",
+        },
+      },
+      {
         title: "Behind the opera stage",
         text: "Guangzhou Youth Cantonese Opera Troupe performers prepare their makeup backstage. Costume, gesture, music and sung language work together in Cantonese opera.",
         localityIds: ["guangzhou"],
@@ -393,6 +732,38 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Guangzhou tone merger",
+        description:
+          "An experimental study of tone production, perception and changing contrasts in Guangzhou.",
+        localityIds: ["guangzhou"],
+        kind: "Study",
+        url: "https://theses.lib.polyu.edu.hk/handle/200/6794",
+      },
+      {
+        title: "Guangzhou and Hong Kong voice quality",
+        description:
+          "A study with 191 speakers tests accent and age differences through acoustic measures.",
+        localityIds: ["guangzhou", "hong-kong"],
+        kind: "Study",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10584129/",
+      },
+      {
+        title: "Hong Kong IPA illustration",
+        description:
+          "Zee’s consonant and vowel examples, checked against the journal’s published errata.",
+        localityIds: ["hong-kong"],
+        kind: "Study",
+        url: "https://doi.org/10.1017/S0025100300006058",
+      },
+      {
+        title: "How milk tea is made",
+        description:
+          "Photographs and a step-by-step account of the tools, blend and pouring technique.",
+        localityIds: ["hong-kong"],
+        kind: "Culture",
+        url: "https://slscdn.hkmemory.hk/en/collections-ichhk_ii-hong_kong_style_milk_tea_making_technique-ingredients_utensils_and_brewing_process.html",
+      },
       {
         title: "CUHK Cantonese character dictionary",
         description:
@@ -432,6 +803,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     words: [],
     soundNotes: [
       {
+        title: "One letter, two positions",
+        text: "The dictionary’s 切 example is written tɛt33 in its simplified notation. Its key explicitly distinguishes the first t, an aspirated [tʰ], from the final t, an unreleased [t̚]. Position determines how to read these symbols.",
+        localityIds: ["taishan"],
+        source: {
+          title: "Taishanese Dictionary: transcription conventions",
+          url: "https://taishandict.com/transcription.html",
+        },
+      },
+      {
         title: "Taishan needs its own readings",
         text: "Cheng compares Taishan and Cantonese phonology while noting that the two are not entirely mutually intelligible. A shared character or membership in Yue does not establish the same pronunciation.",
         localityIds: ["taishan"],
@@ -446,6 +826,16 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Fushi’s floating-colour procession",
+        text: "In Fushi village, Doushan town within Taishan, makers build frames and props, prepare costumes and train the young performers carried in floating-colour tableaux. Scenes draw on dramatic stories such as Mulan and the Moon Goddess. This is a specific village tradition, not a practice attributed to every Taishan resident.",
+        localityIds: ["taishan"],
+        source: {
+          title:
+            "Jiangmen culture bureau: Fushi floating-colour craft and its practitioners",
+          url: "https://www.jiangmen.gov.cn/jmwgj/gkmlpt/content/3/3379/post_3379654.html",
+        },
+      },
+      {
         title: "Letters that carried money home",
         text: "The Wuyi region’s 銀信 combined family correspondence with remittances. The UNESCO archive preserves messages, receipts and account books linking emigrants with home. This regional history includes communities beyond Taishan.",
         localityIds: ["taishan"],
@@ -453,6 +843,14 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Fushi procession craft",
+        description:
+          "The culture bureau documents the frame-making, costume work and training behind local floating-colour performances.",
+        localityIds: ["taishan"],
+        kind: "Culture",
+        url: "https://www.jiangmen.gov.cn/jmwgj/gkmlpt/content/3/3379/post_3379654.html",
+      },
       {
         title: "Taishanese dictionary and recordings",
         description:
@@ -484,6 +882,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     words: yulinWords,
     soundNotes: [
       {
+        title: "Older brother: address or reference",
+        text: "The study distinguishes 哥 [ko54], often used in direct address, from 兄 [uɛŋ54], used when referring to an older brother. Pronunciation practice should keep this difference in use alongside the sound.",
+        localityIds: ["yulin"],
+        source: {
+          title: "Wenmin Hu: Yulin kinship terminology, 2020",
+          url: "https://pressto.amu.edu.pl/index.php/linpo/article/view/linpo-2020-0001",
+        },
+      },
+      {
         title: "Hear [ɬ] in 孙",
         text: "The Yulin reference gives 孙 “grandson” as [ɬyn54]. [ɬ] is a voiceless lateral fricative: air passes along the sides of the tongue. It is a separate sound from [s].",
         localityIds: ["yulin"],
@@ -498,6 +905,15 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     culture: [
       {
+        title: "Yulin niuba in the heritage record",
+        text: "The municipal heritage inventory lists 玉林牛巴, the local beef snack, under traditional craft skills, with Yuzhou’s cultural centre among its responsible institutions. ",
+        localityIds: ["yulin"],
+        source: {
+          title: "Yulin Mass Art Center: first municipal heritage inventory",
+          url: "https://m.ylsqzysg.com/nd.jsp?groupId=0&id=85&mid=425",
+        },
+      },
+      {
         title: "Family relationships in words",
         text: "The Yuzhou and Fumian material distinguishes a father’s older brother, a mother’s brother and other relatives. Direct address and talking about someone can use different forms. Family vocabulary carries social relationships as well as pronunciation.",
         localityIds: ["yulin"],
@@ -505,6 +921,14 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Yulin’s local heritage inventory",
+        description:
+          "The municipal list places niuba alongside music, stories, crafts and other local practices.",
+        localityIds: ["yulin"],
+        kind: "Culture",
+        url: "https://m.ylsqzysg.com/nd.jsp?groupId=0&id=85&mid=425",
+      },
       {
         title: "Yulin family vocabulary",
         description:

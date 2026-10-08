@@ -1,3 +1,5 @@
+import { southernMinLearning } from "./learning/southern-min";
+import { displayIpa } from "./ipa-display";
 import { minLearning } from "./learning/min";
 import { mandarinYueLearning } from "./learning/mandarin-yue";
 import { hakkaWuLearning } from "./learning/hakka-wu";
@@ -14,6 +16,7 @@ export type RegionalReading = {
   source: LearningSource;
   /** The place, speaker sample, or dictionary reference actually documented. */
   scope: string;
+  registerLabel?: string;
   note?: string;
 };
 export type RegionalConcept = {
@@ -213,6 +216,7 @@ const localConcepts: RegionalConcept[] = [
 // Only explicit semantic matches belong together; matching Han alone is insufficient.
 const existingWords = [
   ...minLearning,
+  ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
 ].flatMap((pack) => pack.words);
@@ -285,7 +289,7 @@ const shared: [string, string, string[], string][] = [
     "three",
     "three",
     ["three"],
-    "The initial consonant and vowel differ across these Min references.",
+    "The initial consonant and vowel differ across these local references.",
   ],
   [
     "door",
@@ -345,6 +349,7 @@ const sharedConcepts: RegionalConcept[] = shared.map(
           toneNotation: word.toneNotation ?? "unspecified",
           source: word.source,
           scope: word.reading,
+          registerLabel: word.registerLabel,
           note: word.note,
         })),
     ],
@@ -355,7 +360,31 @@ const sharedConcepts: RegionalConcept[] = shared.map(
 export const regionalConcepts: RegionalConcept[] = [
   ...localConcepts,
   ...sharedConcepts,
-];
+].map((concept) => ({
+  ...concept,
+  readings: deduplicateReadings(concept.readings),
+}));
+
+export function deduplicateReadings(
+  readings: RegionalReading[],
+): RegionalReading[] {
+  const seen = new Set<string>();
+  return readings.filter((reading) => {
+    const key = JSON.stringify([
+      reading.localityId,
+      reading.han,
+      reading.ipa
+        ? displayIpa(reading.ipa, reading.toneNotation).normalize("NFC")
+        : "",
+      reading.sourceRomanization,
+      reading.source.url,
+      reading.registerLabel,
+    ]);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
 export function regionalConceptsFor(localityId: string): RegionalConcept[] {
   return regionalConcepts.filter((concept) =>
     concept.readings.some((reading) => reading.localityId === localityId),

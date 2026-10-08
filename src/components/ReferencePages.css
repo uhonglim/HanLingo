@@ -678,6 +678,35 @@
   }
 }
 
-.reference-language-notes { margin: 0 0 36px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.reference-language-notes > summary { padding: 20px 0; font-size: 18px; font-weight: 600; cursor: pointer; }
-.reference-language-notes[open] > summary { margin-bottom: 12px; }
+.reference-language-notes {
+  margin: 0 0 36px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.reference-language-notes > summary {
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.reference-language-notes[open] > summary {
+  margin-bottom: 12px;
+}
+.reference-child-card .reference-content-count {
+  font-size: 12px;
+  color: var(--accent);
+  margin: 18px 0 0;
+  font-variant-numeric: tabular-nums;
+}
+.reference-explore + .branch-learning {
+  margin-top: 48px;
+}
+.reference-child-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+}
+@media (max-width: 650px) {
+  .reference-child-grid {
+    grid-template-columns: 1fr;
+  }
+}

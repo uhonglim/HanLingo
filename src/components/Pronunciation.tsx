@@ -46,7 +46,10 @@ export default function Pronunciation({
           <span className="pronunciation-label">
             {toneNotation === "source-category"
               ? "IPA · source tone categories"
-              : "IPA"}
+              : toneNotation === "unspecified" &&
+                  !/[˩˨˧˦˥1-9¹²³⁴⁵⁶⁷⁸⁹]/u.test(ipa)
+                ? "IPA · tones not given"
+                : "IPA"}
           </span>
           <p className="pronunciation-ipa">{displayIpa(ipa, toneNotation)}</p>
         </div>

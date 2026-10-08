@@ -19,6 +19,7 @@ import RegionalDifferences, {
 import "../components/BranchLearning.css";
 import { makeQuiz } from "../data/xiamen-romanization";
 import PhotoGallery from "../components/gallery/PhotoGallery";
+import Pronunciation from "../components/Pronunciation";
 import LocalSoundExplorer from "../components/LocalSoundExplorer";
 import { getLocalGallery } from "../data/galleries";
 
@@ -70,13 +71,14 @@ function Practice({ words }: { words: AttestedWord[] }) {
         {round + 1} / {deck.length}
       </p>
       <h2 lang="zh-Hant">{question.han}</h2>
-      <p className="learning-spelling">{spellingFor(question)}</p>
-      <p className="learning-ipa">
-        {question.toneNotation === "source-category" && (
-          <span>IPA · source tone categories </span>
-        )}
-        {question.ipa}
-      </p>
+      {question.registerLabel && (
+        <p className="learning-register">{question.registerLabel}</p>
+      )}
+      <Pronunciation
+        ipa={question.ipa}
+        toneNotation={question.toneNotation}
+        spelling={spellingFor(question)}
+      />
       <p>Choose the meaning.</p>
       <div className="learning-quiz-answers">
         {options.map((option) => (

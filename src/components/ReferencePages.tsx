@@ -1,6 +1,7 @@
 import { getBranchLearning, getLocalLearning } from "../data/learning";
 import BranchLearning from "./BranchLearning";
 import RegionalDifferences from "./RegionalDifferences";
+import { branchDepth, localityDepth } from "../data/content-depth";
 import { getLocalGallery } from "../data/galleries";
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
@@ -169,7 +170,18 @@ export default function ReferencePage() {
                 />
               )}
               <figcaption>
-                <span>{photo.caption}</span>
+                <span>
+                  {photo.caption}
+                  {point && (
+                    <>
+                      {" "}
+                      ·{" "}
+                      <Link to={`${varietyPath(point)}/culture`}>
+                        {getLocalGallery(point.id).length} photos
+                      </Link>
+                    </>
+                  )}
+                </span>
                 <span>
                   <a href={photo.sourceUrl} target="_blank" rel="noreferrer">
                     {photo.author}
@@ -182,33 +194,6 @@ export default function ReferencePage() {
               </figcaption>
             </figure>
           )}
-
-          <BranchLearning
-            groupId={group.id}
-            subgroupId={subgroup?.id}
-            point={point}
-            heroPhotoSrc={photo?.src}
-          />
-
-          {point && (
-            <RegionalDifferences key={point.id} localityId={point.id} />
-          )}
-
-          <details className="reference-language-notes">
-            <summary>Language notes</summary>
-            <div className="reference-reading-layout">
-              <div className="reference-prose">
-                {entry.sections.map((section, index) => (
-                  <section key={section.heading} id={`entry-section-${index}`}>
-                    <h2>{section.heading}</h2>
-                    {section.paragraphs.map((paragraph, paragraphIndex) => (
-                      <p key={paragraphIndex}>{paragraph}</p>
-                    ))}
-                  </section>
-                ))}
-              </div>
-            </div>
-          </details>
 
           {!point && (
             <section className="reference-explore" id="reference-explore">
@@ -237,6 +222,12 @@ export default function ReferencePage() {
                         </span>
                       </h3>
                       <p>{child.description}</p>
+                      <p className="reference-content-count">
+                        {(() => {
+                          const depth = branchDepth(group.id, child.id);
+                          return `${depth.localities} ${depth.localities === 1 ? "locality" : "localities"} · ${depth.words ? `${depth.words} ${depth.words === 1 ? "word" : "words"} · ` : ""}${depth.photos} photos`;
+                        })()}
+                      </p>
                     </Link>
                   );
                 })}
@@ -257,6 +248,12 @@ export default function ReferencePage() {
                         {varietyArticles[child.id]?.dek ??
                           child.hierarchy.join(" · ")}
                       </p>
+                      <p className="reference-content-count">
+                        {(() => {
+                          const depth = localityDepth(child.id);
+                          return `${depth.words ? `${depth.words} ${depth.words === 1 ? "word" : "words"} · ` : ""}${depth.photos} photos`;
+                        })()}
+                      </p>
                     </Link>
                   ))}
               </div>
@@ -265,6 +262,33 @@ export default function ReferencePage() {
               </p>
             </section>
           )}
+
+          <BranchLearning
+            groupId={group.id}
+            subgroupId={subgroup?.id}
+            point={point}
+            heroPhotoSrc={photo?.src}
+          />
+
+          {point && (
+            <RegionalDifferences key={point.id} localityId={point.id} />
+          )}
+
+          <details className="reference-language-notes">
+            <summary>Language notes</summary>
+            <div className="reference-reading-layout">
+              <div className="reference-prose">
+                {entry.sections.map((section, index) => (
+                  <section key={section.heading} id={`entry-section-${index}`}>
+                    <h2>{section.heading}</h2>
+                    {section.paragraphs.map((paragraph, paragraphIndex) => (
+                      <p key={paragraphIndex}>{paragraph}</p>
+                    ))}
+                  </section>
+                ))}
+              </div>
+            </div>
+          </details>
 
           <section className="reference-map-section" id="reference-map">
             <div className="reference-section-heading">

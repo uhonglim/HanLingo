@@ -1,0 +1,696 @@
+import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  ArrowLeft,
+  ArrowRight,
+  BookOpen,
+  ChevronDown,
+  ChevronRight,
+  Clock3,
+  MapPin,
+  PanelLeft,
+  X,
+} from "lucide-react";
+import { languages, letters, mapPoints } from "../data/languages";
+import {
+  groupArticles,
+  subgroupArticles,
+  varietyArticles,
+} from "../data/encyclopedia";
+import { groupPhotos } from "../data/photography";
+import {
+  groupPath,
+  resolveReferenceRoute,
+  subgroupPath,
+  varietyPath,
+} from "../routing";
+import type { ReferenceRoute } from "../routing";
+import AtlasMap from "./AtlasMap";
+import "./ReferencePages.css";
+
+function TaxonomySidebar({
+  active,
+  onNavigate,
+}: {
+  active: ReferenceRoute | null;
+  onNavigate: () => void;
+}) {
+  const [openGroups, setOpenGroups] = useState<Set<string>>(
+    () => new Set(active ? [active.language.id] : []),
+  );
+  const [openSubgroups, setOpenSubgroups] = useState<Set<string>>(
+    () =>
+      new Set(
+        active?.subgroup ? [`${active.language.id}/${active.subgroup.id}`] : [],
+      ),
+  );
+
+  useEffect(() => {
+    if (!active) return;
+    setOpenGroups((current) => new Set([...current, active.language.id]));
+    if (active.subgroup)
+      setOpenSubgroups(
+        (current) =>
+          new Set([...current, `${active.language.id}/${active.subgroup!.id}`]),
+      );
+  }, [active?.language.id, active?.subgroup?.id]);
+
+  function toggle(current: Set<string>, id: string) {
+    const updated = new Set(current);
+    if (updated.has(id)) updated.delete(id);
+    else updated.add(id);
+    return updated;
+  }
+
+  return (
+    <>
+      <Link to="/languages" className="reference-back" onClick={onNavigate}>
+        <ArrowLeft size={13} />
+        Back to the atlas
+      </Link>
+      <div className="reference-sidebar-title">
+        <span>THE FIELD GUIDE</span>
+        <h2>Follow a voice.</h2>
+        <p>From a family to a local place.</p>
+      </div>
+      <nav
+        className="reference-tree"
+        aria-label="Browse the Han language family"
+      >
+        <Link
+          className="reference-tree-root"
+          to="/languages"
+          onClick={onNavigate}
+        >
+          <span lang="zh-Hant">漢</span>
+          <span>
+            Han language family<small>Sinitic</small>
+          </span>
+        </Link>
+        <ul className="reference-tree-groups">
+          {languages.map((language) => {
+            const open = openGroups.has(language.id);
+            const selected = active?.language.id === language.id;
+            return (
+              <li
+                key={language.id}
+                style={{ "--reference-color": language.color } as CSSProperties}
+              >
+                <div
+                  className={`reference-tree-group${selected ? " is-current-group" : ""}`}
+                >
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setOpenGroups((current) => toggle(current, language.id))
+                    }
+                    aria-label={`${open ? "Collapse" : "Expand"} ${language.name}`}
+                    aria-expanded={open}
+                    aria-controls={`tree-${language.id}`}
+                  >
+                    <ChevronRight
+                      size={12}
+                      className={open ? "is-expanded" : ""}
+                    />
+                  </button>
+                  <Link
+                    to={groupPath(language.id)}
+                    onClick={onNavigate}
+                    aria-current={
+                      selected && active.level === "group" ? "page" : undefined
+                    }
+                  >
+                    <span className="reference-tree-glyph" lang="zh-Hant">
+                      {language.shortName}
+                    </span>
+                    {language.name}
+                    <span className="reference-tree-count">
+                      {language.subgroups.length}
+                    </span>
+                  </Link>
+                </div>
+                {open && (
+                  <ul
+                    id={`tree-${language.id}`}
+                    className="reference-tree-subgroups"
+                  >
+                    {language.subgroups.map((subgroup) => {
+                      const key = `${language.id}/${subgroup.id}`;
+                      const subgroupOpen = openSubgroups.has(key);
+                      const subgroupSelected =
+                        selected && active?.subgroup?.id === subgroup.id;
+                      const places = mapPoints.filter(
+                        (point) =>
+                          point.groupId === language.id &&
+                          point.subgroupId === subgroup.id,
+                      );
+                      return (
+                        <li key={subgroup.id}>
+                          <div className="reference-tree-subgroup">
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setOpenSubgroups((current) =>
+                                  toggle(current, key),
+                                )
+                              }
+                              aria-label={`${subgroupOpen ? "Collapse" : "Expand"} ${subgroup.name}`}
+                              aria-expanded={subgroupOpen}
+                              aria-controls={`tree-${language.id}-${subgroup.id}`}
+                            >
+                              <ChevronRight
+                                size={11}
+                                className={subgroupOpen ? "is-expanded" : ""}
+                              />
+                            </button>
+                            <Link
+                              to={subgroupPath(language.id, subgroup.id)}
+                              onClick={onNavigate}
+                              aria-current={
+                                subgroupSelected && !active?.point
+                                  ? "page"
+                                  : undefined
+                              }
+                            >
+                              {subgroup.name}
+                            </Link>
+                          </div>
+                          {subgroupOpen && (
+                            <ul
+                              id={`tree-${language.id}-${subgroup.id}`}
+                              className="reference-tree-places"
+                            >
+                              {places.map((point) => (
+                                <li key={point.id}>
+                                  <Link
+                                    to={varietyPath(point)}
+                                    onClick={onNavigate}
+                                    aria-current={
+                                      active?.point?.id === point.id
+                                        ? "page"
+                                        : undefined
+                                    }
+                                  >
+                                    <span className="reference-tree-place-dot" />
+                                    {point.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+      <div className="reference-sidebar-foot">
+        <span className="reference-edition-dot" />
+        PRESENT-DAY EDITION
+        <p>
+          A curated path through five groups.
+          <br />
+          Many more voices belong to this family.
+        </p>
+        <Link to="/about" onClick={onNavigate}>
+          How we describe a language
+          <ArrowRight size={12} />
+        </Link>
+      </div>
+    </>
+  );
+}
+
+export default function ReferencePage() {
+  const params = useParams<{
+    languageId: string;
+    subgroupId: string;
+    varietyId: string;
+  }>();
+  const navigate = useNavigate();
+  const route = resolveReferenceRoute(params);
+  const [treeOpen, setTreeOpen] = useState(false);
+  const [showEnglish, setShowEnglish] = useState(false);
+  const entry = route?.point
+    ? varietyArticles[route.point.id]
+    : route?.subgroup
+      ? subgroupArticles[`${route.language.id}/${route.subgroup.id}`]
+      : route
+        ? groupArticles[route.language.id]
+        : undefined;
+
+  useEffect(() => {
+    setTreeOpen(false);
+    setShowEnglish(false);
+  }, [entry?.title, params.languageId, params.subgroupId, params.varietyId]);
+
+  const closeTree = () => setTreeOpen(false);
+  const group = route?.language;
+  const point = route?.point;
+  const subgroup = route?.subgroup;
+  const photo =
+    group && route?.level === "group" ? groupPhotos[group.id] : undefined;
+  const localLetter =
+    point && ["xiamen", "guangzhou", "meixian", "shanghai"].includes(point.id)
+      ? letters.find((letter) => letter.id === point.groupId)
+      : undefined;
+  const localPoints = group
+    ? mapPoints.filter(
+        (place) =>
+          place.groupId === group.id &&
+          (!subgroup || place.subgroupId === subgroup.id),
+      )
+    : [];
+  const childSubgroups = group && !subgroup ? group.subgroups : [];
+  const relatedPoints = point
+    ? mapPoints.filter(
+        (place) =>
+          place.groupId === point.groupId &&
+          place.subgroupId === point.subgroupId &&
+          place.id !== point.id,
+      )
+    : [];
+
+  return (
+    <div
+      className="reference-layout"
+      style={
+        { "--reference-color": group?.color ?? "#cf593c" } as CSSProperties
+      }
+    >
+      <div className="reference-mobile-tree">
+        <button
+          type="button"
+          onClick={() => setTreeOpen(!treeOpen)}
+          aria-expanded={treeOpen}
+          aria-controls="reference-sidebar"
+        >
+          <PanelLeft size={16} />
+          <span>Browse the language family</span>
+          {treeOpen ? <X size={16} /> : <ChevronDown size={15} />}
+        </button>
+      </div>
+      <aside
+        id="reference-sidebar"
+        className={`reference-sidebar${treeOpen ? " is-open" : ""}`}
+      >
+        <TaxonomySidebar active={route} onNavigate={closeTree} />
+      </aside>
+      {!route || !entry || !group ? (
+        <div className="reference-not-found">
+          <span className="reference-kicker">A DIFFERENT BRANCH</span>
+          <h1>
+            We couldn’t find
+            <br />
+            that entry.
+          </h1>
+          <p>
+            This address does not follow an available path through the language
+            family. Start with a group, then follow its regional and local
+            varieties.
+          </p>
+          <div className="reference-recovery-links">
+            {languages.map((language) => (
+              <Link key={language.id} to={groupPath(language.id)}>
+                <span lang="zh-Hant">{language.shortName}</span>
+                {language.name}
+                <ArrowRight size={16} />
+              </Link>
+            ))}
+          </div>
+          <Link className="reference-back" to="/">
+            <ArrowLeft size={14} />
+            Return to HanLingo
+          </Link>
+        </div>
+      ) : (
+        <article className="reference-entry">
+          <nav className="reference-breadcrumbs" aria-label="Breadcrumb">
+            <Link to="/">HanLingo</Link>
+            <ChevronRight size={10} />
+            <Link to="/languages">Sinitic</Link>
+            <ChevronRight size={10} />
+            {subgroup ? (
+              <Link to={groupPath(group.id)}>{group.name}</Link>
+            ) : (
+              <span aria-current="page">{group.name}</span>
+            )}
+            {subgroup && (
+              <>
+                <ChevronRight size={10} />
+                {point ? (
+                  <Link to={subgroupPath(group.id, subgroup.id)}>
+                    {subgroup.name}
+                  </Link>
+                ) : (
+                  <span aria-current="page">{subgroup.name}</span>
+                )}
+              </>
+            )}
+            {point && (
+              <>
+                <ChevronRight size={10} />
+                <span aria-current="page">{point.name}</span>
+              </>
+            )}
+          </nav>
+          <header
+            className={`reference-entry-header${photo ? " has-photo" : ""}`}
+          >
+            <div className="reference-entry-meta">
+              <span className="reference-kicker">
+                <span />
+                {route.level === "group"
+                  ? "LANGUAGE GROUP"
+                  : route.level === "subgroup"
+                    ? "REGIONAL BRANCH"
+                    : point && ["haifeng", "lufeng"].includes(point.id)
+                      ? "REFERENCE AREA"
+                      : "LOCAL VARIETY"}
+              </span>
+              <span>
+                <Clock3 size={12} />
+                {entry.readingMinutes} min read
+              </span>
+            </div>
+            <div className="reference-title-row">
+              <h1>{entry.title}</h1>
+              <span className="reference-native-title" lang="zh-Hant">
+                {point?.nativeName ?? subgroup?.nativeName ?? group.nativeName}
+              </span>
+            </div>
+            <p className="reference-dek">{entry.dek}</p>
+            <div className="reference-geography">
+              <MapPin size={14} />
+              <span>
+                {point
+                  ? `${point.name} · ${subgroup?.name} · ${group.name}`
+                  : subgroup
+                    ? `${subgroup.places.join(" · ")} · selected places`
+                    : group.geography}
+              </span>
+            </div>
+          </header>
+
+          {photo && (
+            <figure className="reference-hero-photo">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                style={{ objectPosition: photo.position ?? "center" }}
+                fetchPriority="high"
+              />
+              <figcaption>
+                <span>{photo.caption}</span>
+                <span>
+                  <a href={photo.sourceUrl} target="_blank" rel="noreferrer">
+                    {photo.author}
+                  </a>{" "}
+                  ·{" "}
+                  <a href={photo.licenseUrl} target="_blank" rel="noreferrer">
+                    {photo.license}
+                  </a>
+                </span>
+              </figcaption>
+            </figure>
+          )}
+
+          <div className="reference-reading-layout">
+            <div className="reference-prose">
+              {entry.sections.map((section, index) => (
+                <section key={section.heading} id={`entry-section-${index}`}>
+                  <span className="reference-section-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h2>{section.heading}</h2>
+                  {section.paragraphs.map((paragraph, paragraphIndex) => (
+                    <p key={paragraphIndex}>{paragraph}</p>
+                  ))}
+                </section>
+              ))}
+            </div>
+            <aside className="reference-entry-rail">
+              <div className="reference-contents">
+                <span className="reference-kicker">IN THIS ENTRY</span>
+                <nav aria-label="On this page">
+                  {entry.sections.map((section, index) => (
+                    <a href={`#entry-section-${index}`} key={section.heading}>
+                      {section.heading}
+                    </a>
+                  ))}
+                  {(childSubgroups.length > 0 || !point) && (
+                    <a href="#reference-explore">
+                      {subgroup ? "Local varieties" : "Explore the branches"}
+                    </a>
+                  )}
+                  <a href="#reference-map">On the map</a>
+                  {localLetter && (
+                    <a href="#reference-letter">A letter in local speech</a>
+                  )}
+                  <a href="#reference-sources">Sources & further reading</a>
+                </nav>
+              </div>
+              <dl className="reference-facts">
+                {entry.facts.map((fact) => (
+                  <div key={fact.label}>
+                    <dt>{fact.label}</dt>
+                    <dd>{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </aside>
+          </div>
+
+          {!point && (
+            <section className="reference-explore" id="reference-explore">
+              <div className="reference-section-heading">
+                <div>
+                  <span className="reference-kicker">
+                    FOLLOW THE FAMILY TREE
+                  </span>
+                  <h2>
+                    {subgroup
+                      ? "Meet the local voices."
+                      : "Explore the branches."}
+                  </h2>
+                </div>
+                <span>
+                  {subgroup
+                    ? `${localPoints.length} selected ${localPoints.length === 1 ? "place" : "places"}`
+                    : `${childSubgroups.length} selected branches`}
+                </span>
+              </div>
+              <div className="reference-child-grid">
+                {childSubgroups.map((child, index) => {
+                  const childPoints = mapPoints.filter(
+                    (place) =>
+                      place.groupId === group.id &&
+                      place.subgroupId === child.id,
+                  );
+                  return (
+                    <Link
+                      to={subgroupPath(group.id, child.id)}
+                      className="reference-child-card"
+                      key={child.id}
+                    >
+                      <span className="reference-child-index">
+                        {String(index + 1).padStart(2, "0")}
+                        <span lang="zh-Hant">{child.nativeName}</span>
+                      </span>
+                      <h3>{child.name}</h3>
+                      <p>{child.description}</p>
+                      <span className="reference-child-footer">
+                        {childPoints.length}{" "}
+                        {childPoints.length === 1
+                          ? "local variety"
+                          : "local varieties"}
+                        <ArrowRight size={17} />
+                      </span>
+                    </Link>
+                  );
+                })}
+                {subgroup &&
+                  localPoints.map((child, index) => (
+                    <Link
+                      to={varietyPath(child)}
+                      className="reference-child-card"
+                      key={child.id}
+                    >
+                      <span className="reference-child-index">
+                        {String(index + 1).padStart(2, "0")}
+                        <span lang="zh-Hant">{child.nativeName}</span>
+                      </span>
+                      <h3>{child.name}</h3>
+                      <p>
+                        {varietyArticles[child.id]?.dek ??
+                          child.hierarchy.join(" · ")}
+                      </p>
+                      <span className="reference-child-footer">
+                        Read the local guide
+                        <ArrowRight size={17} />
+                      </span>
+                    </Link>
+                  ))}
+              </div>
+              <p className="reference-curation-note">
+                These pages offer selected routes into {group.name}. They are an
+                introduction to its diversity, rather than an exhaustive
+                classification.
+              </p>
+            </section>
+          )}
+
+          <section className="reference-map-section" id="reference-map">
+            <div className="reference-section-heading">
+              <div>
+                <span className="reference-kicker">LANGUAGE, IN PLACE</span>
+                <h2>
+                  {point ? `Find ${point.name}.` : "Put the voices on the map."}
+                </h2>
+              </div>
+              <span>Choose a point to read its local guide.</span>
+            </div>
+            <div className="reference-map-frame">
+              <AtlasMap
+                points={localPoints}
+                selectedGroup={group.id}
+                selectedPoint={point?.id ?? null}
+                onSelectPoint={(id) => {
+                  const selected = mapPoints.find((place) => place.id === id);
+                  if (selected) navigate(varietyPath(selected));
+                }}
+                compact
+              />
+            </div>
+            <p className="reference-curation-note">
+              Points locate representative cities, not exclusive language
+              territories. Communities and varieties extend beyond these places.
+            </p>
+          </section>
+
+          {localLetter && (
+            <section className="reference-local-letter" id="reference-letter">
+              <div className="reference-section-heading">
+                <div>
+                  <span className="reference-kicker">
+                    ONE LETTER, A LOCAL VOICE
+                  </span>
+                  <h2>Words from home.</h2>
+                </div>
+                <label className="reference-translation-toggle">
+                  <input
+                    type="checkbox"
+                    checked={showEnglish}
+                    onChange={(event) => setShowEnglish(event.target.checked)}
+                  />
+                  Show the shared English meaning
+                </label>
+              </div>
+              <div
+                className={`reference-letter-columns${showEnglish ? " with-translation" : ""}`}
+              >
+                <div className="reference-letter-chinese" lang="zh-Hant">
+                  <p>{localLetter.salutation}</p>
+                  {localLetter.paragraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                  <p>{localLetter.closing}</p>
+                </div>
+                {showEnglish && (
+                  <div className="reference-letter-english">
+                    <span className="reference-kicker">
+                      SHARED MEANING · ENGLISH
+                    </span>
+                    <p>Mom,</p>
+                    {localLetter.english.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
+                    <p>Your son, who misses you.</p>
+                  </div>
+                )}
+              </div>
+              <p className="reference-letter-note">
+                {localLetter.note}. This written sample does not supply a
+                verified pronunciation recording or IPA transcription.
+              </p>
+              <Link
+                className="reference-inline-link"
+                to={`/compare?left=${group.id}&right=formal`}
+              >
+                Compare this letter across the family
+                <ArrowRight size={15} />
+              </Link>
+            </section>
+          )}
+
+          <section className="reference-sources" id="reference-sources">
+            <div>
+              <BookOpen size={17} />
+              <h2>Sources & further reading</h2>
+            </div>
+            <p>
+              The references behind this entry, and places to continue
+              exploring.
+            </p>
+            <ol>
+              {entry.sources.map((source, index) => (
+                <li key={`${source.url}-${index}`}>
+                  <a href={source.url} target="_blank" rel="noreferrer">
+                    {source.title}
+                  </a>
+                  <span>
+                    {new URL(source.url).hostname.replace(/^www\./, "")}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          {point && (
+            <section className="reference-continue">
+              <span className="reference-kicker">KEEP EXPLORING</span>
+              <h2>
+                {relatedPoints.length
+                  ? "Another place. Another voice."
+                  : "Follow the next branch."}
+              </h2>
+              <div className="reference-continue-links">
+                {relatedPoints.map((place) => (
+                  <Link key={place.id} to={varietyPath(place)}>
+                    <span>
+                      <small>{subgroup?.name}</small>
+                      {place.name}
+                      <span lang="zh-Hant">{place.nativeName}</span>
+                    </span>
+                    <ArrowRight size={18} />
+                  </Link>
+                ))}
+                <Link to={subgroupPath(group.id, subgroup!.id)}>
+                  <span>
+                    <small>RETURN TO THE REGIONAL BRANCH</small>
+                    {subgroup?.name}
+                  </span>
+                  <ArrowRight size={18} />
+                </Link>
+              </div>
+            </section>
+          )}
+          <footer className="reference-entry-footer">
+            <span>HanLingo field guide · Present-day edition</span>
+            <Link to={route.level === "group" ? "/" : groupPath(group.id)}>
+              <ArrowLeft size={13} />
+              {route.level === "group"
+                ? "Back to the atlas"
+                : `All about ${group.name}`}
+            </Link>
+          </footer>
+        </article>
+      )}
+    </div>
+  );
+}

@@ -117,6 +117,38 @@ export default function AtlasMap({
   onSelectPoint,
   compact = false,
 }: AtlasMapProps) {
+  // The parent may build a fresh points array on every render. A geometry key
+  // keeps a reader's pan/zoom intact until the actual mapped places change.
+  const geometryKey = JSON.stringify(
+    points.map((point) => [point.id, ...point.coordinates]),
+  );
+  const maxZoom = compact ? 5 : 3.2;
+  const initialView = useMemo<View>(() => {
+    if (!compact) return DEFAULT_VIEW;
+    const coordinates = (JSON.parse(geometryKey) as [string, number, number][])
+      .map(([, longitude, latitude]) => projection([longitude, latitude]))
+      .filter((position): position is [number, number] => position !== null);
+    if (coordinates.length === 0) return DEFAULT_VIEW;
+    const xs = coordinates.map((position) => position[0]);
+    const ys = coordinates.map((position) => position[1]);
+    const minX = Math.min(...xs),
+      maxX = Math.max(...xs);
+    const minY = Math.min(...ys),
+      maxY = Math.max(...ys);
+    const zoom = Math.max(
+      0.8,
+      Math.min(
+        5,
+        560 / Math.max(1, maxX - minX),
+        430 / Math.max(1, maxY - minY),
+      ),
+    );
+    return {
+      zoom,
+      x: WIDTH / 2 - ((minX + maxX) / 2) * zoom,
+      y: HEIGHT * 0.48 - ((minY + maxY) / 2) * zoom,
+    };
+  }, [compact, geometryKey]);
   const svgRef = useRef<SVGSVGElement>(null);
   const drag = useRef<{
     pointerId: number;
@@ -125,7 +157,7 @@ export default function AtlasMap({
     viewX: number;
     viewY: number;
   } | null>(null);
-  const [view, setView] = useState<View>(DEFAULT_VIEW);
+  const [view, setView] = useState<View>(initialView);
   const [dragging, setDragging] = useState(false);
   const [layout, setLayout] = useState<{ scale: number; reserved: Label[] }>({
     scale: 1,
@@ -133,6 +165,10 @@ export default function AtlasMap({
   });
   const id = useId().replace(/:/g, "");
   const clipId = `atlas-clip-${id}`;
+
+  useEffect(() => {
+    setView(initialView);
+  }, [initialView]);
 
   useLayoutEffect(() => {
     const svg = svgRef.current;
@@ -169,10 +205,15 @@ export default function AtlasMap({
     return () => observer.disconnect();
   }, []);
 
+  const selectedCoordinates = points.find(
+    (item) => item.id === selectedPoint,
+  )?.coordinates;
+  const selectedLongitude = selectedCoordinates?.[0];
+  const selectedLatitude = selectedCoordinates?.[1];
   useEffect(() => {
-    const point = points.find((item) => item.id === selectedPoint);
-    if (!point) return;
-    const projected = projection(point.coordinates);
+    if (selectedLongitude === undefined || selectedLatitude === undefined)
+      return;
+    const projected = projection([selectedLongitude, selectedLatitude]);
     if (!projected) return;
     setView((previous) => {
       const x = projected[0] * previous.zoom + previous.x;
@@ -185,7 +226,7 @@ export default function AtlasMap({
         y: HEIGHT * 0.48 - projected[1] * previous.zoom,
       };
     });
-  }, [selectedPoint, selectedGroup, points]);
+  }, [selectedPoint, selectedGroup, selectedLongitude, selectedLatitude]);
 
   const projectedPoints = useMemo(
     () =>
@@ -272,7 +313,7 @@ export default function AtlasMap({
 
   function zoom(factor: number) {
     setView((previous) => {
-      const nextZoom = Math.max(0.8, Math.min(3.2, previous.zoom * factor));
+      const nextZoom = Math.max(0.8, Math.min(maxZoom, previous.zoom * factor));
       const ratio = nextZoom / previous.zoom;
       return {
         zoom: nextZoom,
@@ -515,7 +556,7 @@ export default function AtlasMap({
           aria-label="Zoom in"
           title="Zoom in"
           onClick={() => zoom(1.3)}
-          disabled={view.zoom >= 3.2}
+          disabled={view.zoom >= maxZoom}
         >
           <svg viewBox="0 0 20 20" aria-hidden="true">
             <path d="M10 4v12M4 10h12" />
@@ -536,7 +577,7 @@ export default function AtlasMap({
           type="button"
           aria-label="Reset map view"
           title="Reset map view"
-          onClick={() => setView(DEFAULT_VIEW)}
+          onClick={() => setView(initialView)}
         >
           <svg viewBox="0 0 20 20" aria-hidden="true">
             <path d="M5 6a6 6 0 1 1-1 7M5 2v4H1" />

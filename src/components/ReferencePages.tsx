@@ -7,7 +7,6 @@ import {
   BookOpen,
   ChevronDown,
   ChevronRight,
-  Clock3,
   MapPin,
   PanelLeft,
   X,
@@ -70,9 +69,7 @@ function TaxonomySidebar({
         Back to the atlas
       </Link>
       <div className="reference-sidebar-title">
-        <span>THE FIELD GUIDE</span>
-        <h2>Follow a voice.</h2>
-        <p>From a family to a local place.</p>
+        <h2>Languages</h2>
       </div>
       <nav
         className="reference-tree"
@@ -210,13 +207,6 @@ function TaxonomySidebar({
         </ul>
       </nav>
       <div className="reference-sidebar-foot">
-        <span className="reference-edition-dot" />
-        PRESENT-DAY EDITION
-        <p>
-          A curated path through five groups.
-          <br />
-          Many more voices belong to this family.
-        </p>
         <Link to="/about" onClick={onNavigate}>
           How we describe a language
           <ArrowRight size={12} />
@@ -303,17 +293,7 @@ export default function ReferencePage() {
       </aside>
       {!route || !entry || !group ? (
         <div className="reference-not-found">
-          <span className="reference-kicker">A DIFFERENT BRANCH</span>
-          <h1>
-            We couldn’t find
-            <br />
-            that entry.
-          </h1>
-          <p>
-            This address does not follow an available path through the language
-            family. Start with a group, then follow its regional and local
-            varieties.
-          </p>
+          <h1>Entry not found</h1>
           <div className="reference-recovery-links">
             {languages.map((language) => (
               <Link key={language.id} to={groupPath(language.id)}>
@@ -362,22 +342,6 @@ export default function ReferencePage() {
           <header
             className={`reference-entry-header${photo ? " has-photo" : ""}`}
           >
-            <div className="reference-entry-meta">
-              <span className="reference-kicker">
-                <span />
-                {route.level === "group"
-                  ? "LANGUAGE GROUP"
-                  : route.level === "subgroup"
-                    ? "REGIONAL BRANCH"
-                    : point && ["haifeng", "lufeng"].includes(point.id)
-                      ? "REFERENCE AREA"
-                      : "LOCAL VARIETY"}
-              </span>
-              <span>
-                <Clock3 size={12} />
-                {entry.readingMinutes} min read
-              </span>
-            </div>
             <div className="reference-title-row">
               <h1>{entry.title}</h1>
               <span className="reference-native-title" lang="zh-Hant">
@@ -424,9 +388,6 @@ export default function ReferencePage() {
             <div className="reference-prose">
               {entry.sections.map((section, index) => (
                 <section key={section.heading} id={`entry-section-${index}`}>
-                  <span className="reference-section-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                   <h2>{section.heading}</h2>
                   {section.paragraphs.map((paragraph, paragraphIndex) => (
                     <p key={paragraphIndex}>{paragraph}</p>
@@ -436,7 +397,6 @@ export default function ReferencePage() {
             </div>
             <aside className="reference-entry-rail">
               <div className="reference-contents">
-                <span className="reference-kicker">IN THIS ENTRY</span>
                 <nav aria-label="On this page">
                   {entry.sections.map((section, index) => (
                     <a href={`#entry-section-${index}`} key={section.heading}>
@@ -470,14 +430,7 @@ export default function ReferencePage() {
             <section className="reference-explore" id="reference-explore">
               <div className="reference-section-heading">
                 <div>
-                  <span className="reference-kicker">
-                    FOLLOW THE FAMILY TREE
-                  </span>
-                  <h2>
-                    {subgroup
-                      ? "Meet the local voices."
-                      : "Explore the branches."}
-                  </h2>
+                  <h2>{subgroup ? "Local varieties" : "Branches"}</h2>
                 </div>
                 <span>
                   {subgroup
@@ -548,12 +501,8 @@ export default function ReferencePage() {
           <section className="reference-map-section" id="reference-map">
             <div className="reference-section-heading">
               <div>
-                <span className="reference-kicker">LANGUAGE, IN PLACE</span>
-                <h2>
-                  {point ? `Find ${point.name}.` : "Put the voices on the map."}
-                </h2>
+                <h2>{point ? `${point.name} on the map` : "Map"}</h2>
               </div>
-              <span>Choose a point to read its local guide.</span>
             </div>
             <div className="reference-map-frame">
               <AtlasMap
@@ -577,10 +526,7 @@ export default function ReferencePage() {
             <section className="reference-local-letter" id="reference-letter">
               <div className="reference-section-heading">
                 <div>
-                  <span className="reference-kicker">
-                    ONE LETTER, A LOCAL VOICE
-                  </span>
-                  <h2>Words from home.</h2>
+                  <h2>Letter example</h2>
                 </div>
                 <label className="reference-translation-toggle">
                   <input
@@ -633,10 +579,6 @@ export default function ReferencePage() {
               <BookOpen size={17} />
               <h2>Sources & further reading</h2>
             </div>
-            <p>
-              The references behind this entry, and places to continue
-              exploring.
-            </p>
             <ol>
               {entry.sources.map((source, index) => (
                 <li key={`${source.url}-${index}`}>
@@ -653,11 +595,8 @@ export default function ReferencePage() {
 
           {point && (
             <section className="reference-continue">
-              <span className="reference-kicker">KEEP EXPLORING</span>
               <h2>
-                {relatedPoints.length
-                  ? "Another place. Another voice."
-                  : "Follow the next branch."}
+                {relatedPoints.length ? "Nearby varieties" : "Related branches"}
               </h2>
               <div className="reference-continue-links">
                 {relatedPoints.map((place) => (
@@ -672,7 +611,7 @@ export default function ReferencePage() {
                 ))}
                 <Link to={subgroupPath(group.id, subgroup!.id)}>
                   <span>
-                    <small>RETURN TO THE REGIONAL BRANCH</small>
+                    <small>Regional branch</small>
                     {subgroup?.name}
                   </span>
                   <ArrowRight size={18} />

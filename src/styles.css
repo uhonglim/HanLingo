@@ -164,21 +164,6 @@ main,
   letter-spacing: -0.9px;
   line-height: 1;
 }
-.brand-seal {
-  background: var(--accent);
-  color: #fff7ed;
-  width: 34px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 4px;
-  font-family: "Songti SC", "Noto Serif CJK SC", serif;
-  font-size: 25px;
-  letter-spacing: 0;
-}
-.brand-period {
-  color: var(--accent);
-}
 .main-nav {
   display: flex;
   align-items: center;
@@ -686,12 +671,6 @@ h1 em {
   font-style: italic;
   font-size: 20px;
 }
-.tiny-line {
-  display: inline-block;
-  width: 20px;
-  height: 1px;
-  background: #a5ad99;
-}
 .translation-toggle {
   display: flex;
   align-items: center;
@@ -871,12 +850,6 @@ h1 em {
   padding-top: 24px;
   border-top: 1px solid #dadfd0;
 }
-.written-glyph {
-  font-size: 27px;
-  font-family: "Songti SC", serif;
-  color: #8a957c;
-  line-height: 1.4;
-}
 .written-note h3 {
   font-size: 12px;
   font-weight: 600;
@@ -944,11 +917,6 @@ h1 em {
   color: #94917b;
   font-size: 8px;
   white-space: nowrap;
-}
-.sound-lab-description {
-  font-size: 12px;
-  margin-top: 14px;
-  color: #5b6b57;
 }
 .sound-tabs {
   display: grid;
@@ -1052,19 +1020,6 @@ h1 em {
   gap: 30px;
   align-items: center;
 }
-.edition-number {
-  font-size: 8px;
-  letter-spacing: 1.1px;
-  white-space: nowrap;
-  color: #939b89;
-  align-self: flex-start;
-  line-height: 1.8;
-  padding-top: 3px;
-}
-.edition-number > span {
-  display: block;
-  color: #b2b8a6;
-}
 .editorial-notes h3 {
   font-size: 12px;
   font-weight: 600;
@@ -1112,11 +1067,6 @@ h1 em {
 .site-footer .brand {
   font-size: 24px;
   gap: 8px;
-}
-.site-footer .brand-seal {
-  width: 25px;
-  height: 27px;
-  font-size: 18px;
 }
 .site-footer p {
   font-size: 10px;
@@ -1434,11 +1384,6 @@ h1 em {
   }
   .brand {
     font-size: 29px;
-  }
-  .brand-seal {
-    width: 30px;
-    height: 32px;
-    font-size: 23px;
   }
   .github-link {
     margin-left: auto;
@@ -1771,11 +1716,6 @@ h1 em {
     gap: 20px;
     display: grid;
     grid-template-columns: 1fr;
-  }
-  .edition-number {
-    display: flex;
-    gap: 13px;
-    font-size: 8px;
   }
   .editorial-notes > div:nth-child(2) {
     flex: initial;

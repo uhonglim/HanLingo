@@ -15,7 +15,6 @@ import {
   Check,
   ChevronRight,
   Expand,
-  MapPin,
   RotateCcw,
   Search,
   X,
@@ -109,7 +108,6 @@ function WordCard({
   return (
     <article className="xm-word-card">
       <div className="xm-word-top">
-        <span>{word.category}</span>
         <button
           className={saved ? "xm-save is-saved" : "xm-save"}
           onClick={onSave}
@@ -125,7 +123,6 @@ function WordCard({
       <h3>{word.english}</h3>
       <div className="xm-word-pronunciation">
         <div>
-          <span>HANLINGO · TRIAL</span>
           <strong>{roman(word)}</strong>
         </div>
         <div>
@@ -153,7 +150,7 @@ function NotationNote() {
   return (
     <details className="xm-notation">
       <summary>
-        How to read the pronunciation <span>IPA + HanLingo trial spelling</span>
+        IPA & trial spelling
         <ChevronRight size={15} />
       </summary>
       <div>
@@ -195,14 +192,14 @@ const culturalNotes: Record<
 > = {
   "shacha-noodles": {
     title: "A bowl of shacha noodles",
-    text: "Noodles meet a hot, satay-style soup. Xiamen’s dining guide lists sesame, garlic, peanut oil, shrimp sauce, and chili among the seasoning ingredients. Learn the words for eating, noodles, and water before looking at the menu.",
+    text: "Shacha noodles use a satay-style soup. Xiamen’s dining guide lists sesame, garlic, peanut oil, shrimp sauce, and chili among the seasoning ingredients.",
     source: "https://www.investxiamen.org.cn/detail/169.html",
     sourceName: "Xiamen dining guide",
     words: ["食", "麵", "水", "好食"],
   },
   "fried-vermicelli": {
     title: "Rice, noodles, and the table",
-    text: "This photograph shows fried rice vermicelli served in Xiamen. Start with the useful distinction between uncooked rice and cooked rice: 米 and 飯 are different words.",
+    text: "Fried rice vermicelli served in Xiamen. 米 refers to uncooked rice; 飯 refers to cooked rice or a meal.",
     source:
       "https://commons.wikimedia.org/wiki/File:Fried_Rice_vermicelli_Xiamen.jpg",
     sourceName: "Photograph record",
@@ -210,7 +207,7 @@ const culturalNotes: Record<
   },
   "nanputuo-temple": {
     title: "Nanputuo, a working monastery",
-    text: "Nanputuo is a Buddhist monastery, not simply an architectural backdrop. Its volunteers arrange flower offerings, prepare ceremonies, and guide visitors. Notice the thresholds, courtyards, and spaces where people pause.",
+    text: "Nanputuo is a Buddhist monastery. Its volunteers arrange flower offerings, prepare ceremonies, and guide visitors.",
     source:
       "https://en.nanputuo.com/buddhism/Buddhisattva.aspx?articleid=71998",
     sourceName: "Nanputuo Temple",
@@ -219,7 +216,7 @@ const culturalNotes: Record<
 };
 const seaNote = {
   title: "Across the water to Gulangyu",
-  text: "Gulangyu’s buildings combine southern Fujian traditions with influences carried through overseas connections. UNESCO calls the island’s distinctive architectural synthesis “Amoy Deco.” Look for those connections in the roofs, verandas, and streets.",
+  text: "Gulangyu’s buildings combine southern Fujian traditions with influences carried through overseas connections. UNESCO calls the island’s distinctive architectural synthesis “Amoy Deco.”",
   source: "https://whc.unesco.org/en/list/1541",
   sourceName: "UNESCO · Kulangsu",
   words: ["海", "船", "水", "厝"],
@@ -230,37 +227,37 @@ const pictureNotes: Record<
 > = {
   "dongyu-market": {
     title: "At a Dongyu market",
-    text: "Vegetables fill the stalls in this open-air market. Start with 菜, “vegetables,” then 買, “to buy,” and 錢, “money.” The photograph is from Haicang District; the word cards follow the urban Xiamen reference.",
+    text: "A street market in Dongyu, Haicang District. The words alongside this photograph follow the urban Xiamen reference.",
     words: ["菜", "買", "錢", "人"],
   },
   "shellfish-stall": {
     title: "Shellfish at the shopfront",
-    text: "Basins of shellfish sit outside this Gulangyu shop. Practice 買, “to buy,” and 錢, “money,” before comparing 食, “to eat,” with 好食, “tasty.”",
+    text: "Basins of shellfish outside a Gulangyu shop.",
     words: ["買", "錢", "食", "好食"],
   },
   "gulangyu-lane": {
     title: "A lane through Gulangyu",
-    text: "A narrow, shaded lane runs between the island’s buildings. Learn 街, “street,” and 厝, “house or home.” Both are everyday readings, rather than pronunciations inferred from Mandarin.",
+    text: "A shaded lane between buildings on Gulangyu. 街 means “street”; 厝 means “house” or “home.”",
     words: ["街", "厝", "人"],
   },
   "xiamen-ferry": {
     title: "A ferry on the harbor",
-    text: "The Yuanhe ferry passes west of Gulangyu. 船 is the word for a boat or ship; 海 names the sea. Learn them separately here before building a phrase.",
+    text: "The Yuanhe ferry photographed west of Gulangyu in 2012. 船 means “boat” or “ship”; 海 means “sea.”",
     words: ["船", "海", "水"],
   },
   "gulangyu-coast": {
     title: "At the water’s edge",
-    text: "Gulangyu’s waterfront puts two useful words side by side: 海, “sea,” and 水, “water.” Their citation tones both fall from high to middle: 53.",
+    text: "Gulangyu’s waterfront. 海, “sea,” and 水, “water,” both have the falling citation tone 53.",
     words: ["海", "水", "船"],
   },
   "shuzhuang-garden": {
     title: "A bridge at Shuzhuang Garden",
-    text: "A visitor with a red umbrella crosses a bridge above still water. Name the person with 人 and the water with 水. Use 來 for “come” and 去 for “go.”",
+    text: "A visitor with a red umbrella crosses a bridge at Shuzhuang Garden.",
     words: ["人", "水", "來", "去"],
   },
   "shop-counter": {
     title: "Across the counter",
-    text: "Jars, boxes, and small packages surround a shop worker. Use this scene to remember 人, “person,” 買, “to buy,” and 錢, “money.” The photograph documents a shop in Xiamen; it does not identify the worker’s language.",
+    text: "Jars, boxes, and small packages surround a worker at a shop counter in Xiamen. The photograph does not identify the worker’s language.",
     words: ["人", "買", "錢"],
   },
 };
@@ -292,6 +289,49 @@ function relatedWords(photo: Photo) {
         .slice(0, 3);
 }
 
+function SceneWord({
+  word,
+  saved,
+  onSave,
+}: {
+  word: Word;
+  saved: boolean;
+  onSave: () => void;
+}) {
+  const [revealed, setRevealed] = useState(false);
+  return (
+    <div className="xm-scene-word">
+      <button
+        className={`xm-reveal-word${revealed ? " is-revealed" : ""}`}
+        onClick={() => setRevealed(!revealed)}
+        aria-expanded={revealed}
+        aria-label={
+          revealed
+            ? `${word.han}: ${word.english}. ${roman(word)}. IPA ${word.ipa}. Hide meaning`
+            : `Reveal meaning of ${word.han}. ${roman(word)}. IPA ${word.ipa}`
+        }
+      >
+        <b lang="zh-Hant">{word.han}</b>
+        <span>{roman(word)}</span>
+        <small className="xm-ipa">{word.ipa}</small>
+        {revealed ? (
+          <strong>{word.english}</strong>
+        ) : (
+          <span className="xm-reveal-hint">Show meaning</span>
+        )}
+      </button>
+      <button
+        className={`xm-save xm-scene-save${saved ? " is-saved" : ""}`}
+        onClick={onSave}
+        aria-label={`${saved ? "Unsave" : "Save"} ${word.han}`}
+        aria-pressed={saved}
+      >
+        <Bookmark size={16} fill={saved ? "currentColor" : "none"} />
+      </button>
+    </div>
+  );
+}
+
 function Overview({
   saved,
   toggle,
@@ -300,163 +340,90 @@ function Overview({
   toggle: (id: string) => void;
 }) {
   const navigate = useNavigate();
-  const hero =
-    xiamenPhotos.find((p) => p.id === "gulangyu-rooftops") ?? xiamenPhotos[0];
   const scenes = ["shacha-noodles", "dongyu-market", "gulangyu-coast"]
-    .map((id) => xiamenPhotos.find((p) => p.id === id))
-    .filter((p): p is Photo => Boolean(p));
-  const starters = ["茶", "水", "食", "飯", "好食", "人"]
-    .map((han) => xiamenWords.find((w) => w.han === han))
-    .filter((w): w is Word => Boolean(w));
+    .map((id) => xiamenPhotos.find((photo) => photo.id === id))
+    .filter((photo): photo is Photo => Boolean(photo));
+  const sceneTitles: Record<string, string> = {
+    "shacha-noodles": "Noodles",
+    "dongyu-market": "Market",
+    "gulangyu-coast": "Waterfront",
+  };
   return (
     <>
       <section className="xm-hero">
         <div className="xm-hero-copy">
-          <span className="xm-eyebrow">SOUTHERN MIN · QUANZHANG</span>
           <h1>
-            Xiamen<span lang="zh-Hant">廈門</span>
+            Xiamen <span lang="zh-Hant">廈門</span>
           </h1>
-          <p>
-            Learn Xiamen words for food, people,
-            <br />
-            and life by the sea.
-          </p>
-          <Link to={`${BASE}/words`} className="xm-button">
-            Learn your first words <ArrowRight size={17} />
-          </Link>
-          <div className="xm-hero-facts">
-            <span>
-              <b>{xiamenWords.length}</b>words & expressions
-            </span>
-            <span>
-              <b>{xiamenPhotos.length}</b>photographs
-            </span>
-            <span>
-              <b>IPA</b>with HanLingo spelling
-            </span>
-          </div>
         </div>
-        <figure className="xm-hero-photo">
-          <img
-            src={hero.src}
-            alt={hero.alt}
-            fetchPriority="high"
-            style={{ objectPosition: hero.position }}
-          />
-          <figcaption>
-            <span>
-              <MapPin size={13} /> {hero.caption}
-            </span>
-            <a href={hero.sourceUrl} target="_blank" rel="noreferrer">
-              {hero.author}
-            </a>
-            <a href={hero.licenseUrl} target="_blank" rel="noreferrer">
-              {hero.license}
-            </a>
-          </figcaption>
-        </figure>
-      </section>
-      <section className="xm-section">
-        <div className="xm-section-heading">
-          <div>
-            <span className="xm-eyebrow">01 / START HERE</span>
-            <h2>Six words for everyday life.</h2>
-          </div>
-          <Link to={`${BASE}/words`}>
-            All words <ArrowRight size={16} />
-          </Link>
-        </div>
-        <div className="xm-starters">
-          {starters.map((word) => (
-            <WordCard
-              key={word.id}
-              word={word}
-              saved={saved.includes(word.id)}
-              onSave={() => toggle(word.id)}
-            />
-          ))}
-        </div>
-        <NotationNote />
+        <Link to={`${BASE}/words`}>
+          All words <ArrowRight size={16} />
+        </Link>
       </section>
       <section className="xm-section xm-scenes">
-        <div className="xm-section-heading">
-          <div>
-            <span className="xm-eyebrow">02 / LANGUAGE IN CONTEXT</span>
-            <h2>See the place. Learn the words.</h2>
-          </div>
-          <Link to={`${BASE}/culture`}>
-            Photo stories <ArrowRight size={16} />
-          </Link>
-        </div>
+        <h2 className="sr-only">Photo vocabulary</h2>
         <div className="xm-scenes-grid">
-          {scenes.map((photo, i) => (
+          {scenes.map((photo) => (
             <article key={photo.id}>
               <Link
                 to={`${BASE}/culture?photo=${photo.id}`}
                 className="xm-scene-photo"
+                aria-label={`Open photograph: ${photo.caption}`}
               >
-                <img src={photo.src} alt={photo.alt} loading="lazy" />
-                <span>
-                  0{i + 1}
-                  <ArrowRight size={20} />
-                </span>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  style={{ objectPosition: photo.position }}
+                />
               </Link>
               <PhotoCredit photo={photo} />
-              <h3>
-                {i === 0
-                  ? "At the noodle shop"
-                  : i === 1
-                    ? "Through the market"
-                    : "By the water"}
-              </h3>
+              <h3>{sceneTitles[photo.id]}</h3>
               <div className="xm-scene-words">
                 {relatedWords(photo)
                   .slice(0, 3)
                   .map((word) => (
-                    <Link key={word.id} to={wordLink(word)}>
-                      <b lang="zh-Hant">{word.han}</b>
-                      <span>{word.english}</span>
-                    </Link>
+                    <SceneWord
+                      key={word.id}
+                      word={word}
+                      saved={saved.includes(word.id)}
+                      onSave={() => toggle(word.id)}
+                    />
                   ))}
               </div>
             </article>
           ))}
         </div>
-      </section>
-      <section className="xm-practice-callout">
-        <div>
-          <span className="xm-eyebrow">03 / TRY IT</span>
-          <h2>What do you remember?</h2>
-          <p>Six questions. Words, meanings, and pronunciation.</p>
+        <div className="xm-bottom-link">
+          <Link to={`${BASE}/practice`}>
+            Practice <ArrowRight size={16} />
+          </Link>
+          <Link to={`${BASE}/culture`}>
+            More photographs <ArrowRight size={16} />
+          </Link>
         </div>
-        <Link className="xm-button xm-button-light" to={`${BASE}/practice`}>
-          Start a short practice <ArrowRight size={17} />
-        </Link>
       </section>
       <section className="xm-section xm-location">
         <div>
-          <span className="xm-eyebrow">PLACE & LANGUAGE</span>
-          <h2>
-            One city.
-            <br />A local voice.
-          </h2>
+          <h2>Southern Min</h2>
           <p>
-            This lesson follows Xiamen’s urban Southern Min reference. Nearby
-            Quanzhou and Zhangzhou have their own varieties.
+            These readings follow urban Xiamen Southern Min. Quanzhou and
+            Zhangzhou have their own varieties.
           </p>
           <Link to="/languages/min/southern-min">
-            Explore Southern Min <ArrowRight size={15} />
+            Southern Min varieties <ArrowRight size={15} />
           </Link>
         </div>
         <AtlasMap
           compact
           points={mapPoints.filter(
-            (p) => p.groupId === "min" && p.subgroupId === "southern-min",
+            (point) =>
+              point.groupId === "min" && point.subgroupId === "southern-min",
           )}
           selectedGroup="min"
           selectedPoint="xiamen"
           onSelectPoint={(id) => {
-            const point = mapPoints.find((p) => p.id === id);
+            const point = mapPoints.find((item) => item.id === id);
             if (point && id !== "xiamen")
               navigate(`/languages/min/southern-min/${id}`);
           }}
@@ -495,11 +462,7 @@ function Vocabulary({
   );
   return (
     <div className="xm-inner">
-      <header className="xm-page-heading">
-        <span className="xm-eyebrow">XIAMEN / THE WORD COLLECTION</span>
-        <h1>Words you can use.</h1>
-        <p>Read the word. Follow the IPA. Save it for practice.</p>
-      </header>
+      <h1 className="sr-only">Xiamen words</h1>
       <div className="xm-word-tools">
         <div className="xm-search">
           <Search size={18} />
@@ -511,7 +474,7 @@ function Vocabulary({
             type="search"
             value={query}
             onChange={(e) => changeParam("q", e.target.value)}
-            placeholder="Find a word, meaning, or spelling…"
+            placeholder="Word, meaning, or spelling"
           />
           {query && (
             <button
@@ -528,7 +491,7 @@ function Vocabulary({
           onClick={() => setOnlySaved(!onlySaved)}
         >
           <Bookmark size={16} />
-          Saved ({saved.length})
+          Saved
         </button>
       </div>
       <div className="xm-filter-row" aria-label="Word categories">
@@ -541,11 +504,10 @@ function Vocabulary({
             {cat}
           </button>
         ))}
-        <span role="status">
-          {words.length} {words.length === 1 ? "entry" : "entries"}
+        <span className="sr-only" role="status">
+          {words.length} matching words
         </span>
       </div>
-      <NotationNote />
       <div className="xm-word-grid">
         {words.map((word) => (
           <WordCard
@@ -558,15 +520,9 @@ function Vocabulary({
       </div>
       {!words.length && (
         <div className="xm-empty">
-          <Bookmark size={30} />
           <h2>
             {onlySaved ? "No saved words in this view." : "No matching words."}
           </h2>
-          <p>
-            {onlySaved
-              ? "Use the bookmark on any word to collect it here."
-              : "Try an English meaning or a Chinese character."}
-          </p>
           <button
             className="xm-button"
             onClick={() => {
@@ -580,9 +536,8 @@ function Vocabulary({
         </div>
       )}
       <div className="xm-bottom-link">
-        <span>Ready to test your memory?</span>
         <Link to={`${BASE}/practice`}>
-          Open practice <ArrowRight size={16} />
+          Practice <ArrowRight size={16} />
         </Link>
       </div>
     </div>
@@ -622,7 +577,6 @@ function PhotoDialog({
       </button>
       <img src={photo.src} alt={photo.alt} />
       <div className="xm-dialog-content">
-        <span className="xm-eyebrow">{photo.category} · XIAMEN</span>
         <h2 id="xm-dialog-title">{note.title}</h2>
         <p>{note.text}</p>
         <div className="xm-photo-words">
@@ -646,7 +600,7 @@ function PhotoDialog({
           target="_blank"
           rel="noreferrer"
         >
-          Read the cultural source · {note.sourceName}
+          {note.sourceName}
         </a>
       </div>
     </dialog>
@@ -661,14 +615,7 @@ function Culture() {
   );
   return (
     <div className="xm-inner">
-      <header className="xm-page-heading">
-        <span className="xm-eyebrow">XIAMEN / CULTURE IN PHOTOGRAPHS</span>
-        <h1>A place, in everyday details.</h1>
-        <p>
-          Food, streets, and life by the water. Open a photograph to learn its
-          words.
-        </p>
-      </header>
+      <h1 className="sr-only">Xiamen photographs</h1>
       <div className="xm-filter-row">
         {["All photographs", "Food", "Streets", "Sea", "Culture"].map((cat) => (
           <button
@@ -679,7 +626,6 @@ function Culture() {
             {cat}
           </button>
         ))}
-        <span>{filtered.length} photographs</span>
       </div>
       <div className="xm-photo-grid">
         {filtered.map((photo, i) => (
@@ -697,7 +643,6 @@ function Culture() {
               <span className="xm-photo-expand">
                 <Expand size={17} />
               </span>
-              <span className="xm-photo-category">{photo.category}</span>
             </button>
             <PhotoCredit photo={photo} />
             <div className="xm-gallery-words">
@@ -719,8 +664,7 @@ function Culture() {
         ))}
       </div>
       <div className="xm-culture-note">
-        <span className="xm-eyebrow">LOOK CLOSELY</span>
-        <h2>Architecture carries connections.</h2>
+        <h2>Gulangyu architecture</h2>
         <p>{seaNote.text}</p>
         <a href={seaNote.source} target="_blank" rel="noreferrer">
           UNESCO · Kulangsu <ArrowRight size={15} />
@@ -778,15 +722,10 @@ function Sounds() {
   const [combined, setCombined] = useState(false);
   return (
     <div className="xm-inner">
-      <header className="xm-page-heading">
-        <span className="xm-eyebrow">XIAMEN / PRONUNCIATION</span>
-        <h1>Read the sound.</h1>
-        <p>Follow the pitch. Keep aspiration, vowels, and endings distinct.</p>
-      </header>
+      <h1 className="sr-only">Xiamen sounds</h1>
       <section className="xm-tone-lesson">
         <div>
-          <span className="xm-eyebrow">01 / THE PITCH OF A SYLLABLE</span>
-          <h2>Seven reference tones.</h2>
+          <h2>Tones</h2>
           <p>
             The numbers describe pitch height. <b>24</b> starts low and rises;{" "}
             <b>53</b> falls from high to middle. Short checked tones end in a
@@ -832,8 +771,7 @@ function Sounds() {
       </section>
       <section className="xm-sandhi">
         <div>
-          <span className="xm-eyebrow">02 / WHEN WORDS JOIN</span>
-          <h2>The first tone changes.</h2>
+          <h2>Tone changes</h2>
           <p>
             In this example, the first syllable changes from <b>44 to 22</b>.
             The last keeps its citation tone.
@@ -869,17 +807,12 @@ function Sounds() {
       <section className="xm-section">
         <div className="xm-section-heading">
           <div>
-            <span className="xm-eyebrow">03 / OUR SPELLING KEY</span>
-            <h2>One sound, one assignment.</h2>
+            <h2>Spelling key</h2>
           </div>
           <Link to="/romanization">
-            Full workbench <ArrowRight size={16} />
+            Romanization <ArrowRight size={16} />
           </Link>
         </div>
-        <p className="xm-small-intro">
-          Accepted pairs sit alongside explicitly marked trial extensions. IPA
-          remains visible on every word.
-        </p>
         <div className="xm-key-grid">
           {xiamenSpellingKey
             .filter((r) => r.ipa !== "ŋ̩")
@@ -893,7 +826,6 @@ function Sounds() {
               </div>
             ))}
         </div>
-        <NotationNote />
       </section>
     </div>
   );
@@ -946,40 +878,23 @@ function Practice({
   };
   return (
     <div className="xm-inner xm-practice">
-      <header className="xm-page-heading">
-        <span className="xm-eyebrow">XIAMEN / A LITTLE PRACTICE</span>
-        <h1>Make the words yours.</h1>
-        <p>
-          Match a meaning to its word. IPA and trial HanLingo spellings appear
-          with each answer.
-        </p>
-      </header>
+      <h1 className="sr-only">Xiamen practice</h1>
       {!current && !finished ? (
         <section className="xm-practice-start">
-          <div className="xm-practice-symbol" lang="zh-Hant">
-            學
-          </div>
-          <h2>
-            {pool.length >= 4
-              ? `A ${Math.min(6, pool.length)}-word check.`
-              : "Your saved-word practice."}
-          </h2>
-          <p>
-            {learned.length} of {xiamenWords.length} words answered correctly so
-            far.
-          </p>
+          <h2>Match words to meanings</h2>
+          <p>{learned.length} words answered correctly</p>
           <div className="xm-switch">
             <button
               aria-pressed={mode === "all"}
               onClick={() => setMode("all")}
             >
-              All words ({xiamenWords.length})
+              All words
             </button>
             <button
               aria-pressed={mode === "saved"}
               onClick={() => setMode("saved")}
             >
-              Saved words ({saved.length})
+              Saved words
             </button>
           </div>
           {pool.length >= 4 ? (
@@ -989,7 +904,7 @@ function Practice({
           ) : (
             <p>
               Save at least four words for this practice.{" "}
-              <Link to={`${BASE}/words`}>Choose some words.</Link>
+              <Link to={`${BASE}/words`}>Browse words</Link>
             </p>
           )}
           <small>Progress is saved in this browser.</small>
@@ -1000,12 +915,7 @@ function Practice({
             {correct.length}
             <span>/ {round.length}</span>
           </div>
-          <h2>
-            {correct.length === round.length
-              ? "Every word remembered."
-              : "Keep the useful words close."}
-          </h2>
-          <p>{correct.length} correct in this round.</p>
+          <h2>Results</h2>
           <div className="xm-review-list">
             {round.map(({ answer: word }) => (
               <div key={word.id}>
@@ -1027,24 +937,24 @@ function Practice({
             ))}
           </div>
           <button className="xm-button" onClick={start}>
-            Try another set <RotateCcw size={15} />
+            New round <RotateCcw size={15} />
           </button>
         </section>
       ) : (
         <section className="xm-quiz">
           <div className="xm-quiz-progress">
             <span>
-              QUESTION {index + 1} / {round.length}
+              Question {index + 1} / {round.length}
             </span>
             <span>{correct.length} correct</span>
           </div>
           <div className="xm-progress-track">
             <span style={{ width: `${(index / round.length) * 100}%` }} />
           </div>
-          <p className="xm-quiz-prompt">Which word means…</p>
-          <h2>{current.answer.english}?</h2>
+          <p className="xm-quiz-prompt">Choose the word for</p>
+          <h2>{current.answer.english}</h2>
           <div className="xm-answer-grid">
-            {current.options.map((word, i) => (
+            {current.options.map((word) => (
               <button
                 key={word.id}
                 disabled={answer !== null}
@@ -1059,7 +969,6 @@ function Practice({
                 }
                 onClick={() => choose(word.id)}
               >
-                <span className="xm-answer-number">0{i + 1}</span>
                 <b lang="zh-Hant">{word.han}</b>
                 <span>{roman(word)}</span>
               </button>
@@ -1070,7 +979,7 @@ function Practice({
               <div>
                 <strong>
                   {answer === current.answer.id
-                    ? "That’s right."
+                    ? "Correct"
                     : "The word is " + current.answer.han + "."}
                 </strong>
                 <p>
@@ -1109,18 +1018,9 @@ export default function XiamenPage() {
   }, [pathname]);
   return (
     <div className="xm-page">
-      <div className="xm-breadcrumb">
-        <Link to="/languages">The languages</Link>
-        <ChevronRight size={11} />
-        <Link to="/languages/min">Min</Link>
-        <ChevronRight size={11} />
-        <Link to="/languages/min/southern-min">Southern Min</Link>
-        <ChevronRight size={11} />
-        <span>Quanzhang · Xiamen</span>
-      </div>
       <div className="xm-chapter-nav">
-        <Link to={BASE} className="xm-chapter-name">
-          <span lang="zh-Hant">廈</span>Xiamen<small>LOCAL CHAPTER 01</small>
+        <Link to="/languages/min" className="xm-min-link">
+          <ArrowLeft size={15} /> Min
         </Link>
         <nav aria-label="Xiamen learning sections">
           {[
@@ -1183,13 +1083,7 @@ export default function XiamenPage() {
           }
         />
       </Routes>
-      <div className="xm-chapter-footer">
-        <span>XIAMEN · SOUTHERN MIN</span>
-        <span>Present-day reference · IPA on every word</span>
-        <Link to="/languages/min/southern-min">
-          Back to the family <ArrowRight size={14} />
-        </Link>
-      </div>
+      <NotationNote />
     </div>
   );
 }

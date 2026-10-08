@@ -85,12 +85,6 @@
 .group-book-content {
   padding: 21px 23px 20px;
 }
-.book-number {
-  font-size: 8px;
-  letter-spacing: 1.7px;
-  font-weight: 600;
-  color: #7f8a75;
-}
 .group-book h3 {
   display: flex;
   align-items: center;
@@ -139,10 +133,6 @@
   background: #eeeede;
   isolation: isolate;
   min-height: 370px;
-}
-.written-book > .book-number {
-  margin-bottom: auto;
-  z-index: 1;
 }
 .written-book h3 {
   font-size: 38px;
@@ -656,13 +646,6 @@
   max-width: 570px;
   line-height: 1.9;
 }
-.written-hero-glyph {
-  font-family: "Songti SC", serif;
-  font-size: 200px;
-  color: #c6cfb4;
-  line-height: 1;
-  margin-right: 30px;
-}
 .written-page-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -820,10 +803,6 @@
   .written-page-hero h1 {
     font-size: 60px;
   }
-  .written-hero-glyph {
-    font-size: 170px;
-    margin-right: 0;
-  }
   .written-page-grid {
     gap: 45px;
     padding: 35px 38px 50px;
@@ -980,9 +959,6 @@
   .written-page-hero h1 {
     font-size: 50px;
   }
-  .written-hero-glyph {
-    font-size: 140px;
-  }
   .written-page-grid {
     padding: 30px 25px 45px;
     gap: 28px;
@@ -1055,9 +1031,6 @@
     font-size: 10px;
     margin-top: 18px;
     padding-top: 14px;
-  }
-  .book-number {
-    font-size: 9px;
   }
   .group-book-glyph {
     font-size: 37px;
@@ -1295,14 +1268,6 @@
   .written-page-hero p {
     font-size: 12px;
     max-width: 310px;
-  }
-  .written-hero-glyph {
-    position: absolute;
-    z-index: -1;
-    right: 13px;
-    top: 40px;
-    font-size: 150px;
-    opacity: 0.25;
   }
   .written-page-grid {
     padding: 28px 22px 40px;

@@ -2,6 +2,8 @@ import { Suspense, lazy, useLayoutEffect, useState } from "react";
 import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import { ArrowRight, Github, Menu, X } from "lucide-react";
 import HomePage from "./pages/HomePage";
+import BrandMark from "./components/BrandMark";
+import MinPage from "./pages/MinPage";
 import { resolveReferenceRoute } from "./routing";
 import "./pages/pages.css";
 const LibraryPage = lazy(() => import("./pages/LibraryPage"));
@@ -16,7 +18,7 @@ function PageLocation() {
   const { pathname, hash } = useLocation();
   useLayoutEffect(() => {
     const names: Record<string, string> = {
-      "/": "A shared script. A world of voices.",
+      "/": "Min",
       "/languages": "The language library",
       "/compare": "A letter home",
       "/romanization": "Romanization workbench",
@@ -44,18 +46,9 @@ function PageLocation() {
 function NotFound() {
   return (
     <section className="not-found-page">
-      <div className="eyebrow">PAGE NOT FOUND</div>
-      <h1>
-        A different path
-        <br />
-        <em>through the atlas.</em>
-      </h1>
-      <p>
-        This address does not match a chapter. The language library connects
-        every group, subgroup, and local variety in this edition.
-      </p>
+      <h1>Page not found</h1>
       <Link to="/languages" className="primary-button">
-        Open the language library <ArrowRight size={17} />
+        Browse languages <ArrowRight size={17} />
       </Link>
     </section>
   );
@@ -76,28 +69,24 @@ export default function App() {
           aria-label="HanLingo home"
           onClick={closeMenu}
         >
-          <span className="brand-seal" lang="zh">
-            言
-          </span>
-          <span>
-            HanLingo<span className="brand-period">.</span>
-          </span>
+          <BrandMark size={34} />
+          <span>HanLingo</span>
         </Link>
         <nav
           className={menuOpen ? "main-nav is-open" : "main-nav"}
           aria-label="Main navigation"
         >
-          <NavLink to="/languages" onClick={closeMenu}>
-            The languages
+          <NavLink to="/languages/min" onClick={closeMenu}>
+            Min
+          </NavLink>
+          <NavLink to="/languages" end onClick={closeMenu}>
+            Languages
           </NavLink>
           <NavLink to="/compare" onClick={closeMenu}>
             Reading room
           </NavLink>
           <NavLink to="/romanization" onClick={closeMenu}>
             Romanization
-          </NavLink>
-          <NavLink to="/about" onClick={closeMenu}>
-            About
           </NavLink>
         </nav>
         <a
@@ -108,7 +97,7 @@ export default function App() {
           rel="noreferrer"
         >
           <Github size={17} />
-          <span>Open project</span>
+          <span>GitHub</span>
         </a>
         <button
           className="menu-toggle"
@@ -123,13 +112,14 @@ export default function App() {
         <Suspense
           fallback={
             <div className="chapter-loading" role="status">
-              Opening the chapter…
+              Loading
             </div>
           }
         >
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/languages" element={<LibraryPage />} />
+            <Route path="/languages/min" element={<MinPage />} />
             <Route
               path="/languages/min/southern-min/xiamen/*"
               element={<XiamenPage />}
@@ -153,17 +143,10 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <Link className="brand" to="/">
-          <span className="brand-seal" lang="zh">
-            言
-          </span>
-          <span>
-            HanLingo<span className="brand-period">.</span>
-          </span>
+          <BrandMark size={34} />
+          <span>HanLingo</span>
         </Link>
-        <p>Connected by roots. Distinct in every voice.</p>
-        <Link to="/about">
-          Sources & the project <ArrowRight size={15} />
-        </Link>
+        <Link to="/about">Sources & about</Link>
       </footer>
     </>
   );

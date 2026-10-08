@@ -94,16 +94,7 @@ export default function LibraryPage() {
       </div>
       <header className="library-intro">
         <div>
-          <div className="eyebrow">AN OPEN REFERENCE TO SINITIC</div>
-          <h1>
-            Choose a language.
-            <br />
-            <em>Follow your curiosity.</em>
-          </h1>
-          <p>
-            There is more to every name on the map. Explore the groups, regional
-            branches, and local varieties that make up this first collection.
-          </p>
+          <h1>Languages</h1>
         </div>
         <div className="library-counts">
           <span>
@@ -124,12 +115,8 @@ export default function LibraryPage() {
       <section className="library-index" aria-labelledby="directory-title">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">FIND A CHAPTER</div>
-            <h2 id="directory-title">The complete index.</h2>
+            <h2 id="directory-title">Directory</h2>
           </div>
-          <span className="index-description">
-            Every entry has its own page.
-          </span>
         </div>
         <div className="directory-tools">
           <div className="library-search">

@@ -40,7 +40,7 @@ export default function RomanizationPage() {
       <div className="page-breadcrumb">
         <Link to="/">Home</Link>
         <span>/</span>
-        <span>Romanization workbench</span>
+        <span>Romanization</span>
       </div>
       <section
         className="approach-section"
@@ -48,34 +48,20 @@ export default function RomanizationPage() {
         aria-labelledby="approach-title"
       >
         <div className="approach-intro">
-          <div className="eyebrow">03 / A COMMON WAY TO SEE SOUND</div>
-          <h1 id="approach-title">
-            Different voices.
-            <br />
-            <em>Precise notation.</em>
-          </h1>
-          <p>
-            Our starting rule is direct: the same sound gets the same spelling,
-            across varieties. Every phonetic reference uses IPA; the shared
-            romanization follows those distinctions.
-          </p>
+          <h1 id="approach-title">Romanization</h1>
           <a
             className="text-link"
             href="https://www.internationalphoneticassociation.org/content/ipa-chart"
             target="_blank"
             rel="noreferrer"
           >
-            Meet the IPA <ArrowRight size={15} />
+            IPA chart <ArrowRight size={15} />
           </a>
         </div>
         <div className="sound-lab">
           <div className="sound-lab-heading">
-            <span className="mini-label">ROMANIZATION WORKBENCH</span>
-            <span className="draft-tag">A proposal in progress</span>
+            <h2>p, ph, b</h2>
           </div>
-          <p className="sound-lab-description">
-            One sound distinction. One consistent spelling.
-          </p>
           <div
             className="sound-tabs"
             role="tablist"
@@ -122,10 +108,10 @@ export default function RomanizationPage() {
             <p>{sound.description}</p>
             <div className="sound-properties">
               <span>
-                ASPIRATION <strong>{sound.air}</strong>
+                Aspiration <strong>{sound.air}</strong>
               </span>
               <span>
-                VOICING <strong>{sound.voice}</strong>
+                Voicing <strong>{sound.voice}</strong>
               </span>
             </div>
           </div>
@@ -140,16 +126,11 @@ export default function RomanizationPage() {
 
       <section className="romanization-decisions">
         <div>
-          <div className="eyebrow">AGREED FOUNDATIONS</div>
-          <h2>
-            Sound first.
-            <br />
-            <em>Consistent everywhere.</em>
-          </h2>
+          <h2>Shared notation</h2>
           <p>
-            HanLingo’s shared system follows pronunciation. It does not force a
-            shared character or related words to keep the same spelling when
-            their sounds differ.
+            The same sound receives the same spelling across varieties. Shared
+            characters and related words can have different spellings when their
+            sounds differ.
           </p>
         </div>
         <div className="decision-table">
@@ -180,10 +161,8 @@ export default function RomanizationPage() {
       <section className="working-alphabet">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">THE WORKING RULES</div>
-            <h2>Make every distinction count.</h2>
+            <h2>Spelling rules</h2>
           </div>
-          <span className="draft-tag">The inventory is still growing</span>
         </div>
         <div className="alphabet-table-scroll">
           <table>
@@ -233,9 +212,7 @@ export default function RomanizationPage() {
         </div>
         <div className="word-study">
           <div>
-            <span className="mini-label">
-              WORKED EXAMPLE · XIAMEN
-            </span>
+            <span>Xiamen</span>
             <span className="example-han" lang="zh-Hant">
               茶 · tea
             </span>
@@ -246,7 +223,7 @@ export default function RomanizationPage() {
             The Xiamen word for tea pairs the sounds <b>[te]</b> with a rising
             citation tone <b>[˨˦]</b>, written <b>24</b>.{" "}
             <Link to="/languages/min/southern-min/xiamen/words?q=茶">
-              See the word and its source.
+              Word source
             </Link>
           </p>
         </div>
@@ -280,12 +257,10 @@ export default function RomanizationPage() {
         </div>
       </section>
       <section className="method-principles">
-        <div className="eyebrow">THE DESIGN BRIEF</div>
-        <h2>A framework that can travel.</h2>
+        <h2>Design principles</h2>
         <div className="principles-grid">
           <article>
-            <span>01</span>
-            <h3>Keep sound and spelling distinct.</h3>
+            <h3>Sound and spelling</h3>
             <p>
               IPA is our reference for pronunciation. Romanization is a
               practical writing system whose spellings need a clear, explicit
@@ -293,17 +268,14 @@ export default function RomanizationPage() {
             </p>
           </article>
           <article>
-            <span>02</span>
-            <h3>Respect each local variety.</h3>
+            <h3>Local varieties</h3>
             <p>
-              A system shared across Sinitic does not need to erase local
-              differences. Each entry needs a named variety, and distinctions
-              should remain visible where speakers use them.
+              Each entry names its variety and preserves the sound distinctions
+              used by its speakers.
             </p>
           </article>
           <article>
-            <span>03</span>
-            <h3>Build the rules together.</h3>
+            <h3>Unfinished rules</h3>
             <p>
               The first rules cover p / ph / b, ch / chh, ts / tsh, â, and
               pitch-contour suffixes. The remaining consonants, vowels, syllable
@@ -312,12 +284,11 @@ export default function RomanizationPage() {
           </article>
         </div>
         <div className="method-open">
-          <h3>Open design questions</h3>
+          <h3>Open questions</h3>
           <p>
-            How should connected-speech tone changes be shown? How should we
-            distinguish [s], [ɕ], and [ʂ]? How do we mark syllable boundaries
-            and predictable phonetic details? The workbench records decisions as
-            the system develops.
+            Unresolved choices include connected-speech tone changes, spellings
+            for [s], [ɕ], and [ʂ], syllable boundaries, and the level of
+            phonetic detail to represent.
           </p>
         </div>
       </section>

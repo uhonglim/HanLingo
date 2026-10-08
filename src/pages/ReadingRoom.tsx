@@ -60,7 +60,7 @@ export default function ReadingRoom() {
           </span>
         </div>
         <div className="letter-place">
-          <span>{isFormal ? "WRITTEN REFERENCE" : "LOCAL VOICE"}</span>
+          <span>{isFormal ? "Written reference" : "Spoken reference"}</span>
           {letter.place}
         </div>
         <div className="letter-body" lang="zh-Hant">
@@ -72,7 +72,7 @@ export default function ReadingRoom() {
         </div>
         {translation && (
           <div className="translation">
-            <span>SHARED MEANING · ENGLISH</span>
+            <span>English meaning</span>
             <p>Mom,</p>
             <p>
               I’ve been here for a week. I’m eating and sleeping well, so don’t
@@ -108,7 +108,7 @@ export default function ReadingRoom() {
       <div className="page-breadcrumb">
         <Link to="/">Home</Link>
         <span>/</span>
-        <span>The reading room</span>
+        <span>Letter comparison</span>
       </div>
       <section
         className="comparison-section"
@@ -117,19 +117,10 @@ export default function ReadingRoom() {
       >
         <div className="section-heading">
           <div>
-            <div className="eyebrow">02 / SAME THOUGHT, DIFFERENT WORDS</div>
-            <h1 id="compare-title">A letter home.</h1>
+            <h1 id="compare-title">Letter comparison</h1>
           </div>
-          <p>
-            One small letter. Five local voices. <br />
-            The same care, expressed differently.
-          </p>
         </div>
         <div className="comparison-toolbar">
-          <span>
-            <span className="tiny-line" /> “I’m doing well. Don’t worry about
-            me.”
-          </span>
           <label className="translation-toggle">
             <input
               type="checkbox"
@@ -145,38 +136,29 @@ export default function ReadingRoom() {
           {renderLetter(rightLetter, "right")}
         </div>
         <div className="comparison-bottom">
-          <p>
-            Choose any two voices above, or compare with Modern Standard Written
-            Chinese.
-          </p>
           <button
             className="text-link"
             onClick={() => setFullLetter(!fullLetter)}
             aria-expanded={fullLetter}
           >
-            {fullLetter ? "Show opening only" : "Read the full letter"}
+            {fullLetter ? "Show opening only" : "Show full letter"}
             <ChevronDown size={16} className={fullLetter ? "rotate" : ""} />
           </button>
         </div>
         <div className="written-note">
-          <span className="written-glyph" lang="zh-Hant">
-            文
-          </span>
           <div>
-            <h3>A shared written language, a different layer.</h3>
+            <h3>Modern Standard Written Chinese</h3>
             <p>
               Modern Standard Written Chinese provides a formal written
               reference. It is closely tied to Mandarin, but it does not stand
-              for the everyday speech of every Sinitic community. Select it
-              above to see the shift in wording and register.
+              for the everyday speech of every Sinitic community.
             </p>
           </div>
         </div>
       </section>
 
       <section className="comparison-words">
-        <div className="eyebrow">LOOK CLOSER</div>
-        <h2>The words that carry the feeling.</h2>
+        <h2>Expressions in the letters</h2>
         <p>
           Compare written expressions in the supplied letters. These are
           contextual examples, not pronunciation guides or a complete
@@ -227,7 +209,7 @@ export default function ReadingRoom() {
           phonetic transcriptions will be added only with local-speaker review.
         </p>
         <Link to="/written-chinese" className="text-link">
-          Explore the written reference <ArrowRight size={16} />
+          Written Chinese reference <ArrowRight size={16} />
         </Link>
       </section>
     </div>

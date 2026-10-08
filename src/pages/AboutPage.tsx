@@ -8,31 +8,17 @@ export default function AboutPage() {
       <div className="page-breadcrumb">
         <Link to="/">Home</Link>
         <span>/</span>
-        <span>About the atlas</span>
+        <span>About</span>
       </div>
       <header className="page-intro">
-        <div className="eyebrow">HOW WE BUILD HANLINGO</div>
-        <h1>
-          An atlas with
-          <br />
-          <em>room to grow.</em>
-        </h1>
-        <p>
-          Language lives in people, places, and everyday words. HanLingo
-          connects them through a growing, English-language reference to the
-          Sinitic languages.
-        </p>
+        <h1>About HanLingo</h1>
       </header>
       <section className="editorial-notes" aria-label="About this edition">
-        <div className="edition-number">
-          FIELD NOTES <span>NO. 001</span>
-        </div>
         <div>
-          <h3>Start with place. Make room for time.</h3>
+          <h3>Scope</h3>
           <p>
-            This first edition explores present-day varieties. A future
-            historical layer will need dated, place-specific evidence—so that
-            “Hakka 200 years ago” becomes a documented story, not a guess.
+            This edition covers present-day varieties. Historical comparisons
+            require dated, place-specific evidence.
           </p>
         </div>
         <button
@@ -51,7 +37,7 @@ export default function AboutPage() {
           id="source-list"
           aria-label="Sources and editorial notes"
         >
-          <h3>Built to be explored. Open to correction.</h3>
+          <h3>Sources and method</h3>
           <p>
             The atlas is an educational selection. Language and dialect labels
             reflect different scholarly and community traditions; the tree is a
@@ -67,7 +53,7 @@ export default function AboutPage() {
               >
                 Academia Sinica · Min language resource guide
               </a>{" "}
-              — Min, Southern Min, Quanzhang, and local varieties.
+              · Min, Southern Min, Quanzhang, and local varieties.
             </li>
             <li>
               <a
@@ -78,7 +64,7 @@ export default function AboutPage() {
                 Journal of the International Phonetic Association · Zhongjiang
                 Chinese
               </a>{" "}
-              — Southwestern Mandarin, with comparison to Chengdu.
+              · Southwestern Mandarin, with comparison to Chengdu.
             </li>
             <li>
               <a
@@ -88,7 +74,7 @@ export default function AboutPage() {
               >
                 International Phonetic Association · Official IPA chart
               </a>{" "}
-              — the reference for phonetic symbols.
+              · Reference for phonetic symbols.
             </li>
             <li>
               <a
@@ -98,7 +84,7 @@ export default function AboutPage() {
               >
                 Natural Earth
               </a>{" "}
-              — public-domain basemap, distributed by World Atlas.
+              · Public-domain basemap, distributed by World Atlas.
             </li>
           </ul>
           <p>
@@ -119,16 +105,11 @@ export default function AboutPage() {
         </section>
       )}
       <section className="about-photo-note">
-        <h2>People, places, and photographs.</h2>
+        <h2>Photographs</h2>
         <p>
           Photographs show documented settings, activities, and communities. A
           photograph cannot establish what language a person speaks. Every
           photograph carries its original source, creator, and reuse license.
-        </p>
-        <p>
-          Every group, subgroup, and local-variety page has its own address.
-          Maps show representative places; the articles explain why a city name
-          is not a claim that everyone there speaks the same way.
         </p>
       </section>
     </div>

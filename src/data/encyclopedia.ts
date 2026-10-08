@@ -1,3 +1,4 @@
+import { minSources } from "./min-sources";
 import type { LanguageId } from "./languages";
 
 export type ArticleSection = { heading: string; paragraphs: string[] };
@@ -88,18 +89,9 @@ const S = {
     "Ping Chen: Modern Chinese, Dialect writing",
     "https://www.cambridge.org/core/books/abs/modern-chinese/dialect-writing/F9D387397BA417BD49B98FD63B540F67",
   ),
-  minGuide: source(
-    "Academia Sinica: Min database guide",
-    "https://xiaoxue.iis.sinica.edu.tw/Minyu/Content/Files/minyu-Get_Started.pdf",
-  ),
-  minIntro: source(
-    "Hsiao: The Sound Patterns of Taiwanese Southern Min, introduction",
-    "https://assets.cambridge.org/97810096/54272/excerpt/9781009654272_excerpt.pdf",
-  ),
-  minCodas: source(
-    "Wu and Lin: Historical analysis of Min consonant endings",
-    "https://www.ling.sinica.edu.tw/upload/researcher_manager_result/80f9788d396d35b0e8c32ebd19416ac5.pdf",
-  ),
+  minGuide: minSources[1],
+  minIntro: minSources[0],
+  minCodas: minSources[2],
   minNorth: source(
     "Wu: Proto-Min rhyme reconstruction and strata",
     "https://www.ling.sinica.edu.tw/upload/researcher_manager_result/c37535b570fa1f44797850580f9ef3ba.pdf",

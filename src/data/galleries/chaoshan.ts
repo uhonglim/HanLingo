@@ -28,7 +28,7 @@ export const chaoshanGalleries: Record<string, GalleryPhoto[]> = {
       alt: "A pavilion on Guangji Bridge — Teochew, Guangdong.",
       caption:
         "A pavilion on Guangji Bridge — Teochew, Guangdong. Resized and converted to WebP.",
-      author: "See below",
+      author: "Agatha Qiu at English Wikipedia",
       license: "CC BY-SA 3.0",
       licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
       sourceUrl:
@@ -127,8 +127,7 @@ export const chaoshanGalleries: Record<string, GalleryPhoto[]> = {
       alt: "Sunrise over the Han River — Teochew, Guangdong.",
       caption:
         "Sunrise over the Han River — Teochew, Guangdong. Resized and converted to WebP.",
-      author:
-        "No machine-readable author provided. Hongtiezhu assumed (based on copyright claims).",
+      author: "Hongtiezhu — attributed by Commons",
       license: "Public domain",
       licenseUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
       sourceUrl:

@@ -37,6 +37,7 @@ describe("locality photo collections", () => {
           expect(text.trim().length, `${place}: ${photo.id}`).toBeGreaterThan(
             0,
           );
+        expect(photo.author).not.toMatch(/^(?:See below|No machine-readable)/i);
         expect(photo.sourceUrl).toMatch(/^https:\/\//);
         expect(photo.licenseUrl).toMatch(/^https:\/\//);
       }

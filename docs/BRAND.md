@@ -1,28 +1,21 @@
-# HanLingo mark
+# HanLingo identity
 
-The mark is an original flat vector H made from two facing strokes. Their open ends suggest a conversation or the edges of an open book. A diagonal seam keeps both strokes distinct while their shared silhouette reads as one initial. The two shapes have rotational symmetry, with opposing angled terminals.
+Two interlocking speech forms make the symbol. Their open crossbar, rounded outline, and single speech tail connect the mark to conversation. The cobalt symbol is paired with an outlined, tightly spaced HanLingo wordmark in near-black.
 
-The mark replaces the generic Chinese-character seal. It contains no character, enclosing square, gradient, texture, or raster image. Use it with the sans-serif **HanLingo** wordmark.
+## Production assets
 
-## Assets
+- `public/hanlingo-logo.svg`: complete horizontal lockup. Lettering is outlined, so the export does not depend on installed fonts.
+- `public/hanlingo-mark.svg`: standalone symbol and current favicon.
+- `public/favicon.svg`: matching compatibility favicon.
+- `src/components/BrandMark.tsx`: `currentColor` React symbol with optional `size` and accessible `title` props.
+- `scripts/build-brand.py`: rebuilds the exported SVG files using fontTools and the bundled DM Sans semibold font. DM Sans license is retained in `public/fonts/DM-Sans-LICENSE.txt`.
 
-- `src/components/BrandMark.tsx`: React SVG component. Named and default exports are available. It inherits `currentColor`.
-- `public/hanlingo-mark.svg`: the same geometry in cobalt `#2155f5`, suitable for the favicon and standalone use.
+The header and footer use the full lockup. Versioned URLs refresh older cached logos. Keep the mark in one flat color, with clear space around it; do not add a seal, shadow, texture, or gradient.
 
-The shared viewBox is `0 0 32 32`; the drawing occupies the central 24 × 24 area. The diagonal separation remains open at a 24-pixel component size. Keep the two paths, their proportions, and their separation intact. Use cobalt on white or a single contrasting color; white on cobalt is also suitable. Do not put the mark back into a decorative square seal.
+## Design process
 
-## Component API
+The visual concept was generated with the built-in `image_gen` tool, with transparency enabled. Its unmodified output is retained at `docs/design/hanlingo-logo-concept.png`. The production mark was then redrawn as clean vector paths, and the wordmark was constructed from outlined DM Sans glyphs. The website uses those SVG files, not the generated raster.
 
-```tsx
-import BrandMark from './components/BrandMark'
+## Generation prompt
 
-// Decorative beside visible text; hidden from assistive technology by default.
-<BrandMark size={32} className="brand-mark" />
-
-// A meaningful standalone mark has its own accessible name.
-<BrandMark size={24} title="HanLingo" style={{ color: '#2155f5' }} />
-```
-
-`size` accepts a number or CSS size string and defaults to 32. Standard SVG props, including `className`, `style`, and accessible labels, are accepted. Supplying `title` creates a unique title ID for each component instance. No animation or fixed background is included.
-
-The favicon URL is `/hanlingo-mark.svg`. Application integration and the HTML icon link are owned by the site layout.
+Use case: logo-brand. Create one final professional logo for HanLingo, a serious but welcoming website for learning the Han languages and their regional cultures. Horizontal lockup on a genuinely transparent background. Exact wordmark text: HanLingo (H-a-n-L-i-n-g-o), dark near-black #172128, custom tasteful humanist sans lettering, open counters, beautifully balanced kerning, medium semibold, not a stock rounded app font. To the left, a distinctive compact cobalt #2155F5 symbol: two interlocking rounded speech forms that create a clear white/transparent H in the negative space, with one subtle speech tail. The silhouette should feel like a small flowing woven knot or two voices meeting, not a square stamp. Design mastery: disciplined geometry, generous negative space inside the mark, beautiful optical balance, one flat color, recognizable at 24px. Icon about 1.25 times the cap height, horizontal gap about half icon width. Only the symbol and HanLingo lettering, one single logo. NO Chinese character, no 言 or 語, no slogan, no annotations, no variations, no mockup, no frame, no texture, no gradient, no shadows, no 3D. Tightly frame the full horizontal lockup in a wide canvas with only a modest clear margin. Premium contemporary independent language journal identity, confident and unusually well crafted. Produce crisp clean edges suitable for use as an actual website logo.

@@ -313,3 +313,17 @@ h3 em {
     font-size: 36px;
   }
 }
+
+.brand .brand-lockup {
+  display: block;
+  width: 178px;
+  height: auto;
+}
+.site-footer .brand .brand-lockup {
+  width: 146px;
+}
+@media (max-width: 700px) {
+  .brand .brand-lockup {
+    width: 164px;
+  }
+}

@@ -2,7 +2,6 @@ import { Suspense, lazy, useLayoutEffect, useState } from "react";
 import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import { ArrowRight, Github, Menu, X } from "lucide-react";
 import HomePage from "./pages/HomePage";
-import BrandMark from "./components/BrandMark";
 import MinPage from "./pages/MinPage";
 import { resolveReferenceRoute } from "./routing";
 import "./pages/pages.css";
@@ -69,8 +68,13 @@ export default function App() {
           aria-label="HanLingo home"
           onClick={closeMenu}
         >
-          <BrandMark size={34} />
-          <span>HanLingo</span>
+          <img
+            className="brand-lockup"
+            src="/hanlingo-logo.svg?v=2"
+            alt="HanLingo"
+            width="178"
+            height="38"
+          />
         </Link>
         <nav
           className={menuOpen ? "main-nav is-open" : "main-nav"}
@@ -143,8 +147,13 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <Link className="brand" to="/">
-          <BrandMark size={34} />
-          <span>HanLingo</span>
+          <img
+            className="brand-lockup"
+            src="/hanlingo-logo.svg?v=2"
+            alt="HanLingo"
+            width="178"
+            height="38"
+          />
         </Link>
         <Link to="/about">Sources & about</Link>
       </footer>

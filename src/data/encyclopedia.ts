@@ -235,7 +235,7 @@ const S = {
   ),
   taishan: source(
     "Teresa M. Cheng: The phonology of Taishan",
-    "https://www.cuhk.edu.hk/journal/jcl/jcl/chin_lin/1/1_2_5.html",
+    "https://www.jstor.org/stable/23749797",
   ),
   yulin: source(
     "Hu: Kinship terminology in Yulin and Cantonese",

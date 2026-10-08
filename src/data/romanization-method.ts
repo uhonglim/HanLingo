@@ -28,7 +28,12 @@ export type ConversionSyllable = {
 
 /** A bounded spelling demonstrator, not a pronunciation or sandhi generator. */
 export function convertIpa(input: string): ConversionSyllable[] {
-  let text = input.trim();
+  let text = input
+    .trim()
+    .replace(
+      /[¹²³⁴⁵]/gu,
+      (digit) => ({ "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5" })[digit]!,
+    );
   if (
     (text.startsWith("[") && text.endsWith("]")) ||
     (text.startsWith("/") && text.endsWith("/"))
@@ -51,7 +56,7 @@ export function convertIpa(input: string): ConversionSyllable[] {
           symbol,
       )
       .join("");
-    const segment = match[1].replaceAll("t͡ɕ", "tɕ");
+    const segment = match[1].replaceAll("t͡ɕ", "tɕ").replaceAll("ts", "t͡s");
     let rest = segment.normalize("NFD");
     const steps: SpellingRule[] = [];
     while (rest) {

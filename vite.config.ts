@@ -7,6 +7,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "atlas-geography": ["./src/data/east-asia-50m.json"],
         },
       },
     },

@@ -1,3 +1,6 @@
+import { branchLearning } from "../data/learning";
+import { mapPoints } from "../data/languages";
+import { placeLabel } from "../data/language-names";
 import { siteTerms, readingLabels } from "../data/site-terms";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
@@ -36,11 +39,39 @@ const marks = [
 ];
 const sharedLetters = "a d e f g h i j k l m n o r s t u w y";
 
+const readingExamples = [
+  ...xiamenWords.map((word) => ({
+    id: `xiamen:${word.id}`,
+    han: word.han,
+    english: word.english,
+    ipa: word.ipa,
+    locality: "Amoy",
+    reading: readingLabels[word.readingMode],
+    sourceUrl: word.sourceUrl,
+    note: word.note,
+  })),
+  ...branchLearning
+    .flatMap((pack) => pack.words)
+    .filter((word) => word.toneNotation === "pitch-contour")
+    .map((word) => ({
+      id: `${word.localityId}:${word.id}`,
+      han: word.han,
+      english: word.english,
+      ipa: word.ipa,
+      locality: placeLabel(
+        mapPoints.find((point) => point.id === word.localityId)!,
+      ),
+      reading: word.reading,
+      sourceUrl: word.source.url,
+      note: word.note,
+    })),
+];
+
 export default function RomanizationPage() {
   const [input, setInput] = useState("[te˨˦]");
-  const [wordId, setWordId] = useState("tea");
+  const [wordId, setWordId] = useState("xiamen:tea");
   const [query, setQuery] = useState("");
-  const selectedWord = xiamenWords.find((word) => word.id === wordId);
+  const selectedWord = readingExamples.find((word) => word.id === wordId);
   const conversion = useMemo(() => {
     try {
       return { syllables: convertIpa(input), error: "" };
@@ -59,7 +90,7 @@ export default function RomanizationPage() {
   );
   const loadWord = (id: string) => {
     setWordId(id);
-    const word = xiamenWords.find((item) => item.id === id);
+    const word = readingExamples.find((item) => item.id === id);
     if (word) {
       setInput(word.ipa);
     }
@@ -70,8 +101,8 @@ export default function RomanizationPage() {
         <h1>HanLingo romanization</h1>
         <p>
           Shared sound-to-spelling rules for Han languages, with each locality’s
-          pronunciation and pitch preserved. The current implementation covers
-          Amoy.
+          pronunciation and pitch preserved. Attested readings keep their source
+          IPA; unsupported sounds remain unresolved.
         </p>
         <div className="roman-core" aria-label="Agreed stop consonants">
           {[
@@ -100,14 +131,14 @@ export default function RomanizationPage() {
               <div className="roman-input-heading">
                 <label htmlFor="roman-ipa">IPA with tones</label>
                 <select
-                  aria-label="Load an Amoy word"
+                  aria-label="Load a sourced reading"
                   value={wordId}
                   onChange={(event) => loadWord(event.target.value)}
                 >
                   <option value="">Custom IPA</option>
-                  {xiamenWords.map((word) => (
+                  {readingExamples.map((word) => (
                     <option key={word.id} value={word.id}>
-                      {word.han} · {word.english}
+                      {word.locality} · {word.han} · {word.english}
                     </option>
                   ))}
                 </select>
@@ -181,8 +212,8 @@ export default function RomanizationPage() {
             <div className="roman-word-source">
               <strong lang="zh-Hant">{selectedWord.han}</strong>
               <span>
-                {selectedWord.english} · Amoy ·{" "}
-                {readingLabels[selectedWord.readingMode]}
+                {selectedWord.english} · {selectedWord.locality} ·{" "}
+                {selectedWord.reading}
               </span>
               <a href={selectedWord.sourceUrl} target="_blank" rel="noreferrer">
                 Reading source
@@ -385,9 +416,10 @@ export default function RomanizationPage() {
           <div>
             <h3>Working material</h3>
             <p>
-              {xiamenWords.length} Amoy words use the same conversion code as
-              this page. Their broad dictionary IPA, source readings, and
-              citation or connected-speech status remain attached to each word.
+              {readingExamples.length} sourced readings are available above.
+              Supported IPA uses the same spelling rules across localities.
+              Source readings and citation or connected-speech qualifications
+              stay attached to each word.
             </p>
             <Link to="/min/southern-min/xiamen/words">Amoy words</Link>
           </div>

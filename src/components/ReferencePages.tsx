@@ -1,3 +1,5 @@
+import { getBranchLearning, getLocalLearning } from "../data/learning";
+import BranchLearning from "./BranchLearning";
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -64,11 +66,19 @@ export default function ReferencePage() {
     ) ?? [];
   const localCluster =
     point && point.hierarchy.length > 4 ? point.hierarchy[3] : undefined;
-  const photo = point
-    ? minCommunityPhotos[point.id]
-    : group && route?.level === "group"
-      ? groupPhotos[group.id]
+  const learningPhoto = point
+    ? getLocalLearning(point).culture.find((item) => item.photo)?.photo
+    : group && subgroup
+      ? getBranchLearning(group.id, subgroup.id)?.culture.find(
+          (item) => item.photo,
+        )?.photo
       : undefined;
+  const photo =
+    (point
+      ? minCommunityPhotos[point.id]
+      : group && route?.level === "group"
+        ? groupPhotos[group.id]
+        : undefined) ?? learningPhoto;
   const localLetter =
     point && ["xiamen", "guangzhou", "meixian", "shanghai"].includes(point.id)
       ? letters.find((letter) => letter.id === point.groupId)
@@ -111,7 +121,7 @@ export default function ReferencePage() {
             className={`reference-entry-header${photo ? " has-photo" : ""}`}
           >
             <div className="reference-title-row">
-              <h1>{entry.title}</h1>
+              <h1>{point ? placeLabel(point) : entry.title}</h1>
               <span className="reference-native-title" lang="zh-Hant">
                 {point?.nativeName ?? subgroup?.nativeName ?? group.nativeName}
               </span>
@@ -157,18 +167,28 @@ export default function ReferencePage() {
             </figure>
           )}
 
-          <div className="reference-reading-layout">
-            <div className="reference-prose">
-              {entry.sections.map((section, index) => (
-                <section key={section.heading} id={`entry-section-${index}`}>
-                  <h2>{section.heading}</h2>
-                  {section.paragraphs.map((paragraph, paragraphIndex) => (
-                    <p key={paragraphIndex}>{paragraph}</p>
-                  ))}
-                </section>
-              ))}
+          <BranchLearning
+            groupId={group.id}
+            subgroupId={subgroup?.id}
+            point={point}
+            heroPhotoSrc={photo?.src}
+          />
+
+          <details className="reference-language-notes">
+            <summary>Language notes</summary>
+            <div className="reference-reading-layout">
+              <div className="reference-prose">
+                {entry.sections.map((section, index) => (
+                  <section key={section.heading} id={`entry-section-${index}`}>
+                    <h2>{section.heading}</h2>
+                    {section.paragraphs.map((paragraph, paragraphIndex) => (
+                      <p key={paragraphIndex}>{paragraph}</p>
+                    ))}
+                  </section>
+                ))}
+              </div>
             </div>
-          </div>
+          </details>
 
           {!point && (
             <section className="reference-explore" id="reference-explore">

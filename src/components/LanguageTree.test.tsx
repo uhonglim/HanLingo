@@ -1,3 +1,4 @@
+import { availableSections } from "../data/learning";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -162,7 +163,8 @@ describe("persistent language tree", () => {
       });
       expect(route, `Invalid language hierarchy: ${href}`).not.toBeNull();
       if (lesson) {
-        expect(route?.point?.id).toBe("xiamen");
+        expect(route?.point).toBeDefined();
+        expect(availableSections(route!.point!)).toContain(lesson);
         expect(lessons).toContain(lesson);
       }
     }

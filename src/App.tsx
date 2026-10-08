@@ -18,6 +18,7 @@ import "./pages/pages.css";
 const TreeHomePage = lazy(() => import("./pages/TreeHomePage"));
 import LanguageTree from "./components/LanguageTree";
 const ReferencePage = lazy(() => import("./components/ReferencePages"));
+const LocalLearningPage = lazy(() => import("./pages/LocalLearningPage"));
 const ReadingRoom = lazy(() => import("./pages/ReadingRoom"));
 const RomanizationPage = lazy(() => import("./pages/RomanizationPage"));
 const WrittenChinesePage = lazy(() => import("./pages/WrittenChinesePage"));
@@ -243,6 +244,10 @@ export default function App() {
                 <Route
                   path="/:languageId/:subgroupId/:varietyId"
                   element={<ReferencePage />}
+                />
+                <Route
+                  path="/:languageId/:subgroupId/:varietyId/:chapter"
+                  element={<LocalLearningPage />}
                 />
                 <Route path="/compare" element={<ReadingRoom />} />
                 <Route path="/romanization" element={<RomanizationPage />} />

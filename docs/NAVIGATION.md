@@ -26,3 +26,9 @@ Southern Min also contains the **Teo Swa** cluster, with Teochew and Swatow loca
 The three shared destinations are always visible in the top bar, including on mobile. The tree is the only persistent hierarchical navigator; breadcrumbs retain the requested ancestry. The homepage gives a compact overview of the five featured groups and an Amoy sample. Min uses a single map with branch and locality selectors, rather than a second locality directory. Its selected place opens through the existing article link.
 
 Reference articles use simple content rows for child summaries and end at their sources. Do not append a second related-links directory or repeat the site navigation in a footer. Learning pages retain only controls that operate the current lesson; avoid duplicate overview buttons pointing to destinations already in the tree. The romanization workshop uses its one word selector instead of duplicate sample buttons.
+
+## Shared locality learning
+
+Every mapped locality outside Southern Min now uses the same conditional learning structure as Amoy. `src/data/learning/index.ts` supplies the available child destinations to the tree, route validation, and breadcrumbs. Words and Practice require attested readings; Photos requires a credited photograph; Sounds uses sourced pronunciation notes. Do not create empty chapters to make the tree appear fuller.
+
+Locality headings use the same display name as their tree node. Branch and locality articles lead with a credited photo, word previews where available, culture, and primary learning resources. Longer prose stays under Language notes; maps and classification references remain intact.

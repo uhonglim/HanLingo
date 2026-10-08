@@ -1,3 +1,4 @@
+import { availableSections, learningSections } from "../data/learning";
 import { siteTerms } from "../data/site-terms";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Search, X } from "lucide-react";
@@ -94,26 +95,17 @@ function buildTree(): TreeNode {
             aliases: [point.name, aliases[point.id], communityAliases[point.id]]
               .filter(Boolean)
               .join(" "),
-            ...(point.id === "xiamen"
-              ? {
-                  children: [
-                    ["/words", siteTerms.sections.words],
-                    ["/culture", siteTerms.sections.photos],
-                    ["/sounds", siteTerms.sections.sounds],
-                    ["/practice", siteTerms.sections.practice],
-                  ].map(([suffix, name]) => ({
-                    id: `xiamen/${suffix}`,
-                    name,
-                    href: varietyPath(point) + suffix,
-                    aliases:
-                      suffix === "/culture"
-                        ? "culture gallery pictures photographs"
-                        : suffix === "/sounds"
-                          ? "sounds pronunciation gallery"
-                          : undefined,
-                  })),
-                }
-              : {}),
+            children: availableSections(point).map((section) => ({
+              id: `${point.id}/${section}`,
+              name: learningSections[section],
+              href: `${varietyPath(point)}/${section}`,
+              aliases:
+                section === "culture"
+                  ? "culture gallery pictures photographs"
+                  : section === "sounds"
+                    ? "IPA tones pronunciation"
+                    : undefined,
+            })),
           });
         }
         return {

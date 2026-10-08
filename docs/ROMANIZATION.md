@@ -24,7 +24,7 @@ Status: decisions recorded on 2026-10-09. This is a design record, not a complet
 
 Xiamen **茶**, “tea,” is displayed as **[te˨˦]**, with the working spelling **te24**. The suffix `24` records a rise from pitch level 2 to level 4; it is not a lexical tone-category number. This is the dictionary-based citation reading documented in [the Xiamen source notes](XIAMEN-LANGUAGE-SOURCES.md) and the per-entry source in `src/data/xiamen-lexicon.ts`.
 
-No general Han-character transliteration, text-to-speech pronunciation, or final cross-Sinitic spelling table follows from this record yet. The Xiamen prototype below converts only its explicitly sourced IPA.
+No general Han-character transliteration, text-to-speech pronunciation, or final cross-Sinitic spelling table follows from this record yet. Lesson spellings derive from their source IPA; extending the collection does not finalize the unresolved mappings.
 
 ## Xiamen learning prototype
 
@@ -32,8 +32,8 @@ The 35-entry collection shows source-based Xiamen IPA alongside trial HanLingo s
 
 ## Public IPA workshop
 
-`/romanization` now brings the decisions, the complete explicit working key, retained IPA letters and marks, tone contours, and source examples together. It loads all 35 Amoy entries and accepts custom, space-separated syllables with either IPA tone letters or pitch digits. Each syllable displays its sound-by-sound conversion and decision status.
+`/romanization` now brings the decisions, the complete explicit working key, retained IPA letters and marks, tone contours, and source examples together. It loads 35 Amoy entries plus 98 sourced readings from other localities and accepts custom, space-separated syllables with IPA tone letters or ordinary/superscript pitch digits. Each syllable displays its sound-by-sound conversion and decision status.
 
-The public parser in `src/data/romanization-method.ts` validates a bounded set of symbols, then uses the same `romanizeXiamen` conversion as the learning pages. It accepts tied `[t͡ɕ]` as an input variant of `[tɕ]`. Missing contours and unsupported symbols produce an error, not a guessed reading. This spelling demo does not validate phonotactics, infer pronunciation from characters, apply sandhi, or promise an unambiguous reverse conversion. Digraphs and consonant sequences still require a boundary policy.
+The public parser in `src/data/romanization-method.ts` validates a bounded set of symbols, then uses the same `romanizeXiamen` conversion as the learning pages. It accepts tied `[t͡ɕ]` as an input variant of `[tɕ]`, and tied or untied `[t͡sʰ]` / `[tsʰ]` for the same documented alveolar affricate. New dataset words must explicitly declare pitch-contour notation before conversion; source tone-category digits are never silently treated as pitch. Missing contours and unsupported symbols produce an error, not a guessed reading. This spelling demo does not validate phonotactics, infer pronunciation from characters, apply sandhi, or promise an unambiguous reverse conversion. Digraphs and consonant sequences still require a boundary policy.
 
 The documented Amoy example `hui44 ki44 → hui22 ki44` comes from [Ge & Mok 2024, example 1](https://ling.cuhk.edu.hk/people/peggy/SP2024_GeMok_Phonotactics.pdf). The page distinguishes the source's citation and connected forms. IPA descriptions use the [official IPA chart](https://www.internationalphoneticassociation.org/content/ipa-chart); the explanation of tone-category numbers uses the [published Jyutping scheme](https://jyutping.org/en/jyutping/).

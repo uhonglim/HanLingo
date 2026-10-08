@@ -677,3 +677,7 @@
     font-size: 32px;
   }
 }
+
+.reference-language-notes { margin: 0 0 36px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.reference-language-notes > summary { padding: 20px 0; font-size: 18px; font-weight: 600; cursor: pointer; }
+.reference-language-notes[open] > summary { margin-bottom: 12px; }

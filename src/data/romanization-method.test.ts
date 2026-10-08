@@ -21,6 +21,8 @@ describe("public IPA spelling demonstrator", () => {
   });
   it("handles both tone notations, canonical Unicode, and tied palatal affricates", () => {
     expect(convertIpa("[t͡sʰa˨˩]")[0].spelling).toBe("tsha21");
+    expect(convertIpa("[tsʰa11]")[0].spelling).toBe("tsha11");
+    expect(convertIpa("[tsʰa¹¹]")[0].spelling).toBe("tsha11");
     expect(convertIpa("/t͡ɕʰi35/")[0].spelling).toBe("chhi35");
     expect(convertIpa("mi\u030322")[0].spelling).toBe("mĩ22");
     expect(convertIpa("pŋ̩22")[0].spelling).toBe("png̍22");

@@ -1,3 +1,4 @@
+import { availableSections, learningSections } from "./data/learning";
 import { siteTerms } from "./data/site-terms";
 import {
   groupPath,
@@ -16,13 +17,6 @@ const pages: Record<string, string> = {
   "/written-chinese": siteTerms.writtenChinese,
   "/about": siteTerms.about,
 };
-const xiamenSections: Record<string, string> = {
-  words: siteTerms.sections.words,
-  culture: siteTerms.sections.photos,
-  sounds: siteTerms.sections.sounds,
-  practice: siteTerms.sections.practice,
-};
-
 /** Derive navigation from validated taxonomy, never from arbitrary URL segments. */
 export function getBreadcrumbs(pathname: string): Breadcrumb[] {
   const path = pathname.replace(/\/$/, "") || "/";
@@ -36,7 +30,11 @@ export function getBreadcrumbs(pathname: string): Breadcrumb[] {
   });
   if (
     !route ||
-    (parts[3] && (route.point?.id !== "xiamen" || !xiamenSections[parts[3]]))
+    (parts[3] &&
+      (!route.point ||
+        !availableSections(route.point).some(
+          (section) => section === parts[3],
+        )))
   ) {
     return [
       { label: siteTerms.home, path: "/" },
@@ -57,6 +55,10 @@ export function getBreadcrumbs(pathname: string): Breadcrumb[] {
       label: placeLabel(route.point),
       path: varietyPath(route.point),
     });
-  if (parts[3]) crumbs.push({ label: xiamenSections[parts[3]], path });
+  if (parts[3])
+    crumbs.push({
+      label: learningSections[parts[3] as keyof typeof learningSections],
+      path,
+    });
   return crumbs;
 }

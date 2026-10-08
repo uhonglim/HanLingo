@@ -25,7 +25,9 @@ npm run preview
 
 ## Explore the site
 
-- Start learning in the [Xiamen chapter](http://127.0.0.1:5173/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Culture, Sounds, and Practice pages.
+- Start learning in the [Xiamen chapter](http://127.0.0.1:5173/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Photos, IPA & tones, and Practice pages.
+- Filter photographs by subject or related vocabulary, open full images, and browse with the arrow keys. Photo details include cultural context, credits, and words with IPA and trial spelling.
+- Explore **27 attested IPA symbols and seven reference tone contours**. Selecting a sound or tone highlights it in matching sourced words; the collection is not a complete Xiamen sound inventory.
 - Search or save words, follow photographs to related vocabulary, explore pitch contours and a tone-sandhi example, and complete short practice rounds. Saved words and learning progress stay in this browser.
 - The homepage is the Han family tree. Open a group, then its subgroup and locality; the same tree stays in place as the adjacent content changes. The Min map remains available at `/min`.
 - Follow a map point to a dedicated local article, or pan and zoom to compare reference places.

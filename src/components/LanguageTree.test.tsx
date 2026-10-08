@@ -54,13 +54,13 @@ describe("persistent language tree", () => {
     expect(current[0].attrs.href).toBe("/");
   });
 
-  it("opens every ancestor and marks only Culture current on a direct lesson URL", () => {
+  it("opens every ancestor and marks only Photos current on a direct gallery URL", () => {
     const path = `${xiamenPath}/culture`;
     const html = renderTree(path);
     const current = links(html).filter(link => link.attrs["aria-current"] === "page");
     expect(current).toHaveLength(1);
     expect(current[0].attrs.href).toBe(path);
-    expect(current[0].content).toContain("Culture");
+    expect(current[0].content).toContain("Photos");
     for (const name of ["Han / Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Xiamen"])
       expectExpanded(html, name);
 
@@ -88,7 +88,7 @@ describe("persistent language tree", () => {
 
     for (const href of destinations) {
       expect(href).not.toMatch(/^\/languages(?:\/|$)/);
-      if (href === "/") continue;
+      if (["/", "/written-chinese", "/about"].includes(href)) continue;
       const [languageId, subgroupId, varietyId, lesson, ...extra] = href.split("/").filter(Boolean);
       expect(extra).toHaveLength(0);
       const route = resolveReferenceRoute({ languageId, subgroupId, varietyId });
@@ -98,5 +98,24 @@ describe("persistent language tree", () => {
         expect(lessons).toContain(lesson);
       }
     }
+  });
+
+  it("keeps written Chinese and sources outside the spoken-family hierarchy", () => {
+    const html = renderTree("/");
+    const referenceList = html.slice(html.indexOf('class="language-tree-reference-links"'));
+    expect(referenceList).toContain('aria-label="Reference pages"');
+    expect(links(referenceList).map(link => link.attrs.href)).toEqual(["/written-chinese", "/about"]);
+    for (const path of ["/written-chinese", "/about#source-list"]) {
+      const current = links(renderTree(path)).filter(link => link.attrs["aria-current"] === "page");
+      expect(current).toHaveLength(1);
+      expect(current[0].attrs.href).toBe(path.split("#")[0]);
+    }
+  });
+
+  it("labels the IPA gallery without changing its canonical lesson route", () => {
+    const current = links(renderTree(`${xiamenPath}/sounds`)).filter(link => link.attrs["aria-current"] === "page");
+    expect(current).toHaveLength(1);
+    expect(current[0].content).toContain("IPA &amp; tones");
+    expect(current[0].attrs.href).toBe(`${xiamenPath}/sounds`);
   });
 });

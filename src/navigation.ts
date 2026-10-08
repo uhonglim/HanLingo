@@ -6,7 +6,7 @@ const pages: Record<string, string> = {
   '/written-chinese': 'Written Chinese', '/about': 'About',
 };
 const xiamenSections: Record<string, string> = {
-  words: 'Words', culture: 'Culture', sounds: 'Sounds', practice: 'Practice',
+  words: 'Words', culture: 'Photos', sounds: 'IPA & tones', practice: 'Practice',
 };
 
 /** Derive navigation from validated taxonomy, never from arbitrary URL segments. */

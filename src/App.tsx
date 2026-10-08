@@ -15,12 +15,38 @@ const AboutPage = lazy(() => import("./pages/AboutPage"));
 const XiamenPage = lazy(() => import("./pages/XiamenPage"));
 
 const scrollPositions = new Map<string, number>();
+type ScrollLocation = { pathname: string; search: string; hash: string };
+
+export function getPageScrollPlan(
+  previous: ScrollLocation | null,
+  next: ScrollLocation,
+  navigationType: "POP" | "PUSH" | "REPLACE",
+  savedTop?: number,
+) {
+  if (navigationType === "POP" && savedTop !== undefined) {
+    return { kind: "position" as const, top: savedTop };
+  }
+  if (next.hash && (!previous || previous.pathname !== next.pathname || previous.hash !== next.hash || previous.search === next.search)) {
+    let id = next.hash.slice(1);
+    try { id = decodeURIComponent(id); } catch { /* Keep malformed fragments literal. */ }
+    return { kind: "anchor" as const, id };
+  }
+  if (previous?.pathname === next.pathname && (!next.hash || previous.hash === next.hash)) {
+    return { kind: "preserve" as const };
+  }
+  return { kind: "position" as const, top: 0 };
+}
+
 function PageLocation() {
   const location = useLocation();
   const navigationType = useNavigationType();
-  const previous = useRef(location);
+  const previous = useRef<ScrollLocation | null>(null);
   useEffect(() => {
-    window.history.scrollRestoration = 'manual';
+    const originalRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+    return () => { window.history.scrollRestoration = originalRestoration; };
+  }, []);
+  useEffect(() => {
     const remember = () => scrollPositions.set(location.key, document.getElementById("page-panel")?.scrollTop ?? 0);
     const panel = document.getElementById('page-panel');
     panel?.addEventListener('scroll', remember, { passive: true });
@@ -31,11 +57,25 @@ function PageLocation() {
     document.title = `${crumbs.at(-1)?.label ?? 'HanLingo'} · HanLingo`;
     const old = previous.current;
     previous.current = location;
-    if (old.pathname === location.pathname && old.search !== location.search) return;
-    const target = navigationType === 'POP' ? scrollPositions.get(location.key) ?? 0 : 0;
+    const panel = document.getElementById("page-panel");
+    if (!panel) return;
+    const plan = getPageScrollPlan(old, location, navigationType, scrollPositions.get(location.key));
+    if (plan.kind === "preserve") {
+      scrollPositions.set(location.key, panel.scrollTop);
+      return;
+    }
     const frame = requestAnimationFrame(() => {
-      if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
-      else document.getElementById('page-panel')?.scrollTo({ top: target, behavior: 'instant' });
+      let top = plan.kind === "position" ? plan.top : 0;
+      if (plan.kind === "anchor") {
+        const target = document.getElementById(plan.id);
+        if (target && panel.contains(target)) {
+          const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+          const padding = parseFloat(getComputedStyle(panel).scrollPaddingTop) || 0;
+          top = panel.scrollTop + target.getBoundingClientRect().top - panel.getBoundingClientRect().top - margin - padding;
+        }
+      }
+      panel.scrollTo({ top: Math.max(0, top), behavior: "instant" });
+      scrollPositions.set(location.key, panel.scrollTop);
     });
     return () => cancelAnimationFrame(frame);
   }, [location, navigationType]);
@@ -69,6 +109,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
   const closeMenu = () => setMenuOpen(false);
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
   return (
     <>
       <a className="skip-link" href="#main">

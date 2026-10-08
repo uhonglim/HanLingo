@@ -24,6 +24,7 @@
 .language-tree-navigation { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c6ceda transparent; padding: 0 10px 24px; }
 .language-tree ul { list-style: none; }
 .language-tree-root { margin: 0; padding: 0; }
+.language-tree-reference-links { margin: 16px 0 0; padding: 12px 0 0; border-top: 1px solid #e4e8ee; }
 .language-tree-item { position: relative; margin: 0; padding: 0; }
 .language-tree-children { margin: 0 0 0 11px; padding: 0 0 0 9px; border-left: 1px solid #dce2eb; }
 .language-tree-children[hidden] { display: none; }

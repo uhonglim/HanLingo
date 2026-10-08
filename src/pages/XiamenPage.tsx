@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Link,
   Route,
@@ -12,33 +12,26 @@ import {
   Bookmark,
   Check,
   ChevronRight,
-  Expand,
   RotateCcw,
   Search,
   X,
 } from "lucide-react";
 import { xiamenWords } from "../data/xiamen-lexicon";
+import { filterXiamenWords, vocabularyCategories as categories } from "../data/xiamen-vocabulary";
 import { xiamenPhotos } from "../data/xiamen-photos";
 import {
   makeQuiz,
-  pitchLetters,
   romanizeXiamen,
-  xiamenSpellingKey,
 } from "../data/xiamen-romanization";
 import AtlasMap from "../components/AtlasMap";
 import { mapPoints } from "../data/languages";
 import "./XiamenPage.css";
+import CultureGallery, { photoWords as relatedWords } from "./xiamen/CultureGallery";
+import IpaGallery from "./xiamen/IpaGallery";
 
 const BASE = "/min/southern-min/xiamen";
 type Word = (typeof xiamenWords)[number];
 type Photo = (typeof xiamenPhotos)[number];
-const categories = [
-  "All words",
-  "Food & drink",
-  "People & actions",
-  "Around town",
-  "Numbers",
-];
 const roman = (word: Word) => romanizeXiamen(word.segments, word.tones);
 const wordLink = (word: Word) =>
   `${BASE}/words?q=${encodeURIComponent(word.han)}`;
@@ -177,115 +170,6 @@ function NotationNote() {
       </div>
     </details>
   );
-}
-
-const culturalNotes: Record<
-  string,
-  {
-    title: string;
-    text: string;
-    source: string;
-    sourceName: string;
-    words: string[];
-  }
-> = {
-  "shacha-noodles": {
-    title: "A bowl of shacha noodles",
-    text: "Shacha noodles use a satay-style soup. Xiamen’s dining guide lists sesame, garlic, peanut oil, shrimp sauce, and chili among the seasoning ingredients.",
-    source: "https://www.investxiamen.org.cn/detail/169.html",
-    sourceName: "Xiamen dining guide",
-    words: ["食", "麵", "水", "好食"],
-  },
-  "fried-vermicelli": {
-    title: "Rice, noodles, and the table",
-    text: "Fried rice vermicelli served in Xiamen. 米 refers to uncooked rice; 飯 refers to cooked rice or a meal.",
-    source:
-      "https://commons.wikimedia.org/wiki/File:Fried_Rice_vermicelli_Xiamen.jpg",
-    sourceName: "Photograph record",
-    words: ["米", "飯", "麵"],
-  },
-  "nanputuo-temple": {
-    title: "Nanputuo, a working monastery",
-    text: "Nanputuo is a Buddhist monastery. Its volunteers arrange flower offerings, prepare ceremonies, and guide visitors.",
-    source:
-      "https://en.nanputuo.com/buddhism/Buddhisattva.aspx?articleid=71998",
-    sourceName: "Nanputuo Temple",
-    words: ["人", "來", "去"],
-  },
-};
-const seaNote = {
-  title: "Across the water to Gulangyu",
-  text: "Gulangyu’s buildings combine southern Fujian traditions with influences carried through overseas connections. UNESCO calls the island’s distinctive architectural synthesis “Amoy Deco.”",
-  source: "https://whc.unesco.org/en/list/1541",
-  sourceName: "UNESCO · Kulangsu",
-  words: ["海", "船", "水", "厝"],
-};
-const pictureNotes: Record<
-  string,
-  { title: string; text: string; words: string[] }
-> = {
-  "dongyu-market": {
-    title: "At a Dongyu market",
-    text: "A street market in Dongyu, Haicang District. The words alongside this photograph follow the urban Xiamen reference.",
-    words: ["菜", "買", "錢", "人"],
-  },
-  "shellfish-stall": {
-    title: "Shellfish at the shopfront",
-    text: "Basins of shellfish outside a Gulangyu shop.",
-    words: ["買", "錢", "食", "好食"],
-  },
-  "gulangyu-lane": {
-    title: "A lane through Gulangyu",
-    text: "A shaded lane between buildings on Gulangyu. 街 means “street”; 厝 means “house” or “home.”",
-    words: ["街", "厝", "人"],
-  },
-  "xiamen-ferry": {
-    title: "A ferry on the harbor",
-    text: "The Yuanhe ferry photographed west of Gulangyu in 2012. 船 means “boat” or “ship”; 海 means “sea.”",
-    words: ["船", "海", "水"],
-  },
-  "gulangyu-coast": {
-    title: "At the water’s edge",
-    text: "Gulangyu’s waterfront. 海, “sea,” and 水, “water,” both have the falling citation tone 53.",
-    words: ["海", "水", "船"],
-  },
-  "shuzhuang-garden": {
-    title: "A bridge at Shuzhuang Garden",
-    text: "A visitor with a red umbrella crosses a bridge at Shuzhuang Garden.",
-    words: ["人", "水", "來", "去"],
-  },
-  "shop-counter": {
-    title: "Across the counter",
-    text: "Jars, boxes, and small packages surround a worker at a shop counter in Xiamen. The photograph does not identify the worker’s language.",
-    words: ["人", "買", "錢"],
-  },
-};
-function photoNote(photo: Photo) {
-  return (
-    culturalNotes[photo.id] ??
-    (pictureNotes[photo.id]
-      ? {
-          ...pictureNotes[photo.id],
-          source: photo.sourceUrl,
-          sourceName: "Photograph record",
-        }
-      : seaNote)
-  );
-}
-function relatedWords(photo: Photo) {
-  const wanted = photoNote(photo).words;
-  const exact = wanted
-    .map((han) => xiamenWords.find((word) => word.han === han))
-    .filter((word): word is Word => Boolean(word));
-  return exact.length
-    ? exact
-    : xiamenWords
-        .filter(
-          (w) =>
-            w.category ===
-            (photo.category === "Food" ? "Food & drink" : "Around town"),
-        )
-        .slice(0, 3);
 }
 
 function SceneWord({
@@ -441,7 +325,8 @@ function Vocabulary({
 }) {
   const [params, setParams] = useSearchParams();
   const query = params.get("q") ?? "";
-  const [category, setCategory] = useState("All words");
+  const requestedCategory = params.get("category") ?? "All words";
+  const category = categories.includes(requestedCategory) ? requestedCategory : "All words";
   const onlySaved = params.get("saved") === "1";
   const changeParam = (key: string, value: string) => {
     const next = new URLSearchParams(params);
@@ -451,17 +336,15 @@ function Vocabulary({
   };
   const setOnlySaved = (value: boolean) =>
     changeParam("saved", value ? "1" : "");
-  const words = xiamenWords.filter(
-    (word) =>
-      (category === "All words" || word.category === category) &&
-      (!onlySaved || saved.includes(word.id)) &&
-      `${word.han} ${word.english} ${roman(word)} ${word.ipa}`
-        .toLowerCase()
-        .includes(query.trim().toLowerCase()),
-  );
+  const words = filterXiamenWords(query, category, onlySaved, saved);
+  const setCategory = (value: string) => changeParam("category", value === "All words" ? "" : value);
+  const hasFilters = Boolean(query || onlySaved || category !== "All words");
   return (
     <div className="xm-inner">
-      <h1 className="sr-only">Xiamen words</h1>
+      <header className="xm-page-heading">
+        <div><h1>Xiamen words</h1><p role="status">{words.length} of {xiamenWords.length} words{onlySaved ? " · saved" : ""}</p></div>
+        {hasFilters && <button className="xm-clear-view" onClick={() => setParams({}, { replace: true })}>Show all words</button>}
+      </header>
       <div className="xm-word-tools">
         <div className="xm-search">
           <Search size={18} />
@@ -503,9 +386,7 @@ function Vocabulary({
             {cat}
           </button>
         ))}
-        <span className="sr-only" role="status">
-          {words.length} matching words
-        </span>
+
       </div>
       <div className="xm-word-grid">
         {words.map((word) => (
@@ -522,298 +403,8 @@ function Vocabulary({
           <h2>
             {onlySaved ? "No saved words in this view." : "No matching words."}
           </h2>
-          <button
-            className="xm-button"
-            onClick={() => {
-              setOnlySaved(false);
-              setCategory("All words");
-              setParams({});
-            }}
-          >
-            Show all words
-          </button>
         </div>
       )}
-    </div>
-  );
-}
-
-function PhotoDialog({
-  photo,
-  onClose,
-}: {
-  photo: Photo;
-  onClose: () => void;
-}) {
-  const ref = useRef<HTMLDialogElement>(null);
-  useEffect(() => {
-    const dialog = ref.current;
-    dialog?.showModal();
-    return () => dialog?.close();
-  }, []);
-  const note = photoNote(photo);
-  return (
-    <dialog
-      ref={ref}
-      className="xm-photo-dialog"
-      onCancel={onClose}
-      onClick={(e) => {
-        if (e.target === ref.current) onClose();
-      }}
-      aria-labelledby="xm-dialog-title"
-    >
-      <button
-        className="xm-dialog-close"
-        aria-label="Close photograph"
-        onClick={onClose}
-      >
-        <X size={22} />
-      </button>
-      <img src={photo.src} alt={photo.alt} />
-      <div className="xm-dialog-content">
-        <h2 id="xm-dialog-title">{note.title}</h2>
-        <p>{note.text}</p>
-        <div className="xm-photo-words">
-          {relatedWords(photo).map((word) => (
-            <Link key={word.id} to={wordLink(word)}>
-              <b lang="zh-Hant">{word.han}</b>
-              <span>
-                {word.english}
-                <small>
-                  {roman(word)} · {word.ipa}
-                </small>
-              </span>
-              <ArrowRight size={15} />
-            </Link>
-          ))}
-        </div>
-        <PhotoCredit photo={photo} />
-        <a
-          className="xm-source-link"
-          href={note.source}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {note.sourceName}
-        </a>
-      </div>
-    </dialog>
-  );
-}
-function Culture() {
-  const [params, setParams] = useSearchParams();
-  const [category, setCategory] = useState("All photographs");
-  const selected = xiamenPhotos.find((p) => p.id === params.get("photo"));
-  const filtered = xiamenPhotos.filter(
-    (p) => category === "All photographs" || p.category === category,
-  );
-  return (
-    <div className="xm-inner">
-      <h1 className="sr-only">Xiamen photographs</h1>
-      <div className="xm-filter-row">
-        {["All photographs", "Food", "Streets", "Sea", "Culture"].map((cat) => (
-          <button
-            key={cat}
-            aria-pressed={category === cat}
-            onClick={() => setCategory(cat)}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-      <div className="xm-photo-grid">
-        {filtered.map((photo) => (
-          <figure key={photo.id}>
-            <button
-              onClick={() => setParams({ photo: photo.id })}
-              aria-label={`Open photograph: ${photo.caption}`}
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                style={{ objectPosition: photo.position }}
-              />
-              <span className="xm-photo-expand">
-                <Expand size={17} />
-              </span>
-            </button>
-            <PhotoCredit photo={photo} />
-            <div className="xm-gallery-words">
-              {relatedWords(photo)
-                .slice(0, 2)
-                .map((word) => (
-                  <Link key={word.id} to={wordLink(word)}>
-                    <b lang="zh-Hant">{word.han}</b>
-                    <span>
-                      {word.english}
-                      <small>
-                        {roman(word)} · {word.ipa}
-                      </small>
-                    </span>
-                  </Link>
-                ))}
-            </div>
-          </figure>
-        ))}
-      </div>
-      {selected && (
-        <PhotoDialog
-          key={selected.id}
-          photo={selected}
-          onClose={() => setParams({}, { replace: true })}
-        />
-      )}
-    </div>
-  );
-}
-
-function ToneGraph({ tone }: { tone: string }) {
-  const values = [...tone].map(Number);
-  if (values.length === 1) values.push(values[0]);
-  const pts = values
-    .map((v, i) => `${30 + (i * 200) / (values.length - 1)},${155 - v * 25}`)
-    .join(" ");
-  return (
-    <svg
-      className="xm-tone-graph"
-      viewBox="0 0 270 150"
-      role="img"
-      aria-label={`Pitch contour ${tone}, from ${tone[0]} to ${tone.at(-1)} on a scale of one to five`}
-    >
-      {[1, 2, 3, 4, 5].map((v) => (
-        <g key={v}>
-          <line x1="30" x2="240" y1={155 - v * 25} y2={155 - v * 25} />
-          <text x="10" y={159 - v * 25}>
-            {v}
-          </text>
-        </g>
-      ))}
-      <polyline points={pts} />
-      {values.map((v, i) => (
-        <circle
-          key={i}
-          cx={30 + (i * 200) / (values.length - 1)}
-          cy={155 - v * 25}
-          r="4"
-        />
-      ))}
-    </svg>
-  );
-}
-function Sounds() {
-  const [tone, setTone] = useState("24");
-  const example = xiamenWords.find(
-    (w) => w.tones.length === 1 && w.tones[0] === tone,
-  );
-  const [combined, setCombined] = useState(false);
-  return (
-    <div className="xm-inner">
-      <h1 className="sr-only">Xiamen sounds</h1>
-      <section className="xm-tone-lesson">
-        <div>
-          <h2>Tones</h2>
-          <p>
-            The numbers describe pitch height. <b>24</b> starts low and rises;{" "}
-            <b>53</b> falls from high to middle. Checked syllables end in a stop
-            and carry short tones.
-          </p>
-          <div className="xm-tone-buttons" aria-label="Choose a tone">
-            {["44", "24", "53", "21", "22", "32", "4"].map((t) => (
-              <button
-                key={t}
-                aria-pressed={tone === t}
-                onClick={() => setTone(t)}
-              >
-                {t}
-                <small>{pitchLetters(t)}</small>
-              </button>
-            ))}
-          </div>
-          <a
-            className="xm-source-link"
-            href="https://data.fjdsfzw.org.cn/upload/Annals/2011/%E6%96%B9%E8%A8%80%E5%BF%97/epub/ops/215.htm"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Reference · Fujian dialect gazetteer
-          </a>
-        </div>
-        <div className="xm-tone-example">
-          <ToneGraph tone={tone} />
-          {example ? (
-            <div>
-              <span lang="zh-Hant">{example.han}</span>
-              <div>
-                <b>{example.english}</b>
-                <strong>{roman(example)}</strong>
-                <small>{example.ipa}</small>
-              </div>
-            </div>
-          ) : (
-            <p>Choose another contour to see a word from this collection.</p>
-          )}
-          <small>Schematic pitch, not an acoustic recording.</small>
-        </div>
-      </section>
-      <section className="xm-sandhi">
-        <div>
-          <h2>Tone changes</h2>
-          <p>
-            In this example, the first syllable changes from <b>44 to 22</b>.
-            The last keeps its citation tone.
-          </p>
-          <a
-            href="https://ling.cuhk.edu.hk/people/peggy/SP2024_GeMok_Phonotactics.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="xm-source-link"
-          >
-            Ge & Mok, 2024 · example 1
-          </a>
-        </div>
-        <div>
-          <div className="xm-switch">
-            <button aria-pressed={!combined} onClick={() => setCombined(false)}>
-              Separate syllables
-            </button>
-            <button aria-pressed={combined} onClick={() => setCombined(true)}>
-              Together
-            </button>
-          </div>
-          <div className="xm-plane">
-            <span lang="zh-Hant">飛機</span>
-            <b>airplane</b>
-            <strong>
-              hui<span>{combined ? "22" : "44"}</span> ki44
-            </strong>
-            <p className="xm-ipa">[hui{combined ? "˨˨" : "˦˦"} ki˦˦]</p>
-          </div>
-        </div>
-      </section>
-      <section className="xm-section">
-        <div className="xm-section-heading">
-          <div>
-            <h2>Spelling key</h2>
-          </div>
-          <Link to="/romanization">
-            Romanization <ArrowRight size={16} />
-          </Link>
-        </div>
-        <div className="xm-key-grid">
-          {xiamenSpellingKey
-            .filter((r) => r.ipa !== "ŋ̩")
-            .map((rule) => (
-              <div key={rule.ipa}>
-                <b>{rule.spelling}</b>
-                <span>[{rule.ipa}]</span>
-                <small className={rule.status === "Agreed" ? "is-agreed" : ""}>
-                  {rule.status}
-                </small>
-              </div>
-            ))}
-        </div>
-      </section>
     </div>
   );
 }
@@ -865,7 +456,10 @@ function Practice({
   };
   return (
     <div className="xm-inner xm-practice">
-      <h1 className="sr-only">Xiamen practice</h1>
+      <header className="xm-page-heading">
+        <h1>Xiamen practice</h1>
+        {(current || finished) && <button className="xm-clear-view" onClick={() => { setRound([]); setFinished(false); setIndex(0); setAnswer(null); }}>Change practice</button>}
+      </header>
       {!current && !finished ? (
         <section className="xm-practice-start">
           <h2>Match words to meanings</h2>
@@ -916,9 +510,7 @@ function Practice({
                 <b lang="zh-Hant">{word.han}</b>
                 <span>{word.english}</span>
                 <small>
-                  {roman(word)}
-                  <br />
-                  {word.ipa}
+                  <Link to={wordLink(word)}>{roman(word)}<br />{word.ipa}</Link>
                 </small>
               </div>
             ))}
@@ -1015,8 +607,8 @@ export default function XiamenPage() {
           path="words"
           element={<Vocabulary saved={saved.items} toggle={saved.toggle} />}
         />
-        <Route path="culture" element={<Culture />} />
-        <Route path="sounds" element={<Sounds />} />
+        <Route path="culture" element={<CultureGallery />} />
+        <Route path="sounds" element={<IpaGallery />} />
         <Route
           path="practice"
           element={

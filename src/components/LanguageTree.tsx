@@ -79,13 +79,14 @@ function buildTree(): TreeNode {
                   children: [
                     ["", "Overview"],
                     ["/words", "Words"],
-                    ["/culture", "Culture"],
-                    ["/sounds", "Sounds"],
+                    ["/culture", "Photos"],
+                    ["/sounds", "IPA & tones"],
                     ["/practice", "Practice"],
                   ].map(([suffix, name]) => ({
                     id: `xiamen/${suffix || "overview"}`,
                     name,
                     href: varietyPath(point) + suffix,
+                    aliases: suffix === "/culture" ? "culture gallery pictures photographs" : suffix === "/sounds" ? "sounds pronunciation gallery" : undefined,
                   })),
                 }
               : {}),
@@ -105,6 +106,11 @@ function buildTree(): TreeNode {
 }
 
 const tree = buildTree();
+// Site references sit beside the family tree, not inside its taxonomy.
+const referencePages: TreeNode[] = [
+  { id: "reference/written-chinese", name: "Written Chinese", href: "/written-chinese", aliases: "formal standard register writing 書面語 书面语" },
+  { id: "reference/about", name: "About & sources", href: "/about", aliases: "references methodology credits photos licenses licences" },
+];
 const normalizedPath = (pathname: string) => pathname.replace(/\/+$/, "") || "/";
 const normalize = (text: string) => text.toLocaleLowerCase().normalize("NFKD")
   .replace(/[\u0300-\u036f’'–-]/g, "");
@@ -132,7 +138,7 @@ export default function LanguageTree() {
   const { pathname } = useLocation();
   const path = normalizedPath(pathname);
   const trail = useMemo(() => routeTrail(tree, path), [path]);
-  const currentId = trail.at(-1);
+  const currentId = trail.at(-1) ?? referencePages.find((node) => node.href === path)?.id;
   const [open, setOpen] = useState(() => new Set(["sinitic", ...trail]));
   const [mobileOpen, setMobileOpen] = useState(path === "/");
   const [query, setQuery] = useState("");
@@ -143,6 +149,9 @@ export default function LanguageTree() {
   const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
   const searching = terms.length > 0;
   const visibleTree = searching ? filterTree(tree, terms) : tree;
+  const visibleReferences = searching
+    ? referencePages.map((node) => filterTree(node, terms)).filter((node): node is TreeNode => node !== null)
+    : referencePages;
 
   useEffect(() => {
     setOpen((previous) => {
@@ -250,7 +259,13 @@ export default function LanguageTree() {
           </label>
         </div>
         <nav className="language-tree-navigation" aria-label="Language family">
-          {visibleTree ? <ul className="language-tree-root">{renderNode(visibleTree)}</ul> : <p className="language-tree-empty" role="status">No matches</p>}
+          {visibleTree && <ul className="language-tree-root">{renderNode(visibleTree)}</ul>}
+          {visibleReferences.length > 0 && (
+            <ul className="language-tree-reference-links" aria-label="Reference pages">
+              {visibleReferences.map(renderNode)}
+            </ul>
+          )}
+          {!visibleTree && !visibleReferences.length && <p className="language-tree-empty" role="status">No matches</p>}
         </nav>
       </div>
     </aside>

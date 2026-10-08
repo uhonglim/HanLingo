@@ -149,20 +149,20 @@ export default function ReferencePage() {
               <div className="reference-contents">
                 <nav aria-label="On this page">
                   {entry.sections.map((section, index) => (
-                    <a href={`#entry-section-${index}`} key={section.heading}>
+                    <Link to={`#entry-section-${index}`} key={section.heading}>
                       {section.heading}
-                    </a>
+                    </Link>
                   ))}
                   {(childSubgroups.length > 0 || !point) && (
-                    <a href="#reference-explore">
+                    <Link to="#reference-explore">
                       {subgroup ? "Local varieties" : "Explore the branches"}
-                    </a>
+                    </Link>
                   )}
-                  <a href="#reference-map">On the map</a>
+                  <Link to="#reference-map">On the map</Link>
                   {localLetter && (
-                    <a href="#reference-letter">A letter in local speech</a>
+                    <Link to="#reference-letter">A letter in local speech</Link>
                   )}
-                  <a href="#reference-sources">Sources & further reading</a>
+                  <Link to="#reference-sources">Sources & further reading</Link>
                 </nav>
               </div>
               <dl className="reference-facts">
@@ -261,7 +261,7 @@ export default function ReferencePage() {
                 selectedPoint={point?.id ?? null}
                 onSelectPoint={(id) => {
                   const selected = mapPoints.find((place) => place.id === id);
-                  if (selected) navigate(varietyPath(selected));
+                  if (selected && selected.id !== point?.id) navigate(varietyPath(selected));
                 }}
                 compact
               />

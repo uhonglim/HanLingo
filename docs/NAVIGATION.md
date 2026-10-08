@@ -4,6 +4,8 @@ The homepage `/` is the Han family root. It stays at `/`; it does not redirect i
 
 One `LanguageTree` is mounted outside the route content. Its branches, search state, and scroll position stay in place as the reader opens a language, subgroup, local variety, or lesson. The content panel scrolls independently. Mobile uses the same tree in an expandable panel.
 
+The visible tree starts directly with Mandarin, Min, Yue, Hakka, and Wu, without a Han / Sinitic wrapper. The family root remains available through the logo and top navigation.
+
 Canonical article paths start directly with their language group. Do not add a `/languages` prefix:
 
 - `/min`

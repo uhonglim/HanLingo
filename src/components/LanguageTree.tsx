@@ -259,7 +259,7 @@ export default function LanguageTree() {
           </label>
         </div>
         <nav className="language-tree-navigation" aria-label="Language family">
-          {visibleTree && <ul className="language-tree-root">{renderNode(visibleTree)}</ul>}
+          {visibleTree && <ul className="language-tree-root">{visibleTree.children?.map(renderNode)}</ul>}
           {visibleReferences.length > 0 && (
             <ul className="language-tree-reference-links" aria-label="Reference pages">
               {visibleReferences.map(renderNode)}

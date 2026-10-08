@@ -44,14 +44,14 @@ describe("persistent language tree", () => {
     expect(destinations.has(subgroupPath("min", "southern-min"))).toBe(true);
     expect(destinations.has(xiamenPath)).toBe(true);
     for (const lesson of lessons) expect(destinations.has(`${xiamenPath}/${lesson}`), lesson).toBe(true);
-    expectExpanded(html, "Han / Sinitic");
+    expect(html).not.toContain("Han / Sinitic");
+    expect(destinations.has("/")).toBe(false);
     for (const group of languages) {
       const toggle = openingTags(html, "button").find(item => item["aria-label"] === `Expand ${group.name}`);
       expect(toggle?.["aria-expanded"]).toBe("false");
     }
     const current = renderedLinks.filter(link => link.attrs["aria-current"] === "page");
-    expect(current).toHaveLength(1);
-    expect(current[0].attrs.href).toBe("/");
+    expect(current).toHaveLength(0);
   });
 
   it("opens every ancestor and marks only Photos current on a direct gallery URL", () => {
@@ -61,7 +61,7 @@ describe("persistent language tree", () => {
     expect(current).toHaveLength(1);
     expect(current[0].attrs.href).toBe(path);
     expect(current[0].content).toContain("Photos");
-    for (const name of ["Han / Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Xiamen"])
+    for (const name of ["Min", "Southern Min", "Quanzhang cluster", "Xiamen"])
       expectExpanded(html, name);
 
     const targets = [...openingTags(html, "ul"), ...openingTags(html, "div")];

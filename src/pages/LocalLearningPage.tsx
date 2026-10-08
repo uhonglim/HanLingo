@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { resolveReferenceRoute, varietyPath } from "../routing";
 import { placeLabel } from "../data/language-names";
@@ -12,8 +12,15 @@ import {
 import type { LearningSection } from "../data/learning";
 import type { AttestedWord } from "../data/learning/types";
 import { LearningWord } from "../components/BranchLearning";
+import RegionalDifferences, {
+  extraRegionalWords,
+  RegionalWord,
+} from "../components/RegionalDifferences";
 import "../components/BranchLearning.css";
 import { makeQuiz } from "../data/xiamen-romanization";
+import PhotoGallery from "../components/gallery/PhotoGallery";
+import LocalSoundExplorer from "../components/LocalSoundExplorer";
+import { getLocalGallery } from "../data/galleries";
 
 function Practice({ words }: { words: AttestedWord[] }) {
   const [deck, setDeck] = useState(() =>
@@ -129,10 +136,6 @@ export default function LocalLearningPage() {
   const term = query.get("q") ?? "";
   const data = point ? getLocalLearning(point) : undefined;
   const valid = point && availableSections(point).includes(chapter);
-  useEffect(() => {
-    if (point && valid)
-      document.title = `${placeLabel(point)} ${learningSections[chapter].toLowerCase()} · HanLingo`;
-  }, [point, chapter, valid]);
   if (!valid || !point || !data)
     return (
       <div className="local-learning-page">
@@ -142,7 +145,20 @@ export default function LocalLearningPage() {
         </Link>
       </div>
     );
+  if (chapter === "culture")
+    return (
+      <div className="local-learning-page local-gallery-page">
+        <PhotoGallery
+          key={point.id}
+          place={placeLabel(point)}
+          photos={getLocalGallery(point.id)}
+        />
+      </div>
+    );
   const words = searchWords(data.words, term);
+  const regionalWords = extraRegionalWords(point.id, data.words, term);
+  const totalWords =
+    data.words.length + extraRegionalWords(point.id, data.words).length;
   return (
     <div className="local-learning-page" key={`${point.id}/${chapter}`}>
       <header>
@@ -151,7 +167,7 @@ export default function LocalLearningPage() {
         </h1>
         {chapter === "words" && (
           <p>
-            {words.length} of {data.words.length} words
+            {words.length + regionalWords.length} of {totalWords} words
           </p>
         )}
       </header>
@@ -176,11 +192,27 @@ export default function LocalLearningPage() {
               <LearningWord key={word.id} word={word} />
             ))}
           </div>
-          {!words.length && <p role="status">No words match “{term}”.</p>}
+          {regionalWords.length > 0 && (
+            <div className="learning-word-grid">
+              {regionalWords.map((reading) => (
+                <RegionalWord key={reading.id} reading={reading} />
+              ))}
+            </div>
+          )}
+          {!words.length && !regionalWords.length && (
+            <p role="status">No words match “{term}”.</p>
+          )}
+          <RegionalDifferences
+            key={point.id}
+            localityId={point.id}
+            query={term}
+          />
         </>
       )}
       {chapter === "sounds" && (
         <>
+          <LocalSoundExplorer key={point.id} words={data.words} />
+          <RegionalDifferences key={point.id} localityId={point.id} />
           <div className="local-sound-notes">
             {data.soundNotes.map((note) => (
               <article key={note.title}>
@@ -197,55 +229,8 @@ export default function LocalLearningPage() {
               </article>
             ))}
           </div>
-          {data.words.length > 0 && (
-            <section>
-              <h2>IPA in words</h2>
-              <div className="learning-word-grid">
-                {data.words.map((word) => (
-                  <LearningWord key={word.id} word={word} />
-                ))}
-              </div>
-            </section>
-          )}
         </>
       )}
-      {chapter === "culture" &&
-        data.culture
-          .filter((item) => item.photo)
-          .map((item) => {
-            const photo = item.photo!;
-            return (
-              <figure className="local-learning-photo" key={item.title}>
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  style={{ objectPosition: photo.position }}
-                />
-                <figcaption>
-                  {photo.caption}{" "}
-                  <a href={photo.sourceUrl} target="_blank" rel="noreferrer">
-                    {photo.author}
-                  </a>{" "}
-                  ·{" "}
-                  <a href={photo.licenseUrl} target="_blank" rel="noreferrer">
-                    {photo.license}
-                  </a>
-                </figcaption>
-                <h2>{item.title}</h2>
-                {item.text && <p>{item.text}</p>}
-                {item.source.url !== photo.sourceUrl && (
-                  <a
-                    className="learning-source"
-                    href={item.source.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {item.source.title}
-                  </a>
-                )}
-              </figure>
-            );
-          })}
       {chapter === "practice" && <Practice key={point.id} words={data.words} />}
     </div>
   );

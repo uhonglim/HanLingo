@@ -11,6 +11,7 @@ import { placeLabel } from "../data/language-names";
 import { varietyPath } from "../routing";
 import { siteTerms } from "../data/site-terms";
 import "./BranchLearning.css";
+import Pronunciation from "./Pronunciation";
 
 export function LearningWord({ word }: { word: AttestedWord }) {
   const spelling = spellingFor(word);
@@ -18,20 +19,11 @@ export function LearningWord({ word }: { word: AttestedWord }) {
     <article className="learning-word">
       <h3 lang="zh-Hant">{word.han}</h3>
       <p className="learning-meaning">{word.english}</p>
-      {spelling && (
-        <p className="learning-spelling">
-          <span className="sr-only">{siteTerms.spelling}: </span>
-          {spelling}
-        </p>
-      )}
-      <p className="learning-ipa">
-        <span>
-          {word.toneNotation === "source-category"
-            ? "IPA · source tone categories"
-            : "IPA"}
-        </span>{" "}
-        {word.ipa}
-      </p>
+      <Pronunciation
+        ipa={word.ipa}
+        spelling={spelling}
+        toneNotation={word.toneNotation}
+      />
       <details>
         <summary>Reading and source</summary>
         <p>{word.reading}</p>

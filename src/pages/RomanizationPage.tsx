@@ -1,4 +1,5 @@
 import { branchLearning } from "../data/learning";
+import { regionalConcepts } from "../data/regional-words";
 import { mapPoints } from "../data/languages";
 import { placeLabel } from "../data/language-names";
 import { siteTerms, readingLabels } from "../data/site-terms";
@@ -65,7 +66,34 @@ const readingExamples = [
       sourceUrl: word.source.url,
       note: word.note,
     })),
-];
+  ...regionalConcepts.flatMap((concept) =>
+    concept.readings
+      .filter(
+        (reading) => reading.ipa && reading.toneNotation === "pitch-contour",
+      )
+      .map((reading) => ({
+        id: `regional:${reading.id}`,
+        han: reading.han,
+        english: concept.english,
+        ipa: reading.ipa!,
+        locality: placeLabel(
+          mapPoints.find((point) => point.id === reading.localityId)!,
+        ),
+        reading: reading.scope,
+        sourceUrl: reading.source.url,
+        note: reading.note,
+      })),
+  ),
+].filter(
+  (word, index, all) =>
+    all.findIndex(
+      (other) =>
+        other.han === word.han &&
+        other.ipa === word.ipa &&
+        other.locality === word.locality &&
+        other.sourceUrl === word.sourceUrl,
+    ) === index,
+);
 
 export default function RomanizationPage() {
   const [input, setInput] = useState("[te˨˦]");

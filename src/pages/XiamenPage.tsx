@@ -31,6 +31,11 @@ import CultureGallery, {
   photoWords as relatedWords,
 } from "./xiamen/CultureGallery";
 import IpaGallery from "./xiamen/IpaGallery";
+import Pronunciation from "../components/Pronunciation";
+import RegionalDifferences, {
+  extraRegionalWords,
+  RegionalWord,
+} from "../components/RegionalDifferences";
 
 const BASE = "/min/southern-min/xiamen";
 type Word = (typeof xiamenWords)[number];
@@ -115,15 +120,11 @@ function WordCard({
         </button>
       </div>
       <h3>{word.english}</h3>
-      <div className="xm-word-pronunciation">
-        <div>
-          <strong>{roman(word)}</strong>
-        </div>
-        <div>
-          <span>IPA</span>
-          <span className="xm-ipa">{word.ipa}</span>
-        </div>
-      </div>
+      <Pronunciation
+        ipa={word.ipa}
+        spelling={roman(word)}
+        toneNotation="pitch-contour"
+      />
       <details className="xm-word-detail">
         <summary>
           Reading and source <ChevronRight size={12} />
@@ -273,6 +274,7 @@ function Overview({
           ))}
         </div>
       </section>
+      <RegionalDifferences localityId="xiamen" />
       <section className="xm-section xm-location">
         <div>
           <h2>Southern Min</h2>
@@ -325,13 +327,19 @@ function Vocabulary({
   const setCategory = (value: string) =>
     changeParam("category", value === "All words" ? "" : value);
   const hasFilters = Boolean(query || onlySaved || category !== "All words");
+  const extraWords =
+    !onlySaved && category === "All words"
+      ? extraRegionalWords("xiamen", xiamenWords, query)
+      : [];
+  const totalWords =
+    xiamenWords.length + extraRegionalWords("xiamen", xiamenWords).length;
   return (
     <div className="xm-inner">
       <header className="xm-page-heading">
         <div>
           <h1>Amoy {siteTerms.sections.words.toLowerCase()}</h1>
           <p role="status">
-            {words.length} of {xiamenWords.length} words
+            {words.length + extraWords.length} of {totalWords} words
             {onlySaved ? " · saved" : ""}
           </p>
         </div>
@@ -396,7 +404,15 @@ function Vocabulary({
           />
         ))}
       </div>
-      {!words.length && (
+      {extraWords.length > 0 && (
+        <div className="learning-word-grid">
+          {extraWords.map((reading) => (
+            <RegionalWord key={reading.id} reading={reading} />
+          ))}
+        </div>
+      )}
+      <RegionalDifferences localityId="xiamen" query={query} />
+      {!words.length && !extraWords.length && (
         <div className="xm-empty">
           <h2>
             {onlySaved ? "No saved words in this view." : "No matching words."}

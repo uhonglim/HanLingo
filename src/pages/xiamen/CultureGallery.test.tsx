@@ -86,15 +86,15 @@ describe("Xiamen culture gallery", () => {
 
   it("renders URL-backed categories and handles valid, mismatched, and missing deep-linked photos", () => {
     const all = renderGallery();
-    expect(all.match(/class="xc-image-button"/g) ?? []).toHaveLength(11);
+    expect(all.match(/class="photo-gallery-open"/g) ?? []).toHaveLength(11);
     expect(all).toContain("Amoy photos");
     expect(all).not.toContain("Amoy photographs");
     const food = renderGallery("?category=food");
-    expect(food.match(/class="xc-image-button"/g) ?? []).toHaveLength(3);
-    expect(food).toContain('aria-pressed="true">Food');
+    expect(food.match(/class="photo-gallery-open"/g) ?? []).toHaveLength(3);
+    expect(food).toContain('<option value="food" selected="">Food');
     const detail = renderGallery("?category=sea&photo=xiamen-ferry");
     expect(detail).toContain("<dialog");
-    expect(detail).toContain('id="xc-photo-title">Yuanhe ferry');
+    expect(detail).toContain('id="gallery-photo-title">Yuanhe ferry');
     expect(detail).toContain("tsun24");
     expect(detail).toContain("[t͡sun˨˦]");
     expect(detail).toContain("CC BY-SA 3.0");

@@ -148,7 +148,7 @@ export const minLearning: BranchLearning[] = [
       ["茶", "tea", "[ta˧˧]"],
       ["水", "water", "[sy˨˩]"],
       ["魚", "fish", "[ŋy˧˧]"],
-      ["米", "rice", "[mi˨˩]"],
+      ["米", "rice", "[mi˦˨]"],
       ["人", "person", "[neiŋ˧˧]"],
       ["手", "hand", "[siu˨˩]"],
       ["山", "mountain", "[suiŋ˥˦]"],

@@ -25,5 +25,7 @@
 - Keep controls minimal: reuse an existing selector or tree destination instead of adding another button. Main navigation remains visible on mobile. Do not add duplicate directory columns, promotional action blocks, or repeated footer navigation.
 - Learning sections beyond Amoy use `src/data/learning/`. Keep each reading tied to its locality and source; never treat source tone-category digits as pitch contours. Add Words, Photos, Sounds, and Practice destinations only when their evidence requirements in `docs/BRANCH-LEARNING.md` are met.
 - Use the shared HanLingo visual style and logo. Do not layer an older interface or a second navigation system into a page.
+- Local photo galleries should have comparable depth to Amoy (11 photographs): aim for 9–11 distinct, documented scenes per published locality. Do not pad counts with duplicate images, crops, or repeated views of one subject. Every image needs a source, attribution, license, and accurate place caption. Use the shared immersive gallery and preserve keyboard and direct-link access.
+- Teach local differences explicitly. A regional word choice is different from a pronunciation difference; link every form to its documented locality and source. A local attestation never means that all residents use it or that other places do not. Keep source romanization separate from HanLingo spelling, and never infer IPA or pitch values from spelling alone.
 
 See `docs/NAVIGATION.md` for the architecture. Local review uses `http://127.0.0.1:5173/`.

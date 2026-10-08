@@ -84,7 +84,13 @@ function PageLocation() {
   }, [location.key]);
   useLayoutEffect(() => {
     const crumbs = getBreadcrumbs(location.pathname);
-    document.title = `${crumbs.at(-1)?.label ?? "HanLingo"} · HanLingo`;
+    const last = crumbs.at(-1)?.label ?? "HanLingo";
+    const parent = crumbs.at(-2)?.label;
+    const title =
+      parent && ["Words", "Photos", "Sounds", "Practice"].includes(last)
+        ? `${parent} ${last.toLowerCase()}`
+        : last;
+    document.title = `${title} · HanLingo`;
     const old = previous.current;
     previous.current = location;
     const panel = document.getElementById("page-panel");

@@ -25,33 +25,34 @@ npm run preview
 
 ## Explore the site
 
-- Start learning in the [Amoy chapter](http://127.0.0.1:5173/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Photos, IPA & tones, and Practice pages.
+- Start learning in the [Amoy chapter](http://127.0.0.1:5173/min/southern-min/xiamen): sourced vocabulary, 11 credited photographs, and separate Words, Photos, Sounds, and Practice pages.
 - Filter photographs by subject or related vocabulary, open full images, and browse with the arrow keys. Photo details include cultural context, credits, and words with IPA and trial spelling.
+- Compare documented local word choices and pronunciations, including Amoy–Tsiang-tsiu–Tsuân-tsiu vowel and tone differences, Taiwan tomato and soap variants, and Singapore market terminology. Source romanizations stay separate from IPA and HanLingo spelling.
 - Explore **27 attested IPA symbols and seven reference tone contours**. Selecting a sound or tone highlights it in matching sourced words; the collection is not a complete Xiamen sound inventory.
 - Search or save words, follow photographs to related vocabulary, explore pitch contours and a tone-sandhi example, and complete short practice rounds. Saved words and learning progress stay in this browser.
-- Min now has 17 locality entries, including 13 in Southern Min. Tsuan-Chiang includes six Taiwan locality references alongside Amoy, Tsuân-tsiu, Tsiang-tsiu, Sin-ka-pho, and Pho Te. Teo Swa separately contains Teochew and Swatow. Four new locality photographs retain full credits and licenses. The tree labels the 泉漳 cluster **Tsuan-Chiang** and the flagship chapter **Amoy**; alternate names remain searchable.
+- Min now has 17 locality entries, including 13 in Southern Min. Tsuan-Chiang includes six Taiwan locality references alongside Amoy, Tsuân-tsiu, Tsiang-tsiu, Sin-ka-pho, and Pho Te. Teo Swa separately contains Teochew and Swatow. Every mapped locality has a licensed photo gallery, with 9–11 distinct images. The tree labels the 泉漳 cluster **Tsuan-Chiang** and the flagship chapter **Amoy**; alternate names remain searchable.
 - The homepage is the Han family tree. Open a group, then its subgroup and locality; the same tree stays in place as the adjacent content changes. The Min map remains available at `/min`.
 - Follow a map point to a dedicated local article, or pan and zoom to compare reference places.
 - Read group introductions with credited photographs, then follow the scholarly sources attached to individual articles.
 - Compare the six supplied versions of a letter home in the reading room, with an English meaning guide.
 - Visit the romanization workbench and the separate Modern Standard Written Chinese page.
 
-| Route | Content |
-| --- | --- |
-| `/` | Han family tree and Xiamen learning entry |
-| `/:languageId` | Group article and regional overview |
-| `/:languageId/:subgroupId` | Subgroup article and related localities |
-| `/:languageId/:subgroupId/:varietyId` | Local-variety article and classification path |
-| `/compare` | Reading room and letter comparison |
-| `/romanization` | Current romanization decisions and open questions |
-| `/written-chinese` | Modern Standard Written Chinese as a written reference |
-| `/about` | Project scope, method, and credits |
+| Route                                 | Content                                                |
+| ------------------------------------- | ------------------------------------------------------ |
+| `/`                                   | Han family tree and Xiamen learning entry              |
+| `/:languageId`                        | Group article and regional overview                    |
+| `/:languageId/:subgroupId`            | Subgroup article and related localities                |
+| `/:languageId/:subgroupId/:varietyId` | Local-variety article and classification path          |
+| `/compare`                            | Reading room and letter comparison                     |
+| `/romanization`                       | Current romanization decisions and open questions      |
+| `/written-chinese`                    | Modern Standard Written Chinese as a written reference |
+| `/about`                              | Project scope, method, and credits                     |
 
-`/min/southern-min/xiamen` opens the flagship learning chapter; append `/words`, `/culture`, `/sounds`, or `/practice` for its learning sections. Search and photograph selections have shareable URLs. The Amoy overview connects photographs to reveal-meaning practice cards and bookmarks. Other localities retain reference articles. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
+`/min/southern-min/xiamen` opens the flagship learning chapter; append `/words`, `/culture`, `/sounds`, or `/practice` for its learning sections. Search and photograph selections have shareable URLs. The Amoy overview connects photographs to reveal-meaning practice cards and bookmarks. Other localities have photo galleries and evidence-backed Words, Sounds, and Practice sections where supported. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
 
 Navigation follows `/min` → `/min/southern-min` → `/min/southern-min/xiamen`, without a Languages layer or animated page transitions. Old `/languages/...` links redirect to the corresponding canonical path. The tree and content scroll independently, and browser Back restores the reading position. See [the navigation rules](AGENTS.md) and [navigation architecture](docs/NAVIGATION.md).
 
-The application uses React Router’s browser history. Vite supports development navigation and direct page refreshes. A future production host must **rewrite application routes to `index.html` while serving asset files normally**, so opening or refreshing a deep URL works. This repository does not establish a production deployment.
+The application uses React Router’s browser history. The production build generates static entry points for valid deep routes, plus a sitemap and release manifest. HanLingo is published at [hanlingo.pairup.world](https://hanlingo.pairup.world/) through GitHub Pages. See [deployment instructions](docs/DEPLOYMENT.md) for the source-to-release verification procedure.
 
 ## Interface
 
@@ -104,4 +105,4 @@ node scripts/build-atlas.mjs
 
 Tests cover the taxonomy, comparison letters, reference content, route integrity, Xiamen IPA-to-spelling conversion, photo assets and credits, and quiz generation. The 11 additional Xiamen photographs have their own [source and license register](docs/XIAMEN-PHOTOS.md). Use the commands above to check the current checkout.
 
-Repository: [uhonglim/HanLingo](https://github.com/uhonglim/HanLingo). Project licensing is recorded in [LICENSE](LICENSE). Photograph licenses apply independently of the code license; font license notices remain under `public/fonts/`.
+Repository: [uhonglim/HanLingo](https://github.com/uhonglim/HanLingo). Project licensing is recorded in [LICENSE](LICENSE). The expanded gallery registers are [Min](docs/gallery-min-sources.md), [other groups](docs/gallery-other-sources.md), and [Teo Swa](docs/gallery-chaoshan-sources.md); lexical evidence is tracked in [regional word research](docs/regional-word-research.md). Photograph licenses apply independently of the code license; font license notices remain under `public/fonts/`.

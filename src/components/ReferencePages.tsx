@@ -1,5 +1,7 @@
 import { getBranchLearning, getLocalLearning } from "../data/learning";
 import BranchLearning from "./BranchLearning";
+import RegionalDifferences from "./RegionalDifferences";
+import { getLocalGallery } from "../data/galleries";
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -75,7 +77,7 @@ export default function ReferencePage() {
       : undefined;
   const photo =
     (point
-      ? minCommunityPhotos[point.id]
+      ? (getLocalGallery(point.id)[0] ?? minCommunityPhotos[point.id])
       : group && route?.level === "group"
         ? groupPhotos[group.id]
         : undefined) ?? learningPhoto;
@@ -146,12 +148,26 @@ export default function ReferencePage() {
 
           {photo && (
             <figure className="reference-hero-photo">
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                style={{ objectPosition: photo.position ?? "center" }}
-                fetchPriority="high"
-              />
+              {point ? (
+                <Link
+                  to={`${varietyPath(point)}/culture`}
+                  aria-label={`Open ${placeLabel(point)} photo gallery`}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    style={{ objectPosition: photo.position ?? "center" }}
+                    fetchPriority="high"
+                  />
+                </Link>
+              ) : (
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  style={{ objectPosition: photo.position ?? "center" }}
+                  fetchPriority="high"
+                />
+              )}
               <figcaption>
                 <span>{photo.caption}</span>
                 <span>
@@ -173,6 +189,10 @@ export default function ReferencePage() {
             point={point}
             heroPhotoSrc={photo?.src}
           />
+
+          {point && (
+            <RegionalDifferences key={point.id} localityId={point.id} />
+          )}
 
           <details className="reference-language-notes">
             <summary>Language notes</summary>

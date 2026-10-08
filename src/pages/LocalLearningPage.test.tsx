@@ -21,7 +21,8 @@ describe("local learning chapters", () => {
     expect(html).toContain("1 of 12 words");
     expect(html).toContain("tsha11");
     expect(html).toContain("Reading and source");
-    expect(html).not.toContain("Fuzhou");
+    expect(html.match(/class="learning-word"/g)).toHaveLength(1);
+    expect(html).toContain("Local differences");
   });
   it("does not create empty word or practice routes for a locality without attested words", () => {
     expect(render("/min/central-min/yongan/words")).toContain(
@@ -36,8 +37,8 @@ describe("local learning chapters", () => {
     const practice = render("/min/eastern-min/fuzhou/practice");
     expect(practice.match(/aria-pressed="false"/g) ?? []).toHaveLength(4);
     const photo = render("/mandarin/jilu/jinan/culture");
-    expect(photo).toContain("locality-jinan.jpg");
-    expect(photo).toContain("CC BY-SA 4.0");
+    expect(photo).toContain("photo-gallery-grid");
+    expect(photo).toContain("creativecommons.org");
     expect(photo).not.toContain("Photo and location");
   });
 });

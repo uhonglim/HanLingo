@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, MapPin } from "lucide-react";
 import { languages, letters, mapPoints } from "../data/languages";
-import { placeLabel } from "../data/language-names";
+import { placeLabel, clusterLabel } from "../data/language-names";
 import {
   groupArticles,
   subgroupArticles,
@@ -44,6 +44,11 @@ export default function ReferencePage() {
   const group = route?.language;
   const point = route?.point;
   const subgroup = route?.subgroup;
+  const englishName = entry?.facts.find((fact) => fact.label === "English name")?.value;
+  const mapAnchor = entry?.facts.find((fact) => fact.label === "Map anchor")?.value;
+  const referenceFacts = entry?.facts.filter((fact) =>
+    !["Group", "Branch", "Cluster", "Entry type", "English name", "Map anchor"].includes(fact.label),
+  ) ?? [];
   const localCluster = point && point.hierarchy.length > 4 ? point.hierarchy[3] : undefined;
   const photo = point ? minCommunityPhotos[point.id]
     : group && route?.level === "group" ? groupPhotos[group.id] : undefined;
@@ -103,12 +108,13 @@ export default function ReferencePage() {
                 {point?.nativeName ?? subgroup?.nativeName ?? group.nativeName}
               </span>
             </div>
+            {englishName && <p className="reference-english-name">{englishName}</p>}
             <p className="reference-dek">{entry.dek}</p>
             <div className="reference-geography">
               <MapPin size={14} />
               <span>
                 {point
-                  ? `${placeLabel(point)} · ${subgroup?.name} · ${group.name}`
+                  ? localCluster ? clusterLabel(localCluster) : subgroup?.name
                   : subgroup
                     ? `${localPoints.map(placeLabel).join(" · ")} · selected places`
                     : group.geography}
@@ -150,35 +156,7 @@ export default function ReferencePage() {
                 </section>
               ))}
             </div>
-            <aside className="reference-entry-rail">
-              <div className="reference-contents">
-                <nav aria-label="On this page">
-                  {entry.sections.map((section, index) => (
-                    <Link to={`#entry-section-${index}`} key={section.heading}>
-                      {section.heading}
-                    </Link>
-                  ))}
-                  {(childSubgroups.length > 0 || !point) && (
-                    <Link to="#reference-explore">
-                      {subgroup ? "Local varieties" : "Explore the branches"}
-                    </Link>
-                  )}
-                  <Link to="#reference-map">On the map</Link>
-                  {localLetter && (
-                    <Link to="#reference-letter">A letter in local speech</Link>
-                  )}
-                  <Link to="#reference-sources">Sources & further reading</Link>
-                </nav>
-              </div>
-              <dl className="reference-facts">
-                {entry.facts.map((fact) => (
-                  <div key={fact.label}>
-                    <dt>{fact.label}</dt>
-                    <dd>{fact.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </aside>
+
           </div>
 
           {!point && (
@@ -272,8 +250,7 @@ export default function ReferencePage() {
               />
             </div>
             <p className="reference-curation-note">
-              Points locate representative cities, not exclusive language
-              territories. Communities and varieties extend beyond these places.
+              {mapAnchor ?? "Map markers locate reference places, not dialect boundaries."}
             </p>
           </section>
 
@@ -334,6 +311,19 @@ export default function ReferencePage() {
               <BookOpen size={17} />
               <h2>Sources & further reading</h2>
             </div>
+            {referenceFacts.length > 0 && (
+              <details className="reference-notes" key={entry.title}>
+                <summary>Reference notes</summary>
+                <dl>
+                  {referenceFacts.map((fact) => (
+                    <div key={fact.label}>
+                      <dt>{fact.label}</dt>
+                      <dd>{fact.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </details>
+            )}
             <ol>
               {entry.sources.map((source, index) => (
                 <li key={`${source.url}-${index}`}>

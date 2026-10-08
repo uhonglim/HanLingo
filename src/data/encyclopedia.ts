@@ -1128,14 +1128,14 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   kaohsiung: article(
     "Ko-hiông",
-    "The Kaohsiung locality reference, with dictionary comparisons and local names used across the city’s transport network.",
+    "Hokkien in Kaohsiung: everyday words and names from the city’s streets and stations.",
     [
       section(
-        "Kaohsiung’s dictionary reference",
+        "Everyday words",
         "The Ministry’s dictionary labels its Kaohsiung column as a mixed reference variety. Tainan has a separate mixed column: the entry for 箱, a box, records different colloquial readings for the two localities. For lunchbox vocabulary, the Kaohsiung column lists 便當篋仔 and 飯篋仔. The comparison table also includes different choices elsewhere, showing that local comparison involves word choice as well as pronunciation.",
       ),
       section(
-        "Names encountered in the city",
+        "Around the city",
         "The Ministry’s Kaohsiung Red Line appendix records Ko-hiông in the names of the railway station and international airport. It also supplies local readings for stations including 美麗島 and 左營. These place-name entries provide a practical companion to everyday vocabulary: they identify particular destinations and preserve the dictionary’s own spelling convention. The map marker here locates the urban reference, rather than the full extent of the municipality or a uniform accent area.",
       ),
     ],
@@ -1157,7 +1157,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       section(
         "The Yilan reference",
-        "The Ministry’s place-name entries record Gî-lân and distinguish the city and county names with their administrative endings. Its pronunciation tables label the Yilan reference as Zhangzhou-leaning. This map selects the city center as a locality anchor; the dictionary’s regional label is retained in the facts below rather than treated as a boundary around all local speakers.",
+        "The Ministry’s place-name entries record Gî-lân and distinguish the city and county names with their administrative endings. Its pronunciation tables label the Yilan reference as Zhangzhou-leaning. This map selects the city center as a locality anchor; the dictionary’s regional label is retained in the reference notes rather than treated as a boundary around all local speakers.",
       ),
       section(
         "An everyday comparison: cooked rice",

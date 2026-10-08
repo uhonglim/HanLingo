@@ -20,6 +20,7 @@
 
 - English interface and introduction; Chinese content, IPA, and the agreed trial HanLingo romanization are the learning material.
 - Keep copy factual and brief. No decorative labels or filler introductions. Preserve phonetic qualifications, sources, and photograph credits.
+- Reference articles lead with the community name and readable content. Do not repeat the breadcrumb hierarchy in a metadata sidebar. Put naming conventions and dictionary details in expandable reference notes beside sources; keep map qualifications with the map.
 - Use the shared HanLingo visual style and logo. Do not layer an older interface or a second navigation system into a page.
 
 See `docs/NAVIGATION.md` for the architecture. Local review uses `http://127.0.0.1:5173/`.

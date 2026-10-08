@@ -56,7 +56,7 @@
   border-left: 1px solid #e2e8ed;
 }
 .roman-core span {
-  font-family: "Charis SIL", "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 32px;
 }
 .roman-core strong {
@@ -115,9 +115,8 @@
   border: 1px solid #bdcbd9;
   border-radius: 7px;
   font:
-    26px/1.5 "Charis SIL",
-    "Times New Roman",
-    serif;
+    26px/1.5 "DM Sans",
+    sans-serif;
   color: #263849;
   background: #fff;
 }
@@ -131,8 +130,12 @@
   gap: 24px;
   align-items: start;
 }
-.roman-input { min-width: 0; }
-.roman-input-heading select { width: min(60%, 230px); }
+.roman-input {
+  min-width: 0;
+}
+.roman-input-heading select {
+  width: min(60%, 230px);
+}
 .roman-result {
   padding: 16px 20px 20px;
   background: #f5f7fc;
@@ -247,8 +250,12 @@
   gap: 24px;
   margin: 24px 0 0;
 }
-.roman-key-notes h3 { margin-bottom: 6px; }
-.roman-key-notes p { margin: 0; }
+.roman-key-notes h3 {
+  margin-bottom: 6px;
+}
+.roman-key-notes p {
+  margin: 0;
+}
 .roman-table-wrap {
   overflow-x: auto;
   margin-top: 24px;
@@ -287,7 +294,7 @@
   min-width: 170px;
 }
 .roman-symbol {
-  font-family: "Charis SIL", "Times New Roman", serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 20px;
 }
 .roman-rule-notes {
@@ -296,7 +303,9 @@
   gap: 28px;
   margin: 28px 0;
 }
-.roman-scope { grid-template-columns: 1fr 1.2fr; }
+.roman-scope {
+  grid-template-columns: 1fr 1.2fr;
+}
 .roman-rule-notes p {
   font-size: 14px;
 }
@@ -377,12 +386,22 @@
   margin-top: 24px;
 }
 @media (max-width: 1100px) {
-  .roman-conversion-grid { grid-template-columns: 1fr; gap: 10px; }
-  .roman-result { min-height: 140px; }
-  .roman-result > span { margin-bottom: 16px; }
+  .roman-conversion-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .roman-result {
+    min-height: 140px;
+  }
+  .roman-result > span {
+    margin-bottom: 16px;
+  }
 }
 @media (max-width: 1000px) {
-  .roman-key-layout { grid-template-columns: 1fr; gap: 4px; }
+  .roman-key-layout {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
   .roman-rule-notes {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -419,7 +438,9 @@
     align-items: stretch;
     gap: 12px;
   }
-  .roman-input-heading select { width: 100%; }
+  .roman-input-heading select {
+    width: 100%;
+  }
   .roman-tones {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px 10px;
@@ -434,5 +455,130 @@
   }
   .roman-tone-example {
     padding-left: 16px;
+  }
+}
+
+.roman-group {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid #e2e8ed;
+}
+.roman-group > header h3 {
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+.roman-group > header a {
+  text-decoration: none;
+  color: inherit;
+}
+.roman-group > header > span {
+  font-size: 20px;
+  color: #79838a;
+}
+.roman-examples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+.roman-example {
+  min-width: 0;
+}
+.roman-example-place {
+  font-size: 12px;
+  text-decoration: none !important;
+}
+.roman-example-word {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+.roman-example-word > strong {
+  font-size: 28px;
+  font-weight: 550;
+}
+.roman-example-word > span {
+  font-size: 14px;
+  color: #596777;
+}
+.roman-example-sound {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 21px;
+  line-height: 1.6;
+}
+.roman-example-sound > span {
+  font-family: "DM Sans", sans-serif;
+}
+.roman-example-sound > strong {
+  color: #2155f5;
+  font-size: 20px;
+  font-weight: 550;
+}
+.roman-example-sound > svg {
+  color: #88939f;
+}
+.roman-method .roman-register {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 5px 0;
+  color: #596777;
+}
+.roman-example details {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.roman-example summary,
+.roman-coverage summary {
+  cursor: pointer;
+  color: #647386;
+}
+.roman-example details p {
+  font-size: 12px;
+}
+.roman-coverage caption {
+  text-align: left;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.roman-coverage details {
+  font-size: 13px;
+  margin-top: 8px;
+}
+.roman-coverage ul {
+  padding-left: 18px;
+}
+.roman-coverage li {
+  margin: 8px 0;
+}
+.roman-coverage .roman-symbol {
+  font-size: 16px;
+}
+@media (max-width: 850px) {
+  .roman-group {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .roman-group > header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .roman-examples {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .roman-example + .roman-example {
+    padding-top: 20px;
+    border-top: 1px solid #edf0f4;
   }
 }

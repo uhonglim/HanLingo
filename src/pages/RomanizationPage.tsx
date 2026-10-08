@@ -1,14 +1,13 @@
-import { branchLearning } from "../data/learning";
-import { regionalConcepts } from "../data/regional-words";
-import { mapPoints } from "../data/languages";
-import { placeLabel } from "../data/language-names";
-import { siteTerms, readingLabels } from "../data/site-terms";
+import { siteTerms } from "../data/site-terms";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { xiamenWords } from "../data/xiamen-lexicon";
-import { pitchLetters, xiamenSpellingKey } from "../data/xiamen-romanization";
-import { convertIpa } from "../data/romanization-method";
+import { pitchLetters } from "../data/xiamen-romanization";
+import { convertIpa, conversionRules } from "../data/romanization-method";
+import {
+  romanizationGroups,
+  romanizationReadings as readingExamples,
+} from "../data/romanization-examples";
 import "./RomanizationPage.css";
 
 const marks = [
@@ -38,66 +37,10 @@ const marks = [
     "Keep ː when supplied. A doubled vowel such as trial oo names a vowel quality, not length.",
   ],
 ];
-const sharedLetters = "a d e f g h i j k l m n o r s t u w y";
-
-const readingExamples = [
-  ...xiamenWords.map((word) => ({
-    id: `xiamen:${word.id}`,
-    han: word.han,
-    english: word.english,
-    ipa: word.ipa,
-    locality: "Amoy",
-    reading: readingLabels[word.readingMode],
-    sourceUrl: word.sourceUrl,
-    note: word.note,
-  })),
-  ...branchLearning
-    .flatMap((pack) => pack.words)
-    .filter((word) => word.toneNotation === "pitch-contour")
-    .map((word) => ({
-      id: `${word.localityId}:${word.id}`,
-      han: word.han,
-      english: word.english,
-      ipa: word.ipa,
-      locality: placeLabel(
-        mapPoints.find((point) => point.id === word.localityId)!,
-      ),
-      reading: word.reading,
-      sourceUrl: word.source.url,
-      note: word.note,
-    })),
-  ...regionalConcepts.flatMap((concept) =>
-    concept.readings
-      .filter(
-        (reading) => reading.ipa && reading.toneNotation === "pitch-contour",
-      )
-      .map((reading) => ({
-        id: `regional:${reading.id}`,
-        han: reading.han,
-        english: concept.english,
-        ipa: reading.ipa!,
-        locality: placeLabel(
-          mapPoints.find((point) => point.id === reading.localityId)!,
-        ),
-        reading: reading.scope,
-        sourceUrl: reading.source.url,
-        note: reading.note,
-      })),
-  ),
-].filter(
-  (word, index, all) =>
-    all.findIndex(
-      (other) =>
-        other.han === word.han &&
-        other.ipa === word.ipa &&
-        other.locality === word.locality &&
-        other.sourceUrl === word.sourceUrl,
-    ) === index,
-);
 
 export default function RomanizationPage() {
-  const [input, setInput] = useState("[te˨˦]");
-  const [wordId, setWordId] = useState("xiamen:tea");
+  const [input, setInput] = useState(romanizationGroups[0].examples[0].ipa);
+  const [wordId, setWordId] = useState(romanizationGroups[0].examples[0].id);
   const [query, setQuery] = useState("");
   const selectedWord = readingExamples.find((word) => word.id === wordId);
   const conversion = useMemo(() => {
@@ -110,12 +53,14 @@ export default function RomanizationPage() {
       };
     }
   }, [input]);
-  const rules = xiamenSpellingKey.filter((rule) =>
-    `${rule.ipa} ${rule.spelling} ${rule.status}`
-      .normalize("NFC")
-      .toLowerCase()
-      .includes(query.normalize("NFC").toLowerCase().trim()),
-  );
+  const rules = conversionRules
+    .filter((rule) => !/^\p{M}/u.test(rule.ipa) && rule.ipa !== "ː")
+    .filter((rule) =>
+      `${rule.ipa} ${rule.spelling} ${rule.status}`
+        .normalize("NFC")
+        .toLowerCase()
+        .includes(query.normalize("NFC").toLowerCase().trim()),
+    );
   const loadWord = (id: string) => {
     setWordId(id);
     const word = readingExamples.find((item) => item.id === id);
@@ -128,9 +73,9 @@ export default function RomanizationPage() {
       <header className="roman-header">
         <h1>HanLingo romanization</h1>
         <p>
-          Shared sound-to-spelling rules for Han languages, with each locality’s
-          pronunciation and pitch preserved. Attested readings keep their source
-          IPA; unsupported sounds remain unresolved.
+          One sound, one working spelling across Mandarin, Min, Yue, Hakka, and
+          Wu. Each place keeps its own pronunciation. IPA is the reference;
+          HanLingo is our shared spelling proposal.
         </p>
         <div className="roman-core" aria-label="Agreed stop consonants">
           {[
@@ -164,10 +109,15 @@ export default function RomanizationPage() {
                   onChange={(event) => loadWord(event.target.value)}
                 >
                   <option value="">Custom IPA</option>
-                  {readingExamples.map((word) => (
-                    <option key={word.id} value={word.id}>
-                      {word.locality} · {word.han} · {word.english}
-                    </option>
+                  {romanizationGroups.map((group) => (
+                    <optgroup key={group.id} label={group.name}>
+                      {group.readings.map((word) => (
+                        <option key={word.id} value={word.id}>
+                          {word.locality} · {word.han} · {word.english}
+                          {word.spelling ? "" : " · mapping open"}
+                        </option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </div>
@@ -243,12 +193,80 @@ export default function RomanizationPage() {
                 {selectedWord.english} · {selectedWord.locality} ·{" "}
                 {selectedWord.reading}
               </span>
-              <a href={selectedWord.sourceUrl} target="_blank" rel="noreferrer">
+              <a
+                href={selectedWord.source.url}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Reading source
               </a>
+              {selectedWord.registerLabel && (
+                <p className="roman-register">{selectedWord.registerLabel}</p>
+              )}
               <p>{selectedWord.note}</p>
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="roman-section" aria-labelledby="roman-groups-title">
+        <h2 id="roman-groups-title">Across five groups</h2>
+        <p>
+          Local readings, shared rules. Open a source for its speaker, reading
+          convention, and context.
+        </p>
+        <div className="roman-groups">
+          {romanizationGroups.map((group) => (
+            <article
+              className="roman-group"
+              key={group.id}
+              aria-labelledby={`roman-group-${group.id}`}
+            >
+              <header>
+                <h3 id={`roman-group-${group.id}`}>
+                  <Link to={`/${group.id}`}>{group.name}</Link>
+                </h3>
+                <span lang="zh-Hant">{group.nativeName}</span>
+              </header>
+              <div className="roman-examples">
+                {group.examples.map((word) => (
+                  <div className="roman-example" key={word.id}>
+                    <Link
+                      className="roman-example-place"
+                      to={`${word.localityPath}/words`}
+                    >
+                      {word.locality}
+                    </Link>
+                    <div className="roman-example-word">
+                      <strong lang="zh-Hant">{word.han}</strong>
+                      <span>{word.english}</span>
+                    </div>
+                    {word.registerLabel && (
+                      <p className="roman-register">{word.registerLabel}</p>
+                    )}
+                    <div className="roman-example-sound">
+                      <span>{word.displayIpa}</span>
+                      <ArrowRight size={16} aria-hidden="true" />
+                      <strong>{word.spelling}</strong>
+                    </div>
+                    <details>
+                      <summary>Reading and source</summary>
+                      <p>
+                        {word.reading}. {word.note}
+                      </p>
+                      <a
+                        href={word.source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {word.source.title}
+                      </a>
+                    </details>
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -317,16 +335,11 @@ export default function RomanizationPage() {
             </div>
           </div>
         </div>
-        <details className="roman-details">
-          <summary>Letters retained in the current implementation</summary>
-          <p className="roman-symbol">{sharedLetters}</p>
-          <p>
-            These letters keep their IPA values as trial spellings. For example,
-            j means [j] and y means [y]. They are not Pinyin values, and this
-            list is not a claim that every variety uses every sound. The wider
-            Han inventory still needs review.
-          </p>
-        </details>
+        <p className="roman-note">
+          Single letters keep their displayed IPA values: j is [j], y is [y].
+          The table is a working key, not a claim that every variety uses every
+          sound.
+        </p>
       </section>
 
       <section className="roman-section" aria-labelledby="roman-tones-title">
@@ -337,7 +350,7 @@ export default function RomanizationPage() {
           measurements in hertz.
         </p>
         <div className="roman-tones">
-          {["44", "24", "53", "21", "22", "32", "4"].map((tone) => (
+          {["5", "35", "213", "24", "53", "21", "4"].map((tone) => (
             <div key={tone}>
               <svg
                 viewBox="0 0 100 70"
@@ -360,12 +373,13 @@ export default function RomanizationPage() {
           ))}
         </div>
         <p className="roman-note">
-          The seven contours above occur in the current Amoy word set. A single
-          4 gives a pitch level; it does not itself mark a stop ending or
-          duration. Preserve the source’s contour notation.
+          These are examples of pitch notation, not a shared seven-tone
+          inventory. Each locality has its own tone system. A single 4 gives one
+          pitch level; it does not mark a stop ending or duration. Keep the
+          source’s notation.
         </p>
         <div className="roman-tone-example">
-          <h3>Connected speech · 飛機</h3>
+          <h3>Amoy connected speech · 飛機</h3>
           <div>
             <span>[hui˦˦ ki˦˦]</span>
             <ArrowRight size={18} aria-hidden="true" />
@@ -449,7 +463,10 @@ export default function RomanizationPage() {
               Source readings and citation or connected-speech qualifications
               stay attached to each word.
             </p>
-            <Link to="/min/southern-min/xiamen/words">Amoy words</Link>
+            <p>
+              Readings without documented pitch contours stay out of this
+              converter. Source spelling alone cannot supply missing IPA.
+            </p>
           </div>
           <div>
             <h3>Next decisions</h3>
@@ -461,6 +478,50 @@ export default function RomanizationPage() {
               phonotactics or provide a universal reverse conversion.
             </p>
           </div>
+        </div>
+        <div className="roman-table-wrap">
+          <table className="roman-coverage">
+            <caption>Current converter coverage</caption>
+            <thead>
+              <tr>
+                <th scope="col">Group</th>
+                <th scope="col">Mapped readings</th>
+                <th scope="col">Readings with unresolved sounds</th>
+              </tr>
+            </thead>
+            <tbody>
+              {romanizationGroups.map((group) => (
+                <tr key={group.id}>
+                  <th scope="row">{group.name}</th>
+                  <td>{group.mapped}</td>
+                  <td>
+                    {group.unresolved.length}
+                    {group.unresolved.length > 0 && (
+                      <details>
+                        <summary>See source IPA</summary>
+                        <ul>
+                          {group.unresolved.map((word) => (
+                            <li key={word.id}>
+                              <a
+                                href={word.source.url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {word.locality} · {word.han}
+                              </a>{" "}
+                              <span className="roman-symbol">
+                                {word.displayIpa}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
         <p>
           A shared character can have different spellings when its local sounds
@@ -478,7 +539,7 @@ export default function RomanizationPage() {
           >
             Official IPA chart
           </a>
-          <Link to="/min/southern-min/xiamen/sounds">Amoy sounds</Link>
+
           <a
             href="https://github.com/uhonglim/HanLingo"
             target="_blank"

@@ -2,7 +2,12 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { xiamenWords } from "../../data/xiamen-lexicon";
-import IpaGallery, { gallerySounds, splitIpaSymbols, wordsWithSound, wordsWithTone } from "./IpaGallery";
+import IpaGallery, {
+  gallerySounds,
+  splitIpaSymbols,
+  wordsWithSound,
+  wordsWithTone,
+} from "./IpaGallery";
 
 const ids = (words: typeof xiamenWords) => words.map((word) => word.id);
 
@@ -14,7 +19,9 @@ describe("Xiamen IPA gallery matching", () => {
     expect(splitIpaSymbols("pŋ̍")).toEqual(["p", "ŋ̍"]);
     for (const word of xiamenWords) {
       for (const syllable of word.segments) {
-        expect(splitIpaSymbols(syllable).join(""), word.id).toBe(syllable.normalize("NFC"));
+        expect(splitIpaSymbols(syllable).join(""), word.id).toBe(
+          syllable.normalize("NFC"),
+        );
       }
     }
   });
@@ -36,9 +43,12 @@ describe("Xiamen IPA gallery matching", () => {
   it("includes only attested symbols and lets every published word be found", () => {
     expect(gallerySounds).not.toContain("pʰ");
     expect(gallerySounds).not.toContain("ə");
-    const found = new Set(gallerySounds.flatMap((sound) => ids(wordsWithSound(sound))));
+    const found = new Set(
+      gallerySounds.flatMap((sound) => ids(wordsWithSound(sound))),
+    );
     expect(found).toEqual(new Set(xiamenWords.map((word) => word.id)));
-    for (const sound of gallerySounds) expect(wordsWithSound(sound).length).toBeGreaterThan(0);
+    for (const sound of gallerySounds)
+      expect(wordsWithSound(sound).length).toBeGreaterThan(0);
   });
 
   it("matches the displayed connected tone rather than an underlying dictionary annotation", () => {
@@ -52,8 +62,16 @@ describe("Xiamen IPA gallery matching", () => {
 
   it("opens a shared sound and tone selection with real source links", () => {
     const query = new URLSearchParams({ sound: "ĩ", tone: "32" });
-    const html = renderToStaticMarkup(<MemoryRouter initialEntries={[`/min/southern-min/xiamen/sounds?${query}`]}><IpaGallery /></MemoryRouter>);
-    expect(html).toContain("IPA gallery");
+    const html = renderToStaticMarkup(
+      <MemoryRouter
+        initialEntries={[`/min/southern-min/xiamen/sounds?${query}`]}
+      >
+        <IpaGallery />
+      </MemoryRouter>,
+    );
+    expect(html).toContain("Amoy sounds");
+    expect(html).not.toContain("IPA gallery");
+    expect(html).toContain("HanLingo spelling");
     expect(html).toContain("Nasal close front vowel");
     expect(html).toContain("Short falling");
     expect(html).toContain("Wiktionary contributors");
@@ -63,7 +81,15 @@ describe("Xiamen IPA gallery matching", () => {
   });
 
   it("recovers invalid URL selections without an empty or fabricated sound entry", () => {
-    const html = renderToStaticMarkup(<MemoryRouter initialEntries={["/min/southern-min/xiamen/sounds?sound=invalid&tone=99"]}><IpaGallery /></MemoryRouter>);
+    const html = renderToStaticMarkup(
+      <MemoryRouter
+        initialEntries={[
+          "/min/southern-min/xiamen/sounds?sound=invalid&tone=99",
+        ]}
+      >
+        <IpaGallery />
+      </MemoryRouter>,
+    );
     expect(html).toContain("Voiceless alveolar affricate");
     expect(html).toContain("Low to high");
     expect(html).not.toContain("[invalid]");

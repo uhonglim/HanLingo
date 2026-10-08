@@ -1,8 +1,14 @@
+import { siteTerms } from "../data/site-terms";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Search, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { languages, mapPoints } from "../data/languages";
-import { clusterLabel, communityAliases, hokkienAliases, placeLabel } from "../data/language-names";
+import {
+  clusterLabel,
+  communityAliases,
+  hokkienAliases,
+  placeLabel,
+} from "../data/language-names";
 import { groupPath, subgroupPath, varietyPath } from "../routing";
 import "./LanguageTree.css";
 
@@ -56,7 +62,8 @@ function buildTree(): TreeNode {
       children: language.subgroups.map((subgroup) => {
         const children: TreeNode[] = [];
         for (const point of mapPoints.filter(
-          (item) => item.groupId === language.id && item.subgroupId === subgroup.id,
+          (item) =>
+            item.groupId === language.id && item.subgroupId === subgroup.id,
         )) {
           let parent = children;
           // Keep intermediate clusters; they have no separate article route.
@@ -64,8 +71,17 @@ function buildTree(): TreeNode {
             const id = `cluster/${language.id}/${subgroup.id}/${cluster}`;
             let clusterNode = parent.find((node) => node.id === id);
             if (!clusterNode) {
-              clusterNode = { id, name: clusterLabel(cluster),
-                aliases: cluster === "Quanzhang cluster" ? hokkienAliases : cluster === "Chaoshan cluster" ? "chaoshan chao shan 潮汕 teochew swatow" : undefined, children: [] };
+              clusterNode = {
+                id,
+                name: clusterLabel(cluster),
+                aliases:
+                  cluster === "Quanzhang cluster"
+                    ? hokkienAliases
+                    : cluster === "Chaoshan cluster"
+                      ? "chaoshan chao shan 潮汕 teochew swatow"
+                      : undefined,
+                children: [],
+              };
               parent.push(clusterNode);
             }
             parent = clusterNode.children!;
@@ -75,20 +91,26 @@ function buildTree(): TreeNode {
             name: placeLabel(point),
             nativeName: point.nativeName,
             href: varietyPath(point),
-            aliases: [point.name, aliases[point.id], communityAliases[point.id]].filter(Boolean).join(" "),
+            aliases: [point.name, aliases[point.id], communityAliases[point.id]]
+              .filter(Boolean)
+              .join(" "),
             ...(point.id === "xiamen"
               ? {
                   children: [
-                    ["", "Overview"],
-                    ["/words", "Words"],
-                    ["/culture", "Photos"],
-                    ["/sounds", "IPA & tones"],
-                    ["/practice", "Practice"],
+                    ["/words", siteTerms.sections.words],
+                    ["/culture", siteTerms.sections.photos],
+                    ["/sounds", siteTerms.sections.sounds],
+                    ["/practice", siteTerms.sections.practice],
                   ].map(([suffix, name]) => ({
-                    id: `xiamen/${suffix || "overview"}`,
+                    id: `xiamen/${suffix}`,
                     name,
                     href: varietyPath(point) + suffix,
-                    aliases: suffix === "/culture" ? "culture gallery pictures photographs" : suffix === "/sounds" ? "sounds pronunciation gallery" : undefined,
+                    aliases:
+                      suffix === "/culture"
+                        ? "culture gallery pictures photographs"
+                        : suffix === "/sounds"
+                          ? "sounds pronunciation gallery"
+                          : undefined,
                   })),
                 }
               : {}),
@@ -110,15 +132,29 @@ function buildTree(): TreeNode {
 const tree = buildTree();
 // Site references sit beside the family tree, not inside its taxonomy.
 const referencePages: TreeNode[] = [
-  { id: "reference/written-chinese", name: "Written Chinese", href: "/written-chinese", aliases: "formal standard register writing 書面語 书面语" },
-  { id: "reference/about", name: "About & sources", href: "/about", aliases: "references methodology credits photos licenses licences" },
+  {
+    id: "reference/written-chinese",
+    name: siteTerms.writtenChinese,
+    href: "/written-chinese",
+    aliases: "formal standard register writing 書面語 书面语",
+  },
+  {
+    id: "reference/about",
+    name: siteTerms.about,
+    href: "/about",
+    aliases: "references methodology credits photos licenses licences",
+  },
 ];
-const normalizedPath = (pathname: string) => pathname.replace(/\/+$/, "") || "/";
-const normalize = (text: string) => text.toLocaleLowerCase().normalize("NFKD")
-  .replace(/[\u0300-\u036f’'–-]/g, "");
+const normalizedPath = (pathname: string) =>
+  pathname.replace(/\/+$/, "") || "/";
+const normalize = (text: string) =>
+  text
+    .toLocaleLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f’'–-]/g, "");
 
 function routeTrail(node: TreeNode, pathname: string): string[] {
-  // Children first makes Overview the single current link at the Xiamen base URL.
+  // Match the deepest destination before its ancestors.
   for (const child of node.children ?? []) {
     const trail = routeTrail(child, pathname);
     if (trail.length) return [node.id, ...trail];
@@ -126,8 +162,14 @@ function routeTrail(node: TreeNode, pathname: string): string[] {
   return node.href === pathname ? [node.id] : [];
 }
 
-function filterTree(node: TreeNode, terms: string[], parentText = ""): TreeNode | null {
-  const ownText = normalize(`${node.name} ${node.nativeName ?? ""} ${node.aliases ?? ""}`);
+function filterTree(
+  node: TreeNode,
+  terms: string[],
+  parentText = "",
+): TreeNode | null {
+  const ownText = normalize(
+    `${node.name} ${node.nativeName ?? ""} ${node.aliases ?? ""}`,
+  );
   const context = `${parentText} ${ownText}`;
   if (terms.every((term) => context.includes(term))) return node;
   const children = (node.children ?? [])
@@ -140,7 +182,8 @@ export default function LanguageTree() {
   const { pathname } = useLocation();
   const path = normalizedPath(pathname);
   const trail = useMemo(() => routeTrail(tree, path), [path]);
-  const currentId = trail.at(-1) ?? referencePages.find((node) => node.href === path)?.id;
+  const currentId =
+    trail.at(-1) ?? referencePages.find((node) => node.href === path)?.id;
   const [open, setOpen] = useState(() => new Set(["sinitic", ...trail]));
   const [mobileOpen, setMobileOpen] = useState(path === "/");
   const [query, setQuery] = useState("");
@@ -153,7 +196,9 @@ export default function LanguageTree() {
   const searching = terms.length > 0;
   const visibleTree = searching ? filterTree(tree, terms) : tree;
   const visibleReferences = searching
-    ? referencePages.map((node) => filterTree(node, terms)).filter((node): node is TreeNode => node !== null)
+    ? referencePages
+        .map((node) => filterTree(node, terms))
+        .filter((node): node is TreeNode => node !== null)
     : referencePages;
 
   useEffect(() => {
@@ -199,7 +244,9 @@ export default function LanguageTree() {
     const childrenId = `language-tree-children-${instanceId}-${node.id.replace(/[^a-zA-Z0-9_-]/g, "_")}`;
     return (
       <li className="language-tree-item" key={node.id}>
-        <div className={`language-tree-row${active ? " language-tree-row--active" : ""}${ancestor ? " language-tree-row--ancestor" : ""}`}>
+        <div
+          className={`language-tree-row${active ? " language-tree-row--active" : ""}${ancestor ? " language-tree-row--ancestor" : ""}`}
+        >
           {hasChildren ? (
             <button
               className="language-tree-disclosure"
@@ -211,27 +258,53 @@ export default function LanguageTree() {
             >
               <ChevronRight size={14} aria-hidden="true" />
             </button>
-          ) : <span className="language-tree-spacer" aria-hidden="true" />}
+          ) : (
+            <span className="language-tree-spacer" aria-hidden="true" />
+          )}
           {node.href ? (
             <Link
               to={node.href}
               className="language-tree-link"
               aria-current={active ? "page" : undefined}
               onClick={(event) => {
-                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                if (
+                  event.button !== 0 ||
+                  event.metaKey ||
+                  event.ctrlKey ||
+                  event.shiftKey ||
+                  event.altKey
+                )
+                  return;
                 if (hasChildren) toggle(node.id);
                 treeNavigation.current = node.href === path ? null : node.href!;
                 if (node.href !== "/") setMobileOpen(false);
               }}
             >
               <span>{node.name}</span>
-              {node.nativeName && <span className="language-tree-native" lang="zh-Hant">{node.nativeName}</span>}
+              {node.nativeName && (
+                <span className="language-tree-native" lang="zh-Hant">
+                  {node.nativeName}
+                </span>
+              )}
             </Link>
-          ) : <button type="button" className="language-tree-cluster" aria-expanded={expanded}
-            aria-controls={childrenId} onClick={() => toggle(node.id)}>{node.name}</button>}
+          ) : (
+            <button
+              type="button"
+              className="language-tree-cluster"
+              aria-expanded={expanded}
+              aria-controls={childrenId}
+              onClick={() => toggle(node.id)}
+            >
+              {node.name}
+            </button>
+          )}
         </div>
         {hasChildren && (
-          <ul className="language-tree-children" id={childrenId} hidden={!expanded}>
+          <ul
+            className="language-tree-children"
+            id={childrenId}
+            hidden={!expanded}
+          >
             {node.children!.map(renderNode)}
           </ul>
         )}
@@ -240,7 +313,9 @@ export default function LanguageTree() {
   }
 
   return (
-    <aside className={`language-tree${mobileOpen ? " language-tree--mobile-open" : ""}`}>
+    <aside
+      className={`language-tree${mobileOpen ? " language-tree--mobile-open" : ""}`}
+    >
       <button
         className="language-tree-mobile-toggle"
         type="button"
@@ -248,7 +323,7 @@ export default function LanguageTree() {
         aria-controls={panelId}
         onClick={() => setMobileOpen((previous) => !previous)}
       >
-        Tree <ChevronDown size={17} aria-hidden="true" />
+        {siteTerms.tree} <ChevronDown size={17} aria-hidden="true" />
       </button>
       <div className="language-tree-panel" id={panelId}>
         <div className="language-tree-search-wrap">
@@ -265,20 +340,38 @@ export default function LanguageTree() {
               spellCheck={false}
             />
             {query && (
-              <button type="button" aria-label="Clear tree search" onClick={() => { changeQuery(""); searchInput.current?.focus(); }}>
+              <button
+                type="button"
+                aria-label="Clear tree search"
+                onClick={() => {
+                  changeQuery("");
+                  searchInput.current?.focus();
+                }}
+              >
                 <X size={14} aria-hidden="true" />
               </button>
             )}
           </label>
         </div>
         <nav className="language-tree-navigation" aria-label="Language family">
-          {visibleTree && <ul className="language-tree-root">{visibleTree.children?.map(renderNode)}</ul>}
+          {visibleTree && (
+            <ul className="language-tree-root">
+              {visibleTree.children?.map(renderNode)}
+            </ul>
+          )}
           {visibleReferences.length > 0 && (
-            <ul className="language-tree-reference-links" aria-label="Reference pages">
+            <ul
+              className="language-tree-reference-links"
+              aria-label="Reference pages"
+            >
               {visibleReferences.map(renderNode)}
             </ul>
           )}
-          {!visibleTree && !visibleReferences.length && <p className="language-tree-empty" role="status">No matches</p>}
+          {!visibleTree && !visibleReferences.length && (
+            <p className="language-tree-empty" role="status">
+              No matches
+            </p>
+          )}
         </nav>
       </div>
     </aside>

@@ -156,7 +156,7 @@ export default function MinPage() {
 
         <section className="min-regions" aria-labelledby="min-regions-title">
           <div className="min-section-heading">
-            <h2 id="min-regions-title">Places and communities</h2>
+            <h2 id="min-regions-title">Localities</h2>
             <div className="min-map-filters">
               <label className="min-region-select">
                 <span>Branch</span>
@@ -173,7 +173,7 @@ export default function MinPage() {
                 </select>
               </label>
               <label className="min-region-select">
-                <span>Place</span>
+                <span>Locality</span>
                 <select
                   value={selected.id}
                   onChange={(event) => setSelectedId(event.target.value)}
@@ -211,7 +211,7 @@ export default function MinPage() {
                   </p>
                 </div>
                 <Link to={varietyPath(selected)}>
-                  {selected.id === "xiamen" ? "Open lessons" : "Read article"}
+                  {`Explore ${placeLabel(selected)}`}
                   <ArrowRight size={17} />
                 </Link>
               </div>
@@ -224,7 +224,7 @@ export default function MinPage() {
           aria-labelledby="min-photos-title"
         >
           <div className="min-section-heading">
-            <h2 id="min-photos-title">Amoy in photographs</h2>
+            <h2 id="min-photos-title">Amoy photos</h2>
           </div>
           <div className="min-photo-grid">
             {photoStories.map((photo) => (
@@ -256,18 +256,15 @@ export default function MinPage() {
           <div>
             <h2 id="min-classification-title">Names and branches</h2>
             <p>
-              Min → Southern Min → a cluster → a locality. These{" "}
-              {min.subgroups.length} branches and {places.length} places are a
-              selection from Min. Each community needs its own pronunciation
-              evidence.
+              Min → Southern Min → Tsuan-Chiang → Amoy. The tree separates
+              groups, branches, clusters, and localities.
             </p>
             <dl className="min-name-guide">
               <div>
                 <dt>Tsuan-Chiang · 泉漳</dt>
                 <dd>
-                  The geographically specific Quanzhou–Zhangzhou cluster. This
-                  Hokkien-style name replaces the Mandarin spelling “Quanzhang”
-                  in navigation.
+                  The Quanzhou–Zhangzhou cluster within Southern Min. Quanzhang
+                  is the Mandarin spelling of the same name.
                 </dd>
               </div>
               <div>
@@ -286,17 +283,32 @@ export default function MinPage() {
                 </dd>
               </div>
               <div>
-                <dt>Hokkien · Hoklo · Taigi</dt>
+                <dt>Hokkien</dt>
                 <dd>
-                  Names whose usage depends on the community and source. They do
-                  not name all Min, and they are not extra levels in the tree.
+                  A community name for Southern Min used in Singapore and
+                  elsewhere in Southeast Asia. It does not mean every language
+                  of Fujian.
+                </dd>
+              </div>
+              <div>
+                <dt>Taigi</dt>
+                <dd>
+                  Taiwanese Southern Min. This regional name includes more than
+                  the speech of Taipak or any single locality.
+                </dd>
+              </div>
+              <div>
+                <dt>Hoklo</dt>
+                <dd>
+                  Also used for Taiwanese Southern Min, as listed by Taiwan’s
+                  Ministry of Education. It is not a name for all Min.
                 </dd>
               </div>
               <div>
                 <dt>Amoy · 廈門</dt>
                 <dd>
-                  An established name for Xiamen and its speech. Both names lead
-                  to the same learning chapter.
+                  An established name for Xiamen and its speech. Xiamen is the
+                  modern city name.
                 </dd>
               </div>
             </dl>

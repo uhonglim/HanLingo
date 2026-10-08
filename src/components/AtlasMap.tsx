@@ -17,7 +17,16 @@ import type {
 } from "topojson-specification";
 import world from "../data/east-asia-50m.json";
 import { placeLabel } from "../data/language-names";
-import { ATLAS_WIDTH as WIDTH, ATLAS_HEIGHT as HEIGHT, atlasProjection as projection, atlasPointPosition, atlasViewport, fitAtlasPoints, revealAtlasPoint, zoomAtlasView } from "./atlasGeometry";
+import {
+  ATLAS_WIDTH as WIDTH,
+  ATLAS_HEIGHT as HEIGHT,
+  atlasProjection as projection,
+  atlasPointPosition,
+  atlasViewport,
+  fitAtlasPoints,
+  revealAtlasPoint,
+  zoomAtlasView,
+} from "./atlasGeometry";
 import type { AtlasView as View } from "./atlasGeometry";
 import "./AtlasMap.css";
 
@@ -115,13 +124,15 @@ export default function AtlasMap({
   // The parent may build a fresh points array on every render. A geometry key
   // keeps a reader's pan/zoom intact until the actual mapped places change.
   const geometryKey = JSON.stringify(
-    points.map((point) => [point.id, ...point.coordinates] as const)
+    points
+      .map((point) => [point.id, ...point.coordinates] as const)
       .sort((a, b) => a[0].localeCompare(b[0])),
   );
   const maxZoom = compact ? 5 : 3.2;
   const initialView = useMemo<View>(() => {
-    const coordinates = (JSON.parse(geometryKey) as [string, number, number][])
-      .map(([, longitude, latitude]): [number, number] => [longitude, latitude]);
+    const coordinates = (
+      JSON.parse(geometryKey) as [string, number, number][]
+    ).map(([, longitude, latitude]): [number, number] => [longitude, latitude]);
     return fitAtlasPoints(coordinates, compact);
   }, [compact, geometryKey]);
   const minZoom = Math.min(0.8, initialView.zoom * 0.8);
@@ -140,7 +151,12 @@ export default function AtlasMap({
   const pendingView = useRef<View | null>(null);
   const suppressClick = useRef(false);
   const [viewport, setViewport] = useState(() => atlasViewport(WIDTH, HEIGHT));
-  useEffect(() => () => { if (frame.current !== null) cancelAnimationFrame(frame.current); }, []);
+  useEffect(
+    () => () => {
+      if (frame.current !== null) cancelAnimationFrame(frame.current);
+    },
+    [],
+  );
   const [view, setView] = useState<View>(initialView);
   const [dragging, setDragging] = useState(false);
   const [layout, setLayout] = useState<{ scale: number; reserved: Label[] }>({
@@ -201,7 +217,9 @@ export default function AtlasMap({
   useLayoutEffect(() => {
     if (selectedLongitude === undefined || selectedLatitude === undefined)
       return;
-    setView((previous) => revealAtlasPoint(previous, [selectedLongitude, selectedLatitude]));
+    setView((previous) =>
+      revealAtlasPoint(previous, [selectedLongitude, selectedLatitude]),
+    );
   }, [selectedPoint, selectedGroup, selectedLongitude, selectedLatitude]);
 
   const projectedPoints = useMemo(
@@ -223,9 +241,16 @@ export default function AtlasMap({
     // between collision candidates on every pointer movement.
     if (dragging && drag.current) {
       const gesture = drag.current;
-      return new Map([...gesture.labels].map(([id, label]) => [id, {
-        ...label, x: label.x + view.x - gesture.viewX, y: label.y + view.y - gesture.viewY,
-      }]));
+      return new Map(
+        [...gesture.labels].map(([id, label]) => [
+          id,
+          {
+            ...label,
+            x: label.x + view.x - gesture.viewX,
+            y: label.y + view.y - gesture.viewY,
+          },
+        ]),
+      );
     }
     const placed: Label[] = [...layout.reserved];
     const result = new Map<string, Label>();
@@ -294,12 +319,30 @@ export default function AtlasMap({
       }
     }
     return result;
-  }, [projectedPoints, selectedGroup, selectedPoint, layout, dragging, view.x, view.y, viewport]);
+  }, [
+    projectedPoints,
+    selectedGroup,
+    selectedPoint,
+    layout,
+    dragging,
+    view.x,
+    view.y,
+    viewport,
+  ]);
 
   function zoom(factor: number) {
     setView((previous) => {
-      const selected = selectedCoordinates ? atlasPointPosition(selectedCoordinates, previous) : null;
-      const anchor: [number, number] = selected && selected[0] >= 0 && selected[0] <= WIDTH && selected[1] >= 0 && selected[1] <= HEIGHT ? selected : [WIDTH / 2, HEIGHT / 2];
+      const selected = selectedCoordinates
+        ? atlasPointPosition(selectedCoordinates, previous)
+        : null;
+      const anchor: [number, number] =
+        selected &&
+        selected[0] >= 0 &&
+        selected[0] <= WIDTH &&
+        selected[1] >= 0 &&
+        selected[1] <= HEIGHT
+          ? selected
+          : [WIDTH / 2, HEIGHT / 2];
       return zoomAtlasView(previous, factor, minZoom, maxZoom, anchor);
     });
   }
@@ -309,10 +352,13 @@ export default function AtlasMap({
     suppressClick.current = false;
     drag.current = {
       pointerId: event.pointerId,
-      clientX: event.clientX, clientY: event.clientY,
-      viewX: view.x, viewY: view.y,
+      clientX: event.clientX,
+      clientY: event.clientY,
+      viewX: view.x,
+      viewY: view.y,
       scale: svgRef.current?.getScreenCTM()?.a ?? 1,
-      moved: false, labels,
+      moved: false,
+      labels,
     };
   }
 
@@ -327,7 +373,8 @@ export default function AtlasMap({
       event.currentTarget.setPointerCapture(event.pointerId);
       setDragging(true);
     }
-    pendingView.current = { ...view,
+    pendingView.current = {
+      ...view,
       x: gesture.viewX + dx / gesture.scale,
       y: gesture.viewY + dy / gesture.scale,
     };
@@ -380,9 +427,14 @@ export default function AtlasMap({
         onPointerMove={moveDrag}
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
-        onPointerLeave={(event) => { if (!drag.current?.moved) endDrag(event); }}
+        onPointerLeave={(event) => {
+          if (!drag.current?.moved) endDrag(event);
+        }}
         onClickCapture={(event) => {
-          if (suppressClick.current) { event.stopPropagation(); suppressClick.current = false; }
+          if (suppressClick.current) {
+            event.stopPropagation();
+            suppressClick.current = false;
+          }
         }}
         onLostPointerCapture={endDrag}
       >
@@ -444,7 +496,7 @@ export default function AtlasMap({
                   cy={point.y}
                   r={(point.id === selectedPoint ? 18 : 9) / layout.scale}
                   fill={COLORS[point.groupId] ?? "#748463"}
-                  opacity={point.id === selectedPoint ? 0.10 : 0.04}
+                  opacity={point.id === selectedPoint ? 0.1 : 0.04}
                 />
               ))}
           </g>
@@ -592,7 +644,7 @@ export default function AtlasMap({
       <div className="atlas-map-footer">
         <span className="atlas-map-key">
           <span aria-hidden="true" />
-          Selected places · not language boundaries
+          Selected localities · not language boundaries
         </span>
         <a
           href="https://www.naturalearthdata.com/"

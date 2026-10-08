@@ -1,3 +1,4 @@
+import { siteTerms } from "../data/site-terms";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { languages } from "../data/languages";
@@ -81,7 +82,7 @@ export default function TreeHomePage() {
               <thead>
                 <tr>
                   <th scope="col">Word</th>
-                  <th scope="col">Trial spelling</th>
+                  <th scope="col">{siteTerms.spelling}</th>
                   <th scope="col">IPA</th>
                 </tr>
               </thead>

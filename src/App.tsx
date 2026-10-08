@@ -1,3 +1,4 @@
+import { siteTerms } from "./data/site-terms";
 import { Suspense, lazy, useEffect, useLayoutEffect, useRef } from "react";
 import {
   Link,
@@ -200,10 +201,10 @@ export default function App() {
                 : ""
             }
           >
-            Language tree
+            {siteTerms.tree}
           </NavLink>
-          <NavLink to="/compare">Compare</NavLink>
-          <NavLink to="/romanization">Romanization</NavLink>
+          <NavLink to="/compare">{siteTerms.compare}</NavLink>
+          <NavLink to="/romanization">{siteTerms.romanization}</NavLink>
         </nav>
       </header>
       <div className="site-workspace">

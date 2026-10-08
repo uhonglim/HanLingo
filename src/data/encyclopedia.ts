@@ -330,12 +330,12 @@ const S = {
 export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
   mandarin: article(
     "Mandarin",
-    "A large regional group, a widely learned standard, and many local ways of speaking: three things worth keeping separate.",
+    "A group spanning northern and southwestern China, with regional varieties distinct from Standard Mandarin.",
     [
       section(
         "A group larger than its standard",
         "Mandarin names a broad part of the Sinitic landscape, extending across northern China and far into the southwest. It also appears in the name Standard Mandarin, the standardized variety familiar from many classrooms. Those meanings overlap, but they are not interchangeable. A local speaker in Chengdu or Nanjing does not simply reproduce the pronunciation and vocabulary of a standard-language lesson.",
-        "HanLingo therefore gives the standard its own role in comparison while organizing the atlas around regional groupings and localities. Beijing, Jinan, Nanjing, and Chengdu introduce four different routes through Mandarin.",
+        "Beijing, Jinan, Nanjing, and Chengdu belong to different Mandarin branches.",
       ),
       section(
         "What the standard’s sounds reveal",
@@ -352,13 +352,13 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
       ),
       section(
         "Reading the letter carefully",
-        "Our Mandarin letter is written in colloquial Standard Mandarin. It belongs beside the formal written version as a comparison of wording and register, but it is not evidence for local Beijing or Chengdu speech. Modern Standard Written Chinese is closely associated with Mandarin-based vernacular writing; its use by speakers of other groups does not make their everyday languages identical.",
+        "Our Mandarin letter is written in colloquial Standard Mandarin. It belongs beside the formal written version as a comparison of wording and register, but it is not evidence for local Beijing or Chengdu speech. Standard Written Chinese is closely associated with Mandarin-based vernacular writing; its use by speakers of other groups does not make their everyday languages identical.",
         "For a deeper comparison, follow a locality page first, then ask which speaker, context, and transcription a pronunciation represents. That sequence keeps an accessible overview connected to precise evidence.",
       ),
     ],
     [
-      ["Family branch", "Sinitic"],
-      ["Selected subgroups", "Beijing · Ji–Lu · Jianghuai · Southwestern"],
+      ["Family", "Sinitic"],
+      ["Selected branches", "Beijing · Ji–Lu · Jianghuai · Southwestern"],
       ["Letter reference", "Colloquial Standard Mandarin"],
     ],
     [
@@ -372,16 +372,16 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
   ),
   min: article(
     "Min",
-    "Fujian is a starting place, not a single sound system. Min opens into several branches with sharply different local histories and structures.",
+    "A group rooted in Fujian, with distinct branches across the coast, inland regions, Taiwan, and overseas communities.",
     [
       section(
         "Begin with more than Southern Min",
-        "Min is a diverse Sinitic grouping associated especially with Fujian, with communities extending into neighboring regions, Taiwan, and overseas. Southern Min is one major part of this landscape. Eastern Min, Northern Min, Central Min, and Puxian also deserve their own entries. Treating a Xiamen example as the pronunciation of every Min variety would hide the central fact this atlas is designed to show.",
-        "Our five selected Min branches are an introduction. Other classifications add or rearrange divisions, so the navigation does not claim to settle the complete family tree.",
+        "Min is a Sinitic group rooted in Fujian, with communities in neighboring regions, Taiwan, and overseas. Southern Min, Eastern Min, Northern Min, Central Min, and Puxian have distinct local sound systems. An Amoy pronunciation cannot represent them all.",
+        "These five branches are a selection; classifications differ in the divisions they recognize.",
       ),
       section(
-        "Why one extra level matters",
-        "The route to Xiamen passes through Southern Min and the Quanzhang cluster. Quanzhou and Zhangzhou belong in that same cluster, but retain local identities. Academia Sinica’s database separates a broad region, a cluster, and an individual survey point. That distinction makes a useful editorial rule: keep the intermediate level when it carries information, instead of forcing every branch into the same four boxes.",
+        "Branches, clusters, and localities",
+        "Amoy belongs to the Tsuan-Chiang cluster of Southern Min, alongside Tsuân-tsiu and Tsiang-tsiu. Academia Sinica’s database uses the names Xiamen, Quanzhou, Zhangzhou, and Quanzhang, and distinguishes the branch, cluster, and survey locality.",
       ),
       section(
         "More than one reading of a character",
@@ -395,14 +395,14 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
       ),
       section(
         "Writing and contemporary comparison",
-        "The letter in this edition is intended as a Xiamen Southern Min example and remains a contributor draft awaiting local review. It is a readable entry point, not a standardized text for the entire group. Its character choices and phrasing need to be assessed alongside the intended variety.",
-        "Explore Xiamen, Quanzhou, and Zhangzhou together, then move to Fuzhou, Putian, Jian’ou, or Yong’an. The comparison broadens from variation within a cluster to differences between branches. Geography helps organize that journey without pretending that a provincial boundary is a language boundary.",
+        "The Amoy letter is a contributor draft awaiting local-speaker review of vocabulary, grammar, and character choices. It does not represent every Min variety.",
+        "Comparing Amoy, Tsuân-tsiu, and Tsiang-tsiu shows variation within Tsuan-Chiang. Fuzhou, Putian, Jian’ou, and Yong’an extend that comparison to other Min branches.",
       ),
     ],
     [
       ["Selected branches", "Southern · Eastern · Northern · Puxian · Central"],
-      ["Featured path", "Min → Southern Min → Quanzhang → Xiamen"],
-      ["Letter reference", "Intended Xiamen Southern Min"],
+      ["Featured path", "Min → Southern Min → Tsuan-Chiang → Amoy"],
+      ["Letter reference", "Amoy Southern Min — awaiting local review"],
     ],
     [
       S.minIntro,
@@ -416,12 +416,12 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
   ),
   yue: article(
     "Yue",
-    "The Yue group includes Guangzhou and Hong Kong Cantonese, Taishanese, and other regional varieties. Each local page identifies its own variety.",
+    "Cantonese, Taishanese, and other varieties across Guangdong, Guangxi, Hong Kong, and overseas communities.",
     [
       section(
         "Cantonese within a wider group",
         "Yue includes Cantonese as associated with Guangzhou and Hong Kong, as well as regional varieties that should not be collapsed into that familiar reference. Our atlas selects Guangfu, Siyi, and Goulou. These paths connect the Pearl River region with Taishan and with Yulin in southeastern Guangxi, making internal diversity visible before detailed pronunciation is introduced.",
-        "The word Cantonese is sometimes used broadly in source literature. On HanLingo, a precise locality or a clearly identified broader group takes priority over assuming that every use of the English name has the same scope.",
+        "Some sources use Cantonese for a wider range of Yue varieties. Here, Cantonese refers to Guangzhou and Hong Kong varieties unless another locality is specified.",
       ),
       section(
         "The sound of a checked syllable",
@@ -435,16 +435,16 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
       ),
       section(
         "Speech and writing are different layers",
-        "Written Cantonese and Modern Standard Written Chinese differ in vocabulary and grammar. This makes the letter comparison more than an exercise in reading shared characters with different pronunciations. Look at the pronouns, everyday verbs, and grammatical words: wording belongs to the variety and register being represented.",
+        "Written Cantonese and Standard Written Chinese differ in vocabulary and grammar. This makes the letter comparison more than an exercise in reading shared characters with different pronunciations. Look at the pronouns, everyday verbs, and grammatical words: wording belongs to the variety and register being represented.",
         "Our Guangfu letter is a contributor sample awaiting review. It is not a Taishan or Yulin letter, and its accessible character text does not substitute for a verified local recording.",
       ),
       section(
         "How to read the map",
-        "A point at Guangzhou or Hong Kong names a reference locality, not a boundary around everyone who speaks Cantonese. The same caution matters even more when an inland variety is represented by one city. Begin with the subgroup, read the locality’s evidence, and compare like with like. This preserves the connection between the broad Yue label and the specific speech being described.",
+        "A point at Guangzhou or Hong Kong names a reference locality, not a boundary around everyone who speaks Cantonese. The same caution matters even more when an inland variety is represented by one city. Begin with the branch, read the locality’s evidence, and compare like with like. This preserves the connection between the broad Yue label and the specific speech being described.",
       ),
     ],
     [
-      ["Selected subgroups", "Guangfu · Siyi · Goulou"],
+      ["Selected branches", "Guangfu · Siyi · Goulou"],
       ["Featured reference", "Guangzhou Cantonese"],
       ["Sound focus", "Checked syllables and local tone systems"],
     ],
@@ -459,11 +459,11 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
   ),
   hakka: article(
     "Hakka",
-    "A language group connected across dispersed communities, with Meixian, Hailu, and Tingzhou offering distinct places to begin.",
+    "A group spoken across southern China, Taiwan, and overseas communities, with distinct local sound systems.",
     [
       section(
         "Communities across regions",
-        "Hakka is spoken in communities across southern China, Taiwan, and overseas. Concentrations in Guangdong, western Fujian, and southern Jiangxi help orient the map, but a single continuous colored territory would be a poor description of this distribution. HanLingo instead connects selected localities through named regional groupings.",
+        "Hakka is spoken in communities across southern China, Taiwan, and overseas, with concentrations in Guangdong, western Fujian, and southern Jiangxi. Its distribution is dispersed rather than one continuous territory.",
         "Meixian is a familiar reference variety, not the pronunciation of every Hakka community. The presence of separate Taiwanese Hakka dictionary and teaching varieties is another reminder that a shared group name leaves room for substantial local differentiation.",
       ),
       section(
@@ -488,7 +488,7 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
       ),
     ],
     [
-      ["Selected subgroups", "Yue–Tai · Hailu · Tingzhou"],
+      ["Selected branches", "Yue–Tai · Hailu · Tingzhou"],
       ["Letter reference", "Intended Meixian Hakka"],
       ["Map caution", "Hailu points identify a reference area"],
     ],
@@ -504,12 +504,12 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
   ),
   wu: article(
     "Wu",
-    "From the lower Yangtze to southern Zhejiang, Wu shows how consonants, voice quality, and a word’s melody work together.",
+    "Varieties of the lower Yangtze and Zhejiang, known for contrasts in voice quality and connected-speech tones.",
     [
       section(
         "Shanghai is one starting point",
         "Wu is associated with Shanghai, southern Jiangsu, Zhejiang, and neighboring areas. Shanghainese is a prominent local example, but the group also includes Suzhou, Wenzhou, Lishui, and many other varieties. The first task is therefore to distinguish the group from its most familiar city name.",
-        "HanLingo follows three selected regional routes: Taihu in the north, Oujiang around Wenzhou, and Chuqu inland. They are an introductory selection, not a complete inventory of Wu subgroups.",
+        "The three Wu branches shown here are Taihu in the north, Oujiang around Wenzhou, and Chuqu inland. Other branches lie outside this selection.",
       ),
       section(
         "Consonants and voice quality",
@@ -529,11 +529,11 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
       section(
         "A written example needs a local label",
         "The Wu letter is intended as Shanghai speech and remains a contributor draft. Its character forms offer a way into vocabulary and phrasing, but they cannot supply verified sound on their own. A Suzhou or Wenzhou version would require separate local work.",
-        "Read the Shanghai letter alongside the formal written reference, then explore the other Wu entries as their own varieties. This keeps a shared writing tradition visible while leaving room for the substantial spoken differences that the map introduces.",
+        "The Shanghai letter and the Standard Written Chinese letter differ in vocabulary, phrasing, and style.",
       ),
     ],
     [
-      ["Selected subgroups", "Taihu · Oujiang · Chuqu"],
+      ["Selected branches", "Taihu · Oujiang · Chuqu"],
       ["Letter reference", "Intended Shanghai Wu"],
       ["Research themes", "Voice quality · vowels · tone sandhi"],
     ],
@@ -553,7 +553,7 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
 export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   "mandarin/beijing": article(
     "Beijing Mandarin",
-    "A northern regional grouping whose best-known locality must still be distinguished from the national standard.",
+    "The northern Mandarin branch that includes local Beijing speech.",
     [
       section(
         "Group, city, and standard",
@@ -572,7 +572,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "mandarin/jilu": article(
     "Ji–Lu Mandarin",
-    "A northern Mandarin route through parts of Hebei and Shandong, represented by Jinan.",
+    "A Mandarin branch in parts of Hebei and Shandong, including Jinan.",
     [
       section(
         "A regional classification",
@@ -580,7 +580,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Why Jinan is informative",
-        "Research on Jinan tone sandhi examines a process sensitive to the position of a syllable in a sequence. This gives the subgroup page a concrete question: how does a local variety organize tones once words are combined? Consult the locality page before applying a familiar Standard Mandarin rule. The study supports a specific Jinan pattern, not an identical rule throughout Ji–Lu.",
+        "Research on Jinan tone sandhi examines a process sensitive to the position of a syllable in a sequence. This raises a concrete question: how does a local variety organize tones once words are combined? Consult the locality page before applying a familiar Standard Mandarin rule. The study supports a specific Jinan pattern, not an identical rule throughout Ji–Lu.",
       ),
     ],
     [
@@ -592,11 +592,11 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "mandarin/jianghuai": article(
     "Jianghuai Mandarin",
-    "A lower Yangtze grouping that broadens what Mandarin can mean.",
+    "Mandarin varieties of the lower Yangtze, including Nanjing, Yangzhou, and Hefei.",
     [
       section(
         "The lower Yangtze route",
-        "Jianghuai includes local varieties associated with Nanjing, Yangzhou, and Hefei. Nanjing is the mapped example in this edition; Yangzhou appears in the wider place listing. The subgroup is useful precisely because it prevents Mandarin from being equated with the speech of Beijing or with one standardized pronunciation.",
+        "Jianghuai includes local varieties associated with Nanjing, Yangzhou, and Hefei. Nanjing is the mapped example in this edition; Yangzhou appears in the wider place listing. This branch matters because it prevents Mandarin from being equated with the speech of Beijing or with one standardized pronunciation.",
       ),
       section(
         "Local tones and historical names",
@@ -612,11 +612,11 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "mandarin/southwestern": article(
     "Southwestern Mandarin",
-    "A wide Mandarin region with Chengdu as the first local reference.",
+    "A Mandarin branch across southwestern China, including Chengdu and Chongqing.",
     [
       section(
         "A broad grouping",
-        "Southwestern Mandarin includes the Chengdu and Chongqing varieties and extends well beyond either city. Chengdu is the selected map point, not a substitute for the whole southwest. The route deliberately stops at a useful level of detail; specialized classifications may insert additional regional clusters between the subgroup and an individual locality.",
+        "Southwestern Mandarin includes the Chengdu and Chongqing varieties and extends well beyond either city. Chengdu is the selected map point, not a substitute for the whole southwest. The route deliberately stops at a useful level of detail; specialized classifications may insert additional regional clusters between the branch and an individual locality.",
       ),
       section(
         "Compare actual local features",
@@ -632,11 +632,11 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "min/southern-min": article(
     "Southern Min",
-    "A major Min branch represented here by localities in two clusters: Tsuan-Chiang and Teo Swa.",
+    "The Min branch that includes the Tsuan-Chiang and Teo Swa clusters.",
     [
       section(
         "Two clusters of localities",
-        "Tsuan-Chiang, called Quanzhang in linguistic sources, connects Quanzhou, Zhangzhou, and Xiamen with selected localities in Taiwan, Singapore, and George Town. Teo Swa, also called Chaoshan, forms a separate regional cluster represented here by Teochew and Swatow in eastern Guangdong. These locality references include cities, towns, and districts; a shared place label does not imply a uniform accent.",
+        "Tsuan-Chiang, called Quanzhang in linguistic sources, includes Tsuân-tsiu, Tsiang-tsiu, and Amoy, with related varieties in Taiwan, Singapore, and Penang. Teo Swa, also called Chaoshan, is a separate cluster represented here by Teochew and Swatow in eastern Guangdong. Localities within either cluster have their own pronunciations.",
       ),
       section(
         "Readings and connected speech",
@@ -646,13 +646,26 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Selected clusters", "Tsuan-Chiang · Teo Swa"],
-      ["Taiwan references", "Taipak · Tâi-lâm · Ko-hiông · Gî-lân · Lo̍k-káng · Sam-kiap"],
+      [
+        "Taiwan references",
+        "Taipak · Tâi-lâm · Ko-hiông · Gî-lân · Lo̍k-káng · Sam-kiap",
+      ],
     ],
-    [S.minIntro, S.minGuide, S.xiamen, S.zhangzhou, S.taiwanVariation, S.singaporeHokkien, S.penangFieldwork, chaoshanArticles.chaozhou.sources[0], chaoshanArticles.chaozhou.sources[2]],
+    [
+      S.minIntro,
+      S.minGuide,
+      S.xiamen,
+      S.zhangzhou,
+      S.taiwanVariation,
+      S.singaporeHokkien,
+      S.penangFieldwork,
+      chaoshanArticles.chaozhou.sources[0],
+      chaoshanArticles.chaozhou.sources[2],
+    ],
   ),
   "min/eastern-min": article(
     "Eastern Min",
-    "Fuzhou opens a separate branch of Min, with its own organization of syllables and phrases.",
+    "The Min branch that includes Fuzhou, with its own syllable structure and tone sandhi.",
     [
       section(
         "A separate route through Min",
@@ -672,7 +685,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "min/northern-min": article(
     "Northern Min",
-    "An inland Min branch introduced through Jian’ou and comparative rhyme research.",
+    "An inland Min branch in northern Fujian, including Jian’ou.",
     [
       section(
         "Jian’ou within a wider branch",
@@ -692,7 +705,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "min/puxian": article(
     "Puxian Min",
-    "A branch associated with Putian and Xianyou, whose position illuminates the difference between geography and genealogy.",
+    "The Min branch associated with Putian and Xianyou.",
     [
       section(
         "Two names, a regional branch",
@@ -712,15 +725,15 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "min/central-min": article(
     "Central Min",
-    "An inland branch where Yong’an offers a revealing comparison of syllable endings.",
+    "An inland Min branch in Fujian, including Yong’an.",
     [
       section(
         "An inland reference",
-        "Central Min is one of the branches selected for the initial Min overview. Yong’an is its current local example. Keeping it separate from Northern Min makes the map more informative: the inland location of two communities does not mean their sound systems or subgroup membership are identical.",
+        "Central Min is one of the branches selected for the initial Min overview. Yong’an is its current local example. Keeping it separate from Northern Min makes the map more informative: the inland location of two communities does not mean their sound systems or branch membership are identical.",
       ),
       section(
         "A concrete comparison",
-        "Comparative work on Min codas describes a distinctive pattern in Yong’an, where nasal endings developed differently from those in Jian’ou and coastal examples. The study uses these differences to investigate earlier forms. For the present-day atlas, the lesson is to preserve local details before drawing a generalization. A future sound table should identify the source, reading layer, and attested variety rather than filling its cells from another Min branch.",
+        "Comparative work on Min syllable endings describes a distinctive pattern in Yong’an, where nasal endings developed differently from those in Jian’ou and coastal varieties. The study uses these differences to investigate earlier forms; its historical reconstruction is distinct from a present-day pronunciation record.",
       ),
     ],
     [
@@ -732,7 +745,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "yue/guangfu": article(
     "Guangfu",
-    "The Yue route connecting Guangzhou and Hong Kong Cantonese.",
+    "The Yue branch that includes Guangzhou and Hong Kong Cantonese.",
     [
       section(
         "A familiar reference area",
@@ -740,7 +753,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Speech, tones, and writing",
-        "Cantonese research documents unreleased final stops, checked syllables, and lexical tone contrasts. Written Cantonese also has vocabulary and grammar that differ from Modern Standard Written Chinese. Those two observations belong together: a local written text is not simply the formal written language pronounced differently. The contributor letter is labeled Guangfu Cantonese and remains open to review; it does not establish identical usage in every Guangfu locality.",
+        "Cantonese research documents unreleased final stops, checked syllables, and lexical tone contrasts. Written Cantonese also has vocabulary and grammar that differ from Standard Written Chinese. Those two observations belong together: a local written text is not simply the formal written language pronounced differently. The contributor letter is labeled Guangfu Cantonese and remains open to review; it does not establish identical usage in every Guangfu locality.",
       ),
     ],
     [
@@ -752,7 +765,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "yue/siyi": article(
     "Siyi",
-    "A Yue subgroup in which Taishan is a distinct voice, not a spelling variant of Guangzhou Cantonese.",
+    "The Yue branch that includes Taishan, Kaiping, Enping, and Xinhui.",
     [
       section(
         "The selected regional set",
@@ -772,7 +785,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "yue/goulou": article(
     "Goulou",
-    "An inland Yue route that brings southeastern Guangxi into the comparison.",
+    "An inland Yue branch extending into southeastern Guangxi, including Yulin.",
     [
       section(
         "Beyond the Cantonese reference",
@@ -792,15 +805,15 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "hakka/yuetai": article(
     "Yue–Tai",
-    "A classification label linking part of Guangdong’s Hakka landscape with varieties in Taiwan.",
+    "A Hakka branch linking varieties in Guangdong and Taiwan, including Meixian.",
     [
       section(
         "What the name does",
-        "Yue–Tai is a Hakka subgroup label in the classification used here. Meixian is its selected locality. The name should not be read as the unrelated Yue language group plus a second language: here Yue refers to Guangdong within a regional Hakka classification. Other schemes draw some of the internal boundaries differently.",
+        "Yue–Tai is a Hakka branch label in the classification used here. Meixian is its selected locality. The name should not be read as the unrelated Yue language group plus a second language: here Yue refers to Guangdong within a regional Hakka classification. Other schemes draw some of the internal boundaries differently.",
       ),
       section(
         "A reference is not a universal standard",
-        "Meixian research supplies detailed phonetic evidence, while Taiwan’s official resources distinguish named varieties such as Sixian and Hailu. Their coexistence is a reason to preserve precise labels, not to merge all dictionary readings into one chart. Follow Meixian for the current letter comparison; consult variety-specific Taiwanese resources on their own terms when broadening the project.",
+        "Meixian research supplies detailed phonetic evidence. Taiwan’s official resources separately document Sixian, Hailu, and other varieties. A Taiwanese dictionary reading does not automatically represent Meixian.",
       ),
     ],
     [
@@ -812,7 +825,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "hakka/hailu": article(
     "Hailu",
-    "A name connecting Haifeng and Lufeng, with a more complex modern geography than two city pins suggest.",
+    "Hakka communities connected to Haifeng, Lufeng, and Luhe, with related varieties in Taiwan.",
     [
       section(
         "Names and communities",
@@ -832,7 +845,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "hakka/tingzhou": article(
     "Tingzhou",
-    "A western Fujian Hakka grouping introduced through Changting.",
+    "A Hakka branch in western Fujian, including Changting.",
     [
       section(
         "A regional route",
@@ -840,7 +853,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Tone sandhi as a local question",
-        "Changting has a substantial research literature on how tones change in combinations of two and three syllables. Descriptions and theoretical analyses have not always agreed, and later work revisits the data. This makes Tingzhou a useful route for learning how linguistic evidence develops. Begin with the locality and study conditions, then compare the proposed patterns; a compact subgroup label cannot replace that detailed work.",
+        "Changting has a substantial research literature on how tones change in combinations of two and three syllables. Descriptions and theoretical analyses have not always agreed, and later work revisits the data. This makes Tingzhou a useful route for learning how linguistic evidence develops. Begin with the locality and study conditions, then compare the proposed patterns; a branch label cannot replace that detailed work.",
       ),
     ],
     [
@@ -872,7 +885,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "wu/oujiang": article(
     "Oujiang",
-    "A southern Wu route centered on the Wenzhou reference area.",
+    "A Wu branch around Wenzhou and the Ou River in southern Zhejiang.",
     [
       section(
         "A distinct Wu setting",
@@ -880,7 +893,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Melody, duration, and voice",
-        "Research on Wenzhou examines complex tone sandhi, speaker differences, and the contribution of phonation to tonal perception. These are related dimensions rather than interchangeable explanations. Read the locality page for the evidence behind each claim. A tonal pattern reported for one combination or speaker should not be converted into a universal rule for every Oujiang community; the subgroup name supplies orientation, not a complete phonological description.",
+        "Research on Wenzhou examines complex tone sandhi, speaker differences, and the contribution of phonation to tonal perception. These are related dimensions rather than interchangeable explanations. Read the locality page for the evidence behind each claim. A tonal pattern reported for one combination or speaker should not be converted into a universal rule for every Oujiang community; the branch name supplies orientation, not a complete phonological description.",
       ),
     ],
     [
@@ -892,7 +905,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "wu/chuqu": article(
     "Chuqu",
-    "An inland Wu grouping represented by Lishui, where familiar generalizations need careful checking.",
+    "An inland Wu branch that includes Lishui.",
     [
       section(
         "Lishui in context",
@@ -916,7 +929,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ...chaoshanArticles,
   "beijing-city": article(
     "Beijing Mandarin",
-    "Local Beijing speech belongs in the atlas alongside, not underneath, the standardized Mandarin reference.",
+    "Local Beijing speech, distinct from the codified pronunciation of Standard Mandarin.",
     [
       section(
         "A city variety and a standard",
@@ -929,14 +942,14 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Mandarin"],
-      ["Subgroup", "Beijing"],
+      ["Branch", "Beijing"],
       ["Reference type", "Local variety"],
     ],
     [S.classification, S.standard, S.mandarinSandhi],
   ),
   jinan: article(
     "Jinan",
-    "A Ji–Lu Mandarin reference whose tone patterns deserve to be studied on their own terms.",
+    "Ji–Lu Mandarin in Shandong, with tone changes that depend on a syllable’s position.",
     [
       section(
         "The Shandong route",
@@ -949,14 +962,14 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Mandarin"],
-      ["Subgroup", "Ji–Lu"],
+      ["Branch", "Ji–Lu"],
       ["Study focus", "Position-sensitive tone sandhi"],
     ],
     [S.classification, S.jinan],
   ),
   nanjing: article(
     "Nanjing",
-    "A present-day Jianghuai variety, distinct from historical uses of the name Nanjing Mandarin.",
+    "Jianghuai Mandarin in Nanjing, distinct from historical uses of the name Nanjing Mandarin.",
     [
       section(
         "A lower Yangtze reference",
@@ -968,23 +981,23 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "A historical label needs a date",
-        "Research on Ming-period Nanjing Mandarin discusses a flexible prestige system with more than one regional source. That historical term cannot be equated automatically with today’s urban speech. HanLingo keeps the present-day locality primary and uses this history only to explain why similarly named records may document different things.",
+        "Research on Ming-period Nanjing Mandarin describes a flexible prestige system with several regional sources. The historical term does not designate the same variety as present-day urban Nanjing speech.",
       ),
     ],
     [
       ["Group", "Mandarin"],
-      ["Subgroup", "Jianghuai"],
+      ["Branch", "Jianghuai"],
       ["Regional setting", "Lower Yangtze"],
     ],
     [S.classification, S.nanjing, S.nanjingHistory],
   ),
   chengdu: article(
     "Chengdu",
-    "The Southwestern Mandarin point that makes a broad regional label concrete.",
+    "Southwestern Mandarin in Chengdu, with locally documented vowels and glide patterns.",
     [
       section(
         "Within Southwestern Mandarin",
-        "Chengdu is a local variety within Southwestern Mandarin, not a subgroup at the same level as Southwestern itself. The site shortens the route to Sinitic → Mandarin → Southwestern Mandarin → Chengdu. Specialist classifications may place further regional groupings in between.",
+        "Chengdu is a local variety within Southwestern Mandarin, not a branch at the same level as Southwestern itself. The site shortens the route to Sinitic → Mandarin → Southwestern Mandarin → Chengdu. Specialist classifications may place further regional groupings in between.",
       ),
       section(
         "A city needs its own sound evidence",
@@ -992,23 +1005,23 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Comparing with the letter",
-        "The project’s Mandarin letter is colloquial Standard Mandarin. Reading it alongside this page can prompt questions about local vocabulary and pronunciation, but it does not turn the letter into a Chengdu sample. A verified Chengdu version would require its own contributor and review.",
+        "The comparison letter is colloquial Standard Mandarin. It is not a verified sample of Chengdu vocabulary or pronunciation.",
       ),
     ],
     [
       ["Group", "Mandarin"],
-      ["Subgroup", "Southwestern"],
+      ["Branch", "Southwestern"],
       ["Sound topic", "Vowels and glide patterns"],
     ],
     [S.chengdu, S.southwest],
   ),
   xiamen: article(
-    "Xiamen",
-    "A Southern Min locality reached through the Quanzhang cluster, and the intended reference for the Min letter.",
+    "Amoy",
+    "Southern Min in Amoy, within the Tsuan-Chiang cluster.",
     [
       section(
-        "Why the path has five steps",
-        "Xiamen is a local variety, while Quanzhang is the cluster above it. Academia Sinica’s database explicitly separates Southern Min, Quanzhang, and Xiamen at different descriptive levels. Quanzhou and Zhangzhou provide nearby comparison points within the cluster; Southern Min extends beyond all three.",
+        "Within Tsuan-Chiang",
+        "Amoy is the established local name for Xiamen. Its Southern Min variety belongs to Tsuan-Chiang, called Quanzhang in Academia Sinica’s database. Tsuân-tsiu and Tsiang-tsiu are neighboring localities within the same cluster; Southern Min also includes other clusters.",
       ),
       section(
         "A phrase is more than isolated readings",
@@ -1016,23 +1029,23 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "The contributed letter",
-        "The Min letter targets Xiamen Southern Min, but its vocabulary, grammar, and character choices remain open to local-speaker review. It is useful as a shared-text comparison now; it is not yet a verified phonetic transcript. No unreviewed IPA or synthetic local voice is attached to it.",
+        "The Amoy letter awaits local-speaker review of its vocabulary, grammar, and character choices. It has no full-letter IPA transcription or audio.",
       ),
     ],
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Quanzhang"],
+      ["Cluster", "Tsuan-Chiang"],
     ],
     [S.minGuide, S.minIntro, S.xiamen],
   ),
   quanzhou: article(
     "Tsuân-tsiu",
-    "A Quanzhang locality where different reading layers make sound comparison especially revealing.",
+    "Southern Min in Tsuân-tsiu, with distinct literary and colloquial readings.",
     [
       section(
-        "A local voice within Quanzhang",
-        "Quanzhou appears beside Xiamen and Zhangzhou within the Quanzhang cluster of Southern Min. Sharing that cluster does not make the three names interchangeable. The atlas keeps separate points so that a word, recording, or pronunciation can retain its actual locality.",
+        "Within Tsuan-Chiang",
+        "Tsuân-tsiu, called Quanzhou in Mandarin and in the cited research, belongs to Tsuan-Chiang alongside Amoy and Tsiang-tsiu. Their local readings differ even within the shared cluster.",
       ),
       section(
         "Literary and colloquial layers",
@@ -1046,17 +1059,17 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Quanzhang"],
+      ["Cluster", "Tsuan-Chiang"],
     ],
     [S.minIntro, S.minCodas, S.minGuide],
   ),
   zhangzhou: article(
     "Tsiang-tsiu",
-    "A Southern Min locality where tone patterns interact with how words are formed.",
+    "Southern Min in Tsiang-tsiu, where word formation interacts with tone sandhi.",
     [
       section(
-        "The Quanzhang route",
-        "Zhangzhou is one of the atlas’s three Fujian localities in the Quanzhang cluster, alongside Quanzhou and Xiamen. The cluster label also connects regional and community Hokkien entries while preserving their individual descriptions. Quanzhang itself is not a single city dialect.",
+        "Within Tsuan-Chiang",
+        "Tsiang-tsiu, called Zhangzhou in Mandarin and in the cited research, belongs to Tsuan-Chiang alongside Tsuân-tsiu and Amoy. The cluster includes related Hokkien varieties beyond Fujian, each with its own local development.",
       ),
       section(
         "Word formation and tone",
@@ -1064,7 +1077,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Keep the source’s variety",
-        "A study’s Zhangzhou data should not be expanded to every speaker across a prefecture, and the atlas does not supply a complete local inventory from one paper. Likewise, the project’s Xiamen letter is a neighboring comparison, not a verified Zhangzhou version. Local wording and readings remain necessary evidence.",
+        "The cited study documents particular Zhangzhou data, not every speaker across the prefecture. The nearby Amoy letter is not a verified Tsiang-tsiu text.",
       ),
     ],
     [
@@ -1074,9 +1087,9 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [S.minIntro, S.zhangzhou],
   ),
-  "taipak": article(
+  taipak: article(
     "Taipak",
-    "The Taipei locality reference, with a named city reading in the Ministry of Education’s Taigi dictionary.",
+    "Hokkien in Taipak, represented by a Quanzhou-leaning reading in the Ministry of Education dictionary.",
     [
       section(
         "A Taipei reference reading",
@@ -1099,11 +1112,16 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["Map anchor", "Taipak — city reference, not a dialect boundary"],
       ["Dictionary reference", "Taipei, Quanzhou-leaning reading"],
     ],
-    [S.taiwanNames, S.taiwanVariation, S.taiwanDictionary, S.taiwanDictionaryGuide],
+    [
+      S.taiwanNames,
+      S.taiwanVariation,
+      S.taiwanDictionary,
+      S.taiwanDictionaryGuide,
+    ],
   ),
   tainan: article(
     "Tâi-lâm",
-    "The Tainan locality reference, named separately in the Ministry of Education’s comparison of Taiwan pronunciations.",
+    "Hokkien in Tâi-lâm, with its own mixed reference variety in the Ministry of Education dictionary.",
     [
       section(
         "Tainan’s dictionary reference",
@@ -1128,7 +1146,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   kaohsiung: article(
     "Ko-hiông",
-    "Hokkien in Kaohsiung: everyday words and names from the city’s streets and stations.",
+    "Hokkien in Ko-hiông: everyday words and place names from the city’s streets and stations.",
     [
       section(
         "Everyday words",
@@ -1153,7 +1171,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   yilan: article(
     "Gî-lân",
-    "The Yilan locality reference, with a distinct named column in the Ministry of Education’s regional dictionary tables.",
+    "Hokkien in Gî-lân, represented by a Zhangzhou-leaning reading in the Ministry of Education dictionary.",
     [
       section(
         "The Yilan reference",
@@ -1171,14 +1189,17 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["Entry type", "Locality reference"],
       ["English name", "Yilan"],
       ["Name convention", "Gî-lân — MOE Tâi-lô place name"],
-      ["Dictionary reference", "宜蘭偏漳腔 — Yilan Zhangzhou-leaning reference"],
+      [
+        "Dictionary reference",
+        "宜蘭偏漳腔 — Yilan Zhangzhou-leaning reference",
+      ],
       ["Map anchor", "Yilan city center; not a dialect boundary"],
     ],
     [S.yilanName, S.taiwanRice, S.taiwanLunchbox],
   ),
   lukang: article(
     "Lo̍k-káng",
-    "The Lukang town reference, kept distinct from the other Quanzhou-leaning localities in the dictionary.",
+    "Hokkien in Lo̍k-káng, a township with a distinct Quanzhou-leaning dictionary reference.",
     [
       section(
         "Lukang as a named locality",
@@ -1197,14 +1218,17 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["English name", "Lukang"],
       ["Administrative unit", "Township"],
       ["Name convention", "Lo̍k-káng-tìn — MOE Tâi-lô; short name Lo̍k-káng"],
-      ["Dictionary reference", "鹿港偏泉腔 — Lukang Quanzhou-leaning reference"],
+      [
+        "Dictionary reference",
+        "鹿港偏泉腔 — Lukang Quanzhou-leaning reference",
+      ],
       ["Map anchor", "Lukang town center; not a dialect boundary"],
     ],
     [S.lukangName, S.taiwanShu, S.taiwanRice],
   ),
   sanxia: article(
     "Sam-kiap",
-    "The Sanxia locality in New Taipei, with its own Quanzhou-leaning reference in the Ministry of Education dictionary.",
+    "Hokkien in Sam-kiap, a district of New Taipei with its own Quanzhou-leaning dictionary reference.",
     [
       section(
         "A separate New Taipei locality",
@@ -1223,14 +1247,17 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["English name", "Sanxia"],
       ["Administrative unit", "District of New Taipei"],
       ["Name convention", "Sam-kiap-khu — MOE Tâi-lô; short name Sam-kiap"],
-      ["Dictionary reference", "三峽偏泉腔 — Sanxia Quanzhou-leaning reference"],
+      [
+        "Dictionary reference",
+        "三峽偏泉腔 — Sanxia Quanzhou-leaning reference",
+      ],
       ["Map anchor", "Sanxia district center; not a dialect boundary"],
     ],
     [S.sanxiaName, S.taiwanShu, S.taiwanLunchbox],
   ),
-  "singapore": article(
+  singapore: article(
     "Sin-ka-pho",
-    "Hokkien in the city-state of Singapore, connected with several southern Fujian accents and a multilingual local environment.",
+    "Hokkien in Sin-ka-pho, shaped by southern Fujian accents and contact with Malay, English, and Cantonese.",
     [
       section(
         "What Hokkien means in Singapore",
@@ -1256,11 +1283,17 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["Map anchor", "Singapore — city reference, not a dialect boundary"],
       ["Documented contact", "Malay · English · Cantonese"],
     ],
-    [S.singaporeHokkien, S.singaporeCommunity, S.singaporeCourse, S.singaporeOralHistory, S.singaporeName],
+    [
+      S.singaporeHokkien,
+      S.singaporeCommunity,
+      S.singaporeCourse,
+      S.singaporeOralHistory,
+      S.singaporeName,
+    ],
   ),
   "george-town": article(
     "Pho Te",
-    "George Town on Penang Island, introduced through research and learning resources for Penang Hokkien.",
+    "Hokkien in Pho Te, George Town on Penang Island, within the wider Penang Hokkien community.",
     [
       section(
         "George Town and Penang Hokkien",
@@ -1282,15 +1315,24 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["Cluster", "Tsuan-Chiang"],
       ["Entry type", "Locality reference"],
       ["English name", "George Town"],
-      ["Name source", "Pho3 Te4 — Taiji Romanisation; Pho Te omits the source’s tone-category digits"],
+      [
+        "Name source",
+        "Pho3 Te4 — Taiji Romanisation; Pho Te omits the source’s tone-category digits",
+      ],
       ["Map anchor", "George Town — city reference, not a dialect boundary"],
       ["Country", "Malaysia"],
     ],
-    [S.penangFieldwork, S.penangDictionary, S.penangPhrasebook, S.georgeTownStreets, S.georgeTownName],
+    [
+      S.penangFieldwork,
+      S.penangDictionary,
+      S.penangPhrasebook,
+      S.georgeTownStreets,
+      S.georgeTownName,
+    ],
   ),
   fuzhou: article(
     "Fuzhou",
-    "An Eastern Min reference where the shape of a phrase helps determine its pronunciation.",
+    "Eastern Min in Fuzhou, where phrase structure helps shape pronunciation.",
     [
       section(
         "Eastern Min, not Southern Min",
@@ -1314,7 +1356,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   jianou: article(
     "Jian’ou",
-    "A Northern Min locality whose rhyme system helps reveal relationships hidden by surface pronunciation.",
+    "Northern Min in Jian’ou, with syllable endings documented in comparative research.",
     [
       section(
         "The northern Fujian point",
@@ -1338,7 +1380,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   putian: article(
     "Putian",
-    "The mapped Puxian reference, a useful case for separating a neighboring location from a proven linguistic relationship.",
+    "Puxian Min in Putian, on the Fujian coast.",
     [
       section(
         "Putian and Puxian",
@@ -1350,7 +1392,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "What the page can establish",
-        "The current evidence supports a local introduction and an explanation of classification, not a complete modern Putian pronunciation course. A future sample must specify the particular speaker and reading context. The Xiamen letter remains a Southern Min reference and is not reused as though all Fujian varieties share its wording.",
+        "The sources support an introduction to Putian’s classification and sound history. There is no reviewed Putian letter or pronunciation course here yet; the Amoy letter belongs to a different Min branch.",
       ),
     ],
     [
@@ -1362,11 +1404,11 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   yongan: article(
     "Yong’an",
-    "A Central Min reference that makes inland diversity visible through syllable endings.",
+    "Central Min in Yong’an, with distinctive developments in syllable endings.",
     [
       section(
         "A separate inland branch",
-        "Yong’an is the mapped locality for Central Min. It should not be folded into Northern Min merely because both lie away from the familiar southern coastal reference points. The subgroup label records a linguistic classification, while the coordinate supplies geographic orientation.",
+        "Yong’an is the mapped locality for Central Min. It should not be folded into Northern Min merely because both lie away from the familiar southern coastal reference points. The branch label records a linguistic classification, while the coordinate supplies geographic orientation.",
       ),
       section(
         "Nasal endings as evidence",
@@ -1374,7 +1416,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "A bounded introduction",
-        "The discussion here summarizes that comparative role without converting historical analysis into an invented modern word list. To add pronunciation, the project needs an attested local form, a defined reading, and a source. The nearby Min pages provide comparisons, but neither their tone charts nor the supplied Xiamen letter should be treated as Yong’an material.",
+        "Historical sound correspondences do not supply a complete modern Yong’an word list. The Amoy letter and other Min tone charts describe their own localities, not Yong’an.",
       ),
     ],
     [
@@ -1386,7 +1428,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   guangzhou: article(
     "Guangzhou Cantonese",
-    "A Guangfu reference that connects a familiar Yue variety with a more precise account of speech and writing.",
+    "Cantonese in Guangzhou, within the Guangfu branch of Yue.",
     [
       section(
         "Guangzhou within Yue",
@@ -1398,19 +1440,19 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "The letter and the written reference",
-        "The supplied Guangfu letter uses colloquial wording, while the formal version follows Modern Standard Written Chinese. Their difference is not just pronunciation. The sample remains awaiting local review and is not a phonetic record of one Guangzhou speaker. A future recording should make that speaker and context explicit.",
+        "The Cantonese letter uses colloquial wording; the Standard Written Chinese letter uses a formal style. Their vocabulary and grammar differ. The Cantonese text awaits local-speaker review and is not a phonetic record of a Guangzhou speaker.",
       ),
     ],
     [
       ["Group", "Yue"],
-      ["Subgroup", "Guangfu"],
+      ["Branch", "Guangfu"],
       ["Letter status", "Contributor draft"],
     ],
     [S.yueAtlas, S.cantoneseTones, S.cantoneseWriting],
   ),
   "hong-kong": article(
     "Hong Kong Cantonese",
-    "A Guangfu locality where spoken language, colloquial writing, and formal writing can be compared without collapsing them.",
+    "Cantonese in Hong Kong, with spoken and written forms distinct from Standard Written Chinese.",
     [
       section(
         "A shared regional route",
@@ -1418,23 +1460,23 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Speech and written forms",
-        "Research on Cantonese and Modern Standard Written Chinese treats differences in grammar and vocabulary as a real language-processing problem. A formal text is therefore not simply a transcript of everyday Cantonese with different character choices. The letter comparison offers an accessible way to notice this distinction before studying detailed phonology.",
+        "Research on Cantonese and Standard Written Chinese treats differences in grammar and vocabulary as a real language-processing problem. A formal text is therefore not simply a transcript of everyday Cantonese with different character choices. The letter comparison offers an accessible way to notice this distinction before studying detailed phonology.",
       ),
       section(
         "Tones in documented speech",
-        "Cantonese corpus work documents tone-bearing syllables and checked endings, offering material grounded in actual speech. The current project does not yet attach a reviewed Hong Kong recording or an independently adapted local letter. Our Guangfu sample is a starting comparison whose precise provenance remains stated, rather than an anonymous voice for every Cantonese community.",
+        "Cantonese corpus work documents tone-bearing syllables and checked endings in actual speech. No reviewed Hong Kong recording or locally adapted letter is available here yet.",
       ),
     ],
     [
       ["Group", "Yue"],
-      ["Subgroup", "Guangfu"],
+      ["Branch", "Guangfu"],
       ["Comparison focus", "Speech and writing"],
     ],
     [S.yueAtlas, S.cantoneseWriting, S.cantoneseCorpus],
   ),
   taishan: article(
     "Taishan",
-    "A Siyi Yue reference whose relationship to Cantonese includes resemblance and meaningful differences.",
+    "Siyi Yue in Taishan, related to Cantonese but not fully mutually intelligible with it.",
     [
       section(
         "Inside Siyi",
@@ -1446,19 +1488,19 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "What not to transfer automatically",
-        "A Cantonese word list can suggest a comparison, but it cannot certify a Taishan pronunciation. The project’s Guangfu letter therefore remains on its own locality route. A future Taishan text needs separate lexical and phonetic work, with the exact community specified. The study linked here provides a phonological foundation, not evidence that every part of the wider Taishan area speaks identically.",
+        "The linked study documents Taishan phonology within its local scope. A Guangzhou Cantonese word list or letter cannot establish a Taishan reading; no reviewed Taishan letter is available here yet.",
       ),
     ],
     [
       ["Group", "Yue"],
-      ["Subgroup", "Siyi"],
+      ["Branch", "Siyi"],
       ["Research focus", "Comparison with Cantonese"],
     ],
     [S.yueAtlas, S.taishan],
   ),
   yulin: article(
     "Yulin",
-    "An inland Yue reference in southeastern Guangxi, with evidence extending beyond pronunciation into family vocabulary.",
+    "Goulou Yue in southeastern Guangxi, with locally documented kinship vocabulary.",
     [
       section(
         "A Goulou reference",
@@ -1475,14 +1517,14 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Yue"],
-      ["Subgroup", "Goulou"],
+      ["Branch", "Goulou"],
       ["Study locality", "Yuzhou and Fumian"],
     ],
     [S.yueAtlas, S.yulin, S.yueVoicing],
   ),
   meixian: article(
     "Meixian Hakka",
-    "A well-studied reference for Hakka, valuable precisely when its local label is preserved.",
+    "Yue–Tai Hakka in Meixian, documented in detailed phonetic research.",
     [
       section(
         "A reference within Yue–Tai",
@@ -1499,22 +1541,22 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Hakka"],
-      ["Subgroup", "Yue–Tai"],
+      ["Branch", "Yue–Tai"],
       ["Letter reference", "Intended Meixian"],
     ],
     [S.hakkaAtlas, S.meixian, S.hakkaDictionary],
   ),
   haifeng: article(
     "Haifeng Hakka reference area",
-    "One half of the name Hailu, with a multilingual local setting that a single pin cannot fully represent.",
+    "Hakka communities in the Haifeng area, where Hakka and Min varieties are in contact.",
     [
       section(
         "What the map point means",
-        "Haifeng appears under Hailu because the subgroup name is connected to Haifeng and Lufeng. It does not mean that all speech in Haifeng is Hakka, or that the plotted city center is the location of a documented speaker. Research describes Hakka communities in a wider area and extensive contact with neighboring Min varieties.",
+        "Haifeng appears under Hailu because the branch name is connected to Haifeng and Lufeng. It does not mean that all speech in Haifeng is Hakka, or that the plotted city center is the location of a documented speaker. Research describes Hakka communities in a wider area and extensive contact with neighboring Min varieties.",
       ),
       section(
         "A more precise local picture",
-        "A National Central University report on Hailu origins discusses communities such as Pingdong in northeastern Haifeng and their connections with the Luhe area. This is more specific than assigning one uniform language to an administrative label. Such evidence can guide future additions at township or community level.",
+        "A National Central University report on Hailu origins discusses communities such as Pingdong in northeastern Haifeng and their connections with the Luhe area. Its evidence concerns those communities, not one uniform accent across Haifeng.",
       ),
       section(
         "Ancestral connection is not identity",
@@ -1523,14 +1565,14 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Hakka"],
-      ["Subgroup", "Hailu"],
+      ["Branch", "Hailu"],
       ["Point meaning", "Regional reference, not an exclusive city language"],
     ],
     [S.hailu, S.haifeng, S.luhe],
   ),
   lufeng: article(
     "Lufeng Hakka reference area",
-    "A name connecting present communities, migration histories, and older documents that must each keep their own date and locality.",
+    "Hakka communities in the Lufeng area, connected with the wider Hailu region.",
     [
       section(
         "A Hailu reference",
@@ -1538,7 +1580,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Three records need three labels",
-        "Comparative research considers an older Lufeng document, field evidence from Guangdong, and Taiwanese Hailu. It finds that these materials should not be treated as interchangeable records of one unchanged variety. That is a useful model for HanLingo’s future historical layer: date, locality, and source type must accompany the form.",
+        "Comparative research examines an older Lufeng document, field evidence from Guangdong, and Taiwanese Hailu. These records differ by period and locality; they do not describe one unchanged variety.",
       ),
       section(
         "Why Luhe also matters",
@@ -1547,14 +1589,14 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Hakka"],
-      ["Subgroup", "Hailu"],
+      ["Branch", "Hailu"],
       ["Evidence focus", "Locality and documentary provenance"],
     ],
     [S.lufeng, S.luhe, S.hailu],
   ),
   changting: article(
     "Changting Hakka",
-    "A western Fujian variety whose intricate tone sandhi makes the limits of a single “Hakka pronunciation” clear.",
+    "Tingzhou Hakka in western Fujian, with complex tone changes across syllable combinations.",
     [
       section(
         "The Tingzhou route",
@@ -1566,19 +1608,19 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "How to read this evidence",
-        "The important point is not that Changting is “more difficult” than another variety. It is that the pronunciation of a sequence can require knowledge of the whole pattern, and that fresh investigation can refine earlier accounts. The project’s Meixian letter does not establish Changting wording or sound; a local version would need its own contribution and review.",
+        "A syllable’s pronunciation can depend on the whole sequence. The Meixian comparison letter does not establish Changting wording or sound; no reviewed Changting version is available here yet.",
       ),
     ],
     [
       ["Group", "Hakka"],
-      ["Subgroup", "Tingzhou"],
+      ["Branch", "Tingzhou"],
       ["Research focus", "Two- and three-syllable sandhi"],
     ],
     [S.changting, S.changtingField],
   ),
   shanghai: article(
     "Shanghai Wu",
-    "A Taihu locality where the melody of a word can matter as much as an isolated character’s tone.",
+    "Taihu Wu in Shanghai, where tone sandhi shapes the pitch of whole words.",
     [
       section(
         "One local Wu voice",
@@ -1595,14 +1637,14 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Wu"],
-      ["Subgroup", "Taihu"],
+      ["Branch", "Taihu"],
       ["Further cluster", "Su–Hu–Jia"],
     ],
     [S.wuNorth, S.shanghai, S.shanghaiTts],
   ),
   suzhou: article(
     "Suzhou Wu",
-    "A Taihu variety that opens a particularly concrete question: what can make a vowel sound fricative?",
+    "Taihu Wu in Suzhou, with vowels that can carry audible frication.",
     [
       section(
         "A neighbor, not a duplicate",
@@ -1614,19 +1656,19 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Describe before respelling",
-        "A proposed romanization should follow those documented distinctions rather than assume that a familiar letter captures them automatically. HanLingo does not invent a Suzhou IPA inventory from the Shanghai letter. Future examples should retain the specific source, speaker, and transcription conventions used to describe these vowels.",
+        "An IPA transcription of these vowels needs the Suzhou source’s conventions and speaker context. The Shanghai letter supplies neither a Suzhou vowel inventory nor a local pronunciation sample.",
       ),
     ],
     [
       ["Group", "Wu"],
-      ["Subgroup", "Taihu"],
+      ["Branch", "Taihu"],
       ["Research focus", "Fricative vowels"],
     ],
     [S.wuNorth, S.suzhou, S.suzhouStudy],
   ),
   wenzhou: article(
     "Wenzhou Wu",
-    "An Oujiang reference where pitch, voice quality, and word structure all contribute to the sound pattern.",
+    "Oujiang Wu in Wenzhou, with contrasts in pitch, voice quality, and word-level tone patterns.",
     [
       section(
         "Beyond the Shanghai reference",
@@ -1638,19 +1680,19 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Speakers are part of the evidence",
-        "Rose’s study compares two speakers and documents differences in both isolated tones and sandhi. A careful account therefore identifies whose speech and which context support a pattern. The present page introduces those findings without claiming a single timeless Wenzhou inventory or attaching the project’s Shanghai letter as though it were local Wenzhou speech.",
+        "Rose’s study compares two speakers and finds differences in isolated tones and tone sandhi. These observations document variation between speakers, not one fixed pronunciation shared by all of Wenzhou.",
       ),
     ],
     [
       ["Group", "Wu"],
-      ["Subgroup", "Oujiang"],
+      ["Branch", "Oujiang"],
       ["Research focus", "Phonation and tonal context"],
     ],
     [S.wenzhou, S.wenzhouPerception, S.wenzhouSyntax],
   ),
   lishui: article(
     "Lishui Wu",
-    "A Chuqu variety that challenges an overly tidy definition of what Wu should sound like.",
+    "Chuqu Wu in Lishui, with locally distinctive consonant contrasts and tone sandhi.",
     [
       section(
         "A locally grounded Wu entry",
@@ -1662,12 +1704,12 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Variation across generations",
-        "Later acoustic research compares younger and older speakers and finds differences in how sandhi relates to citation tones. The result is evidence of variation within a living variety, not a complete historical reconstruction. HanLingo keeps the dated study attached to the claim rather than treating one diagram as a permanent rule for all Lishui speakers.",
+        "Later acoustic research finds differences between younger and older speakers in how sandhi relates to citation tones. The findings document variation among the studied speakers; they are not a complete historical reconstruction.",
       ),
     ],
     [
       ["Group", "Wu"],
-      ["Subgroup", "Chuqu"],
+      ["Branch", "Chuqu"],
       ["Study locality", "Liandu"],
     ],
     [S.lishui, S.lishuiChange],

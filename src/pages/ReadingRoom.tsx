@@ -1,3 +1,4 @@
+import { siteTerms } from "../data/site-terms";
 import { Fragment } from "react";
 import { ArrowLeftRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -11,7 +12,7 @@ const names: Record<Letter["id"], string> = {
   yue: "Guangfu Cantonese",
   hakka: "Meixian Hakka",
   wu: "Shanghai Wu",
-  formal: "Formal written Chinese",
+  formal: siteTerms.writtenChinese,
 };
 
 // Exact excerpts from the supplied texts, not dictionary or pronunciation claims.
@@ -21,27 +22,59 @@ const expressions: {
 }[] = [
   {
     meaning: "Addressing mother",
-    values: { mandarin: "媽", min: "阿母", yue: "阿媽", hakka: "阿姆", wu: "姆媽", formal: "親愛的媽媽" },
+    values: {
+      mandarin: "媽",
+      min: "阿母",
+      yue: "阿媽",
+      hakka: "阿姆",
+      wu: "姆媽",
+      formal: "親愛的媽媽",
+    },
   },
   {
     meaning: "First-person pronoun",
-    values: { mandarin: "我", min: "我", yue: "我", hakka: "𠊎", wu: "我", formal: "我" },
+    values: {
+      mandarin: "我",
+      min: "我",
+      yue: "我",
+      hakka: "𠊎",
+      wu: "我",
+      formal: "我",
+    },
   },
   {
     meaning: "The market",
-    values: { mandarin: "市場", min: "菜市仔", yue: "街市", hakka: "市場", wu: "菜場", formal: "市場" },
+    values: {
+      mandarin: "市場",
+      min: "菜市仔",
+      yue: "街市",
+      hakka: "市場",
+      wu: "菜場",
+      formal: "市場",
+    },
   },
   {
     meaning: "Going home",
-    values: { mandarin: "回家", min: "轉去厝", yue: "返屋企", hakka: "轉屋下", wu: "回屋裏", formal: "回家" },
+    values: {
+      mandarin: "回家",
+      min: "轉去厝",
+      yue: "返屋企",
+      hakka: "轉屋下",
+      wu: "回屋裏",
+      formal: "回家",
+    },
   },
 ];
 
 export default function ReadingRoom() {
   const [params, setParams] = useSearchParams();
   const showEnglish = params.get("english") === "1";
-  const left = letters.find((letter) => letter.id === params.get("left")) ?? letters.find((letter) => letter.id === "min")!;
-  const right = letters.find((letter) => letter.id === params.get("right")) ?? letters.find((letter) => letter.id === "yue")!;
+  const left =
+    letters.find((letter) => letter.id === params.get("left")) ??
+    letters.find((letter) => letter.id === "min")!;
+  const right =
+    letters.find((letter) => letter.id === params.get("right")) ??
+    letters.find((letter) => letter.id === "yue")!;
   const selected = [left, right];
 
   function selectLetter(side: "left" | "right", id: string) {
@@ -68,29 +101,55 @@ export default function ReadingRoom() {
   return (
     <div className="rr-page">
       <header className="rr-heading">
-        <h1>Compare</h1>
+        <h1>{siteTerms.compare}</h1>
       </header>
 
       <div className="rr-tools">
         <label className="rr-english-toggle">
-          <input type="checkbox" checked={showEnglish} onChange={(event) => setShowEnglish(event.target.checked)} />
+          <input
+            type="checkbox"
+            checked={showEnglish}
+            onChange={(event) => setShowEnglish(event.target.checked)}
+          />
           <span>English meaning</span>
         </label>
-        <button type="button" className="rr-swap" onClick={swapLetters} disabled={left.id === right.id}>
+        <button
+          type="button"
+          className="rr-swap"
+          onClick={swapLetters}
+          disabled={left.id === right.id}
+        >
           <ArrowLeftRight size={16} aria-hidden="true" /> Swap texts
         </button>
       </div>
 
       <table className="rr-passages">
-        <caption className="sr-only">{names[left.id]} and {names[right.id]}, aligned by paragraph</caption>
+        <caption className="sr-only">
+          {names[left.id]} and {names[right.id]}, aligned by paragraph
+        </caption>
         <thead>
           <tr>
             {selected.map((letter, index) => (
               <th key={index} scope="col" id={`rr-column-${index}`}>
                 <label htmlFor={`rr-${index === 0 ? "left" : "right"}`}>
-                  <span className="sr-only">{index === 0 ? "First text" : "Second text"}</span>
-                  <select id={`rr-${index === 0 ? "left" : "right"}`} value={letter.id} onChange={(event) => selectLetter(index === 0 ? "left" : "right", event.target.value)}>
-                    {letters.map((option) => <option key={option.id} value={option.id}>{names[option.id]}</option>)}
+                  <span className="sr-only">
+                    {index === 0 ? "First text" : "Second text"}
+                  </span>
+                  <select
+                    id={`rr-${index === 0 ? "left" : "right"}`}
+                    value={letter.id}
+                    onChange={(event) =>
+                      selectLetter(
+                        index === 0 ? "left" : "right",
+                        event.target.value,
+                      )
+                    }
+                  >
+                    {letters.map((option) => (
+                      <option key={option.id} value={option.id}>
+                        {names[option.id]}
+                      </option>
+                    ))}
                   </select>
                 </label>
               </th>
@@ -102,7 +161,9 @@ export default function ReadingRoom() {
             {selected.map((letter, index) => (
               <td key={index} headers={`rr-column-${index}`}>
                 <span className="rr-mobile-name">{names[letter.id]}</span>
-                <p className="rr-han" lang="zh-Hant">{letter.salutation}</p>
+                <p className="rr-han" lang="zh-Hant">
+                  {letter.salutation}
+                </p>
               </td>
             ))}
           </tr>
@@ -112,7 +173,9 @@ export default function ReadingRoom() {
                 {selected.map((letter, index) => (
                   <td key={index} headers={`rr-column-${index}`}>
                     <span className="rr-mobile-name">{names[letter.id]}</span>
-                    <p className="rr-han" lang="zh-Hant">{letter.paragraphs[paragraphIndex]}</p>
+                    <p className="rr-han" lang="zh-Hant">
+                      {letter.paragraphs[paragraphIndex]}
+                    </p>
                   </td>
                 ))}
               </tr>
@@ -120,11 +183,17 @@ export default function ReadingRoom() {
                 <tr className="rr-english-row">
                   <td colSpan={2}>
                     <span>English meaning</span>
-                    {left.english[paragraphIndex] === right.english[paragraphIndex] ? (
+                    {left.english[paragraphIndex] ===
+                    right.english[paragraphIndex] ? (
                       <p>{left.english[paragraphIndex]}</p>
                     ) : (
                       <div className="rr-different-meanings">
-                        {selected.map((letter, index) => <p key={index}><b>{names[letter.id]}:</b> {letter.english[paragraphIndex]}</p>)}
+                        {selected.map((letter, index) => (
+                          <p key={index}>
+                            <b>{names[letter.id]}:</b>{" "}
+                            {letter.english[paragraphIndex]}
+                          </p>
+                        ))}
                       </div>
                     )}
                   </td>
@@ -136,7 +205,9 @@ export default function ReadingRoom() {
             {selected.map((letter, index) => (
               <td key={index} headers={`rr-column-${index}`}>
                 <span className="rr-mobile-name">{names[letter.id]}</span>
-                <p className="rr-han" lang="zh-Hant">{letter.closing}</p>
+                <p className="rr-han" lang="zh-Hant">
+                  {letter.closing}
+                </p>
               </td>
             ))}
           </tr>
@@ -151,14 +222,24 @@ export default function ReadingRoom() {
         </tbody>
       </table>
       <p className="rr-provenance">
-        Chinese texts are preserved as supplied. English summarizes their shared meaning;
-        it is not a word-for-word gloss. No pronunciation is inferred from these samples.
+        Chinese texts are preserved as supplied. English summarizes their shared
+        meaning; it is not a word-for-word gloss. No pronunciation is inferred
+        from these samples.
       </p>
 
-      <section className="rr-expressions" aria-labelledby="rr-expressions-title">
+      <section
+        className="rr-expressions"
+        aria-labelledby="rr-expressions-title"
+      >
         <h2 id="rr-expressions-title">Expressions</h2>
         <table className="rr-expression-table">
-          <thead><tr><th scope="col">Context</th><th scope="col">{names[left.id]}</th><th scope="col">{names[right.id]}</th></tr></thead>
+          <thead>
+            <tr>
+              <th scope="col">Context</th>
+              <th scope="col">{names[left.id]}</th>
+              <th scope="col">{names[right.id]}</th>
+            </tr>
+          </thead>
           <tbody>
             {expressions.map((expression) => (
               <tr key={expression.meaning}>
@@ -166,18 +247,25 @@ export default function ReadingRoom() {
                 {selected.map((letter, index) => (
                   <td key={index}>
                     <span className="rr-mobile-name">{names[letter.id]}</span>
-                    <span className="rr-han" lang="zh-Hant">{expression.values[letter.id]}</span>
+                    <span className="rr-han" lang="zh-Hant">
+                      {expression.values[letter.id]}
+                    </span>
                   </td>
                 ))}
               </tr>
             ))}
           </tbody>
         </table>
-        <p className="rr-expression-note">These excerpts show wording in context. A shared character does not guarantee a shared pronunciation.</p>
+        <p className="rr-expression-note">
+          These excerpts show wording in context. A shared character does not
+          guarantee a shared pronunciation.
+        </p>
       </section>
 
       <p className="rr-written-reference">
-        <Link to="/written-chinese">Formal written Chinese</Link> is a shared written register closely associated with Mandarin, not a sixth spoken group.
+        <Link to="/written-chinese">{siteTerms.writtenChinese}</Link> is a
+        shared written register closely associated with Mandarin, not a sixth
+        spoken group.
       </p>
     </div>
   );

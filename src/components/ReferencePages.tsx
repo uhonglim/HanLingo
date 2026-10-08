@@ -128,7 +128,7 @@ export default function ReferencePage() {
                     ? clusterLabel(localCluster)
                     : subgroup?.name
                   : subgroup
-                    ? `${localPoints.map(placeLabel).join(" · ")} · selected places`
+                    ? `${localPoints.map(placeLabel).join(" · ")}`
                     : group.geography}
               </span>
             </div>
@@ -174,12 +174,12 @@ export default function ReferencePage() {
             <section className="reference-explore" id="reference-explore">
               <div className="reference-section-heading">
                 <div>
-                  <h2>{subgroup ? "Local varieties" : "Branches"}</h2>
+                  <h2>{subgroup ? "Localities" : "Branches"}</h2>
                 </div>
                 <span>
                   {subgroup
-                    ? `${localPoints.length} selected ${localPoints.length === 1 ? "place" : "places"}`
-                    : `${childSubgroups.length} selected branches`}
+                    ? `${localPoints.length} ${localPoints.length === 1 ? "locality" : "localities"}`
+                    : `${childSubgroups.length} branches`}
                 </span>
               </div>
               <div className="reference-child-grid">
@@ -221,9 +221,7 @@ export default function ReferencePage() {
                   ))}
               </div>
               <p className="reference-curation-note">
-                These pages offer selected routes into {group.name}. They are an
-                introduction to its diversity, rather than an exhaustive
-                classification.
+                Selected localities; this is not a complete classification.
               </p>
             </section>
           )}
@@ -257,7 +255,7 @@ export default function ReferencePage() {
             <section className="reference-local-letter" id="reference-letter">
               <div className="reference-section-heading">
                 <div>
-                  <h2>Letter example</h2>
+                  <h2>Letter</h2>
                 </div>
                 <label className="reference-translation-toggle">
                   <input
@@ -265,7 +263,7 @@ export default function ReferencePage() {
                     checked={showEnglish}
                     onChange={(event) => setShowEnglish(event.target.checked)}
                   />
-                  Show the shared English meaning
+                  English meaning
                 </label>
               </div>
               <div
@@ -280,9 +278,7 @@ export default function ReferencePage() {
                 </div>
                 {showEnglish && (
                   <div className="reference-letter-english">
-                    <span className="reference-kicker">
-                      SHARED MEANING · ENGLISH
-                    </span>
+                    <span className="reference-kicker">English meaning</span>
                     <p>Mom,</p>
                     {localLetter.english.map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
@@ -299,7 +295,7 @@ export default function ReferencePage() {
                 className="reference-inline-link"
                 to={`/compare?left=${group.id}&right=formal`}
               >
-                Compare this letter across the family
+                Compare letters
                 <ArrowRight size={15} />
               </Link>
             </section>
@@ -308,7 +304,7 @@ export default function ReferencePage() {
           <section className="reference-sources" id="reference-sources">
             <div>
               <BookOpen size={17} />
-              <h2>Sources & further reading</h2>
+              <h2>Sources</h2>
             </div>
             {referenceFacts.length > 0 && (
               <details className="reference-notes" key={entry.title}>

@@ -253,9 +253,6 @@ h1 em {
   color: #949b8b;
   letter-spacing: 0.2px;
 }
-.rotate {
-  transform: rotate(180deg);
-}
 .approach-section {
   padding: 70px 64px;
   display: grid;
@@ -409,11 +406,6 @@ h1 em {
   color: #839078;
   max-width: 605px;
 }
-.sources-button {
-  margin-left: auto;
-  white-space: nowrap;
-  font-size: 12px;
-}
 .sources-panel {
   padding: 0 64px 45px;
   color: #737f6b;
@@ -530,9 +522,6 @@ h1 em {
   }
   .editorial-notes > div:nth-child(2) {
     flex: 1;
-  }
-  .sources-button {
-    margin-left: 96px;
   }
   .sources-panel {
     padding: 0 25px 35px;
@@ -651,11 +640,6 @@ h1 em {
     font-size: 13px;
   }
   .editorial-notes p {
-    font-size: 12px;
-  }
-  .sources-button {
-    margin: 0;
-    justify-self: start;
     font-size: 12px;
   }
   .sources-panel {

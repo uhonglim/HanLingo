@@ -15,3 +15,15 @@ Sources: [Taiwan Ministry of Education dictionary](https://sutian.moe.edu.tw/zh-
 Local naming references: **Sin-ka-pho** is listed for 新加坡 in [Taipei’s school vocabulary list](https://www.saihs.edu.tw/uploads/1678269782302fhjagTST.pdf). **Pho Te** is the display form of the community source’s **Pho3 Te4** for George Town in [Timothy Tye’s Penang place-name list](https://www.penang-traveltips.com/hokkien/place-names.htm). Those source tone-category digits are omitted from the navigation label; they are not converted into HanLingo pitch contours. The city scope is George Town, not the whole state of Penang.
 
 **Teo Swa** is the community-owned cluster name used beside Tsuan-Chiang. The [Teo Swa General Association](https://www.csga.co.nz/about-us/) uses it in its bilingual name. Teochew and Swatow are locality peers within that branch; they must not be placed in Tsuan-Chiang. [You Rujie’s study](https://xbzs.ecnu.edu.cn/CN/html/201601010.htm) provides the Southern Min classification and a Swatow reference.
+
+## Shared interface terms
+
+Use `src/data/site-terms.ts` for repeated destination and learning labels. One destination has one name throughout the tree, breadcrumbs, headings, and links.
+
+- **Words**, **Photos**, **Sounds**, and **Practice** are the Amoy learning sections. IPA and tone contours are content within Sounds, not separate names for that destination.
+- **HanLingo spelling** labels generated spellings; **IPA** labels pronunciation. Explain trial rules where needed without renaming the output.
+- **Citation reading** and **Connected speech** distinguish pronunciation evidence. Do not imply automatic tone-sandhi generation.
+- **Standard Written Chinese** is the shared written register destination. Formal describes the sample's style, not another language or a sixth spoken group.
+- **Group → branch → cluster → locality** describes the tree levels. Use **Localities** for geographic reference entries, not dialect boundaries.
+- Keep source titles, quotations, attested spellings, and stable URL identifiers unchanged. Alternate names belong in search and source notes.
+- Delete repeated introductions and controls that duplicate an existing destination; retain source qualifications and photo credits.

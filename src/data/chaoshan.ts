@@ -41,20 +41,14 @@ export const chaoshanPoints: MapPoint[] = [
     coordinates: [116.682, 23.354],
     groupId: "min",
     subgroupId: "southern-min",
-    hierarchy: [
-      "Sinitic",
-      "Min",
-      "Southern Min",
-      "Chaoshan cluster",
-      "Swatow",
-    ],
+    hierarchy: ["Sinitic", "Min", "Southern Min", "Chaoshan cluster", "Swatow"],
   },
 ];
 
 export const chaoshanArticles: Record<string, EncyclopediaEntry> = {
   chaozhou: {
     title: "Teochew",
-    dek: "City speech beside the Han River, within Southern Min’s Teo Swa cluster.",
+    dek: "Southern Min in Teochew, beside the Han River in eastern Guangdong.",
     sections: [
       {
         heading: "The city and the wider name",
@@ -65,7 +59,7 @@ export const chaoshanArticles: Record<string, EncyclopediaEntry> = {
       {
         heading: "Within Southern Min",
         paragraphs: [
-          "HanLingo places the city under the Teo Swa cluster of Southern Min, separately from Tsuan-Chiang. Linguist You Rujie identifies Chaoshan speech as eastern Guangdong Southern Min and distinguishes its local varieties. Teo Swa is a documented community spelling, used by the Teo Swa General Association of New Zealand. It names a regional grouping, not a uniform city accent.",
+          "Teochew belongs to Southern Min’s Teo Swa cluster, separate from Tsuan-Chiang. Linguist You Rujie uses the name Chaoshan for these eastern Guangdong varieties. Teo Swa is the community spelling used by the Teo Swa General Association of New Zealand; it names the wider cluster, not one uniform accent.",
         ],
       },
       {
@@ -99,7 +93,7 @@ export const chaoshanArticles: Record<string, EncyclopediaEntry> = {
   },
   shantou: {
     title: "Swatow",
-    dek: "A port-city variety within Southern Min’s Teo Swa cluster, shaped by contact among nearby varieties.",
+    dek: "Southern Min in Swatow, a port city in eastern Guangdong’s Teo Swa region.",
     sections: [
       {
         heading: "The coastal city",
@@ -110,13 +104,13 @@ export const chaoshanArticles: Record<string, EncyclopediaEntry> = {
       {
         heading: "How the city’s speech developed",
         paragraphs: [
-          "You Rujie’s study of language contact classifies Swatow speech as a local variety of Chaoshan, within Southern Min. He connects the development of its urban speech to migration from surrounding communities and describes the convergence of their sound systems. Swatow is consequently a separate locality entry beside Teochew in the Teo Swa cluster, rather than an alternative label for the same city variety.",
+          "You Rujie’s study of language contact classifies Swatow speech as a local variety of Chaoshan, within Southern Min. He connects the development of its urban speech to migration from surrounding communities and describes the convergence of their sound systems. Swatow and Teochew are distinct local varieties within the Teo Swa cluster.",
         ],
       },
       {
         heading: "Comparing neighbouring varieties",
         paragraphs: [
-          "The same study identifies differences in two-syllable tone sandhi between Swatow and neighbouring Teochew, Chenghai, and Jieyang. This makes the speaker’s locality relevant even within the regional cluster. Learning materials labelled only Teochew may use the wider regional name; their recordings and pronunciation notes need to be checked before being assigned to a particular city.",
+          "The same study identifies differences in two-syllable tone sandhi between Swatow and neighbouring Teochew, Chenghai, and Jieyang. This makes the speaker’s locality relevant even within the regional cluster. Learning materials labelled Teochew may use the wider regional name; the speaker’s locality identifies which pronunciation is represented.",
         ],
       },
     ],

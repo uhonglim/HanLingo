@@ -1,3 +1,4 @@
+import { siteTerms, readingLabels } from "../data/site-terms";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -57,9 +58,9 @@ export default function RomanizationPage() {
       .includes(query.normalize("NFC").toLowerCase().trim()),
   );
   const loadWord = (id: string) => {
+    setWordId(id);
     const word = xiamenWords.find((item) => item.id === id);
     if (word) {
-      setWordId(id);
       setInput(word.ipa);
     }
   };
@@ -69,7 +70,8 @@ export default function RomanizationPage() {
         <h1>HanLingo romanization</h1>
         <p>
           Shared sound-to-spelling rules for Han languages, with each locality’s
-          pronunciation and pitch preserved. The current implementation covers Amoy.
+          pronunciation and pitch preserved. The current implementation covers
+          Amoy.
         </p>
         <div className="roman-core" aria-label="Agreed stop consonants">
           {[
@@ -123,8 +125,8 @@ export default function RomanizationPage() {
                 maxLength={500}
               />
               <p id="roman-input-help" className="roman-note">
-                [te˨˦] or te24 · Separate syllables with spaces. Supplied sounds only;
-                the converter does not predict pronunciation.
+                [te˨˦] or te24 · Separate syllables with spaces. Supplied sounds
+                only; the converter does not predict pronunciation.
               </p>
             </div>
             <div className="roman-result" aria-live="polite" aria-atomic="true">
@@ -132,7 +134,7 @@ export default function RomanizationPage() {
                 <p className="roman-error">{conversion.error}</p>
               ) : (
                 <>
-                  <span>HanLingo <small>Working spelling</small></span>
+                  <span>{siteTerms.spelling}</span>
                   <output htmlFor="roman-ipa">
                     {conversion.syllables
                       .map((syllable) => syllable.spelling)
@@ -180,7 +182,7 @@ export default function RomanizationPage() {
               <strong lang="zh-Hant">{selectedWord.han}</strong>
               <span>
                 {selectedWord.english} · Amoy ·{" "}
-                {selectedWord.readingMode.toLowerCase()}
+                {readingLabels[selectedWord.readingMode]}
               </span>
               <a href={selectedWord.sourceUrl} target="_blank" rel="noreferrer">
                 Reading source
@@ -203,8 +205,8 @@ export default function RomanizationPage() {
           />
         </div>
         <p>
-          <b>Agreed</b> rules are settled starting points. <b>Trial</b> spellings
-          remain open to revision.
+          <b>Agreed</b> rules are settled starting points. <b>Trial</b>{" "}
+          spellings remain open to revision.
         </p>
         <div className="roman-key-layout">
           <div className="roman-table-wrap">
@@ -212,7 +214,7 @@ export default function RomanizationPage() {
               <thead>
                 <tr>
                   <th scope="col">IPA</th>
-                  <th scope="col">HanLingo</th>
+                  <th scope="col">{siteTerms.spelling}</th>
                   <th scope="col">Status</th>
                 </tr>
               </thead>
@@ -234,16 +236,16 @@ export default function RomanizationPage() {
             <div>
               <h3>h marks aspiration</h3>
               <p>
-                p → ph, ts → tsh, ch → chh. The whole base spelling receives h. A
-                standalone h still represents [h] in the working key.
+                p → ph, ts → tsh, ch → chh. The whole base spelling receives h.
+                A standalone h still represents [h] in the working key.
               </p>
             </div>
             <div>
               <h3>Different places of articulation</h3>
               <p>
-                ts / tsh represent [t͡s] / [t͡sʰ]; ch / chh represent [tɕ] / [tɕʰ].
-                They remain separate even when another spelling system uses the
-                same letters.
+                ts / tsh represent [t͡s] / [t͡sʰ]; ch / chh represent [tɕ] /
+                [tɕʰ]. They remain separate even when another spelling system
+                uses the same letters.
               </p>
             </div>
             <div>
@@ -355,7 +357,7 @@ export default function RomanizationPage() {
             <thead>
               <tr>
                 <th scope="col">IPA</th>
-                <th scope="col">Working spelling</th>
+                <th scope="col">{siteTerms.spelling}</th>
                 <th scope="col">What stays distinct</th>
               </tr>
             </thead>
@@ -403,8 +405,8 @@ export default function RomanizationPage() {
         <p>
           A shared character can have different spellings when its local sounds
           differ. Min, Mandarin, Yue, Hakka, and Wu each need locality-specific
-          inventories and pronunciation evidence. This is our working proposal, not a
-          completed standard or an automatic character-to-speech system.
+          inventories and pronunciation evidence. This is our working proposal,
+          not a completed standard or an automatic character-to-speech system.
           Documented place names such as Ko-hiông retain their source spelling;
           they are not silently converted into HanLingo spelling.
         </p>
@@ -416,7 +418,7 @@ export default function RomanizationPage() {
           >
             Official IPA chart
           </a>
-          <Link to="/min/southern-min/xiamen/sounds">Amoy IPA gallery</Link>
+          <Link to="/min/southern-min/xiamen/sounds">Amoy sounds</Link>
           <a
             href="https://github.com/uhonglim/HanLingo"
             target="_blank"

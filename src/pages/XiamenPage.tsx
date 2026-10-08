@@ -16,17 +16,20 @@ import {
   Search,
   X,
 } from "lucide-react";
+import { readingLabels, siteTerms } from "../data/site-terms";
 import { xiamenWords } from "../data/xiamen-lexicon";
-import { filterXiamenWords, vocabularyCategories as categories } from "../data/xiamen-vocabulary";
-import { xiamenPhotos } from "../data/xiamen-photos";
 import {
-  makeQuiz,
-  romanizeXiamen,
-} from "../data/xiamen-romanization";
+  filterXiamenWords,
+  vocabularyCategories as categories,
+} from "../data/xiamen-vocabulary";
+import { xiamenPhotos } from "../data/xiamen-photos";
+import { makeQuiz, romanizeXiamen } from "../data/xiamen-romanization";
 import AtlasMap from "../components/AtlasMap";
 import { mapPoints } from "../data/languages";
 import "./XiamenPage.css";
-import CultureGallery, { photoWords as relatedWords } from "./xiamen/CultureGallery";
+import CultureGallery, {
+  photoWords as relatedWords,
+} from "./xiamen/CultureGallery";
 import IpaGallery from "./xiamen/IpaGallery";
 
 const BASE = "/min/southern-min/xiamen";
@@ -123,12 +126,18 @@ function WordCard({
       </div>
       <details className="xm-word-detail">
         <summary>
-          Usage & source <ChevronRight size={12} />
+          Reading and source <ChevronRight size={12} />
         </summary>
         <p>{word.note}</p>
         <dl className="xm-word-source">
-          <div><dt>Reading</dt><dd>{word.readingMode}</dd></div>
-          <div><dt>Source transcription</dt><dd>{word.sourceReading}</dd></div>
+          <div>
+            <dt>Reading</dt>
+            <dd>{readingLabels[word.readingMode]}</dd>
+          </div>
+          <div>
+            <dt>Source transcription</dt>
+            <dd>{word.sourceReading}</dd>
+          </div>
         </dl>
         <a href={word.sourceUrl} target="_blank" rel="noreferrer">
           {word.sourceLabel}
@@ -142,30 +151,17 @@ function NotationNote() {
   return (
     <details className="xm-notation">
       <summary>
-        IPA & trial spelling
+        IPA and {siteTerms.spelling}
         <ChevronRight size={15} />
       </summary>
       <div>
         <p>
-          IPA shows the reference sound. The numbers in HanLingo spellings show
-          pitch: <b>1 is low, 5 is high</b>. Single-syllable entries show
-          citation tones; entries marked “Connected speech” include the source’s
-          tone changes.
-        </p>
-        <p>
-          <b>ts / tsh</b> are [t͡s] / [t͡sʰ]. Trial extensions in this lesson:{" "}
-          <b>ng</b> [ŋ], <b>oo</b> [ɔ], <b>q</b> [ʔ]. A tilde marks a nasal
-          vowel, as in <b>ã</b> [ã]; <b>â</b> remains [ɐ]. The unreleased-stop
-          mark <b>◌̚</b> and syllabic mark <b>◌̍</b> are retained for precision.
-          Other plain Latin letters keep their displayed IPA value.
-        </p>
-        <p>
-          The dictionary readings use the Xiamen reference convention. These are
-          broad learning transcriptions, not recordings of an individual
-          speaker.{" "}
-          <Link to={`${BASE}/sounds`}>
-            See the sound guide <ArrowRight size={13} />
-          </Link>
+          IPA gives broad reference readings, not an individual speaker’s
+          recording.
+          {siteTerms.spelling} uses pitch numbers from{" "}
+          <b>1 (low) to 5 (high)</b>. Citation readings show syllables in
+          isolation; connected speech includes tone changes.{" "}
+          <Link to="/romanization">{siteTerms.romanization} rules</Link>
         </p>
       </div>
     </details>
@@ -199,7 +195,9 @@ function SceneWord({
           <span>{roman(word)}</span>
           <small className="xm-ipa">{word.ipa}</small>
         </span>
-        <span className={`xm-reveal-meaning${revealed ? "" : " xm-reveal-hint"}`}>
+        <span
+          className={`xm-reveal-meaning${revealed ? "" : " xm-reveal-hint"}`}
+        >
           {revealed ? word.english : "Show meaning"}
         </span>
       </button>
@@ -241,14 +239,14 @@ function Overview({
         </div>
       </section>
       <section className="xm-section xm-scenes">
-        <h2 className="sr-only">Photo vocabulary</h2>
+        <h2 className="sr-only">Words in photos</h2>
         <div className="xm-scenes-grid">
           {scenes.map((photo) => (
             <article key={photo.id}>
               <Link
                 to={`${BASE}/culture?photo=${photo.id}`}
                 className="xm-scene-photo"
-                aria-label={`Open photograph: ${photo.caption}`}
+                aria-label={`Open photo: ${photo.caption}`}
               >
                 <img
                   src={photo.src}
@@ -279,8 +277,8 @@ function Overview({
         <div>
           <h2>Southern Min</h2>
           <p>
-            These readings follow urban Amoy Hokkien. Tsuân-tsiu and
-            Tsiang-tsiu have their own varieties.
+            These readings follow urban Amoy Hokkien. Tsuân-tsiu and Tsiang-tsiu
+            have their own varieties.
           </p>
         </div>
         <AtlasMap
@@ -293,8 +291,7 @@ function Overview({
           selectedPoint="xiamen"
           onSelectPoint={(id) => {
             const point = mapPoints.find((item) => item.id === id);
-            if (point && id !== "xiamen")
-              navigate(`/min/southern-min/${id}`);
+            if (point && id !== "xiamen") navigate(`/min/southern-min/${id}`);
           }}
         />
       </section>
@@ -312,7 +309,9 @@ function Vocabulary({
   const [params, setParams] = useSearchParams();
   const query = params.get("q") ?? "";
   const requestedCategory = params.get("category") ?? "All words";
-  const category = categories.includes(requestedCategory) ? requestedCategory : "All words";
+  const category = categories.includes(requestedCategory)
+    ? requestedCategory
+    : "All words";
   const onlySaved = params.get("saved") === "1";
   const changeParam = (key: string, value: string) => {
     const next = new URLSearchParams(params);
@@ -323,13 +322,27 @@ function Vocabulary({
   const setOnlySaved = (value: boolean) =>
     changeParam("saved", value ? "1" : "");
   const words = filterXiamenWords(query, category, onlySaved, saved);
-  const setCategory = (value: string) => changeParam("category", value === "All words" ? "" : value);
+  const setCategory = (value: string) =>
+    changeParam("category", value === "All words" ? "" : value);
   const hasFilters = Boolean(query || onlySaved || category !== "All words");
   return (
     <div className="xm-inner">
       <header className="xm-page-heading">
-        <div><h1>Amoy words</h1><p role="status">{words.length} of {xiamenWords.length} words{onlySaved ? " · saved" : ""}</p></div>
-        {hasFilters && <button className="xm-clear-view" onClick={() => setParams({}, { replace: true })}>Show all words</button>}
+        <div>
+          <h1>Amoy {siteTerms.sections.words.toLowerCase()}</h1>
+          <p role="status">
+            {words.length} of {xiamenWords.length} words
+            {onlySaved ? " · saved" : ""}
+          </p>
+        </div>
+        {hasFilters && (
+          <button
+            className="xm-clear-view"
+            onClick={() => setParams({}, { replace: true })}
+          >
+            Show all words
+          </button>
+        )}
       </header>
       <div className="xm-word-tools">
         <div className="xm-search">
@@ -372,7 +385,6 @@ function Vocabulary({
             {cat}
           </button>
         ))}
-
       </div>
       <div className="xm-word-grid">
         {words.map((word) => (
@@ -443,8 +455,20 @@ function Practice({
   return (
     <div className="xm-inner xm-practice">
       <header className="xm-page-heading">
-        <h1>Amoy practice</h1>
-        {(current || finished) && <button className="xm-clear-view" onClick={() => { setRound([]); setFinished(false); setIndex(0); setAnswer(null); }}>Change practice</button>}
+        <h1>Amoy {siteTerms.sections.practice.toLowerCase()}</h1>
+        {(current || finished) && (
+          <button
+            className="xm-clear-view"
+            onClick={() => {
+              setRound([]);
+              setFinished(false);
+              setIndex(0);
+              setAnswer(null);
+            }}
+          >
+            Change practice
+          </button>
+        )}
       </header>
       {!current && !finished ? (
         <section className="xm-practice-start">
@@ -496,7 +520,11 @@ function Practice({
                 <b lang="zh-Hant">{word.han}</b>
                 <span>{word.english}</span>
                 <small>
-                  <Link to={wordLink(word)}>{roman(word)}<br />{word.ipa}</Link>
+                  <Link to={wordLink(word)}>
+                    {roman(word)}
+                    <br />
+                    {word.ipa}
+                  </Link>
                 </small>
               </div>
             ))}

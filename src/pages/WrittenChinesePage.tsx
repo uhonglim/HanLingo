@@ -1,53 +1,42 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { letters } from "../data/languages";
+import { siteTerms } from "../data/site-terms";
+
 export default function WrittenChinesePage() {
   const letter = letters.find((item) => item.id === "formal")!;
   return (
     <div className="written-page">
       <header className="written-page-hero">
         <div>
-          <h1>Modern Standard Written Chinese</h1>
+          <h1>{siteTerms.writtenChinese}</h1>
         </div>
       </header>
       <div className="written-page-grid">
         <article className="written-essay">
-          <h2>Written reference</h2>
+          <h2>Writing across communities</h2>
           <p>
-            Modern Standard Written Chinese serves as a written reference
-            alongside the five spoken groups, rather than as a sixth spoken
-            branch. It is used in school materials, public information, and
-            personal correspondence.
-          </p>
-          <p>
-            Its vocabulary and grammar are closely associated with vernacular
-            Mandarin, but the relationship between a text and a reader’s speech
-            is not one-to-one. A person can read a shared text while speaking a
-            local language with different everyday words and constructions.
+            Standard Written Chinese is used in education, public information,
+            and correspondence. Its vocabulary and grammar are closely
+            associated with vernacular Mandarin. It is a shared written form,
+            not a sixth spoken group alongside Mandarin, Min, Yue, Hakka, and
+            Wu.
           </p>
           <h2>Characters and pronunciation</h2>
           <p>
-            Characters can connect texts across communities, but identical
-            characters need not have identical pronunciations. Conversely, local
-            writing may use different words or characters to express the same
-            meaning. The letters in our reading room make some of these choices
-            visible.
+            A shared character can have different pronunciations across
+            languages. Local writing can also use different words, characters,
+            and sentence patterns to express the same meaning. Compare the
+            letters to see these differences in context.
           </p>
+          <h2>Formal is a style</h2>
           <p>
-            The HanLingo samples also differ in register. The written reference
-            uses more formal wording, while the five spoken-language samples use
-            conversational wording. Their vocabulary, sentence structure, and
-            tone of address differ.
-          </p>
-          <h2>The supplied letter</h2>
-          <p>
-            The letter here is the founder’s supplied formal version. It is
-            preserved as a comparison text, not a rule that all written Chinese
-            must sound formal. Modern written Chinese can be intimate, casual,
-            literary, or technical.
+            This letter uses formal wording. Standard Written Chinese can also
+            be casual, intimate, literary, or technical. The five
+            spoken-language letters use conversational wording, so the
+            comparison shows differences in both language and style.
           </p>
           <Link to="/compare?left=min&right=formal" className="text-link">
-            Compare with Amoy <ArrowRight size={16} />
+            Compare with Amoy
           </Link>
           <div className="written-sources">
             <h3>Sources</h3>
@@ -58,17 +47,10 @@ export default function WrittenChinesePage() {
             >
               Ping Chen · Modern Chinese: Dialect writing
             </a>
-            <a
-              href="https://assets.cambridge.org/97805216/52728/sample/9780521652728ws.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Modern Chinese · Introductory overview
-            </a>
           </div>
         </article>
         <aside className="formal-letter">
-          <h2>Formal letter</h2>
+          <h2>A letter home</h2>
           <div className="letter-body" lang="zh-Hant">
             <p className="salutation">{letter.salutation}</p>
             {letter.paragraphs.map((p) => (
@@ -76,9 +58,7 @@ export default function WrittenChinesePage() {
             ))}
             <p className="letter-closing">{letter.closing}</p>
           </div>
-          <p className="letter-footnote">
-            Contributor-supplied text · preserved for comparison
-          </p>
+          <p className="letter-footnote">Contributor-supplied · formal style</p>
         </aside>
       </div>
     </div>

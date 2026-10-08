@@ -1,3 +1,4 @@
+import { siteTerms } from "./site-terms";
 import { chaoshanPoints } from "./chaoshan";
 
 export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu";
@@ -375,7 +376,13 @@ export const mapPoints: MapPoint[] = [
     coordinates: [120.205, 22.997],
     groupId: "min",
     subgroupId: "southern-min",
-    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Tâi-lâm"],
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Tâi-lâm",
+    ],
   },
   {
     id: "kaohsiung",
@@ -384,7 +391,13 @@ export const mapPoints: MapPoint[] = [
     coordinates: [120.3014, 22.6273],
     groupId: "min",
     subgroupId: "southern-min",
-    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Ko-hiông"],
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Ko-hiông",
+    ],
   },
   {
     id: "yilan",
@@ -393,7 +406,13 @@ export const mapPoints: MapPoint[] = [
     coordinates: [121.753, 24.7554],
     groupId: "min",
     subgroupId: "southern-min",
-    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Gî-lân"],
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Gî-lân",
+    ],
   },
   {
     id: "lukang",
@@ -402,7 +421,13 @@ export const mapPoints: MapPoint[] = [
     coordinates: [120.435, 24.052],
     groupId: "min",
     subgroupId: "southern-min",
-    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Lo̍k-káng"],
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Lo̍k-káng",
+    ],
   },
   {
     id: "sanxia",
@@ -411,7 +436,13 @@ export const mapPoints: MapPoint[] = [
     coordinates: [121.369, 24.934],
     groupId: "min",
     subgroupId: "southern-min",
-    hierarchy: ["Sinitic", "Min", "Southern Min", "Quanzhang cluster", "Sam-kiap"],
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Sam-kiap",
+    ],
   },
   {
     id: "singapore",
@@ -688,9 +719,9 @@ export const letters: Letter[] = [
   },
   {
     id: "formal",
-    label: "Formal written Chinese",
+    label: siteTerms.writtenChinese,
     nativeName: "現代標準書面語",
-    place: "Modern Standard Written Chinese · formal register",
+    place: `${siteTerms.writtenChinese} · formal register`,
     salutation: "親愛的媽媽：",
     paragraphs: [
       "我抵達這裡已有一週，飲食起居一切安好，請您放心。",
@@ -699,6 +730,6 @@ export const letters: Letter[] = [
     ],
     closing: "想念您的兒子",
     english: englishLetter,
-    note: "A written register for comparison · not a sixth spoken branch",
+    note: "A written register for comparison · not a sixth spoken group",
   },
 ];

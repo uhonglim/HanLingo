@@ -146,6 +146,7 @@ export default function LanguageTree() {
   const [query, setQuery] = useState("");
   const [searchClosed, setSearchClosed] = useState<Set<string>>(new Set());
   const searchInput = useRef<HTMLInputElement>(null);
+  const treeNavigation = useRef<string | null>(null);
   const instanceId = useId();
   const panelId = `language-tree-panel-${instanceId}`;
   const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
@@ -156,10 +157,14 @@ export default function LanguageTree() {
     : referencePages;
 
   useEffect(() => {
-    setOpen((previous) => {
-      if (trail.every((id) => previous.has(id))) return previous;
-      return new Set([...previous, ...trail]);
-    });
+    // An explicit name click owns its toggle; route reveal must not undo it.
+    if (treeNavigation.current !== path) {
+      setOpen((previous) => {
+        if (trail.every((id) => previous.has(id))) return previous;
+        return new Set([...previous, ...trail]);
+      });
+    }
+    treeNavigation.current = null;
     setMobileOpen(path === "/");
   }, [path, trail]);
 
@@ -212,12 +217,18 @@ export default function LanguageTree() {
               to={node.href}
               className="language-tree-link"
               aria-current={active ? "page" : undefined}
-              onClick={() => { if (node.href !== "/") setMobileOpen(false); }}
+              onClick={(event) => {
+                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                if (hasChildren) toggle(node.id);
+                treeNavigation.current = node.href === path ? null : node.href!;
+                if (node.href !== "/") setMobileOpen(false);
+              }}
             >
               <span>{node.name}</span>
               {node.nativeName && <span className="language-tree-native" lang="zh-Hant">{node.nativeName}</span>}
             </Link>
-          ) : <span className="language-tree-cluster">{node.name}</span>}
+          ) : <button type="button" className="language-tree-cluster" aria-expanded={expanded}
+            aria-controls={childrenId} onClick={() => toggle(node.id)}>{node.name}</button>}
         </div>
         {hasChildren && (
           <ul className="language-tree-children" id={childrenId} hidden={!expanded}>

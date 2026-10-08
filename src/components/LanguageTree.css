@@ -41,7 +41,8 @@
 .language-tree-link[aria-current="page"] { font-weight: 500; }
 .language-tree-native { font-size: 11px; color: #707d8c; white-space: nowrap; }
 .language-tree-row--active .language-tree-native { color: #4666b7; }
-.language-tree-cluster { flex: 1; min-width: 0; padding: 8px 4px 8px 0; font-size: 12px; line-height: 1.5; color: #616e80; }
+.language-tree-cluster { flex: 1; min-width: 0; padding: 8px 4px 8px 0; font: inherit; font-size: 12px; line-height: 1.5; color: #616e80; background: transparent; text-align: left; }
+.language-tree-cluster:hover { color: #2155f5; }
 .language-tree-empty { margin: 6px 9px; font-size: 13px; color: #657184; line-height: 1.7; }
 .language-tree a:focus-visible, .language-tree button:focus-visible { outline: 2px solid #2155f5; outline-offset: 1px; }
 @media (max-width: 900px) {

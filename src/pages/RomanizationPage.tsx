@@ -1,247 +1,441 @@
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { xiamenWords } from "../data/xiamen-lexicon";
+import { pitchLetters, xiamenSpellingKey } from "../data/xiamen-romanization";
+import { convertIpa } from "../data/romanization-method";
+import "./RomanizationPage.css";
 
-const sounds = [
-  {
-    spelling: "p",
-    ipa: "[p]",
-    title: "Voiceless, unaspirated",
-    description:
-      "The lips close and release, without a strong puff of air. The vocal folds do not vibrate during the closure.",
-    air: "Low",
-    voice: "Off",
-  },
-  {
-    spelling: "ph",
-    ipa: "[pʰ]",
-    title: "Voiceless, aspirated",
-    description:
-      "The same lip closure, followed by a noticeable puff of air before the next voiced sound begins.",
-    air: "Strong",
-    voice: "Off",
-  },
-  {
-    spelling: "b",
-    ipa: "[b]",
-    title: "Voiced",
-    description:
-      "The lips close and release with vocal-fold vibration. Voicing is a different dimension from aspiration.",
-    air: "Low",
-    voice: "On",
-  },
+const sampleIds = [
+  "tea",
+  "water",
+  "vegetables",
+  "cooked-rice",
+  "noodles",
+  "one",
+  "airplane",
 ];
+const marks = [
+  [
+    "[ã]",
+    "ã",
+    "Nasalization",
+    "Keep the tilde on the vowel; a nasal vowel is distinct from a following n or ng.",
+  ],
+  [
+    "[ŋ̍] / [ŋ̩]",
+    "ng̍",
+    "Syllabic nasal",
+    "The nasal itself forms the syllable. These two IPA diacritics are equivalent placements.",
+  ],
+  ["[m̩]", "m̩", "Syllabic m", "Keep the syllabicity mark."],
+  [
+    "[p̚] / [t̚] / [k̚]",
+    "p̚ / t̚ / k̚",
+    "Unreleased endings",
+    "Keep the unreleased mark when the source supplies it.",
+  ],
+  [
+    "[aː]",
+    "aː",
+    "Length",
+    "Keep ː when supplied. A doubled vowel such as trial oo names a vowel quality, not length.",
+  ],
+];
+const sharedLetters = "a d e f g h i j k l m n o r s t u w y";
 
 export default function RomanizationPage() {
-  const [soundIndex, setSoundIndex] = useState(0);
-  const sound = sounds[soundIndex];
+  const [input, setInput] = useState("[te˨˦]");
+  const [wordId, setWordId] = useState("tea");
+  const [query, setQuery] = useState("");
+  const selectedWord = xiamenWords.find((word) => word.id === wordId);
+  const conversion = useMemo(() => {
+    try {
+      return { syllables: convertIpa(input), error: "" };
+    } catch (error) {
+      return {
+        syllables: [],
+        error: error instanceof Error ? error.message : "Unsupported input.",
+      };
+    }
+  }, [input]);
+  const rules = xiamenSpellingKey.filter((rule) =>
+    `${rule.ipa} ${rule.spelling} ${rule.status}`
+      .normalize("NFC")
+      .toLowerCase()
+      .includes(query.normalize("NFC").toLowerCase().trim()),
+  );
+  const loadWord = (id: string) => {
+    const word = xiamenWords.find((item) => item.id === id);
+    if (word) {
+      setWordId(id);
+      setInput(word.ipa);
+    }
+  };
   return (
-    <div className="romanization-page">
-      <section
-        className="approach-section"
-        id="approach"
-        aria-labelledby="approach-title"
-      >
-        <div className="approach-intro">
-          <h1 id="approach-title">Romanization</h1>
-          <a
-            className="text-link"
-            href="https://www.internationalphoneticassociation.org/content/ipa-chart"
-            target="_blank"
-            rel="noreferrer"
-          >
-            IPA chart <ArrowRight size={15} />
-          </a>
+    <div className="roman-method">
+      <header className="roman-header">
+        <h1>HanLingo romanization</h1>
+        <p>One sound, one spelling. Write each variety as it is pronounced.</p>
+        <div className="roman-core" aria-label="Agreed stop consonants">
+          {[
+            ["[p]", "p", "Unaspirated"],
+            ["[pʰ]", "ph", "Aspirated"],
+            ["[b]", "b", "Voiced"],
+          ].map(([ipa, spelling, label]) => (
+            <div key={ipa}>
+              <span>{ipa}</span>
+              <ArrowRight size={20} aria-hidden="true" />
+              <strong>{spelling}</strong>
+              <small>{label}</small>
+            </div>
+          ))}
         </div>
-        <div className="sound-lab">
-          <div className="sound-lab-heading">
-            <h2>p, ph, b</h2>
+        <p className="roman-note">
+          A shared spelling system for Mandarin, Min, Yue, Hakka, and Wu. The
+          sound mapping is shared; pronunciations and tone contours belong to a
+          named local variety. The current working implementation supports the
+          Amoy learning material.
+        </p>
+      </header>
+
+      <section
+        className="roman-section"
+        aria-labelledby="roman-converter-title"
+      >
+        <h2 id="roman-converter-title">IPA → HanLingo</h2>
+        <div className="roman-converter">
+          <div className="roman-input-heading">
+            <label htmlFor="roman-ipa">IPA with tones</label>
+            <select
+              aria-label="Load an Amoy word"
+              value={wordId}
+              onChange={(event) => loadWord(event.target.value)}
+            >
+              <option value="">Custom IPA</option>
+              {xiamenWords.map((word) => (
+                <option key={word.id} value={word.id}>
+                  {word.han} · {word.english}
+                </option>
+              ))}
+            </select>
           </div>
-          <div
-            className="sound-tabs"
-            role="tablist"
-            aria-label="Explore consonant sound distinctions"
-          >
-            {sounds.map((item, index) => (
-              <button
-                role="tab"
-                id={`sound-tab-${index}`}
-                aria-selected={index === soundIndex}
-                aria-controls="sound-panel"
-                tabIndex={index === soundIndex ? 0 : -1}
-                key={item.spelling}
-                className={index === soundIndex ? "active" : ""}
-                onClick={() => setSoundIndex(index)}
-                onKeyDown={(event) => {
-                  if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
-                    event.preventDefault();
-                    const next =
-                      (index +
-                        (event.key === "ArrowRight" ? 1 : -1) +
-                        sounds.length) %
-                      sounds.length;
-                    setSoundIndex(next);
-                    document.getElementById(`sound-tab-${next}`)?.focus();
-                  }
-                }}
-              >
-                <span>{item.spelling}</span>
-                <span>{item.ipa}</span>
-              </button>
-            ))}
-          </div>
-          <div
-            className="sound-panel"
-            id="sound-panel"
-            role="tabpanel"
-            aria-labelledby={`sound-tab-${soundIndex}`}
-          >
-            <div className="sound-panel-title">
-              <h3>{sound.title}</h3>
-              <span className="ipa-large">{sound.ipa}</span>
-            </div>
-            <p>{sound.description}</p>
-            <div className="sound-properties">
-              <span>
-                Aspiration <strong>{sound.air}</strong>
-              </span>
-              <span>
-                Voicing <strong>{sound.voice}</strong>
-              </span>
-            </div>
-          </div>
-          <p className="sound-caveat">
-            Agreed starting spellings <b>p / ph / b</b> → IPA{" "}
-            <b>[p] / [pʰ] / [b]</b>. This illustrates three sounds, not a claim
-            that every variety uses all three. The wider consonant inventory,
-            vowels, and rules for tone changes are still being developed.
+          <textarea
+            id="roman-ipa"
+            value={input}
+            onChange={(event) => {
+              setInput(event.target.value);
+              setWordId("");
+            }}
+            rows={2}
+            spellCheck={false}
+            aria-describedby="roman-input-help"
+            maxLength={500}
+          />
+          <p id="roman-input-help" className="roman-note">
+            Use pitch letters or numbers: [te˨˦] or te24. Separate syllables
+            with spaces. This converts supplied sounds; it does not predict a
+            word’s pronunciation.
           </p>
+          <div className="roman-samples">
+            {sampleIds.map((id) => {
+              const word = xiamenWords.find((item) => item.id === id);
+              return (
+                word && (
+                  <button type="button" key={id} onClick={() => loadWord(id)}>
+                    {word.han}
+                    <span>{word.english}</span>
+                  </button>
+                )
+              );
+            })}
+          </div>
+          <div className="roman-result" aria-live="polite" aria-atomic="true">
+            {conversion.error ? (
+              <p className="roman-error">{conversion.error}</p>
+            ) : (
+              <>
+                <span>HanLingo · working spelling</span>
+                <output htmlFor="roman-ipa">
+                  {conversion.syllables
+                    .map((syllable) => syllable.spelling)
+                    .join(" ")}
+                </output>
+              </>
+            )}
+          </div>
+          {conversion.syllables.length > 0 && (
+            <div className="roman-breakdown">
+              {conversion.syllables.map((syllable, index) => (
+                <div key={index} className="roman-syllable">
+                  <h3>
+                    [{syllable.ipa}] <ArrowRight size={15} aria-hidden="true" />{" "}
+                    {syllable.spelling}
+                  </h3>
+                  <ul>
+                    {syllable.steps.map((step, i) => (
+                      <li key={i}>
+                        <span className="roman-symbol">{`[${/^\p{M}/u.test(step.ipa) ? "◌" : ""}${step.ipa}]`}</span>
+                        <span aria-hidden="true">→</span>
+                        <strong>
+                          {/^\p{M}/u.test(step.spelling) ? "◌" : ""}
+                          {step.spelling}
+                        </strong>
+                        <small>{step.status}</small>
+                      </li>
+                    ))}
+                    <li>
+                      <span className="roman-symbol">
+                        {pitchLetters(syllable.tone)}
+                      </span>
+                      <span aria-hidden="true">→</span>
+                      <strong>{syllable.tone}</strong>
+                      <small>Pitch contour</small>
+                    </li>
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+          {selectedWord && (
+            <div className="roman-word-source">
+              <strong lang="zh-Hant">{selectedWord.han}</strong>
+              <span>
+                {selectedWord.english} · Amoy ·{" "}
+                {selectedWord.readingMode.toLowerCase()}
+              </span>
+              <a href={selectedWord.sourceUrl} target="_blank" rel="noreferrer">
+                Reading source
+              </a>
+              <p>{selectedWord.note}</p>
+            </div>
+          )}
         </div>
       </section>
 
-      <section className="romanization-decisions">
-        <div>
-          <h2>Shared notation</h2>
-          <p>
-            The same sound receives the same spelling across varieties. Shared
-            characters and related words can have different spellings when their
-            sounds differ.
-          </p>
+      <section className="roman-section" aria-labelledby="roman-rules-title">
+        <div className="roman-section-heading">
+          <h2 id="roman-rules-title">The sound key</h2>
+          <input
+            aria-label="Search sound mappings"
+            type="search"
+            placeholder="IPA or spelling"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+          />
         </div>
-        <div className="decision-table">
-          <div>
-            <span>Sound reference</span>
-            <strong>IPA</strong>
-            <p>Specify the local variety and transcription convention.</p>
-          </div>
-          <div>
-            <span>Vowel decision</span>
-            <strong>
-              â <small>→</small> [ɐ]
-            </strong>
-            <p>The circumflex identifies this vowel. It is not a tone mark.</p>
-          </div>
-          <div>
-            <span>Tone decision</span>
-            <strong>
-              35 <small>→</small> [˧˥]
-            </strong>
-            <p>
-              Use pitch-contour suffixes for now: 1 is low, 5 is high. Tone
-              changes and detailed usage still need rules.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="working-alphabet">
-        <div className="section-heading">
-          <div>
-            <h2>Spelling rules</h2>
-          </div>
-        </div>
-        <div className="alphabet-table-scroll">
+        <p>
+          <b>Agreed</b> rules are our settled starting points. <b>Trial</b>{" "}
+          spellings are implemented for testing and remain open to revision.
+        </p>
+        <div className="roman-table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Spelling</th>
-                <th>IPA reference</th>
-                <th>Working rule</th>
+                <th scope="col">IPA</th>
+                <th scope="col">HanLingo</th>
+                <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>p / ph / b</td>
-                <td>[p] / [pʰ] / [b]</td>
-                <td>
-                  Distinguish voiceless unaspirated, voiceless aspirated, and
-                  voiced stops.
-                </td>
-              </tr>
-              <tr>
-                <td>ch / chh</td>
-                <td>[tɕ] / [tɕʰ]</td>
-                <td>
-                  Add h for aspiration, including after a multi-letter base.
-                </td>
-              </tr>
-              <tr>
-                <td>ts / tsh</td>
-                <td>[t͡s] / [t͡sʰ]</td>
-                <td>Keep alveolar affricates distinct from ch / chh.</td>
-              </tr>
-              <tr>
-                <td>â</td>
-                <td>[ɐ]</td>
-                <td>A vowel-quality symbol. Tone is written separately.</td>
-              </tr>
-              <tr>
-                <td>35 / 51</td>
-                <td>[˧˥] / [˥˩]</td>
-                <td>
-                  Suffixes describe pitch movement, not language-specific tone
-                  categories.
-                </td>
-              </tr>
+              {rules.map((rule) => (
+                <tr key={rule.ipa}>
+                  <td className="roman-symbol">[{rule.ipa}]</td>
+                  <td>
+                    <strong>{rule.spelling}</strong>
+                  </td>
+                  <td>{rule.status}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
+          {!rules.length && <p>No matching sound.</p>}
         </div>
-        <div className="word-study">
+        <div className="roman-rule-notes">
           <div>
-            <span>Amoy</span>
-            <span className="example-han" lang="zh-Hant">
-              茶 · tea
-            </span>
-            <strong>te24</strong>
-            <span className="example-ipa">[te˨˦]</span>
+            <h3>h marks aspiration</h3>
+            <p>
+              p → ph, ts → tsh, ch → chh. The whole base spelling receives h. A
+              standalone h still represents [h] in the working key.
+            </p>
+          </div>
+          <div>
+            <h3>Different places of articulation</h3>
+            <p>
+              ts / tsh represent [t͡s] / [t͡sʰ]; ch / chh represent [tɕ] / [tɕʰ].
+              They remain separate even when another spelling system uses the
+              same letters.
+            </p>
+          </div>
+          <div>
+            <h3>Vowels stay separate from tone</h3>
+            <p>
+              Trial â represents [ɐ], not a tone. Trial oo, oe, er, and ae
+              represent [ɔ], [ɤ], [ə], and [ɛ]. Tone follows the syllable as
+              numbers.
+            </p>
+          </div>
+        </div>
+        <details className="roman-details">
+          <summary>Letters retained in the current implementation</summary>
+          <p className="roman-symbol">{sharedLetters}</p>
+          <p>
+            These letters keep their IPA values as trial spellings. For example,
+            j means [j] and y means [y]. They are not Pinyin values, and this
+            list is not a claim that every variety uses every sound. The wider
+            Han inventory still needs review.
+          </p>
+        </details>
+      </section>
+
+      <section className="roman-section" aria-labelledby="roman-tones-title">
+        <h2 id="roman-tones-title">Write the pitch, not a tone category</h2>
+        <p>
+          Append the supplied contour to each syllable. 1 is low and 5 is high,
+          relative to the speaker’s range. These are pitch levels, not
+          measurements in hertz.
+        </p>
+        <div className="roman-tones">
+          {["44", "24", "53", "21", "22", "32", "4"].map((tone) => (
+            <div key={tone}>
+              <svg
+                viewBox="0 0 100 70"
+                role="img"
+                aria-label={`Pitch contour ${tone}`}
+              >
+                <path d="M10 10H90M10 60H90" className="roman-tone-guide" />
+                <polyline
+                  points={(tone.length === 1 ? [tone, tone] : [...tone])
+                    .map(
+                      (digit, index, array) =>
+                        `${10 + (index * 80) / (array.length - 1)},${70 - Number(digit) * 12}`,
+                    )
+                    .join(" ")}
+                />
+              </svg>
+              <strong>{tone}</strong>
+              <span>{pitchLetters(tone)}</span>
+            </div>
+          ))}
+        </div>
+        <p className="roman-note">
+          The seven contours above occur in the current Amoy word set. A single
+          4 gives a pitch level; it does not itself mark a stop ending or
+          duration. Preserve the source’s contour notation.
+        </p>
+        <div className="roman-tone-example">
+          <h3>Connected speech · 飛機</h3>
+          <div>
+            <span>[hui˦˦ ki˦˦]</span>
+            <ArrowRight size={18} aria-hidden="true" />
+            <strong>[hui˨˨ ki˦˦]</strong>
+          </div>
+          <div>
+            <span>hui44 ki44</span>
+            <ArrowRight size={18} aria-hidden="true" />
+            <strong>hui22 ki44</strong>
           </div>
           <p>
-            The Amoy word for tea pairs the sounds <b>[te]</b> with a rising
-            citation tone <b>[˨˦]</b>, written <b>24</b>.{" "}
-            <Link to="/min/southern-min/xiamen/words?q=茶">
-              Word source
-            </Link>
+            The first syllable changes in this documented Amoy example. We write
+            the attested surface tones and keep citation readings
+            distinguishable; the converter does not apply tone changes
+            automatically.
           </p>
-        </div>
-        <p className="reading-note">
-          The same letters must not silently change their IPA value across
-          varieties. For example, a Cantonese vowel transcribed [ɪ] or [e] needs
-          to remain distinct from Mandarin [i].
-        </p>
-        <div className="method-source-links">
           <a
-            href="https://doi.org/10.1017/S0025100303001208"
+            href="https://ling.cuhk.edu.hk/people/peggy/SP2024_GeMok_Phonotactics.pdf"
             target="_blank"
             rel="noreferrer"
           >
-            Lee & Zee · Standard Chinese
+            Ge & Mok · Amoy tone sandhi
           </a>
+        </div>
+        <p>
+          Numbers in other romanizations may identify tone categories. A
+          Jyutping 2, for example, represents [˧˥] in its published chart; that
+          contour becomes 35 here. Copying its digit 2 would change the meaning
+          of the notation.{" "}
           <a
             href="https://jyutping.org/en/jyutping/"
             target="_blank"
             rel="noreferrer"
           >
-            Jyutping · Cantonese IPA reference
+            Jyutping reference
           </a>
+        </p>
+      </section>
+
+      <section className="roman-section">
+        <h2>Keep the detail</h2>
+        <p>
+          The working spelling retains these IPA marks until we settle dedicated
+          conventions.
+        </p>
+        <div className="roman-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">IPA</th>
+                <th scope="col">Working spelling</th>
+                <th scope="col">What stays distinct</th>
+              </tr>
+            </thead>
+            <tbody>
+              {marks.map(([ipa, spelling, label, note]) => (
+                <tr key={label}>
+                  <td className="roman-symbol">{ipa}</td>
+                  <td>
+                    <strong>{spelling}</strong>
+                  </td>
+                  <td>
+                    <b>{label}</b>
+                    <p>{note}</p>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="roman-section">
+        <h2>Where the system stands</h2>
+        <div className="roman-rule-notes">
+          <div>
+            <h3>Shared rules</h3>
+            <p>
+              p / ph / b, ch / chh, ts / tsh, h for aspiration, and
+              pitch-contour suffixes. A common character does not require a
+              common spelling when its local sounds differ.
+            </p>
+          </div>
+          <div>
+            <h3>Working material</h3>
+            <p>
+              {xiamenWords.length} Amoy words use the same conversion code as
+              this page. Their broad dictionary IPA, source readings, and
+              citation or connected-speech status remain attached to each word.
+            </p>
+            <Link to="/min/southern-min/xiamen/words">Amoy words →</Link>
+          </div>
+          <div>
+            <h3>Next decisions</h3>
+            <p>
+              The full vowel inventory; candidate sh for [ɕ] versus a distinct
+              spelling for [ʂ]; voiced affricates; phonation; syllable
+              boundaries; and consistent detail across sources. Digraphs such as
+              ng still need boundary rules. The converter does not validate
+              phonotactics or provide a universal reverse conversion.
+            </p>
+          </div>
+        </div>
+        <p>
+          Min, Mandarin, Yue, Hakka, and Wu need locality-specific inventories
+          and pronunciation evidence. This is our working proposal, not a
+          completed standard or an automatic character-to-speech system.
+          Documented place names such as Ko-hiông retain their source spelling;
+          they are not silently converted into HanLingo spelling.
+        </p>
+        <div className="roman-sources">
           <a
             href="https://www.internationalphoneticassociation.org/content/ipa-chart"
             target="_blank"
@@ -249,42 +443,14 @@ export default function RomanizationPage() {
           >
             Official IPA chart
           </a>
-        </div>
-      </section>
-      <section className="method-principles">
-        <h2>Design principles</h2>
-        <div className="principles-grid">
-          <article>
-            <h3>Sound and spelling</h3>
-            <p>
-              IPA is our reference for pronunciation. Romanization is a
-              practical writing system whose spellings need a clear, explicit
-              relationship to those sounds.
-            </p>
-          </article>
-          <article>
-            <h3>Local varieties</h3>
-            <p>
-              Each entry names its variety and preserves the sound distinctions
-              used by its speakers.
-            </p>
-          </article>
-          <article>
-            <h3>Unfinished rules</h3>
-            <p>
-              The first rules cover p / ph / b, ch / chh, ts / tsh, â, and
-              pitch-contour suffixes. The remaining consonants, vowels, syllable
-              boundaries, and connected speech still need decisions and testing.
-            </p>
-          </article>
-        </div>
-        <div className="method-open">
-          <h3>Open questions</h3>
-          <p>
-            Unresolved choices include connected-speech tone changes, spellings
-            for [s], [ɕ], and [ʂ], syllable boundaries, and the level of
-            phonetic detail to represent.
-          </p>
+          <Link to="/min/southern-min/xiamen/sounds">Amoy IPA gallery</Link>
+          <a
+            href="https://github.com/uhonglim/HanLingo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            HanLingo source code
+          </a>
         </div>
       </section>
     </div>

@@ -14,6 +14,7 @@ export const xiamenSpellingKey = [
   { ipa: "ŋ̩", spelling: "ng̍", status: "Trial" },
   { ipa: "ŋ", spelling: "ng", status: "Trial" },
   { ipa: "ɡ", spelling: "g", status: "Trial" },
+  { ipa: "ɐ", spelling: "â", status: "Trial" },
   { ipa: "ɔ", spelling: "oo", status: "Trial" },
   { ipa: "ɤ", spelling: "oe", status: "Trial" },
   { ipa: "ə", spelling: "er", status: "Trial" },

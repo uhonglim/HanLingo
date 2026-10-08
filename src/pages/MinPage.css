@@ -55,9 +55,6 @@
   outline: 2px solid var(--min-blue);
   outline-offset: 4px;
 }
-.min-hub a svg {
-  transition: transform 0.15s ease;
-}
 
 .min-heading {
   display: flex;
@@ -156,9 +153,6 @@
 .min-hub .min-primary-link:hover {
   color: #fff;
   background: #1544d5;
-}
-.min-primary-link:hover svg {
-  transform: translateX(3px);
 }
 .min-chapter-links {
   margin-top: 25px !important;

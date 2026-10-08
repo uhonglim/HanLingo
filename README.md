@@ -25,9 +25,9 @@ npm run preview
 
 ## Explore the site
 
-- Start learning in the [Xiamen chapter](http://127.0.0.1:5173/languages/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Culture, Sounds, and Practice pages.
+- Start learning in the [Xiamen chapter](http://127.0.0.1:5173/min/southern-min/xiamen): **35 sourced vocabulary entries, 11 credited photographs**, and separate Words, Culture, Sounds, and Practice pages.
 - Search or save words, follow photographs to related vocabulary, explore pitch contours and a tone-sandhi example, and complete short practice rounds. Saved words and learning progress stay in this browser.
-- The homepage opens the Min hub: filter five branches, select a place on the map, and enter Xiamen lessons or regional reference articles.
+- The homepage is the Han family tree. Open a group, then its subgroup and locality; the same tree stays in place as the adjacent content changes. The Min map remains available at `/min`.
 - Follow a map point to a dedicated local article, or pan and zoom to compare reference places.
 - Read group introductions with credited photographs, then follow the scholarly sources attached to individual articles.
 - Compare the six supplied versions of a letter home in the reading room, with an English meaning guide.
@@ -35,17 +35,18 @@ npm run preview
 
 | Route | Content |
 | --- | --- |
-| `/` | Min hub and Xiamen learning entry |
-| `/languages` | Language library |
-| `/languages/:languageId` | Group article and regional overview |
-| `/languages/:languageId/:subgroupId` | Subgroup article and related localities |
-| `/languages/:languageId/:subgroupId/:varietyId` | Local-variety article and classification path |
+| `/` | Han family tree and Xiamen learning entry |
+| `/:languageId` | Group article and regional overview |
+| `/:languageId/:subgroupId` | Subgroup article and related localities |
+| `/:languageId/:subgroupId/:varietyId` | Local-variety article and classification path |
 | `/compare` | Reading room and letter comparison |
 | `/romanization` | Current romanization decisions and open questions |
 | `/written-chinese` | Modern Standard Written Chinese as a written reference |
 | `/about` | Project scope, method, and credits |
 
-`/languages/min/southern-min/xiamen` opens the flagship learning chapter; append `/words`, `/culture`, `/sounds`, or `/practice` for its learning sections. Search and photograph selections have shareable URLs. The Xiamen overview connects photographs to reveal-meaning practice cards and bookmarks. Other localities retain reference articles. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
+`/min/southern-min/xiamen` opens the flagship learning chapter; append `/words`, `/culture`, `/sounds`, or `/practice` for its learning sections. Search and photograph selections have shareable URLs. The Xiamen overview connects photographs to reveal-meaning practice cards and bookmarks. Other localities retain reference articles. Routes validate the complete classification path, so a known city placed under the wrong subgroup does not resolve as a valid reference page.
+
+Navigation follows `/min` → `/min/southern-min` → `/min/southern-min/xiamen`, without a Languages layer or animated page transitions. Old `/languages/...` links redirect to the corresponding canonical path. The tree and content scroll independently, and browser Back restores the reading position. See [the navigation rules](AGENTS.md) and [navigation architecture](docs/NAVIGATION.md).
 
 The application uses React Router’s browser history. Vite supports development navigation and direct page refreshes. A future production host must **rewrite application routes to `index.html` while serving asset files normally**, so opening or refreshing a deep URL works. This repository does not establish a production deployment.
 
@@ -73,7 +74,8 @@ src/
   main.tsx                     React and BrowserRouter entry point
   routing.tsx                  Reference URLs and classification-path validation
   styles.css                   Shared visual styles
-  pages/                       Homepage, library, reading room, and supporting pages
+  pages/                       Family root, reading room, and learning pages
+  components/LanguageTree.*    Persistent shared navigation tree
   components/AtlasMap.*        Interactive geographic map
   components/ReferencePages.*  Group, subgroup, and locality article views
   data/languages.ts            Groups, subgroups, map points, and letters

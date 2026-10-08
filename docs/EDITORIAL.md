@@ -168,3 +168,7 @@ Recommended fields for a future record:
 - Review status, review scope, reviewer attribution where authorized, and revision date.
 
 “Hakka 200 years ago” is insufficient as an entry. A useful historical record must identify which Hakka variety, where, approximately when, and the evidence for that claim. Present-day examples also vary by speaker, generation, and context; the map should not erase that variation.
+
+## Navigation rule
+
+Start URLs directly with the language group: `/min` → `/min/southern-min` → `/min/southern-min/xiamen`. Do not add a Languages layer. Keep one persistent tree and immediate, stationary navigation; no animated jumps or duplicate page-specific navigation. The homepage stays at `/`. See [AGENTS.md](../AGENTS.md) for the user-approved rules.

@@ -1,10 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Link,
-  NavLink,
   Route,
   Routes,
-  useLocation,
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
@@ -31,7 +29,7 @@ import AtlasMap from "../components/AtlasMap";
 import { mapPoints } from "../data/languages";
 import "./XiamenPage.css";
 
-const BASE = "/languages/min/southern-min/xiamen";
+const BASE = "/min/southern-min/xiamen";
 type Word = (typeof xiamenWords)[number];
 type Photo = (typeof xiamenPhotos)[number];
 const categories = [
@@ -411,7 +409,7 @@ function Overview({
             These readings follow urban Xiamen Southern Min. Quanzhou and
             Zhangzhou have their own varieties.
           </p>
-          <Link to="/languages/min/southern-min">
+          <Link to="/min/southern-min">
             Southern Min varieties <ArrowRight size={15} />
           </Link>
         </div>
@@ -426,7 +424,7 @@ function Overview({
           onSelectPoint={(id) => {
             const point = mapPoints.find((item) => item.id === id);
             if (point && id !== "xiamen")
-              navigate(`/languages/min/southern-min/${id}`);
+              navigate(`/min/southern-min/${id}`);
           }}
         />
       </section>
@@ -1000,44 +998,8 @@ function Practice({
 export default function XiamenPage() {
   const saved = useCollection("hanlingo:xiamen:saved:v1");
   const learned = useCollection("hanlingo:xiamen:learned:v1");
-  const { pathname } = useLocation();
-  const chapterTabs = useRef<HTMLElement>(null);
-  useEffect(() => {
-    const active = chapterTabs.current?.querySelector<HTMLElement>('[aria-current="page"]');
-    if (active && chapterTabs.current) {
-      const tabs = chapterTabs.current;
-      const left = active.offsetLeft;
-      if (left < tabs.scrollLeft) tabs.scrollLeft = left;
-      else if (left + active.offsetWidth > tabs.scrollLeft + tabs.clientWidth)
-        tabs.scrollLeft = left + active.offsetWidth - tabs.clientWidth;
-    }
-  }, [pathname]);
   return (
     <div className="xm-page">
-      <div className="xm-chapter-nav">
-        <nav ref={chapterTabs} aria-label="Xiamen learning sections">
-          {[
-            ["", "Overview"],
-            ["/words", "Words"],
-            ["/culture", "Culture"],
-            ["/sounds", "Sounds"],
-            ["/practice", "Practice"],
-          ].map(([path, label]) => (
-            <NavLink key={path} to={BASE + path} end>
-              {label}
-            </NavLink>
-          ))}
-        </nav>
-        <Link
-          to={`${BASE}/words?saved=1`}
-          className="xm-collection-link"
-          aria-label={`${saved.items.length} saved words`}
-        >
-          <Bookmark size={16} />
-          <span className="xm-collection-label">Saved</span>
-          <span className="xm-collection-count">{saved.items.length}</span>
-        </Link>
-      </div>
       {(saved.storageError || learned.storageError) && (
         <p className="xm-storage-note">
           Browser storage is unavailable. Your progress will last for this

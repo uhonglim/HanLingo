@@ -217,7 +217,7 @@ export default function RomanizationPage() {
           <p>
             The Xiamen word for tea pairs the sounds <b>[te]</b> with a rising
             citation tone <b>[˨˦]</b>, written <b>24</b>.{" "}
-            <Link to="/languages/min/southern-min/xiamen/words?q=茶">
+            <Link to="/min/southern-min/xiamen/words?q=茶">
               Word source
             </Link>
           </p>

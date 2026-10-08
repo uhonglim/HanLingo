@@ -3,8 +3,10 @@ import { Link, NavLink, Navigate, Route, Routes, useLocation, useNavigationType 
 import { ArrowRight, Github, Menu, X } from "lucide-react";
 import MinPage from "./pages/MinPage";
 import { getBreadcrumbs } from "./navigation";
+import { languages } from "./data/languages";
 import "./pages/pages.css";
-const LibraryPage = lazy(() => import("./pages/LibraryPage"));
+const TreeHomePage = lazy(() => import("./pages/TreeHomePage"));
+import LanguageTree from "./components/LanguageTree";
 const ReferencePage = lazy(() => import("./components/ReferencePages"));
 const ReadingRoom = lazy(() => import("./pages/ReadingRoom"));
 const RomanizationPage = lazy(() => import("./pages/RomanizationPage"));
@@ -19,9 +21,10 @@ function PageLocation() {
   const previous = useRef(location);
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
-    const remember = () => scrollPositions.set(location.key, window.scrollY);
-    window.addEventListener('scroll', remember, { passive: true });
-    return () => window.removeEventListener('scroll', remember);
+    const remember = () => scrollPositions.set(location.key, document.getElementById("page-panel")?.scrollTop ?? 0);
+    const panel = document.getElementById('page-panel');
+    panel?.addEventListener('scroll', remember, { passive: true });
+    return () => panel?.removeEventListener('scroll', remember);
   }, [location.key]);
   useLayoutEffect(() => {
     const crumbs = getBreadcrumbs(location.pathname);
@@ -32,7 +35,7 @@ function PageLocation() {
     const target = navigationType === 'POP' ? scrollPositions.get(location.key) ?? 0 : 0;
     const frame = requestAnimationFrame(() => {
       if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
-      else window.scrollTo({ top: target, behavior: 'instant' });
+      else document.getElementById('page-panel')?.scrollTo({ top: target, behavior: 'instant' });
     });
     return () => cancelAnimationFrame(frame);
   }, [location, navigationType]);
@@ -48,11 +51,15 @@ function LocationTrail() {
     </li>)}
   </ol></nav>;
 }
+function LegacyLanguageRoute() {
+  const { pathname, search, hash } = useLocation();
+  return <Navigate to={`${pathname.replace(/^\/languages/, '') || '/'}${search}${hash}`} replace />;
+}
 function NotFound() {
   return (
     <section className="not-found-page">
       <h1>Page not found</h1>
-      <Link to="/languages" className="primary-button">
+      <Link to="/" className="primary-button">
         Browse languages <ArrowRight size={17} />
       </Link>
     </section>
@@ -60,6 +67,7 @@ function NotFound() {
 }
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
   const closeMenu = () => setMenuOpen(false);
   return (
     <>
@@ -86,8 +94,8 @@ export default function App() {
           aria-label="Main navigation"
           id="main-navigation"
         >
-          <NavLink to="/languages" onClick={closeMenu}>
-            Languages
+          <NavLink to="/" end className={pathname === "/" || languages.some(group => pathname === `/${group.id}` || pathname.startsWith(`/${group.id}/`)) ? "active" : ""} onClick={closeMenu}>
+            Language tree
           </NavLink>
           <NavLink to="/compare" onClick={closeMenu}>
             Compare
@@ -116,6 +124,9 @@ export default function App() {
           {menuOpen ? <X /> : <Menu />}
         </button>
       </header>
+      <div className="site-workspace">
+        <LanguageTree />
+        <div className="page-panel" id="page-panel">
       <main id="main" tabIndex={-1}>
         <LocationTrail />
         <Suspense
@@ -127,20 +138,20 @@ export default function App() {
         >
           <PageLocation />
           <Routes>
-            <Route path="/" element={<Navigate to="/languages/min" replace />} />
-            <Route path="/languages" element={<LibraryPage />} />
-            <Route path="/languages/min" element={<MinPage />} />
+            <Route path="/" element={<TreeHomePage />} />
+            <Route path="/languages/*" element={<LegacyLanguageRoute />} />
+            <Route path="/min" element={<MinPage />} />
             <Route
-              path="/languages/min/southern-min/xiamen/*"
+              path="/min/southern-min/xiamen/*"
               element={<XiamenPage />}
             />
-            <Route path="/languages/:languageId" element={<ReferencePage />} />
+            <Route path="/:languageId" element={<ReferencePage />} />
             <Route
-              path="/languages/:languageId/:subgroupId"
+              path="/:languageId/:subgroupId"
               element={<ReferencePage />}
             />
             <Route
-              path="/languages/:languageId/:subgroupId/:varietyId"
+              path="/:languageId/:subgroupId/:varietyId"
               element={<ReferencePage />}
             />
             <Route path="/compare" element={<ReadingRoom />} />
@@ -163,6 +174,8 @@ export default function App() {
         </Link>
         <Link to="/about">Sources & about</Link>
       </footer>
+      </div>
+      </div>
     </>
   );
 }

@@ -1,16 +1,7 @@
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import {
-  ArrowLeft,
-  ArrowRight,
-  BookOpen,
-  ChevronDown,
-  ChevronRight,
-  MapPin,
-  PanelLeft,
-  X,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, MapPin } from "lucide-react";
 import { languages, letters, mapPoints } from "../data/languages";
 import {
   groupArticles,
@@ -24,197 +15,8 @@ import {
   subgroupPath,
   varietyPath,
 } from "../routing";
-import type { ReferenceRoute } from "../routing";
 import AtlasMap from "./AtlasMap";
 import "./ReferencePages.css";
-
-function TaxonomySidebar({
-  active,
-  onNavigate,
-}: {
-  active: ReferenceRoute | null;
-  onNavigate: () => void;
-}) {
-  const [openGroups, setOpenGroups] = useState<Set<string>>(
-    () => new Set(active ? [active.language.id] : []),
-  );
-  const [openSubgroups, setOpenSubgroups] = useState<Set<string>>(
-    () =>
-      new Set(
-        active?.subgroup ? [`${active.language.id}/${active.subgroup.id}`] : [],
-      ),
-  );
-
-  useEffect(() => {
-    if (!active) return;
-    setOpenGroups((current) => new Set([...current, active.language.id]));
-    if (active.subgroup)
-      setOpenSubgroups(
-        (current) =>
-          new Set([...current, `${active.language.id}/${active.subgroup!.id}`]),
-      );
-  }, [active?.language.id, active?.subgroup?.id]);
-
-  function toggle(current: Set<string>, id: string) {
-    const updated = new Set(current);
-    if (updated.has(id)) updated.delete(id);
-    else updated.add(id);
-    return updated;
-  }
-
-  return (
-    <>
-      <Link to="/languages" className="reference-back" onClick={onNavigate}>
-        <ArrowLeft size={13} />
-        Back to the atlas
-      </Link>
-      <div className="reference-sidebar-title">
-        <h2>Languages</h2>
-      </div>
-      <nav
-        className="reference-tree"
-        aria-label="Browse the Han language family"
-      >
-        <Link
-          className="reference-tree-root"
-          to="/languages"
-          onClick={onNavigate}
-        >
-          <span lang="zh-Hant">漢</span>
-          <span>
-            Han language family<small>Sinitic</small>
-          </span>
-        </Link>
-        <ul className="reference-tree-groups">
-          {languages.map((language) => {
-            const open = openGroups.has(language.id);
-            const selected = active?.language.id === language.id;
-            return (
-              <li
-                key={language.id}
-                style={{ "--reference-color": "#2155f5" } as CSSProperties}
-              >
-                <div
-                  className={`reference-tree-group${selected ? " is-current-group" : ""}`}
-                >
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setOpenGroups((current) => toggle(current, language.id))
-                    }
-                    aria-label={`${open ? "Collapse" : "Expand"} ${language.name}`}
-                    aria-expanded={open}
-                    aria-controls={`tree-${language.id}`}
-                  >
-                    <ChevronRight
-                      size={12}
-                      className={open ? "is-expanded" : ""}
-                    />
-                  </button>
-                  <Link
-                    to={groupPath(language.id)}
-                    onClick={onNavigate}
-                    aria-current={
-                      selected && active.level === "group" ? "page" : undefined
-                    }
-                  >
-                    <span className="reference-tree-glyph" lang="zh-Hant">
-                      {language.shortName}
-                    </span>
-                    {language.name}
-                    <span className="reference-tree-count">
-                      {language.subgroups.length}
-                    </span>
-                  </Link>
-                </div>
-                {open && (
-                  <ul
-                    id={`tree-${language.id}`}
-                    className="reference-tree-subgroups"
-                  >
-                    {language.subgroups.map((subgroup) => {
-                      const key = `${language.id}/${subgroup.id}`;
-                      const subgroupOpen = openSubgroups.has(key);
-                      const subgroupSelected =
-                        selected && active?.subgroup?.id === subgroup.id;
-                      const places = mapPoints.filter(
-                        (point) =>
-                          point.groupId === language.id &&
-                          point.subgroupId === subgroup.id,
-                      );
-                      return (
-                        <li key={subgroup.id}>
-                          <div className="reference-tree-subgroup">
-                            <button
-                              type="button"
-                              onClick={() =>
-                                setOpenSubgroups((current) =>
-                                  toggle(current, key),
-                                )
-                              }
-                              aria-label={`${subgroupOpen ? "Collapse" : "Expand"} ${subgroup.name}`}
-                              aria-expanded={subgroupOpen}
-                              aria-controls={`tree-${language.id}-${subgroup.id}`}
-                            >
-                              <ChevronRight
-                                size={11}
-                                className={subgroupOpen ? "is-expanded" : ""}
-                              />
-                            </button>
-                            <Link
-                              to={subgroupPath(language.id, subgroup.id)}
-                              onClick={onNavigate}
-                              aria-current={
-                                subgroupSelected && !active?.point
-                                  ? "page"
-                                  : undefined
-                              }
-                            >
-                              {subgroup.name}
-                            </Link>
-                          </div>
-                          {subgroupOpen && (
-                            <ul
-                              id={`tree-${language.id}-${subgroup.id}`}
-                              className="reference-tree-places"
-                            >
-                              {places.map((point) => (
-                                <li key={point.id}>
-                                  <Link
-                                    to={varietyPath(point)}
-                                    onClick={onNavigate}
-                                    aria-current={
-                                      active?.point?.id === point.id
-                                        ? "page"
-                                        : undefined
-                                    }
-                                  >
-                                    <span className="reference-tree-place-dot" />
-                                    {point.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-      <div className="reference-sidebar-foot">
-        <Link to="/about" onClick={onNavigate}>
-          How we describe a language
-          <ArrowRight size={12} />
-        </Link>
-      </div>
-    </>
-  );
-}
 
 export default function ReferencePage() {
   const params = useParams<{
@@ -224,7 +26,6 @@ export default function ReferencePage() {
   }>();
   const navigate = useNavigate();
   const route = resolveReferenceRoute(params);
-  const [treeOpen, setTreeOpen] = useState(false);
   const [showEnglish, setShowEnglish] = useState(false);
   const entry = route?.point
     ? varietyArticles[route.point.id]
@@ -235,11 +36,9 @@ export default function ReferencePage() {
         : undefined;
 
   useEffect(() => {
-    setTreeOpen(false);
     setShowEnglish(false);
   }, [entry?.title, params.languageId, params.subgroupId, params.varietyId]);
 
-  const closeTree = () => setTreeOpen(false);
   const group = route?.language;
   const point = route?.point;
   const subgroup = route?.subgroup;
@@ -269,28 +68,8 @@ export default function ReferencePage() {
   return (
     <div
       className="reference-layout"
-      style={
-        { "--reference-color": "#2155f5" } as CSSProperties
-      }
+      style={{ "--reference-color": "#2155f5" } as CSSProperties}
     >
-      <div className="reference-mobile-tree">
-        <button
-          type="button"
-          onClick={() => setTreeOpen(!treeOpen)}
-          aria-expanded={treeOpen}
-          aria-controls="reference-sidebar"
-        >
-          <PanelLeft size={16} />
-          <span>Browse the language family</span>
-          {treeOpen ? <X size={16} /> : <ChevronDown size={15} />}
-        </button>
-      </div>
-      <aside
-        id="reference-sidebar"
-        className={`reference-sidebar${treeOpen ? " is-open" : ""}`}
-      >
-        <TaxonomySidebar active={route} onNavigate={closeTree} />
-      </aside>
       {!route || !entry || !group ? (
         <div className="reference-not-found">
           <h1>Entry not found</h1>

@@ -1,7 +1,7 @@
 :root {
   --site-sticky-offset: 72px;
   --page-width: 1200px;
-  --page-gutter: 40px;
+  --page-gutter: 32px;
 }
 .site-header {
   position: sticky;
@@ -24,7 +24,10 @@
 .github-link { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
 .github-link:hover { color: var(--ink); }
 .menu-toggle { display: none; background: transparent; padding: 10px; }
-#main { max-width: 1280px; margin: auto; }
+.site-workspace { display: grid; grid-template-columns: 260px minmax(0, 1fr); height: calc(100dvh - var(--site-sticky-offset)); max-width: 1600px; margin: auto; overflow: hidden; }
+.page-panel { overflow: auto; min-width: 0; min-height: 0; overscroll-behavior: contain; scrollbar-gutter: stable; }
+#main { width: 100%; margin: auto; min-height: calc(100% - 110px); }
+@media (max-width: 900px) { .site-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); } }
 #main:focus { outline: none; }
 .location-trail { width: min(var(--page-width), calc(100% - 2 * var(--page-gutter))); margin: auto; padding: 22px 0 0; }
 .location-trail ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 0; padding: 0; margin: 0; list-style: none; }

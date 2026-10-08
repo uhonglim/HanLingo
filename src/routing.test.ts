@@ -13,7 +13,7 @@ describe("reference routes", () => {
       expect(resolveReferenceRoute({ languageId: language.id })?.level).toBe(
         "group",
       );
-      expect(groupPath(language.id)).toBe(`/languages/${language.id}`);
+      expect(groupPath(language.id)).toBe(`/${language.id}`);
       for (const subgroup of language.subgroups) {
         expect(
           resolveReferenceRoute({
@@ -22,7 +22,7 @@ describe("reference routes", () => {
           })?.level,
         ).toBe("subgroup");
         expect(subgroupPath(language.id, subgroup.id)).toBe(
-          `/languages/${language.id}/${subgroup.id}`,
+          `/${language.id}/${subgroup.id}`,
         );
       }
     }
@@ -35,7 +35,7 @@ describe("reference routes", () => {
         })?.point,
       ).toBe(point);
       expect(varietyPath(point)).toBe(
-        `/languages/${point.groupId}/${point.subgroupId}/${point.id}`,
+        `/${point.groupId}/${point.subgroupId}/${point.id}`,
       );
     }
   });

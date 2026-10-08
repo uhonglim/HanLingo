@@ -2,7 +2,7 @@ import { languages, mapPoints } from "./data/languages";
 import type { Language, MapPoint } from "./data/languages";
 
 export const groupPath = (languageId: string) =>
-  `/languages/${encodeURIComponent(languageId)}`;
+  `/${encodeURIComponent(languageId)}`;
 export const subgroupPath = (languageId: string, subgroupId: string) =>
   `${groupPath(languageId)}/${encodeURIComponent(subgroupId)}`;
 export const varietyPath = (

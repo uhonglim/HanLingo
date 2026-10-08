@@ -42,7 +42,7 @@ Freshly checked CUHK character pages for [茶](https://humanum.arts.cuhk.edu.hk/
 
 ## Remaining locality gaps
 
-The new comparison sets do not yet cover every mapped city. In particular, George Town needs speaker-locality evidence before Penang-wide fieldwork can be assigned to it. Singapore currently has an attested heritage spelling for market, not a complete IPA lesson. Teochew and Swatow should use their own local evidence rather than inheriting Tsuan-Chiang forms; they are not mapped locality IDs in the present `mapPoints` dataset. Locality-specific comparison words remain absent for Beijing, Chengdu, Guangzhou, Hong Kong, Taishan, Haifeng, Changting, Suzhou, Lishui and Yong’an. Existing sound studies are useful sources but do not justify invented word entries.
+The new comparison sets do not yet cover every mapped city. In particular, George Town needs speaker-locality evidence before Penang-wide fieldwork can be assigned to it. Singapore currently has an attested heritage spelling for market, not a complete IPA lesson. Teochew and Swatow are mapped localities with photo galleries; they still need their own lexical evidence rather than inheriting Tsuan-Chiang forms. Locality-specific comparison words remain absent for Beijing, Chengdu, Guangzhou, Hong Kong, Taishan, Haifeng, Changting, Suzhou, Lishui and Yong’an. Existing sound studies are useful sources but do not justify invented word entries.
 
 ## Existing-source correction found
 
@@ -56,4 +56,4 @@ The new comparison sets do not yet cover every mapped city. In particular, Georg
 - `regionalConceptsFor(localityId)`: complete sets involving this place, including comparison partners.
 - `regionalReadingsFor(localityId)`: only this place’s readings, with `conceptId` and `english` added.
 
-Tests cover real locality IDs, unique IDs, evidence on every reading, multiple places in every set, distinct Amoy/Tsiang-chiu/Tsuan-chiu forms, preservation of both Taipak soap variants, source tone separation, and exclusion of unverified tomato locality claims.
+Tests cover real locality IDs, unique IDs, evidence on every reading, multiple places in every set, distinct Amoy/Tsiang-tsiu/Tsuân-tsiu forms, preservation of both Taipak soap variants, source tone separation, and exclusion of unverified tomato locality claims.

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hanlingo.pairup.world/sitemap.xml

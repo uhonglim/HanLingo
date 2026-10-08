@@ -1,0 +1,1331 @@
+{
+  "amoy": [
+    {
+      "han": "茶",
+      "meaning": "tea",
+      "scope": "Citation reading",
+      "note": "The everyday reading; the source also lists separate literary readings.",
+      "source": {
+        "title": "Wiktionary contributors · 茶 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E8%8C%B6&oldid=92201515#Chinese"
+      }
+    },
+    {
+      "han": "水",
+      "meaning": "water",
+      "scope": "Citation reading",
+      "note": "A falling citation tone. Keep the opening affricate distinct from plain [s].",
+      "source": {
+        "title": "Wiktionary contributors · 水 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E6%B0%B4&oldid=93428753#Chinese"
+      }
+    },
+    {
+      "han": "飯",
+      "meaning": "cooked rice; a meal",
+      "scope": "Citation reading",
+      "note": "The nasal [ŋ̍] carries the syllable. Compare 米 for uncooked rice.",
+      "source": {
+        "title": "Wiktionary contributors · 飯 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E9%A3%AF&oldid=92731972#Chinese"
+      }
+    },
+    {
+      "han": "米",
+      "meaning": "uncooked rice",
+      "scope": "Citation reading",
+      "note": "Rice as grain, distinguished here from cooked 飯.",
+      "source": {
+        "title": "Wiktionary contributors · 米 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E7%B1%B3&oldid=92748693#Chinese"
+      }
+    },
+    {
+      "han": "麵",
+      "meaning": "noodles",
+      "scope": "Citation reading",
+      "note": "The everyday reading has a nasal vowel, shown by the tilde in [ĩ].",
+      "source": {
+        "title": "Wiktionary contributors · 麵 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E9%BA%B5&oldid=93448520#Chinese"
+      }
+    },
+    {
+      "han": "魚",
+      "meaning": "fish",
+      "scope": "Citation reading",
+      "note": "The selected urban Xiamen reading; the source also records suburban [hu˨˦].",
+      "source": {
+        "title": "Wiktionary contributors · 魚 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E9%AD%9A&oldid=92751309#Chinese"
+      }
+    },
+    {
+      "han": "肉",
+      "meaning": "meat",
+      "scope": "Citation reading",
+      "note": "Ends with a glottal stop [ʔ]. This is the source’s everyday meat reading.",
+      "source": {
+        "title": "Wiktionary contributors · 肉 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E8%82%89&oldid=93434345#Chinese"
+      }
+    },
+    {
+      "han": "菜",
+      "meaning": "vegetables; a dish",
+      "scope": "Citation reading",
+      "note": "The opening affricate is aspirated: [t͡sʰ].",
+      "source": {
+        "title": "Wiktionary contributors · 菜 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E8%8F%9C&oldid=93396748#Chinese"
+      }
+    },
+    {
+      "han": "啉",
+      "meaning": "to drink",
+      "scope": "Citation reading",
+      "note": "An everyday verb, shown here with its isolated citation tone.",
+      "source": {
+        "title": "Wiktionary contributors · 啉 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%95%89&oldid=93447529#Chinese"
+      }
+    },
+    {
+      "han": "好食",
+      "meaning": "tasty; delicious",
+      "scope": "Connected speech",
+      "note": "The source explicitly marks 好 changing from 53 to 44 in this word.",
+      "source": {
+        "title": "Wiktionary contributors · 好食 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%A5%BD%E9%A3%9F&oldid=91359902#Chinese"
+      }
+    },
+    {
+      "han": "食",
+      "meaning": "to eat",
+      "scope": "Citation reading",
+      "note": "The eating sense has this reading; other senses of 食 have other readings.",
+      "source": {
+        "title": "Wiktionary contributors · 食 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E9%A3%9F&oldid=92983648#Chinese"
+      }
+    },
+    {
+      "han": "好",
+      "meaning": "good",
+      "scope": "Citation reading",
+      "note": "Compare the changed first-syllable tone in 好食, “tasty”.",
+      "source": {
+        "title": "Wiktionary contributors · 好 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%A5%BD&oldid=93448473#Chinese"
+      }
+    },
+    {
+      "han": "人",
+      "meaning": "person",
+      "scope": "Citation reading",
+      "note": "The everyday person reading; the source lists other readings for other uses.",
+      "source": {
+        "title": "Wiktionary contributors · 人 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%BA%BA&oldid=92701645#Chinese"
+      }
+    },
+    {
+      "han": "我",
+      "meaning": "I; me",
+      "scope": "Citation reading",
+      "note": "The selected everyday reading begins with voiced [ɡ].",
+      "source": {
+        "title": "Wiktionary contributors · 我 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E6%88%91&oldid=93364379#Chinese"
+      }
+    },
+    {
+      "han": "你",
+      "meaning": "you",
+      "scope": "Citation reading",
+      "note": "The dictionary also identifies this character as a common substitute for 汝.",
+      "source": {
+        "title": "Wiktionary contributors · 你 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%BD%A0&oldid=93174696#Chinese"
+      }
+    },
+    {
+      "han": "來",
+      "meaning": "to come",
+      "scope": "Citation reading",
+      "note": "A rising citation tone; a full phrase may have different tone grouping.",
+      "source": {
+        "title": "Wiktionary contributors · 來 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%BE%86&oldid=92199905#Chinese"
+      }
+    },
+    {
+      "han": "去",
+      "meaning": "to go",
+      "scope": "Citation reading",
+      "note": "The selected urban reading has [i]; suburban Xiamen [u] is also documented.",
+      "source": {
+        "title": "Wiktionary contributors · 去 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%8E%BB&oldid=93405579#Chinese"
+      }
+    },
+    {
+      "han": "買",
+      "meaning": "to buy",
+      "scope": "Citation reading",
+      "note": "The everyday reading begins with voiced [b], distinct from [p] and [pʰ].",
+      "source": {
+        "title": "Wiktionary contributors · 買 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E8%B2%B7&oldid=92201824#Chinese"
+      }
+    },
+    {
+      "han": "海",
+      "meaning": "sea",
+      "scope": "Citation reading",
+      "note": "Shown as a single word; no surrounding phrase is implied.",
+      "source": {
+        "title": "Wiktionary contributors · 海 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E6%B5%B7&oldid=93388184#Chinese"
+      }
+    },
+    {
+      "han": "船",
+      "meaning": "boat; ship",
+      "scope": "Citation reading",
+      "note": "The everyday reading, distinct from the source’s literary reading.",
+      "source": {
+        "title": "Wiktionary contributors · 船 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E8%88%B9&oldid=92703852#Chinese"
+      }
+    },
+    {
+      "han": "厝",
+      "meaning": "house; home",
+      "scope": "Citation reading",
+      "note": "A local word for a house or home, with an aspirated initial.",
+      "source": {
+        "title": "Wiktionary contributors · 厝 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%8E%9D&oldid=93416182#Chinese"
+      }
+    },
+    {
+      "han": "街",
+      "meaning": "street",
+      "scope": "Citation reading",
+      "note": "The selected Xiamen everyday reading; nearby varieties need their own labels.",
+      "source": {
+        "title": "Wiktionary contributors · 街 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E8%A1%97&oldid=91428245#Chinese"
+      }
+    },
+    {
+      "han": "錢",
+      "meaning": "money",
+      "scope": "Citation reading",
+      "note": "The everyday reading has a nasal vowel [ĩ].",
+      "source": {
+        "title": "Wiktionary contributors · 錢 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E9%8C%A2&oldid=93436989#Chinese"
+      }
+    },
+    {
+      "han": "飛機",
+      "meaning": "airplane",
+      "scope": "Connected speech",
+      "note": "The first tone changes from 44 to 22; Ge and Mok (2024) give the same example.",
+      "source": {
+        "title": "Wiktionary contributors · 飛機 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E9%A3%9B%E6%A9%9F&oldid=89965738#Chinese"
+      }
+    },
+    {
+      "han": "一",
+      "meaning": "one",
+      "scope": "Citation reading",
+      "note": "The everyday Min reading selected here; the character also has a separate literary reading.",
+      "source": {
+        "title": "Wiktionary contributors · 一 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%B8%80&oldid=92923652#Chinese"
+      }
+    },
+    {
+      "han": "兩",
+      "meaning": "two",
+      "scope": "Citation reading",
+      "note": "The everyday reading uses a syllabic nasal. 二 has a separate entry and reading.",
+      "source": {
+        "title": "Wiktionary contributors · 兩 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%85%A9&oldid=93318241#Chinese"
+      }
+    },
+    {
+      "han": "二",
+      "meaning": "two: the character 二",
+      "scope": "Citation reading",
+      "note": "A separate reading from 兩; the two forms are not interchangeable in every expression.",
+      "source": {
+        "title": "Wiktionary contributors · 二 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%BA%8C&oldid=92550636#Chinese"
+      }
+    },
+    {
+      "han": "三",
+      "meaning": "three",
+      "scope": "Citation reading",
+      "note": "The everyday reading has nasal [ã]; the literary reading retains a final nasal consonant.",
+      "source": {
+        "title": "Wiktionary contributors · 三 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%B8%89&oldid=92536907#Chinese"
+      }
+    },
+    {
+      "han": "四",
+      "meaning": "four",
+      "scope": "Citation reading",
+      "note": "The selected everyday reading; this citation tone also appears in Cao’s Xiamen examples.",
+      "source": {
+        "title": "Wiktionary contributors · 四 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%9B%9B&oldid=93386109#Chinese"
+      }
+    },
+    {
+      "han": "五",
+      "meaning": "five",
+      "scope": "Citation reading",
+      "note": "The everyday Xiamen reading uses [ɔ] and citation tone 22.",
+      "source": {
+        "title": "Wiktionary contributors · 五 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%BA%94&oldid=92719862#Chinese"
+      }
+    },
+    {
+      "han": "六",
+      "meaning": "six",
+      "scope": "Citation reading",
+      "note": "A checked syllable ending in unreleased [k̚].",
+      "source": {
+        "title": "Wiktionary contributors · 六 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%85%AD&oldid=92691732#Chinese"
+      }
+    },
+    {
+      "han": "七",
+      "meaning": "seven",
+      "scope": "Citation reading",
+      "note": "Starts with an aspirated affricate and ends in unreleased [t̚].",
+      "source": {
+        "title": "Wiktionary contributors · 七 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%B8%83&oldid=92722445#Chinese"
+      }
+    },
+    {
+      "han": "八",
+      "meaning": "eight",
+      "scope": "Citation reading",
+      "note": "The everyday reading ends in [ʔ]; its literary reading has a different ending.",
+      "source": {
+        "title": "Wiktionary contributors · 八 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%85%AB&oldid=92707648#Chinese"
+      }
+    },
+    {
+      "han": "九",
+      "meaning": "nine",
+      "scope": "Citation reading",
+      "note": "The everyday reading selected from the source’s everyday/literary pair.",
+      "source": {
+        "title": "Wiktionary contributors · 九 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E4%B9%9D&oldid=92630836#Chinese"
+      }
+    },
+    {
+      "han": "十",
+      "meaning": "ten",
+      "scope": "Citation reading",
+      "note": "A checked syllable ending in unreleased [p̚].",
+      "source": {
+        "title": "Wiktionary contributors · 十 · Xiamen Sinological IPA",
+        "url": "https://en.wiktionary.org/w/index.php?title=%E5%8D%81&oldid=92722508#Chinese"
+      }
+    },
+    {
+      "han": "雞",
+      "meaning": "chicken",
+      "scope": "Amoy column in Wang’s comparison table",
+      "note": "Citation forms from one comparison table. Its reference pitch values can differ from other Amoy lessons; they are not connected-speech tones.",
+      "source": {
+        "title": "Wang Kuei-lan, 2022 · Table 17, p. 170",
+        "url": "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36"
+      }
+    },
+    {
+      "han": "火",
+      "meaning": "fire",
+      "scope": "Amoy column in Wang’s comparison table",
+      "note": "Citation forms from one comparison table. Its reference pitch values can differ from other Amoy lessons; they are not connected-speech tones.",
+      "source": {
+        "title": "Wang Kuei-lan, 2022 · Table 17, p. 170",
+        "url": "https://taiwan.ntue.edu.tw/var/file/29/1029/img/692/476201647.pdf#page=36"
+      }
+    }
+  ],
+  "beijing": [
+    {
+      "han": "八",
+      "meaning": "eight",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "趴",
+      "meaning": "lie prone",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "媽",
+      "meaning": "mother",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "發",
+      "meaning": "send",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "搭",
+      "meaning": "build",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "他",
+      "meaning": "he",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "撒",
+      "meaning": "scatter; cast",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "擦",
+      "meaning": "wipe",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "蝦",
+      "meaning": "shrimp",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "加",
+      "meaning": "add",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "掐",
+      "meaning": "nip off",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "蛙",
+      "meaning": "frog",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "拉",
+      "meaning": "pull",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "鴨",
+      "meaning": "duck",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "歌",
+      "meaning": "song",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "科",
+      "meaning": "subject of study",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "喝",
+      "meaning": "drink",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "衣",
+      "meaning": "clothes",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "屋",
+      "meaning": "house",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "音",
+      "meaning": "sound",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "安",
+      "meaning": "safe",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "恩",
+      "meaning": "favour",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "花",
+      "meaning": "flower",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "黑",
+      "meaning": "black",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    },
+    {
+      "han": "灰",
+      "meaning": "ash",
+      "scope": "Standard Mandarin · Beijing speaker",
+      "note": "The study records a 25-year-old woman who grew up in Beijing. These are its formal reference forms, not a claim about every local conversational style. The source’s high-level tone letter is retained.",
+      "source": {
+        "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
+        "url": "https://doi.org/10.1017/S0025100303001208"
+      }
+    }
+  ],
+  "shanghai": [
+    {
+      "han": "山",
+      "meaning": "mountain",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 山",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%B1%B1"
+      }
+    },
+    {
+      "han": "米",
+      "meaning": "rice",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 米",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%B1%B3"
+      }
+    },
+    {
+      "han": "手",
+      "meaning": "hand",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 手",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E6%89%8B"
+      }
+    },
+    {
+      "han": "肉",
+      "meaning": "meat",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 肉",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E8%82%89"
+      }
+    },
+    {
+      "han": "飯",
+      "meaning": "cooked rice",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 飯",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%A3%AF"
+      }
+    },
+    {
+      "han": "天",
+      "meaning": "sky",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 天",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%A4%A9"
+      }
+    },
+    {
+      "han": "地",
+      "meaning": "ground",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 地",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%9C%B0"
+      }
+    },
+    {
+      "han": "火",
+      "meaning": "fire",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 火",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%81%AB"
+      }
+    },
+    {
+      "han": "風",
+      "meaning": "wind",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 風",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%A2%A8"
+      }
+    },
+    {
+      "han": "狗",
+      "meaning": "dog",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 狗",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%8B%97"
+      }
+    },
+    {
+      "han": "牛",
+      "meaning": "ox",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 牛",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%89%9B"
+      }
+    },
+    {
+      "han": "雞",
+      "meaning": "chicken",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 雞",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%9B%9E"
+      }
+    },
+    {
+      "han": "門",
+      "meaning": "door",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 門",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%96%80"
+      }
+    },
+    {
+      "han": "白",
+      "meaning": "white",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 白",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%99%BD"
+      }
+    },
+    {
+      "han": "黑",
+      "meaning": "black",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 黑",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%BB%91"
+      }
+    },
+    {
+      "han": "紅",
+      "meaning": "red",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 紅",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%B4%85"
+      }
+    },
+    {
+      "han": "小",
+      "meaning": "small",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 小",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%B0%8F"
+      }
+    },
+    {
+      "han": "多",
+      "meaning": "many",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 多",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%A4%9A"
+      }
+    },
+    {
+      "han": "來",
+      "meaning": "come",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 來",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E4%BE%86"
+      }
+    },
+    {
+      "han": "好",
+      "meaning": "good",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 好",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%A5%BD"
+      }
+    },
+    {
+      "han": "你",
+      "meaning": "you",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 你",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E4%BD%A0"
+      }
+    },
+    {
+      "han": "刀",
+      "meaning": "knife",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "島",
+      "meaning": "island",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "桃",
+      "meaning": "peach",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "讀",
+      "meaning": "read",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "低",
+      "meaning": "low",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "瓜",
+      "meaning": "melon",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "高",
+      "meaning": "tall",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "街",
+      "meaning": "street",
+      "scope": "Citation reading",
+      "note": "Broad segments from Chen & Gussenhoven. Contours follow their footnote 2 citation-tone notation, converted from tone letters to numbers. The reference speaker grew up in Huangpu; other speakers and studies differ.",
+      "source": {
+        "title": "Chen & Gussenhoven: Shanghai Chinese, 2015, pp. 322–328",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E58F14205E5EFF63067C6A180DB7AEEA/S0025100315000043a.pdf/div-class-title-shanghai-chinese-div.pdf"
+      }
+    },
+    {
+      "han": "魚",
+      "meaning": "fish",
+      "scope": "CUHK Shanghai character-reading reference",
+      "note": "The dictionary reference is separate from the Huangpu speaker in the Shanghai lessons. Isolated readings do not supply compound tones.",
+      "source": {
+        "title": "CUHK Chinese Character Database · 魚 · Shanghai",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%AD%9A"
+      }
+    },
+    {
+      "han": "茶",
+      "meaning": "tea",
+      "scope": "CUHK Shanghai character-reading reference",
+      "note": "The dictionary reference is separate from the Huangpu speaker in the Shanghai lessons. Isolated readings do not supply compound tones.",
+      "source": {
+        "title": "CUHK Chinese Character Database · 茶 · Shanghai",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E8%8C%B6"
+      }
+    }
+  ],
+  "guangzhou": [],
+  "meixian": [
+    {
+      "han": "山",
+      "meaning": "mountain",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 山",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%B1%B1"
+      }
+    },
+    {
+      "han": "水",
+      "meaning": "water",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 水",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E6%B0%B4"
+      }
+    },
+    {
+      "han": "米",
+      "meaning": "rice",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 米",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%B1%B3"
+      }
+    },
+    {
+      "han": "手",
+      "meaning": "hand",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 手",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E6%89%8B"
+      }
+    },
+    {
+      "han": "魚",
+      "meaning": "fish",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 魚",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%AD%9A"
+      }
+    },
+    {
+      "han": "肉",
+      "meaning": "meat",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 肉",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E8%82%89"
+      }
+    },
+    {
+      "han": "飯",
+      "meaning": "cooked rice",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 飯",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%A3%AF"
+      }
+    },
+    {
+      "han": "天",
+      "meaning": "sky",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 天",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%A4%A9"
+      }
+    },
+    {
+      "han": "地",
+      "meaning": "ground",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 地",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%9C%B0"
+      }
+    },
+    {
+      "han": "日",
+      "meaning": "sun; day",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 日",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E6%97%A5"
+      }
+    },
+    {
+      "han": "月",
+      "meaning": "moon",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 月",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E6%9C%88"
+      }
+    },
+    {
+      "han": "火",
+      "meaning": "fire",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 火",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%81%AB"
+      }
+    },
+    {
+      "han": "風",
+      "meaning": "wind",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 風",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%A2%A8"
+      }
+    },
+    {
+      "han": "花",
+      "meaning": "flower",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 花",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E8%8A%B1"
+      }
+    },
+    {
+      "han": "狗",
+      "meaning": "dog",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 狗",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%8B%97"
+      }
+    },
+    {
+      "han": "牛",
+      "meaning": "ox",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 牛",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%89%9B"
+      }
+    },
+    {
+      "han": "貓",
+      "meaning": "cat",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 貓",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E8%B2%93"
+      }
+    },
+    {
+      "han": "雞",
+      "meaning": "chicken",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 雞",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%9B%9E"
+      }
+    },
+    {
+      "han": "門",
+      "meaning": "door",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 門",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%96%80"
+      }
+    },
+    {
+      "han": "白",
+      "meaning": "white",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 白",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E7%99%BD"
+      }
+    },
+    {
+      "han": "黑",
+      "meaning": "black",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 黑",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E9%BB%91"
+      }
+    },
+    {
+      "han": "大",
+      "meaning": "big",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 大",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%A4%A7"
+      }
+    },
+    {
+      "han": "小",
+      "meaning": "small",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 小",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%B0%8F"
+      }
+    },
+    {
+      "han": "多",
+      "meaning": "many",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 多",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%A4%9A"
+      }
+    },
+    {
+      "han": "來",
+      "meaning": "come",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 來",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E4%BE%86"
+      }
+    },
+    {
+      "han": "去",
+      "meaning": "go",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 去",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%8E%BB"
+      }
+    },
+    {
+      "han": "好",
+      "meaning": "good",
+      "scope": "Dictionary character reading",
+      "note": "CUHK locality-column reading. These are isolated character pronunciations, not a guarantee that a character is used alone as an everyday word. Pitch values follow this dictionary and may differ from other speaker samples. The source’s ȵ and syllabic marks are retained; affricate ligatures are expanded with IPA tie bars.",
+      "source": {
+        "title": "CUHK Multi-function Chinese Character Database: 好",
+        "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%E5%A5%BD"
+      }
+    },
+    {
+      "han": "茶",
+      "meaning": "tea",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "車",
+      "meaning": "car",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "雨",
+      "meaning": "rain",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "一",
+      "meaning": "one",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "七",
+      "meaning": "seven",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "翼",
+      "meaning": "wing",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "舌",
+      "meaning": "tongue",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "糍",
+      "meaning": "glutinous rice cake",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "取",
+      "meaning": "take",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "扯",
+      "meaning": "pull",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "出",
+      "meaning": "come out",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "暑",
+      "meaning": "hot weather",
+      "scope": "Citation reading",
+      "note": "Meijiang speakers, aged 50–70 in the study. Broad IPA and pitch values follow Table 2.1; this is not a Taiwan Sixian reading.",
+      "source": {
+        "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
+        "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    }
+  ]
+}

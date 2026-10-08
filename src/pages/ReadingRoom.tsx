@@ -1,5 +1,7 @@
+/// <reference types="vite/client" />
 import { siteTerms } from "../data/site-terms";
-import { Fragment } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
+import type { FormEvent } from "react";
 import { ArrowLeftRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { letters } from "../data/languages";
@@ -66,7 +68,346 @@ const expressions: {
   },
 ];
 
+const translationApiBase = (
+  import.meta.env.VITE_TRANSLATION_API_BASE ?? ""
+).replace(/\/$/, "");
+
+type TranslationTarget =
+  "amoy" | "beijing" | "shanghai" | "guangzhou" | "meixian" | "written";
+type TranslationResult = {
+  target: TranslationTarget;
+  text: string;
+  status: "draft" | "needs-review" | "unavailable";
+  notes: string[];
+};
+
+const targets: { id: TranslationTarget; name: string; lang: string }[] = [
+  { id: "amoy", name: "Amoy", lang: "nan" },
+  { id: "beijing", name: "Beijing speech", lang: "cmn" },
+  { id: "shanghai", name: "Shanghai", lang: "wuu" },
+  { id: "guangzhou", name: "Guangzhou", lang: "yue" },
+  { id: "meixian", name: "Meixian Hakka", lang: "hak" },
+  { id: "written", name: siteTerms.writtenChinese, lang: "zh" },
+];
+
+export function readResults(value: unknown): TranslationResult[] {
+  if (
+    !value ||
+    typeof value !== "object" ||
+    !("mode" in value) ||
+    value.mode !== "model" ||
+    !("results" in value) ||
+    !Array.isArray(value.results) ||
+    value.results.length !== 6
+  ) {
+    throw new Error("Invalid translation response");
+  }
+  const found = new Set<string>();
+  return value.results.map((item: unknown) => {
+    if (
+      !item ||
+      typeof item !== "object" ||
+      !("target" in item) ||
+      !targets.some((target) => target.id === item.target) ||
+      !("text" in item) ||
+      typeof item.text !== "string" ||
+      item.text.length > 6000 ||
+      !("status" in item) ||
+      !["draft", "needs-review", "unavailable"].includes(String(item.status)) ||
+      !("notes" in item) ||
+      !Array.isArray(item.notes) ||
+      !item.notes.every((note: unknown) => typeof note === "string") ||
+      (!item.text.trim() && item.status !== "unavailable") ||
+      found.has(String(item.target))
+    ) {
+      throw new Error("Invalid translation result");
+    }
+    found.add(String(item.target));
+    return item as TranslationResult;
+  });
+}
+
 export default function ReadingRoom() {
+  const [params] = useSearchParams();
+  const [text, setText] = useState("");
+  const [source, setSource] = useState("auto");
+  const [results, setResults] = useState<TranslationResult[] | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [configured, setConfigured] = useState<boolean | null>(null);
+  const [announcement, setAnnouncement] = useState("");
+  const [sampleOpen, setSampleOpen] = useState(
+    () => params.has("left") || params.has("right") || params.has("english"),
+  );
+  const request = useRef<AbortController | null>(null);
+  const sequence = useRef(0);
+  const legacyLeft = params.get("left");
+  const legacyRight = params.get("right");
+  const legacyEnglish = params.get("english");
+
+  useEffect(() => {
+    if (legacyLeft || legacyRight || legacyEnglish) setSampleOpen(true);
+  }, [legacyLeft, legacyRight, legacyEnglish]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(`${translationApiBase}/api/translation/status`, {
+      signal: controller.signal,
+      headers: { Accept: "application/json" },
+    })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("Service status unavailable");
+        const body: unknown = await response.json();
+        if (
+          body &&
+          typeof body === "object" &&
+          "configured" in body &&
+          typeof body.configured === "boolean"
+        ) {
+          if (!controller.signal.aborted) setConfigured(body.configured);
+        }
+      })
+      .catch(() => {
+        /* The translation request reports an actionable service error. */
+      });
+    return () => {
+      controller.abort();
+      sequence.current += 1;
+      request.current?.abort();
+    };
+  }, []);
+
+  function invalidate() {
+    sequence.current += 1;
+    request.current?.abort();
+    request.current = null;
+    setLoading(false);
+    setResults(null);
+    setError("");
+    setAnnouncement("");
+  }
+
+  function cancel() {
+    sequence.current += 1;
+    request.current?.abort();
+    request.current = null;
+    setLoading(false);
+    setAnnouncement("Translation cancelled. Your text is unchanged.");
+  }
+
+  async function translate(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (loading) {
+      cancel();
+      return;
+    }
+    const input = text.trim();
+    if (!input || text.length > 800) return;
+    request.current?.abort();
+    const controller = new AbortController();
+    request.current = controller;
+    const currentSequence = ++sequence.current;
+    setLoading(true);
+    setError("");
+    setResults(null);
+    setAnnouncement("Translating into six written versions.");
+    try {
+      const response = await fetch(`${translationApiBase}/api/translate`, {
+        method: "POST",
+        signal: controller.signal,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ text: input, source }),
+      });
+      if (!response.ok) {
+        const message =
+          response.status === 503 && configured === false
+            ? "The translation service is not connected yet. Your text is unchanged."
+            : response.status === 429
+              ? "The translation service is busy. Please try again shortly."
+              : response.status === 413 || response.status === 400
+                ? "This text could not be translated. Keep it within 800 characters and try again."
+                : "The translation service is unavailable. Your text is unchanged; please try again later.";
+        throw new Error(message);
+      }
+      const translated = readResults(await response.json());
+      if (currentSequence !== sequence.current || controller.signal.aborted)
+        return;
+      setResults(translated);
+      setConfigured(true);
+      setAnnouncement(
+        "Translation request complete. Results and any review notes are shown below.",
+      );
+    } catch (cause) {
+      if (currentSequence !== sequence.current || controller.signal.aborted)
+        return;
+      const message =
+        cause instanceof Error &&
+        cause.message.startsWith("The translation service")
+          ? cause.message
+          : cause instanceof Error && cause.message.startsWith("This text")
+            ? cause.message
+            : "The translation service is unavailable. Your text is unchanged; please try again later.";
+      setError(message);
+      setAnnouncement("");
+    } finally {
+      if (currentSequence === sequence.current) {
+        setLoading(false);
+        request.current = null;
+      }
+    }
+  }
+
+  return (
+    <div className="rr-page">
+      <header className="rr-heading">
+        <h1>{siteTerms.compare}</h1>
+        <p>One text, six written versions.</p>
+      </header>
+      <form className="rr-translator" onSubmit={translate}>
+        <div className="rr-input-heading">
+          <label htmlFor="rr-translation-input">Your text</label>
+          <label className="rr-source-label" htmlFor="rr-source">
+            <span className="sr-only">Source language</span>
+            <select
+              id="rr-source"
+              value={source}
+              onChange={(event) => {
+                invalidate();
+                setSource(event.target.value);
+              }}
+            >
+              <option value="auto">Detect language</option>
+              <option value="en">English</option>
+              <option value="written">{siteTerms.writtenChinese}</option>
+              {targets
+                .filter((target) => target.id !== "written")
+                .map((target) => (
+                  <option key={target.id} value={target.id}>
+                    {target.name}
+                  </option>
+                ))}
+            </select>
+          </label>
+        </div>
+        <textarea
+          id="rr-translation-input"
+          value={text}
+          onChange={(event) => {
+            invalidate();
+            setText(event.target.value);
+          }}
+          maxLength={800}
+          rows={5}
+          placeholder="Write something you would say."
+          aria-describedby="rr-input-count rr-provider-note"
+        />
+        <div className="rr-input-footer">
+          <span id="rr-input-count">{text.length} / 800</span>
+          <button
+            className="rr-translate-button"
+            type="submit"
+            disabled={!loading && !text.trim()}
+          >
+            {loading ? "Cancel" : "Translate"}
+          </button>
+        </div>
+        <p id="rr-provider-note" className="rr-provider-note">
+          Text is sent to the translation service. Results are machine drafts.
+        </p>
+      </form>
+      {error ? (
+        <p className="rr-service-message rr-service-error" role="alert">
+          {error}
+        </p>
+      ) : configured === false && !loading ? (
+        <p className="rr-service-message">
+          Translation is not available yet. You can still compare the sample
+          letter below.
+        </p>
+      ) : null}
+      <p className="sr-only" role="status" aria-live="polite">
+        {announcement}
+      </p>
+      <section
+        className="rr-translations"
+        aria-labelledby="rr-translations-title"
+        aria-busy={loading}
+      >
+        <div className="rr-results-heading">
+          <h2 id="rr-translations-title">
+            {loading
+              ? "Translating…"
+              : results
+                ? "Machine drafts"
+                : "Translations"}
+          </h2>
+        </div>
+        <div className="rr-result-grid">
+          {targets.map((target) => {
+            const result = results?.find((item) => item.target === target.id);
+            const unavailable =
+              results !== null &&
+              (!result ||
+                result.status === "unavailable" ||
+                !result.text.trim());
+            return (
+              <article
+                className="rr-result"
+                key={target.id}
+                aria-labelledby={`rr-target-${target.id}`}
+              >
+                <header>
+                  <h3 id={`rr-target-${target.id}`}>{target.name}</h3>
+                  {unavailable ? (
+                    <span className="rr-result-status">Unavailable</span>
+                  ) : result?.status === "needs-review" ? (
+                    <span className="rr-result-status">Needs review</span>
+                  ) : null}
+                </header>
+                {result?.text.trim() && !unavailable ? (
+                  <p className="rr-result-text" lang={target.lang}>
+                    {result.text}
+                  </p>
+                ) : (
+                  <p className="rr-result-placeholder">
+                    <span aria-hidden="true">—</span>
+                    <span className="sr-only">
+                      {loading
+                        ? "Translating"
+                        : unavailable
+                          ? "No translation returned"
+                          : "Awaiting your text"}
+                    </span>
+                  </p>
+                )}
+                {result && result.notes.length > 0 && (
+                  <ul className="rr-result-notes">
+                    {result.notes.map((note, index) => (
+                      <li key={index}>{note}</li>
+                    ))}
+                  </ul>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
+      <details
+        className="rr-sample"
+        open={sampleOpen}
+        onToggle={(event) => setSampleOpen(event.currentTarget.open)}
+      >
+        <summary>Compare the sample letter</summary>
+        <SampleLetterComparison />
+      </details>
+    </div>
+  );
+}
+
+function SampleLetterComparison() {
   const [params, setParams] = useSearchParams();
   const showEnglish = params.get("english") === "1";
   const left =
@@ -99,11 +440,7 @@ export default function ReadingRoom() {
   }
 
   return (
-    <div className="rr-page">
-      <header className="rr-heading">
-        <h1>{siteTerms.compare}</h1>
-      </header>
-
+    <div className="rr-sample-body">
       <div className="rr-tools">
         <label className="rr-english-toggle">
           <input

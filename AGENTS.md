@@ -32,3 +32,10 @@
 - Display consequential reading qualifications beside pronunciation: a formal Standard Mandarin speaker reference is not an unqualified vernacular city sample; source segment lists with omitted tones are not complete tonal pronunciations. Keep these qualifications visible in overview cards, comparisons, and practice.
 
 See `docs/NAVIGATION.md` for the architecture. Local review uses `http://127.0.0.1:5173/`.
+
+## Translation
+
+- `/compare` targets Amoy, Beijing speech, urban Shanghai, Guangzhou, Meixian Hakka, and modern Standard Written Chinese. Meizhou is a wider region; written Chinese is a register, not a sixth spoken locality.
+- Keep generated translations visibly separate from sourced learning material. Automated review is not native-speaker verification. Never generate lesson IPA, tone sandhi or HanLingo spelling from unverified translated text.
+- Model credentials belong only in the backend environment. GitHub Pages needs a separately hosted API; frontend publication alone must never be reported as a working translation service.
+- Run `npm test` (including the server protocol tests) and verify a real configured provider before claiming automatic translation works. Injected fixture tests establish protocol behavior only.

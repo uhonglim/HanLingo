@@ -108,3 +108,7 @@ node scripts/build-atlas.mjs
 Tests cover the taxonomy, comparison letters, reference content, route integrity, Xiamen IPA-to-spelling conversion, photo assets and credits, and quiz generation. The 11 additional Xiamen photographs have their own [source and license register](docs/XIAMEN-PHOTOS.md). Use the commands above to check the current checkout.
 
 Repository: [uhonglim/HanLingo](https://github.com/uhonglim/HanLingo). Project licensing is recorded in [LICENSE](LICENSE). The expanded gallery registers are [Min](docs/gallery-min-sources.md), [other groups](docs/gallery-other-sources.md), and [Teo Swa](docs/gallery-chaoshan-sources.md); lexical evidence is tracked in [regional word research](docs/regional-word-research.md). Photograph licenses apply independently of the code license; font license notices remain under `public/fonts/`.
+
+## Translation service
+
+`/compare` includes a six-way machine-translation interface. Run `npm run api` beside Vite after setting the server-only provider fields in `.env.local`. GitHub Pages needs a separately hosted API; a static deploy alone does not activate translation. See [the translation pipeline](docs/TRANSLATION-PIPELINE.md) for locality scope, setup, deployment and research precedents.

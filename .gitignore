@@ -4,3 +4,7 @@ dist/
 *.local
 .evidence/
 *.tsbuildinfo
+
+.env
+.env.*
+!.env.example

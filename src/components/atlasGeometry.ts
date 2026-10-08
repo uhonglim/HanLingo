@@ -52,3 +52,11 @@ export function zoomAtlasView(view: AtlasView, factor: number, minZoom: number, 
   const ratio = zoom / view.zoom;
   return { zoom, x: anchor[0] + (view.x - anchor[0]) * ratio, y: anchor[1] + (view.y - anchor[1]) * ratio };
 }
+
+/** Extend the drawing surface to the frame without stretching the geography. */
+export function atlasViewport(width: number, height: number) {
+  const aspect = width > 0 && height > 0 ? width / height : ATLAS_WIDTH / ATLAS_HEIGHT;
+  const w = Math.max(ATLAS_WIDTH, ATLAS_HEIGHT * aspect);
+  const h = Math.max(ATLAS_HEIGHT, ATLAS_WIDTH / aspect);
+  return { x: (ATLAS_WIDTH - w) / 2, y: (ATLAS_HEIGHT - h) / 2, width: w, height: h };
+}

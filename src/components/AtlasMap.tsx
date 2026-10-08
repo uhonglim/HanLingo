@@ -1,4 +1,5 @@
 import {
+  useEffect,
   useId,
   useLayoutEffect,
   useMemo,
@@ -16,7 +17,7 @@ import type {
 } from "topojson-specification";
 import world from "../data/east-asia-50m.json";
 import { placeLabel } from "../data/language-names";
-import { ATLAS_WIDTH as WIDTH, ATLAS_HEIGHT as HEIGHT, atlasProjection as projection, atlasPointPosition, fitAtlasPoints, revealAtlasPoint, zoomAtlasView } from "./atlasGeometry";
+import { ATLAS_WIDTH as WIDTH, ATLAS_HEIGHT as HEIGHT, atlasProjection as projection, atlasPointPosition, atlasViewport, fitAtlasPoints, revealAtlasPoint, zoomAtlasView } from "./atlasGeometry";
 import type { AtlasView as View } from "./atlasGeometry";
 import "./AtlasMap.css";
 
@@ -40,7 +41,7 @@ type Label = { x: number; y: number; width: number; height: number };
 
 const COLORS: Record<string, string> = {
   mandarin: "#b77938",
-  min: "#cf593c",
+  min: "#2155f5",
   yue: "#748463",
   hakka: "#92769b",
   wu: "#588785",
@@ -131,7 +132,15 @@ export default function AtlasMap({
     clientY: number;
     viewX: number;
     viewY: number;
+    scale: number;
+    moved: boolean;
+    labels: Map<string, Label>;
   } | null>(null);
+  const frame = useRef<number | null>(null);
+  const pendingView = useRef<View | null>(null);
+  const suppressClick = useRef(false);
+  const [viewport, setViewport] = useState(() => atlasViewport(WIDTH, HEIGHT));
+  useEffect(() => () => { if (frame.current !== null) cancelAnimationFrame(frame.current); }, []);
   const [view, setView] = useState<View>(initialView);
   const [dragging, setDragging] = useState(false);
   const [layout, setLayout] = useState<{ scale: number; reserved: Label[] }>({
@@ -158,17 +167,21 @@ export default function AtlasMap({
       container.parentElement?.querySelector(".map-selected");
     if (selectedCard) overlays.push(selectedCard);
     function measure() {
-      const matrix = svg?.getScreenCTM();
-      if (!matrix) return;
+      if (!svg) return;
+      const bounds = svg.getBoundingClientRect();
+      const nextViewport = atlasViewport(bounds.width, bounds.height);
+      const scale = bounds.width / nextViewport.width;
+      if (!scale) return;
+      setViewport(nextViewport);
       setLayout({
-        scale: matrix.a,
+        scale,
         reserved: overlays.map((element) => {
           const rect = element.getBoundingClientRect();
           return {
-            x: (rect.left - matrix.e) / matrix.a - 6,
-            y: (rect.top - matrix.f) / matrix.d - 6,
-            width: rect.width / matrix.a + 12,
-            height: rect.height / matrix.d + 12,
+            x: (rect.left - bounds.left) / scale + nextViewport.x - 6,
+            y: (rect.top - bounds.top) / scale + nextViewport.y - 6,
+            width: rect.width / scale + 12,
+            height: rect.height / scale + 12,
           };
         }),
       });
@@ -206,6 +219,14 @@ export default function AtlasMap({
   );
 
   const labels = useMemo(() => {
+    // Keep the same label anchors throughout a gesture instead of hopping
+    // between collision candidates on every pointer movement.
+    if (dragging && drag.current) {
+      const gesture = drag.current;
+      return new Map([...gesture.labels].map(([id, label]) => [id, {
+        ...label, x: label.x + view.x - gesture.viewX, y: label.y + view.y - gesture.viewY,
+      }]));
+    }
     const placed: Label[] = [...layout.reserved];
     const result = new Map<string, Label>();
     const sorted = [...projectedPoints].sort((a, b) => {
@@ -215,10 +236,10 @@ export default function AtlasMap({
     });
     for (const point of sorted) {
       if (
-        point.x < 12 ||
-        point.x > WIDTH - 12 ||
-        point.y < 45 ||
-        point.y > HEIGHT - 52
+        point.x < viewport.x + 12 ||
+        point.x > viewport.x + viewport.width - 12 ||
+        point.y < viewport.y + 45 ||
+        point.y > viewport.y + viewport.height - 52
       )
         continue;
       const active = point.id === selectedPoint;
@@ -248,8 +269,8 @@ export default function AtlasMap({
       ];
       const label = candidates.find(
         (candidate) =>
-          candidate.x >= 8 &&
-          candidate.x + width < WIDTH - 8 &&
+          candidate.x >= viewport.x + 8 &&
+          candidate.x + width < viewport.x + viewport.width - 8 &&
           !placed.some((other) => overlaps(candidate, other)) &&
           !projectedPoints.some(
             (other) =>
@@ -273,7 +294,7 @@ export default function AtlasMap({
       }
     }
     return result;
-  }, [projectedPoints, selectedGroup, selectedPoint, layout]);
+  }, [projectedPoints, selectedGroup, selectedPoint, layout, dragging, view.x, view.y, viewport]);
 
   function zoom(factor: number) {
     setView((previous) => {
@@ -284,32 +305,53 @@ export default function AtlasMap({
   }
 
   function startDrag(event: PointerEvent<SVGSVGElement>) {
-    if (event.button !== 0) return;
-    event.currentTarget.setPointerCapture(event.pointerId);
+    if (event.button !== 0 || drag.current) return;
+    suppressClick.current = false;
     drag.current = {
       pointerId: event.pointerId,
-      clientX: event.clientX,
-      clientY: event.clientY,
-      viewX: view.x,
-      viewY: view.y,
+      clientX: event.clientX, clientY: event.clientY,
+      viewX: view.x, viewY: view.y,
+      scale: svgRef.current?.getScreenCTM()?.a ?? 1,
+      moved: false, labels,
     };
-    setDragging(true);
   }
 
   function moveDrag(event: PointerEvent<SVGSVGElement>) {
-    if (!drag.current || !svgRef.current) return;
-    const bounds = svgRef.current.getBoundingClientRect();
-    const ratio = Math.max(WIDTH / bounds.width, HEIGHT / bounds.height);
-    const nextX =
-      drag.current.viewX + (event.clientX - drag.current.clientX) * ratio;
-    const nextY =
-      drag.current.viewY + (event.clientY - drag.current.clientY) * ratio;
-    setView((previous) => ({ ...previous, x: nextX, y: nextY }));
+    const gesture = drag.current;
+    if (!gesture || gesture.pointerId !== event.pointerId) return;
+    const dx = event.clientX - gesture.clientX;
+    const dy = event.clientY - gesture.clientY;
+    if (!gesture.moved && Math.hypot(dx, dy) < 4) return;
+    if (!gesture.moved) {
+      gesture.moved = true;
+      event.currentTarget.setPointerCapture(event.pointerId);
+      setDragging(true);
+    }
+    pendingView.current = { ...view,
+      x: gesture.viewX + dx / gesture.scale,
+      y: gesture.viewY + dy / gesture.scale,
+    };
+    if (frame.current === null) {
+      frame.current = requestAnimationFrame(() => {
+        if (pendingView.current) setView(pendingView.current);
+        pendingView.current = null;
+        frame.current = null;
+      });
+    }
   }
 
-  function endDrag() {
+  function endDrag(event: PointerEvent<SVGSVGElement>) {
+    if (!drag.current || drag.current.pointerId !== event.pointerId) return;
+    suppressClick.current = drag.current.moved;
+    if (frame.current !== null) cancelAnimationFrame(frame.current);
+    frame.current = null;
+    if (pendingView.current) setView(pendingView.current);
+    pendingView.current = null;
     drag.current = null;
     setDragging(false);
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
   }
 
   function selectWithKeyboard(
@@ -332,17 +374,21 @@ export default function AtlasMap({
       <svg
         ref={svgRef}
         className="atlas-map-canvas"
-        viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
+        viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
         aria-label="Interactive map of selected Han language varieties and communities. Select a reference point to explore."
         onPointerDown={startDrag}
         onPointerMove={moveDrag}
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
+        onPointerLeave={(event) => { if (!drag.current?.moved) endDrag(event); }}
+        onClickCapture={(event) => {
+          if (suppressClick.current) { event.stopPropagation(); suppressClick.current = false; }
+        }}
         onLostPointerCapture={endDrag}
       >
         <defs>
           <clipPath id={clipId}>
-            <rect width={WIDTH} height={HEIGHT} />
+            <rect {...viewport} />
           </clipPath>
         </defs>
         <g clipPath={`url(#${clipId})`}>
@@ -396,9 +442,9 @@ export default function AtlasMap({
                   key={point.id}
                   cx={point.x}
                   cy={point.y}
-                  r={point.id === selectedPoint ? 43 : 29}
+                  r={(point.id === selectedPoint ? 18 : 9) / layout.scale}
                   fill={COLORS[point.groupId] ?? "#748463"}
-                  opacity={point.id === selectedPoint ? 0.075 : 0.035}
+                  opacity={point.id === selectedPoint ? 0.10 : 0.04}
                 />
               ))}
           </g>
@@ -422,16 +468,15 @@ export default function AtlasMap({
                   style={{ color }}
                   role="button"
                   tabIndex={
-                    point.x > 0 &&
-                    point.x < WIDTH &&
-                    point.y > 0 &&
-                    point.y < HEIGHT
+                    point.x > viewport.x &&
+                    point.x < viewport.x + viewport.width &&
+                    point.y > viewport.y &&
+                    point.y < viewport.y + viewport.height
                       ? 0
                       : -1
                   }
                   aria-label={`Explore ${point.displayName}, ${point.nativeName}`}
                   aria-pressed={active}
-                  onPointerDown={(event) => event.stopPropagation()}
                   onClick={() => onSelectPoint(point.id)}
                   onKeyDown={(event) => selectWithKeyboard(event, point.id)}
                 >

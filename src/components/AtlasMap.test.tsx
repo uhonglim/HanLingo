@@ -7,7 +7,7 @@ import { mapPoints } from "../data/languages";
 import { placeLabel } from "../data/language-names";
 import world from "../data/east-asia-50m.json";
 import AtlasMap from "./AtlasMap";
-import { atlasPointPosition, fitAtlasPoints, revealAtlasPoint, zoomAtlasView } from "./atlasGeometry";
+import { atlasPointPosition, atlasViewport, fitAtlasPoints, revealAtlasPoint, zoomAtlasView } from "./atlasGeometry";
 
 const minPoints = mapPoints.filter((point) => point.groupId === "min");
 const cityIds = ["taipak", "singapore", "george-town"];
@@ -81,6 +81,20 @@ describe("Min atlas spanning Fujian, Taiwan, and Southeast Asia", () => {
       }
       const amoy = minPoints.find(point => point.id === "xiamen")!;
       expect(html).toContain(`aria-label="Explore ${placeLabel(amoy)},`);
+    }
+  });
+});
+
+
+describe("responsive atlas frame", () => {
+  it("fills wide and tall frames without stretching or cropping the fitted reference area", () => {
+    for (const [width, height] of [[1000, 465], [360, 390], [800, 640]]) {
+      const box = atlasViewport(width, height);
+      expect(box.width / box.height).toBeCloseTo(width / height);
+      expect(box.x).toBeLessThanOrEqual(0);
+      expect(box.y).toBeLessThanOrEqual(0);
+      expect(box.x + box.width).toBeGreaterThanOrEqual(800);
+      expect(box.y + box.height).toBeGreaterThanOrEqual(640);
     }
   });
 });

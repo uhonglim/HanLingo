@@ -225,64 +225,10 @@
 .min-hub .atlas-map {
   min-height: 0;
   border-radius: 0;
-  background: #f0f5fc;
-  color: #46566b;
+
 }
 .min-hub .atlas-map-canvas {
   min-height: 0;
-}
-.min-hub .atlas-land {
-  fill: #e3ebeb;
-  stroke: #a9b9c2;
-}
-.min-hub .atlas-borders {
-  stroke: #acbdc6;
-}
-.min-hub .atlas-grid {
-  stroke: #94a8c0;
-}
-.min-hub .atlas-place-halos circle {
-  fill: #2155f5;
-}
-.min-hub .atlas-place-dot {
-  fill: #2155f5;
-  stroke: white;
-}
-.min-hub .atlas-place {
-  color: #2155f5 !important;
-}
-.min-hub .atlas-place > circle[fill="none"] {
-  stroke: #2155f5;
-}
-.min-hub .atlas-place-label text {
-  stroke: #e9f0f4;
-  fill: #4e5c70;
-}
-.min-hub .atlas-place--active .atlas-place-label text {
-  fill: #1542ca;
-  stroke: none;
-}
-.min-hub .atlas-place-label-bg {
-  fill: white;
-  stroke: #b7c8ed;
-}
-.min-hub .atlas-map-controls {
-  background: #fff;
-  border-color: #cfd8e6;
-  box-shadow: none;
-}
-.min-hub .atlas-map-controls button {
-  color: #3b4f6b;
-}
-.min-hub .atlas-map-controls button:hover {
-  background: #edf2fe;
-}
-.min-hub .atlas-map-footer {
-  color: #56677f;
-  font-size: 10px;
-}
-.min-hub .atlas-map-hint {
-  color: #56677f;
 }
 .min-map-selection {
   display: flex;

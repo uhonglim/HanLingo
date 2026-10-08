@@ -1544,7 +1544,7 @@
   min-width: 190px;
   color: #526b47;
 }
-.name-study {
+.word-study {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -1555,12 +1555,12 @@
   border-radius: 4px;
   align-items: center;
 }
-.name-study > div {
+.word-study > div {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
-.name-study .mini-label {
+.word-study .mini-label {
   font-size: 8px;
   color: #6f7c64;
 }
@@ -1569,7 +1569,7 @@
   font-size: 25px;
   letter-spacing: 3px;
 }
-.name-study strong {
+.word-study strong {
   font-family: var(--serif);
   font-weight: 400;
   font-size: 35px;
@@ -1579,12 +1579,12 @@
   font-size: 15px;
   color: #6b7d5c;
 }
-.name-study p {
+.word-study p {
   font-size: 11px;
   color: #6a7b5f;
   line-height: 1.9;
 }
-.name-study b {
+.word-study b {
   font-weight: 600;
 }
 .working-alphabet > .reading-note {
@@ -1608,7 +1608,7 @@
   .working-alphabet {
     padding: 32px 38px 40px;
   }
-  .name-study {
+  .word-study {
     gap: 30px;
   }
 }
@@ -1619,7 +1619,7 @@
   .alphabet-table-scroll td {
     padding: 18px 15px;
   }
-  .name-study strong {
+  .word-study strong {
     font-size: 30px;
   }
 }
@@ -1633,15 +1633,15 @@
   .working-alphabet .section-heading h2 {
     font-size: 35px;
   }
-  .name-study {
+  .word-study {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 23px;
   }
-  .name-study strong {
+  .word-study strong {
     font-size: 33px;
   }
-  .name-study .example-ipa {
+  .word-study .example-ipa {
     font-size: 13px;
   }
   .working-alphabet > .reading-note {

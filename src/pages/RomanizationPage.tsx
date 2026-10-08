@@ -231,22 +231,23 @@ export default function RomanizationPage() {
             </tbody>
           </table>
         </div>
-        <div className="name-study">
+        <div className="word-study">
           <div>
             <span className="mini-label">
-              WORKED EXAMPLE · STANDARD MANDARIN
+              WORKED EXAMPLE · XIAMEN
             </span>
             <span className="example-han" lang="zh-Hant">
-              習近平
+              茶 · tea
             </span>
-            <strong>Shi35 Chin51 Phing35</strong>
-            <span className="example-ipa">[ɕi˧˥ tɕin˥˩ pʰiŋ˧˥]</span>
+            <strong>te24</strong>
+            <span className="example-ipa">[te˨˦]</span>
           </div>
           <p>
-            This example applies the proposed <b>sh → [ɕ]</b> mapping from our
-            discussion. The IPA is a broad reference synthesized from dictionary
-            readings, not a transcription of a recording. The full vowel and
-            sibilant inventory remains open.
+            The Xiamen word for tea pairs the sounds <b>[te]</b> with a rising
+            citation tone <b>[˨˦]</b>, written <b>24</b>.{" "}
+            <Link to="/languages/min/southern-min/xiamen/words?q=茶">
+              See the word and its source.
+            </Link>
           </p>
         </div>
         <p className="reading-note">

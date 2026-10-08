@@ -5,11 +5,6 @@ export default function WrittenChinesePage() {
   const letter = letters.find((item) => item.id === "formal")!;
   return (
     <div className="written-page">
-      <div className="page-breadcrumb">
-        <Link to="/">Home</Link>
-        <span>/</span>
-        <span>Modern Standard Written Chinese</span>
-      </div>
       <header className="written-page-hero">
         <div>
           <h1>Modern Standard Written Chinese</h1>

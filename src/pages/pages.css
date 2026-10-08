@@ -1,554 +1,12 @@
-.main-nav a.active {
-  color: var(--accent);
-}
-#main:focus {
+ #main:focus {
   outline: none;
 }
-.page-breadcrumb {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 27px 64px;
-  font-size: 11px;
-  color: #778070;
-}
-.page-breadcrumb a:hover {
-  color: var(--accent);
-}
-.page-breadcrumb > span:not(:last-child) {
-  color: #b3b6a9;
-}
-.chapter-loading {
-  min-height: 70vh;
-  padding: 80px 64px;
-  font-family: var(--serif);
-  font-size: 30px;
-  color: var(--muted);
-}
-.home-library {
-  padding: 32px 64px 50px;
-}
-.home-library .section-heading .text-link {
-  padding-bottom: 7px;
-}
-.group-books {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 26px 23px;
-}
-.group-book {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  overflow: hidden;
-  background: #fbf9f3;
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
-}
-.group-book:hover {
-  border-color: var(--group-color, #9aa58e);
-  transform: translateY(-3px);
-}
-.group-book-image {
-  position: relative;
-  height: 208px;
-  overflow: hidden;
-  background: #e6e5da;
-}
-.group-book-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s;
-}
-.group-book:hover img {
-  transform: scale(1.025);
-}
-.group-book-glyph {
-  position: absolute;
-  bottom: 16px;
-  left: 18px;
-  background: #f9f6eefa;
-  color: var(--group-color);
-  border-radius: 3px;
-  font-family: "Songti SC", serif;
-  font-size: 35px;
-  line-height: 1;
-  padding: 9px 10px;
-  box-shadow: 0 2px 8px #182a1810;
-}
-.group-book-content {
-  padding: 21px 23px 20px;
-}
-.group-book h3 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--serif);
-  font-size: 33px;
-  margin: 7px 0 9px;
-  line-height: 1.2;
-}
-.group-book h3 > span {
-  font-family: "Songti SC", serif;
-  font-size: 14px;
-  color: #6e7b65;
-}
-.group-book h3 > svg {
-  margin-left: auto;
-  color: var(--group-color);
-  transition: transform 0.2s;
-}
-.group-book:hover h3 > svg {
-  transform: translateX(3px);
-}
-.group-book p {
-  font-size: 12px;
-  line-height: 1.7;
-  color: #6d7966;
-  min-height: 40px;
-}
-.book-contents {
-  border-top: 1px solid #e5e5da;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 9px;
-  color: #737f6c;
-  margin-top: 20px;
-  padding-top: 12px;
-}
-.book-contents > span {
-  color: #b3b9aa;
-}
-.written-book {
-  position: relative;
-  padding: 28px 26px;
-  justify-content: flex-end;
-  background: #eeeede;
-  isolation: isolate;
-  min-height: 370px;
-}
-.written-book h3 {
-  font-size: 38px;
-  z-index: 1;
-  margin: 10px 0 13px;
-}
-.written-book p {
-  max-width: 270px;
-  z-index: 1;
-  margin-bottom: 25px;
-}
-.written-book > .text-link {
-  font-size: 11px;
-  z-index: 1;
-}
-.written-book-glyph {
-  position: absolute;
-  font-family: "Songti SC", serif;
-  font-size: 154px;
-  line-height: 1;
-  right: 22px;
-  top: 58px;
-  color: #d3d9c4;
-  z-index: -1;
-}
-.photo-context-note {
-  font-size: 9px;
-  color: #778270;
-  margin-top: 16px;
-}
-.depth-guide {
-  margin: 0 64px;
-  padding: 42px 0 55px;
-  border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  align-items: center;
-}
-.depth-guide h2,
-.home-reading h2 {
-  font-family: var(--serif);
-  font-size: 47px;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-  margin: 20px 0;
-}
-.depth-guide h2 em,
-.home-reading h2 em {
-  font-weight: 400;
-  color: var(--accent);
-}
-.depth-guide p,
-.home-reading p {
-  font-size: 12px;
-  color: #6d7966;
-  line-height: 1.9;
-  max-width: 370px;
-}
-.depth-path {
-  padding: 10px 0;
-  display: grid;
-  gap: 14px;
-}
-.depth-path > a {
-  border-bottom: 1px solid var(--line);
-  padding: 17px 0 19px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 7px 20px;
-}
-.depth-stage {
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 1.3px;
-  color: #7a8770;
-  grid-column: 1 / -1;
-}
-.depth-path strong {
-  font-family: var(--serif);
-  font-size: 29px;
-  font-weight: 400;
-}
-.depth-path strong > span {
-  font-family: "Songti SC", serif;
-  font-size: 14px;
-  margin-left: 12px;
-  color: #7d8c72;
-}
-.depth-path svg {
-  align-self: center;
-  color: var(--accent);
-}
-.depth-path a:hover strong {
-  color: var(--accent);
-}
-.depth-cluster {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 9px;
-  color: #76806e;
-  padding: 0 0 0 10px;
-  margin-top: -4px;
-}
-.home-reading {
-  padding: 48px 64px;
-  background: #eceee3;
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 90px;
-  align-items: center;
-  border-top: 1px solid #dee3d2;
-  border-bottom: 1px solid #dee3d2;
-}
-.home-letter-fragment {
-  background: #faf8ef;
-  padding: 37px 38px;
-  border: 1px solid #dbdfcf;
-  border-radius: 4px;
-  transform: rotate(-1.5deg);
-  font-family: "Songti TC", "Songti SC", serif;
-  color: #5e6d54;
-  box-shadow: 0 3px 8px #31462404;
-}
-.home-letter-fragment > span {
-  font-size: 19px;
-}
-.home-letter-fragment p {
-  font-size: 22px;
-  font-family: inherit;
-  color: inherit;
-  line-height: 2;
-  margin: 23px 0;
-  max-width: none;
-}
-.home-letter-fragment small {
-  font-size: 11px;
-  display: block;
-  text-align: right;
-  color: #819074;
-  letter-spacing: 2px;
-}
-.home-reading h2 {
-  margin-top: 15px;
-}
-.home-reading .text-link {
-  margin-top: 23px;
-}
-.home-scope {
-  padding: 32px 64px 40px;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  align-items: center;
-}
-.home-scope p {
-  font-size: 10px;
-  color: #77836e;
-  max-width: 720px;
-}
-.home-scope strong {
-  font-weight: 600;
-  color: #566a4c;
-}
-.home-scope .text-link {
-  font-size: 10px;
-  white-space: nowrap;
-}
-.library-page {
-  padding-bottom: 45px;
-}
-.library-page > .group-books {
-  margin: 0 64px 65px;
-}
-.library-intro {
-  padding: 25px 64px 45px;
-  display: flex;
-  gap: 40px;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.library-intro h1 {
-  font-size: 64px;
-  line-height: 1.02;
-  letter-spacing: -1.5px;
-  margin: 20px 0;
-}
-.library-intro p {
-  font-size: 13px;
-  color: #6d7966;
-  max-width: 540px;
-  line-height: 1.85;
-}
-.library-counts {
-  display: flex;
-  gap: 24px;
-  border-top: 1px solid var(--line);
-  padding: 20px 0 8px;
-}
-.library-counts > span {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  font-size: 8px;
-  color: #768370;
-  white-space: nowrap;
-}
-.library-counts strong {
-  font-family: var(--serif);
-  font-size: 42px;
-  font-weight: 400;
-  color: var(--ink);
-}
-.library-index {
-  margin: 0 64px;
-  border-top: 1px solid var(--line);
-  padding-top: 40px;
-}
-.index-description {
-  font-size: 11px;
-  color: #70816b;
-  padding-bottom: 6px;
-}
-.directory-tools {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  justify-content: space-between;
-}
-.library-search {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  border: 1px solid #d6dcca;
-  border-radius: 4px;
-  padding: 12px 15px;
-  flex: 1;
-  max-width: 480px;
-  background: #fbfaf4;
-  color: #7b8a71;
-}
-.library-search:focus-within {
-  border-color: #829776;
-  box-shadow: 0 0 0 2px #82977618;
-}
-.library-search input {
-  border: 0;
-  background: transparent;
-  width: 100%;
-  font-size: 12px;
-  color: var(--ink);
-  outline: 0 !important;
-  min-width: 0;
-}
-.library-search input::placeholder {
-  color: #87937d;
-}
-.library-search button {
-  background: transparent;
-  display: grid;
-  place-items: center;
-  padding: 0;
-  color: #7b8a71;
-}
-.directory-filters {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-.directory-filters button {
-  font-size: 10px;
-  background: transparent;
-  border-radius: 3px;
-  padding: 8px 10px;
-  color: #6f7f66;
-  border: 1px solid transparent;
-}
-.directory-filters button[aria-pressed="true"] {
-  border-color: #cdd6c3;
-  background: #e7ecdf;
-  color: #4c6642;
-}
-.directory-count {
-  font-size: 10px;
-  color: #7b8a71;
-  margin: 22px 0 12px;
-}
-.directory-results {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 35px;
-}
-.directory-entry {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 17px 0;
-  border-top: 1px solid var(--line);
-  min-width: 0;
-}
-.directory-entry:hover h3 {
-  color: var(--accent);
-}
-.directory-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.directory-entry > div {
-  min-width: 0;
-  flex: 1;
-}
-.directory-entry h3 {
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.5;
-}
-.directory-entry h3 > span {
-  font-family: "Songti SC", serif;
-  font-size: 11px;
-  color: #829275;
-  font-weight: 400;
-  margin-left: 10px;
-}
-.directory-entry p {
-  font-size: 9px;
-  color: #7a886f;
-  margin-top: 5px;
-  line-height: 1.6;
-}
-.directory-kind {
-  font-size: 8px;
-  letter-spacing: 0.2px;
-  color: #75896b;
-  white-space: nowrap;
-}
-.directory-entry > svg {
-  color: #8b9b7f;
-  width: 14px;
-}
-.directory-empty {
-  padding: 40px 10px;
-  text-align: center;
-  border: 1px dashed #d4dcc9;
-  border-radius: 4px;
-}
-.directory-empty h3 {
-  font-family: var(--serif);
-  font-size: 30px;
-}
-.directory-empty p {
-  font-size: 12px;
-  color: #7b8a70;
-  margin: 10px 0 20px;
-}
-.reading-room > .comparison-section {
-  margin-top: 7px;
-}
-.comparison-words {
-  padding: 50px 64px 60px;
-}
-.comparison-words h2,
 .method-principles h2,
 .about-photo-note h2 {
   font-family: var(--serif);
   font-size: 40px;
   line-height: 1.1;
   margin: 15px 0 20px;
-}
-.comparison-words > p {
-  font-size: 12px;
-  color: #6f8065;
-  max-width: 700px;
-}
-.word-comparison-scroll {
-  overflow-x: auto;
-  margin: 28px 0 18px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-}
-.word-comparison-scroll table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 730px;
-  text-align: left;
-}
-.word-comparison-scroll th {
-  font-size: 10px;
-  font-weight: 600;
-  padding: 15px 13px;
-  border-bottom: 1px solid var(--line);
-  color: #657c59;
-  white-space: nowrap;
-}
-.word-comparison-scroll thead th {
-  background: #eff1e6;
-  font-size: 9px;
-}
-.word-comparison-scroll td {
-  font-family: "Hakka Glyph", "Songti SC", serif;
-  font-size: 17px;
-  letter-spacing: 1px;
-  padding: 18px 13px;
-  border-bottom: 1px solid var(--line);
-  white-space: nowrap;
-}
-.word-comparison-scroll tr:last-child > th,
-.word-comparison-scroll tr:last-child > td {
-  border: 0;
-}
-.comparison-words .reading-note {
-  font-size: 10px;
-  margin: 15px 0 23px;
 }
 .romanization-page > .approach-section {
   padding-top: 30px;
@@ -565,7 +23,7 @@
   margin-top: 33px;
 }
 .principles-grid article > span {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--accent);
 }
 .principles-grid h3 {
@@ -580,7 +38,7 @@
   line-height: 1.8;
 }
 .method-open {
-  background: #ecefe2;
+  background: #f6f8fb;
   padding: 25px 29px;
   margin-top: 36px;
   border: 1px solid #dde2d0;
@@ -601,7 +59,7 @@
   max-width: 850px;
 }
 .page-intro h1 {
-  font-size: 73px;
+  font-size: 44px;
   line-height: 1.04;
   margin: 22px 0;
 }
@@ -635,7 +93,7 @@
   border-bottom: 1px solid var(--line);
 }
 .written-page-hero h1 {
-  font-size: 67px;
+  font-size: 44px;
   line-height: 1.02;
   margin: 22px 0;
   letter-spacing: -1px;
@@ -672,16 +130,12 @@
   margin-top: 5px;
 }
 .formal-letter {
-  background: #fcfaf3;
+  background: #f6f8fb;
   padding: 30px 31px 0;
   border: 1px solid #e1e4d4;
   border-radius: 4px;
   position: sticky;
   top: 30px;
-}
-.formal-letter > .mini-label {
-  font-size: 8px;
-  color: #768a69;
 }
 .formal-letter .letter-body {
   font-size: 18px;
@@ -692,16 +146,11 @@
   padding-top: 20px;
   border-top: 1px solid var(--line);
 }
-.written-sources .mini-label {
-  font-size: 8px;
-  color: #7d8e70;
-  margin-bottom: 15px;
-}
 .written-sources a {
   display: block;
   text-decoration: underline;
   text-underline-offset: 3px;
-  font-size: 11px;
+  font-size: 12px;
   color: #6f845f;
   margin-top: 10px;
   line-height: 1.7;
@@ -711,7 +160,7 @@
   min-height: 70vh;
 }
 .not-found-page h1 {
-  font-size: 68px;
+  font-size: 44px;
   line-height: 1.05;
 }
 .not-found-page p {
@@ -720,73 +169,6 @@
   max-width: 560px;
 }
 @media (max-width: 1150px) {
-  .page-breadcrumb {
-    padding: 24px 38px;
-  }
-  .home-library {
-    padding: 25px 38px 40px;
-  }
-  .group-books {
-    gap: 21px 17px;
-  }
-  .group-book-image {
-    height: 175px;
-  }
-  .group-book-content {
-    padding: 19px;
-  }
-  .group-book h3 {
-    font-size: 29px;
-  }
-  .group-book h3 > span {
-    font-size: 12px;
-  }
-  .group-book p {
-    font-size: 11px;
-  }
-  .written-book {
-    padding: 23px;
-    min-height: 355px;
-  }
-  .written-book h3 {
-    font-size: 32px;
-  }
-  .depth-guide {
-    margin: 0 38px;
-    gap: 60px;
-  }
-  .home-reading {
-    padding: 40px 38px;
-    gap: 60px;
-  }
-  .home-scope {
-    padding: 28px 38px 35px;
-  }
-  .library-intro {
-    padding: 20px 38px 40px;
-    gap: 25px;
-  }
-  .library-intro h1 {
-    font-size: 58px;
-  }
-  .library-counts {
-    gap: 17px;
-  }
-  .library-page > .group-books {
-    margin: 0 38px 50px;
-  }
-  .library-index {
-    margin: 0 38px;
-  }
-  .directory-tools {
-    gap: 15px;
-  }
-  .directory-results {
-    gap: 0 25px;
-  }
-  .comparison-words {
-    padding: 40px 38px 50px;
-  }
   .method-principles {
     padding: 35px 38px 50px;
   }
@@ -801,7 +183,7 @@
     gap: 30px;
   }
   .written-page-hero h1 {
-    font-size: 60px;
+    font-size: 36px;
   }
   .written-page-grid {
     gap: 45px;
@@ -812,126 +194,6 @@
   }
 }
 @media (max-width: 850px) {
-  .page-breadcrumb {
-    padding: 23px 25px;
-  }
-  .home-library {
-    padding: 25px;
-  }
-  .group-books {
-    gap: 20px 15px;
-  }
-  .group-book-image {
-    height: 150px;
-  }
-  .group-book-content {
-    padding: 17px;
-  }
-  .group-book h3 {
-    font-size: 26px;
-    gap: 8px;
-  }
-  .group-book h3 > span {
-    font-size: 10px;
-  }
-  .group-book h3 > svg {
-    width: 16px;
-  }
-  .group-book p {
-    font-size: 10px;
-  }
-  .book-contents {
-    font-size: 8px;
-    gap: 7px;
-  }
-  .group-book-glyph {
-    font-size: 30px;
-    left: 14px;
-    bottom: 14px;
-  }
-  .written-book {
-    padding: 20px;
-    min-height: 337px;
-  }
-  .written-book h3 {
-    font-size: 30px;
-  }
-  .written-book-glyph {
-    font-size: 125px;
-    right: 15px;
-  }
-  .written-book > .text-link {
-    font-size: 10px;
-  }
-  .depth-guide {
-    margin: 0 25px;
-    gap: 40px;
-    padding-top: 30px;
-  }
-  .depth-guide h2,
-  .home-reading h2 {
-    font-size: 41px;
-  }
-  .home-reading {
-    padding: 35px 25px;
-    gap: 45px;
-  }
-  .home-letter-fragment {
-    padding: 30px 25px;
-  }
-  .home-letter-fragment p {
-    font-size: 18px;
-  }
-  .home-scope {
-    padding: 25px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-  .library-intro {
-    padding: 15px 25px 35px;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0;
-  }
-  .library-intro h1 {
-    font-size: 61px;
-  }
-  .library-counts {
-    gap: 35px;
-    border: 0;
-    padding: 20px 0 0;
-  }
-  .library-counts > span {
-    font-size: 9px;
-  }
-  .library-counts strong {
-    font-size: 38px;
-  }
-  .library-page > .group-books {
-    margin: 0 25px 40px;
-  }
-  .library-index {
-    margin: 0 25px;
-    padding-top: 32px;
-  }
-  .directory-tools {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .library-search {
-    width: 100%;
-    max-width: none;
-  }
-  .directory-results {
-    gap: 0 23px;
-  }
-  .directory-kind {
-    display: none;
-  }
-  .comparison-words {
-    padding: 35px 25px 40px;
-  }
   .method-principles {
     padding: 30px 25px 45px;
   }
@@ -942,13 +204,13 @@
     font-size: 25px;
   }
   .principles-grid p {
-    font-size: 11px;
+    font-size: 12px;
   }
   .page-intro {
     padding: 20px 25px 40px;
   }
   .page-intro h1 {
-    font-size: 64px;
+    font-size: 36px;
   }
   .about-photo-note {
     padding: 10px 25px 40px;
@@ -957,7 +219,7 @@
     padding: 20px 25px 32px;
   }
   .written-page-hero h1 {
-    font-size: 50px;
+    font-size: 36px;
   }
   .written-page-grid {
     padding: 30px 25px 45px;
@@ -979,226 +241,12 @@
     padding: 55px 25px 65px;
   }
   .not-found-page h1 {
-    font-size: 58px;
+    font-size: 36px;
   }
 }
 @media (max-width: 620px) {
-  .main-nav.is-open {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 15px;
-  }
-  .page-breadcrumb {
-    padding: 20px 22px;
-    font-size: 10px;
-    gap: 9px;
-  }
-  .home-library {
-    padding: 30px 22px;
-  }
-  .home-library .section-heading {
-    gap: 17px;
-    margin-bottom: 24px;
-  }
-  .home-library .section-heading h2 {
-    font-size: 35px;
-  }
-  .group-books {
-    grid-template-columns: 1fr;
-    gap: 23px;
-  }
-  .group-book-image {
-    height: 225px;
-  }
-  .group-book-content {
-    padding: 21px 24px;
-  }
-  .group-book h3 {
-    font-size: 35px;
-    gap: 14px;
-  }
-  .group-book h3 > span {
-    font-size: 15px;
-  }
-  .group-book h3 > svg {
-    width: 20px;
-  }
-  .group-book p {
-    font-size: 12px;
-    min-height: 0;
-  }
-  .book-contents {
-    font-size: 10px;
-    margin-top: 18px;
-    padding-top: 14px;
-  }
-  .group-book-glyph {
-    font-size: 37px;
-    left: 20px;
-    bottom: 19px;
-  }
-  .written-book {
-    min-height: 300px;
-    padding: 27px;
-  }
-  .written-book h3 {
-    font-size: 37px;
-  }
-  .written-book-glyph {
-    top: 35px;
-    right: 24px;
-    font-size: 150px;
-  }
-  .written-book p {
-    margin-bottom: 21px;
-    max-width: 250px;
-  }
-  .written-book > .text-link {
-    font-size: 12px;
-  }
-  .photo-context-note {
-    font-size: 9px;
-    margin-top: 17px;
-  }
-  .depth-guide {
-    margin: 0 22px;
-    padding: 32px 0 38px;
-    grid-template-columns: 1fr;
-    gap: 23px;
-  }
-  .depth-guide h2,
-  .home-reading h2 {
-    font-size: 43px;
-  }
-  .depth-guide p,
-  .home-reading p {
-    font-size: 12px;
-  }
-  .depth-path {
-    gap: 9px;
-  }
-  .depth-path > a {
-    padding: 13px 0 18px;
-  }
-  .depth-stage {
-    font-size: 8px;
-  }
-  .depth-path strong {
-    font-size: 30px;
-  }
-  .depth-cluster {
-    padding-left: 8px;
-  }
-  .home-reading {
-    padding: 40px 22px;
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  .home-letter-fragment {
-    padding: 30px;
-  }
-  .home-letter-fragment p {
-    font-size: 20px;
-  }
-  .home-reading > div:last-child {
-    padding-top: 5px;
-  }
-  .home-scope {
-    padding: 28px 22px 35px;
-  }
-  .home-scope p {
-    font-size: 11px;
-  }
-  .home-scope .text-link {
-    font-size: 11px;
-  }
-  .library-intro {
-    padding: 13px 22px 30px;
-  }
-  .library-intro h1 {
-    font-size: clamp(45px, 12vw, 57px);
-    line-height: 1.08;
-    letter-spacing: -0.6px;
-  }
-  .library-intro h1 em:before {
-    content: none;
-  }
-  .library-intro p {
-    font-size: 12px;
-  }
-  .library-counts {
-    gap: 30px;
-    padding-top: 24px;
-  }
-  .library-counts strong {
-    font-size: 40px;
-  }
-  .library-counts > span {
-    font-size: 8px;
-    gap: 6px;
-  }
-  .library-page > .group-books {
-    margin: 0 22px 37px;
-  }
-  .library-index {
-    margin: 0 22px;
-    padding-top: 30px;
-  }
-  .index-description {
-    font-size: 11px;
-  }
-  .directory-tools {
-    gap: 14px;
-  }
-  .library-search {
-    padding: 13px;
-  }
-  .library-search input {
-    font-size: 12px;
-  }
-  .directory-filters {
-    gap: 3px;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .directory-filters button {
-    font-size: 10px;
-    padding: 8px;
-  }
-  .directory-count {
-    font-size: 10px;
-  }
-  .directory-results {
-    grid-template-columns: 1fr;
-  }
-  .directory-entry {
-    padding: 17px 0;
-  }
-  .directory-entry h3 {
-    font-size: 14px;
-  }
-  .directory-entry h3 > span {
-    font-size: 12px;
-  }
-  .directory-entry p {
-    font-size: 10px;
-  }
-  .directory-kind {
-    display: block;
-    font-size: 8px;
-  }
-  .reading-room > .comparison-section {
-    margin-top: 0;
-  }
-  .comparison-words {
-    padding: 33px 22px 42px;
-  }
-  .comparison-words h2,
   .method-principles h2 {
     font-size: 35px;
-  }
-  .comparison-words > p {
-    font-size: 11px;
   }
   .romanization-page > .approach-section {
     padding-top: 20px;
@@ -1227,7 +275,7 @@
     margin-top: 24px;
   }
   .method-open p {
-    font-size: 11px;
+    font-size: 12px;
   }
   .page-intro {
     padding: 16px 22px 35px;
@@ -1291,50 +339,16 @@
     padding: 45px 22px 60px;
   }
   .not-found-page h1 {
-    font-size: 52px;
+    font-size: 36px;
     line-height: 1.07;
   }
   .not-found-page p {
     font-size: 12px;
   }
-  .chapter-loading {
-    padding: 60px 22px;
-    font-size: 26px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .group-book,
-  .group-book img,
-  .group-book h3 > svg {
-    transition: none;
-  }
-}
-.group-book-link {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-width: 0;
-}
-.group-photo-credit {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  padding: 0 23px 16px;
-  font-size: 8px;
-  line-height: 1.5;
-  color: #718066;
-}
-.group-photo-credit a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.group-photo-credit a:hover {
-  color: var(--accent);
 }
 .approach-intro h1 {
   font-family: var(--serif);
-  font-size: 54px;
+  font-size: 44px;
   line-height: 1.07;
   letter-spacing: -1px;
   margin: 20px 0;
@@ -1369,7 +383,7 @@
 .decision-table {
   border: 1px solid #dbe2d0;
   border-radius: 4px;
-  background: #f9f9f0;
+  background: #f6f8fb;
 }
 .decision-table > div {
   display: grid;
@@ -1381,7 +395,7 @@
   border-top: 1px solid #dbe2d0;
 }
 .decision-table span {
-  font-size: 9px;
+  font-size: 12px;
   color: #6e805f;
   align-self: center;
 }
@@ -1395,14 +409,11 @@
 }
 .decision-table p {
   grid-column: 2;
-  font-size: 10px;
+  font-size: 12px;
   color: #718363;
   line-height: 1.7;
 }
 @media (max-width: 1150px) {
-  .group-photo-credit {
-    padding: 0 19px 14px;
-  }
   .romanization-decisions {
     padding: 35px 38px;
     gap: 48px;
@@ -1413,11 +424,8 @@
   }
 }
 @media (max-width: 850px) {
-  .group-photo-credit {
-    padding: 0 17px 14px;
-  }
   .approach-intro h1 {
-    font-size: 47px;
+    font-size: 36px;
   }
   .romanization-decisions {
     padding: 30px 25px;
@@ -1435,12 +443,8 @@
   }
 }
 @media (max-width: 620px) {
-  .group-photo-credit {
-    padding: 0 24px 17px;
-    font-size: 9px;
-  }
   .approach-intro h1 {
-    font-size: 49px;
+    font-size: 36px;
   }
   .romanization-decisions {
     grid-template-columns: 1fr;
@@ -1459,16 +463,6 @@
     grid-column: 2;
   }
 }
-.reading-room .comparison-section h1 {
-  font-family: var(--serif);
-  font-size: 51px;
-  letter-spacing: -0.7px;
-  line-height: 1.1;
-  margin: 13px 0 0;
-}
-.library-search input::-webkit-search-cancel-button {
-  display: none;
-}
 .working-alphabet {
   padding: 38px 64px 48px;
   border-top: 1px solid var(--line);
@@ -1485,9 +479,9 @@
   min-width: 570px;
 }
 .alphabet-table-scroll th {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
-  background: #eff1e6;
+  background: #f6f8fb;
   padding: 14px 20px;
   color: #64755a;
 }
@@ -1515,7 +509,7 @@
   gap: 50px;
   margin: 30px 0;
   padding: 28px;
-  background: #eeeede;
+  background: #f6f8fb;
   border: 1px solid #dce1ce;
   border-radius: 4px;
   align-items: center;
@@ -1524,10 +518,6 @@
   display: flex;
   flex-direction: column;
   gap: 11px;
-}
-.word-study .mini-label {
-  font-size: 8px;
-  color: #6f7c64;
 }
 .example-han {
   font-family: "Songti SC", serif;
@@ -1545,7 +535,7 @@
   color: #6b7d5c;
 }
 .word-study p {
-  font-size: 11px;
+  font-size: 12px;
   color: #6a7b5f;
   line-height: 1.9;
 }
@@ -1553,7 +543,7 @@
   font-weight: 600;
 }
 .working-alphabet > .reading-note {
-  font-size: 11px;
+  font-size: 12px;
   color: #748368;
   max-width: 850px;
 }
@@ -1564,7 +554,7 @@
   margin-top: 21px;
 }
 .method-source-links a {
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: underline;
   text-underline-offset: 3px;
   color: #6c825e;
@@ -1589,9 +579,6 @@
   }
 }
 @media (max-width: 620px) {
-  .reading-room .comparison-section h1 {
-    font-size: 47px;
-  }
   .working-alphabet {
     padding: 30px 22px;
   }
@@ -1610,7 +597,7 @@
     font-size: 13px;
   }
   .working-alphabet > .reading-note {
-    font-size: 10px;
+    font-size: 12px;
   }
   .method-source-links {
     flex-direction: column;

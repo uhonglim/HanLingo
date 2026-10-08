@@ -1,27 +1,29 @@
 .reference-layout {
   display: grid;
   grid-template-columns: 224px minmax(0, 1fr);
-  gap: 62px;
-  padding: 32px 64px 65px;
+  gap: 40px;
+  padding: 28px var(--page-gutter) 56px;
   align-items: start;
+  background: #fff;
 }
 .reference-sidebar {
   position: sticky;
-  top: 26px;
-  max-height: calc(100vh - 52px);
+  top: calc(var(--site-sticky-offset) + 24px);
+  max-height: calc(100vh - var(--site-sticky-offset) - 48px);
   overflow: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
   scrollbar-color: #d5d9cc transparent;
   padding-right: 19px;
   font-size: 12px;
+  background: #fff;
 }
 .reference-back {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
 }
 .reference-back:hover {
   color: var(--ink, #263d33);
@@ -31,21 +33,22 @@
 }
 .reference-sidebar-title > span,
 .reference-kicker {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 550;
-  letter-spacing: 1.35px;
-  color: #69736a;
+  letter-spacing: 0;
+  color: #626b73;
   line-height: 1.5;
 }
 .reference-sidebar-title h2 {
-  font-family: var(--serif, Georgia, serif);
-  font-size: 29px;
   letter-spacing: -0.45px;
   margin: 10px 0 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
 }
 .reference-sidebar-title p {
-  font-size: 11px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
 }
 .reference-tree ul {
   list-style: none;
@@ -56,8 +59,8 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  border-top: 1px solid var(--line, #dee1d5);
-  border-bottom: 1px solid var(--line, #dee1d5);
+  border-top: 1px solid var(--line, #e5e8eb);
+  border-bottom: 1px solid var(--line, #e5e8eb);
   padding: 17px 0;
   margin-bottom: 13px;
   font-size: 12px;
@@ -66,13 +69,13 @@
 .reference-tree-root > span:first-child {
   font-family: "Songti SC", serif;
   font-size: 27px;
-  color: #718066;
+  color: #626b73;
 }
 .reference-tree-root small {
   display: block;
   margin-top: 4px;
-  font-size: 10px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
   font-weight: 400;
 }
 .reference-tree-groups > li {
@@ -94,7 +97,7 @@
   width: 23px;
   height: 32px;
   padding: 0;
-  color: #949c8d;
+  color: #626b73;
   background: none;
   flex: 0 0 auto;
 }
@@ -128,13 +131,13 @@
 }
 .reference-tree-count {
   margin-left: auto;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 400;
-  color: #69736a;
+  color: #626b73;
 }
 .reference-tree-subgroups {
   margin-left: 21px !important;
-  border-left: 1px solid #dce0d4;
+  border-left: 1px solid #e5e8eb;
   padding: 4px 0 4px 5px !important;
 }
 .reference-tree-subgroup {
@@ -147,9 +150,9 @@
 }
 .reference-tree-subgroup > a {
   padding: 7px 0 7px 3px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.5;
-  color: #64715e;
+  color: #626b73;
 }
 .reference-tree-places {
   padding: 1px 0 6px 24px !important;
@@ -158,8 +161,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
   padding: 7px 0;
 }
 .reference-tree-place-dot {
@@ -171,14 +174,14 @@
 .reference-sidebar-foot {
   margin: 23px 0 8px;
   padding-top: 21px;
-  border-top: 1px solid var(--line, #dee1d5);
-  color: #69736a;
-  font-size: 8px;
-  letter-spacing: 0.9px;
+  border-top: 1px solid var(--line, #e5e8eb);
+  color: #626b73;
+  font-size: 12px;
+  letter-spacing: 0;
 }
 .reference-sidebar-foot p {
   margin-top: 10px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.9;
   letter-spacing: 0;
 }
@@ -187,7 +190,7 @@
   align-items: center;
   gap: 9px;
   margin-top: 13px;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0;
 }
 .reference-mobile-tree {
@@ -196,58 +199,15 @@
 .reference-entry {
   min-width: 0;
 }
-.reference-breadcrumbs {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-  color: #69736a;
-  font-size: 10px;
-  line-height: 1.8;
-  padding-bottom: 33px;
-}
-.reference-breadcrumbs svg {
-  color: #b0b9a5;
-}
-.reference-breadcrumbs a:hover {
-  color: var(--reference-color);
-}
-.reference-breadcrumbs [aria-current="page"] {
-  color: #596d51;
-}
 .reference-entry-header {
   margin-bottom: 33px;
   padding-bottom: 30px;
-  border-bottom: 1px solid var(--line, #dee1d5);
+  border-bottom: 1px solid var(--line, #e5e8eb);
 }
 .reference-entry-header.has-photo {
   margin-bottom: 26px;
   padding-bottom: 0;
   border-bottom: 0;
-}
-.reference-entry-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.reference-entry-meta .reference-kicker {
-  color: var(--reference-color);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.reference-entry-meta .reference-kicker > span {
-  width: 20px;
-  height: 1px;
-  background: currentColor;
-}
-.reference-entry-meta > span:last-child {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 10px;
-  color: #69736a;
 }
 .reference-title-row {
   display: flex;
@@ -257,7 +217,7 @@
 }
 .reference-title-row h1 {
   font-family: var(--serif, Georgia, serif);
-  font-size: 69px;
+  font-size: 44px;
   line-height: 1.04;
   letter-spacing: -1.8px;
   margin: 0;
@@ -266,22 +226,22 @@
   font-family: "Songti SC", "Noto Serif CJK SC", serif;
   font-size: 34px;
   line-height: 1.3;
-  color: var(--reference-color);
   white-space: nowrap;
   opacity: 0.72;
+  color: #626b73;
 }
 .reference-dek {
-  font-size: 16px;
-  color: #64715e;
+  color: #626b73;
   line-height: 1.85;
   max-width: 760px;
+  font-size: 17px;
 }
 .reference-geography {
   display: flex;
   align-items: flex-start;
   gap: 7px;
-  color: #69736a;
-  font-size: 10px;
+  color: #626b73;
+  font-size: 12px;
   margin-top: 18px;
   line-height: 1.7;
 }
@@ -291,6 +251,8 @@
 }
 .reference-hero-photo {
   margin: 0 0 38px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .reference-hero-photo img {
   width: 100%;
@@ -299,17 +261,18 @@
   object-fit: cover;
   display: block;
   border-radius: 4px;
-  background: #e6e9dc;
+  background: #f6f8fb;
 }
 .reference-hero-photo figcaption {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
-  color: #69736a;
-  font-size: 8px;
+  color: #626b73;
   line-height: 1.8;
   margin-top: 9px;
+  background: #fff;
+  font-size: 12px;
 }
 .reference-hero-photo figcaption > span:first-child {
   max-width: 65%;
@@ -337,7 +300,7 @@
 }
 .reference-prose section + section {
   padding-top: 21px;
-  border-top: 1px solid #e2e5d9;
+  border-top: 1px solid #e5e8eb;
 }
 .reference-prose h2 {
   font-family: var(--serif, Georgia, serif);
@@ -347,10 +310,10 @@
   margin-bottom: 15px;
 }
 .reference-prose p {
-  font-size: 14px;
-  line-height: 1.95;
-  color: #5b6e52;
+  color: #626b73;
   overflow-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.85;
 }
 .reference-prose p + p {
   margin-top: 15px;
@@ -361,12 +324,12 @@
   margin-top: 8px;
 }
 .reference-contents {
-  border-left: 1px solid #dfe4d5;
+  border-left: 1px solid #e5e8eb;
   padding-left: 19px;
 }
 .reference-contents > span {
-  font-size: 8px;
-  letter-spacing: 1.1px;
+  font-size: 12px;
+  letter-spacing: 0;
 }
 .reference-contents nav {
   display: flex;
@@ -375,9 +338,9 @@
   padding-top: 14px;
 }
 .reference-contents nav a {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.7;
-  color: #69736a;
+  color: #626b73;
 }
 .reference-contents nav a:hover {
   color: var(--reference-color);
@@ -385,22 +348,22 @@
 .reference-facts {
   margin: 27px 0 0;
   padding: 21px 0 0 19px;
-  border-top: 1px solid #e0e4d6;
+  border-top: 1px solid #e5e8eb;
 }
 .reference-facts > div + div {
   margin-top: 17px;
 }
 .reference-facts dt {
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  color: #69736a;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #626b73;
   line-height: 1.6;
 }
 .reference-facts dd {
   margin: 6px 0 0;
-  color: #5f7155;
-  font-size: 11px;
+  color: #626b73;
+  font-size: 12px;
   line-height: 1.8;
   overflow-wrap: break-word;
 }
@@ -409,7 +372,7 @@
 .reference-local-letter {
   padding-top: 33px;
   margin-top: 14px;
-  border-top: 1px solid var(--line, #dee1d5);
+  border-top: 1px solid var(--line, #e5e8eb);
   scroll-margin-top: 30px;
 }
 .reference-section-heading {
@@ -427,9 +390,9 @@
   margin-top: 10px;
 }
 .reference-section-heading > span {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.75;
-  color: #69736a;
+  color: #626b73;
   text-align: right;
   max-width: 180px;
   padding-bottom: 3px;
@@ -444,11 +407,12 @@
   flex-direction: column;
   min-width: 0;
   padding: 22px;
-  border: 1px solid #dfe3d5;
-  border-radius: 4px;
+  border: 1px solid #e5e8eb;
   transition:
     border-color 0.2s ease,
     background 0.2s ease;
+  background: white;
+  border-radius: 6px;
 }
 .reference-child-card:hover {
   border-color: var(--reference-color);
@@ -458,9 +422,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #69736a;
-  font-size: 9px;
-  letter-spacing: 0.8px;
+  color: #626b73;
+  font-size: 12px;
+  letter-spacing: 0;
 }
 .reference-child-index > span {
   font-family: "Songti SC", serif;
@@ -476,9 +440,9 @@
   margin: 17px 0 10px;
 }
 .reference-child-card p {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.9;
-  color: #69736a;
+  color: #626b73;
 }
 .reference-child-footer {
   display: flex;
@@ -487,13 +451,13 @@
   gap: 15px;
   margin-top: auto;
   padding-top: 23px;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--reference-color);
 }
 .reference-curation-note {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.85;
-  color: #69736a;
+  color: #626b73;
   margin-top: 13px;
 }
 .reference-map-section {
@@ -501,7 +465,7 @@
 }
 .reference-map-frame {
   height: 465px;
-  border: 1px solid #dfe3d6;
+  border: 1px solid #e5e8eb;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -517,8 +481,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
   line-height: 1.6;
   cursor: pointer;
 }
@@ -528,9 +492,9 @@
   height: 13px;
 }
 .reference-letter-columns {
-  border: 1px solid #e0e3d6;
+  border: 1px solid #e5e8eb;
   border-radius: 4px;
-  background: #fbfaf4;
+  background: #f6f8fb;
   padding: 27px 30px;
 }
 .reference-letter-columns.with-translation {
@@ -552,12 +516,12 @@
   margin-top: 19px;
 }
 .reference-letter-english {
-  border-left: 1px solid #e4e7da;
+  border-left: 1px solid #e5e8eb;
   padding-left: 28px;
-  color: #69736a;
+  color: #626b73;
 }
 .reference-letter-english .reference-kicker {
-  font-size: 8px;
+  font-size: 12px;
 }
 .reference-letter-english p {
   font-size: 12px;
@@ -565,8 +529,8 @@
   margin-top: 15px;
 }
 .reference-letter-note {
-  font-size: 9px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
   margin-top: 11px;
   line-height: 1.85;
 }
@@ -575,11 +539,11 @@
   align-items: center;
   gap: 13px;
   color: var(--reference-color);
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 19px;
 }
 .reference-sources {
-  border-top: 1px solid var(--line, #dee1d5);
+  border-top: 1px solid var(--line, #e5e8eb);
   margin-top: 37px;
   padding-top: 27px;
   scroll-margin-top: 30px;
@@ -590,7 +554,7 @@
   gap: 11px;
 }
 .reference-sources > div svg {
-  color: #8d9e7c;
+  color: #626b73;
 }
 .reference-sources h2 {
   font-family: var(--serif, Georgia, serif);
@@ -598,8 +562,8 @@
   line-height: 1.3;
 }
 .reference-sources > p {
-  font-size: 11px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
   margin-top: 10px;
 }
 .reference-sources ol {
@@ -607,15 +571,15 @@
   margin: 20px 0 0;
 }
 .reference-sources li {
-  font-size: 11px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
   padding-left: 3px;
   margin-top: 13px;
   line-height: 1.8;
 }
 .reference-sources li::marker {
-  color: #a4b095;
-  font-size: 9px;
+  color: #626b73;
+  font-size: 12px;
 }
 .reference-sources li a {
   text-decoration: underline;
@@ -627,14 +591,14 @@
 }
 .reference-sources li > span {
   display: block;
-  font-size: 9px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
   margin-top: 2px;
 }
 .reference-continue {
   padding-top: 28px;
   margin-top: 32px;
-  border-top: 1px solid var(--line, #dee1d5);
+  border-top: 1px solid var(--line, #e5e8eb);
 }
 .reference-continue h2 {
   font-family: var(--serif, Georgia, serif);
@@ -652,7 +616,7 @@
   align-items: center;
   gap: 14px;
   padding: 19px;
-  border: 1px solid #dfe4d4;
+  border: 1px solid #e5e8eb;
   border-radius: 4px;
   font-family: var(--serif, Georgia, serif);
   font-size: 23px;
@@ -664,9 +628,9 @@
 .reference-continue-links small {
   display: block;
   font-family: var(--sans, Arial, sans-serif);
-  font-size: 8px;
-  letter-spacing: 0.6px;
-  color: #69736a;
+  font-size: 12px;
+  letter-spacing: 0;
+  color: #626b73;
   margin-bottom: 8px;
 }
 .reference-continue-links > a > span > span {
@@ -683,31 +647,32 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  border-top: 1px solid var(--line, #dee1d5);
+  border-top: 1px solid var(--line, #e5e8eb);
   margin-top: 38px;
   padding-top: 22px;
-  font-size: 9px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
+  background: white;
 }
 .reference-entry-footer a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
-  color: #69736a;
+  font-size: 12px;
+  color: #626b73;
 }
 .reference-not-found {
   padding: 50px 0 100px;
   max-width: 700px;
 }
 .reference-not-found h1 {
-  font-size: 65px;
+  font-size: 44px;
   margin: 20px 0;
   line-height: 1.1;
 }
 .reference-not-found > p {
   font-size: 15px;
-  color: #69736a;
+  color: #626b73;
   max-width: 520px;
 }
 .reference-recovery-links {
@@ -721,19 +686,19 @@
   align-items: center;
   gap: 12px;
   padding: 13px 15px;
-  border: 1px solid #dce3d1;
+  border: 1px solid #e5e8eb;
   border-radius: 4px;
   font-size: 12px;
 }
 .reference-recovery-links a > span {
   font-family: "Songti SC", serif;
   font-size: 21px;
-  color: #a9775f;
+  color: #626b73;
 }
 
 @media (max-width: 1200px) {
   .reference-layout {
-    padding: 30px 38px 55px;
+    padding: 28px var(--page-gutter) 56px;
     grid-template-columns: 205px minmax(0, 1fr);
     gap: 38px;
   }
@@ -741,7 +706,7 @@
     padding-right: 10px;
   }
   .reference-title-row h1 {
-    font-size: 59px;
+    font-size: 36px;
   }
   .reference-native-title {
     font-size: 28px;
@@ -763,13 +728,13 @@
     padding-left: 15px;
   }
   .reference-contents nav a {
-    font-size: 9px;
+    font-size: 12px;
   }
   .reference-facts {
     padding-left: 15px;
   }
   .reference-facts dd {
-    font-size: 10px;
+    font-size: 12px;
   }
   .reference-section-heading h2 {
     font-size: 30px;
@@ -784,7 +749,7 @@
 
 @media (max-width: 1000px) {
   .reference-layout {
-    padding: 28px 25px 50px;
+    padding: 28px var(--page-gutter) 56px;
     grid-template-columns: 185px minmax(0, 1fr);
     gap: 29px;
   }
@@ -800,8 +765,8 @@
     margin: 0 0 30px;
     grid-row: 1;
     padding: 20px 0;
-    border-top: 1px solid #e1e6d8;
-    border-bottom: 1px solid #e1e6d8;
+    border-top: 1px solid #e5e8eb;
+    border-bottom: 1px solid #e5e8eb;
   }
   .reference-contents {
     border-left: 0;
@@ -815,7 +780,7 @@
     border: 0;
     padding: 0 0 0 20px;
     margin: 0;
-    border-left: 1px solid #e1e6d8;
+    border-left: 1px solid #e5e8eb;
   }
   .reference-facts > div + div {
     margin-top: 11px;
@@ -828,7 +793,7 @@
     gap: 10px 17px;
   }
   .reference-title-row h1 {
-    font-size: 55px;
+    font-size: 36px;
   }
   .reference-native-title {
     font-size: 26px;
@@ -859,7 +824,7 @@
     font-size: 22px;
   }
   .reference-child-card p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .reference-letter-columns.with-translation {
     grid-template-columns: 1fr;
@@ -867,7 +832,7 @@
   }
   .reference-letter-english {
     border-left: 0;
-    border-top: 1px solid #e4e7da;
+    border-top: 1px solid #e5e8eb;
     padding: 22px 0 0;
   }
   .reference-map-frame {
@@ -878,7 +843,7 @@
 @media (max-width: 720px) {
   .reference-layout {
     display: block;
-    padding: 18px 22px 42px;
+    padding: 28px var(--page-gutter) 56px;
   }
   .reference-mobile-tree {
     display: block;
@@ -890,11 +855,11 @@
     gap: 10px;
     width: 100%;
     padding: 13px 14px;
-    border: 1px solid #dce3d0;
+    border: 1px solid #e5e8eb;
     border-radius: 4px;
-    color: #6d825e;
-    background: #f0f2e8;
-    font-size: 11px;
+    color: #626b73;
+    background: #f6f8fb;
+    font-size: 12px;
     text-align: left;
   }
   .reference-mobile-tree button svg:last-child {
@@ -906,9 +871,9 @@
     max-height: none;
     padding: 0 15px 25px;
     margin-bottom: 26px;
-    border: 1px solid #dfe5d4;
+    border: 1px solid #e5e8eb;
     border-radius: 4px;
-    background: #f5f6ee;
+    background: #fff;
   }
   .reference-sidebar.is-open {
     display: block;
@@ -946,32 +911,20 @@
     padding-left: 32px !important;
   }
   .reference-sidebar-foot {
-    font-size: 9px;
+    font-size: 12px;
   }
   .reference-sidebar-foot p {
-    font-size: 11px;
+    font-size: 12px;
   }
   .reference-sidebar-foot > a {
-    font-size: 10px;
-  }
-  .reference-breadcrumbs {
-    padding-bottom: 25px;
-    gap: 6px;
-    font-size: 9px;
-  }
-  .reference-entry-meta .reference-kicker {
-    font-size: 8px;
-    letter-spacing: 1.2px;
-  }
-  .reference-entry-meta > span:last-child {
-    font-size: 9px;
+    font-size: 12px;
   }
   .reference-title-row {
     margin: 18px 0 17px;
     gap: 8px 17px;
   }
   .reference-title-row h1 {
-    font-size: 53px;
+    font-size: 36px;
     letter-spacing: -1.5px;
     overflow-wrap: anywhere;
   }
@@ -983,7 +936,7 @@
     line-height: 1.9;
   }
   .reference-geography {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 16px;
   }
   .reference-entry-header {
@@ -997,20 +950,20 @@
     aspect-ratio: 1.55;
   }
   .reference-hero-photo figcaption {
-    font-size: 8px;
+    font-size: 12px;
   }
   .reference-entry-rail {
     margin-bottom: 25px;
     gap: 17px;
   }
   .reference-contents nav a {
-    font-size: 10px;
+    font-size: 12px;
   }
   .reference-facts dt {
-    font-size: 8px;
+    font-size: 12px;
   }
   .reference-facts dd {
-    font-size: 10px;
+    font-size: 12px;
   }
   .reference-prose section {
     padding-bottom: 27px;
@@ -1026,10 +979,10 @@
     font-size: 31px;
   }
   .reference-section-heading > span {
-    font-size: 10px;
+    font-size: 12px;
   }
   .reference-kicker {
-    font-size: 8px;
+    font-size: 12px;
   }
   .reference-child-grid {
     grid-template-columns: 1fr;
@@ -1049,11 +1002,11 @@
     font-size: 22px;
   }
   .reference-child-footer {
-    font-size: 10px;
+    font-size: 12px;
     padding-top: 20px;
   }
   .reference-curation-note {
-    font-size: 10px;
+    font-size: 12px;
   }
   .reference-map-frame {
     height: 390px;
@@ -1065,13 +1018,13 @@
     font-size: 19px;
   }
   .reference-translation-toggle {
-    font-size: 11px;
+    font-size: 12px;
   }
   .reference-letter-note {
-    font-size: 10px;
+    font-size: 12px;
   }
   .reference-inline-link {
-    font-size: 11px;
+    font-size: 12px;
   }
   .reference-sources {
     margin-top: 30px;
@@ -1080,7 +1033,7 @@
     font-size: 12px;
   }
   .reference-sources li > span {
-    font-size: 10px;
+    font-size: 12px;
     overflow-wrap: anywhere;
   }
   .reference-continue h2 {
@@ -1098,7 +1051,7 @@
     padding-top: 15px;
   }
   .reference-not-found h1 {
-    font-size: 51px;
+    font-size: 36px;
   }
   .reference-not-found > p {
     font-size: 14px;

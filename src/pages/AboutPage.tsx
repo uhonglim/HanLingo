@@ -1,15 +1,9 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
 export default function AboutPage() {
   const [sourcesOpen, setSourcesOpen] = useState(true);
   return (
     <div className="about-page">
-      <div className="page-breadcrumb">
-        <Link to="/">Home</Link>
-        <span>/</span>
-        <span>About</span>
-      </div>
       <header className="page-intro">
         <h1>About HanLingo</h1>
       </header>

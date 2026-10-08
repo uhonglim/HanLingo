@@ -1,216 +1,200 @@
-import { useState } from "react";
-import type { CSSProperties } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { Fragment } from "react";
+import { ArrowLeftRight, ArrowRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
-import { languages, letters } from "../data/languages";
+import { letters } from "../data/languages";
+import type { Letter } from "../data/languages";
+import "./ReadingRoom.css";
+
+const names: Record<Letter["id"], string> = {
+  mandarin: "Standard Mandarin",
+  min: "Xiamen Southern Min",
+  yue: "Guangfu Cantonese",
+  hakka: "Meixian Hakka",
+  wu: "Shanghai Wu",
+  formal: "Formal written Chinese",
+};
+
+// Exact excerpts from the supplied texts, not dictionary or pronunciation claims.
+const expressions: {
+  meaning: string;
+  values: Record<Letter["id"], string>;
+}[] = [
+  {
+    meaning: "Addressing mother",
+    values: { mandarin: "媽", min: "阿母", yue: "阿媽", hakka: "阿姆", wu: "姆媽", formal: "親愛的媽媽" },
+  },
+  {
+    meaning: "First-person pronoun",
+    values: { mandarin: "我", min: "我", yue: "我", hakka: "𠊎", wu: "我", formal: "我" },
+  },
+  {
+    meaning: "The market",
+    values: { mandarin: "市場", min: "菜市仔", yue: "街市", hakka: "市場", wu: "菜場", formal: "市場" },
+  },
+  {
+    meaning: "Going home",
+    values: { mandarin: "回家", min: "轉去厝", yue: "返屋企", hakka: "轉屋下", wu: "回屋裏", formal: "回家" },
+  },
+];
 
 export default function ReadingRoom() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const validId = (id: string | null, fallback: string) =>
-    letters.some((item) => item.id === id) ? id! : fallback;
-  const leftLetter = validId(searchParams.get("left"), "min");
-  const rightLetter = validId(searchParams.get("right"), "yue");
-  const setLeftLetter = (id: string) =>
-    setSearchParams({ left: id, right: rightLetter }, { replace: true });
-  const setRightLetter = (id: string) =>
-    setSearchParams({ left: leftLetter, right: id }, { replace: true });
-  const [fullLetter, setFullLetter] = useState(true);
-  const [translation, setTranslation] = useState(false);
-  function renderLetter(id: string, side: "left" | "right") {
-    const letter = letters.find((item) => item.id === id)!;
-    const relatedLanguage = languages.find((item) => item.id === id);
-    const isFormal = id === "formal";
-    const paragraphs = fullLetter
-      ? letter.paragraphs
-      : letter.paragraphs.slice(0, 1);
-    return (
-      <article
-        className="letter-sheet"
-        style={
-          {
-            "--letter-color": relatedLanguage?.color ?? "#66756c",
-          } as CSSProperties
-        }
-      >
-        <div className="letter-select-row">
-          <span className="letter-dot" />
-          <div className="select-wrap">
-            <label className="sr-only" htmlFor={`${side}-letter`}>
-              {side === "left" ? "First" : "Second"} letter variety
-            </label>
-            <select
-              id={`${side}-letter`}
-              value={id}
-              onChange={(event) =>
-                side === "left"
-                  ? setLeftLetter(event.target.value)
-                  : setRightLetter(event.target.value)
-              }
-            >
-              {letters.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.label}
-                </option>
-              ))}
-            </select>
-            <ChevronDown size={16} aria-hidden="true" />
-          </div>
-          <span className="letter-native" lang="zh-Hant">
-            {letter.nativeName}
-          </span>
-        </div>
-        <div className="letter-place">
-          <span>{isFormal ? "Written reference" : "Spoken reference"}</span>
-          {letter.place}
-        </div>
-        <div className="letter-body" lang="zh-Hant">
-          <p className="salutation">{letter.salutation}</p>
-          {paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-          {fullLetter && <p className="letter-closing">{letter.closing}</p>}
-        </div>
-        {translation && (
-          <div className="translation">
-            <span>English meaning</span>
-            <p>Mom,</p>
-            <p>
-              I’ve been here for a week. I’m eating and sleeping well, so don’t
-              worry.
-            </p>
-            {fullLetter && (
-              <>
-                <p>
-                  Yesterday, I went to the market with a friend. I saw the cakes
-                  you love and bought a box to bring home for you.
-                </p>
-                <p>
-                  It’s been a little cold lately. Remember to wear something
-                  warmer when you go out. If I have time next month, I’ll come
-                  home, sit with you, and have a good, long chat.
-                </p>
-                <p>Your son, who misses you</p>
-              </>
-            )}
-          </div>
-        )}
-        <div className="letter-footnote">
-          {isFormal
-            ? "A shared written register, not a sixth spoken group."
-            : "Contributor sample · awaiting local-speaker review"}
-        </div>
-      </article>
-    );
+  const [params, setParams] = useSearchParams();
+  const showEnglish = params.get("english") === "1";
+  const left = letters.find((letter) => letter.id === params.get("left")) ?? letters.find((letter) => letter.id === "min")!;
+  const right = letters.find((letter) => letter.id === params.get("right")) ?? letters.find((letter) => letter.id === "yue")!;
+  const selected = [left, right];
+
+  function selectLetter(side: "left" | "right", id: string) {
+    const next = new URLSearchParams(params);
+    next.set("left", side === "left" ? id : left.id);
+    next.set("right", side === "right" ? id : right.id);
+    setParams(next, { replace: true });
+  }
+
+  function swapLetters() {
+    const next = new URLSearchParams(params);
+    next.set("left", right.id);
+    next.set("right", left.id);
+    setParams(next, { replace: true });
+  }
+
+  function setShowEnglish(visible: boolean) {
+    const next = new URLSearchParams(params);
+    if (visible) next.set("english", "1");
+    else next.delete("english");
+    setParams(next);
   }
 
   return (
-    <div className="reading-room">
-      <div className="page-breadcrumb">
-        <Link to="/">Home</Link>
-        <span>/</span>
-        <span>Letter comparison</span>
-      </div>
-      <section
-        className="comparison-section"
-        id="compare"
-        aria-labelledby="compare-title"
-      >
-        <div className="section-heading">
-          <div>
-            <h1 id="compare-title">Letter comparison</h1>
-          </div>
+    <div className="rr-page">
+      <header className="rr-heading">
+        <h1>Compare</h1>
+      </header>
+
+      <div className="rr-controls">
+        <div className="rr-selectors">
+          {selected.map((letter, index) => {
+            const side = index === 0 ? "left" : "right";
+            return (
+              <label key={side} htmlFor={`rr-${side}`}>
+                <span>{index === 0 ? "First text" : "Second text"}</span>
+                <select id={`rr-${side}`} value={letter.id} onChange={(event) => selectLetter(side, event.target.value)}>
+                  {letters.map((option) => <option key={option.id} value={option.id}>{names[option.id]}</option>)}
+                </select>
+              </label>
+            );
+          })}
         </div>
-        <div className="comparison-toolbar">
-          <label className="translation-toggle">
-            <input
-              type="checkbox"
-              checked={translation}
-              onChange={(event) => setTranslation(event.target.checked)}
-            />
-            <span className="toggle-track" />
-            <span>English meaning</span>
+        <div className="rr-tools">
+          <label className="rr-english-toggle">
+            <input type="checkbox" checked={showEnglish} onChange={(event) => setShowEnglish(event.target.checked)} />
+            <span>Show English meaning</span>
           </label>
-        </div>
-        <div className="letters-grid">
-          {renderLetter(leftLetter, "left")}
-          {renderLetter(rightLetter, "right")}
-        </div>
-        <div className="comparison-bottom">
-          <button
-            className="text-link"
-            onClick={() => setFullLetter(!fullLetter)}
-            aria-expanded={fullLetter}
-          >
-            {fullLetter ? "Show opening only" : "Show full letter"}
-            <ChevronDown size={16} className={fullLetter ? "rotate" : ""} />
+          <button type="button" className="rr-swap" onClick={swapLetters} disabled={left.id === right.id}>
+            <ArrowLeftRight size={16} aria-hidden="true" /> Swap texts
           </button>
         </div>
-        <div className="written-note">
-          <div>
-            <h3>Modern Standard Written Chinese</h3>
-            <p>
-              Modern Standard Written Chinese provides a formal written
-              reference. It is closely tied to Mandarin, but it does not stand
-              for the everyday speech of every Sinitic community.
-            </p>
-          </div>
-        </div>
+      </div>
+
+      <div className="rr-letter-frame">
+        <table className="rr-passages">
+          <caption className="sr-only">{names[left.id]} and {names[right.id]}, aligned by paragraph</caption>
+          <thead>
+            <tr>
+              {selected.map((letter, index) => (
+                <th key={index} scope="col" id={`rr-column-${index}`}>
+                  <span>{names[letter.id]}</span>
+                  <span className="rr-reference-type">{letter.id === "formal" ? "Written register" : "Contributor sample"}</span>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="rr-greeting-row">
+              {selected.map((letter, index) => (
+                <td key={index} headers={`rr-column-${index}`}>
+                  <span className="rr-mobile-name">{names[letter.id]}</span>
+                  <p className="rr-han" lang="zh-Hant">{letter.salutation}</p>
+                </td>
+              ))}
+            </tr>
+            {left.paragraphs.map((_, paragraphIndex) => (
+              <Fragment key={paragraphIndex}>
+                <tr className="rr-paragraph-row">
+                  {selected.map((letter, index) => (
+                    <td key={index} headers={`rr-column-${index}`}>
+                      <span className="rr-mobile-name">{names[letter.id]}</span>
+                      <p className="rr-han" lang="zh-Hant">{letter.paragraphs[paragraphIndex]}</p>
+                    </td>
+                  ))}
+                </tr>
+                {showEnglish && (
+                  <tr className="rr-english-row">
+                    <td colSpan={2}>
+                      <span>English meaning</span>
+                      {left.english[paragraphIndex] === right.english[paragraphIndex] ? (
+                        <p>{left.english[paragraphIndex]}</p>
+                      ) : (
+                        <div className="rr-different-meanings">
+                          {selected.map((letter, index) => <p key={index}><b>{names[letter.id]}:</b> {letter.english[paragraphIndex]}</p>)}
+                        </div>
+                      )}
+                    </td>
+                  </tr>
+                )}
+              </Fragment>
+            ))}
+            <tr className="rr-closing-row">
+              {selected.map((letter, index) => (
+                <td key={index} headers={`rr-column-${index}`}>
+                  <span className="rr-mobile-name">{names[letter.id]}</span>
+                  <p className="rr-han" lang="zh-Hant">{letter.closing}</p>
+                </td>
+              ))}
+            </tr>
+            <tr className="rr-review-row">
+              {selected.map((letter, index) => (
+                <td key={index} headers={`rr-column-${index}`}>
+                  <span className="rr-mobile-name">{names[letter.id]}</span>
+                  <p>{letter.note}</p>
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="rr-provenance">
+        Chinese texts are preserved as supplied. English summarizes their shared meaning;
+        it is not a word-for-word gloss. No pronunciation is inferred from these samples.
+      </p>
+
+      <section className="rr-expressions" aria-labelledby="rr-expressions-title">
+        <h2 id="rr-expressions-title">Expressions in these letters</h2>
+        <table className="rr-expression-table">
+          <thead><tr><th scope="col">Context</th><th scope="col">{names[left.id]}</th><th scope="col">{names[right.id]}</th></tr></thead>
+          <tbody>
+            {expressions.map((expression) => (
+              <tr key={expression.meaning}>
+                <th scope="row">{expression.meaning}</th>
+                {selected.map((letter, index) => (
+                  <td key={index}>
+                    <span className="rr-mobile-name">{names[letter.id]}</span>
+                    <span className="rr-han" lang="zh-Hant">{expression.values[letter.id]}</span>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p className="rr-expression-note">These excerpts show wording in context. A shared character does not guarantee a shared pronunciation.</p>
       </section>
 
-      <section className="comparison-words">
-        <h2>Expressions in the letters</h2>
-        <p>
-          Compare written expressions in the supplied letters. These are
-          contextual examples, not pronunciation guides or a complete
-          dictionary.
-        </p>
-        <div className="word-comparison-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>In this letter</th>
-                <th>Mandarin</th>
-                <th>Min · Xiamen</th>
-                <th>Yue · Guangfu</th>
-                <th>Hakka · Meixian</th>
-                <th>Wu · Shanghai</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Addressing mother</th>
-                <td lang="zh-Hant">媽</td>
-                <td lang="zh-Hant">阿母</td>
-                <td lang="zh-Hant">阿媽</td>
-                <td lang="zh-Hant">阿姆</td>
-                <td lang="zh-Hant">姆媽</td>
-              </tr>
-              <tr>
-                <th>The first-person pronoun</th>
-                <td lang="zh-Hant">我</td>
-                <td lang="zh-Hant">我</td>
-                <td lang="zh-Hant">我</td>
-                <td lang="zh-Hant">𠊎</td>
-                <td lang="zh-Hant">我</td>
-              </tr>
-              <tr>
-                <th>Going home</th>
-                <td lang="zh-Hant">回家</td>
-                <td lang="zh-Hant">轉去厝</td>
-                <td lang="zh-Hant">返屋企</td>
-                <td lang="zh-Hant">轉屋下</td>
-                <td lang="zh-Hant">回屋裏</td>
-              </tr>
-            </tbody>
-          </table>
+      <section className="rr-written-reference" aria-labelledby="rr-written-title">
+        <div>
+          <h2 id="rr-written-title">Modern Standard Written Chinese</h2>
+          <p>The formal letter is a shared written register closely associated with Mandarin. It is not a sixth spoken group or a transcript of every community’s everyday speech.</p>
         </div>
-        <p className="reading-note">
-          A shared character does not guarantee a shared pronunciation. Full
-          phonetic transcriptions will be added only with local-speaker review.
-        </p>
-        <Link to="/written-chinese" className="text-link">
-          Written Chinese reference <ArrowRight size={16} />
-        </Link>
+        <Link to="/written-chinese">Read the reference <ArrowRight size={17} aria-hidden="true" /></Link>
       </section>
     </div>
   );

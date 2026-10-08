@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import AtlasMap from "../components/AtlasMap";
 import { languages, mapPoints } from "../data/languages";
@@ -45,8 +44,13 @@ function Credit({ photo }: { photo: CreditedPhoto }) {
 }
 
 export default function MinPage() {
-  const [branch, setBranch] = useState("all");
-  const [selectedId, setSelectedId] = useState("xiamen");
+  const [params, setParams] = useSearchParams();
+  const requestedBranch = params.get("branch");
+  const branch = min.subgroups.some((item) => item.id === requestedBranch) ? requestedBranch! : "all";
+  const selectedId = params.get("place") ?? "xiamen";
+  function setSelectedId(id: string) {
+    setParams((current) => { current.set("place", id); return current; }, { replace: true });
+  }
   const visiblePlaces =
     branch === "all"
       ? places
@@ -58,12 +62,13 @@ export default function MinPage() {
   )!;
 
   function changeBranch(id: string) {
-    setBranch(id);
     const nextPlaces =
       id === "all" ? places : places.filter((point) => point.subgroupId === id);
-    if (!nextPlaces.some((point) => point.id === selectedId)) {
-      setSelectedId(nextPlaces[0].id);
-    }
+    setParams((current) => {
+      if (id === "all") current.delete("branch"); else current.set("branch", id);
+      if (!nextPlaces.some((point) => point.id === selectedId)) current.set("place", nextPlaces[0].id);
+      return current;
+    }, { replace: true });
   }
 
   return (

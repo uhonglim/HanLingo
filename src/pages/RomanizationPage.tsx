@@ -37,11 +37,6 @@ export default function RomanizationPage() {
   const sound = sounds[soundIndex];
   return (
     <div className="romanization-page">
-      <div className="page-breadcrumb">
-        <Link to="/">Home</Link>
-        <span>/</span>
-        <span>Romanization</span>
-      </div>
       <section
         className="approach-section"
         id="approach"

@@ -1,9 +1,8 @@
-import { Suspense, lazy, useLayoutEffect, useState } from "react";
-import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { Suspense, lazy, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Link, NavLink, Navigate, Route, Routes, useLocation, useNavigationType } from "react-router-dom";
 import { ArrowRight, Github, Menu, X } from "lucide-react";
-import HomePage from "./pages/HomePage";
 import MinPage from "./pages/MinPage";
-import { resolveReferenceRoute } from "./routing";
+import { getBreadcrumbs } from "./navigation";
 import "./pages/pages.css";
 const LibraryPage = lazy(() => import("./pages/LibraryPage"));
 const ReferencePage = lazy(() => import("./components/ReferencePages"));
@@ -13,34 +12,41 @@ const WrittenChinesePage = lazy(() => import("./pages/WrittenChinesePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const XiamenPage = lazy(() => import("./pages/XiamenPage"));
 
+const scrollPositions = new Map<string, number>();
 function PageLocation() {
-  const { pathname, hash } = useLocation();
+  const location = useLocation();
+  const navigationType = useNavigationType();
+  const previous = useRef(location);
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    const remember = () => scrollPositions.set(location.key, window.scrollY);
+    window.addEventListener('scroll', remember, { passive: true });
+    return () => window.removeEventListener('scroll', remember);
+  }, [location.key]);
   useLayoutEffect(() => {
-    const names: Record<string, string> = {
-      "/": "Min",
-      "/languages": "The language library",
-      "/compare": "A letter home",
-      "/romanization": "Romanization workbench",
-      "/written-chinese": "Modern Standard Written Chinese",
-      "/about": "About the atlas",
-    };
-    const parts = pathname.split("/").filter(Boolean);
-    const reference =
-      parts[0] === "languages" && parts.length <= 4
-        ? resolveReferenceRoute({
-            languageId: parts[1],
-            subgroupId: parts[2],
-            varietyId: parts[3],
-          })
-        : null;
-    document.title = `HanLingo — ${names[pathname] ?? reference?.point?.name ?? reference?.subgroup?.name ?? reference?.language.name ?? "Page not found"}`;
-    if (!hash) window.scrollTo({ top: 0, behavior: "instant" });
-    else {
-      const target = document.getElementById(hash.slice(1));
-      target?.scrollIntoView();
-    }
-  }, [pathname, hash]);
+    const crumbs = getBreadcrumbs(location.pathname);
+    document.title = `${crumbs.at(-1)?.label ?? 'HanLingo'} · HanLingo`;
+    const old = previous.current;
+    previous.current = location;
+    if (old.pathname === location.pathname && old.search !== location.search) return;
+    const target = navigationType === 'POP' ? scrollPositions.get(location.key) ?? 0 : 0;
+    const frame = requestAnimationFrame(() => {
+      if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+      else window.scrollTo({ top: target, behavior: 'instant' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [location, navigationType]);
   return null;
+}
+function LocationTrail() {
+  const { pathname } = useLocation();
+  const crumbs = getBreadcrumbs(pathname);
+  if (crumbs.length < 2) return null;
+  return <nav className="location-trail" aria-label="Breadcrumb"><ol>
+    {crumbs.map((crumb, index) => <li key={crumb.path}>
+      {index === crumbs.length - 1 ? <span aria-current="page">{crumb.label}</span> : <Link to={crumb.path}>{crumb.label}</Link>}
+    </li>)}
+  </ol></nav>;
 }
 function NotFound() {
   return (
@@ -57,7 +63,6 @@ export default function App() {
   const closeMenu = () => setMenuOpen(false);
   return (
     <>
-      <PageLocation />
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -79,15 +84,13 @@ export default function App() {
         <nav
           className={menuOpen ? "main-nav is-open" : "main-nav"}
           aria-label="Main navigation"
+          id="main-navigation"
         >
-          <NavLink to="/languages/min" onClick={closeMenu}>
-            Min
-          </NavLink>
-          <NavLink to="/languages" end onClick={closeMenu}>
+          <NavLink to="/languages" onClick={closeMenu}>
             Languages
           </NavLink>
           <NavLink to="/compare" onClick={closeMenu}>
-            Reading room
+            Compare
           </NavLink>
           <NavLink to="/romanization" onClick={closeMenu}>
             Romanization
@@ -106,6 +109,7 @@ export default function App() {
         <button
           className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-controls="main-navigation"
           aria-expanded={menuOpen}
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
         >
@@ -113,6 +117,7 @@ export default function App() {
         </button>
       </header>
       <main id="main" tabIndex={-1}>
+        <LocationTrail />
         <Suspense
           fallback={
             <div className="chapter-loading" role="status">
@@ -120,8 +125,9 @@ export default function App() {
             </div>
           }
         >
+          <PageLocation />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Navigate to="/languages/min" replace />} />
             <Route path="/languages" element={<LibraryPage />} />
             <Route path="/languages/min" element={<MinPage />} />
             <Route

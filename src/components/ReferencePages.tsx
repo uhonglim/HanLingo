@@ -92,7 +92,7 @@ function TaxonomySidebar({
             return (
               <li
                 key={language.id}
-                style={{ "--reference-color": language.color } as CSSProperties}
+                style={{ "--reference-color": "#2155f5" } as CSSProperties}
               >
                 <div
                   className={`reference-tree-group${selected ? " is-current-group" : ""}`}
@@ -270,7 +270,7 @@ export default function ReferencePage() {
     <div
       className="reference-layout"
       style={
-        { "--reference-color": group?.color ?? "#cf593c" } as CSSProperties
+        { "--reference-color": "#2155f5" } as CSSProperties
       }
     >
       <div className="reference-mobile-tree">
@@ -310,35 +310,6 @@ export default function ReferencePage() {
         </div>
       ) : (
         <article className="reference-entry">
-          <nav className="reference-breadcrumbs" aria-label="Breadcrumb">
-            <Link to="/">HanLingo</Link>
-            <ChevronRight size={10} />
-            <Link to="/languages">Sinitic</Link>
-            <ChevronRight size={10} />
-            {subgroup ? (
-              <Link to={groupPath(group.id)}>{group.name}</Link>
-            ) : (
-              <span aria-current="page">{group.name}</span>
-            )}
-            {subgroup && (
-              <>
-                <ChevronRight size={10} />
-                {point ? (
-                  <Link to={subgroupPath(group.id, subgroup.id)}>
-                    {subgroup.name}
-                  </Link>
-                ) : (
-                  <span aria-current="page">{subgroup.name}</span>
-                )}
-              </>
-            )}
-            {point && (
-              <>
-                <ChevronRight size={10} />
-                <span aria-current="page">{point.name}</span>
-              </>
-            )}
-          </nav>
           <header
             className={`reference-entry-header${photo ? " has-photo" : ""}`}
           >

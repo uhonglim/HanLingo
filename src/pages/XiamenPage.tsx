@@ -108,6 +108,9 @@ function WordCard({
   return (
     <article className="xm-word-card">
       <div className="xm-word-top">
+        <div className="xm-word-han" lang="zh-Hant">
+          {word.han}
+        </div>
         <button
           className={saved ? "xm-save is-saved" : "xm-save"}
           onClick={onSave}
@@ -116,9 +119,6 @@ function WordCard({
         >
           <Bookmark size={18} fill={saved ? "currentColor" : "none"} />
         </button>
-      </div>
-      <div className="xm-word-han" lang="zh-Hant">
-        {word.han}
       </div>
       <h3>{word.english}</h3>
       <div className="xm-word-pronunciation">
@@ -135,12 +135,13 @@ function WordCard({
           Usage & source <ChevronRight size={12} />
         </summary>
         <p>{word.note}</p>
-        <p>
-          <b>{word.readingMode}.</b>{" "}
-          <a href={word.sourceUrl} target="_blank" rel="noreferrer">
-            {word.sourceLabel}
-          </a>
-        </p>
+        <dl className="xm-word-source">
+          <div><dt>Reading</dt><dd>{word.readingMode}</dd></div>
+          <div><dt>Source transcription</dt><dd>{word.sourceReading}</dd></div>
+        </dl>
+        <a href={word.sourceUrl} target="_blank" rel="noreferrer">
+          {word.sourceLabel}
+        </a>
       </details>
     </article>
   );
@@ -312,13 +313,13 @@ function SceneWord({
         }
       >
         <b lang="zh-Hant">{word.han}</b>
-        <span>{roman(word)}</span>
-        <small className="xm-ipa">{word.ipa}</small>
-        {revealed ? (
-          <strong>{word.english}</strong>
-        ) : (
-          <span className="xm-reveal-hint">Show meaning</span>
-        )}
+        <span className="xm-reveal-reading">
+          <span>{roman(word)}</span>
+          <small className="xm-ipa">{word.ipa}</small>
+        </span>
+        <span className={`xm-reveal-meaning${revealed ? "" : " xm-reveal-hint"}`}>
+          {revealed ? word.english : "Show meaning"}
+        </span>
       </button>
       <button
         className={`xm-save xm-scene-save${saved ? " is-saved" : ""}`}
@@ -535,11 +536,6 @@ function Vocabulary({
           </button>
         </div>
       )}
-      <div className="xm-bottom-link">
-        <Link to={`${BASE}/practice`}>
-          Practice <ArrowRight size={16} />
-        </Link>
-      </div>
     </div>
   );
 }
@@ -628,8 +624,8 @@ function Culture() {
         ))}
       </div>
       <div className="xm-photo-grid">
-        {filtered.map((photo, i) => (
-          <figure key={photo.id} className={i % 5 === 0 ? "xm-photo-wide" : ""}>
+        {filtered.map((photo) => (
+          <figure key={photo.id}>
             <button
               onClick={() => setParams({ photo: photo.id })}
               aria-label={`Open photograph: ${photo.caption}`}
@@ -662,13 +658,6 @@ function Culture() {
             </div>
           </figure>
         ))}
-      </div>
-      <div className="xm-culture-note">
-        <h2>Gulangyu architecture</h2>
-        <p>{seaNote.text}</p>
-        <a href={seaNote.source} target="_blank" rel="noreferrer">
-          UNESCO · Kulangsu <ArrowRight size={15} />
-        </a>
       </div>
       {selected && (
         <PhotoDialog
@@ -728,8 +717,8 @@ function Sounds() {
           <h2>Tones</h2>
           <p>
             The numbers describe pitch height. <b>24</b> starts low and rises;{" "}
-            <b>53</b> falls from high to middle. Short checked tones end in a
-            stop.
+            <b>53</b> falls from high to middle. Checked syllables end in a stop
+            and carry short tones.
           </p>
           <div className="xm-tone-buttons" aria-label="Choose a tone">
             {["44", "24", "53", "21", "22", "32", "4"].map((t) => (
@@ -1012,17 +1001,21 @@ export default function XiamenPage() {
   const saved = useCollection("hanlingo:xiamen:saved:v1");
   const learned = useCollection("hanlingo:xiamen:learned:v1");
   const { pathname } = useLocation();
+  const chapterTabs = useRef<HTMLElement>(null);
   useEffect(() => {
-    const suffix = pathname.split("/").at(-1);
-    document.title = `HanLingo — Xiamen${suffix === "xiamen" ? "" : ` · ${suffix}`}`;
+    const active = chapterTabs.current?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (active && chapterTabs.current) {
+      const tabs = chapterTabs.current;
+      const left = active.offsetLeft;
+      if (left < tabs.scrollLeft) tabs.scrollLeft = left;
+      else if (left + active.offsetWidth > tabs.scrollLeft + tabs.clientWidth)
+        tabs.scrollLeft = left + active.offsetWidth - tabs.clientWidth;
+    }
   }, [pathname]);
   return (
     <div className="xm-page">
       <div className="xm-chapter-nav">
-        <Link to="/languages/min" className="xm-min-link">
-          <ArrowLeft size={15} /> Min
-        </Link>
-        <nav aria-label="Xiamen learning sections">
+        <nav ref={chapterTabs} aria-label="Xiamen learning sections">
           {[
             ["", "Overview"],
             ["/words", "Words"],
@@ -1041,7 +1034,8 @@ export default function XiamenPage() {
           aria-label={`${saved.items.length} saved words`}
         >
           <Bookmark size={16} />
-          {saved.items.length}
+          <span className="xm-collection-label">Saved</span>
+          <span className="xm-collection-count">{saved.items.length}</span>
         </Link>
       </div>
       {(saved.storageError || learned.storageError) && (

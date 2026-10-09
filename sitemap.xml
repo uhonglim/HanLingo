@@ -110,6 +110,8 @@
   <url><loc>https://hanlingo.pairup.world/hakka/hailu/xintian/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/hailu/taiwan-hailu/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/tingzhou/changting-reference/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/overseas-foochow/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/hainan-min/overseas-hainanese/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/huairou/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/miyun/</loc></url>
@@ -410,6 +412,14 @@
   <url><loc>https://hanlingo.pairup.world/hakka/hailu/taiwan-hailu/yuli-hakka/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/hailu/taiwan-hailu/ruisui-hakka/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/hailu/taiwan-hailu/fenglin-hakka/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/manila-hokkien/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/medan-hokkien/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/bangkok-teochew/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/singapore-teochew/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/overseas-foochow/sibu-foochow/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/overseas-foochow/sitiawan-foochow/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/hainan-min/overseas-hainanese/singapore-hainanese/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/haikou/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/sounds/</loc></url>
@@ -468,6 +478,12 @@
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/zhangzhou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/zhangzhou/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/zhangzhou/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/tongan/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/tongan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/tongan/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/longhai/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/longhai/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/longhai/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/taipak/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/taipak/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/taipak/sounds/</loc></url>
@@ -489,8 +505,10 @@
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/singapore/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/singapore/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/singapore/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/george-town/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/george-town/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/george-town/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/george-town/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/chaozhou/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/chaozhou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/chaozhou/sounds/</loc></url>
@@ -503,22 +521,60 @@
   <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/fuzhou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/fuzhou/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/fuzhou/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/fuqing/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/fuqing/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/fuqing/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/gutian/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/gutian/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/houguan/gutian/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/fuan/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/fuan/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/fuan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/fuan/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/ningde/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/ningde/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/ningde/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/zherong/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/zherong/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/funing/zherong/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/northern-min/jianou-cluster/jianou/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/northern-min/jianou-cluster/jianou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/northern-min/jianou-cluster/jianou/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/northern-min/jianou-cluster/jianou/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianou-cluster/songxi/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianou-cluster/songxi/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianou-cluster/songxi/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianyang-cluster/jianyang-min/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianyang-cluster/jianyang-min/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianyang-cluster/jianyang-min/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianyang-cluster/wuyishan/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianyang-cluster/wuyishan/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianyang-cluster/wuyishan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/northern-min/jianyang-cluster/wuyishan/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/puxian/putian-cluster/putian/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/puxian/putian-cluster/putian/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/puxian/putian-cluster/putian/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/puxian/putian-cluster/putian/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/puxian/xianyou-cluster/xianyou/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/puxian/xianyou-cluster/xianyou/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/puxian/xianyou-cluster/xianyou/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/puxian/xianyou-cluster/xianyou/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/central-min/yongan-cluster/yongan/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/central-min/yongan-cluster/yongan/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/central-min/yongan-cluster/yongan/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/central-min/yongan-cluster/yongan/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/central-min/shaxian-cluster/shaxian/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/central-min/shaxian-cluster/shaxian/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/central-min/shaxian-cluster/shaxian/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/central-min/shaxian-cluster/shaxian/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/wenchang/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/wenchang/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/wenchang/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/wenchang/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/leizhou-min/leizhou-peninsula/leizhou/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/leizhou-min/leizhou-peninsula/leizhou/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/leizhou-min/leizhou-peninsula/leizhou/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/leizhou-min/leizhou-peninsula/leizhou/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/yue/guangfu/pearl-delta/guangzhou/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/yue/guangfu/pearl-delta/guangzhou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/yue/guangfu/pearl-delta/guangzhou/sounds/</loc></url>
@@ -602,4 +658,21 @@
   <url><loc>https://hanlingo.pairup.world/hakka/hailu/haifeng-lufeng/lufeng/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/tingzhou/changting-reference/changting/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/tingzhou/changting-reference/changting/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/manila-hokkien/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/manila-hokkien/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/medan-hokkien/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/tsuan-chiang/medan-hokkien/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/bangkok-teochew/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/bangkok-teochew/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/bangkok-teochew/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/bangkok-teochew/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/singapore-teochew/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/southern-min/teo-swa/singapore-teochew/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/overseas-foochow/sibu-foochow/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/overseas-foochow/sibu-foochow/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/eastern-min/overseas-foochow/sitiawan-foochow/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/hainan-min/overseas-hainanese/singapore-hainanese/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/hainan-min/overseas-hainanese/singapore-hainanese/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/haikou/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/haikou/sounds/</loc></url>
 </urlset>

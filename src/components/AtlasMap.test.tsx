@@ -7,6 +7,7 @@ import { mapPoints } from "../data/languages";
 import { placeLabel } from "../data/language-names";
 import world from "../data/east-asia-50m.json";
 import AtlasMap from "./AtlasMap";
+import { createAtlasMarkerIndex, atlasMarkerFocus } from "./AtlasMap.layout";
 import { atlasPointPosition, atlasViewport, fitAtlasPoints, revealAtlasPoint, zoomAtlasView } from "./atlasGeometry";
 
 const minPoints = mapPoints.filter((point) => point.groupId === "min");
@@ -68,7 +69,7 @@ describe("Min atlas spanning Fujian, Taiwan, and Southeast Asia", () => {
     });
   });
 
-  it("renders every city as a visible keyboard-selectable marker with current place labels", () => {
+  it("renders every city with current labels and one keyboard entry point", () => {
     for (const selected of cities) {
       const html = renderToStaticMarkup(<AtlasMap compact points={minPoints} selectedGroup="min" selectedPoint={selected.id} onSelectPoint={() => {}} />);
       const markers = [...html.matchAll(/<g\b[^>]*role="button"[^>]*>/g)].map(match => match[0]);
@@ -76,7 +77,7 @@ describe("Min atlas spanning Fujian, Taiwan, and Southeast Asia", () => {
       for (const point of cities) {
         const marker = markers.find(tag => tag.includes(`aria-label="Explore ${placeLabel(point)},`));
         expect(marker, point.id).toBeDefined();
-        expect(marker).toMatch(/tabindex="0"/i);
+        expect(marker).toContain(`tabindex="${point.id === selected.id ? 0 : -1}"`);
         expect(marker).toContain(`aria-pressed="${point.id === selected.id}"`);
       }
       const amoy = minPoints.find(point => point.id === "xiamen")!;
@@ -118,5 +119,59 @@ describe('map keyboard access and dense localities', () => {
     expect(atlasPointPosition(coords[0], zoomed)[0]).toBeCloseTo(anchor[0]);
     const [x, y] = atlasPointPosition(coords[1], zoomed);
     expect(Math.hypot(x - anchor[0], y - anchor[1])).toBeGreaterThan(15);
+  });
+});
+
+
+describe("large atlas interaction", () => {
+  const points = Array.from({ length: 1000 }, (_, index) => ({
+    id: `reference-${index}`, name: `Reference ${index}`, nativeName: "地點", groupId: "min",
+    coordinates: [100 + index % 40 * .8, 18 + Math.floor(index / 40) * .8] as [number, number],
+  }));
+
+  it("keeps every fitted place available with a single marker Tab stop", () => {
+    const html = renderToStaticMarkup(<AtlasMap points={points} selectedGroup="min" selectedPoint="reference-500" onSelectPoint={() => {}} />);
+    const markers = [...html.matchAll(/<g\b[^>]*role="button"[^>]*>/g)].map(match => match[0]);
+    expect(markers).toHaveLength(1000);
+    expect(markers.filter(marker => marker.includes('tabindex="0"'))).toHaveLength(1);
+    expect(markers.find(marker => marker.includes('tabindex="0"'))).toContain('Reference 500');
+    expect(html).toContain("Tab leaves the markers.");
+  });
+
+  it("can visit all visible markers, wrap in both directions and escape with Tab", () => {
+    const ids = points.map(point => point.id);
+    const visited = new Set<string>();
+    let current = ids[0];
+    for (let i = 0; i < ids.length; i++) {
+      visited.add(current);
+      current = atlasMarkerFocus(ids, current, "ArrowRight")!;
+    }
+    expect(visited.size).toBe(1000);
+    expect(current).toBe(ids[0]);
+    expect(atlasMarkerFocus(ids, current, "ArrowLeft")).toBe(ids.at(-1));
+    expect(atlasMarkerFocus(ids, current, "End")).toBe(ids.at(-1));
+    expect(atlasMarkerFocus(ids, ids[500], "Home")).toBe(ids[0]);
+    expect(atlasMarkerFocus(ids, current, "Tab")).toBeNull();
+    expect(atlasMarkerFocus([], current, "ArrowDown")).toBeNull();
+    expect(atlasMarkerFocus(ids, "outside-viewport", "ArrowDown")).toBe(ids[0]);
+  });
+
+  it("spatial label collision checks preserve exact edge and own-marker exclusions", () => {
+    const markers = Array.from({ length: 1000 }, (_, index) => ({
+      id: `point-${index}`, x: index % 40 * 20 - 90, y: Math.floor(index / 40) * 20 - 80,
+    }));
+    const collides = createAtlasMarkerIndex(markers);
+    for (let index = 0; index < 150; index++) {
+      const box = { x: index * 7 - 120, y: index * 3 - 100, width: 36, height: 19 };
+      const ownId = `point-${index}`;
+      const expected = markers.some(point => point.id !== ownId &&
+        point.x >= box.x - 5 && point.x <= box.x + box.width + 5 &&
+        point.y >= box.y - 5 && point.y <= box.y + box.height + 5);
+      expect(collides(box, ownId)).toBe(expected);
+    }
+    const isolated = createAtlasMarkerIndex([{ id: "own", x: -32, y: 32 }]);
+    expect(isolated({ x: -27, y: 37, width: 10, height: 10 }, "other")).toBe(true);
+    expect(isolated({ x: -27, y: 37, width: 10, height: 10 }, "own")).toBe(false);
+    expect(isolated({ x: -26.9, y: 37, width: 10, height: 10 }, "other")).toBe(false);
   });
 });

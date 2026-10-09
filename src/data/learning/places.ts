@@ -12,4 +12,5 @@ export const learningPlaces: MapPoint[] = atlasLocalities.map(place => ({
   coordinates: place.coordinates,
   hierarchy: ['Han', place.groupId, place.branchId, place.clusterId, place.name],
 }));
-export const findLearningPlace = (id: string) => learningPlaces.find(place => place.id === id);
+const learningPlaceById = new Map(learningPlaces.map(place => [place.id, place]));
+export const findLearningPlace = (id: string) => learningPlaceById.get(id);

@@ -14,14 +14,20 @@ import './MapPage.css';
 
 
 const clusterAliases: Record<string, string> = { 'tsuan-chiang': 'Hokkien Hoklo Quanzhang 泉漳', 'teo-swa': 'Teochew Chaoshan 潮汕' };
+const searchText = new WeakMap<AtlasLocality, string>();
 export function filterMapLocalities(points: AtlasLocality[], query: string, group = '', branch = '') {
   const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
   return points.filter(point => {
     if (group && point.groupId !== group) return false;
     if (branch && point.branchId !== branch) return false;
-    const text = normalize([point.id, point.name, point.nativeName, point.groupId, point.branchId, point.clusterId,
+    if (!terms.length) return true;
+    let text = searchText.get(point);
+    if (text === undefined) {
+      text = normalize([point.id, point.name, point.nativeName, point.groupId, point.branchId, point.clusterId,
       atlasClusters.find(cluster => cluster.groupId === point.groupId && cluster.branchId === point.branchId && cluster.id === point.clusterId)?.name,
       communityAliases[point.id], ...placeNameAliases(point), ...(point.aliases ?? []), clusterAliases[point.clusterId]].filter(Boolean).join(' '));
+      searchText.set(point, text);
+    }
     return terms.every(term => text.includes(term));
   });
 }
@@ -66,7 +72,7 @@ export default function MapPage() {
     </div>
     <div className="map-page-frame"><AtlasMap compact={Boolean(group || branch)} points={points} selectedGroup={group || 'all'} selectedPoint={selected?.id ?? null} highlightedPointIds={query.trim() ? results.map(point => point.id) : undefined} onSelectPoint={select}/></div>
     <div className="map-page-selection" aria-live="polite">
-      {selected ? <><div className="map-page-selection-heading"><h2><Link to={atlasLocalityPath(selected)}><PlaceName point={selected} showHan /><ArrowUpRight size={20} aria-hidden="true"/></Link></h2><p>{languages.find(item => item.id === selected.groupId)?.name} / {selectedBranch?.name} / {cluster?.name}</p></div><div className="map-page-selection-copy"><p>{selected.scope}</p><span className="map-page-sections">{lesson ? availableSections(lesson).map(section => learningSections[section]).join(' · ') : 'Locality & sources'}</span></div></> : <p>Select a point to explore its local language and sources.</p>}
+      {selected ? <><div className="map-page-selection-heading"><h2><Link to={atlasLocalityPath(selected)}><PlaceName point={selected} showHan /><ArrowUpRight size={20} aria-hidden="true"/></Link></h2><p>{languages.find(item => item.id === selected.groupId)?.name} / {selectedBranch?.name} / {cluster?.name}</p></div><div className="map-page-selection-copy"><p>{selected.scope}</p><span className="map-page-sections">{(lesson && availableSections(lesson).map(section => learningSections[section]).join(' · ')) || 'Locality & sources'}</span></div></> : <p>Select a point to explore its local language and sources.</p>}
     </div>
   </section>;
 }

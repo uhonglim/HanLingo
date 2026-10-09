@@ -1,11 +1,12 @@
 import { atlasOverseasMinClusters, atlasOverseasMinLocalities } from './min-overseas';
+import { atlasCountyClusters, atlasCountyLocalities } from './county-expansion';
 import { placeLabel, placeNameAliases } from "../language-names";
 import { atlasMandarinClusters, atlasMandarinLocalities } from './mandarin';
 import { atlasMinYueClusters, atlasMinYueLocalities } from './min-yue';
 import { atlasWuHakkaClusters, atlasWuHakkaLocalities } from './wu-hakka';
 export type { AtlasCluster, AtlasLocality, AtlasSource } from './types';
-export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters];
-export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities].map((point) => ({
+export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters];
+export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities].map((point) => ({
   ...point,
   name: placeLabel(point),
   aliases: [...new Set([...placeNameAliases(point), ...(point.aliases ?? [])])],
@@ -13,7 +14,9 @@ export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocali
 export const atlasBranches = [...new Map(atlasClusters.map(c => [`${c.groupId}/${c.branchId}`, {
   id: c.branchId, groupId: c.groupId, name: c.branchName, nativeName: c.branchNativeName,
 }])).values()];
-export const findAtlasLocality = (id: string) => atlasLocalities.find(p => p.id === id);
-export const findAtlasCluster = (groupId: string, branchId: string, id: string) => atlasClusters.find(c => c.groupId === groupId && c.branchId === branchId && c.id === id);
+const localityById = new Map(atlasLocalities.map(place => [place.id, place]));
+const clusterByPath = new Map(atlasClusters.map(cluster => [`${cluster.groupId}/${cluster.branchId}/${cluster.id}`, cluster]));
+export const findAtlasLocality = (id: string) => localityById.get(id);
+export const findAtlasCluster = (groupId: string, branchId: string, id: string) => clusterByPath.get(`${groupId}/${branchId}/${id}`);
 export const atlasClusterPath = (c: {groupId: string; branchId: string; id: string}) => `/${c.groupId}/${c.branchId}/${c.id}`;
 export const atlasLocalityPath = (p: {groupId: string; branchId: string; clusterId: string; id: string}) => `/${p.groupId}/${p.branchId}/${p.clusterId}/${p.id}`;

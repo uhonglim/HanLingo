@@ -269,7 +269,7 @@ export default function LanguageTree() {
             id={childrenId}
             hidden={!expanded}
           >
-            {renderNodes(node.children!)}
+            {expanded ? renderNodes(node.children!) : null}
           </ul>
         )}
       </li>

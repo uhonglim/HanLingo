@@ -82,12 +82,13 @@ function CatalogueLocalityPage({ place }: { place: AtlasLocality }) {
   return <article className="atlas-catalogue atlas-locality"><header><h1><PlaceName point={place} showHan/></h1>
     {sections.length > 0 && <p className="atlas-learning-counts">{[data.words.length ? `${data.words.length} source readings` : '', getLocalGallery(place.id).length ? `${getLocalGallery(place.id).length} photographs` : ''].filter(Boolean).join(' · ')}</p>}
   </header>
+    {place.referenceType === 'county' && <p className="atlas-scope">County-level distribution reference; local accents may differ within this area.</p>}
     {getLocalGallery(place.id).length > 0 && <LocalityScenes point={point}/>}
     {data.words.length > 0 && <p className="atlas-reading-scope">{[...new Set(data.words.map(w => w.registerLabel).filter(Boolean))].join(' · ')}</p>}
     <BranchLearning groupId={place.groupId} subgroupId={place.branchId} point={point}/>
     {!data.words.length && <p className="atlas-scope">Local IPA readings are still being documented.</p>}
     <ContextMap places={neighbours} selected={place}/>
-    <section><h2>Sources</h2><Source source={place.source}/>{place.source.url !== cluster.source.url && <Source source={cluster.source}/>}
+    <section><h2>Sources</h2><Source source={place.source}/>{place.source.url !== cluster.source.url && <Source source={cluster.source}/>}{place.geographySource && <Source source={place.geographySource}/>}
       <details className="atlas-reference-notes"><summary>Place and naming notes</summary><p>{place.scope}</p><p>{cluster.description}</p><PlaceNameNotes point={point}/></details>
     </section>
   </article>;

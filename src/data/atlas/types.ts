@@ -17,4 +17,7 @@ export type AtlasLocality = {
   scope: string;
   source: AtlasSource;
   aliases?: string[];
+  /** County-distribution entries are not a town or speaker survey. */
+  referenceType?: 'county';
+  geographySource?: AtlasSource;
 };

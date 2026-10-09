@@ -20,12 +20,12 @@ function sourceUrl(value: string) {
   expect(new URL(value).protocol).toBe("https:");
 }
 describe("learning coverage across every branch", () => {
-  it("covers every published branch with scoped sound, culture, and learning sources", () => {
+  it("preserves developed branches with scoped sound, culture, and learning sources", () => {
     const known = new Set(atlasBranches.map(branch => `${branch.groupId}/${branch.id}`));
     for (const pack of branchLearning) expect(known.has(pack.branchId), pack.branchId).toBe(true);
     // Catalogue-only branches stay measurable; a learning pack requires evidence.
-    for (const branch of atlasBranches.filter(branch => branch.groupId === "min")) {
-      expect(branchLearning.some(pack => pack.branchId === `${branch.groupId}/${branch.id}`)).toBe(true);
+    for (const branchId of ["southern-min", "eastern-min", "northern-min", "central-min", "puxian", "hainan-min", "leizhou-min"]) {
+      expect(branchLearning.some(pack => pack.branchId === `min/${branchId}`)).toBe(true);
     }
     for (const pack of branchLearning) {
       expect(pack.soundNotes.length, pack.branchId).toBeGreaterThan(0);

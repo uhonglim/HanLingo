@@ -79,7 +79,8 @@ describe("persistent language tree", () => {
   });
 
   it("gives every locality and chapter the same tree depth as its URL", () => {
-    const html = renderTree("/");
+    const html = atlasClusters.map(cluster => renderTree(atlasClusterPath(cluster))).join("")
+      + mapPoints.map(point => renderTree(varietyPath(point))).join("");
     const listStack: boolean[] = [];
     const depths = new Map<string, number>();
     for (const match of html.matchAll(/<(\/?)(ul|a)\b([^>]*)>/g)) {
@@ -111,10 +112,10 @@ describe("persistent language tree", () => {
     expect(languages).toHaveLength(5);
     for (const group of languages)
       expect(destinations.has(groupPath(group.id)), group.name).toBe(true);
-    expect(destinations.has(subgroupPath("min", "southern-min"))).toBe(true);
-    expect(destinations.has(xiamenPath)).toBe(true);
+    expect(destinations.has(subgroupPath("min", "southern-min"))).toBe(false);
+    expect(destinations.has(xiamenPath)).toBe(false);
     for (const lesson of lessons)
-      expect(destinations.has(`${xiamenPath}/${lesson}`), lesson).toBe(true);
+      expect(destinations.has(`${xiamenPath}/${lesson}`), lesson).toBe(false);
     expect(html).not.toContain("Han / Sinitic");
     expect(destinations.has("/")).toBe(false);
     for (const group of languages) {
@@ -167,7 +168,7 @@ describe("persistent language tree", () => {
   });
 
   it("links every sourced locality through its actual four parents", () => {
-    const destinations = new Set(links(renderTree("/")).map(link => link.attrs.href));
+    const destinations = new Set(atlasClusters.flatMap(cluster => links(renderTree(atlasClusterPath(cluster))).map(link => link.attrs.href)));
     for (const group of languages) expect(destinations.has(groupPath(group.id))).toBe(true);
     for (const branch of atlasBranches)
       expect(destinations.has(subgroupPath(branch.groupId, branch.id))).toBe(true);

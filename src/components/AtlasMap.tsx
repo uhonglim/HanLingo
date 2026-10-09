@@ -7,6 +7,7 @@ import {
   useState,
 } from "react";
 import type { KeyboardEvent } from "react";
+import { createAtlasMarkerIndex, atlasMarkerFocus } from "./AtlasMap.layout";
 import { attachAtlasGestures } from "./atlasGestures";
 import { geoGraticule, geoPath } from "d3-geo";
 import { merge, mesh } from "topojson-client";
@@ -127,11 +128,11 @@ export default function AtlasMap({
 }: AtlasMapProps) {
   // The parent may build a fresh points array on every render. A geometry key
   // keeps a reader's pan/zoom intact until the actual mapped places change.
-  const geometryKey = JSON.stringify(
+  const geometryKey = useMemo(() => JSON.stringify(
     points
       .map((point) => [point.id, ...point.coordinates] as const)
       .sort((a, b) => a[0].localeCompare(b[0])),
-  );
+  ), [points]);
   const maxZoom = 24;
   const highlighted = useMemo(() => highlightedPointIds ? new Set(highlightedPointIds) : null, [highlightedPointIds]);
   const initialView = useMemo<View>(() => {
@@ -142,6 +143,8 @@ export default function AtlasMap({
   }, [compact, geometryKey]);
   const minZoom = Math.min(0.8, initialView.zoom * 0.8);
   const svgRef = useRef<SVGSVGElement>(null);
+  const markerRefs = useRef(new Map<string, SVGGElement>());
+  const [focusedPointId, setFocusedPointId] = useState<string | null>(selectedPoint);
   const drag = useRef<{ view: View; labels: Map<string, Label> } | null>(null);
   const labelsRef = useRef(new Map<string, Label>());
   const [viewport, setViewport] = useState(() => atlasViewport(WIDTH, HEIGHT));
@@ -211,12 +214,13 @@ export default function AtlasMap({
   useLayoutEffect(() => {
     if (selectedLongitude === undefined || selectedLatitude === undefined)
       return;
+    setFocusedPointId(selectedPoint);
     setView((previous) =>
       revealAtlasPoint(previous, [selectedLongitude, selectedLatitude]),
     );
   }, [selectedPoint, selectedGroup, selectedLongitude, selectedLatitude]);
 
-  const projectedPoints = useMemo(
+  const basePoints = useMemo(
     () =>
       points.map((point) => {
         const position = projection(point.coordinates) ?? [0, 0];
@@ -225,12 +229,30 @@ export default function AtlasMap({
           displayName: placeLabel(point),
           readingName: placeReadingName(point),
           fullName: placeDisplayName(point),
-          x: position[0] * view.zoom + view.x,
-          y: position[1] * view.zoom + view.y,
+          x: position[0],
+          y: position[1],
         };
       }),
-    [points, view],
+    [points],
   );
+  const projectedPoints = useMemo(() => basePoints.map(point => ({
+    ...point, x: point.x * view.zoom + view.x, y: point.y * view.zoom + view.y,
+  })), [basePoints, view]);
+  // Preserve a small edge margin for markers entering during a gesture.
+  const visiblePoints = useMemo(() => projectedPoints.filter(point =>
+    point.x >= viewport.x && point.x <= viewport.x + viewport.width &&
+    point.y >= viewport.y && point.y <= viewport.y + viewport.height,
+  ), [projectedPoints, viewport]);
+  const visibleIds = useMemo(() => visiblePoints.map(point => point.id), [visiblePoints]);
+  const markerTabStop = focusedPointId && visibleIds.includes(focusedPointId) ? focusedPointId
+    : selectedPoint && visibleIds.includes(selectedPoint) ? selectedPoint : visibleIds[0];
+  const renderedPoints = useMemo(() => {
+    const margin = 24 / layout.scale;
+    return projectedPoints.filter(point => point.id === focusedPointId || (
+      point.x >= viewport.x - margin && point.x <= viewport.x + viewport.width + margin &&
+      point.y >= viewport.y - margin && point.y <= viewport.y + viewport.height + margin
+    ));
+  }, [projectedPoints, viewport, layout.scale, focusedPointId]);
 
   const labels = useMemo(() => {
     // Keep the same label anchors throughout a gesture instead of hopping
@@ -248,9 +270,10 @@ export default function AtlasMap({
         ]),
       );
     }
+    const markerOverlaps = createAtlasMarkerIndex(projectedPoints);
     const placed: Label[] = [...layout.reserved];
     const result = new Map<string, Label>();
-    const sorted = [...projectedPoints].sort((a, b) => {
+    const sorted = [...visiblePoints].sort((a, b) => {
       const priority = (p: MapPoint) =>
         p.id === selectedPoint ? 4 : highlighted?.has(p.id) ? 3 : p.groupId === selectedGroup ? 2 : 1;
       return priority(b) - priority(a);
@@ -295,14 +318,7 @@ export default function AtlasMap({
           candidate.x >= viewport.x + 8 &&
           candidate.x + width < viewport.x + viewport.width - 8 &&
           !placed.some((other) => overlaps(candidate, other)) &&
-          !projectedPoints.some(
-            (other) =>
-              other.id !== point.id &&
-              other.x >= candidate.x - 5 &&
-              other.x <= candidate.x + width + 5 &&
-              other.y >= candidate.y - 5 &&
-              other.y <= candidate.y + height + 5,
-          ),
+          !markerOverlaps(candidate, point.id),
       );
       if (label || active) {
         const chosen =
@@ -319,6 +335,7 @@ export default function AtlasMap({
     return result;
   }, [
     projectedPoints,
+    visiblePoints,
     highlighted,
     points.length,
     initialView.zoom,
@@ -389,6 +406,13 @@ export default function AtlasMap({
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       onSelectPoint(pointId);
+      return;
+    }
+    const nextId = atlasMarkerFocus(visibleIds, pointId, event.key);
+    if (nextId) {
+      event.preventDefault();
+      setFocusedPointId(nextId);
+      markerRefs.current.get(nextId)?.focus({ preventScroll: true });
     }
   }
 
@@ -399,7 +423,7 @@ export default function AtlasMap({
       <span className="atlas-map-hint">
         Drag to move · Scroll or pinch to zoom
       </span>
-      <span className="sr-only" id={instructionsId}>Scroll or pinch to zoom, drag to move, or double-click to zoom in. Use arrow keys to pan, plus and minus to zoom, and Home to reset. Select a locality with Enter or Space.</span>
+      <span className="sr-only" id={instructionsId}>Scroll or pinch to zoom, drag to move, or double-click to zoom in. Use arrow keys to pan, plus and minus to zoom, and Home to reset. On a locality marker, use arrow keys to move between places, Home or End to reach the first or last visible place, and Enter or Space to select. Tab leaves the markers.</span>
       <svg
         ref={svgRef}
         className="atlas-map-canvas"
@@ -458,7 +482,7 @@ export default function AtlasMap({
             })}
           </g>
           <g aria-hidden="true" className="atlas-place-halos">
-            {projectedPoints
+            {renderedPoints
               .filter((point) => point.groupId === selectedGroup)
               .map((point) => (
                 <circle
@@ -471,7 +495,7 @@ export default function AtlasMap({
                 />
               ))}
           </g>
-          {[...projectedPoints]
+          {[...renderedPoints]
             .sort(
               (a, b) =>
                 Number(a.id === selectedPoint) * 2 +
@@ -491,14 +515,12 @@ export default function AtlasMap({
                   className={`atlas-place${active ? " atlas-place--active" : ""}${inGroup ? " atlas-place--in-group" : ""}${dimmed ? " atlas-place--dimmed" : ""}`}
                   style={{ color }}
                   role="button"
-                  tabIndex={
-                    point.x > viewport.x &&
-                    point.x < viewport.x + viewport.width &&
-                    point.y > viewport.y &&
-                    point.y < viewport.y + viewport.height
-                      ? 0
-                      : -1
-                  }
+                  tabIndex={point.id === markerTabStop ? 0 : -1}
+                  ref={(node) => {
+                    if (node) markerRefs.current.set(point.id, node);
+                    else markerRefs.current.delete(point.id);
+                  }}
+                  onFocus={() => setFocusedPointId(point.id)}
                   aria-label={`Explore ${point.displayName}, ${point.readingName && point.readingName !== point.displayName ? `${point.readingName}, ` : ''}${point.nativeName}`}
                   aria-pressed={active}
                   onClick={() => onSelectPoint(point.id)}

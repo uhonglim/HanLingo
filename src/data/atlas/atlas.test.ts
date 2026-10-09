@@ -8,8 +8,8 @@ import { availableSections } from '../learning';
 import { publicPaths, staticPaths } from '../../static-paths';
 
 describe('four-level sourced locality atlas',()=>{
-  it('contains at least200 distinct locality references, each attached to a real sourced cluster',()=>{
-    expect(atlasLocalities.length).toBeGreaterThanOrEqual(200);
+  it('contains at least 1000 distinct locality references, each attached to a real sourced cluster',()=>{
+    expect(atlasLocalities.length).toBeGreaterThanOrEqual(1000);
     expect(new Set(atlasLocalities.map(p=>p.id)).size).toBe(atlasLocalities.length);
     expect(new Set(atlasClusters.map(c=>atlasClusterPath(c))).size).toBe(atlasClusters.length);
     for(const place of atlasLocalities){

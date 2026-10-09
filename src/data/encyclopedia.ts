@@ -1,7 +1,8 @@
 import { expandedBranchArticles, expandedLocalityArticles } from "./expansion";
 import { minSources } from "./min-sources";
 import { chaoshanArticles } from "./chaoshan";
-import { languages } from "./languages";
+import { languages, mapPoints } from "./languages";
+import { placeLabel } from "./language-names";
 import type { LanguageId } from "./languages";
 
 export type ArticleSection = { heading: string; paragraphs: string[] };
@@ -665,7 +666,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
       ["Selected clusters", "Tsuân-Tsiang · Teo Swa"],
       [
         "Taiwan references",
-        "Taipak · Tâi-lâm · Ko-hiông · Gî-lân · Lo̍k-káng · Sam-kiap",
+        "Taipei · Tâi-lâm · Ko-hiông · Gî-lân · Lo̍k-káng · Sam-kiap",
       ],
     ],
     [
@@ -942,7 +943,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
 };
 
-export const varietyArticles: Record<string, EncyclopediaEntry> = {
+const sourceVarietyArticles: Record<string, EncyclopediaEntry> = {
   ...expandedLocalityArticles,
   ...chaoshanArticles,
   "beijing-city": article(
@@ -1106,8 +1107,8 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [S.minIntro, S.zhangzhou],
   ),
   taipak: article(
-    "Taipak",
-    "Hokkien in Taipak, represented by a Quanzhou-leaning reading in the Ministry of Education dictionary.",
+    "Taipei",
+    "Hokkien in Taipei, represented by a Quanzhou-leaning reading in the Ministry of Education dictionary.",
     [
       section(
         "A Taipei reference reading",
@@ -1115,7 +1116,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "The wider Taiwan context",
-        "Taiwan’s Ministry of Education uses Taiwanese Taigi in its English-language materials. Its account of regional variation describes a continuum shaped by migration from Quanzhou and Zhangzhou, with different local mixtures of features. Taipak is one locality within that wider picture. The dictionary’s literary and colloquial readings add another distinction: pronunciation depends on the word and its use as well as the place associated with a reading.",
+        "Taiwan’s Ministry of Education uses Taiwanese Taigi in its English-language materials. Its account of regional variation describes a continuum shaped by migration from Quanzhou and Zhangzhou, with different local mixtures of features. Taipei is one locality within that wider picture. The dictionary’s literary and colloquial readings add another distinction: pronunciation depends on the word and its use as well as the place associated with a reading.",
       ),
       section(
         "Resources for reading and learning",
@@ -1127,7 +1128,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ["Branch", "Southern Min"],
       ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
-      ["Map anchor", "Taipak — city reference, not a dialect boundary"],
+      ["Map anchor", "Taipei — city reference, not a dialect boundary"],
       ["Dictionary reference", "Taipei, Quanzhou-leaning reading"],
     ],
     [
@@ -1733,3 +1734,11 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [S.lishui, S.lishuiChange],
   ),
 };
+
+// Article titles resolve through the same locality registry as the tree and map.
+export const varietyArticles: Record<string, EncyclopediaEntry> = Object.fromEntries(
+  Object.entries(sourceVarietyArticles).map(([id, entry]) => {
+    const point = mapPoints.find(point => point.id === id);
+    return [id, point ? { ...entry, title: placeLabel(point) } : entry];
+  }),
+);

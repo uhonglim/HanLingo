@@ -1,8 +1,9 @@
+import targetNames from "../src/data/translation-targets.json" with { type: "json" };
 import evidence from "./evidence.json" with { type: "json" };
 
 export const targets = {
   amoy: {
-    name: "Amoy / Xiamen Southern Min",
+    name: "Amoy",
     scope:
       "Contemporary Xiamen urban Southern Min. Do not substitute Taiwan, Penang or general Hokkien forms without flagging uncertainty.",
   },
@@ -17,7 +18,7 @@ export const targets = {
       "Contemporary urban Shanghai Wu. Do not substitute Suzhou, Wenzhou or generic Wu.",
   },
   guangzhou: {
-    name: "Guangzhou Cantonese",
+    name: "Canton",
     scope:
       "Contemporary colloquial Guangzhou Cantonese. Do not silently substitute Hong Kong-specific lexical choices.",
   },
@@ -32,6 +33,8 @@ export const targets = {
       "Natural modern Standard Written Chinese, not Classical Chinese. This is a written register, not a sixth spoken language.",
   },
 };
+// One generated naming contract is shared with the browser; stable target IDs and geographic scopes stay intact.
+for (const target of targetNames) targets[target.id].name = target.name;
 export const sourceNames = {
   auto: "Detect from the supplied text; flag ambiguity",
   en: "English",

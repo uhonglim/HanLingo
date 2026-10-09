@@ -1,4 +1,17 @@
 import type { MapPoint } from "./languages";
+import { placeReadingsMin, minLandmarkReadings } from './place-readings-min';
+import { otherPlaceReadings } from './place-readings-other';
+
+export type LocalPlaceReading = {
+  commonName?: string;
+  localName: string;
+  convention: string;
+  source: { title: string; url: string };
+  note: string;
+};
+/** Source orthographies, never guessed from Han characters or neighbouring speech. */
+export const localPlaceReadings: Record<string, LocalPlaceReading> = { ...placeReadingsMin, ...otherPlaceReadings, ...minLandmarkReadings };
+
 
 export type PlaceNameReference = {
   label: string;
@@ -17,7 +30,7 @@ const communityName = (label: string, aliases: string[], association: string): P
   source: clanDirectory,
 });
 
-/** One reader-facing label per locality ID; never infer a name from HanLingo spelling. */
+/** Common names and their provenance, separate from local reading names. */
 export const placeNameReferences: Record<string, PlaceNameReference> = {
   xiamen: communityName("Amoy", ["Xiamen", "厦门", "廈門"], "the Amoy Association"),
   quanzhou: {
@@ -26,9 +39,9 @@ export const placeNameReferences: Record<string, PlaceNameReference> = {
     source: { title: "Ministry of Education Taigi dictionary · 州, place-name examples", url: "https://sutian.moe.edu.tw/zh-hant/su/2284/" },
   },
   zhangzhou: {
-    label: "Tsiang-tsiu", aliases: ["Zhangzhou", "Chang Chow", "漳州"], kind: "source-romanization",
-    note: "Tsiang-tsiu is the Ministry of Education dictionary’s place-name example for 漳州. This is a source spelling, not generated HanLingo.",
-    source: { title: "Ministry of Education Taigi dictionary · 州, place-name examples", url: "https://sutian.moe.edu.tw/zh-hant/su/2284/" },
+    label: "Chang Chow", aliases: ["Zhangzhou", "Tsiang-tsiu", "漳州"], kind: "community",
+    note: "Chang Chow is the community spelling in the bilingual name of 新加坡漳州總會. The separate local reading follows the MOE Hokkien dictionary, not a new Zhangzhou-speaker recording.",
+    source: { title: "SFCCA · Members directory, Chang Chow General Association", url: "https://sfcca.sg/en/our-members/" },
   },
   singapore: {
     label: "Sin-ka-pho", aliases: ["Singapore", "新加坡"], kind: "source-romanization",
@@ -37,7 +50,7 @@ export const placeNameReferences: Record<string, PlaceNameReference> = {
   },
   "george-town": {
     label: "Pho Te", aliases: ["George Town", "Penang", "Pho3 Te4", "檳城", "槟城"], kind: "community",
-    note: "Timothy Tye records Pho3 Te4 for George Town. Navigation omits his tone-category digits; the locality is the city, not all of Penang.",
+    note: "Timothy Tye records Pho3 Te4 for George Town. The common label is George Town and the secondary reading preserves Pho3 Te4; the locality is the city, not all of Penang.",
     source: { title: "Timothy Tye · Place Names in Penang Hokkien", url: "https://www.penang-traveltips.com/hokkien/place-names.htm" },
   },
   guangzhou: {
@@ -69,10 +82,26 @@ export function placeNameReference(point: Pick<MapPoint, "id">) {
   return placeNameReferences[point.id];
 }
 export function placeLabel(point: Pick<MapPoint, "id" | "name">) {
-  return placeNameReferences[point.id]?.label ?? point.name;
+  return localPlaceReadings[point.id]?.commonName ?? placeNameReferences[point.id]?.label ?? point.name;
 }
 export function placeNameAliases(point: Pick<MapPoint, "id" | "name">) {
-  return [...new Set([point.name, ...(placeNameReferences[point.id]?.aliases ?? [])])];
+  const reading = localPlaceReadings[point.id];
+  return [...new Set([point.name, placeNameReferences[point.id]?.label, reading?.commonName,
+    reading?.localName, ...(placeNameReferences[point.id]?.aliases ?? [])].filter((name): name is string => Boolean(name)))];
+}
+
+export function placeReadingName(point: { id: string }) {
+  return localPlaceReadings[point.id]?.localName;
+}
+export function placeDisplayName(point: { id: string; name: string }) {
+  const common = placeLabel(point), local = placeReadingName(point);
+  return local && local !== common ? `${common} · ${local}` : common;
+}
+export function resolvePlaceNames(point: { id: string; name: string; nativeName?: string }) {
+  const reading = localPlaceReadings[point.id];
+  return { commonName: placeLabel(point), localReadingName: reading?.localName,
+    nativeName: point.nativeName, readingSystem: reading?.convention,
+    readingSource: reading?.source, aliases: placeNameAliases(point) };
 }
 
 export const quanzhangLabel = "Tsuân-Tsiang";

@@ -1,3 +1,4 @@
+import { placeDisplayName } from "../data/language-names";
 import { findLearningPlace } from "../data/learning/places";
 import { availableSections } from "../data/learning";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -137,7 +138,7 @@ describe("persistent language tree", () => {
     expect(current).toHaveLength(1);
     expect(current[0].attrs.href).toBe(path);
     expect(current[0].content).toContain("Photos");
-    for (const name of ["Min", "Southern Min", findAtlasCluster("min", "southern-min", findAtlasLocality("xiamen")!.clusterId)!.name, "Amoy"])
+    for (const name of ["Min", "Southern Min", findAtlasCluster("min", "southern-min", findAtlasLocality("xiamen")!.clusterId)!.name, placeDisplayName(xiamen)])
       expectExpanded(html, name);
 
     const targets = [...openingTags(html, "ul"), ...openingTags(html, "div")];

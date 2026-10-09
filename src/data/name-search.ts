@@ -15,6 +15,6 @@ const variants: Record<string, string> = Object.fromEntries([
 ].map(pair => [...pair]));
 
 export function normalizeNameSearch(text: string) {
-  return [...text.toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f’'–-]/g, '')]
+  return [...text.toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f’'··–-]/g, '')]
     .map(char => variants[char] ?? char).join('');
 }

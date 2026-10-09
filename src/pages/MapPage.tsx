@@ -3,11 +3,12 @@ import { useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowUpRight, Search, X } from 'lucide-react';
 import AtlasMap from '../components/AtlasMap';
+import PlaceName from '../components/PlaceName';
 import { atlasBranches, atlasClusters, atlasLocalities, atlasLocalityPath } from '../data/atlas';
 import type { AtlasLocality } from '../data/atlas';
 import { findLearningPlace } from "../data/learning/places";
 import { languages } from '../data/languages';
-import { communityAliases } from '../data/language-names';
+import { communityAliases, placeNameAliases } from '../data/language-names';
 import { availableSections, learningSections } from '../data/learning';
 import './MapPage.css';
 
@@ -20,7 +21,7 @@ export function filterMapLocalities(points: AtlasLocality[], query: string, grou
     if (branch && point.branchId !== branch) return false;
     const text = normalize([point.id, point.name, point.nativeName, point.groupId, point.branchId, point.clusterId,
       atlasClusters.find(cluster => cluster.groupId === point.groupId && cluster.branchId === point.branchId && cluster.id === point.clusterId)?.name,
-      communityAliases[point.id], ...(point.aliases ?? []), clusterAliases[point.clusterId]].filter(Boolean).join(' '));
+      communityAliases[point.id], ...placeNameAliases(point), ...(point.aliases ?? []), clusterAliases[point.clusterId]].filter(Boolean).join(' '));
     return terms.every(term => text.includes(term));
   });
 }
@@ -56,7 +57,7 @@ export default function MapPage() {
         </label>
         {query.trim() && <div className="map-page-results" id="map-search-results">
           <p role="status">{results.length ? `${results.length} ${results.length === 1 ? 'match' : 'matches'}` : 'No matching localities'}</p>
-          <ul>{results.slice(0, 20).map(point => <li key={point.id}><button type="button" onClick={() => select(point.id)}><span>{point.name} <span lang="zh">{point.nativeName}</span></span><small>{languages.find(group => group.id === point.groupId)?.name}</small></button></li>)}</ul>
+          <ul>{results.slice(0, 20).map(point => <li key={point.id}><button type="button" onClick={() => select(point.id)}><PlaceName point={point} showHan /><small>{languages.find(group => group.id === point.groupId)?.name}</small></button></li>)}</ul>
           {results.length > 20 && <p>First 20 shown. Refine your search to find a locality.</p>}
         </div>}
       </div>
@@ -65,7 +66,7 @@ export default function MapPage() {
     </div>
     <div className="map-page-frame"><AtlasMap compact={Boolean(group || branch)} points={points} selectedGroup={group || 'all'} selectedPoint={selected?.id ?? null} highlightedPointIds={query.trim() ? results.map(point => point.id) : undefined} onSelectPoint={select}/></div>
     <div className="map-page-selection" aria-live="polite">
-      {selected ? <><div className="map-page-selection-heading"><h2><Link to={atlasLocalityPath(selected)}>{selected.name} <span lang="zh">{selected.nativeName}</span><ArrowUpRight size={20} aria-hidden="true"/></Link></h2><p>{languages.find(item => item.id === selected.groupId)?.name} / {selectedBranch?.name} / {cluster?.name}</p></div><div className="map-page-selection-copy"><p>{selected.scope}</p><span className="map-page-sections">{lesson ? availableSections(lesson).map(section => learningSections[section]).join(' · ') : 'Locality & sources'}</span></div></> : <p>Select a point to explore its local language and sources.</p>}
+      {selected ? <><div className="map-page-selection-heading"><h2><Link to={atlasLocalityPath(selected)}><PlaceName point={selected} showHan /><ArrowUpRight size={20} aria-hidden="true"/></Link></h2><p>{languages.find(item => item.id === selected.groupId)?.name} / {selectedBranch?.name} / {cluster?.name}</p></div><div className="map-page-selection-copy"><p>{selected.scope}</p><span className="map-page-sections">{lesson ? availableSections(lesson).map(section => learningSections[section]).join(' · ') : 'Locality & sources'}</span></div></> : <p>Select a point to explore its local language and sources.</p>}
     </div>
   </section>;
 }

@@ -1,3 +1,4 @@
+import { placeDisplayName } from "./data/language-names";
 import { findLearningPlace } from './data/learning/places';
 import { availableSections, learningSections } from './data/learning';
 import { siteTerms } from './data/site-terms';
@@ -28,7 +29,7 @@ export function getBreadcrumbs(pathname: string): Breadcrumb[] {
   if(!localityId) return crumbs;
   const point=findAtlasLocality(localityId);
   if(!point||point.groupId!==groupId||point.branchId!==branchId||point.clusterId!==clusterId) return missing;
-  crumbs.push({label:point.name,path:atlasLocalityPath(point)});
+  crumbs.push({label:placeDisplayName(point),path:atlasLocalityPath(point)});
   if(chapter) {
     const lesson=findLearningPlace(localityId);
     if(!lesson||!availableSections(lesson).some(s=>s===chapter)) return missing;

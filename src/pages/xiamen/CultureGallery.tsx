@@ -1,3 +1,5 @@
+import PlaceName from "../../components/PlaceName";
+import { placeNameAliases } from "../../data/language-names";
 import { findAtlasLocality, atlasLocalityPath } from "../../data/atlas";
 import { Link } from "react-router-dom";
 import { xiamenPhotos } from "../../data/xiamen-photos";
@@ -25,15 +27,15 @@ type PhotoNote = {
 };
 const notes: Record<string, PhotoNote> = {
   "gulangyu-rooftops": {
-    title: "Gulangyu rooftops",
-    text: "Gulangyu’s buildings combine southern Fujian traditions with influences carried through overseas connections. UNESCO calls the island’s distinctive architectural synthesis “Amoy Deco.”",
+    title: "Kulangsu rooftops",
+    text: "Kulangsu’s buildings combine southern Fujian traditions with influences carried through overseas connections. UNESCO calls the island’s distinctive architectural synthesis “Amoy Deco.”",
     source: "https://whc.unesco.org/en/list/1541",
     sourceName: "UNESCO · Kulangsu",
     wordIds: ["sea", "boat", "water", "house"],
   },
   "shacha-noodles": {
     title: "Shacha noodles",
-    text: "Shacha noodles use a satay-style soup. Xiamen’s dining guide lists sesame, garlic, peanut oil, shrimp sauce, and chili among the seasoning ingredients.",
+    text: "Shacha noodles use a satay-style soup. Amoy’s dining guide lists sesame, garlic, peanut oil, shrimp sauce, and chili among the seasoning ingredients.",
     source: "https://www.investxiamen.org.cn/detail/169.html",
     sourceName: "Xiamen dining guide",
     wordIds: ["eat", "noodles", "water", "tasty"],
@@ -45,7 +47,7 @@ const notes: Record<string, PhotoNote> = {
   },
   "dongyu-market": {
     title: "Dongyu market",
-    text: "The photograph is from Haicang District. The word readings here follow the urban Xiamen reference.",
+    text: "The photograph is from Haicang District. The word readings here follow the urban Amoy reference.",
     wordIds: ["vegetables", "buy", "money", "person"],
   },
   "nanputuo-temple": {
@@ -57,7 +59,7 @@ const notes: Record<string, PhotoNote> = {
     wordIds: ["person", "come", "go"],
   },
   "gulangyu-lane": {
-    title: "Gulangyu lane",
+    title: "Kulangsu lane",
     text: "街 means “street”; 厝 means “house” or “home.”",
     wordIds: ["street", "house", "person"],
   },
@@ -68,11 +70,11 @@ const notes: Record<string, PhotoNote> = {
   },
   "xiamen-ferry": {
     title: "Yuanhe ferry",
-    text: "This ferry was photographed west of Gulangyu in 2012. 船 means “boat” or “ship”; 海 means “sea.”",
+    text: "This ferry was photographed west of Kulangsu in 2012. 船 means “boat” or “ship”; 海 means “sea.”",
     wordIds: ["boat", "sea", "water"],
   },
   "gulangyu-coast": {
-    title: "Gulangyu waterfront",
+    title: "Kulangsu waterfront",
     text: "海, “sea,” and 水, “water,” both have the falling citation tone 53 in these reference readings.",
     wordIds: ["sea", "water", "boat"],
   },
@@ -83,7 +85,7 @@ const notes: Record<string, PhotoNote> = {
   },
   "shop-counter": {
     title: "At a shop counter",
-    text: "Jars, boxes, and small packages surround a worker at a shop counter in Xiamen. The photograph does not identify the worker’s language.",
+    text: "Jars, boxes, and small packages surround a worker at a shop counter in Amoy. The photograph does not identify the worker’s language.",
     wordIds: ["person", "buy", "money"],
   },
 };
@@ -100,7 +102,7 @@ const normalize = (text: string) =>
   text
     .toLocaleLowerCase()
     .normalize("NFKD")
-    .replace(/[\u0300-\u036f’'–-]/g, "");
+    .replace(/[\u0300-\u036f’'··–-]/g, "");
 export function filterCulturePhotos(
   photos: XiamenPhoto[],
   category: GalleryCategory,
@@ -119,6 +121,8 @@ export function filterCulturePhotos(
         photo.year ?? "",
         note.title,
         note.text,
+        ...placeNameAliases({id:"xiamen",name:"Xiamen"}),
+        ...(photo.caption.includes("Kulangsu") ? [...placeNameAliases({id:"gulangyu",name:"Gulangyu"}), "鼓浪嶼 鼓浪屿"] : []),
         ...photoWords(photo).map(
           (word) =>
             `${word.han} ${word.english} ${word.ipa} ${romanizeXiamen(word.segments, word.tones)}`,
@@ -154,23 +158,25 @@ const photos: GalleryPhoto[] = xiamenPhotos.map((photo) => ({
   ...photo,
   title: photoNote(photo).title,
   category: photo.category === "Sea" ? "Landscape" : photo.category,
-  searchText: photoWords(photo)
+  searchText: [...placeNameAliases({id:"xiamen",name:"Xiamen"}), ...(photo.caption.includes("Kulangsu") ? placeNameAliases({id:"gulangyu",name:"Gulangyu"}) : []), ...photoWords(photo)
     .map(
       (word) =>
         `${word.han} ${word.english} ${word.ipa} ${romanizeXiamen(word.segments, word.tones)}`,
     )
-    .join(" "),
+    ].join(" "),
 }));
 export default function CultureGallery() {
   return (
     <PhotoGallery
       place="Amoy"
+      placeIdentity={{id:"xiamen",name:"Amoy"}}
       photos={photos}
       renderDetail={(photo) => {
         const original = xiamenPhotos.find((item) => item.id === photo.id)!;
         const note = photoNote(original);
         return (
           <>
+            {original.caption.includes("Kulangsu") && <p><PlaceName point={{id:"gulangyu",name:"Kulangsu"}}/></p>}
             <h3>Words in this scene</h3>
             <ul>
               {photoWords(original)

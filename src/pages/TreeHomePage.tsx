@@ -1,10 +1,10 @@
+import PlaceName from "../components/PlaceName";
 import { atlasBranches, atlasLocalities } from "../data/atlas";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { languages, mapPoints, type LanguageId } from "../data/languages";
 import { groupPhotos } from "../data/photography";
 import { getLocalLearning, spellingFor } from "../data/learning";
-import { placeLabel } from "../data/language-names";
 import { varietyPath } from "../routing";
 import Pronunciation from "../components/Pronunciation";
 import "./TreeHomePage.css";
@@ -50,7 +50,7 @@ export default function TreeHomePage() {
             </div>
             <p className="thp-geography">{group.feature}</p>
             <div className="thp-word">
-              <Link className="thp-locality" to={`${varietyPath(point)}/words`}>{placeLabel(point)} <ArrowUpRight size={13} aria-hidden="true" /></Link>
+              <Link className="thp-locality" to={`${varietyPath(point)}/words`}><PlaceName point={point}/> <ArrowUpRight size={13} aria-hidden="true" /></Link>
               <div className="thp-word-meaning"><span lang="zh-Hant">{word.han}</span><span>{word.english}</span></div>
               <Pronunciation ipa={word.ipa} spelling={spellingFor(word)} toneNotation={word.toneNotation} />
               <p className="thp-reading">{word.registerLabel ?? word.reading}</p>

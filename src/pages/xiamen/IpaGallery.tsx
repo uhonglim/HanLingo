@@ -1,3 +1,4 @@
+import PlaceName from "../../components/PlaceName";
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { readingLabels, siteTerms } from "../../data/site-terms";
@@ -390,7 +391,7 @@ export default function IpaGallery() {
   return (
     <div className="ipa-gallery">
       <header className="ipa-gallery-header">
-        <h1>Amoy {siteTerms.sections.sounds.toLowerCase()}</h1>
+        <h1><PlaceName point={{id:"xiamen",name:"Amoy"}}/> {siteTerms.sections.sounds.toLowerCase()}</h1>
         <p>
           {gallerySounds.length} IPA symbols in {xiamenWords.length} sourced
           words; not a complete sound inventory.

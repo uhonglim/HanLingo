@@ -17,7 +17,7 @@ import type {
   Topology,
 } from "topojson-specification";
 import world from "../data/east-asia-50m.json";
-import { placeLabel } from "../data/language-names";
+import { placeLabel, placeReadingName, placeDisplayName } from "../data/language-names";
 import {
   ATLAS_WIDTH as WIDTH,
   ATLAS_HEIGHT as HEIGHT,
@@ -223,6 +223,8 @@ export default function AtlasMap({
         return {
           ...point,
           displayName: placeLabel(point),
+          readingName: placeReadingName(point),
+          fullName: placeDisplayName(point),
           x: position[0] * view.zoom + view.x,
           y: position[1] * view.zoom + view.y,
         };
@@ -277,10 +279,10 @@ export default function AtlasMap({
       )
         continue;
       const width =
-        (Math.max(40, point.displayName.length * (active ? 7.2 : 6.4)) +
+        (Math.max(40, point.displayName.length * (active ? 7.2 : 6.4), active && point.readingName ? point.readingName.length * 6.2 : 0) +
           (active ? 19 : 0)) /
         layout.scale;
-      const height = (active ? 26 : 19) / layout.scale;
+      const height = (active ? point.readingName && point.readingName !== point.displayName ? 40 : 26 : 19) / layout.scale;
       const gap = 9 / layout.scale;
       const candidates: Label[] = [
         { x: point.x + gap, y: point.y - height / 2, width, height },
@@ -497,12 +499,12 @@ export default function AtlasMap({
                       ? 0
                       : -1
                   }
-                  aria-label={`Explore ${point.displayName}, ${point.nativeName}`}
+                  aria-label={`Explore ${point.displayName}, ${point.readingName && point.readingName !== point.displayName ? `${point.readingName}, ` : ''}${point.nativeName}`}
                   aria-pressed={active}
                   onClick={() => onSelectPoint(point.id)}
                   onKeyDown={(event) => selectWithKeyboard(event, point.id)}
                 >
-                  <title>{`${point.displayName} · ${point.nativeName}`}</title>
+                  <title>{`${point.fullName} · ${point.nativeName}`}</title>
                   <circle
                     className="atlas-place-hit"
                     cx={point.x}
@@ -550,7 +552,7 @@ export default function AtlasMap({
                       )}
                       <text
                         x={label.x + (active ? 9.5 / layout.scale : 0)}
-                        y={label.y + label.height / 2}
+                        y={label.y + label.height / 2 - (active && point.readingName && point.readingName !== point.displayName ? 7 / layout.scale : 0)}
                         style={{
                           fontSize:
                             (active || inGroup ? 12 : 10) / layout.scale,
@@ -559,6 +561,11 @@ export default function AtlasMap({
                         fill={active ? color : undefined}
                       >
                         {point.displayName}
+                        {active && point.readingName && point.readingName !== point.displayName && <tspan
+                          x={label.x + 9.5 / layout.scale}
+                          dy={15 / layout.scale}
+                          style={{ fontSize: 10 / layout.scale, fontWeight: 400 }}
+                        >{point.readingName}</tspan>}
                       </text>
                     </g>
                   )}

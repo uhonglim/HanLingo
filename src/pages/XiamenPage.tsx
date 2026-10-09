@@ -1,3 +1,5 @@
+import PlaceName from "../components/PlaceName";
+import PlaceNameNotes from "../components/PlaceNameNotes";
 import { findAtlasLocality, atlasLocalityPath } from "../data/atlas";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -38,7 +40,8 @@ import RegionalDifferences, {
   RegionalWord,
 } from "../components/RegionalDifferences";
 
-const BASE = atlasLocalityPath(findAtlasLocality("xiamen")!);
+const AMOY = findAtlasLocality("xiamen")!;
+const BASE = atlasLocalityPath(AMOY);
 type Word = (typeof xiamenWords)[number];
 type Photo = (typeof xiamenPhotos)[number];
 const roman = (word: Word) => romanizeXiamen(word.segments, word.tones);
@@ -236,7 +239,7 @@ function Overview({
       <section className="xm-hero">
         <div className="xm-hero-copy">
           <h1>
-            Amoy <span lang="zh-Hant">廈門</span>
+            <PlaceName point={AMOY} showHan/>
           </h1>
         </div>
       </section>
@@ -276,6 +279,7 @@ function Overview({
         </div>
       </section>
       <RegionalDifferences localityId="xiamen" />
+      <details className="atlas-reference-notes"><summary>Place names and sources</summary><PlaceNameNotes point={AMOY}/><PlaceNameNotes point={{id:"gulangyu", name:"Kulangsu"}}/></details>
       <section className="xm-section xm-location">
         <div>
           <h2>Southern Min</h2>
@@ -338,7 +342,7 @@ function Vocabulary({
     <div className="xm-inner">
       <header className="xm-page-heading">
         <div>
-          <h1>Amoy {siteTerms.sections.words.toLowerCase()}</h1>
+          <h1><PlaceName point={AMOY}/> {siteTerms.sections.words.toLowerCase()}</h1>
           <p role="status">
             {words.length + extraWords.length} of {totalWords} words
             {onlySaved ? " · saved" : ""}
@@ -472,7 +476,7 @@ function Practice({
   return (
     <div className="xm-inner xm-practice">
       <header className="xm-page-heading">
-        <h1>Amoy {siteTerms.sections.practice.toLowerCase()}</h1>
+        <h1><PlaceName point={AMOY}/> {siteTerms.sections.practice.toLowerCase()}</h1>
         {(current || finished) && (
           <button
             className="xm-clear-view"

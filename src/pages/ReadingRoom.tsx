@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import targetNames from "../data/translation-targets.json";
 import { siteTerms } from "../data/site-terms";
 import { Fragment, useEffect, useRef, useState } from "react";
 import type { FormEvent } from "react";
@@ -8,12 +9,13 @@ import { letters } from "../data/languages";
 import type { Letter } from "../data/languages";
 import "./ReadingRoom.css";
 
+const targetName = (id: string) => targetNames.find(item => item.id === id)!.name;
 const names: Record<Letter["id"], string> = {
   mandarin: "Standard Mandarin",
-  min: "Amoy Southern Min",
-  yue: "Guangfu Cantonese",
-  hakka: "Meixian Hakka",
-  wu: "Shanghai Wu",
+  min: `${targetName("amoy")} · Southern Min`,
+  yue: `${targetName("guangzhou")} · Cantonese`,
+  hakka: `${targetName("meixian")} · Hakka`,
+  wu: `${targetName("shanghai")} · Wu`,
   formal: siteTerms.writtenChinese,
 };
 
@@ -81,14 +83,7 @@ type TranslationResult = {
   notes: string[];
 };
 
-const targets: { id: TranslationTarget; name: string; lang: string }[] = [
-  { id: "amoy", name: "Amoy", lang: "nan" },
-  { id: "beijing", name: "Beijing speech", lang: "cmn" },
-  { id: "shanghai", name: "Shanghai", lang: "wuu" },
-  { id: "guangzhou", name: "Canton", lang: "yue" },
-  { id: "meixian", name: "Meixian Hakka", lang: "hak" },
-  { id: "written", name: siteTerms.writtenChinese, lang: "zh" },
-];
+const targets = targetNames as { id: TranslationTarget; name: string; lang: string }[];
 
 export function readResults(value: unknown): TranslationResult[] {
   if (

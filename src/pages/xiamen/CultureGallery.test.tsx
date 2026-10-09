@@ -1,3 +1,4 @@
+import { placeLabel, placeReadingName } from "../../data/language-names";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -87,7 +88,11 @@ describe("Xiamen culture gallery", () => {
   it("renders URL-backed categories and handles valid, mismatched, and missing deep-linked photos", () => {
     const all = renderGallery();
     expect(all.match(/class="photo-gallery-open"/g) ?? []).toHaveLength(11);
-    expect(all).toContain("Amoy photos");
+    const heading = all.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1];
+    expect(heading).toBeDefined();
+    const headingText = heading!.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    const amoy = { id: 'xiamen', name: 'Amoy' };
+    expect(headingText).toBe(`${placeLabel(amoy)} ${placeReadingName(amoy)} photos`);
     expect(all).not.toContain("Amoy photographs");
     const food = renderGallery("?category=food");
     expect(food.match(/class="photo-gallery-open"/g) ?? []).toHaveLength(3);

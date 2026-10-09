@@ -1,0 +1,50 @@
+[
+  {
+    "id": "amoy",
+    "localityId": "xiamen",
+    "commonName": "Amoy",
+    "localName": "Ē-mn̂g",
+    "name": "Amoy · Ē-mn̂g",
+    "lang": "nan"
+  },
+  {
+    "id": "beijing",
+    "localityId": "beijing-city",
+    "commonName": "Beijing",
+    "localName": null,
+    "name": "Beijing",
+    "lang": "cmn"
+  },
+  {
+    "id": "shanghai",
+    "localityId": "shanghai",
+    "commonName": "Shanghai",
+    "localName": "Zaonhe",
+    "name": "Shanghai · Zaonhe",
+    "lang": "wuu"
+  },
+  {
+    "id": "guangzhou",
+    "localityId": "guangzhou",
+    "commonName": "Canton",
+    "localName": "Gwong2 Zau1",
+    "name": "Canton · Gwong2 Zau1",
+    "lang": "yue"
+  },
+  {
+    "id": "meixian",
+    "localityId": "meixian",
+    "commonName": "Meixian",
+    "localName": "Moiyan",
+    "name": "Meixian · Moiyan",
+    "lang": "hak"
+  },
+  {
+    "id": "written",
+    "localityId": null,
+    "commonName": "Standard Written Chinese",
+    "localName": null,
+    "name": "Standard Written Chinese",
+    "lang": "zh"
+  }
+]

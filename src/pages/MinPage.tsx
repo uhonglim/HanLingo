@@ -294,7 +294,7 @@ export default function MinPage() {
                 <dt>Taigi</dt>
                 <dd>
                   Taiwanese Southern Min. This regional name includes more than
-                  the speech of Taipak or any single locality.
+                  the speech of Taipei or any single locality.
                 </dd>
               </div>
               <div>

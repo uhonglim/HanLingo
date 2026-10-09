@@ -1,8 +1,8 @@
+import PlaceName from "./PlaceName";
 import { useState } from "react";
 import { ipaSearchForms } from "../data/ipa-display";
 import { Link } from "react-router-dom";
 import { mapPoints } from "../data/languages";
-import { placeLabel } from "../data/language-names";
 import {
   regionalConceptsFor,
   regionalReadingsFor,
@@ -154,9 +154,9 @@ export default function RegionalDifferences({
       >
         <h3>
           {id === localityId ? (
-            placeLabel(point)
+            <PlaceName point={point}/>
           ) : (
-            <Link to={varietyPath(point)}>{placeLabel(point)}</Link>
+            <Link to={varietyPath(point)}><PlaceName point={point}/></Link>
           )}
         </h3>
         {concept.readings

@@ -102,7 +102,7 @@ const localConcepts: RegionalConcept[] = [
     id: "soap",
     english: "soap",
     contrast: "pronunciation",
-    note: "Taipak has two recorded forms of 雪文; sap-bûn is also documented farther south.",
+    note: "Taipei has two recorded forms of 雪文; sap-bûn is also documented farther south.",
     readings: moe("soap", 8021, "雪文", [
       ["taipak", "雪文", "sap-muî"],
       ["taipak", "雪文", "sap-bûn"],

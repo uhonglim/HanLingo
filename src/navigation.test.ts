@@ -1,3 +1,4 @@
+import { placeDisplayName } from "./data/language-names";
 import { findAtlasLocality, findAtlasCluster, atlasLocalityPath, atlasClusterPath } from "./data/atlas";
 import { describe, expect, it } from "vitest";
 import { getBreadcrumbs } from "./navigation";
@@ -11,7 +12,7 @@ describe("hierarchical navigation", () => {
       { label: "Min", path: "/min" },
       { label: "Southern Min", path: "/min/southern-min" },
       { label: cluster.name, path: atlasClusterPath(cluster) },
-      { label: "Amoy", path: atlasLocalityPath(place) },
+      { label: placeDisplayName(place), path: atlasLocalityPath(place) },
       { label: "Words", path: `${atlasLocalityPath(place)}/words` },
     ];
     expect(getBreadcrumbs(`${atlasLocalityPath(place)}/words`)).toEqual(expected);

@@ -1,3 +1,4 @@
+import PlaceName from "../components/PlaceName";
 import { lazy, Suspense } from 'react';
 import { Link, Navigate, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { atlasBranches, atlasClusters, atlasLocalities, atlasClusterPath, atlasLocalityPath, findAtlasCluster, findAtlasLocality } from '../data/atlas';
@@ -6,7 +7,7 @@ import { mapPoints } from '../data/languages';
 import { getLocalGallery } from '../data/galleries';
 import { availableSections, getLocalLearning } from '../data/learning';
 import { findLearningPlace } from '../data/learning/places';
-import { placeNameReference } from '../data/language-names';
+import PlaceNameNotes from "../components/PlaceNameNotes";
 import LanguageNameNotes from "../components/LanguageNameNotes";
 import AtlasMap from '../components/AtlasMap';
 import BranchLearning from '../components/BranchLearning';
@@ -28,7 +29,7 @@ function PlaceList({ places }: { places: AtlasLocality[] }) {
     const detail = [data.words.length ? `${data.words.length} readings` : '', photos.length ? `${photos.length} photos` : ''].filter(Boolean).join(' · ');
     return <Link to={atlasLocalityPath(place)} key={place.id}>
       {photos[0] && <img src={photos[0].src} alt="" loading="lazy"/>}
-      <div><h3>{place.name}{' '}<span lang="zh">{place.nativeName}</span></h3><small>{detail || 'Place & classification sources'}</small></div>
+      <div><h3><PlaceName point={place} showHan/></h3><small>{detail || 'Place & classification sources'}</small></div>
     </Link>;
   })}</div>;
 }
@@ -78,8 +79,7 @@ function CatalogueLocalityPage({ place }: { place: AtlasLocality }) {
   const sections = availableSections(point);
   const cluster = findAtlasCluster(place.groupId, place.branchId, place.clusterId)!;
   const neighbours = atlasLocalities.filter(p => p.groupId === place.groupId && p.branchId === place.branchId);
-  const naming = placeNameReference(point);
-  return <article className="atlas-catalogue atlas-locality"><header><h1>{place.name}{' '}<span lang="zh">{place.nativeName}</span></h1>
+  return <article className="atlas-catalogue atlas-locality"><header><h1><PlaceName point={place} showHan/></h1>
     {sections.length > 0 && <p className="atlas-learning-counts">{[data.words.length ? `${data.words.length} source readings` : '', getLocalGallery(place.id).length ? `${getLocalGallery(place.id).length} photographs` : ''].filter(Boolean).join(' · ')}</p>}
   </header>
     {getLocalGallery(place.id).length > 0 && <LocalityScenes point={point}/>}
@@ -88,7 +88,7 @@ function CatalogueLocalityPage({ place }: { place: AtlasLocality }) {
     {!data.words.length && <p className="atlas-scope">Local IPA readings are still being documented.</p>}
     <ContextMap places={neighbours} selected={place}/>
     <section><h2>Sources</h2><Source source={place.source}/>{place.source.url !== cluster.source.url && <Source source={cluster.source}/>}
-      <details className="atlas-reference-notes"><summary>Place and naming notes</summary><p>{place.scope}</p><p>{cluster.description}</p>{naming && <p>{naming.note} <a href={naming.source.url} target="_blank" rel="noreferrer">{naming.source.title}</a></p>}</details>
+      <details className="atlas-reference-notes"><summary>Place and naming notes</summary><p>{place.scope}</p><p>{cluster.description}</p><PlaceNameNotes point={point}/></details>
     </section>
   </article>;
 }

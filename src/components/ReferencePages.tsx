@@ -1,3 +1,5 @@
+import PlaceNameNotes from "./PlaceNameNotes";
+import PlaceName from "./PlaceName";
 import { atlasLocalities, atlasLocalityPath } from "../data/atlas";
 import { AtlasBranchCards } from "../pages/AtlasCatalogue";
 import { getBranchLearning, getLocalLearning } from "../data/learning";
@@ -127,12 +129,12 @@ export default function ReferencePage() {
             className={`reference-entry-header${photo ? " has-photo" : ""}`}
           >
             <div className="reference-title-row">
-              <h1>{point ? placeLabel(point) : entry.title}</h1>
+              <h1>{point ? <PlaceName point={point}/> : entry.title}</h1>
               <span className="reference-native-title" lang="zh-Hant">
                 {point?.nativeName ?? subgroup?.nativeName ?? group.nativeName}
               </span>
             </div>
-            {englishName && (
+            {englishName && !point && (
               <p className="reference-english-name">{englishName}</p>
             )}
             <p className="reference-dek">{entry.dek}</p>
@@ -285,10 +287,10 @@ export default function ReferencePage() {
               <BookOpen size={17} />
               <h2>Sources</h2>
             </div>
-            {(referenceFacts.length > 0 || nameReference) && (
+            {(referenceFacts.length > 0 || nameReference || point) && (
               <details className="reference-notes" key={entry.title}>
                 <summary>Reference notes</summary>
-                {nameReference && <p>{nameReference.note} <a href={nameReference.source.url} target="_blank" rel="noreferrer">{nameReference.source.title}</a></p>}
+                {point && <PlaceNameNotes point={point}/>}
                 <dl>
                   {referenceFacts.map((fact) => (
                     <div key={fact.label}>

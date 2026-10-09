@@ -1,3 +1,4 @@
+import PlaceName from "../PlaceName";
 import { useCallback, useEffect, useRef, type ReactNode } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Expand, X } from "lucide-react";
@@ -8,7 +9,7 @@ export const normalizePhotoSearch = (value: string) =>
   value
     .toLocaleLowerCase()
     .normalize("NFKD")
-    .replace(/[\u0300-\u036f’'–-]/g, "");
+    .replace(/[\u0300-\u036f’'··–-]/g, "");
 export function filterGallery(
   photos: GalleryPhoto[],
   query: string,
@@ -171,10 +172,12 @@ function Viewer({
 
 export default function PhotoGallery({
   place,
+  placeIdentity,
   photos,
   renderDetail,
 }: {
   place: string;
+  placeIdentity?: { id: string; name: string };
   photos: GalleryPhoto[];
   renderDetail?: (photo: GalleryPhoto) => ReactNode;
 }) {
@@ -212,7 +215,7 @@ export default function PhotoGallery({
       <header className="photo-gallery-heading">
         <div>
           <h1 ref={heading} tabIndex={-1}>
-            {place} photos
+            {placeIdentity ? <PlaceName point={placeIdentity}/> : place} photos
           </h1>
           <p role="status">
             {filtered.length} {filtered.length === 1 ? "photo" : "photos"}

@@ -1,3 +1,4 @@
+import PlaceName from "./PlaceName";
 import { Bookmark } from "lucide-react";
 import { useWordNotebook } from "../hooks/useWordNotebook";
 import { Link } from "react-router-dom";
@@ -191,7 +192,7 @@ export default function BranchLearning({
                       className="learning-locality"
                       to={`${varietyPath(locality)}/words`}
                     >
-                      {placeLabel(locality)}
+                      <PlaceName point={locality}/>
                     </Link>
                   )}
                   <LearningWord word={word} />
@@ -209,7 +210,7 @@ export default function BranchLearning({
                       className="learning-locality"
                       to={`${varietyPath(locality)}/words`}
                     >
-                      {placeLabel(locality)}
+                      <PlaceName point={locality}/>
                     </Link>
                   )}
                   <RegionalWord reading={reading} />
@@ -265,7 +266,7 @@ export default function BranchLearning({
                   to={`${varietyPath(place)}/culture?photo=${encodeURIComponent(photo.id)}`}
                 >
                   <img src={photo.src} alt={photo.alt} loading="lazy" />
-                  <h3>{placeLabel(place)}</h3>
+                  <h3><PlaceName point={place}/></h3>
                   <p>{photo.title}</p>
                 </Link>
                 <PhotoCredit photo={photo} />

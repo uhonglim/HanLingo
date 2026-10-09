@@ -2,15 +2,15 @@ import { describe, expect, it } from "vitest";
 import { atlasLocalities, atlasClusters } from "./atlas";
 import { mapPoints } from "./languages";
 import { romanizationReadings } from "./romanization-examples";
-import { clusterLabel, languageNameGlossary, placeLabel, placeNameReferences, quanzhangLabel } from "./language-names";
+import { clusterLabel, languageNameGlossary, placeLabel, placeDisplayName, placeNameAliases, placeNameReferences, quanzhangLabel } from "./language-names";
 
 describe("documented community names", () => {
-  it("uses one label across atlas, old learning points and IPA readings", () => {
+  it("uses common names in locality records and dual names on IPA reading cards", () => {
     for (const point of mapPoints) {
       expect(point.name, point.id).toBe(placeLabel(point));
       expect(atlasLocalities.find((item) => item.id === point.id)?.name, point.id).toBe(point.name);
       for (const word of romanizationReadings.filter((item) => item.localityId === point.id)) {
-        expect(word.locality, word.id).toBe(point.name);
+        expect(word.locality, word.id).toBe(placeDisplayName(point));
       }
     }
   });
@@ -18,7 +18,8 @@ describe("documented community names", () => {
     for (const [id, reference] of Object.entries(placeNameReferences)) {
       const point = atlasLocalities.find((item) => item.id === id);
       expect(point, id).toBeDefined();
-      expect(point!.name).toBe(reference.label);
+      expect(point!.name).toBe(placeLabel(point!));
+      expect(placeNameAliases(point!)).toContain(reference.label);
       expect(point!.aliases).toEqual(expect.arrayContaining(reference.aliases));
       expect(reference.source.url).toMatch(/^https:\/\//);
       expect(reference.note.length).toBeGreaterThan(40);

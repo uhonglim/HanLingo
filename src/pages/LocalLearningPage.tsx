@@ -1,3 +1,4 @@
+import PlaceName from "../components/PlaceName";
 import { useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { resolveReferenceRoute, varietyPath } from "../routing";
@@ -152,6 +153,7 @@ export default function LocalLearningPage() {
         <PhotoGallery
           key={point.id}
           place={placeLabel(point)}
+          placeIdentity={point}
           photos={getLocalGallery(point.id)}
           renderDetail={(photo) =>
             wordsForPhoto(photo, data.words).length ? (
@@ -173,7 +175,7 @@ export default function LocalLearningPage() {
     <div className="local-learning-page" key={`${point.id}/${chapter}`}>
       <header>
         <h1>
-          {placeLabel(point)} {learningSections[chapter].toLowerCase()}
+          <PlaceName point={point}/> {learningSections[chapter].toLowerCase()}
         </h1>
       </header>
       {chapter === "words" && (

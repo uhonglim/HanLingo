@@ -21,12 +21,12 @@ Before adding a place, check current map points, tree data, route aliases and le
 Use **group → branch → cluster → locality**. Locality leaves may be comparable towns, urban districts or cities; do not mix Taigi, a regional language label, with Amoy or Taipak as if they were equal places.
 
 - 泉漳 displays as **Tsuân-Tsiang**, the attested Taigi community spelling; the earlier Tsuan-Chiang remains an alias. Source **Tsuân-Tsiang** and Mandarin **Quanzhang** remain distinct aliases/reference forms.
-- Amoy, Tsuân-tsiu, Tsiang-tsiu, Taipak, Tâi-lâm, Ko-hiông, Gî-lân, Lo̍k-káng, Sam-kiap and overseas Hokkien localities retain documented local naming and exact scope.
+- Amoy, Tsuân-tsiu, Tsiang-tsiu, Taipei · Tâi-pak, Tainan · Tâi-lâm, Kaohsiung · Ko-hiông, Yilan · Gî-lân, Lukang · Lo̍k-káng, Sanxia · Sam-kiap and overseas Hokkien localities retain documented local naming and exact scope.
 - Singapore can display Sin-ka-pho; George Town can display Pho Te. George Town is not all of Penang. Preserve source spelling conventions instead of generating place names through the IPA converter.
 - Teochew and Swatow belong to the **Teo Swa** cluster under Southern Min, not Tsuân-Tsiang.
 - Meixian Hakka is the translation reference. Meizhou is a wider administrative area; its name does not imply one uniform accent.
 
-Use one visible name without parenthetical aliases. Aliases belong in search and source notes. Stable route IDs need not change with display names. Do not invent an endonym when documented evidence is missing. Use `src/data/site-terms.ts`, `src/data/language-names.ts` and `docs/NAMING.md` as the current sources of labels.
+Use a primary common/community name plus a sourced local reading, without parentheses. The 2026-10-09 dual-name decision supersedes the earlier single-name rule. Use `PlaceName` and the shared registry; additional aliases belong in search and source notes. Never infer local pronunciation from Mandarin pinyin, and do not fabricate missing readings. Stable route IDs need not change with display names. Do not invent an endonym when documented evidence is missing. Use `src/data/site-terms.ts`, `src/data/language-names.ts` and `docs/NAMING.md` as the current sources of labels.
 
 ## Design
 

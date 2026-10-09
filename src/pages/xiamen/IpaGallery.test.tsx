@@ -1,3 +1,4 @@
+import { placeLabel, placeReadingName } from "../../data/language-names";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -69,7 +70,11 @@ describe("Xiamen IPA gallery matching", () => {
         <IpaGallery />
       </MemoryRouter>,
     );
-    expect(html).toContain("Amoy sounds");
+    const heading = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1];
+    expect(heading).toBeDefined();
+    const headingText = heading!.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    const amoy = { id: 'xiamen', name: 'Amoy' };
+    expect(headingText).toBe(`${placeLabel(amoy)} ${placeReadingName(amoy)} sounds`);
     expect(html).not.toContain("IPA gallery");
     expect(html).toContain("HanLingo spelling");
     expect(html).toContain("Nasal close front vowel");

@@ -8,8 +8,9 @@ import { Link, useLocation } from "react-router-dom";
 import { findLearningPlace } from "../data/learning/places";
 import { languages } from "../data/languages";
 import {
-  communityAliases, hokkienAliases,
+  communityAliases, hokkienAliases, placeLabel, placeDisplayName, placeNameAliases,
 } from "../data/language-names";
+import PlaceName from './PlaceName';
 import { groupPath, subgroupPath } from "../routing";
 import "./LanguageTree.css";
 
@@ -17,6 +18,7 @@ type TreeNode = {
   id: string;
   name: string;
   nativeName?: string;
+  localityId?: string;
   href?: string;
   aliases?: string;
   children?: TreeNode[];
@@ -75,9 +77,9 @@ function buildTree(): TreeNode {
             const lesson = findLearningPlace(place.id);
             const path = atlasLocalityPath(place);
             return {
-              id: `place/${place.id}`, name: place.name, nativeName: place.nativeName,
+              id: `place/${place.id}`, localityId: place.id, name: placeLabel(place), nativeName: place.nativeName,
               href: path,
-              aliases: [aliases[place.id], communityAliases[place.id], ...(place.aliases ?? [])].filter(Boolean).join(" "),
+              aliases: [aliases[place.id], communityAliases[place.id], ...placeNameAliases(place), ...(place.aliases ?? [])].filter(Boolean).join(" "),
               children: lesson ? availableSections(lesson).map(section => ({
                 id: `${place.id}/${section}`, name: learningSections[section], href: `${path}/${section}`,
                 aliases: section === "culture" ? "culture gallery pictures photographs" : section === "sounds" ? "IPA tones pronunciation" : undefined,
@@ -207,6 +209,7 @@ export default function LanguageTree() {
     const expanded = searching ? !searchClosed.has(node.id) : open.has(node.id);
     const active = node.id === currentId;
     const ancestor = !active && trail.includes(node.id);
+    const locality = node.localityId ? { id: node.localityId, name: node.name, nativeName: node.nativeName } : undefined;
     const childrenId = `language-tree-children-${instanceId}-${node.id.replace(/[^a-zA-Z0-9_-]/g, "_")}`;
     return (
       <li className="language-tree-item" key={node.id}>
@@ -220,7 +223,7 @@ export default function LanguageTree() {
             <button
               className="language-tree-disclosure"
               type="button"
-              aria-label={`${expanded ? "Collapse" : "Expand"} ${node.name}`}
+              aria-label={`${expanded ? "Collapse" : "Expand"} ${locality ? placeDisplayName(locality) : node.name}`}
               aria-expanded={expanded}
               aria-controls={childrenId}
               onClick={() => toggle(node.id)}
@@ -249,8 +252,8 @@ export default function LanguageTree() {
                 if (node.href !== "/") setMobileOpen(false);
               }}
             >
-              <span>{node.name}</span>
-              {node.nativeName && (
+              {locality ? <PlaceName point={locality} showHan /> : <span>{node.name}</span>}
+              {!locality && node.nativeName && (
                 <span className="language-tree-native" lang="zh-Hant">
                   {node.nativeName}
                 </span>

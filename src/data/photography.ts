@@ -27,8 +27,8 @@ export const groupPhotos: Record<LanguageId, GroupPhoto> = {
   },
   min: {
     src: "/images/xiamen-street.webp",
-    alt: "People walking along a shopping street beneath colorful overhead banners in Xiamen.",
-    caption: "Street life on Zhongshan Road, Xiamen.",
+    alt: "People walking along a shopping street beneath colorful overhead banners in Amoy.",
+    caption: "Street life on Zhongshan Road, Amoy.",
     author: "xiquinhosilva",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0",

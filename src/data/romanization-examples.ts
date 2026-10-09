@@ -1,6 +1,6 @@
 import { varietyPath } from "../routing";
 import { languages, mapPoints, type LanguageId } from "./languages";
-import { placeLabel } from "./language-names";
+import { placeDisplayName } from "./language-names";
 import { getLocalLearning, spellingFor } from "./learning";
 import { displayIpa } from "./ipa-display";
 
@@ -12,7 +12,7 @@ export const romanizationReadings = mapPoints.flatMap((point) =>
       ...word,
       id: `${point.id}:${word.id}`,
       groupId: point.groupId,
-      locality: placeLabel(point),
+      locality: placeDisplayName(point),
       localityPath: varietyPath(point),
       displayIpa: `[${displayIpa(word.ipa, word.toneNotation).replace(/^\[|\]$/g, "")}]`,
       spelling: spellingFor(word),

@@ -1,3 +1,4 @@
+import { placeDisplayName } from "../language-names";
 import { describe, expect, it } from 'vitest';
 import { atlasClusters, atlasLocalities, atlasBranches, atlasLocalityPath, atlasClusterPath } from './index';
 import { mapPoints } from '../languages';
@@ -26,7 +27,7 @@ describe('four-level sourced locality atlas',()=>{
       expect(place.coordinates[1]).toBeGreaterThan(-5);
       expect(place.coordinates[1]).toBeLessThan(55);
       expect(atlasLocalityPath(place).split('/').filter(Boolean)).toHaveLength(4);
-      expect(getBreadcrumbs(atlasLocalityPath(place)).at(-1)?.label).toBe(place.name);
+      expect(getBreadcrumbs(atlasLocalityPath(place)).at(-1)?.label).toBe(placeDisplayName(place));
     }
   });
   it('preserves every existing lesson and old deep link without inserting a course into the taxonomy',()=>{

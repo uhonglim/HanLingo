@@ -103,17 +103,17 @@ describe("atlas data integrity", () => {
   });
 
   it("preserves Quanzhang as a cluster between Southern Min and local varieties", () => {
-    const quanzhangPlaces = ["Amoy", "Tsuân-tsiu", "Tsiang-tsiu"];
+    const quanzhangPlaces = ["xiamen", "quanzhou", "zhangzhou"];
 
     for (const place of quanzhangPlaces) {
-      const point = mapPoints.find((candidate) => candidate.name === place);
+      const point = mapPoints.find((candidate) => candidate.id === place);
       expect(point, `${place} needs a local example`).toBeDefined();
       expect(point!.hierarchy).toEqual([
         "Sinitic",
         "Min",
         "Southern Min",
         "Tsuân-Tsiang",
-        place,
+        point!.name,
       ]);
     }
 

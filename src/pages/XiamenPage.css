@@ -92,7 +92,7 @@
 .xm-hero h1 {
   font-size: 40px;
 }
-.xm-hero h1 span {
+.xm-hero h1 > span[lang] {
   font-size: 26px;
   font-weight: 400;
   color: var(--xm-muted);

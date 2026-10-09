@@ -1,3 +1,4 @@
+import { placeReadingName } from "./language-names";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -132,11 +133,11 @@ describe("reference page coverage", () => {
     }
   });
 
-  it("keeps new locality references at city scope with primary pronunciation evidence for Taipak", () => {
+  it("keeps new locality references at city scope with primary pronunciation evidence for Taipei", () => {
     const localAnchors = [
-      ["taipak", "Taipak", "Taipak"],
-      ["singapore", "Singapore", "Sin-ka-pho"],
-      ["george-town", "George Town", "Pho Te"],
+      ["taipak", "Taipei", "Taipei"],
+      ["singapore", "Singapore", "Singapore"],
+      ["george-town", "George Town", "George Town"],
     ] as const;
 
     for (const [id, anchor, title] of localAnchors) {
@@ -179,11 +180,12 @@ describe("reference page coverage", () => {
 
     for (const [id, localName, englishName, dictionaryLabel] of references) {
       const point = mapPoints.find((candidate) => candidate.id === id);
-      expect(point?.name).toBe(localName);
-      expect(point?.hierarchy.at(-1)).toBe(localName);
+      expect(point?.name).toBe(englishName);
+      expect(placeReadingName({ id })).toBe(localName);
+      expect(point?.hierarchy.at(-1)).toBe(englishName);
       const entry = varietyArticles[id];
       expectCompleteArticle(entry, `${id} local reference`, 80);
-      expect(entry.title).toBe(localName);
+      expect(entry.title).toBe(englishName);
       const facts = Object.fromEntries(
         entry.facts.map((fact) => [fact.label, fact.value]),
       );

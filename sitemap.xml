@@ -1437,6 +1437,8 @@
   <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/singapore-cantonese/</loc></url>
   <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/loudi-study/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/kunming-study/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/yunlou-gan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/sounds/</loc></url>
@@ -1695,6 +1697,7 @@
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/haikou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/haikou/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/jiaoliao/denglian/rongcheng-371082/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/mandarin/jiaoliao/denglian/rongcheng-371082/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/jiaoliao/denglian/rongcheng-371082/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/jiaoliao/denglian/rongcheng-371082/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/nanchang-gan/words/</loc></url>
@@ -1725,7 +1728,10 @@
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/sounds/</loc></url>
@@ -1810,9 +1816,17 @@
   <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/singapore-cantonese/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/singapore-cantonese/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/loudi-study/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/loudi-study/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/loudi-study/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/loudi-study/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/kunming-study/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/kunming-study/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/kunming-study/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/kunming-study/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/yunlou-gan/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/yunlou-gan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/yunlou-gan/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/practice/</loc></url>
 </urlset>

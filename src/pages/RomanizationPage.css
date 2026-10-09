@@ -596,3 +596,50 @@
   flex: 1;
   min-width: 170px;
 }
+
+.roman-featured {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.roman-featured article {
+  min-width: 0;
+  padding-top: 18px;
+  border-top: 2px solid #dbe3ee;
+}
+.roman-featured h3 {
+  font-size: 15px;
+  color: #46566a;
+}
+.roman-featured .roman-example-word {
+  display: block;
+  margin: 18px 0 12px;
+}
+.roman-featured .roman-example-word > strong {
+  display: block;
+  font-size: 42px;
+  margin-bottom: 5px;
+}
+.roman-featured .roman-example-word > span {
+  font-size: 13px;
+}
+.roman-featured p,
+.roman-featured a {
+  font-size: 13px;
+}
+.roman-key-layout td:last-child {
+  font-size: 12px;
+  color: #596777;
+}
+@media (max-width: 760px) {
+  .roman-featured {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .roman-featured .roman-example-word {
+    display: flex;
+  }
+  .roman-featured .roman-example-word > strong {
+    margin: 0;
+  }
+}

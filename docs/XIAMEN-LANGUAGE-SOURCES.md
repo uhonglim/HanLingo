@@ -42,7 +42,7 @@ The chosen source uses superscript Chao pitch numbers. The exported `tones` arra
 
 The source’s slashes are retained exactly in `sourceReading`. The learning interface receives square brackets in `ipa`, following HanLingo’s display convention. This is still **broad dictionary-based IPA**, not a narrow transcription of a recording. Level contours retain both digits/letters where the source gives two; the checked high contour retains its single digit/letter.
 
-The `segments` array holds each source syllable without tones. Affricate tie bars, aspiration, nasalization, syllabic-nasal marks, unreleased-stop marks, and glottal stops are retained. They must not be silently removed when producing a spelling preview. Custom romanization belongs to a separate layer and has not been baked into this lexical dataset.
+The `segments` array holds each source syllable without tones. Affricate tie bars, aspiration, nasalization, syllabic-nasal marks, unreleased-stop marks, and glottal stops are retained in the source data and IPA display. HanLingo spelling is a separate, deliberately simplified reading aid: its shared key uses ~ for nasalization, : for supplied length, and omits syllabicity and unreleased-stop marks while leaving them visible in IPA. The current mergers are documented in [the spelling proposal](ROMANIZATION.md). This revision changes neither source readings nor documented tones; custom spelling is not baked into this lexical dataset.
 
 ## Connected speech is explicit
 

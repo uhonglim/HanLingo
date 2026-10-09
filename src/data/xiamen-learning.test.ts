@@ -73,23 +73,23 @@ describe("Xiamen learning readings", () => {
     ]) {
       expect(xiamenSpellingKey.find((rule) => rule.ipa === ipa)).toMatchObject({
         spelling,
-        status: "Agreed",
+        status: "Core",
       });
     }
     expect(pitchLetters("35")).toBe("˧˥");
     expect(pitchLetters("51")).toBe("˥˩");
   });
 
-  it("keeps nasal vowels, nasal consonants, syllabic nasals, and stop endings distinct", () => {
+  it("keeps nasal vowels distinct from codas while simplifying syllabicity and release marks", () => {
     expect(
       romanizeXiamen(["mi", "mĩ", "min", "pŋ̍"], ["22", "22", "22", "22"]),
-    ).toBe("mi22 mĩ22 min22 png̍22");
+    ).toBe("mi22 mi~22 min22 png22");
     expect(
       romanizeXiamen(
         ["pa", "paʔ", "pat̚", "pak̚", "pap̚"],
         ["4", "4", "4", "4", "4"],
       ),
-    ).toBe("pa4 paq4 pat̚4 pak̚4 pap̚4");
+    ).toBe("pa4 paq4 pat4 pak4 pap4");
     // Canonically equivalent IPA must not create a different displayed spelling.
     expect(romanizeXiamen(["mĩ"], ["22"])).toBe(
       romanizeXiamen(["mi\u0303"], ["22"]),

@@ -1,49 +1,56 @@
-# Shared Han romanization: discussion record
+# HanLingo spelling
 
-Status: decisions recorded on 2026-10-09. This is a design record, not a complete or finalized romanization specification.
+Working proposal, revised 2026-10-09. HanLingo is a shared reading aid beside source IPA. It deliberately uses fewer distinctions than IPA; it is not a phonemic standard for the languages or an existing community orthography.
 
-## Confirmed decisions
+## One global key
 
-- The system is based on sounds and their IPA correspondence. A spelling has the same assigned sound value across the varieties represented; it is not inherited automatically from Pinyin, Jyutping, or another existing spelling system.
-- The core stop distinction is **p → [p]**, **ph → [pʰ]**, **b → [b]**: voiceless unaspirated, voiceless aspirated, and voiced respectively.
-- Aspiration is marked consistently by appending **h** to the consonant spelling. In the current working application, **ch → [tɕ]** therefore pairs with **chh → [tɕʰ]**. The aspiration rule and this application were accepted explicitly; the complete consonant inventory is still unfinished.
-- **ts → [t͡s]** and **tsh → [t͡sʰ]** were accepted for the Xiamen prototype. They stay distinct from **ch/chh → [tɕ]/[tɕʰ]**.
-- Tone is represented separately from vowel quality using **pitch-contour numbers for now**: **1 is low**, **5 is high**, **35 → [˧˥]**, and **51 → [˥˩]**. These are pitch values, not the numbered tone categories of Pinyin or Jyutping.
-- IPA remains the phonetic reference. The custom romanization is a separate notation and should be identified as such.
+The same IPA input receives the same HanLingo spelling in every locality. Several different IPA sounds may share a spelling. These mergers simplify reading; they do not establish identical articulation, mutual intelligibility, or interchangeable local pronunciations. Exact differences remain visible in IPA.
 
-## Candidate mappings and unresolved choices
+All pages use the shared key in `src/data/xiamen-romanization.ts` through `spellSegments`, `romanizeXiamen`, or `convertIpa`. Its historical filename does not restrict it to Amoy. Never add locality-specific letter values or silently rewrite source IPA to obtain a preferred spelling.
 
-- **ă → [ɐ]** is the current trial vowel spelling, replacing the earlier **â**. The breve identifies vowel quality, never tone or nasalization. **ã → [ã]** retains the IPA tilde for nasalization. These are different vowels: an unnasalized [ɐ] must never become ã. The user authorized revising the vowel notation; the particular extended inventory remains a trial proposal.
+## Design priorities
 
-- The working **ch/chh → [tɕ]/[tɕʰ]** pair follows the accepted aspiration rule. Trial **sh → [ɕ]**, **š → [ʃ]**, **sr → [ʂ]**, and **hl → [ɬ]** remain distinct. Trial **tš/tšh → [tʃ]/[tʃʰ]** and **tsr/tsrh → [tʂ]/[tʂʰ]** extend the same aspiration rule without merging places of articulation. Trial **ḅ/ḍ → [ɓ]/[ɗ]** distinguish implosives from **b/d**. The same spelling cannot silently mean a different consonant in another variety.
-- Source nasalization, syllabicity, unreleased endings, length, breathy voice, creaky voice, and voicing diacritics are retained. Sinological source symbols **ȵ**, **ɿ**, and **ʮ** receive distinct trial spellings **nj**, **ir**, and **yr**; the converter does not silently equate a source transcription convention with another IPA symbol.
-- Aspiration notation must remain distinguishable from a literal sequence of a consonant followed by [h]. A syllable-boundary or other segmentation rule is still needed.
-- The wider vowel and consonant inventory has explicit trial mappings in the sound key; these assignments, syllable-boundary conventions, and the required level of phonetic detail remain open to refinement. Source vowel length remains **ː**, independent of vowel quality: **ăː** corresponds to **[ɐː]**, while **oo** names **[ɔ]** and does not itself mean a long vowel. The pitch-contour notation does not by itself settle contextual tone changes or how much phonetic variation to encode.
-- A reference variety and transcription convention must be stated. An IPA symbol in a broad dictionary transcription does not describe every detail of every speaker's pronunciation.
+Keep letter values predictable across localities, make common words easy to read and type, and retain contrasts that are especially useful to learners: aspiration, voicing, nasal codas, checked codas, nasal vowels, and supplied tone and length. Prefer a small declared set of shared spellings over an ever-growing collection of specialist letters. A source reading remains the authority when simplification creates a homograph.
 
-## Everyday worked example
+Romanization need not be a reversible encoding of phonetic transcription. The [official Jyutping chart](https://jyutping.org/en/jyutping/) explicitly groups [t͡s~t͡ʃ] under z and gives syllabic [m̩ ŋ̩] as m/ng. HanLingo borrows that design principle, not Jyutping's letter or tone values. The groupings below are our own cross-variety proposal; the [IPA chart](https://www.internationalphoneticassociation.org/content/ipa-chart) remains the reference for phonetic distinctions.
 
-Xiamen **茶**, “tea,” is displayed as **[te˨˦]**, with the working spelling **te24**. The suffix `24` records a rise from pitch level 2 to level 4; it is not a lexical tone-category number. This is the dictionary-based citation reading documented in [the Xiamen source notes](XIAMEN-LANGUAGE-SOURCES.md) and the per-entry source in `src/data/xiamen-lexicon.ts`.
+## Working correspondences
 
-No general Han-character transliteration, text-to-speech pronunciation, or final cross-Sinitic spelling table follows from this record yet. Lesson spellings derive from their source IPA; extending the collection does not finalize the unresolved mappings.
+| IPA | HanLingo |
+| --- | --- |
+| [p pʰ b], [t tʰ d], [k kʰ ɡ] | p ph b, t th d, k kh g |
+| [t͡s t͡sʰ] | ts tsh |
+| [tɕ tʃ], [tɕʰ tʃʰ] | ch, chh |
+| [dʑ dʒ] | j |
+| [ɕ ʃ], [ʑ ʒ] | sh, zh |
+| [h x χ] | h |
+| [ɲ ȵ] | ny |
+| [tʂ tʂʰ ʂ ʐ] | tsr tsrh sr zr |
+| [ŋ ʔ ɦ ɣ ɬ ɓ ɗ] | ng q hh gh hl ḅ ḍ |
+| [a ɑ], [i ɪ], [u ʊ], [y ʏ] | a, i, u, yu |
+| [ø œ], [ə ɜ] | oe, eo |
+| [ɐ ɛ ɔ æ ɒ ɯ ɤ ɨ ɿ ʮ] | ă ae oo ea ao uu eu ii ir yr |
+| [j ɥ], explicit [i̯ u̯ y̯] | y yw, y w yw |
 
-## Xiamen learning prototype
+Append **h** to mark aspiration: `p → ph`, `ts → tsh`, `ch → chh`. The retroflex series and implosives retain separate spellings. Plain [u] stays `u`; only explicitly nonsyllabic [u̯] becomes `w`. For example, supplied `xuei5` becomes `huei5`, without inferring a glide.
 
-The 35-entry collection shows source-based Xiamen IPA alongside trial HanLingo spellings. Confirmed rules are kept separate from trial extensions: `ng → [ŋ]`, `oo → [ɔ]`, `q → [ʔ]`, `th → [tʰ]`, `kh → [kʰ]`, `g → [ɡ]`. Nasal-vowel tildes, unreleased-stop marks, and syllabicity marks are retained. These extensions have not been accepted as the final cross-Sinitic inventory. The converter rejects unmapped IPA instead of silently substituting a different sound. See [Xiamen source notes](XIAMEN-LANGUAGE-SOURCES.md).
+`ă` represents [ɐ], not nasalization or tone. Doubled letters such as `oo` identify a vowel quality; they do not imply length. `/romanization` displays the complete supported key and the individual conversion steps. **Core** labels direct mappings, **Shared** labels the deliberate sound families, **Detail** labels omitted IPA detail, and **Retained** labels supported marks copied into the spelling. These are mapping roles, not levels of source verification.
 
-## Public IPA workshop
+## Marks and tones
 
-`/romanization` now brings the decisions, the complete explicit working key, retained IPA letters and marks, tone contours, and source examples together. It loads all published IPA readings, grouped under Mandarin, Min, Yue, Hakka, and Wu. It accepts custom, space-separated syllables with an explicit tone-notation selector. Pitch mode accepts IPA tone letters or ordinary/superscript pitch digits. Source-category mode keeps category digits separate as **·T** plus the category number; tones-not-supplied mode converts only the attested segments and visibly labels the absence of tones. Each group has four worked examples drawn directly from locality records, with sources and speaker qualifications retained. A live coverage table distinguishes mapped readings from readings containing unresolved sounds; forms without tones remain visibly qualified, and source tone categories are never interpreted as pitch contours. Each syllable displays its sound-by-sound conversion and decision status.
+- Nasalization uses ASCII `~` after the vowel: [ã] → `a~`, [ĩ] → `i~`.
+- Supplied length uses `:`: [aː] → `a:`. Length is independent of vowel quality and tone.
+- Syllabicity and unreleased-stop marks stay in IPA but are omitted from HanLingo: [ŋ̍] → `ng`, [p̚] → `p`. This omission does not change the source pronunciation.
+- Supported breathy, creaky, voiceless and voiced combining marks remain visible: [a̤ a̰ m̥ s̬].
+- Supplied pitch contours use digits **1 low** through **5 high**: [˧˥] → `35`, [˥˩] → `51`. Preserve the source’s one-digit or multidigit contour; never reinterpret a tone-category number as pitch.
+- Explicit source tone categories use `·T` plus their number. Readings without supplied tones receive segment spellings only and a visible “tones not given” qualification. No missing tones are inferred.
 
-The public parser in `src/data/romanization-method.ts` validates a bounded set of symbols, then uses the shared `spellSegments` key also used by the legacy `romanizeXiamen` lesson entry point. It accepts tied `[t͡ɕ]` as an input variant of `[tɕ]`, and tied or untied `[t͡sʰ]` / `[tsʰ]` for the same documented alveolar affricate. Dataset words declare their tone convention. Loading a sourced reading also selects its convention; editing either the IPA or tone convention clears the source attribution so an altered result cannot masquerade as that source reading. Custom input defaults to strict pitch-contour mode, which rejects missing contours. Explicit tones-not-supplied mode allows segment conversion without inventing tones. Unsupported symbols still produce an error, not a guessed reading. This spelling demo does not validate phonotactics, infer pronunciation from characters, apply sandhi, or promise an unambiguous reverse conversion. Digraphs and consonant sequences still require a boundary policy.
+Amoy 茶 “tea” remains **[te˨˦] → te24**, a dictionary-based citation reading documented in [the Xiamen source notes](XIAMEN-LANGUAGE-SOURCES.md). The attested `hui44 ki44 → hui22 ki44` example shows citation and connected readings from [Ge & Mok 2024, example 1](https://ling.cuhk.edu.hk/people/peggy/SP2024_GeMok_Phonotactics.pdf). The converter does not apply tone sandhi automatically.
 
-The documented Amoy example `hui44 ki44 → hui22 ki44` comes from [Ge & Mok 2024, example 1](https://ling.cuhk.edu.hk/people/peggy/SP2024_GeMok_Phonotactics.pdf). The page distinguishes the source's citation and connected forms. IPA descriptions use the [official IPA chart](https://www.internationalphoneticassociation.org/content/ipa-chart); the explanation of tone-category numbers uses the [published Jyutping scheme](https://jyutping.org/en/jyutping/).
+## Evidence and limits
 
+This revision changes the reading aid, not the underlying lexical evidence. Source IPA, locality and speaker qualifications, source orthographies, and documented community place names remain unchanged. Tâi-lô, POJ, Jyutping and other source spellings remain separately labelled; they are not automatically converted to IPA or HanLingo.
 
-## Expanded working key, 2026-10-09
+The spelling is intentionally lossy. Equal spellings do not imply equal IPA, and collision-free reverse conversion is not promised. IPA remains necessary for precise pronunciation. The converter also does not infer pronunciation from Han characters, validate phonotactics, generate lesson pronunciations from machine translation, or infer missing tones. Unknown symbols fail visibly.
 
-All 637 current IPA word records have working spellings: 573 with documented pitch contours and 64 with tones omitted by their sources. The 64 retain segment-only spellings and a visible missing-tone qualification. The count is a release snapshot, not a completeness claim for the languages.
-
-New assignments are **Trial**, including `sh=[ɕ]`, `š=[ʃ]`, `sr=[ʂ]`, `hl=[ɬ]`, `hh=[ɦ]`, `nj=[ȵ]`, and `ny=[ɲ]`. The source's distinct ȵ, ɿ and ʮ conventions are preserved rather than silently normalized to other IPA symbols. `ḅ=[ɓ]` and `ḍ=[ɗ]` distinguish implosives from plain voiced `b/d`. `aa=[ɑ]`, `ao=[ɒ]`, `ea=[æ]`, `ĭ=[ɪ]`, `ŭ=[ʊ]`, `ÿ=[ʏ]`, `ö=[ø]`, `eu=[œ]`, `uu=[ɯ]` and `ê=[ɜ]` preserve vowel differences. Digraphs name qualities, not length; supplied `ː` remains explicit. These spellings are HanLingo proposals, not claims about existing community orthographies.
-
-The parser uses one shared longest-match key for Amoy and every other locality. Tied and untied affricate variants are normalized only where equivalent. New records are checked by a full published-word coverage test. Unknown segments still fail visibly; adding a future record does not authorize guessing its pronunciation or tone.
+The public workshop supports space-separated syllables with an explicit source tone convention. Loading a sourced reading selects its convention; editing the input or convention clears the source attribution. Tied and untied forms of the same affricate are normalized, while the supplied source transcription remains available. Live coverage and examples come from the published records; coverage is not a claim that the languages are completely documented.

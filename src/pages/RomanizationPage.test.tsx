@@ -75,6 +75,52 @@ describe("shared romanization workshop", () => {
     expect(html).toContain("not a shared seven-tone inventory");
     expect(html).toContain("Tones not supplied");
     expect(html).toContain("Source tone categories");
-    expect(html).toContain("Trial ă represents [ɐ]; ã represents nasal [ã]");
+    expect(html).toContain("ă represents [ɐ]; a~ represents nasal [ã]");
+    expect(html).toContain("The same IPA gets the same spelling everywhere");
+    expect(html).not.toContain("One sound, one working spelling");
+  });
+});
+
+
+describe("readability-first workshop", () => {
+  it("shows a sourced same-spelling pair without hiding the Suzhou vowel contrast", () => {
+    const html = renderToStaticMarkup(<MemoryRouter><RomanizationPage /></MemoryRouter>);
+    const section = html.split('aria-labelledby="roman-shared-example"')[1]?.split("</div>")[0];
+    expect(section).toBeTruthy();
+    expect(section).toContain("Same spelling, different sounds");
+    const words = ["衣", "煙"].map((han) => romanizationReadings.find((word) =>
+      word.localityId === "suzhou" && word.han === han,
+    )!);
+    expect(words.map((word) => word.ipa)).toEqual(["[i44]", "[ɪ44]"]);
+    expect(words.map((word) => word.spelling)).toEqual(["i44", "i44"]);
+    for (const word of words) {
+      expect(section).toContain(word.han);
+      expect(section).toContain(word.displayIpa);
+      expect(section).toContain(word.source.url.replaceAll("&", "&amp;"));
+    }
+    expect(section!.match(/<strong>i44<\/strong>/g)).toHaveLength(2);
+  });
+  it("starts from sourced 灰 and presents nasal and central-vowel contrasts", () => {
+    const html = renderToStaticMarkup(<MemoryRouter><RomanizationPage /></MemoryRouter>);
+    const ash = romanizationReadings.find((word) => word.id.endsWith(":beijing-city-ipa-ash"));
+    expect(ash).toBeDefined();
+    expect(html).toContain(`<textarea`);
+    expect(html).toMatch(/<textarea[^>]*>xuei˥<\/textarea>/);
+    expect(html).toContain('<output for="roman-ipa">huei5</output>');
+    for (const [locality, han, spelling] of [
+      ["beijing-city", "灰", "huei5"],
+      ["zhangzhou", "飯", "pui~22"],
+      ["guangzhou", "心", "săm55"],
+    ]) {
+      const word = romanizationReadings.find((entry) => entry.localityId === locality && entry.han === han);
+      expect(word?.spelling).toBe(spelling);
+      expect(html).toContain(`<strong>${spelling}</strong>`);
+      expect(html).toContain(word!.source.url.replaceAll("&", "&amp;"));
+    }
+    expect(html).toContain("Standard Mandarin · Beijing speaker");
+    expect(html).toContain("a~");
+    expect(html).toContain("a:");
+    expect(html).toContain("Syllabicity and unreleased");
+    expect(html).not.toContain("Trial sh, š");
   });
 });

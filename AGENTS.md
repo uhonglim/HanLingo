@@ -22,7 +22,8 @@ For HanLingo work, automatically read and apply [the HanLingo skill](.agents/ski
 
 ## Presentation
 
-- English interface and introduction; Chinese content, IPA, and the agreed trial HanLingo romanization are the learning material.
+- English interface and introduction; Chinese content, IPA, and the current HanLingo spelling proposal are the learning material.
+- Use one global IPA-to-HanLingo key: identical IPA always gives identical spelling across localities. Deliberate many-to-one mappings simplify the reading aid; they do not imply equivalent sounds or reversible spelling. Preserve exact source IPA, source orthographies and documented place names. Follow `docs/ROMANIZATION.md`; never infer missing tones.
 - Use the shared interface terms in `src/data/site-terms.ts` and `docs/NAMING.md`. A destination or learning concept must have one consistent label; preserve source titles and quotations.
 - Keep copy factual and brief. No decorative labels or filler introductions. Preserve phonetic qualifications, sources, and photograph credits.
 - Reference articles lead with the community name and readable content. Do not repeat the breadcrumb hierarchy in a metadata sidebar. Put naming conventions and dictionary details in expandable reference notes beside sources; keep map qualifications with the map.

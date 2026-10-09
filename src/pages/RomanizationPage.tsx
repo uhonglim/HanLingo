@@ -14,22 +14,22 @@ import "./RomanizationPage.css";
 const marks = [
   [
     "[ã]",
-    "ã",
+    "a~",
     "Nasalization",
-    "Keep the tilde on the vowel; a nasal vowel is distinct from a following n or ng.",
+    "Write ~ after the nasalized vowel. It does not add an n or ng ending.",
   ],
   [
     "[ŋ̍] / [ŋ̩]",
-    "ng̍",
+    "ng",
     "Syllabic nasal",
-    "The nasal itself forms the syllable. These two IPA diacritics are equivalent placements.",
+    "The nasal itself forms the syllable. The spelling omits the syllabicity mark; IPA retains it.",
   ],
-  ["[m̩]", "m̩", "Syllabic m", "Keep the syllabicity mark."],
+  ["[m̩]", "m", "Syllabic m", "The IPA mark shows that m forms the syllable."],
   [
     "[p̚] / [t̚] / [k̚]",
-    "p̚ / t̚ / k̚",
+    "p / t / k",
     "Unreleased endings",
-    "Keep the unreleased mark when the source supplies it.",
+    "The ending stays; its unreleased detail remains in IPA.",
   ],
   [
     "[a̤] / [a̰]",
@@ -45,15 +45,45 @@ const marks = [
   ],
   [
     "[aː]",
-    "aː",
+    "a:",
     "Length",
-    "Keep ː when supplied. A doubled vowel such as trial oo names a vowel quality, not length.",
+    "Write : only for supplied length. A doubled vowel such as oo names a vowel quality, not length.",
   ],
 ];
 
+const featuredReadings = [
+  {
+    localityId: "beijing-city", han: "灰",
+    title: "A familiar h",
+    note: "[x], [h], and [χ] share h. Plain [u] stays u; only explicit [u̯] becomes w.",
+  },
+  {
+    localityId: "zhangzhou", han: "飯",
+    title: "A nasal vowel",
+    note: "~ follows the vowel it nasalizes. It is not a final n or ng.",
+  },
+  {
+    localityId: "guangzhou", han: "心",
+    title: "A vowel worth keeping",
+    note: "ă keeps [ɐ] distinct from a. The breve changes vowel quality, never tone.",
+  },
+].map((example) => {
+  const word = readingExamples.find((item) =>
+    item.localityId === example.localityId && item.han === example.han,
+  );
+  if (!word) throw new Error(`Missing workshop reading: ${example.localityId} ${example.han}`);
+  return { ...example, word };
+});
+const initialWord = featuredReadings[0].word;
+const sharedSpellingExample = ["衣", "煙"].map((han) => {
+  const word = readingExamples.find((item) => item.localityId === "suzhou" && item.han === han);
+  if (!word) throw new Error(`Missing Suzhou spelling contrast: ${han}`);
+  return word;
+});
+
 export default function RomanizationPage() {
-  const [input, setInput] = useState(romanizationGroups[0].examples[0].ipa);
-  const [wordId, setWordId] = useState(romanizationGroups[0].examples[0].id);
+  const [input, setInput] = useState(initialWord.ipa);
+  const [wordId, setWordId] = useState(initialWord.id);
   const [query, setQuery] = useState("");
   const [toneNotation, setToneNotation] = useState<NonNullable<AttestedWord["toneNotation"]>>("pitch-contour");
   const selectedWord = readingExamples.find((word) => word.id === wordId);
@@ -70,7 +100,7 @@ export default function RomanizationPage() {
   const rules = conversionRules
     .filter((rule) => !/^\p{M}/u.test(rule.ipa) && rule.ipa !== "ː")
     .filter((rule) =>
-      `${rule.ipa} ${rule.spelling} ${rule.status}`
+      `${rule.ipa} ${rule.spelling} ${rule.status} ${rule.note ?? ""}`
         .normalize("NFC")
         .toLowerCase()
         .includes(query.normalize("NFC").toLowerCase().trim()),
@@ -90,11 +120,11 @@ export default function RomanizationPage() {
       <header className="roman-header">
         <h1>HanLingo romanization</h1>
         <p>
-          One sound, one working spelling across Mandarin, Min, Yue, Hakka, and
-          Wu. Each place keeps its own pronunciation. IPA is the reference;
-          HanLingo is our shared spelling proposal.
+          The same IPA gets the same spelling everywhere. Some sounds share a
+          spelling to make it easier to read; the source IPA keeps the full
+          distinction. One shared proposal for Mandarin, Min, Yue, Hakka, and Wu.
         </p>
-        <div className="roman-core" aria-label="Agreed stop consonants">
+        <div className="roman-core" aria-label="Core stop consonants">
           {[
             ["[p]", "p", "Unaspirated"],
             ["[pʰ]", "ph", "Aspirated"],
@@ -207,7 +237,7 @@ export default function RomanizationPage() {
                         <span aria-hidden="true">→</span>
                         <strong>
                           {/^\p{M}/u.test(step.spelling) ? "◌" : ""}
-                          {step.spelling}
+                          {step.spelling || "omitted"}
                         </strong>
                         <small>{step.status}</small>
                       </li>
@@ -247,6 +277,29 @@ export default function RomanizationPage() {
               <p>{selectedWord.note}</p>
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="roman-section" aria-labelledby="roman-reading-title">
+        <h2 id="roman-reading-title">Read the spelling</h2>
+        <div className="roman-featured">
+          {featuredReadings.map(({ title, note, word }) => (
+            <article key={word.id}>
+              <h3>{title}</h3>
+              <div className="roman-example-word">
+                <strong lang="zh-Hant">{word.han}</strong>
+                <span>{word.english} · {word.locality}</span>
+              </div>
+              <div className="roman-example-sound">
+                <span>{word.displayIpa}</span>
+                <ArrowRight size={16} aria-hidden="true" />
+                <strong>{word.spelling}</strong>
+              </div>
+              {word.registerLabel && <p className="roman-register">{word.registerLabel}</p>}
+              <p>{note}</p>
+              <a href={word.source.url} target="_blank" rel="noreferrer">Reading source</a>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -330,8 +383,10 @@ export default function RomanizationPage() {
           />
         </div>
         <p>
-          <b>Agreed</b> rules are settled starting points. <b>Trial</b>{" "}
-          spellings remain open to revision.
+          <b>Core</b> marks direct mappings; <b>Shared</b> groups different
+          IPA sounds under one spelling. <b>Detail</b> simplifies a phonetic mark;
+          <b> Retained</b> keeps it. These are HanLingo conventions, not source
+          romanizations.
         </p>
         <div className="roman-key-layout">
           <div className="roman-table-wrap">
@@ -362,33 +417,51 @@ export default function RomanizationPage() {
               <h3>h marks aspiration</h3>
               <p>
                 p → ph, ts → tsh, ch → chh. The whole base spelling receives h.
-                A standalone h still represents [h] in the working key.
+                Standalone h covers [h], [x], and [χ]; it is not always the
+                English h sound.
               </p>
             </div>
             <div>
-              <h3>Different places of articulation</h3>
+              <h3>Shared spellings, distinct sounds</h3>
               <p>
-                ts / tsh represent [t͡s] / [t͡sʰ]; ch / chh represent [tɕ] /
-                [tɕʰ]. Trial sh, š, sr, and hl keep [ɕ], [ʃ], [ʂ], and [ɬ]
-                distinct. Trial ḅ and ḍ mark implosives [ɓ] and [ɗ], separate
-                from b and d.
+                ch covers [tɕ] and [tʃ]; sh covers [ɕ] and [ʃ]. Retroflex
+                tsr / tsrh / sr / zr remain separate. hl marks [ɬ], while
+                ḅ / ḍ keep implosives [ɓ] / [ɗ] separate from b / d.
+                A shared spelling does not make two sounds identical.
+              </p>
+            </div>
+            <div aria-labelledby="roman-shared-example">
+              <h3 id="roman-shared-example">Same spelling, different sounds</h3>
+              {sharedSpellingExample.map((word) => (
+                <p key={word.id}>
+                  <span lang="zh-Hant">{word.han}</span> “{word.english}” {word.displayIpa}
+                  {" → "}<strong>{word.spelling}</strong>
+                </p>
+              ))}
+              <p>
+                These Suzhou readings both use {sharedSpellingExample[0].spelling}. Their vowels are different;
+                use the IPA to distinguish them. The shared spelling is a reading
+                aid, not a claim that they sound the same.{" "}
+                <a href={sharedSpellingExample[0].source.url} target="_blank" rel="noreferrer">
+                  Suzhou vowel study
+                </a>
               </p>
             </div>
             <div>
               <h3>Vowels stay separate from tone</h3>
               <p>
-                Trial ă represents [ɐ]; ã represents nasal [ã]. The breve
-                changes vowel quality; the tilde marks nasalization. Neither
-                marks tone. Trial oo, oe, er, and ae represent [ɔ], [ɤ], [ə],
-                and [ɛ]; ː marks length when the source supplies it.
+                ă represents [ɐ]; a~ represents nasal [ã]. ae / oo preserve
+                [ɛ] / [ɔ], while eo covers [ə] and [ɜ]. eu is [ɤ]; yu is
+                [y] or [ʏ]; oe covers [ø] and [œ]. Digraphs name vowel
+                qualities; only : marks supplied length.
               </p>
             </div>
           </div>
         </div>
         <p className="roman-note">
-          Single letters keep their displayed IPA values: j is [j], y is [y].
-          The table is a working key, not a claim that every variety uses every
-          sound.
+          y represents IPA [j]; j represents [dʑ] or [dʒ]. Explicit [i̯],
+          [u̯], and [y̯] become y, w, and yw. Plain vowels are never silently
+          reinterpreted as glides. Not every variety uses every sound in this key.
         </p>
       </section>
 
@@ -472,8 +545,8 @@ export default function RomanizationPage() {
       <section className="roman-section">
         <h2>Phonetic detail</h2>
         <p>
-          The working spelling retains these IPA marks until we settle dedicated
-          conventions.
+          Nasality and length receive simple marks. Syllabicity and unreleased
+          endings stay in IPA; phonation and voicing marks remain in both.
         </p>
         <div className="roman-table-wrap">
           <table>
@@ -481,7 +554,7 @@ export default function RomanizationPage() {
               <tr>
                 <th scope="col">IPA</th>
                 <th scope="col">{siteTerms.spelling}</th>
-                <th scope="col">What stays distinct</th>
+                <th scope="col">How to read it</th>
               </tr>
             </thead>
             <tbody>
@@ -523,11 +596,11 @@ export default function RomanizationPage() {
           <div>
             <h3>Next decisions</h3>
             <p>
-              The expanded sound key is a trial proposal: its vowel spellings,
-              retroflexes, voiced affricates, and phonation conventions remain
-              open to revision. Syllable boundaries and consistent detail across
-              sources still need decisions. Digraphs such as ng need boundary rules. The converter does not validate
-              phonotactics or provide a universal reverse conversion.
+              This is a reading aid, not a reversible phonetic alphabet. Shared
+              spellings cannot reconstruct the original IPA. The converter does
+              not infer pronunciation, apply tone sandhi, or validate syllables.
+              The expanded key remains a proposal; source IPA and documented
+              local reading conventions remain the reference.
             </p>
           </div>
         </div>

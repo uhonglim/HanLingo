@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { convertIpa } from "./romanization-method";
 import { xiamenWords } from "./xiamen-lexicon";
 import { mapPoints } from "./languages";
-import { getLocalLearning, spellingFor } from "./learning";
-import { romanizeXiamen } from "./xiamen-romanization";
+import { getLocalLearning, spellingFor, searchWords } from "./learning";
+import { romanizeXiamen, sharedSpellingRules } from "./xiamen-romanization";
 
 describe("public IPA spelling demonstrator", () => {
   it("matches the lesson converter for every published word and accounts for each sound", () => {
@@ -26,11 +26,11 @@ describe("public IPA spelling demonstrator", () => {
     expect(convertIpa("[tsʰa11]")[0].spelling).toBe("tsha11");
     expect(convertIpa("[tsʰa¹¹]")[0].spelling).toBe("tsha11");
     expect(convertIpa("/t͡ɕʰi35/")[0].spelling).toBe("chhi35");
-    expect(convertIpa("mi\u030322")[0].spelling).toBe("mĩ22");
-    expect(convertIpa("pŋ̩22")[0].spelling).toBe("png̍22");
+    expect(convertIpa("mi\u030322")[0].spelling).toBe("mi~22");
+    expect(convertIpa("pŋ̩22")[0].spelling).toBe("png22");
     expect(
       convertIpa("kɐn22")[0].steps.find((step) => step.ipa === "ɐ")?.status,
-    ).toBe("Trial");
+    ).toBe("Core");
   });
   it("rejects missing tones and unsupported IPA instead of guessing", () => {
     for (const input of ["", "te", "[ʙi35]", "te6", "te2345", "茶24", "ː35", "̃a35"])
@@ -50,19 +50,19 @@ describe("shared spelling coverage and evidence boundaries", () => {
       }
     }
   });
-  it("preserves vowel quality, nasalization, length and distinct consonants", () => {
+  it("preserves selected vowel contrasts, nasalization, length and core consonants", () => {
     const spell = (ipa: string) => convertIpa(ipa)[0].spelling;
     expect(spell("sɐm55")).toBe("săm55");
     expect(spell("sam55")).toBe("sam55");
-    expect(spell("sãm55")).toBe("sãm55");
-    expect(spell("sɑːm55")).toBe("saaːm55");
-    expect(new Set(["s", "ɕ", "ʃ", "ʂ", "ɬ"].map((sound) => spell(sound + "a35"))).size).toBe(5);
-    expect(new Set(["t͡s", "tɕ", "tʃ", "tʂ"].map((sound) => spell(sound + "a35"))).size).toBe(4);
+    expect(spell("sãm55")).toBe("sa~m55");
+    expect(spell("sɑːm55")).toBe("sa:m55");
+    expect(new Set(["s", "ɕ", "ʃ", "ʂ", "ɬ"].map((sound) => spell(sound + "a35"))).size).toBe(4);
+    expect(new Set(["t͡s", "tɕ", "tʃ", "tʂ"].map((sound) => spell(sound + "a35"))).size).toBe(3);
     expect(spell("kʷʰa55")).toBe("kwha55");
     expect(spell("ɓe34")).toBe("ḅe34");
     expect(spell("be34")).toBe("be34");
     expect(spell("ɦoŋ13")).toBe("hhong13");
-    expect(spell("ȵy213")).toBe("njy213");
+    expect(spell("ȵy213")).toBe("nyyu213");
   });
   it("does not turn tone categories or missing tones into pitch", () => {
     expect(convertIpa("[pat⁶]", "source-category")[0]).toMatchObject({spelling: "pat·T6", tone: "6", ipa: "pat6"});
@@ -72,5 +72,50 @@ describe("shared spelling coverage and evidence boundaries", () => {
     expect(() => convertIpa("pat˦", "source-category")).toThrow();
     expect(() => convertIpa("pat", "source-category")).toThrow();
     expect(() => convertIpa("̃", "unspecified")).toThrow();
+  });
+});
+
+
+describe("reading spelling v2", () => {
+  const spell = (ipa: string) => convertIpa(ipa)[0];
+  it("declares many-to-one families without changing the IPA or its tones", () => {
+    for (const family of [["h", "x", "χ"], ["ɕ", "ʃ"], ["tɕ", "tʃ"], ["ɲ", "ȵ"], ["a", "ɑ"], ["i", "ɪ"], ["u", "ʊ"], ["y", "ʏ"], ["ø", "œ"], ["ə", "ɜ"]]) {
+      const results = family.map(sound => spell(sound + "35"));
+      expect(new Set(results.map(s=>s.spelling)).size, family.join("/")).toBe(1);
+      expect(new Set(results.map(s=>s.ipa)).size).toBe(family.length);
+      expect(results.every(s=>s.tone === "35")).toBe(true);
+    }
+    expect(spell("xuei5").spelling).toBe("huei5");
+    expect(spell("xwei5").spelling).toBe("hwei5");
+    expect(spell("xu̯ei5").spelling).toBe("hwei5");
+    expect(spell("ja5").spelling).toBe("ya5");
+    expect(spell("dʑa5").spelling).toBe("ja5");
+    expect(spell("tʃʰa5").spelling).toBe("chha5");
+  });
+  it("keeps both sourced words searchable when their reading spellings coincide", () => {
+    const words = getLocalLearning(mapPoints.find(p=>p.id === "suzhou")!).words;
+    const matches = searchWords(words, "i44");
+    for (const [han, ipa] of [["衣", "[i44]"], ["煙", "[ɪ44]"]]) {
+      const word = matches.find(w=>w.han === han);
+      expect(word?.ipa).toBe(ipa);
+      expect(spellingFor(word!)).toBe("i44");
+    }
+  });
+  it("uses one key with no conflicting Unicode-normalized assignments", () => {
+    const keys = sharedSpellingRules.map(r=>r.ipa.normalize("NFD"));
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+  it("keeps detailed marks in IPA while making selected marks easier to type", () => {
+    expect(spell("pŋ̍22")).toMatchObject({ipa:"pŋ̍˨˨", spelling:"png22"});
+    expect(spell("pat̚4")).toMatchObject({ipa:"pat̚˦", spelling:"pat4"});
+    expect(spell("paʔ4").spelling).toBe("paq4");
+    expect(spell("mĩː22").spelling).toBe("mi~:22");
+    expect(spell("a̤35").spelling).toBe("a̤35");
+    expect(spell("a̰35").spelling).toBe("a̰35");
+    expect(spell("m̥a35").spelling).toBe("m̥a35");
+    for (const input of ["̩35", "̚35", "ː35", "̃a35"]) expect(()=>spell(input)).toThrow();
+    for (const family of [["pa", "pʰa", "ba"], ["ta", "tʰa", "da"], ["ka", "kʰa", "ɡa"], ["sa", "ɕa", "ʂa"], ["e", "ɛ"], ["o", "ɔ"], ["a", "ɐ"], ["u", "y"]]) {
+      expect(new Set(family.map(s=>spell(s+"35").spelling)).size).toBe(family.length);
+    }
   });
 });

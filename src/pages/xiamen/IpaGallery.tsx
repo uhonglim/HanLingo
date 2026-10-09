@@ -6,7 +6,7 @@ import type { XiamenWord } from "../../data/xiamen-lexicon";
 import {
   pitchLetters,
   romanizeXiamen,
-  xiamenSpellingKey,
+  spellSegments,
 } from "../../data/xiamen-romanization";
 import "./IpaGallery.css";
 
@@ -66,7 +66,7 @@ function categoryOf(symbol: string): SoundCategory {
 const soundDescriptions: Record<string, { name: string; note: string }> = {
   p: {
     name: "Voiceless bilabial stop",
-    note: "Compare [p] with voiced [b]. The spelling p is agreed.",
+    note: "Compare [p] with voiced [b]. HanLingo writes [p] as p.",
   },
   b: {
     name: "Voiced bilabial stop",
@@ -94,7 +94,7 @@ const soundDescriptions: Record<string, { name: string; note: string }> = {
   },
   t͡sʰ: {
     name: "Aspirated alveolar affricate",
-    note: "The aspiration mark distinguishes [t͡sʰ] from [t͡s]. The agreed spelling is tsh.",
+    note: "The aspiration mark distinguishes [t͡sʰ] from [t͡s]. HanLingo writes it as tsh.",
   },
   m: {
     name: "Bilabial nasal",
@@ -146,27 +146,27 @@ const soundDescriptions: Record<string, { name: string; note: string }> = {
   },
   ã: {
     name: "Nasal open vowel",
-    note: "The tilde marks nasalization. The source’s everyday reading of 三 uses this vowel.",
+    note: "The IPA tilde marks nasalization. HanLingo writes a~ for this vowel in 三.",
   },
   ĩ: {
     name: "Nasal close front vowel",
-    note: "The tilde marks nasalization in 麵 and 錢; HanLingo spelling retains it.",
+    note: "The IPA tilde marks nasalization in 麵 and 錢; HanLingo writes i~.",
   },
   ŋ̍: {
     name: "Syllabic velar nasal",
-    note: "The vertical mark says that this nasal carries the syllable, as in 飯 and 兩.",
+    note: "The vertical mark says that this nasal carries the syllable, as in 飯 and 兩. HanLingo writes ng; IPA keeps the syllabicity detail.",
   },
   p̚: {
     name: "Unreleased bilabial stop",
-    note: "The final mark indicates no audible release. HanLingo spelling retains it.",
+    note: "The final mark indicates no audible release. HanLingo writes p; IPA keeps the unreleased mark.",
   },
   t̚: {
     name: "Unreleased alveolar stop",
-    note: "The source marks this final stop as unreleased in 一 and 七.",
+    note: "The source marks this final stop as unreleased in 一 and 七. HanLingo writes t; IPA keeps the release detail.",
   },
   k̚: {
     name: "Unreleased velar stop",
-    note: "The source marks the final stop in 六 as unreleased.",
+    note: "The source marks the final stop in 六 as unreleased. HanLingo writes k; IPA keeps the release detail.",
   },
   ʔ: {
     name: "Glottal stop",
@@ -225,12 +225,10 @@ const sandhiUrl =
   "https://ling.cuhk.edu.hk/people/peggy/SP2024_GeMok_Phonotactics.pdf";
 
 function spellingFor(sound: string) {
-  const rule = xiamenSpellingKey.find(
-    (item) => item.ipa.normalize("NFC") === sound.normalize("NFC"),
-  );
+  const result = spellSegments(sound);
   return {
-    spelling: romanizeXiamen([sound], ["44"]).slice(0, -2),
-    status: rule?.status ?? "Trial",
+    spelling: result.spelling,
+    status: [...new Set(result.steps.map((step) => step.status))].join(" · "),
   };
 }
 
@@ -585,7 +583,7 @@ export default function IpaGallery() {
           on Wiktionary. Each example links to its recorded source revision. IPA
           tone letters display the same pitch values as the source’s numbers.
         </p>
-        <p>“Agreed” rules are accepted; “Trial” rules are provisional.</p>
+        <p>Shared spellings simplify reading. IPA keeps the precise sound and detail.</p>
       </footer>
     </div>
   );

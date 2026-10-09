@@ -22,21 +22,14 @@ Aim for **9–11 distinct photos per locality**, comparable to Amoy’s 11: arch
 
 Expose words, sounds, culture and photos at group/branch overviews with balanced locality sampling. Keep full collections in their existing locality chapters. Do not claim that a photo-rich page is a complete language course.
 
-## Agreed romanization decisions
+## Shared romanization proposal
 
-These rules come from direct user decisions:
+Use one global deterministic IPA-to-HanLingo key. The same IPA receives the same spelling in every locality; different IPA sounds may deliberately share a spelling. This is a lossy reading aid, not a phonemic standard or a claim that the sounds are equivalent. Exact source IPA, source orthographies and documented community place names remain unchanged.
 
-| IPA | HanLingo | Meaning |
-| --- | --- | --- |
-| [p] / [pʰ] / [b] | p / ph / b | unaspirated / aspirated / voiced |
-| [t͡s] / [t͡sʰ] | ts / tsh | alveolar affricates |
-| [tɕ] / [tɕʰ] | ch / chh | alveolo-palatal affricates |
-| [˧˥] / [˥˩] | 35 / 51 | supplied pitch contour; 1 low, 5 high |
+Core stop distinctions remain p/ph/b, t/th/d, k/kh/g and ts/tsh. Append h for aspiration. Shared families include [h x χ]→h, [ɕ ʃ]→sh, [ʑ ʒ]→zh, [tɕ tʃ]→ch (aspirated chh), [dʑ dʒ]→j, [ɲ ȵ]→ny; [a ɑ]→a, [i ɪ]→i, [u ʊ]→u, [y ʏ]→yu, [ø œ]→oe, [ə ɜ]→eo. The retroflex series and implosives retain separate spellings. Further mappings include [ɤ]→eu, [ɨ]→ii, [j]→y, [ɥ]→yw, [ɣ]→gh, [ɦ]→hh and [ɐ]→ă. Read the complete current key in `docs/ROMANIZATION.md` before editing it; do not introduce locality-specific values.
 
-Append h consistently for aspiration. Preserve distinctions across varieties rather than importing Pinyin letter values. Keep vowels and tones separate. One IPA sound has one assigned spelling; shared Han characters may have different local spellings.
+Nasalization uses ASCII ~ after the vowel and supplied length uses :. Syllabicity and unreleased-stop marks are omitted only from the spelling; source IPA keeps them. Supported phonation and voicing combining marks remain visible. Explicit nonsyllabic [u̯ i̯ y̯] becomes w/y/yw; plain [u] remains u, so supplied xuei5 becomes huei5. Do not infer glides, phonation or tones.
 
-**Trial, not settled:** ă=[ɐ] (replaces earlier â), oo=[ɔ], oe=[ɤ], er=[ə], ae=[ɛ], ng=[ŋ], q=[ʔ], th/kh and other extensions currently listed by the converter. The expanded working key now maps all published IPA word segments, including sh=[ɕ], distinct retroflex/postalveolar spellings, broader vowels, and implosives. These extensions remain Trial; they are not finalized merely because a variety uses them. Preserve nasal ã separately from ă and retain supplied length. Syllable boundaries and reverse conversion remain open.
+The sound key labels mapping roles Core, Shared, Detail and Retained; these do not grade evidence or claim a final community standard. Supplied pitch contours retain digits 1–5, including the source’s one-digit versus multidigit notation. Explicit source categories use ·Tn, never pitch suffixes. Supplied segments without tones receive segment spelling and a visible tones-not-given label. Unsupported sounds remain unresolved. There is no Han-character pronunciation inference, automatic sandhi, phonotactic validation or collision-free reverse conversion.
 
-Retain supported nasalization, syllabicity, length and unreleased-stop marks. Preserve the source’s one-digit versus multi-digit pitch notation. The converter is bounded: no Han-character pronunciation inference, automatic sandhi, phonotactic validation or promised universal reverse conversion. Unsupported sounds remain unresolved. Supplied segments without tones may be spelled without tone digits, with a visible tones-not-given label. Explicit source-category digits use ·Tn, never pitch-contour suffixes.
-
-`/romanization` serves all five groups equally, with examples derived from existing records and live coverage counts. `src/data/romanization-examples.ts` owns examples; `romanization-method.ts` owns parsing. The legacy `xiamen-romanization.ts` remains a shared implementation dependency despite its name. Display `HanLingo spelling` separately from `IPA`. Read `docs/ROMANIZATION.md` before changing rules; update meaningful tests for any conversion change.
+`/romanization` serves all five groups equally, with examples derived from existing records and live coverage counts. `src/data/romanization-examples.ts` owns examples; `romanization-method.ts` owns parsing. The legacy `xiamen-romanization.ts` is the shared key despite its name. Display `HanLingo spelling` separately from `IPA`. Update meaningful tests for conversion changes. Saved words remain keyed by stable record IDs, not merged spellings; generated translations never supply lesson IPA or HanLingo spelling.

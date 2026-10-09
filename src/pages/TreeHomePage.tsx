@@ -1,121 +1,70 @@
-import { siteTerms } from "../data/site-terms";
 import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
-import { languages, mapPoints } from "../data/languages";
-import { xiamenPhotos } from "../data/xiamen-photos";
-import { xiamenWords } from "../data/xiamen-lexicon";
-import { romanizeXiamen } from "../data/xiamen-romanization";
+import { ArrowUpRight } from "lucide-react";
+import { languages, mapPoints, type LanguageId } from "../data/languages";
+import { groupPhotos } from "../data/photography";
+import { getLocalLearning, spellingFor } from "../data/learning";
+import { placeLabel } from "../data/language-names";
+import { varietyPath } from "../routing";
+import Pronunciation from "../components/Pronunciation";
 import "./TreeHomePage.css";
 
-const xiamenPath = "/min/southern-min/xiamen";
-const photo =
-  xiamenPhotos.find((item) => item.id === "gulangyu-rooftops") ??
-  xiamenPhotos[0];
-const words = ["sea", "water", "boat"].flatMap((id) => {
-  const word = xiamenWords.find((item) => item.id === id);
-  return word ? [word] : [];
+const selections: Record<LanguageId, { locality: string; word: string; scene: string }> = {
+  mandarin: { locality: "beijing-city", word: "beijing-city-ipa-eight", scene: "A Chengdu teahouse" },
+  min: { locality: "xiamen", word: "xiamen-water", scene: "An Amoy shopping street" },
+  yue: { locality: "guangzhou", word: "guangzhou-ding-heart", scene: "Backstage in Guangzhou" },
+  hakka: { locality: "meixian", word: "meixian-tea", scene: "The Tung Blossom Festival" },
+  wu: { locality: "shanghai", word: "shanghai-cuhk-31859", scene: "Suzhou Pingtan performers" },
+};
+
+const entries = languages.map((group) => {
+  const selection = selections[group.id];
+  const point = mapPoints.find((place) => place.id === selection.locality)!;
+  const word = getLocalLearning(point).words.find((item) => item.id === selection.word)!;
+  return { group, point, word, scene: selection.scene, photo: groupPhotos[group.id] };
 });
 
 export default function TreeHomePage() {
   return (
     <div className="tree-home">
       <header className="thp-heading">
-        <h1>
-          Han languages <span lang="zh-Hans">汉</span>
-        </h1>
-        <p>
-          Mandarin, Min, Yue, Hakka, and Wu are the five language groups
-          featured here, a selection from the wider Sinitic family.
-        </p>
+        <h1>Han languages,<br /><span>place by place.</span></h1>
+        <div className="thp-introduction">
+          <p>Learn the words. Explore the sounds.{" "}<br />Meet the cultures behind them.</p>
+          <p className="thp-coverage">{languages.reduce((total, group) => total + group.subgroups.length, 0)} branches · {mapPoints.length} localities</p>
+        </div>
       </header>
-      <dl className="thp-groups" aria-label="Five featured language groups">
-        {languages.map((group) => (
-          <div key={group.id}>
-            <dt>
-              <Link to={`/${group.id}`}>{group.name}</Link>
-              <span lang="zh-Hant">{group.nativeName}</span>
-            </dt>
-            <dd>{group.feature}<span className="thp-group-depth">{group.subgroups.length} branches · {mapPoints.filter((place) => place.groupId === group.id).length} localities</span></dd>
-          </div>
-        ))}
-      </dl>
-      <section className="thp-xiamen" aria-labelledby="thp-xiamen-title">
-        <div className="thp-entry-heading">
-          <h2 id="thp-xiamen-title">
-            <Link to={xiamenPath}>
-              Amoy <span lang="zh-Hant">廈門</span>
+
+      <section className="thp-collection" aria-label="Five featured language groups">
+        {entries.map(({ group, point, word, scene, photo }, index) => (
+          <article className="thp-group" key={group.id}>
+            <Link to={`/${group.id}`} className="thp-group-photo" aria-label={`Explore ${group.name}`}>
+              <img src={photo.src} alt={photo.alt} style={{ objectPosition: photo.position }}
+                width="480" height="640" fetchPriority={index < 2 ? "high" : "auto"} />
+              <span className="thp-photo-name" lang="zh-Hant">{group.nativeName}</span>
+              <ArrowUpRight size={20} aria-hidden="true" />
             </Link>
-          </h2>
-        </div>
-        <div className="thp-entry-content">
-          <figure className="thp-photo">
-            <Link to={xiamenPath} aria-label="Open Amoy learning">
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                width="1920"
-                height="1440"
-                fetchPriority="high"
-              />
-            </Link>
-            <figcaption>
-              <span>
-                {photo.caption}
-                {photo.year && ` ${photo.year}.`}
-              </span>
-              <span>
-                <a href={photo.sourceUrl} target="_blank" rel="noreferrer">
-                  {photo.author}
-                </a>
-                {" · "}
-                <a href={photo.licenseUrl} target="_blank" rel="noreferrer">
-                  {photo.license}
-                </a>
-              </span>
-            </figcaption>
-          </figure>
-          <div className="thp-vocabulary">
-            <table>
-              <caption className="sr-only">
-                Amoy words with citation tones
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">Word</th>
-                  <th scope="col">{siteTerms.spelling}</th>
-                  <th scope="col">IPA</th>
-                </tr>
-              </thead>
-              <tbody>
-                {words.map((word) => (
-                  <tr key={word.id}>
-                    <th scope="row">
-                      <span lang="zh-Hant">{word.han}</span>
-                      <span>{word.english}</span>
-                    </th>
-                    <td>{romanizeXiamen(word.segments, word.tones)}</td>
-                    <td>{word.ipa}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <details className="thp-sources">
-              <summary>
-                Word sources <ChevronDown size={14} aria-hidden="true" />
-              </summary>
-              <ul>
-                {words.map((word) => (
-                  <li key={word.id}>
-                    <a href={word.sourceUrl} target="_blank" rel="noreferrer">
-                      {word.sourceLabel}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <div className="thp-group-heading">
+              <h2><Link to={`/${group.id}`}>{group.name}</Link></h2>
+              <p>{group.subgroups.length} branches · {mapPoints.filter((place) => place.groupId === group.id).length} localities</p>
+            </div>
+            <p className="thp-geography">{group.feature}</p>
+            <div className="thp-word">
+              <Link className="thp-locality" to={`${varietyPath(point)}/words`}>{placeLabel(point)} <ArrowUpRight size={13} aria-hidden="true" /></Link>
+              <div className="thp-word-meaning"><span lang="zh-Hant">{word.han}</span><span>{word.english}</span></div>
+              <Pronunciation ipa={word.ipa} spelling={spellingFor(word)} toneNotation={word.toneNotation} />
+              <p className="thp-reading">{word.registerLabel ?? word.reading}</p>
+            </div>
+            <details className="thp-evidence">
+              <summary>Reading &amp; photo sources</summary>
+              <p>{word.note}</p>
+              <a href={word.source.url} target="_blank" rel="noreferrer">{word.source.title}</a>
+              <p><strong>{scene}.</strong> {photo.caption}</p>
+              <p><a href={photo.sourceUrl} target="_blank" rel="noreferrer">{photo.author}</a>{" · "}<a href={photo.licenseUrl} target="_blank" rel="noreferrer">{photo.license}</a></p>
             </details>
-          </div>
-        </div>
+          </article>
+        ))}
       </section>
+      <p className="thp-context">Five groups from the wider Sinitic family. Each reading belongs to a specific locality and source. <Link to="/romanization">How IPA becomes HanLingo spelling <ArrowUpRight size={13} aria-hidden="true" /></Link></p>
     </div>
   );
 }

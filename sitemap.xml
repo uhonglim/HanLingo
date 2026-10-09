@@ -229,6 +229,7 @@
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-jiayu/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-chibi/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-chongyang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/huairou/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/miyun/</loc></url>
@@ -1421,6 +1422,18 @@
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-yangxin/gan-yangxin-wangying/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-yangxin/gan-yangxin-sanxi/</loc></url>
   <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/hengyang-xiang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/jiangyong-chengguan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-qianshan-meicheng/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-susong-jiugu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-wangjiang-yatan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-taihu-xincang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-dongzhi-yaodu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-yuexi-tiantang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-susong-erlang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-huaining-shipai/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-wangjiang-saikou/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/qiwu/qimen-wuyuan/youshan-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/singapore-cantonese/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/sounds/</loc></url>
@@ -1743,4 +1756,28 @@
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-yangxin/gan-yangxin-sanxi/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/hengyang-xiang/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/hengyang-xiang/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/jiangyong-chengguan/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/jiangyong-chengguan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-qianshan-meicheng/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-qianshan-meicheng/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-susong-jiugu/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-susong-jiugu/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-wangjiang-yatan/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-wangjiang-yatan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-taihu-xincang/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-taihu-xincang/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-dongzhi-yaodu/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-dongzhi-yaodu/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-yuexi-tiantang/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-yuexi-tiantang/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-susong-erlang/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-susong-erlang/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-huaining-shipai/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-huaining-shipai/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-wangjiang-saikou/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-wangjiang-saikou/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/qiwu/qimen-wuyuan/youshan-hui/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/qiwu/qimen-wuyuan/youshan-hui/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/singapore-cantonese/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/singapore-cantonese/sounds/</loc></url>
 </urlset>

@@ -1,8 +1,11 @@
 import { staticPages } from "./scripts/static-pages";
-import { defineConfig } from "vite";
+import { configDefaults, defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react(), staticPages()],
+  test: {
+    exclude: [...configDefaults.exclude, ".evidence/**"],
+  },
   server: {
     proxy: {
       "/api/translation": "http://127.0.0.1:8788",

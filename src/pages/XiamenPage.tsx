@@ -20,7 +20,7 @@ import {
   X,
 } from "lucide-react";
 import { readingLabels, siteTerms } from "../data/site-terms";
-import { xiamenWords } from "../data/xiamen-lexicon";
+import { xiamenLearningWords as xiamenWords, xiamenCanDistract } from "../data/xiamen-expanded-lexicon";
 import {
   filterXiamenWords,
   vocabularyCategories as categories,
@@ -129,6 +129,7 @@ function WordCard({
         spelling={roman(word)}
         toneNotation="pitch-contour"
       />
+      {word.registerLabel && <p className="ipa-gallery-reading-mode">{word.registerLabel}</p>}
       <details className="xm-word-detail">
         <summary>
           Reading and source <ChevronRight size={12} />
@@ -456,7 +457,7 @@ function Practice({
         pool,
         6,
         Math.random,
-        (a, b) => ![a.id, b.id].every((id) => id === "two" || id === "two-er"),
+        xiamenCanDistract,
       ),
     );
     setIndex(0);
@@ -545,6 +546,7 @@ function Practice({
                     {roman(word)}
                     <br />
                     {word.ipa}
+                    {word.registerLabel && <span className="ipa-gallery-reading-mode">{word.registerLabel}</span>}
                   </Link>
                 </small>
               </div>
@@ -585,6 +587,7 @@ function Practice({
               >
                 <b lang="zh-Hant">{word.han}</b>
                 <span>{roman(word)}</span>
+                {word.registerLabel && <small>{word.registerLabel}</small>}
               </button>
             ))}
           </div>
@@ -599,6 +602,7 @@ function Practice({
                 <p>
                   {roman(current.answer)} <span>· {current.answer.ipa}</span>
                 </p>
+                {current.answer.registerLabel && <p className="ipa-gallery-reading-mode">{current.answer.registerLabel}</p>}
                 <small>{current.answer.note}</small>
               </div>
               <button

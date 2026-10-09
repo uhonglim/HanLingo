@@ -14,6 +14,7 @@ export type XiamenWord = {
   sourceLabel: string;
   sourceReading: string;
   readingMode: "Citation" | "Connected speech";
+  registerLabel?: string;
 };
 
 const superscriptDigits: Record<string, string> = {

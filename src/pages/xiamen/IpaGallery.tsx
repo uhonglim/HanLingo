@@ -3,10 +3,11 @@ import PlaceName from "../../components/PlaceName";
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { readingLabels, siteTerms } from "../../data/site-terms";
-import { xiamenWords } from "../../data/xiamen-lexicon";
+import { xiamenLearningWords as xiamenWords } from "../../data/xiamen-expanded-lexicon";
 import type { XiamenWord } from "../../data/xiamen-lexicon";
 import {
   pitchLetters,
+  normalizeSegments,
   romanizeXiamen,
   spellSegments,
 } from "../../data/xiamen-romanization";
@@ -18,6 +19,9 @@ export function splitIpaSymbols(syllable: string): string[] {
   const result: string[] = [];
   for (let i = 0; i < input.length; i++) {
     let symbol = input[i];
+    // The comparison table uses untied ts for the same affricate. Group it
+    // without changing the displayed source sequence or matching a plain s.
+    if (symbol === "t" && input[i + 1] === "s") symbol += input[++i];
     while (i + 1 < input.length) {
       const next = input[i + 1];
       if ((next === "\u0361" || next === "\u035c") && i + 2 < input.length) {
@@ -34,10 +38,10 @@ export function splitIpaSymbols(syllable: string): string[] {
 }
 
 export function wordsWithSound(sound: string): XiamenWord[] {
-  const selected = sound.normalize("NFC");
+  const selected = normalizeSegments(sound).normalize("NFC");
   return xiamenWords.filter((word) =>
     word.segments.some((syllable) =>
-      splitIpaSymbols(syllable).includes(selected),
+      splitIpaSymbols(syllable).some(symbol => normalizeSegments(symbol).normalize("NFC") === selected),
     ),
   );
 }
@@ -77,6 +81,10 @@ const soundDescriptions: Record<string, { name: string; note: string }> = {
   t: {
     name: "Voiceless alveolar stop",
     note: "The opening sound in 茶. This is separate from the affricate [t͡s].",
+  },
+  tʰ: {
+    name: "Aspirated alveolar stop",
+    note: "Compare [tʰ] with unaspirated [t]. HanLingo writes th.",
   },
   k: {
     name: "Voiceless velar stop",
@@ -150,6 +158,10 @@ const soundDescriptions: Record<string, { name: string; note: string }> = {
     name: "Nasal open vowel",
     note: "The IPA tilde marks nasalization. HanLingo writes a~ for this vowel in 三.",
   },
+  ẽ: {
+    name: "Nasal close-mid front vowel",
+    note: "The tilde marks nasalization. HanLingo writes e~; compare oral [e].",
+  },
   ĩ: {
     name: "Nasal close front vowel",
     note: "The IPA tilde marks nasalization in 麵 and 錢; HanLingo writes i~.",
@@ -180,6 +192,7 @@ const soundOrder = [
   "p",
   "b",
   "t",
+  "tʰ",
   "k",
   "kʰ",
   "ɡ",
@@ -198,6 +211,7 @@ const soundOrder = [
   "o",
   "ɔ",
   "ĩ",
+  "ẽ",
   "ã",
   "ŋ̍",
   "p̚",
@@ -206,12 +220,15 @@ const soundOrder = [
   "ʔ",
 ];
 const attested = new Set(
-  xiamenWords.flatMap((word) => word.segments.flatMap(splitIpaSymbols)),
+  xiamenWords.flatMap((word) => word.segments.flatMap(splitIpaSymbols).map(normalizeSegments)),
 );
 export const gallerySounds = [...attested].sort(
   (a, b) => soundOrder.indexOf(a) - soundOrder.indexOf(b),
 );
-const tones = ["44", "24", "53", "21", "22", "32", "4"];
+const referenceToneOrder = ["44", "24", "53", "21", "22", "32", "4"];
+export const galleryTones = [...new Set([...referenceToneOrder, ...xiamenWords.flatMap(word => word.tones)])]
+  .filter(tone => xiamenWords.some(word => word.tones.includes(tone)));
+const tones = galleryTones;
 const toneNames: Record<string, string> = {
   "44": "High level",
   "24": "Low to high",
@@ -220,6 +237,7 @@ const toneNames: Record<string, string> = {
   "22": "Low level",
   "32": "Short falling",
   "4": "Short high",
+  "55": "High level · source 55", "35": "Middle to high", "11": "Low level · source 11", "5": "High · source 5",
 };
 const gazetteerUrl =
   "https://data.fjdsfzw.org.cn/upload/Annals/2011/%E6%96%B9%E8%A8%80%E5%BF%97/epub/ops/215.htm";
@@ -250,7 +268,7 @@ function HighlightedIpa({
         <span key={i}>
           {i > 0 && " "}
           {splitIpaSymbols(syllable).map((symbol, j) =>
-            symbol === sound ? (
+            normalizeSegments(symbol) === sound ? (
               <mark key={j}>{symbol}</mark>
             ) : (
               <span key={j}>{symbol}</span>
@@ -293,7 +311,7 @@ function WordExamples({
               {romanizeXiamen(word.segments, word.tones)}
             </p>
             <span className="ipa-gallery-reading-mode">
-              {readingLabels[word.readingMode]}
+              {word.registerLabel ? `${word.registerLabel} · ${readingLabels[word.readingMode]}` : readingLabels[word.readingMode]}
             </span>
             <details>
               <summary>Reading and source</summary>
@@ -464,12 +482,12 @@ export default function IpaGallery() {
       >
         <h2 id="ipa-tones-heading">Tones</h2>
         <p className="ipa-gallery-intro">
-          Pitch runs from 1 (low) to 5 (high). These seven reference contours
-          follow the Xiamen table in the{" "}
+          Pitch runs from 1 (low) to 5 (high). Each reading retains its source’s
+          contour, including differences between studies. The{" "}
           <a href={gazetteerUrl} target="_blank" rel="noreferrer">
             Fujian dialect gazetteer
-          </a>
-          .
+          </a>{" "}
+          is one reference; the dated Amoy comparison supplies additional readings.
         </p>
         <div
           className="ipa-gallery-tones"
@@ -509,6 +527,7 @@ export default function IpaGallery() {
                 </b>
                 <p>{toneExample.english}</p>
                 <HighlightedIpa word={toneExample} tone={tone} />
+                {toneExample.registerLabel && <p className="ipa-gallery-reading-mode">{toneExample.registerLabel}</p>}
               </>
             )}
             {(tone === "32" || tone === "4") && (

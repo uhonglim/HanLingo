@@ -1,3 +1,4 @@
+import { localRecordings } from './local-recordings';
 import { atlasBranches } from "./atlas";
 import { learningPlaces as mapPoints } from "./learning/places";
 import { getLocalLearning, availableSections } from "./learning";
@@ -27,6 +28,7 @@ export function localityDepth(localityId: string) {
     sourceSpellingWords: sourceReadings.length,
     words: data.words.length + sourceReadings.length,
     photos: getLocalGallery(localityId).length,
+    hostedRecordings: localRecordings.filter(item => item.localityId === localityId).length,
     soundNotes: data.soundNotes.length,
     cultureTopics: data.culture.filter((item) => item.text.trim()).length,
     learningSources: new Set(data.resources.map((item) => item.url)).size,

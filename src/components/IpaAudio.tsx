@@ -29,7 +29,7 @@ export function IpaAudioPreview({ ipa, notation = 'unspecified' }: { ipa: string
   const active = state.owner === owner && (state.status === 'playing' || state.status === 'loading');
   if (plan.missing.length) return <p className="ipa-audio-gap">No exact demo for {plan.missing.map(s => `[${s}]`).join(', ')}. <Link to="/romanization#listen">Explore recorded sounds</Link>.</p>;
   if (!plan.samples.length) return null;
-  const current = state.owner === owner && state.sample ? state.sample : plan.samples[0];
+  const current = state.owner === owner && state.sample ? plan.samples.find(sample => sample.id === state.sample?.id) ?? plan.samples[0] : plan.samples[0];
   return <div className="ipa-audio-preview">
     <button type="button" className="ipa-audio-play" onClick={() => active ? ipaPlayback.stop() : ipaPlayback.play(plan.samples, owner)}>
       {active ? <Square size={15} aria-hidden="true" /> : <Play size={15} aria-hidden="true" />}
@@ -47,7 +47,7 @@ export default function IpaSoundLab() {
   const [selected, setSelected] = useState(ipaSamples.find(s => s.ipa === 'y')!);
   useEffect(() => () => { if (ipaPlayback.getSnapshot().owner === owner) ipaPlayback.stop(); }, [owner]);
   const active = state.owner === owner && (state.status === 'playing' || state.status === 'loading');
-  const current = state.owner === owner && state.sample ? state.sample : selected;
+  const current = state.owner === owner && state.sample ? ipaSamples.find(sample => sample.id === state.sample?.id) ?? selected : selected;
   return <section className="ipa-sound-lab roman-section" id="listen" aria-labelledby="ipa-listen-heading">
     <header><div><h2 id="ipa-listen-heading">Hear the IPA</h2><p>{ipaSamples.length} human-recorded vowel demonstrations. Tap a symbol to listen.</p></div><a href="/audio/hanlingo-ipa-pack.zip" download>Download sound pack</a></header>
     <p className="ipa-audio-scope">General vowel demonstrations, not local word recordings. Tones and connected speech are not performed.</p>

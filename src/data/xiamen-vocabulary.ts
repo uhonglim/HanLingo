@@ -1,5 +1,5 @@
 import { ipaSearchForms } from "./ipa-display";
-import { xiamenWords } from "./xiamen-lexicon";
+import { xiamenLearningWords as xiamenWords } from "./xiamen-expanded-lexicon";
 import { romanizeXiamen } from "./xiamen-romanization";
 
 export const vocabularyCategories = [
@@ -18,6 +18,7 @@ const simplified: Record<string, string> = {
   錢: "钱",
   飛機: "飞机",
   兩: "两",
+  豬: "猪", 關: "关", 賣: "卖", 軟: "软", 橫: "横", 懸: "悬", 節: "节",
 };
 // Search tolerates omitted diacritics; displayed transcriptions remain unchanged.
 const normalize = (value: string) =>

@@ -13,7 +13,8 @@
     "api": "node --env-file-if-exists=.env.local server/index.mjs",
     "test:translation": "node --test server/*.node.mjs",
     "build:translation-evidence": "node scripts/build-translation-evidence.mjs",
-    "audit:names": "node scripts/audit-place-names.mjs"
+    "audit:names": "node scripts/audit-place-names.mjs",
+    "audit:min-readings": "node scripts/verify-min-sinica.mjs"
   },
   "dependencies": {
     "d3-geo": "^3.1.1",

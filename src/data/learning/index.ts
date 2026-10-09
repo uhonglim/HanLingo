@@ -1,3 +1,7 @@
+import { minMainlandCulture } from './min-mainland-culture';
+import { minExpandedReadings } from './min-expanded-readings';
+import { minSouthernExpanded } from './min-southern-expanded';
+import { overseasMinLearning } from './min-overseas';
 import { atlasCulturePacks } from "./atlas-culture";
 import { atlasLearningPacks } from "./atlas-learning";
 import { huangyanCulture } from "./huangyan-culture";
@@ -24,7 +28,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,
@@ -62,12 +66,12 @@ export function getLocalLearning(point: MapPoint) {
   const pack = getBranchLearning(point.groupId, point.subgroupId);
   const baseWords: AttestedWord[] =
     point.id === "xiamen"
-      ? xiamenWords.map((word) => ({
+      ? [...xiamenWords.map((word) => ({
           id: `xiamen-${word.id}`,
           han: word.han,
           english: word.english,
           ipa: word.ipa,
-          toneNotation: "pitch-contour",
+          toneNotation: "pitch-contour" as const,
           localityId: "xiamen",
           reading:
             word.readingMode === "Citation"
@@ -75,7 +79,7 @@ export function getLocalLearning(point: MapPoint) {
               : "Connected speech",
           note: word.note,
           source: { title: word.sourceLabel, url: word.sourceUrl },
-        }))
+        })), ...(pack?.words.filter((word) => word.localityId === "xiamen") ?? [])]
       : (pack?.words.filter((item) => item.localityId === point.id) ?? []);
   const existing = new Set(baseWords.map((word) => wordMeaning(word.english)));
   const additions = regionalReadingsFor(point.id).filter(

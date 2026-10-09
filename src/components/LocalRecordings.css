@@ -1,0 +1,9 @@
+.local-recordings { padding: 0 0 2rem; margin: 0 0 2rem; border-bottom: 1px solid var(--line, #ddd7cc); }
+.local-recordings > h2 { font-size: 1.45rem; margin: 0 0 1.5rem; }
+.local-recordings article { max-width: 46rem; }
+.local-recording-heading { display: flex; align-items: center; gap: 1.25rem; }
+.local-recording-heading h3 { font-size: 1.1rem; margin: 0; }
+.local-recording-heading p { margin: .3rem 0 0; }
+.local-recordings p { line-height: 1.65; }
+.local-recording-status { min-height: 1.65em; margin: .25rem 0; }
+@media (max-width: 560px) { .local-recording-heading { align-items: flex-start; gap: .75rem; } }

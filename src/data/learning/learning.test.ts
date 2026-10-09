@@ -1,7 +1,8 @@
+import { atlasBranches } from '../atlas';
 import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import { languages, mapPoints } from "../languages";
+import { mapPoints } from "../languages";
 import {
   branchLearning,
   availableSections,
@@ -20,14 +21,12 @@ function sourceUrl(value: string) {
 }
 describe("learning coverage across every branch", () => {
   it("covers every published branch with scoped sound, culture, and learning sources", () => {
-    const expected = languages
-      .flatMap((group) =>
-        group.subgroups.map((branch) => `${group.id}/${branch.id}`),
-      )
-      .sort();
-    expect(branchLearning.map((pack) => pack.branchId).sort()).toEqual(
-      expected,
-    );
+    const known = new Set(atlasBranches.map(branch => `${branch.groupId}/${branch.id}`));
+    for (const pack of branchLearning) expect(known.has(pack.branchId), pack.branchId).toBe(true);
+    // Catalogue-only branches stay measurable; a learning pack requires evidence.
+    for (const branch of atlasBranches.filter(branch => branch.groupId === "min")) {
+      expect(branchLearning.some(pack => pack.branchId === `${branch.groupId}/${branch.id}`)).toBe(true);
+    }
     for (const pack of branchLearning) {
       expect(pack.soundNotes.length, pack.branchId).toBeGreaterThan(0);
       expect(pack.culture.length, pack.branchId).toBeGreaterThan(0);

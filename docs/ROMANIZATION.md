@@ -28,7 +28,7 @@ Romanization need not be a reversible encoding of phonetic transcription. The [o
 | [r ɹ ɻ] | r |
 | [ŋ ʔ ɦ ɣ ɬ ɓ ɗ] | ng q hh gh hl ḅ ḍ |
 | [a ɑ], [i ɪ], [u ʊ], [y ʏ] | a, i, u, ü |
-| [ø œ], [ə ɜ] | oe, eo |
+| [ø œ], [ə ɘ ɜ] | oe, eo |
 | [ɐ ɛ ɔ æ ɒ ɯ ɤ ɨ ɿ ʮ] | ă ae oo ea ao uu eu ii ir yr |
 | [j ɥ], explicit [i̯ u̯ y̯] | y yw, y w yw |
 
@@ -76,3 +76,5 @@ Sourced examples: Beijing 說 [ʂuo55] → shuo55 and 茶 [tʂʰa35] → chha35 
 Use **ü** for [y ʏ], **y** for [j], and **u** for [u ʊ]. The former yu vowel spelling collided with the sequence [ju]; now [y] → ü, [ju] → yu and [jy] → yü. These are conversion examples, not claims that each sequence occurs in every locality. [y] and [ʏ] remain an explicitly shared vowel family; IPA preserves the distinction.
 
 The dots identify vowel quality, never tone or nasalization. Always keep ü, including after ch, chh and sh; do not adopt Pinyin’s context-dependent omission. Supplied [yː] → ü:, [ỹ] → ü~; pitch and source-category suffixes follow their existing rules. [ɥ] and explicit [y̯] remain yw. Source Jyutping yu and IPA y remain unchanged in their labelled source fields. The tradeoff is one non-ASCII letter for a clearer distinction from the glide-plus-vowel sequence; no new keyboard or display mode is needed.
+
+The central-vowel reading aid **eo** also covers [ɘ], attested in the dated Tong’an comparison in Wang (2022). This is a deliberate many-to-one extension; exact IPA remains visible, and [ə], [ɘ] and [ɜ] are not claimed to be identical sounds.

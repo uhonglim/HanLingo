@@ -18,13 +18,15 @@ try {
   const photographedPlaces = places.filter(place => place.photos > 0);
   const baseline = places.find(place => place.localityId === "xiamen");
   const parity = places.filter(place => place.ipaWords >= baseline.ipaWords && place.photos >= baseline.photos && place.soundNotes >= 2 && place.cultureTopics >= 2 && place.learningSources >= 2);
+  const { getLocalGallery } = await server.ssrLoadModule("/src/data/galleries/index.ts");
+  const uniquePhotos = new Set(places.flatMap(place => getLocalGallery(place.localityId).map(photo => photo.src))).size;
   const total = (key) => places.reduce((sum, place) => sum + place[key], 0);
   const lines = [
     "# Content depth audit",
     "",
     "Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.",
     "",
-    `Inventory: **${branches.length} branches · ${places.length} locality references**. Actual learning coverage: **${taughtPlaces.length} localities with IPA**, **${photographedPlaces.length} with photos**, **${total("ipaWords")} IPA entries**, **${total("sourceSpellingWords")} additional source-spelling entries**, **${total("photos")} photographs**.`,
+    `Inventory: **${branches.length} branches · ${places.length} locality references**. Actual learning coverage: **${taughtPlaces.length} localities with IPA**, **${photographedPlaces.length} with photos**, **${total("ipaWords")} IPA entries**, **${total("sourceSpellingWords")} additional source-spelling entries**, **${total("photos")} gallery placements of ${uniquePhotos} distinct image assets**, **${total("hostedRecordings")} publisher-hosted recording clips**.`,
     "",
     `Amoy-count benchmark: ${baseline.ipaWords} source readings and ${baseline.photos} photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **${parity.length} of ${places.length} localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.`,
     "",
@@ -38,6 +40,8 @@ try {
       (branch) =>
         `| ${branch.branchId} | ${branch.localities} | ${branch.ipaWords} | ${branch.words} | ${branch.photos} | ${branch.soundNotes} | ${branch.cultureTopics} | ${branch.learningSources} |`,
     ),
+    "",
+    "Gallery placements may share city photographs across language references, as in Singapore. This is not a count of additional photographs or evidence of the language spoken by pictured people. Recording clips are publisher-hosted performances, separate from general IPA demonstrations and character readings.",
     "",
     "Source links are counted per locality; a shared dictionary may appear under multiple appropriate locality references. A multi-locality learning note is likewise counted for each locality it explicitly supports.",
     "",

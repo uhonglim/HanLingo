@@ -1,5 +1,5 @@
-import type { IpaSample } from './ipa-samples';
-export type PlaybackState = { owner: string; sample: IpaSample | null; status: 'idle' | 'loading' | 'playing' | 'error'; error: string };
+export type PlayableClip = { id: string; src: string };
+export type PlaybackState = { owner: string; sample: PlayableClip | null; status: 'idle' | 'loading' | 'playing' | 'error'; error: string };
 const idle: PlaybackState = { owner: '', sample: null, status: 'idle', error: '' };
 /** One media element and a generation counter prevent overlapping or stale playback. */
 export class IpaPlayback {
@@ -23,7 +23,7 @@ export class IpaPlayback {
     }
     this.update(idle);
   };
-  play = (samples: readonly IpaSample[], owner: string) => {
+  play = (samples: readonly PlayableClip[], owner: string) => {
     this.stop();
     const audio = this.audio;
     if (!audio || !samples.length) return;

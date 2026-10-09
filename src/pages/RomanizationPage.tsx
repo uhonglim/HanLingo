@@ -458,7 +458,7 @@ export default function RomanizationPage() {
               <h3>Vowels stay separate from tone</h3>
               <p>
                 ă represents [ɐ]; a~ represents nasal [ã]. ae / oo preserve
-                [ɛ] / [ɔ], while eo covers [ə] and [ɜ]. eu is [ɤ]; ü is
+                [ɛ] / [ɔ], while eo covers [ə], [ɘ] and [ɜ]. eu is [ɤ]; ü is
                 [y] or [ʏ]; oe covers [ø] and [œ]. Digraphs name vowel
                 qualities; only : marks supplied length.
               </p>

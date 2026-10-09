@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { filterXiamenWords } from './xiamen-vocabulary';
-import { xiamenWords } from './xiamen-lexicon';
+import { xiamenLearningWords as xiamenWords } from './xiamen-expanded-lexicon';
 
 describe('Xiamen vocabulary search', () => {
   it('finds sourced entries by simplified characters, IPA, and trial spelling', () => {

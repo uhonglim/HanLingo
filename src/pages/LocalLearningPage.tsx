@@ -1,3 +1,4 @@
+import LocalRecordings from '../components/LocalRecordings';
 import PlaceName from "../components/PlaceName";
 import { useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
@@ -188,9 +189,10 @@ export default function LocalLearningPage() {
       )}
       {chapter === "sounds" && (
         <>
-          <LocalSoundExplorer key={point.id} words={data.words} />
+          <LocalRecordings localityId={point.id} />
+          <LocalSoundExplorer key={`${point.id}-sounds`} words={data.words} />
           <LocalToneExplorer key={`${point.id}-tones`} words={data.words} />
-          <RegionalDifferences key={point.id} localityId={point.id} />
+          <RegionalDifferences key={`${point.id}-differences`} localityId={point.id} />
           <div className="local-sound-notes">
             {data.soundNotes.map((note) => (
               <article key={note.title}>

@@ -2,14 +2,18 @@ import { placeLabel, placeReadingName } from "../../data/language-names";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
-import { xiamenWords } from "../../data/xiamen-lexicon";
+import { xiamenWords as originalWords } from "../../data/xiamen-lexicon";
+import { xiamenLearningWords as xiamenWords } from "../../data/xiamen-expanded-lexicon";
 import IpaGallery, {
   gallerySounds,
+  galleryTones,
   splitIpaSymbols,
   wordsWithSound,
   wordsWithTone,
 } from "./IpaGallery";
 
+const originalIds = new Set(originalWords.map(word => word.id));
+const oldIds = (words: typeof xiamenWords) => ids(words).filter(id => originalIds.has(id));
 const ids = (words: typeof xiamenWords) => words.map((word) => word.id);
 
 describe("Xiamen IPA gallery matching", () => {
@@ -28,17 +32,17 @@ describe("Xiamen IPA gallery matching", () => {
   });
 
   it("does not confuse a base consonant or vowel with a distinct marked sound", () => {
-    expect(ids(wordsWithSound("s"))).toEqual(["three", "four"]);
-    expect(ids(wordsWithSound("t͡s"))).toContain("water");
-    expect(ids(wordsWithSound("t͡s"))).not.toContain("vegetables");
-    expect(ids(wordsWithSound("t͡sʰ"))).toContain("vegetables");
-    expect(ids(wordsWithSound("i"))).not.toContain("noodles");
-    expect(ids(wordsWithSound("ĩ"))).toEqual(["noodles", "money"]);
-    expect(ids(wordsWithSound("i\u0303"))).toEqual(["noodles", "money"]);
-    expect(ids(wordsWithSound("p"))).not.toContain("ten");
-    expect(ids(wordsWithSound("p̚"))).toEqual(["ten"]);
-    expect(ids(wordsWithSound("ŋ"))).toEqual(["person"]);
-    expect(ids(wordsWithSound("ŋ̍"))).toEqual(["cooked-rice", "two"]);
+    expect(oldIds(wordsWithSound("s"))).toEqual(["three", "four"]);
+    expect(oldIds(wordsWithSound("t͡s"))).toContain("water");
+    expect(oldIds(wordsWithSound("t͡s"))).not.toContain("vegetables");
+    expect(oldIds(wordsWithSound("t͡sʰ"))).toContain("vegetables");
+    expect(oldIds(wordsWithSound("i"))).not.toContain("noodles");
+    expect(oldIds(wordsWithSound("ĩ"))).toEqual(["noodles", "money"]);
+    expect(oldIds(wordsWithSound("i\u0303"))).toEqual(["noodles", "money"]);
+    expect(oldIds(wordsWithSound("p"))).not.toContain("ten");
+    expect(oldIds(wordsWithSound("p̚"))).toEqual(["ten"]);
+    expect(oldIds(wordsWithSound("ŋ"))).toEqual(["person"]);
+    expect(oldIds(wordsWithSound("ŋ̍"))).toEqual(["cooked-rice", "two"]);
   });
 
   it("includes only attested symbols and lets every published word be found", () => {
@@ -50,6 +54,25 @@ describe("Xiamen IPA gallery matching", () => {
     expect(found).toEqual(new Set(xiamenWords.map((word) => word.id)));
     for (const sound of gallerySounds)
       expect(wordsWithSound(sound).length).toBeGreaterThan(0);
+  });
+
+  it("retains source affricates and exposes the added Amoy tones and dated readings", () => {
+    expect(splitIpaSymbols("tsʰu")).toEqual(["tsʰ", "u"]);
+    expect(wordsWithSound("t͡sʰ").some(word => word.han === "鼠")).toBe(true);
+    expect(wordsWithSound("s").some(word => word.han === "鼠")).toBe(false);
+    for (const contour of ["55", "35", "11", "5"]) {
+      expect(galleryTones).toContain(contour);
+      expect(wordsWithTone(contour).length).toBeGreaterThan(0);
+    }
+    const html = renderToStaticMarkup(
+      <MemoryRouter initialEntries={["/min/southern-min/tsuan-chiang/xiamen/sounds?sound=ẽ&tone=35"]}>
+        <IpaGallery />
+      </MemoryRouter>,
+    );
+    expect(html).toContain("Amoy · 1998 study reference");
+    expect(html).toContain("Nasal close-mid front vowel");
+    expect(html).toContain("Wang Kuei-lan, 2022");
+    expect(html).toContain("57 sourced");
   });
 
   it("matches the displayed connected tone rather than an underlying dictionary annotation", () => {

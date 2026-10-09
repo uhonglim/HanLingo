@@ -79,7 +79,7 @@ describe("shared spelling coverage and evidence boundaries", () => {
 describe("reading spelling v3", () => {
   const spell = (ipa: string) => convertIpa(ipa)[0];
   it("declares many-to-one families without changing the IPA or its tones", () => {
-    for (const family of [["h", "x", "χ"], ["ɕ", "ʃ", "ʂ"], ["tɕ", "tʃ", "tʂ"], ["ʑ", "ʒ", "ʐ"], ["dʑ", "dʒ", "dʐ"], ["r", "ɹ", "ɻ"], ["ɲ", "ȵ"], ["a", "ɑ"], ["i", "ɪ"], ["u", "ʊ"], ["y", "ʏ"], ["ø", "œ"], ["ə", "ɜ"]]) {
+    for (const family of [["h", "x", "χ"], ["ɕ", "ʃ", "ʂ"], ["tɕ", "tʃ", "tʂ"], ["ʑ", "ʒ", "ʐ"], ["dʑ", "dʒ", "dʐ"], ["r", "ɹ", "ɻ"], ["ɲ", "ȵ"], ["a", "ɑ"], ["i", "ɪ"], ["u", "ʊ"], ["y", "ʏ"], ["ø", "œ"], ["ə", "ɘ", "ɜ"]]) {
       const results = family.map(sound => spell(sound + "35"));
       expect(new Set(results.map(s=>s.spelling)).size, family.join("/")).toBe(1);
       expect(new Set(results.map(s=>s.ipa)).size).toBe(family.length);

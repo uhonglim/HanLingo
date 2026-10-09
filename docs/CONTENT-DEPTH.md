@@ -2,9 +2,9 @@
 
 Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.
 
-Inventory: **30 branches · 300 locality references**. Actual learning coverage: **31 localities with IPA**, **63 with photos**, **1789 IPA entries**, **32 additional source-spelling entries**, **600 photographs**.
+Inventory: **30 branches · 308 locality references**. Actual learning coverage: **46 localities with IPA**, **75 with photos**, **3485 IPA entries**, **32 additional source-spelling entries**, **708 gallery placements of 690 distinct image assets**, **3 publisher-hosted recording clips**.
 
-Amoy-count benchmark: 37 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **1 of 300 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
+Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **2 of 308 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
 
 Of the IPA entries, 64 retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.
 
@@ -20,13 +20,13 @@ Of the IPA entries, 64 retain source transcriptions with tones omitted. Their ca
 | mandarin/lanyin | 28 | 16 | 16 | 9 | 2 | 2 | 3 |
 | mandarin/jianghuai | 11 | 194 | 194 | 28 | 10 | 6 | 14 |
 | mandarin/southwestern | 4 | 104 | 104 | 19 | 10 | 4 | 9 |
-| min/southern-min | 25 | 157 | 189 | 134 | 29 | 26 | 28 |
-| min/eastern-min | 18 | 138 | 138 | 9 | 7 | 2 | 4 |
-| min/northern-min | 5 | 60 | 60 | 10 | 5 | 2 | 3 |
-| min/puxian | 3 | 29 | 29 | 9 | 5 | 2 | 2 |
-| min/central-min | 4 | 20 | 20 | 9 | 5 | 2 | 3 |
-| min/hainan-min | 1 | 29 | 29 | 9 | 3 | 2 | 3 |
-| min/leizhou-min | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
+| min/southern-min | 29 | 453 | 485 | 170 | 51 | 34 | 44 |
+| min/eastern-min | 20 | 738 | 738 | 27 | 35 | 8 | 23 |
+| min/northern-min | 5 | 460 | 460 | 19 | 21 | 4 | 13 |
+| min/puxian | 3 | 229 | 229 | 18 | 13 | 4 | 8 |
+| min/central-min | 4 | 120 | 120 | 18 | 9 | 4 | 7 |
+| min/hainan-min | 3 | 29 | 29 | 27 | 7 | 6 | 9 |
+| min/leizhou-min | 3 | 100 | 100 | 9 | 4 | 2 | 4 |
 | yue/guangfu | 16 | 122 | 122 | 47 | 17 | 10 | 21 |
 | yue/siyi | 6 | 0 | 0 | 28 | 7 | 6 | 9 |
 | yue/goulou | 6 | 20 | 20 | 9 | 3 | 2 | 2 |
@@ -42,6 +42,8 @@ Of the IPA entries, 64 retain source transcriptions with tones omitted. Their ca
 | hakka/yuetai | 8 | 119 | 119 | 38 | 11 | 8 | 12 |
 | hakka/hailu | 26 | 45 | 45 | 18 | 6 | 4 | 5 |
 | hakka/tingzhou | 1 | 0 | 0 | 10 | 3 | 2 | 3 |
+
+Gallery placements may share city photographs across language references, as in Singapore. This is not a count of additional photographs or evidence of the language spoken by pictured people. Recording clips are publisher-hosted performances, separate from general IPA demonstrations and character readings.
 
 Source links are counted per locality; a shared dictionary may appear under multiple appropriate locality references. A multi-locality learning note is likewise counted for each locality it explicitly supports.
 
@@ -152,15 +154,15 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | chongqing | 0 | 0 | 0 | 9 | 2 | 2 | 3 | culture, sounds |
 | dazhou | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | wuhan | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| xiamen | 37 | 0 | 0 | 11 | 2 | 2 | 2 | words, culture, sounds, practice |
-| quanzhou | 4 | 0 | 0 | 10 | 2 | 2 | 2 | words, culture, sounds, practice |
-| zhangzhou | 4 | 0 | 0 | 10 | 2 | 2 | 2 | words, culture, sounds, practice |
-| tongan | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| xiamen | 59 | 0 | 0 | 11 | 2 | 2 | 3 | words, culture, sounds, practice |
+| quanzhou | 23 | 0 | 0 | 10 | 3 | 2 | 2 | words, culture, sounds, practice |
+| zhangzhou | 24 | 0 | 0 | 10 | 3 | 2 | 2 | words, culture, sounds, practice |
+| tongan | 26 | 0 | 0 | 0 | 2 | 0 | 1 | words, sounds, practice |
 | jinjiang | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | nanan-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | huian | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | anxi | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| longhai | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| longhai | 21 | 0 | 0 | 0 | 2 | 0 | 1 | words, sounds, practice |
 | zhangpu | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | taipak | 0 | 6 | 0 | 11 | 2 | 2 | 2 | words, culture, sounds |
 | tainan | 0 | 5 | 0 | 11 | 2 | 2 | 2 | words, culture, sounds |
@@ -169,7 +171,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | lukang | 0 | 5 | 0 | 11 | 2 | 2 | 2 | words, culture, sounds |
 | sanxia | 0 | 5 | 0 | 9 | 2 | 2 | 2 | words, culture, sounds |
 | singapore | 0 | 1 | 0 | 10 | 2 | 2 | 2 | words, culture, sounds |
-| george-town | 0 | 0 | 0 | 11 | 2 | 2 | 2 | culture, sounds |
+| george-town | 88 | 0 | 0 | 11 | 6 | 2 | 4 | words, culture, sounds, practice |
 | chaozhou | 80 | 0 | 0 | 10 | 4 | 2 | 4 | words, culture, sounds, practice |
 | shantou | 32 | 0 | 0 | 9 | 3 | 2 | 2 | words, culture, sounds, practice |
 | jieyang | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -177,38 +179,46 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | chaoyang-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | longyan-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | zhangping | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| fuzhou | 138 | 0 | 0 | 9 | 7 | 2 | 4 | words, culture, sounds, practice |
+| manila-hokkien | 0 | 0 | 0 | 9 | 2 | 2 | 3 | culture, sounds |
+| medan-hokkien | 0 | 0 | 0 | 9 | 2 | 2 | 3 | culture, sounds |
+| bangkok-teochew | 100 | 0 | 0 | 9 | 6 | 2 | 3 | words, culture, sounds, practice |
+| singapore-teochew | 0 | 0 | 0 | 9 | 2 | 2 | 2 | culture, sounds |
+| fuzhou | 238 | 0 | 0 | 9 | 11 | 2 | 6 | words, culture, sounds, practice |
 | minhou | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | changle-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| fuqing | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| fuqing | 100 | 0 | 0 | 0 | 4 | 0 | 2 | words, sounds, practice |
 | pingtan | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | yongtai | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | minqing | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | lianjiang-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | luoyuan | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| gutian | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| gutian | 100 | 0 | 0 | 0 | 4 | 0 | 2 | words, sounds, practice |
 | pingnan-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| fuan | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| ningde | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| fuan | 100 | 0 | 0 | 9 | 4 | 2 | 4 | words, culture, sounds, practice |
+| ningde | 100 | 0 | 0 | 0 | 4 | 0 | 2 | words, sounds, practice |
 | shouning | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | zhouning | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | fuding | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| zherong | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| zherong | 100 | 0 | 0 | 0 | 4 | 0 | 2 | words, sounds, practice |
 | xiapu | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| jianou | 60 | 0 | 0 | 10 | 5 | 2 | 3 | words, culture, sounds, practice |
-| songxi | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| sibu-foochow | 0 | 0 | 0 | 9 | 2 | 2 | 3 | culture, sounds |
+| sitiawan-foochow | 0 | 0 | 0 | 0 | 2 | 2 | 2 | sounds |
+| jianou | 160 | 0 | 0 | 10 | 9 | 2 | 5 | words, culture, sounds, practice |
+| songxi | 100 | 0 | 0 | 0 | 4 | 0 | 2 | words, sounds, practice |
 | zhenghe | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| jianyang-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| wuyishan | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| putian | 29 | 0 | 0 | 9 | 5 | 2 | 2 | words, culture, sounds, practice |
+| jianyang-min | 100 | 0 | 0 | 0 | 4 | 0 | 2 | words, sounds, practice |
+| wuyishan | 100 | 0 | 0 | 9 | 4 | 2 | 4 | words, culture, sounds, practice |
+| putian | 129 | 0 | 0 | 9 | 9 | 2 | 4 | words, culture, sounds, practice |
 | hanjiang-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| xianyou | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| xianyou | 100 | 0 | 0 | 9 | 4 | 2 | 4 | words, culture, sounds, practice |
 | yongan | 20 | 0 | 0 | 9 | 5 | 2 | 3 | words, culture, sounds, practice |
 | liedong | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | liexi | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| shaxian | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| shaxian | 100 | 0 | 0 | 9 | 4 | 2 | 4 | words, culture, sounds, practice |
 | wenchang | 29 | 0 | 0 | 9 | 3 | 2 | 3 | words, culture, sounds, practice |
-| leizhou | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| singapore-hainanese | 0 | 0 | 0 | 9 | 2 | 2 | 2 | culture, sounds |
+| haikou | 0 | 0 | 0 | 9 | 2 | 2 | 4 | culture, sounds |
+| leizhou | 100 | 0 | 0 | 9 | 4 | 2 | 4 | words, culture, sounds, practice |
 | xuwen | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | suixi-min | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | guangzhou | 92 | 0 | 0 | 10 | 7 | 2 | 7 | words, culture, sounds, practice |
@@ -449,14 +459,10 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **chongqing:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **dazhou:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **wuhan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **quanzhou:** 4 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **zhangzhou:** 4 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **tongan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **jinjiang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **nanan-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **huian:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **anxi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **longhai:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **zhangpu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **taipak:** 0 attested IPA entries and 6 separately labelled source-spelling entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **tainan:** 0 attested IPA entries and 5 separately labelled source-spelling entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
@@ -465,39 +471,34 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **lukang:** 0 attested IPA entries and 5 separately labelled source-spelling entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **sanxia:** 0 attested IPA entries and 5 separately labelled source-spelling entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **singapore:** 0 attested IPA entries and 1 separately labelled source-spelling entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **george-town:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **jieyang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **chenghai:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **chaoyang-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **longyan-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **zhangping:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **manila-hokkien:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **medan-hokkien:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **singapore-teochew:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **minhou:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **changle-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **fuqing:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **pingtan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **yongtai:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **minqing:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **lianjiang-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **luoyuan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **gutian:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **pingnan-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **fuan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **ningde:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **shouning:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **zhouning:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **fuding:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **zherong:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiapu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **songxi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **sibu-foochow:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **sitiawan-foochow:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **zhenghe:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **jianyang-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **wuyishan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **hanjiang-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **xianyou:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **liedong:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **liexi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **shaxian:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **leizhou:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **singapore-hainanese:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **haikou:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xuwen:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **suixi-min:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **macau:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.

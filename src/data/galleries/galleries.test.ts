@@ -14,6 +14,7 @@ describe("locality photo collections", () => {
     }
   });
   it("ships distinct images with usable attribution in each gallery", () => {
+    const fileHashes = new Map<string, string>();
     for (const [place, photos] of Object.entries(localityGalleries)) {
       const hashes = new Set<string>();
       const sources = new Set<string>();
@@ -23,9 +24,9 @@ describe("locality photo collections", () => {
       for (const photo of photos) {
         const path = resolve("public", photo.src.replace(/^\//, ""));
         expect(existsSync(path), `${place}: ${photo.src}`).toBe(true);
-        hashes.add(
-          createHash("sha256").update(readFileSync(path)).digest("hex"),
-        );
+        if (!fileHashes.has(path))
+          fileHashes.set(path, createHash("sha256").update(readFileSync(path)).digest("hex"));
+        hashes.add(fileHashes.get(path)!);
         sources.add(photo.sourceUrl);
         for (const text of [
           photo.title,
@@ -46,5 +47,6 @@ describe("locality photo collections", () => {
         photos.length,
       );
     }
-  });
+  // The full corpus contains hundreds of files; retain every check during parallel test runs.
+  }, 20_000);
 });

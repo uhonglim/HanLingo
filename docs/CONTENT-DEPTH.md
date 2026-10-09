@@ -2,13 +2,13 @@
 
 Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.
 
-Inventory: **68 branches · 1192 locality references**. Actual learning coverage: **55 localities with IPA**, **83 with photos**, **4644 IPA entries**, **32 additional source-spelling entries**, **783 gallery placements of 765 distinct image assets**, **3 publisher-hosted recording clips**.
+Inventory: **68 branches · 1204 locality references**. Actual learning coverage: **67 localities with IPA**, **83 with photos**, **4786 IPA entries**, **32 additional source-spelling entries**, **783 gallery placements of 765 distinct image assets**, **0 inline local recordings**, **7 original-publisher listening links**.
 
-Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **7 of 1192 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
+Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **7 of 1204 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
 
-Separately typed character readings: **238** (included in IPA entries, excluded from meaning quizzes). Source citation-tone inventories: **36** with **196** category/contour pairs; these are not words or recordings.
+Separately typed character readings: **379** (included in IPA entries, excluded from meaning quizzes). Source citation-tone inventories: **36** with **196** category/contour pairs; these are not words or recordings.
 
-Of the IPA entries, 64 retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.
+Of the IPA entries, 69 retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.
 
 ## Branch inventory
 
@@ -29,7 +29,7 @@ Of the IPA entries, 64 retain source transcriptions with tones omitted. Their ca
 | min/central-min | 4 | 120 | 120 | 18 | 9 | 4 | 7 |
 | min/hainan-min | 3 | 29 | 29 | 27 | 7 | 6 | 9 |
 | min/leizhou-min | 5 | 100 | 100 | 9 | 4 | 2 | 4 |
-| yue/guangfu | 27 | 122 | 122 | 47 | 17 | 10 | 21 |
+| yue/guangfu | 28 | 127 | 127 | 47 | 19 | 12 | 25 |
 | yue/siyi | 7 | 0 | 0 | 28 | 7 | 6 | 9 |
 | yue/goulou | 9 | 20 | 20 | 9 | 3 | 2 | 2 |
 | yue/yongxun | 4 | 0 | 0 | 9 | 2 | 2 | 2 |
@@ -50,7 +50,7 @@ Of the IPA entries, 64 retain source transcriptions with tones omitted. Their ca
 | hakka/yuxin | 8 | 0 | 0 | 0 | 0 | 0 | 0 |
 | hakka/ninglong | 5 | 0 | 0 | 0 | 0 | 0 | 0 |
 | wu/jinqu | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/huaiyue | 5 | 0 | 0 | 0 | 0 | 0 | 0 |
+| gan/huaiyue | 14 | 106 | 106 | 0 | 18 | 18 | 24 |
 | gan/fuguang | 13 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xiang/yongquan | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | gan/datong | 51 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -74,16 +74,16 @@ Of the IPA entries, 64 retain source transcriptions with tones omitted. Their ca
 | jin/zhiyan | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | hui/jishe | 2 | 115 | 115 | 11 | 3 | 2 | 2 |
 | hui/xiuyi | 3 | 0 | 0 | 9 | 0 | 0 | 0 |
-| hui/qiwu | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| hui/qiwu | 3 | 19 | 19 | 0 | 2 | 2 | 3 |
 | hui/jingzhan | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | hui/yanzhou | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | pinghua/northern-pinghua | 3 | 134 | 134 | 11 | 4 | 2 | 2 |
 | pinghua/southern-pinghua | 3 | 0 | 0 | 9 | 0 | 0 | 0 |
-| tuhua/southern-hunan | 2 | 0 | 0 | 2 | 0 | 0 | 0 |
+| tuhua/southern-hunan | 3 | 12 | 12 | 2 | 2 | 2 | 3 |
 | tuhua/northern-guangdong | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
 | tuhua/eastern-guangxi | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-Gallery placements may share city photographs across language references, as in Singapore. This is not a count of additional photographs or evidence of the language spoken by pictured people. Recording clips are publisher-hosted performances, separate from general IPA demonstrations and character readings.
+Gallery placements may share city photographs across language references, as in Singapore. This is not a count of additional photographs or evidence of the language spoken by pictured people. Original-publisher listening links are separate from inline recordings, general IPA demonstrations and character readings.
 
 Source links are counted per locality; a shared dictionary may appear under multiple appropriate locality references. A multi-locality learning note is likewise counted for each locality it explicitly supports.
 
@@ -895,6 +895,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | yun-an-district-445303 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xinxing-county-445321 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | yunan-county-445322 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| singapore-cantonese | 5 | 0 | 5 | 0 | 2 | 2 | 4 | words, sounds |
 | taishan | 0 | 0 | 0 | 10 | 3 | 2 | 4 | culture, sounds |
 | kaiping | 0 | 0 | 0 | 9 | 2 | 2 | 3 | culture, sounds |
 | jiangmen | 0 | 0 | 0 | 9 | 2 | 2 | 2 | culture, sounds |
@@ -1096,6 +1097,15 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | gan-county-340825 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-340827 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-340828 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| gan-qianshan-meicheng | 28 | 0 | 0 | 0 | 2 | 2 | 2 | words, sounds |
+| gan-susong-jiugu | 6 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
+| gan-wangjiang-yatan | 14 | 0 | 0 | 0 | 2 | 2 | 2 | words, sounds |
+| gan-taihu-xincang | 14 | 0 | 0 | 0 | 2 | 2 | 2 | words, sounds |
+| gan-dongzhi-yaodu | 7 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
+| gan-yuexi-tiantang | 14 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
+| gan-susong-erlang | 7 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
+| gan-huaining-shipai | 8 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
+| gan-wangjiang-saikou | 8 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
 | gan-county-350430 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-350429 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-361024 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1268,6 +1278,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | xiuning-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | qimen-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | wuyuan-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| youshan-hui | 19 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
 | shitai-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | jiande-meicheng-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | guilin-pinghua | 134 | 0 | 0 | 11 | 4 | 2 | 2 | words, culture, sounds, practice |
@@ -1278,6 +1289,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | baise-nabi-pinghua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | jiangyong-baishui | 0 | 0 | 0 | 2 | 0 | 0 | 0 | culture |
 | daoxian-tuhua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| jiangyong-chengguan | 12 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds |
 | lianzhou-tuhua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | fengyang-tuhua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xingzi-tuhua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -2057,6 +2069,7 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **yun-an-district-445303:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xinxing-county-445321:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **yunan-county-445322:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **singapore-cantonese:** 5 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **taishan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **kaiping:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **jiangmen:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
@@ -2249,6 +2262,14 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **gan-county-340825:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-340827:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-340828:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-susong-jiugu:** 6 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-wangjiang-yatan:** 14 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-taihu-xincang:** 14 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-dongzhi-yaodu:** 7 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yuexi-tiantang:** 14 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-susong-erlang:** 7 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-huaining-shipai:** 8 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-wangjiang-saikou:** 8 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-350430:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-350429:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-361024:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
@@ -2413,6 +2434,7 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **xiuning-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **qimen-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **wuyuan-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **youshan-hui:** 19 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **shitai-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **jiande-meicheng-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **lingchuan-sanjie:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
@@ -2422,6 +2444,7 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **baise-nabi-pinghua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **jiangyong-baishui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **daoxian-tuhua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **jiangyong-chengguan:** 12 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **lianzhou-tuhua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **fengyang-tuhua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xingzi-tuhua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.

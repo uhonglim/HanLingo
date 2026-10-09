@@ -1,3 +1,8 @@
+import { singaporeCantoneseLearning } from "./singapore-cantonese";
+import { huiWuyuanLearning } from "./hui-wuyuan";
+import { writtenCharacterGloss } from "../character-gloss";
+import { jiangyongChengguanLearning } from "./jiangyong-chengguan";
+import { ganHuaiyueLearning } from "./gan-huaiyue";
 import { ganToneInventories } from "./gan-tone-inventories";
 import { xiangComparativeLearning } from "./xiang-comparative";
 import { meaningPracticeWords } from "./practice";
@@ -33,7 +38,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,
@@ -151,6 +156,7 @@ export function searchWords(words: AttestedWord[], query: string) {
     [
       word.han,
       word.english,
+      writtenCharacterGloss(word) ?? "",
       ...ipaSearchForms(word.ipa, word.toneNotation),
       spellingFor(word) ?? "",
     ].some((value) =>

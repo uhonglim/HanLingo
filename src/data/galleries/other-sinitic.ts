@@ -187,6 +187,7 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "other-sinitic-taiyuan-jin-02",
+      "relatedWordIds": ["liu2007-Taiyuan-89_bird-1"],
       "title": "Bird vessel replica",
       "category": "Culture",
       "src": "/images/other-sinitic-taiyuan-jin-02.webp",
@@ -262,6 +263,7 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "other-sinitic-taiyuan-jin-07",
+      "relatedWordIds": ["liu2007-Taiyuan-49_river-1", "liu2007-Taiyuan-119_tree-1"],
       "title": "Yingze Bridge",
       "category": "Landscape",
       "src": "/images/other-sinitic-taiyuan-jin-07.webp",
@@ -626,6 +628,7 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "other-sinitic-changsha-xiang-11",
+      "relatedWordIds": ["beida1964-Changsha-214_tea-1"],
       "title": "Milk tea and toppings",
       "category": "Food",
       "src": "/images/other-sinitic-changsha-xiang-11.webp",
@@ -857,6 +860,7 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "other-sinitic-jixi-hui-04",
+      "relatedWordIds": ["liu2007-Jixi-123_water-1", "liu2007-Jixi-119_tree-1"],
       "title": "Longchuan waterside street",
       "category": "Streets",
       "src": "/images/other-sinitic-jixi-hui-04.webp",
@@ -1099,6 +1103,7 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "other-sinitic-guilin-pinghua-09",
+      "relatedWordIds": ["liu2007-Guilin-89_bird-1", "liu2007-Guilin-123_water-1"],
       "title": "Cormorants by the river",
       "category": "Culture",
       "src": "/images/other-sinitic-guilin-pinghua-09.webp",

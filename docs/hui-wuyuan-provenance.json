@@ -1,0 +1,365 @@
+{
+  "status": "bounded factual selection; all19 cells independently visually reviewed",
+  "source": {
+    "author": "Hu Guiyue 胡貴躍",
+    "year": 2016,
+    "collectionYear": 2015,
+    "title": "中国・徽州方言の音韻的諸特徴",
+    "url": "https://kanazawa-u.repo.nii.ac.jp/record/5581/files/AA12162559-32-67-83.pdf",
+    "metadataUrl": "https://kanazawa-u.repo.nii.ac.jp/records/5581",
+    "sha256": "40df5f98a781a2b977857f52c8835170c5776de991598aaba9f2c12aba4153f4",
+    "license": "No explicit reuse license found; bounded factual sample only, no public scans"
+  },
+  "scope": "Youshan administrative village, Wuyuan County; one male lifelong resident aged60+ according to general study speaker criteria; not all village residents",
+  "rows": [
+    {
+      "id": "hu2016-youshan-t6-c1",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 1,
+      "han": "脳",
+      "sourceReading": "la31",
+      "mergedHeadwords": "脳・老",
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c2",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 2,
+      "han": "老",
+      "sourceReading": "la31",
+      "mergedHeadwords": "脳・老",
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c3",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 3,
+      "han": "男",
+      "sourceReading": "num21",
+      "mergedHeadwords": "男・欄",
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c4",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 4,
+      "han": "欄",
+      "sourceReading": "num21",
+      "mergedHeadwords": "男・欄",
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c5",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 5,
+      "han": "女",
+      "sourceReading": "ny31",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c6",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 6,
+      "han": "呂",
+      "sourceReading": "li31",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c7",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 7,
+      "han": "農",
+      "sourceReading": "nɑm21",
+      "mergedHeadwords": "農・龍",
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c8",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 8,
+      "han": "龍",
+      "sourceReading": "nɑm21",
+      "mergedHeadwords": "農・龍",
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t6-c9",
+      "table": 6,
+      "page": 74,
+      "pdfPage": 9,
+      "column": 9,
+      "han": "六",
+      "sourceReading": "læ51",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t7-c1",
+      "table": 7,
+      "page": 75,
+      "pdfPage": 10,
+      "column": 1,
+      "han": "修",
+      "sourceReading": "sæ33",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t7-c2",
+      "table": 7,
+      "page": 75,
+      "pdfPage": 10,
+      "column": 2,
+      "han": "休",
+      "sourceReading": "ɕiæ33",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t7-c3",
+      "table": 7,
+      "page": 75,
+      "pdfPage": 10,
+      "column": 3,
+      "han": "焦",
+      "sourceReading": "tsiaɔ33",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t7-c4",
+      "table": 7,
+      "page": 75,
+      "pdfPage": 10,
+      "column": 4,
+      "han": "驕",
+      "sourceReading": "tɕio33",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t12-c3",
+      "table": 12,
+      "page": 80,
+      "pdfPage": 15,
+      "column": 3,
+      "han": "毛",
+      "sourceReading": "ma21",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t12-c4",
+      "table": 12,
+      "page": 80,
+      "pdfPage": 15,
+      "column": 4,
+      "han": "茅",
+      "sourceReading": "maɔ21",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t12-c5",
+      "table": 12,
+      "page": 80,
+      "pdfPage": 15,
+      "column": 5,
+      "han": "高",
+      "sourceReading": "ka33",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t12-c6",
+      "table": 12,
+      "page": 80,
+      "pdfPage": 15,
+      "column": 6,
+      "han": "交",
+      "sourceReading": "kaɔ33",
+      "mergedHeadwords": null,
+      "note": null
+    },
+    {
+      "id": "hu2016-youshan-t12-c7",
+      "table": 12,
+      "page": 80,
+      "pdfPage": 15,
+      "column": 7,
+      "han": "好",
+      "sourceReading": "xa35",
+      "mergedHeadwords": null,
+      "note": "Source heading specifies verb 好."
+    },
+    {
+      "id": "hu2016-youshan-t12-c8",
+      "table": 12,
+      "page": 80,
+      "pdfPage": 15,
+      "column": 8,
+      "han": "孝",
+      "sourceReading": "xaɔ35",
+      "mergedHeadwords": null,
+      "note": null
+    }
+  ],
+  "localityId": "youshan-hui",
+  "branchId": "hui/qiwu",
+  "coordinateEvidence": {
+    "version": "0.6",
+    "generator": "openstreetmap-cgimap 2.1.0 (1309 spike-07.openstreetmap.org)",
+    "copyright": "OpenStreetMap and contributors",
+    "attribution": "http://www.openstreetmap.org/copyright",
+    "license": "http://opendatacommons.org/licenses/odbl/1-0/",
+    "elements": [
+      {
+        "type": "node",
+        "id": 5134436407,
+        "lat": 29.2387878,
+        "lon": 117.423552,
+        "timestamp": "2017-09-28T06:06:54Z",
+        "version": 1,
+        "changeset": 52432300,
+        "user": "yuantouniaoren",
+        "uid": 5547348,
+        "tags": {
+          "name": "游山村",
+          "place": "village"
+        }
+      }
+    ]
+  },
+  "attribution": "Hu Guiyue 胡貴躍 (2016), 中国・徽州方言の音韻的諸特徴, 人間社会環境研究32:67–83; fieldwork2015.",
+  "selectionPolicy": "19 selected character readings, not a complete vocabulary or comparative table. Omit single-digit duration-bearing examples, uncertain nasalized sibilant cells, all neighbouring villages and historical reconstruction rows. Exact source characters retained; no inferred lexical meanings or local place-name pronunciation.",
+  "locality": {
+    "id": "youshan-hui",
+    "name": "Youshan",
+    "nativeName": "游山",
+    "groupId": "hui",
+    "branchId": "qiwu",
+    "clusterId": "qimen-wuyuan",
+    "coordinates": [
+      117.423552,
+      29.2387878
+    ],
+    "scope": "Youshan administrative village in Zhentou Town, Wuyuan County. Hu’s 2015 survey records one lifelong village resident; the village map anchor does not locate the interview or imply uniform speech.",
+    "source": {
+      "title": "Hu Guiyue2016 · Youshan village reference",
+      "url": "https://kanazawa-u.repo.nii.ac.jp/record/5581/files/AA12162559-32-67-83.pdf#page=3",
+      "locator": "pp68–69: survey names are administrative villages, not townships; 游山 is listed in Wuyuan County. 2015 fieldwork. Qi–Wu alignment: Jing2025 county data, code361130婺源县, 徽语/祁婺片, doi:10.5281/zenodo.15897647. Qimen–Wuyuan is an editorial geographic collection."
+    },
+    "aliases": [
+      "游山村",
+      "Youshan village",
+      "鳳游村",
+      "凤游村",
+      "濬源村"
+    ],
+    "geographySource": {
+      "title": "OpenStreetMap contributors · Youshan village · ODbL",
+      "url": "https://www.openstreetmap.org/node/5134436407",
+      "locator": "Node5134436407 version1, name游山村, place=village; [117.4235520,29.2387878]. Nominatim hierarchy: Zhentou Town, Wuyuan County. Village anchor, not a speaker address."
+    }
+  },
+  "culture": [
+    {
+      "title": "Houses beside the Junyuan River",
+      "text": "The Junyuan River crosses Youshan between rows of Hui-style houses. Zhao Huafu’s village field study describes five stone bridges connecting the riverbanks; the town government’s 2023 account also records repairs to the river channel and stone-paved lanes.",
+      "localityIds": [
+        "youshan-hui"
+      ],
+      "source": {
+        "title": "Zhao Huafu · Youshan Dong-lineage field study, opening description",
+        "url": "https://www.sinoss.net/uploadfile/2010/1130/614.pdf#page=1"
+      }
+    },
+    {
+      "title": "Jiahui Hall",
+      "text": "Zhao Huafu’s field study describes Jiahui Hall in the centre of Youshan: a gate hall, a courtyard and spaces for ceremonies and ancestral tablets. Its account distinguishes the village’s common ancestral hall from the smaller halls of individual lineage branches.",
+      "localityIds": [
+        "youshan-hui"
+      ],
+      "source": {
+        "title": "Zhao Huafu · Youshan Dong-lineage field study, section 1",
+        "url": "https://www.sinoss.net/uploadfile/2010/1130/614.pdf#page=2"
+      }
+    }
+  ],
+  "soundNotes": [
+    {
+      "title": "女 and 呂",
+      "text": "In the 2015 Youshan sample, 女 [ny31] and 呂 [li31] differ in both initial and vowel. Both carry the source’s 31 pitch contour. 男 and 欄 share [num21], while 農 and 龍 share [nɑm21].",
+      "localityIds": [
+        "youshan-hui"
+      ],
+      "source": {
+        "title": "Hu 2016 · p.74, table 6, Youshan row",
+        "url": "https://kanazawa-u.repo.nii.ac.jp/record/5581/files/AA12162559-32-67-83.pdf#page=9"
+      }
+    },
+    {
+      "title": "A vowel followed by [ɔ]",
+      "text": "The Youshan sample contrasts 毛 [ma21] with 茅 [maɔ21], and 高 [ka33] with 交 [kaɔ33]. Each pair keeps the same pitch contour while the second reading adds [ɔ]. These are the source’s character readings from one 2015 speaker.",
+      "localityIds": [
+        "youshan-hui"
+      ],
+      "source": {
+        "title": "Hu 2016 · p.80, table 12, Youshan row",
+        "url": "https://kanazawa-u.repo.nii.ac.jp/record/5581/files/AA12162559-32-67-83.pdf#page=15"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "title": "Youshan’s 2015 pronunciation sample",
+      "description": "Hu’s study identifies the village and speaker-selection method on pp.68–69. The selected character readings come from tables 6, 7 and 12.",
+      "localityIds": [
+        "youshan-hui"
+      ],
+      "kind": "Study",
+      "url": "https://kanazawa-u.repo.nii.ac.jp/record/5581/files/AA12162559-32-67-83.pdf#page=3"
+    },
+    {
+      "title": "A field study of Youshan village",
+      "description": "Zhao Huafu’s village investigation covers ancestral halls, bridges, commerce and local customs, with historical sources distinguished from field observations.",
+      "localityIds": [
+        "youshan-hui"
+      ],
+      "kind": "Culture",
+      "url": "https://www.sinoss.net/uploadfile/2010/1130/614.pdf"
+    },
+    {
+      "title": "Youshan heritage conservation",
+      "description": "Zhentou Town government’s August 2023 reply identifies Youshan village and documents its historic buildings, lane repairs and conservation plans. Read the official reply below the resident’s request.",
+      "localityIds": [
+        "youshan-hui"
+      ],
+      "kind": "Culture",
+      "url": "https://wenz.jxnews.com.cn/ms/viewpage/202308/view_340107.html"
+    }
+  ],
+  "independentReview": {
+    "reviewerTask": "min_overseas_readings",
+    "scope": "All19 selected cells visually checked against rendered PDF pages9,10,15. Source columns, merged cells, a/ɑ/ɔ glyphs and pitch digits match. 好 verb qualifier confirmed. Does not independently certify geography or speaker metadata.",
+    "result": "pass"
+  }
+}

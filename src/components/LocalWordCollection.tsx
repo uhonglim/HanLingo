@@ -65,11 +65,11 @@ export default function LocalWordCollection({
           <input
             type="search"
             value={query}
-            placeholder={characterOnly ? "Character, IPA, or spelling" : "Word, meaning, IPA, or spelling"}
+            placeholder={characterOnly ? "Character, meaning, IPA, or spelling" : "Word, meaning, IPA, or spelling"}
             onChange={(event) => update("q", event.target.value)}
           />
         </label>
-        {!characterOnly && <label className="local-topic-select">
+        {!characterOnly && topics.length > 1 && <label className="local-topic-select">
           <span className="sr-only">Word topic</span>
           <select
             aria-label="Word topic"

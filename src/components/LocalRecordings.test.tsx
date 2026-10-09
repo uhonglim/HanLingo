@@ -3,15 +3,17 @@ import { describe, expect, it, vi } from 'vitest';
 import LocalRecordings from './LocalRecordings';
 import { IpaPlayback } from '../audio/playback';
 import { ipaSamples } from '../audio/ipa-samples';
-import { localRecordings } from '../data/local-recordings';
 
 describe('local source recordings', () => {
-  it('keeps locality, speaker, context and original source beside playback', () => {
+  it('keeps locality, speaker, context and original source beside a publisher listening link', () => {
     const html = renderToStaticMarkup(<LocalRecordings localityId="singapore-teochew" />);
     expect(html).toContain('Raina Lee Xin Tian');
     expect(html).toContain('no word-level IPA transcript');
     expect(html).toContain('https://singaporeccc.org.sg/events/sccc-talking-red-packet-2021/');
     expect(html).not.toContain('Hokkien New Year greeting');
+    expect(html).not.toContain('<button');
+    expect(html).not.toContain('.mp3');
+    expect(html).toContain('Listen at Singapore Chinese Cultural Centre');
     expect(renderToStaticMarkup(<LocalRecordings localityId="fuan" />)).toBe('');
   });
   it('shares the player with IPA demos without overlapping or advancing stale audio', () => {
@@ -20,10 +22,11 @@ describe('local source recordings', () => {
     player.attach(audio as unknown as HTMLAudioElement);
     player.play([ipaSamples[0], ipaSamples[1]], 'ipa');
     const staleEnd = audio.onended!;
-    player.play([localRecordings[1]], 'local');
+    const licensedFixture = { id: 'licensed-local-fixture', src: '/test-licensed-local.ogg' };
+    player.play([licensedFixture], 'local');
     staleEnd();
-    expect(audio.src).toBe(localRecordings[1].src);
-    expect(player.getSnapshot().sample?.id).toBe('sccc-teochew-2021');
+    expect(audio.src).toBe(licensedFixture.src);
+    expect(player.getSnapshot().sample?.id).toBe('licensed-local-fixture');
     expect(audio.pause).toHaveBeenCalled();
     player.play([ipaSamples[2]], 'ipa');
     expect(audio.src).toBe(ipaSamples[2].src);

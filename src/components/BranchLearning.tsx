@@ -1,4 +1,5 @@
 import SourceToneInventory from "./SourceToneInventory";
+import { writtenCharacterGloss, characterGlossSource } from "../data/character-gloss";
 import PlaceName from "./PlaceName";
 import { Bookmark } from "lucide-react";
 import { useWordNotebook } from "../hooks/useWordNotebook";
@@ -45,6 +46,7 @@ export function balancedPreview<T>(
 
 export function LearningWord({ word }: { word: AttestedWord }) {
   const spelling = spellingFor(word);
+  const characterGloss = writtenCharacterGloss(word);
   const notebook = useWordNotebook();
   const saved = notebook.saved.includes(word.id);
   return (
@@ -63,7 +65,7 @@ export function LearningWord({ word }: { word: AttestedWord }) {
       {notebook.error && (
         <p role="status">This browser could not save the word.</p>
       )}
-      <p className="learning-meaning">{word.english}</p>
+      {characterGloss ? <p className="learning-meaning"><span className="pronunciation-label">Written-character senses</span>{characterGloss.split(";").slice(0, 2).join(";")}</p> : <p className="learning-meaning">{word.english}</p>}
       {word.registerLabel && (
         <p className="learning-register">{word.registerLabel}</p>
       )}
@@ -84,6 +86,11 @@ export function LearningWord({ word }: { word: AttestedWord }) {
         <a href={word.source.url} target="_blank" rel="noreferrer">
           {word.source.title}
         </a>
+        {characterGloss && <p>
+          <a href={characterGlossSource.url} target="_blank" rel="noreferrer">{characterGlossSource.title}</a>
+          {" · "}<a href={characterGlossSource.licenseUrl} target="_blank" rel="noreferrer">License</a>
+          <br/>{characterGloss}<br/>These dictionary senses describe the written character, not this locality’s everyday use.
+        </p>}
       </details>
     </article>
   );

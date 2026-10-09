@@ -22,6 +22,8 @@ try {
       return [
         target,
         getLocalLearning(point).words.map((word) => ({
+          recordId: word.id,
+          localityId: word.localityId,
           han: word.han,
           meaning: word.english,
           scope: word.registerLabel || word.reading,

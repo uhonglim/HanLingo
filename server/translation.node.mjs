@@ -35,10 +35,14 @@ test("validates bounds and source identifiers before calling a provider", () => 
 test("retrieval never substitutes Hong Kong for Guangzhou and preserves Beijing scope", () => {
   const e = retrieveEvidence("mother tea eight");
   assert.ok(e.guangzhou.some((word) => word.han === "八"));
-  assert.ok(e.guangzhou.every((word) => word.scope.includes("Guangzhou")));
-  assert.equal(retrieveEvidence("tea").guangzhou.length, 0);
+  assert.ok(e.guangzhou.every((word) => word.localityId === "guangzhou" && /Canton|Guangzhou/.test(word.scope)));
+  const cantonTea = retrieveEvidence("tea").guangzhou;
+  assert.ok(cantonTea.length > 0);
+  assert.ok(cantonTea.every(word => word.localityId === "guangzhou" && !word.scope.includes("Hong Kong")));
   assert.ok(e.beijing.length > 0);
-  assert.ok(e.beijing.every((w) => w.scope.includes("Standard Mandarin")));
+  assert.ok(e.beijing.every((w) => w.localityId === "beijing-city"));
+  assert.ok(e.beijing.some((w) => w.scope.includes("Standard Mandarin")));
+  assert.ok(e.beijing.every((w) => w.recordId.startsWith("beida1964-") ? w.scope.includes("1950s survey · published 1964") : w.scope.includes("Standard Mandarin")));
   assert.ok(e.amoy.every((w) => w.source.url));
 });
 test("six-target schema rejects missing/duplicate rows and strips invented phonetics", () => {

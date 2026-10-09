@@ -45,8 +45,10 @@ export function wordsForPhoto(photo: GalleryPhoto, words: AttestedWord[]) {
     .slice(0, 3);
 }
 export function scenePhotos(photos: GalleryPhoto[]) {
-  const selected: GalleryPhoto[] = [];
+  // The collection's curated opening image also introduces its locality page.
+  const selected: GalleryPhoto[] = photos.length ? [photos[0]] : [];
   for (const category of ["Food", "Streets", "Landscape", "Culture"]) {
+    if (selected.some((photo) => photo.category === category)) continue;
     const photo = photos.find((item) => item.category === category);
     if (photo) selected.push(photo);
   }

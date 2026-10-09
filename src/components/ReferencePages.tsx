@@ -1,5 +1,6 @@
 import { getBranchLearning, getLocalLearning } from "../data/learning";
 import BranchLearning from "./BranchLearning";
+import LocalityScenes from "./LocalityScenes";
 import RegionalDifferences from "./RegionalDifferences";
 import { branchDepth, localityDepth } from "../data/content-depth";
 import { getLocalGallery } from "../data/galleries";
@@ -147,41 +148,17 @@ export default function ReferencePage() {
             </div>
           </header>
 
-          {photo && (
+          {point && <LocalityScenes key={point.id} point={point} />}
+          {photo && !point && (
             <figure className="reference-hero-photo">
-              {point ? (
-                <Link
-                  to={`${varietyPath(point)}/culture`}
-                  aria-label={`Open ${placeLabel(point)} photo gallery`}
-                >
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    style={{ objectPosition: photo.position ?? "center" }}
-                    fetchPriority="high"
-                  />
-                </Link>
-              ) : (
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  style={{ objectPosition: photo.position ?? "center" }}
-                  fetchPriority="high"
-                />
-              )}
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                style={{ objectPosition: photo.position ?? "center" }}
+                fetchPriority="high"
+              />
               <figcaption>
-                <span>
-                  {photo.caption}
-                  {point && (
-                    <>
-                      {" "}
-                      ·{" "}
-                      <Link to={`${varietyPath(point)}/culture`}>
-                        {getLocalGallery(point.id).length} photos
-                      </Link>
-                    </>
-                  )}
-                </span>
+                <span>{photo.caption}</span>
                 <span>
                   <a href={photo.sourceUrl} target="_blank" rel="noreferrer">
                     {photo.author}
@@ -215,6 +192,31 @@ export default function ReferencePage() {
                       className="reference-child-card"
                       key={child.id}
                     >
+                      {(() => {
+                        const representative = mapPoints.find(
+                          (place) =>
+                            place.groupId === group.id &&
+                            place.subgroupId === child.id,
+                        );
+                        const image =
+                          representative &&
+                          getLocalGallery(representative.id)[0];
+                        return (
+                          image && (
+                            <>
+                              <img
+                                className="reference-child-photo"
+                                src={image.src}
+                                alt={image.alt}
+                                loading="lazy"
+                              />
+                              <span className="reference-child-credit">
+                                {image.author} · {image.license}
+                              </span>
+                            </>
+                          )
+                        );
+                      })()}
                       <h3>
                         {placeLabel(child)}
                         <span className="reference-child-native" lang="zh-Hant">
@@ -238,6 +240,20 @@ export default function ReferencePage() {
                       className="reference-child-card"
                       key={child.id}
                     >
+                      {getLocalGallery(child.id)[0] && (
+                        <>
+                          <img
+                            className="reference-child-photo"
+                            src={getLocalGallery(child.id)[0].src}
+                            alt={getLocalGallery(child.id)[0].alt}
+                            loading="lazy"
+                          />
+                          <span className="reference-child-credit">
+                            {getLocalGallery(child.id)[0].author} ·{" "}
+                            {getLocalGallery(child.id)[0].license}
+                          </span>
+                        </>
+                      )}
                       <h3>
                         {placeLabel(child)}
                         <span className="reference-child-native" lang="zh-Hant">

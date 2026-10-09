@@ -710,3 +710,30 @@
     grid-template-columns: 1fr;
   }
 }
+.reference-child-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.8;
+  object-fit: cover;
+  margin: 0 0 9px;
+  border-radius: 4px;
+}
+.reference-child-credit {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.reference-title-row h1 {
+  font-family: inherit;
+  font-weight: 550;
+  font-size: clamp(36px, 4vw, 52px);
+}
+.reference-entry-header {
+  max-width: 900px;
+}
+.reference-dek {
+  font-size: 16px;
+  line-height: 1.7;
+}

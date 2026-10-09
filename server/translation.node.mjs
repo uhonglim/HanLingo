@@ -34,7 +34,9 @@ test("validates bounds and source identifiers before calling a provider", () => 
 });
 test("retrieval never substitutes Hong Kong for Guangzhou and preserves Beijing scope", () => {
   const e = retrieveEvidence("mother tea eight");
-  assert.equal(e.guangzhou.length, 0);
+  assert.ok(e.guangzhou.some((word) => word.han === "八"));
+  assert.ok(e.guangzhou.every((word) => word.scope.includes("Guangzhou")));
+  assert.equal(retrieveEvidence("tea").guangzhou.length, 0);
   assert.ok(e.beijing.length > 0);
   assert.ok(e.beijing.every((w) => w.scope.includes("Standard Mandarin")));
   assert.ok(e.amoy.every((w) => w.source.url));

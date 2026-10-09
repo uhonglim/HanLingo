@@ -314,6 +314,84 @@ const hongKongIpaWords: AttestedWord[] = (
   source: hongKongIpaSource,
 }));
 
+const chengduLexicalSource = source(
+  "Yangtian Luo: Prosodic Phonology of the Chengdu Dialect, 2022, pp. 117–119",
+  "https://asset.library.wisc.edu/1711.dl/M563MSCNTS2278T/R/file-ac2d5.pdf#page=135",
+);
+// These morphology examples deliberately omit tones in the original dissertation.
+// Do not turn their segment strings into complete tonal pronunciations.
+const chengduWords: AttestedWord[] = (
+  [
+    ["turn", "倒拐", "turn", "tau kuai"],
+    ["sidewalk", "街沿", "sidewalk", "kai tɕian"],
+    ["reach-end", "抵拢", "reach the end", "ti loŋ"],
+    ["rice", "饭米", "rice", "fan mi"],
+    ["relaxed", "松活", "relaxed", "soŋ xo"],
+    ["country", "国家", "country", "kuɛ tɕia"],
+    ["brain", "脑壳", "brain", "nau kʰo"],
+    ["quilt", "铺盖", "quilt", "pʰu kai"],
+    ["switch", "开关", "switch", "kʰai kuan"],
+    ["sesame-candy", "麻糖", "sesame candy", "ma taŋ"],
+    ["green-tea", "绿茶", "green tea", "ly tsʰa"],
+    ["colander", "漏瓢", "colander", "ləu pʰiau"],
+    ["summer-shower", "偏东雨", "summer shower", "pʰian toŋ y"],
+    ["skinny", "精瘦", "skinny", "tɕin səu"],
+    ["bland", "寡淡", "bland", "kua tan"],
+    ["speak", "开腔", "speak", "kʰai tɕʰiaŋ"],
+    ["cautious", "把稳", "cautious", "pa uən"],
+    ["careful", "把细", "careful", "pa ɕi"],
+    ["nightfall", "擦黑", "nightfall", "tsʰa xɛ"],
+    ["flat-ground", "坝坝", "flat ground", "pa pa"],
+    ["small-hole", "洞洞", "small hole", "toŋ toŋ"],
+    ["small-cups", "杯杯", "small cups", "pei pei"],
+    ["shovel", "铲铲", "shovel", "tsʰuan tsʰuan"],
+    ["braid", "揪揪", "braid", "tɕiəu tɕiəu"],
+  ] as [string, string, string, string][]
+).map(([id, han, english, ipa]) => ({
+  id: `chengdu-luo-${id}`,
+  han,
+  english,
+  ipa,
+  localityId: "chengdu",
+  toneNotation: "unspecified",
+  registerLabel: "Chengdu lexical examples · tones not supplied",
+  reading: "Local compounds · segment transcription only",
+  note: "Luo’s morphology examples supply these segments and meanings without tones. They document local word formation, not complete tonal pronunciations; no pitch or sandhi has been inferred.",
+  source: chengduLexicalSource,
+}));
+
+const guangzhouLexicalSource = source(
+  "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+  "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9",
+);
+const guangzhouWords: AttestedWord[] = (
+  [
+    ["three", "三", "three", "sam55"],
+    ["heart", "心", "heart", "sɐm55"],
+    ["hill", "山", "hill", "san55"],
+    ["new", "新", "new", "sɐn55"],
+    ["star", "星", "star", "sɪŋ55"],
+    ["wind", "風", "wind", "foŋ55"],
+    ["leaf", "葉", "leaf", "jip22"],
+    ["ten", "十", "ten", "sɐp22"],
+    ["eight", "八", "eight", "pat33"],
+    ["one", "一", "one", "jɐt55"],
+    ["eat", "食", "eat", "sek22"],
+    ["six", "六", "six", "lok22"],
+  ] as [string, string, string, string][]
+).map(([id, han, english, ipa]) => ({
+  id: `guangzhou-ding-${id}`,
+  han,
+  english,
+  ipa,
+  localityId: "guangzhou",
+  toneNotation: "pitch-contour",
+  registerLabel: "Guangzhou comparative word table",
+  reading: "Guangzhou reference · Ding 2010",
+  note: "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+  source: guangzhouLexicalSource,
+}));
+
 export const mandarinYueLearning: BranchLearning[] = [
   {
     branchId: "mandarin/beijing",
@@ -566,8 +644,20 @@ export const mandarinYueLearning: BranchLearning[] = [
   },
   {
     branchId: "mandarin/southwestern",
-    words: [],
+    words: chengduWords,
     soundNotes: [
+      {
+        title: "Say the whole local word",
+        text: "倒拐 means turn, 铺盖 names a quilt, and 漏瓢 names a colander in Luo’s examples. These are whole lexical forms. The supplied segment strings omit tones, so use them to compare word shapes rather than to predict a spoken phrase.",
+        localityIds: ["chengdu"],
+        source: chengduLexicalSource,
+      },
+      {
+        title: "Repeating a syllable can make a noun",
+        text: "The source pairs 铲 ‘to shovel’ with 铲铲 ‘shovel’, and 揪 ‘pull’ with 揪揪 ‘braid’. Repetition can build a new word. This morphology table leaves pitch unmarked; its spellings are not a tone-sandhi exercise.",
+        localityIds: ["chengdu"],
+        source: chengduLexicalSource,
+      },
       {
         title: "Four tones in Qin’s description",
         text: "Qin gives citation contours 45, 31, 53 and 213 for Chengdu’s four tones. They describe isolated forms in that study. Within a prosodic word, the first rising tone can become high level after another syllable.",
@@ -622,6 +712,14 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     resources: [
       {
+        title: "Chengdu compounds and everyday words",
+        description:
+          "Luo’s 2022 dissertation includes local lexical examples. Pages 117–119 supply the segment-only word collection here.",
+        localityIds: ["chengdu"],
+        kind: "Study",
+        url: chengduLexicalSource.url,
+      },
+      {
         title: "Chengdu phrase rhythm and tone changes",
         description:
           "A four-page study shows how speech rhythm and tone changes align within prosodic words.",
@@ -649,8 +747,20 @@ export const mandarinYueLearning: BranchLearning[] = [
   },
   {
     branchId: "yue/guangfu",
-    words: [...hongKongWords, ...hongKongIpaWords],
+    words: [...guangzhouWords, ...hongKongWords, ...hongKongIpaWords],
     soundNotes: [
+      {
+        title: "Keep the final consonant distinct",
+        text: "Guangzhou 三 [sam55] and 山 [san55] hold the vowel and pitch steady while the final nasal changes. Compare lips together for [m] with the tongue tip touching behind the upper teeth for [n].",
+        localityIds: ["guangzhou"],
+        source: guangzhouLexicalSource,
+      },
+      {
+        title: "A short syllable still has a tone",
+        text: "The Guangzhou table writes 一 [jɐt55], 八 [pat33] and 十 [sɐp22]. Their final stops close the syllables; the pitch values still differ. The digits here are printed contours, not Jyutping categories.",
+        localityIds: ["guangzhou"],
+        source: guangzhouLexicalSource,
+      },
       {
         title: "Guangzhou tone contrasts are changing",
         text: "The PolyU study tests production and perception in Guangzhou. It documents speakers merging the mid and low level tones, with differences between speaking and listening. Preserve the speaker and study context instead of declaring one merged inventory for the whole city.",
@@ -732,6 +842,14 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "Guangzhou word comparisons",
+        description:
+          "Table 5 on page 206 identifies Guangzhou separately from Meixian, Amoy and Suzhou. It supplies the 12 Guangzhou readings here.",
+        localityIds: ["guangzhou"],
+        kind: "Study",
+        url: guangzhouLexicalSource.url,
+      },
       {
         title: "Guangzhou tone merger",
         description:

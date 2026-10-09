@@ -26,6 +26,10 @@ const lishui = source(
   "Lan, Chen & Zhang: An acoustic study of tone sandhi in Lishui Wu, 2023",
   "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2023/full_papers/542.pdf",
 );
+const lishuiWordSource = source(
+  "Phil Rose: Dialect-geographical Acoustic-Tonetics, Interspeech 2018, p. 2735",
+  "https://www.isca-archive.org/interspeech_2018/rose18_interspeech.pdf#page=3",
+);
 const suzhou = source(
   "Feng: Fricative vowels in Suzhou Chinese, 2007",
   "https://www.icphs2007.de/conference/Papers/1321/1321.pdf",
@@ -816,8 +820,20 @@ export const hakkaWuLearning: BranchLearning[] = [
   },
   {
     branchId: "wu/chuqu",
-    words: [],
+    words: words(
+      "lishui",
+      [["east-wind", "東風", "east wind", "[tʊŋ44 fʊŋ323]"]],
+      lishuiWordSource,
+      "Whole-word tone-sandhi example · Rose 2018",
+      "The source supplies the Lishui compound’s segments and 44.323 pitch pattern together. These are the tones within this word, not isolated readings to reuse in other phrases. This is an attested example, not a rule for every speaker.",
+    ),
     soundNotes: [
+      {
+        title: "Follow the pitch across 東風",
+        text: "Rose’s Lishui example 東風 [tʊŋ44 fʊŋ323] begins level and finishes with a dipping contour. The study transcribes this whole-word pattern directly. Keep it attached to the compound instead of applying it automatically to new words.",
+        localityIds: ["lishui"],
+        source: lishuiWordSource,
+      },
       {
         title: "Real words and unfamiliar combinations",
         text: "The 2023 experiment compared familiar two-syllable words with newly assembled syllable pairs. The first syllable’s pitch depended on both the item and the speaker. Learning a familiar compound gives evidence that a tone chart by itself cannot provide.",
@@ -860,6 +876,14 @@ export const hakkaWuLearning: BranchLearning[] = [
       },
     ],
     resources: [
+      {
+        title: "A Lishui compound with its pitch trace",
+        description:
+          "Rose’s study compares locality-specific compounds across Zhejiang. Page 2735 supplies 東風 with its full word-tone contour.",
+        localityIds: ["lishui"],
+        kind: "Study",
+        url: lishuiWordSource.url,
+      },
       {
         title: "Lishui tone sandhi: eight speakers",
         description:

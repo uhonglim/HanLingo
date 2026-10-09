@@ -1,3 +1,5 @@
+import { Bookmark } from "lucide-react";
+import { useWordNotebook } from "../hooks/useWordNotebook";
 import { Link } from "react-router-dom";
 import { mapPoints } from "../data/languages";
 import type { MapPoint } from "../data/languages";
@@ -41,9 +43,24 @@ export function balancedPreview<T>(
 
 export function LearningWord({ word }: { word: AttestedWord }) {
   const spelling = spellingFor(word);
+  const notebook = useWordNotebook();
+  const saved = notebook.saved.includes(word.id);
   return (
     <article className="learning-word">
-      <h3 lang="zh-Hant">{word.han}</h3>
+      <div className="learning-word-top">
+        <h3 lang="zh-Hant">{word.han}</h3>
+        <button
+          className="learning-save"
+          aria-label={`${saved ? "Unsave" : "Save"} ${word.english}`}
+          aria-pressed={saved}
+          onClick={() => notebook.toggle(word.id)}
+        >
+          <Bookmark size={18} fill={saved ? "currentColor" : "none"} />
+        </button>
+      </div>
+      {notebook.error && (
+        <p role="status">This browser could not save the word.</p>
+      )}
       <p className="learning-meaning">{word.english}</p>
       {word.registerLabel && (
         <p className="learning-register">{word.registerLabel}</p>

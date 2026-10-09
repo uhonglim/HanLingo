@@ -36,3 +36,20 @@ Every current word is marked `toneNotation: 'pitch-contour'`. No recording is fa
 Culture sources are linked on every item. Meixian housing is Nankou/Qiaoxiang; Hailu salted tea is explicitly a regional practice across communities; Changting dried tofu is supported by Fujian's heritage list item 104; Suzhou Pingtan and Kunqu use local cultural-office and UNESCO documentation; Wenzhou printing concerns Rui’an and is explicitly separated from Lucheng pronunciation; Lishui Tongji Weir is in Liandu, southwest of the city center. These do not claim that everyone shown or discussed shares one pronunciation.
 
 UNESCO's descriptive pages were available through indexed canonical records, although some direct URLs served an anti-bot challenge during verification. No images or film from those pages were copied. The Zhu Yuhao tutorial is linked as community-authored study material; its CC BY-NC-ND text is not reproduced or converted into HanLingo lessons.
+
+## Further branch depth — 9 October 2026
+
+### First directly sourced Lishui compound
+
+Phil Rose, *Dialect-geographical Acoustic-Tonetics: five disyllabic tone sandhi patterns in cognate words from the Wu dialects of Zhèjiāng province*, Interspeech 2018, printed p. 2735/PDF p. 3. [ISCA primary publication](https://www.isca-archive.org/interspeech_2018/rose18_interspeech.pdf#page=3).
+
+Downloaded the PDF and inspected pages 2–3 as rendered images. The results paragraph explicitly prints the **Lishui** example 東風, with segments [tʊŋ fʊŋ] and whole-word pitch 44.323. The card writes [tʊŋ44 fʊŋ323], attaching the two supplied contours to their corresponding syllables without deriving any new pitch. Its reading label explicitly identifies it as a whole-word sandhi example. A short learning note and direct resource link retain this context. The entry is not evidence for the isolation tones of the two characters, nor for all residents or nearby Wu varieties.
+
+Other figure labels were not copied: small-font diacritics and the distinction between phonemic legend forms and surface descriptions require further resolution. One confirmed compound does not justify adding invented examples to unlock Practice.
+
+### Unclosed gaps
+
+- Changting: the original 2007 NTHU PDF was downloaded and inspected as a scan. Its examined pages 177–182 support the existing tone-sandhi explanations but do not supply paired lexical segments and pitch. No tone-only pattern was promoted into an IPA word.
+- Lishui: Lan, Chen and Zhang’s 2023 paper was retrieved and read; it gives speaker scope, experimental design and tone patterns, but no usable per-word IPA list. ANU’s repository record for Steed’s dissertation was found; its full download was unavailable during this pass. The one new Rose example is a starting point, not completed course depth.
+
+Local research PDFs and page renders are saved under ignored `.evidence/branch-depth-research/`; they are not redistributed as public assets.

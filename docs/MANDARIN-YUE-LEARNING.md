@@ -56,3 +56,29 @@ The article explicitly uses **IPA for Yulin** and **Jyutping for Cantonese**. On
 - `taishandict.com` is a community dictionary with audio and a published transcription key. Its simplified phonetic notation is explicitly identified, rather than presented as strict IPA or HanLingo spelling.
 - CUHK’s Cantonese character dictionary was verified to respond and exposes its frameset/readings interface. It is a linked reference, not an embedded source of automatically converted pronunciations.
 - No external audio or new unlicensed photograph has been bundled.
+
+## Further branch depth — 9 October 2026
+
+This addition supersedes the original zero-word statement for Chengdu above. Earlier coverage counts in this log describe earlier stages; regenerate `docs/CONTENT-DEPTH.md` for current totals.
+
+### Chengdu: 24 local lexical forms
+
+Primary source: Yangtian Luo, *Prosodic Phonology of the Chengdu Dialect*, University of Wisconsin–Madison, 2022, printed pp. 117–119, PDF pp. 135–137. [University-hosted dissertation](https://asset.library.wisc.edu/1711.dl/M563MSCNTS2278T/R/file-ac2d5.pdf#page=135).
+
+The PDF was downloaded and the three original pages rendered and inspected. The new entries select compounds and reduplications directly printed with segments and meanings: directions and streets, food and utensils, descriptions and actions. Characters retain the source’s simplified writing. Aspiration superscripts become Unicode ʰ; other segment symbols remain unchanged. These pages **omit tones**. Each entry therefore uses `toneNotation: "unspecified"` and the visible label “Chengdu lexical examples · tones not supplied”. Neither citation tones nor sandhi were inferred. Whole compounds remain whole compounds; the source’s morphology examples are not relabelled as full pronunciation lessons.
+
+Two short sound/word-formation notes and a linked reference accompany the collection. These are lexical examples rather than an unqualified claim about every Chengdu speaker.
+
+### Guangzhou: 12 specifically attributed readings
+
+Source: Picus Sizhi Ding, *Phonological change in Hong Kong Cantonese through language contact with Chinese topolects and English over the past century*, 2010, Table 5, printed p. 206/PDF p. 9. [Aberdeen-hosted publication](https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9).
+
+Downloaded the original PDF and inspected the rendered table, because its IPA font extracts as private-use glyphs. The column explicitly says **Cantonese (Guangzhou)** and credits Ting and Sun’s Sino-Tibetan Cognates Database. It is distinct from the article’s Hong Kong participants and from the adjacent Meixian, Xiamen and Suzhou columns. Imported that column’s 12 lexical facts only; retained the printed short/long vowel notation (no added length marks) and full numeric pitch values. Chinese characters identify the table’s glossed items; the table itself gives IPA and English glosses. No Hong Kong readings were copied into Guangzhou.
+
+The two new learning notes compare nasal closures and checked syllables using those attested rows. This small comparative reference is not presented as a new Guangzhou recording sample.
+
+### Remaining limit
+
+Taishan remains without strict-IPA word cards. The community dictionary’s opened transcription guide explicitly simplifies multiple IPA realizations into shared letters and has accent-dependent vowels. Its spelling/audio resources remain linked; ambiguous symbols were not silently converted. The existing Chengdu vowel-raising study’s numeric token IDs were still not treated as tones.
+
+Source files and rendered inspection images are in the local ignored `.evidence/branch-depth-research/` directory, not redistributed as public website assets.

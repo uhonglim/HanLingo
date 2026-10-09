@@ -18,7 +18,7 @@ try {
     "",
     `Coverage: **${branches.length} branches**, **${places.length} localities**, **${total("ipaWords")} IPA entries**, **${total("sourceSpellingWords")} additional source-spelling entries**, and **${total("photos")} photographs**.`,
     "",
-    `Of the IPA entries, ${total("segmentalEntries")} reproduce source segment lists without tones. Their cards explicitly say that tones are not given.`,
+    `Of the IPA entries, ${total("segmentalEntries")} retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.`,
     "",
     "## Branch inventory",
     "",
@@ -42,7 +42,7 @@ try {
     "",
     "## Research priorities",
     "",
-    "A working starter target is 20 attested readings, 3 specific sound notes, 2 cultural topics and 2 useful source links per locality. This is a research queue, not permission to add unverified forms or pad the prose. Amoy additionally has its dedicated sound, tone and practice material. Lower counts remain visible here so photo-rich pages cannot be mistaken for complete language courses.",
+    "A working starter target is 20 attested readings, 3 specific sound notes, 2 cultural topics and 2 useful source links per locality. This is a research queue, not permission to add unverified forms or pad the prose. Shared locality pages now include topic browsing, bookmarks, saved-word practice and a visual pitch explorer wherever the evidence supports them; Amoy retains its dedicated lessons. Lower counts remain visible here so photo-rich pages cannot be mistaken for complete language courses.",
     "",
     ...places
       .filter((place) => place.ipaWords < 20)

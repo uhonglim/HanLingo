@@ -30,6 +30,22 @@ describe("local learning chapters", () => {
     expect(html.match(/class="learning-word"/g)).toHaveLength(1);
     expect(html).toContain("Local differences");
   });
+  it("does not silently replace an empty saved deck with unsaved words", () => {
+    const html = render("/min/eastern-min/fuzhou/practice?saved=1");
+    expect(html).toContain("Save four different meanings to practise");
+    expect(html).toContain("Use all words");
+    expect(html).not.toContain('aria-label="Word practice"');
+  });
+  it("keeps Chengdu's omitted-tone qualification in words, sounds and practice", () => {
+    for (const chapter of ["words", "sounds", "practice"]) {
+      const html = render(`/mandarin/southwestern/chengdu/${chapter}`);
+      expect(html).toContain("tones not supplied");
+      expect(html).toContain("IPA · tones not given");
+      const localOnly = html.split('<section class="regional-differences"')[0];
+      expect(localOnly).not.toContain('aria-label="Pitch contour');
+      expect(localOnly).not.toContain('class="pronunciation-spelling"');
+    }
+  });
   it("does not create empty word or practice routes for a locality without attested words", () => {
     for (const point of mapPoints) {
       const data = getLocalLearning(point);

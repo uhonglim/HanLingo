@@ -26,3 +26,11 @@ Verified IPA drives the sound selector and pitch traces. Only explicitly marked 
 Run `npm run audit:content` to regenerate `CONTENT-DEPTH.md`. Counts separate attested IPA, source-spelling entries, omitted-tone segment lists, photographs, learning notes, culture and source links. Incomplete locality word banks remain explicit research priorities.
 
 Group and branch overviews aggregate actual locality material and sample multiple branches/places before repeating one. The existing child list comes before those previews. Complete word lists remain under locality routes; overview samples never imply a group-wide pronunciation. Consequential register/survey labels travel with the reading into cards and practice.
+
+## Shared learning experience — October 2026
+
+Locality introductions pair three distinct licensed scenes with topic-related attested readings. These associations help browsing; they are not translations of photograph captions, ingredient lists, or proof about photographed speakers. Existing locality galleries keep their full collections, credit links, keyboard viewer and direct photo URLs. The viewer now offers the same local reading cards where available.
+
+Words can be searched and filtered by English-gloss topic. IPA entries can be bookmarked in this browser; the Saved filter and practice deck stay scoped to the current locality. Practice requires four distinct meanings, including when using bookmarks. An insufficient saved deck is shown explicitly rather than silently replaced by unsaved words.
+
+Sounds retain exact segment matching and add selectable pitch traces derived solely from entries marked as pitch contours. Source categories and omitted tones never enter the tone explorer. The new Chengdu segment-only lexical examples keep their qualification in word cards, photo readings, sound matches and practice.

@@ -935,7 +935,128 @@
       }
     }
   ],
-  "guangzhou": [],
+  "guangzhou": [
+    {
+      "han": "三",
+      "meaning": "three",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "心",
+      "meaning": "heart",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "山",
+      "meaning": "hill",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "新",
+      "meaning": "new",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "星",
+      "meaning": "star",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "風",
+      "meaning": "wind",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "葉",
+      "meaning": "leaf",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "十",
+      "meaning": "ten",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "八",
+      "meaning": "eight",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "一",
+      "meaning": "one",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "食",
+      "meaning": "eat",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "六",
+      "meaning": "six",
+      "scope": "Guangzhou comparative word table",
+      "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
+      "source": {
+        "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
+        "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    }
+  ],
   "meixian": [
     {
       "han": "山",

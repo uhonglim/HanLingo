@@ -3,7 +3,7 @@ import "./Pronunciation.css";
 import { displayIpa, pitchContours } from "../data/ipa-display";
 export { displayIpa, pitchContours } from "../data/ipa-display";
 
-function PitchTrace({ contour }: { contour: string }) {
+export function PitchTrace({ contour }: { contour: string }) {
   const values = [...contour].map(Number);
   if (values.length === 1) values.push(values[0]);
   const points = values

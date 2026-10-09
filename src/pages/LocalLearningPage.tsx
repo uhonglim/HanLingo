@@ -6,16 +6,15 @@ import {
   availableSections,
   getLocalLearning,
   learningSections,
-  searchWords,
   spellingFor,
 } from "../data/learning";
 import type { LearningSection } from "../data/learning";
 import type { AttestedWord } from "../data/learning/types";
-import { LearningWord } from "../components/BranchLearning";
-import RegionalDifferences, {
-  extraRegionalWords,
-  RegionalWord,
-} from "../components/RegionalDifferences";
+import { PhotoReadings, wordsForPhoto } from "../components/LocalityScenes";
+import LocalWordCollection from "../components/LocalWordCollection";
+import LocalToneExplorer from "../components/LocalToneExplorer";
+import { useWordNotebook } from "../hooks/useWordNotebook";
+import RegionalDifferences from "../components/RegionalDifferences";
 import "../components/BranchLearning.css";
 import { makeQuiz } from "../data/xiamen-romanization";
 import PhotoGallery from "../components/gallery/PhotoGallery";
@@ -134,8 +133,8 @@ export default function LocalLearningPage() {
   const route = resolveReferenceRoute(params);
   const point = route?.point;
   const chapter = params.chapter as LearningSection;
-  const [query, setQuery] = useSearchParams();
-  const term = query.get("q") ?? "";
+  const [query] = useSearchParams();
+  const { saved } = useWordNotebook();
   const data = point ? getLocalLearning(point) : undefined;
   const valid = point && availableSections(point).includes(chapter);
   if (!valid || !point || !data)
@@ -154,66 +153,41 @@ export default function LocalLearningPage() {
           key={point.id}
           place={placeLabel(point)}
           photos={getLocalGallery(point.id)}
+          renderDetail={(photo) =>
+            wordsForPhoto(photo, data.words).length ? (
+              <PhotoReadings
+                photo={photo}
+                words={data.words}
+                base={varietyPath(point)}
+              />
+            ) : null
+          }
         />
       </div>
     );
-  const words = searchWords(data.words, term);
-  const regionalWords = extraRegionalWords(point.id, data.words, term);
-  const totalWords =
-    data.words.length + extraRegionalWords(point.id, data.words).length;
+  const savedWords = data.words.filter((word) => saved.includes(word.id));
+  const savedPractice =
+    query.get("saved") === "1" &&
+    new Set(savedWords.map((word) => word.english)).size >= 4;
   return (
     <div className="local-learning-page" key={`${point.id}/${chapter}`}>
       <header>
         <h1>
           {placeLabel(point)} {learningSections[chapter].toLowerCase()}
         </h1>
-        {chapter === "words" && (
-          <p>
-            {words.length + regionalWords.length} of {totalWords} words
-          </p>
-        )}
       </header>
       {chapter === "words" && (
-        <>
-          <label className="local-learning-search">
-            <span className="sr-only">Search words</span>
-            <input
-              type="search"
-              value={term}
-              placeholder="Word, meaning, IPA, or spelling"
-              onChange={(event) => {
-                const next = new URLSearchParams(query);
-                if (event.target.value) next.set("q", event.target.value);
-                else next.delete("q");
-                setQuery(next, { replace: true, preventScrollReset: true });
-              }}
-            />
-          </label>
-          <div className="learning-word-grid">
-            {words.map((word) => (
-              <LearningWord key={word.id} word={word} />
-            ))}
-          </div>
-          {regionalWords.length > 0 && (
-            <div className="learning-word-grid">
-              {regionalWords.map((reading) => (
-                <RegionalWord key={reading.id} reading={reading} />
-              ))}
-            </div>
-          )}
-          {!words.length && !regionalWords.length && (
-            <p role="status">No words match “{term}”.</p>
-          )}
-          <RegionalDifferences
-            key={point.id}
-            localityId={point.id}
-            query={term}
-          />
-        </>
+        <LocalWordCollection
+          key={point.id}
+          localityId={point.id}
+          words={data.words}
+          base={varietyPath(point)}
+        />
       )}
       {chapter === "sounds" && (
         <>
           <LocalSoundExplorer key={point.id} words={data.words} />
+          <LocalToneExplorer key={`${point.id}-tones`} words={data.words} />
           <RegionalDifferences key={point.id} localityId={point.id} />
           <div className="local-sound-notes">
             {data.soundNotes.map((note) => (
@@ -233,7 +207,44 @@ export default function LocalLearningPage() {
           </div>
         </>
       )}
-      {chapter === "practice" && <Practice key={point.id} words={data.words} />}
+      {chapter === "practice" &&
+      query.get("saved") === "1" &&
+      !savedPractice ? (
+        <section className="local-words-empty">
+          <h2>Save four different meanings to practise</h2>
+          <p>
+            Your saved collection needs four distinct meanings for this quiz.
+          </p>
+          <Link
+            className="learning-source"
+            to={`${varietyPath(point)}/words?saved=1`}
+          >
+            Your saved words
+          </Link>
+          {" · "}
+          <Link
+            className="learning-source"
+            to={`${varietyPath(point)}/practice`}
+          >
+            Use all words
+          </Link>
+        </section>
+      ) : (
+        chapter === "practice" && (
+          <>
+            {savedPractice && (
+              <p className="learning-register">
+                Practising your saved words ·{" "}
+                <Link to={`${varietyPath(point)}/practice`}>Use all words</Link>
+              </p>
+            )}
+            <Practice
+              key={`${point.id}/${savedPractice ? savedWords.map((word) => word.id).join(",") : "all"}`}
+              words={savedPractice ? savedWords : data.words}
+            />
+          </>
+        )
+      )}
     </div>
   );
 }

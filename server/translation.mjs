@@ -20,7 +20,7 @@ export const targets = {
   guangzhou: {
     name: "Canton",
     scope:
-      "Contemporary colloquial Guangzhou Cantonese. Do not silently substitute Hong Kong-specific lexical choices.",
+      "Contemporary colloquial Canton speech (廣州話). Do not silently substitute Hong Kong-specific lexical choices.",
   },
   meixian: {
     name: "Meixian Hakka",

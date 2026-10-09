@@ -38,7 +38,7 @@ export const otherPlaceReadings: Record<string, OtherPlaceReading> = {
       title: 'Chinese University of Hong Kong · Cantonese Express, 識新朋友',
       url: 'https://www.ilc.cuhk.edu.hk/workshop/Chinese/Cantonese/CantoneseExpress/dailyConversation/01/text.aspx',
     },
-    note: 'The full city name 廣州 is written Gwong2 Zau1 in the course dialogue. These are Jyutping tone categories, not pitch numbers or HanLingo spelling. The Hong Kong teaching source documents the Cantonese name; it does not establish all details of a Guangzhou speaker’s accent.',
+    note: 'The full city name 廣州 is written Gwong2 Zau1 in the course dialogue. These are Jyutping tone categories, not pitch numbers or HanLingo spelling. The Hong Kong teaching source documents the Cantonese name; it does not establish all details of a Canton speaker’s accent.',
   },
   'hong-kong': {
     commonName: 'Hong Kong',

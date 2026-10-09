@@ -157,7 +157,7 @@ export const atlasMinYueLocalities: AtlasLocality[] = [
   point('leizhou-peninsula', 'suixi-min', 'Suixi', '遂溪', [110.25, 21.38], {
     title: 'Yue-Hashimoto 1985 · The Suixi dialect of Leizhou', url: 'https://ci.nii.ac.jp/ncid/BA13746123', locator: 'Bibliographic record of the CUHK locality monograph: phonology, vocabulary and syntax',
   }, 'The Suixi Leizhou-Min reference described in the locality monograph; county-seat map anchor.'),
-  point('pearl-delta', 'guangzhou', 'Guangzhou', '廣州', [113.26, 23.13], yueLocal('廣州'), 'Urban Guangzhou Cantonese reference; rural and district varieties are not assumed identical.', ['广州', 'Canton']),
+  point('pearl-delta', 'guangzhou', 'Guangzhou', '廣州', [113.26, 23.13], yueLocal('廣州'), 'Urban Canton speech reference; rural and district varieties are not assumed identical.', ['广州', 'Canton']),
   point('pearl-delta', 'hong-kong', 'Hong Kong', '香港', [114.17, 22.32], { ...yueSurvey, locator: 'Urban Hong Kong sample, chapters 5–6; distinct from the Kam Tin sample' }, 'Urban Hong Kong Cantonese reference; traditional New Territories village varieties remain separate.'),
   point('pearl-delta', 'macau', 'Macau', '澳門', [113.5439, 22.1987], yueLocal('Macau'), 'Urban Macau Cantonese reference.', ['Macao', '澳门']),
   point('pearl-delta', 'foshan', 'Foshan', '佛山', [113.122, 23.028], yueLocal('佛山'), 'Old urban Foshan reference; Nanhai, Shunde and other district references are separate entries.'),

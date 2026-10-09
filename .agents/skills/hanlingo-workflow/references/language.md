@@ -10,7 +10,7 @@ Every reading needs locality, meaning, source, transcription convention and rele
 - Keep Standard Mandarin from a Beijing speaker visibly qualified; it is not an unqualified sample of Beijing vernacular.
 - Haifeng segment-only examples have no supplied tones. Preserve the visible “tones not given” qualification in words, comparisons and practice; never fill tones from another town.
 - Preserve conflicting source readings separately with scope rather than choosing a convenient universal form. Deduplicate only actual repeated records, not different studies.
-- Source category digits are not pitch contours. Source-only Tâi-lô/POJ/Jyutping spellings do not establish IPA automatically.
+- Source category digits are not pitch contours. Source-only Tâi-lô/POJ/Jyutping spellings do not establish IPA automatically. Name readings may use a manually audited normalization only with an explicit phonetic mapping source and the attested whole name; record the derivation, variety, citation/sandhi limits and tone notation. Secondary place names must use HanLingo, while source spelling stays in notes and aliases.
 
 Data entry points: `src/data/learning/`, `src/data/regional-words.ts`, `src/data/xiamen-lexicon.ts`, `src/components/Pronunciation.tsx`. Read `docs/BRANCH-LEARNING.md` before enabling Words, Photos, Sounds or Practice destinations. No empty exercises or invented recordings.
 

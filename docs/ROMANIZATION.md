@@ -49,7 +49,7 @@ Amoy 茶 “tea” remains **[te˨˦] → te24**, a dictionary-based citation re
 
 ## Evidence and limits
 
-This revision changes the reading aid, not the underlying lexical evidence. Source IPA, locality and speaker qualifications, source orthographies, and documented community place names remain unchanged. Tâi-lô, POJ, Jyutping and other source spellings remain separately labelled; they are not automatically converted to IPA or HanLingo.
+This revision changes the reading aid, not the underlying lexical evidence. Source IPA, locality and speaker qualifications, source orthographies, and documented community place names remain unchanged. Tâi-lô, POJ, Jyutping and other source spellings remain separately labelled. Place-name secondary labels use HanLingo only: manually audited broad IPA normalization requires both the attested name and an explicit phonetic mapping source, with its scope and tone convention recorded. Source spellings are never blindly passed to the IPA converter.
 
 The spelling is intentionally lossy. Equal spellings do not imply equal IPA, and collision-free reverse conversion is not promised. IPA remains necessary for precise pronunciation. The converter also does not infer pronunciation from Han characters, validate phonotactics, generate lesson pronunciations from machine translation, or infer missing tones. Unknown symbols fail visibly.
 

@@ -6,13 +6,13 @@ Use names attested by the community being described, while preserving precise ge
 - Locality leaves are peer places, including towns and urban districts rather than only legally designated cities. Taipei belongs alongside Amoy; “Taigi” is a regional language name and must not replace that locality node.
 - Min, Southern Min, Hoklo, and Hokkien are not automatically interchangeable. State the scope used by the source. Do not assert mutual intelligibility without evidence.
 - The 泉漳 cluster is displayed as **Tsuân-Tsiang**. **Quanzhang**, **Tsuan-Tsiang**, and the former **Tsuan-Chiang** remain search aliases; the existing `tsuan-chiang` URL identifier remains stable. The [Taigi essay in BONG 348](https://tsbp.tgb.org.tw/2015/04/blog-post_11.html) attests **Tsuân-tsiang**. The [MOE 州 entry](https://sutian.moe.edu.tw/zh-hant/su/2284/) separately supplies **Tsuân-tsiu** and **Tsiang-tsiu** as city-name examples; it does **not** attest the combined cluster name. Naming evidence and linguistic classification are separate. None of these spellings is generated HanLingo.
-- Use a primary common/community name and a secondary sourced local-language reading, without parentheses. Both are searchable. This replaces the former single-name display rule. Chinese script remains visible as an identifier. Do not manufacture distinct names when the two are identical; do not fabricate an absent local reading.
+- Use a primary common/community name and a secondary local-language reading in HanLingo spelling, without parentheses. Both are searchable. This replaces the former single-name display rule. Chinese script remains visible as an identifier. Do not manufacture distinct names when the two are identical; do not fabricate an absent local reading.
 - Prefer documented local-language names. Keep geographic precision ahead of an attractive but unsupported translation; never coin a local name and present it as community usage.
 - Existing route IDs can remain stable while display names change. New places use their own locality IDs.
 
 Sources: [Taiwan Ministry of Education dictionary](https://sutian.moe.edu.tw/zh-hant/su/2284/), [Taiwan language names](https://english.moe.gov.tw/fp-117-40171-b21aa-1.html), [Singapore Hokkien](https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/). Each locality article supplies its own geographic and linguistic sources.
 
-Local naming references: **Sin-ka-pho** is listed for 新加坡 in [Taipei’s school vocabulary list](https://www.saihs.edu.tw/uploads/1678269782302fhjagTST.pdf). **Pho Te** is the former shortened display form of **Pho3 Te4** for George Town in [Timothy Tye’s Penang place-name list](https://www.penang-traveltips.com/hokkien/place-names.htm). The current dual-name display uses George Town with the exact secondary spelling Pho3 Te4; its digits are source tone categories, not HanLingo pitch contours. The city scope is George Town, not the whole state of Penang.
+Local naming references: **Sin-ka-pho** is listed for 新加坡 in [Taipei’s school vocabulary list](https://www.saihs.edu.tw/uploads/1678269782302fhjagTST.pdf). **Pho Te** is the former shortened display form of **Pho3 Te4** for George Town in [Timothy Tye’s Penang place-name list](https://www.penang-traveltips.com/hokkien/place-names.htm). Pho3 Te4 remains a source spelling and search alias; it is not used as the HanLingo secondary name. Its digits are source tone categories, not HanLingo pitch contours. The city scope is George Town, not the whole state of Penang.
 
 **Teo Swa** is the community-owned cluster name used beside Tsuân-Tsiang. The [Teo Swa General Association](https://www.csga.co.nz/about-us/) uses it in its bilingual name. Teochew and Swatow are locality peers within that branch; they must not be placed in Tsuân-Tsiang. [You Rujie’s study](https://xbzs.ecnu.edu.cn/CN/html/201601010.htm) provides the Southern Min classification and a Swatow reference.
 
@@ -51,16 +51,17 @@ Use `src/data/site-terms.ts` for repeated destination and learning labels. One d
 - Keep source titles, quotations, attested spellings, and stable URL identifiers unchanged. The chosen common/local pair appears on locality surfaces; additional aliases remain in search and source notes.
 - Delete repeated introductions and controls that duplicate an existing destination; retain source qualifications and photo credits.
 
-## Dual-name contract · 2026-10-09
+## Dual-name contract · corrected 2026-10-09
 
-The current user decision is **common name + local reading name**. `placeLabel` returns the primary name; `placeReadingName` returns an attested source spelling; `placeDisplayName` joins them for plain-text contexts; `PlaceName` renders the pair. `resolvePlaceNames` exposes the fields and provenance. This supersedes earlier instructions to show only one Latin-script name. No parentheses or invented extra classification level is needed.
+The current user decision is **common name + HanLingo spelling of the local name**. The second name must not use another romanization system. `placeLabel` returns the common name; `placeReadingName` generates the secondary name through `convertIpa`; `placeDisplayName` and `PlaceName` use that same result everywhere. No parentheses or extra controls are needed.
 
-- Amoy · Ē-mn̂g; Canton · Gwong2 Zau1; Taipei · Tâi-pak; Singapore · Sin-ka-pho; Foochow · Hók-ciŭ.
-- Kulangsu · kó·-lōng-sū is a landmark name within Amoy. It is not a new dialect locality.
-- Chang Chow is the community federation’s conventional label for 漳州; Tsiang-tsiu is the separately sourced Hokkien spelling. Tsuân-tsiu retains its existing community-oriented display form; when common and reading forms coincide they are not printed twice.
-- Readings retain POJ, Tâi-lô, Jyutping, Hakka or the cited community spelling. They are **not** automatically IPA, not necessarily a full tonal transcription, and not generated HanLingo. Notes identify Taiwan-dictionary names for mainland places and tone-unmarked community forms.
-- Conventional names can differ from local readings. A pinyin-based official/common name may remain where no better documented community conventional name exists; it must never masquerade as a local dialect reading.
+- `place-name-pronunciations.ts` holds phonetic evidence separately from source spellings. Identical IPA and tone notation always receive identical HanLingo output. Do not hard-code an attractive output or change the shared sound key for place names.
+- The attested name spelling and an explicit phonetic correspondence table may support a manually audited broad IPA normalization. Record both sources and its scope; never claim this is a new local recording. Source orthography alone is insufficient.
+- Preserve source tone categories as `·Tn`. Apply a pitch table only when its exact variety and convention are documented. Never infer connected-speech tone sandhi. Mark missing tones in the reference notes.
+- POJ, Tâi-lô, Jyutping, Hakka and community orthographies remain in searchable aliases and labelled **Source spelling** notes. They are never a fallback for an unavailable HanLingo reading.
+- Common/community names remain Amoy, Canton, Taipei, Kulangsu and the other established choices. Kulangsu is a landmark within Amoy, not another dialect node.
+- If phonetic evidence is missing, show the common name alone and record the gap. A name’s source spelling is not evidence of a complete local pronunciation.
 - URLs, locality IDs, saved-word keys, source titles, organization names, quotations and source-table labels remain exact. `xiamen`, `guangzhou`, and `taipak` continue to identify the same places.
-- The frontend comparison targets and backend display names share generated `translation-targets.json`; regenerate it with `npm run build:translation-evidence`. Translation scope remains tied to the actual locality, regardless of its display name.
+- Frontend comparison targets and backend display names share generated `translation-targets.json`; regenerate with `npm run build:translation-evidence`.
 
-The registry covers every catalogue address but local-reading research is incomplete. See `docs/PLACE-NAME-COVERAGE.md` for every locality, including gaps. A common label or Han-script name does not count as a verified local reading.
+See `docs/PLACE-NAME-COVERAGE.md` for coverage of HanLingo name spellings versus source spelling evidence. These are different counts.

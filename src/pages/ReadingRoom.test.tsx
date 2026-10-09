@@ -36,8 +36,10 @@ describe("six-way translation interface", () => {
     for (const target of payload().results)
       expect(html).toContain(`id="rr-target-${target.target}"`);
     expect(html).toContain("Results are machine drafts");
-    expect(html).toContain("Meixian · Moiyan");
-    expect(html).toContain("Canton · Gwong2 Zau1");
+    expect(html).toContain("Meixian");
+    expect(html).not.toContain("Meixian · Moiyan");
+    expect(html).toContain("Canton · kwoo:ng·T2 tsău·T1");
+    expect(html).not.toContain("Canton · Gwong2 Zau1");
     expect(html).not.toContain('class="pronunciation"');
     expect(html).not.toContain('rr-sample" open');
   });

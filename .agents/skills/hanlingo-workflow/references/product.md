@@ -22,11 +22,11 @@ Use **group → branch → cluster → locality**. Locality leaves may be compar
 
 - 泉漳 displays as **Tsuân-Tsiang**, the attested Taigi community spelling; the earlier Tsuan-Chiang remains an alias. Source **Tsuân-Tsiang** and Mandarin **Quanzhang** remain distinct aliases/reference forms.
 - Amoy, Tsuân-tsiu, Tsiang-tsiu, Taipei · Tâi-pak, Tainan · Tâi-lâm, Kaohsiung · Ko-hiông, Yilan · Gî-lân, Lukang · Lo̍k-káng, Sanxia · Sam-kiap and overseas Hokkien localities retain documented local naming and exact scope.
-- Singapore can display Sin-ka-pho; George Town can display Pho Te. George Town is not all of Penang. Preserve source spelling conventions instead of generating place names through the IPA converter.
+- Singapore can display Sin-ka-pho; George Town can display Pho Te. George Town is not all of Penang. Preserve source spelling conventions in reference notes. Secondary place names use only HanLingo generated from documented phonetic evidence.
 - Teochew and Swatow belong to the **Teo Swa** cluster under Southern Min, not Tsuân-Tsiang.
 - Meixian Hakka is the translation reference. Meizhou is a wider administrative area; its name does not imply one uniform accent.
 
-Use a primary common/community name plus a sourced local reading, without parentheses. The 2026-10-09 dual-name decision supersedes the earlier single-name rule. Use `PlaceName` and the shared registry; additional aliases belong in search and source notes. Never infer local pronunciation from Mandarin pinyin, and do not fabricate missing readings. Stable route IDs need not change with display names. Do not invent an endonym when documented evidence is missing. Use `src/data/site-terms.ts`, `src/data/language-names.ts` and `docs/NAMING.md` as the current sources of labels.
+Use a primary common/community name plus the local reading in **HanLingo spelling**, without parentheses. The later 2026-10-09 correction forbids using source orthography for that second name. Use the shared IPA converter, never a hard-coded alternate spelling; keep exact source spellings in aliases and labelled notes. Explicitly sourced, manually checked spelling-to-IPA normalization is allowed with scope and tone convention recorded. The 2026-10-09 dual-name decision supersedes the earlier single-name rule. Use `PlaceName` and the shared registry; additional aliases belong in search and source notes. Never infer local pronunciation from Mandarin pinyin, and do not fabricate missing readings. Stable route IDs need not change with display names. Do not invent an endonym when documented evidence is missing. Use `src/data/site-terms.ts`, `src/data/language-names.ts` and `docs/NAMING.md` as the current sources of labels.
 
 ## Design
 

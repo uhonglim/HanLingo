@@ -3,8 +3,8 @@
     "id": "amoy",
     "localityId": "xiamen",
     "commonName": "Amoy",
-    "localName": "Ē-mn̂g",
-    "name": "Amoy · Ē-mn̂g",
+    "localName": "e·T7 mng·T5",
+    "name": "Amoy · e·T7 mng·T5",
     "lang": "nan"
   },
   {
@@ -19,24 +19,24 @@
     "id": "shanghai",
     "localityId": "shanghai",
     "commonName": "Shanghai",
-    "localName": "Zaonhe",
-    "name": "Shanghai · Zaonhe",
+    "localName": "za~·T3 he·T2",
+    "name": "Shanghai · za~·T3 he·T2",
     "lang": "wuu"
   },
   {
     "id": "guangzhou",
     "localityId": "guangzhou",
     "commonName": "Canton",
-    "localName": "Gwong2 Zau1",
-    "name": "Canton · Gwong2 Zau1",
+    "localName": "kwoo:ng·T2 tsău·T1",
+    "name": "Canton · kwoo:ng·T2 tsău·T1",
     "lang": "yue"
   },
   {
     "id": "meixian",
     "localityId": "meixian",
     "commonName": "Meixian",
-    "localName": "Moiyan",
-    "name": "Meixian · Moiyan",
+    "localName": null,
+    "name": "Meixian",
     "lang": "hak"
   },
   {

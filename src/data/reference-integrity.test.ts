@@ -1,4 +1,4 @@
-import { placeReadingName } from "./language-names";
+import { localPlaceReadings } from "./language-names";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -181,7 +181,7 @@ describe("reference page coverage", () => {
     for (const [id, localName, englishName, dictionaryLabel] of references) {
       const point = mapPoints.find((candidate) => candidate.id === id);
       expect(point?.name).toBe(englishName);
-      expect(placeReadingName({ id })).toBe(localName);
+      expect(localPlaceReadings[id].localName).toBe(localName);
       expect(point?.hierarchy.at(-1)).toBe(englishName);
       const entry = varietyArticles[id];
       expectCompleteArticle(entry, `${id} local reference`, 80);

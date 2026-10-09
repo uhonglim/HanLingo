@@ -1,6 +1,7 @@
 import type { MapPoint } from "./languages";
 import { placeReadingsMin, minLandmarkReadings } from './place-readings-min';
 import { otherPlaceReadings } from './place-readings-other';
+import { placeNamePronunciations, placeNameSpelling } from './place-name-pronunciations';
 
 export type LocalPlaceReading = {
   commonName?: string;
@@ -40,7 +41,7 @@ export const placeNameReferences: Record<string, PlaceNameReference> = {
   },
   zhangzhou: {
     label: "Chang Chow", aliases: ["Zhangzhou", "Tsiang-tsiu", "漳州"], kind: "community",
-    note: "Chang Chow is the community spelling in the bilingual name of 新加坡漳州總會. The separate local reading follows the MOE Hokkien dictionary, not a new Zhangzhou-speaker recording.",
+    note: "Chang Chow is the community spelling in the bilingual name of 新加坡漳州總會. The source spelling retained in reference notes follows the MOE Hokkien dictionary, not a new Zhangzhou-speaker recording.",
     source: { title: "SFCCA · Members directory, Chang Chow General Association", url: "https://sfcca.sg/en/our-members/" },
   },
   singapore: {
@@ -50,7 +51,7 @@ export const placeNameReferences: Record<string, PlaceNameReference> = {
   },
   "george-town": {
     label: "Pho Te", aliases: ["George Town", "Penang", "Pho3 Te4", "檳城", "槟城"], kind: "community",
-    note: "Timothy Tye records Pho3 Te4 for George Town. The common label is George Town and the secondary reading preserves Pho3 Te4; the locality is the city, not all of Penang.",
+    note: "Timothy Tye records Pho3 Te4 for George Town. The common label is George Town; Pho3 Te4 remains a source spelling in reference notes and search; the locality is the city, not all of Penang.",
     source: { title: "Timothy Tye · Place Names in Penang Hokkien", url: "https://www.penang-traveltips.com/hokkien/place-names.htm" },
   },
   guangzhou: {
@@ -87,11 +88,11 @@ export function placeLabel(point: Pick<MapPoint, "id" | "name">) {
 export function placeNameAliases(point: Pick<MapPoint, "id" | "name">) {
   const reading = localPlaceReadings[point.id];
   return [...new Set([point.name, placeNameReferences[point.id]?.label, reading?.commonName,
-    reading?.localName, ...(placeNameReferences[point.id]?.aliases ?? [])].filter((name): name is string => Boolean(name)))];
+    reading?.localName, placeNameSpelling(point.id), ...(placeNameReferences[point.id]?.aliases ?? [])].filter((name): name is string => Boolean(name)))];
 }
 
 export function placeReadingName(point: { id: string }) {
-  return localPlaceReadings[point.id]?.localName;
+  return placeNameSpelling(point.id);
 }
 export function placeDisplayName(point: { id: string; name: string }) {
   const common = placeLabel(point), local = placeReadingName(point);
@@ -99,9 +100,11 @@ export function placeDisplayName(point: { id: string; name: string }) {
 }
 export function resolvePlaceNames(point: { id: string; name: string; nativeName?: string }) {
   const reading = localPlaceReadings[point.id];
-  return { commonName: placeLabel(point), localReadingName: reading?.localName,
-    nativeName: point.nativeName, readingSystem: reading?.convention,
-    readingSource: reading?.source, aliases: placeNameAliases(point) };
+  const pronunciation = placeNamePronunciations[point.id];
+  return { commonName: placeLabel(point), localReadingName: placeReadingName(point),
+    nativeName: point.nativeName, readingSystem: pronunciation ? 'HanLingo spelling' : undefined,
+    readingSource: pronunciation?.source, sourceSpelling: reading?.localName,
+    sourceSpellingSystem: reading?.convention, aliases: placeNameAliases(point) };
 }
 
 export const quanzhangLabel = "Tsuân-Tsiang";

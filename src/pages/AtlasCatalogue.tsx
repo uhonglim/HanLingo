@@ -93,7 +93,9 @@ function CatalogueLocalityPage({ place }: { place: AtlasLocality }) {
   </article>;
 }
 export function AtlasLocalityRoute() {
-  const { languageId = '', subgroupId = '', clusterId = '', varietyId = '', '*': rest = '' } = useParams();
+  const { languageId = '', subgroupId = '', clusterId = '', varietyId = '', '*': rawRest = '' } = useParams();
+  // Static hosts canonicalize directory entry points with a trailing slash.
+  const rest = rawRest.replace(/\/+$/, '');
   const { search, hash } = useLocation();
   const old = findAtlasLocality(clusterId);
   const oldLesson = old && mapPoints.find(p => p.id === old.id);

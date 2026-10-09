@@ -27,4 +27,18 @@ describe('atlas destination pages', () => {
     expect(render(`${atlasLocalityPath(place)}/words`, false)).toContain('Page not found');
     expect(render(`/${place.groupId}/${place.branchId}/wrong/${place.id}`, false)).toContain('Page not found');
   });
+  it('accepts static-host trailing slashes for real learning destinations', () => {
+    for (const path of [
+      '/min/eastern-min/funing/fuan/words',
+      '/min/southern-min/teo-swa/singapore-teochew/sounds',
+      '/min/eastern-min/overseas-foochow/sibu-foochow/culture',
+      '/min/southern-min/tsuan-chiang/xiamen/words',
+    ]) {
+      // Lazy loading may suspend during SSR; the routing guard must accept both URLs.
+      expect(render(`${path}/?q=tea`, false), path).not.toContain('Page not found');
+      expect(render(path, false), path).not.toContain('Page not found');
+      expect(render(`${path}/invented/`, false), path).toContain('Page not found');
+    }
+  });
+
 });

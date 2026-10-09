@@ -10,7 +10,7 @@ Amoy was the first deep prototype. The goal then expanded to comparable useful d
 
 `/` is the family-tree home. The left edge starts directly with Mandarin, Min, Yue, Hakka and Wu, without a Han wrapper. Keep a single persistent tree across pages, including its expansion, search and scroll state. The mobile version is the same tree in an expandable panel.
 
-Paths progress through real parents: `/a` → `/a/b` → `/a/b/c`, e.g. `/min/southern-min/xiamen`. No new `/languages/` prefix. Preserve compatibility redirects for old URLs. Clusters can be tree-only organizational nodes; do not fabricate a cluster article just to add a URL segment. Source-based classification outranks perfectly uniform URL depth.
+Paths follow four classification levels: group → branch → cluster → locality, followed by an optional learning destination. The latest user request supersedes the earlier flattened cluster captions. Preserve compatibility redirects from old three-level locality URLs, including query and fragment. No Languages wrapper. Every cluster has a sourced page; distinguish true classification from an explicitly geographic collection rather than inventing an academic rank.
 
 Clicking a branch name toggles its children in both directions and opens its page when available. Its arrow toggles without navigating. Route-driven expansion must not immediately undo a deliberate collapse. Browser Back restores content position. Avoid slide/entrance/smooth-scroll/hover-translation effects and sibling-page jumping.
 
@@ -42,4 +42,4 @@ If a new direct request clearly changes an earlier naming preference, follow the
 
 ## Uniform navigation depth
 
-The 2026-10-09 update makes every interactive tree path group → branch → locality → lesson. Southern Min’s Tsuan-Chiang and Teo Swa remain sourced cluster captions, not additional expandable steps. Source classification records and canonical URLs stay intact.
+The latest 2026-10-09 request defines four linguistic browsing levels: group → branch → cluster → locality. Lessons sit below localities but do not count as classification. `src/data/atlas/` stores source-attested catalogue references separately from the developed learning collection. Count and label these separately; never claim a newly catalogued place has IPA lessons or a completed gallery. Preserve source editions, geographical scope and competing classifications.

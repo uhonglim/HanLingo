@@ -155,4 +155,4 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - Every word retains its locality, reading convention and source. Source tone categories are not pitch contours.
 - Regional spelling-only forms remain under their original notation; they do not generate invented IPA or HanLingo pitch numbers.
 - The shared tree remains the navigation structure. Group and branch overviews surface sampled learning material; complete available word collections remain under locality Words pages.
-- Galleries retain 9–11 distinct licensed photos per mapped locality. Photo subjects never establish the language or identity of the people pictured.
+- Galleries retain 9–11 distinct licensed photos per developed learning locality. Photo subjects never establish the language or identity of the people pictured.

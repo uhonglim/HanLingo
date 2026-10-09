@@ -26,7 +26,7 @@ Cultural images can include precisely captioned nearby places within the wider m
 ## Evidence
 
 - [Sung 2026, thesis](https://www.lotpublications.nl/Documents/709_fulltext.pdf): classification and survey locality distinctions.
-- [Sung, Chan and Lin 2023](https://doi.org/10.3390/languages8020146): named Yue survey sites and contact-related rhyme comparisons.
+- [Hui and Simmons 2023](https://doi.org/10.3390/languages8020146): named Yue survey sites and contact-related rhyme comparisons.
 - [Lee and Lo 2026](https://journal.kci.go.kr/ksclc/archive/articleView?artiId=ART003308222): three-character changed-tone patterns, including Macau and Foshan.
 - [Tan 2017, Ohio State dissertation](https://etd.ohiolink.edu/acprod/odb_etd/r/etd/search/10?clear=10&p10_accession_num=osu1502688160423343): phonological and lexical comparisons of seven Siyi localities.
 - [Liu 2012, HKUST thesis abstract](https://ccl.hkust.edu.hk/files/graduate/mphil_abstracts/LIU%20Xiao%202012.pdf): phonetic tone study including Kaiping.

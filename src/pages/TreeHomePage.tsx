@@ -1,3 +1,4 @@
+import { atlasBranches, atlasLocalities } from "../data/atlas";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { languages, mapPoints, type LanguageId } from "../data/languages";
@@ -30,7 +31,7 @@ export default function TreeHomePage() {
         <h1>Han languages,<br /><span>place by place.</span></h1>
         <div className="thp-introduction">
           <p>Learn the words. Explore the sounds.{" "}<br />Meet the cultures behind them.</p>
-          <p className="thp-coverage">{languages.reduce((total, group) => total + group.subgroups.length, 0)} branches · {mapPoints.length} localities</p>
+          <p className="thp-coverage">{atlasBranches.length} branches · {atlasLocalities.length} locality references</p>
         </div>
       </header>
 
@@ -45,7 +46,7 @@ export default function TreeHomePage() {
             </Link>
             <div className="thp-group-heading">
               <h2><Link to={`/${group.id}`}>{group.name}</Link></h2>
-              <p>{group.subgroups.length} branches · {mapPoints.filter((place) => place.groupId === group.id).length} localities</p>
+              <p>{atlasBranches.filter(branch => branch.groupId === group.id).length} branches · {atlasLocalities.filter(place => place.groupId === group.id).length} places</p>
             </div>
             <p className="thp-geography">{group.feature}</p>
             <div className="thp-word">

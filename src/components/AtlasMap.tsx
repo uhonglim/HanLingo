@@ -532,9 +532,7 @@ export default function AtlasMap({
                   onClick={() => onSelectPoint(point.id)}
                   onKeyDown={(event) => selectWithKeyboard(event, point.id)}
                 >
-                  <title>
-                    {point.displayName} · {point.nativeName}
-                  </title>
+                  <title>{`${point.displayName} · ${point.nativeName}`}</title>
                   <circle
                     className="atlas-place-hit"
                     cx={point.x}

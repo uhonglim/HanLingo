@@ -1,3 +1,4 @@
+import { legacyMinQueryTarget } from "./routing";
 import { siteTerms } from "./data/site-terms";
 import { Suspense, lazy, useEffect, useLayoutEffect, useRef } from "react";
 import {
@@ -10,7 +11,8 @@ import {
   useNavigationType,
 } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import MinPage from "./pages/MinPage";
+import { AtlasBranchPage, AtlasClusterPage, AtlasLocalityRoute } from "./pages/AtlasCatalogue";
+import { findAtlasLocality, atlasLocalityPath } from "./data/atlas";
 import { getBreadcrumbs } from "./navigation";
 import { languages } from "./data/languages";
 import { legacyMinPlaces } from "./data/language-names";
@@ -18,12 +20,10 @@ import "./pages/pages.css";
 const TreeHomePage = lazy(() => import("./pages/TreeHomePage"));
 import LanguageTree from "./components/LanguageTree";
 const ReferencePage = lazy(() => import("./components/ReferencePages"));
-const LocalLearningPage = lazy(() => import("./pages/LocalLearningPage"));
 const ReadingRoom = lazy(() => import("./pages/ReadingRoom"));
 const RomanizationPage = lazy(() => import("./pages/RomanizationPage"));
 const WrittenChinesePage = lazy(() => import("./pages/WrittenChinesePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
-const XiamenPage = lazy(() => import("./pages/XiamenPage"));
 
 const scrollPositions = new Map<string, number>();
 type ScrollLocation = { pathname: string; search: string; hash: string };
@@ -160,7 +160,12 @@ function LegacyLanguageRoute() {
 }
 function LegacyMinPlaceRoute({ place }: { place: string }) {
   const { search, hash } = useLocation();
-  return <Navigate to={`/min/southern-min/${place}${search}${hash}`} replace />;
+  return <Navigate to={`${findAtlasLocality(place) ? atlasLocalityPath(findAtlasLocality(place)!) : `/min/southern-min/${place}`}${search}${hash}`} replace />;
+}
+function GroupEntryRoute() {
+  const { pathname, search, hash } = useLocation();
+  const target = pathname.replace(/\/$/, "") === "/min" ? legacyMinQueryTarget(search) : null;
+  return target ? <Navigate replace to={target + hash}/> : <ReferencePage/>;
 }
 function NotFound() {
   return (
@@ -230,7 +235,6 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<TreeHomePage />} />
                 <Route path="/languages/*" element={<LegacyLanguageRoute />} />
-                <Route path="/min" element={<MinPage />} />
                 {Object.entries(legacyMinPlaces).map(([oldId, place]) => (
                   <Route
                     key={oldId}
@@ -238,23 +242,10 @@ export default function App() {
                     element={<LegacyMinPlaceRoute place={place} />}
                   />
                 ))}
-                <Route
-                  path="/min/southern-min/xiamen/*"
-                  element={<XiamenPage />}
-                />
-                <Route path="/:languageId" element={<ReferencePage />} />
-                <Route
-                  path="/:languageId/:subgroupId"
-                  element={<ReferencePage />}
-                />
-                <Route
-                  path="/:languageId/:subgroupId/:varietyId"
-                  element={<ReferencePage />}
-                />
-                <Route
-                  path="/:languageId/:subgroupId/:varietyId/:chapter"
-                  element={<LocalLearningPage />}
-                />
+                <Route path="/:languageId" element={<GroupEntryRoute />} />
+                <Route path="/:languageId/:subgroupId" element={<AtlasBranchPage />} />
+                <Route path="/:languageId/:subgroupId/:clusterId" element={<AtlasClusterPage />} />
+                <Route path="/:languageId/:subgroupId/:clusterId/:varietyId/*" element={<AtlasLocalityRoute />} />
                 <Route path="/compare" element={<ReadingRoom />} />
                 <Route path="/romanization" element={<RomanizationPage />} />
                 <Route

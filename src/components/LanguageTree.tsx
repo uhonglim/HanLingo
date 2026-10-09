@@ -1,3 +1,4 @@
+import { atlasBranches, atlasClusters, atlasLocalities, atlasClusterPath, atlasLocalityPath } from "../data/atlas";
 import { availableSections, learningSections } from "../data/learning";
 import { siteTerms } from "../data/site-terms";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
@@ -5,12 +6,9 @@ import { ChevronDown, ChevronRight, Search, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { languages, mapPoints } from "../data/languages";
 import {
-  clusterLabel,
   communityAliases,
-  hokkienAliases,
-  placeLabel,
 } from "../data/language-names";
-import { groupPath, subgroupPath, varietyPath } from "../routing";
+import { groupPath, subgroupPath } from "../routing";
 import "./LanguageTree.css";
 
 type TreeNode = {
@@ -61,63 +59,31 @@ function buildTree(): TreeNode {
       nativeName: language.nativeName,
       aliases: aliases[language.id],
       href: groupPath(language.id),
-      children: language.subgroups.map((subgroup) => {
-        const children: TreeNode[] = [];
-        for (const point of mapPoints.filter(
-          (item) =>
-            item.groupId === language.id && item.subgroupId === subgroup.id,
-        )) {
-          const cluster = point.hierarchy
-            .slice(3, -1)
-            .map(clusterLabel)
-            .join(" · ");
-          const clusterAliases = point.hierarchy.includes("Quanzhang cluster")
-            ? hokkienAliases
-            : point.hierarchy.includes("Chaoshan cluster")
-              ? "chaoshan chao shan 潮汕 teochew swatow"
-              : "";
-          children.push({
-            id: `place/${point.id}`,
-            name: placeLabel(point),
-            nativeName: point.nativeName,
-            href: varietyPath(point),
-            cluster: cluster || undefined,
-            aliases: [
-              point.name,
-              aliases[point.id],
-              communityAliases[point.id],
-              cluster,
-              clusterAliases,
-            ]
-              .filter(Boolean)
-              .join(" "),
-            children: availableSections(point).map((section) => ({
-              id: `${point.id}/${section}`,
-              name: learningSections[section],
-              href: `${varietyPath(point)}/${section}`,
-              aliases:
-                section === "culture"
-                  ? "culture gallery pictures photographs"
-                  : section === "sounds"
-                    ? "IPA tones pronunciation"
-                    : undefined,
-            })),
-          });
-        }
-        // Preserve cluster membership as a caption, never as an extra navigation level.
-        const clusters = [...new Set(children.map((node) => node.cluster))];
-        children.sort(
-          (a, b) => clusters.indexOf(a.cluster) - clusters.indexOf(b.cluster),
-        );
-        return {
-          id: `subgroup/${language.id}/${subgroup.id}`,
-          name: subgroup.name,
-          nativeName: subgroup.nativeName,
-          aliases: aliases[`${language.id}/${subgroup.id}`],
-          href: subgroupPath(language.id, subgroup.id),
-          children,
-        };
-      }),
+      children: atlasBranches.filter(branch => branch.groupId === language.id).map((branch) => ({
+        id: `subgroup/${language.id}/${branch.id}`,
+        name: branch.name, nativeName: branch.nativeName,
+        aliases: aliases[`${language.id}/${branch.id}`],
+        href: subgroupPath(language.id, branch.id),
+        children: atlasClusters.filter(cluster => cluster.groupId === language.id && cluster.branchId === branch.id).map(cluster => ({
+          id: `cluster/${language.id}/${branch.id}/${cluster.id}`,
+          name: cluster.name, nativeName: cluster.nativeName,
+          aliases: cluster.id === "tsuan-chiang" ? "Hokkien Hoklo Quanzhang 泉漳" : cluster.id === "teo-swa" ? "Chaoshan 潮汕" : undefined,
+          href: atlasClusterPath(cluster),
+          children: atlasLocalities.filter(place => place.groupId === language.id && place.branchId === branch.id && place.clusterId === cluster.id).map(place => {
+            const lesson = mapPoints.find(point => point.id === place.id);
+            const path = atlasLocalityPath(place);
+            return {
+              id: `place/${place.id}`, name: place.name, nativeName: place.nativeName,
+              href: path,
+              aliases: [aliases[place.id], communityAliases[place.id], ...(place.aliases ?? [])].filter(Boolean).join(" "),
+              children: lesson ? availableSections(lesson).map(section => ({
+                id: `${place.id}/${section}`, name: learningSections[section], href: `${path}/${section}`,
+                aliases: section === "culture" ? "culture gallery pictures photographs" : section === "sounds" ? "IPA tones pronunciation" : undefined,
+              })) : [],
+            };
+          }),
+        })),
+      })),
     })),
   };
 }

@@ -1,3 +1,5 @@
+import { legacyMinPlaces } from "./data/language-names";
+import { findAtlasLocality, atlasLocalityPath, atlasBranches } from "./data/atlas";
 import { languages, mapPoints } from "./data/languages";
 import type { Language, MapPoint } from "./data/languages";
 
@@ -8,7 +10,7 @@ export const subgroupPath = (languageId: string, subgroupId: string) =>
 export const varietyPath = (
   point: Pick<MapPoint, "id" | "groupId" | "subgroupId">,
 ) =>
-  `${subgroupPath(point.groupId, point.subgroupId)}/${encodeURIComponent(point.id)}`;
+  findAtlasLocality(point.id) ? atlasLocalityPath(findAtlasLocality(point.id)!) : `${subgroupPath(point.groupId, point.subgroupId)}/${encodeURIComponent(point.id)}`;
 
 export type ReferenceRoute = {
   level: "group" | "subgroup" | "variety";
@@ -26,17 +28,30 @@ export function resolveReferenceRoute(params: {
   const language = languages.find((item) => item.id === params.languageId);
   if (!language || (!params.subgroupId && params.varietyId)) return null;
   if (!params.subgroupId) return { level: "group", language };
-  const subgroup = language.subgroups.find(
-    (item) => item.id === params.subgroupId,
-  );
+  const catalogBranch = atlasBranches.find(item => item.groupId === language.id && item.id === params.subgroupId);
+  const subgroup = language.subgroups.find(item => item.id === params.subgroupId) ??
+    (catalogBranch ? { ...catalogBranch, description: "", places: [] } : undefined);
   if (!subgroup) return null;
   if (!params.varietyId) return { level: "subgroup", language, subgroup };
   const point = mapPoints.find(
     (item) =>
       item.id === params.varietyId &&
       item.groupId === language.id &&
-      item.subgroupId === subgroup.id,
+      (item.subgroupId === subgroup.id || findAtlasLocality(item.id)?.branchId === subgroup.id),
   );
   if (!point) return null;
   return { level: "variety", language, subgroup, point };
+}
+
+/** Preserve old map selections without restoring the retired directory interface. */
+export function legacyMinQueryTarget(search: string): string | null {
+  const params = new URLSearchParams(search);
+  const requested = params.get("place");
+  const place = requested ? findAtlasLocality(legacyMinPlaces[requested] ?? requested) : undefined;
+  const branch = atlasBranches.find(b => b.groupId === "min" && b.id === params.get("branch"));
+  const target = place?.groupId === "min" ? atlasLocalityPath(place) : branch ? `/min/${branch.id}` : null;
+  if (!target) return null;
+  params.delete("place");
+  params.delete("branch");
+  return target + (params.size ? `?${params}` : "");
 }

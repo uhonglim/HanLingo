@@ -24,7 +24,7 @@ Help people learn Han languages and encounter their regional cultures through su
 - Five top-level tree groups: Mandarin, Min, Yue, Hakka, Wu. Standard Written Chinese is a shared register, not a sixth spoken group.
 - Prefer comparable geographic levels, precise linguistic scope, then documented community-language names. Do not collapse Min, Southern Min, Hokkien, and Hoklo into synonyms.
 - Keep English interface text concise. Teach through photos, actual language, and useful comparisons; remove filler and redundant controls, while retaining evidence qualifications.
-- Preserve the persistent tree and direct hierarchical paths (`/min/southern-min/xiamen/words`). No `/languages/` wrapper, duplicate navigation, or animated page jumps.
+- Preserve the persistent tree and four classification levels (group → branch → cluster → locality), with lessons below localities and compatibility redirects for old paths. No `/languages/` wrapper, duplicate navigation, or animated page jumps.
 - IPA is the phonetic reference. HanLingo spelling is a separate, partly provisional notation. Generated translations are not pronunciation evidence.
 - An incomplete sourced collection is preferable to false precision. Expose real gaps; do not inflate depth with duplicate photos, repeated prose, or neighbouring accents.
 

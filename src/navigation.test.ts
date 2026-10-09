@@ -1,15 +1,21 @@
+import { findAtlasLocality, findAtlasCluster, atlasLocalityPath, atlasClusterPath } from "./data/atlas";
 import { describe, expect, it } from "vitest";
 import { getBreadcrumbs } from "./navigation";
 
 describe("hierarchical navigation", () => {
   it("preserves each real parent of a Xiamen lesson", () => {
-    expect(getBreadcrumbs("/min/southern-min/xiamen/words")).toEqual([
+    const place = findAtlasLocality("xiamen")!;
+    const cluster = findAtlasCluster(place.groupId, place.branchId, place.clusterId)!;
+    const expected = [
       { label: "Han languages", path: "/" },
       { label: "Min", path: "/min" },
       { label: "Southern Min", path: "/min/southern-min" },
-      { label: "Amoy", path: "/min/southern-min/xiamen" },
-      { label: "Words", path: "/min/southern-min/xiamen/words" },
-    ]);
+      { label: cluster.name, path: atlasClusterPath(cluster) },
+      { label: "Amoy", path: atlasLocalityPath(place) },
+      { label: "Words", path: `${atlasLocalityPath(place)}/words` },
+    ];
+    expect(getBreadcrumbs(`${atlasLocalityPath(place)}/words`)).toEqual(expected);
+    expect(getBreadcrumbs("/min/southern-min/xiamen/words")).toEqual(expected);
   });
   it("rejects invented parents and unknown lesson paths", () => {
     for (const path of [

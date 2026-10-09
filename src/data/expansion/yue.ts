@@ -49,7 +49,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         ],
@@ -101,7 +101,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         ],
@@ -153,7 +153,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         ],
@@ -205,7 +205,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         ],
@@ -1206,7 +1206,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         ],
@@ -1266,7 +1266,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title:
-            "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+            "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
           description: "Locality scope and comparative language evidence.",
           localityIds: ["nanning"],
           kind: "Study",
@@ -1442,7 +1442,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
           {
@@ -1470,7 +1470,7 @@ export const yueExpansion: AtlasExpansion = {
           localityIds: ["wuzhou"],
           source: {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         },
@@ -1506,7 +1506,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title:
-            "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+            "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
           description: "Locality scope and comparative language evidence.",
           localityIds: ["wuzhou"],
           kind: "Study",
@@ -1689,7 +1689,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         ],
@@ -1703,7 +1703,7 @@ export const yueExpansion: AtlasExpansion = {
           localityIds: ["beihai"],
           source: {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         },
@@ -1713,7 +1713,7 @@ export const yueExpansion: AtlasExpansion = {
           localityIds: ["beihai"],
           source: {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         },
@@ -1749,7 +1749,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title:
-            "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+            "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
           description: "Locality scope and comparative language evidence.",
           localityIds: ["beihai"],
           kind: "Study",
@@ -1924,7 +1924,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
           {
@@ -1942,7 +1942,7 @@ export const yueExpansion: AtlasExpansion = {
           localityIds: ["yangjiang"],
           source: {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         },
@@ -1952,7 +1952,7 @@ export const yueExpansion: AtlasExpansion = {
           localityIds: ["yangjiang"],
           source: {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         },
@@ -1988,7 +1988,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title:
-            "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+            "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
           description: "Locality scope and comparative language evidence.",
           localityIds: ["yangjiang"],
           kind: "Study",
@@ -2170,7 +2170,7 @@ export const yueExpansion: AtlasExpansion = {
           },
           {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
           {
@@ -2188,7 +2188,7 @@ export const yueExpansion: AtlasExpansion = {
           localityIds: ["huazhou"],
           source: {
             title:
-              "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+              "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
             url: "https://doi.org/10.3390/languages8020146",
           },
         },
@@ -2243,7 +2243,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title:
-            "Sung, Chan and Lin: Contact-Induced Layering and Diffusion in Yue",
+            "Hui and Simmons: Contact-Induced Layering and Diffusion in Yue",
           description: "Locality scope and comparative language evidence.",
           localityIds: ["huazhou"],
           kind: "Study",

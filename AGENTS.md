@@ -7,14 +7,14 @@ For HanLingo work, automatically read and apply [the HanLingo skill](.agents/ski
 ## Navigation — user decision
 
 - The homepage `/` is the Han family tree. Never redirect it automatically into Min or another branch.
-- URLs follow the real hierarchy directly: `/a` → `/a/b` → `/a/b/c`. For example: `/min` → `/min/southern-min` → `/min/southern-min/xiamen` → `/min/southern-min/xiamen/words`.
+- URLs follow the real hierarchy directly: `/a` → `/a/b` → `/a/b/c`. For example: `/min` → `/min/southern-min` → a sourced cluster → its locality → a learning destination.
 - Do **not** introduce a `Languages` layer or `/languages/` prefix. Group names start directly below `/`. Old prefixed links may redirect for compatibility; new links must use canonical paths.
 - Use one persistent navigation tree across all pages. Keep its expanded branches, search, and scroll position when changing the adjacent content. Do not reintroduce separate directory navigation, article sidebars, or Xiamen chapter tabs.
 - Start the left navigation directly with Mandarin, Min, Yue, Hakka, and Wu. Do not display a Han / Sinitic wrapper above them; the homepage remains the family root.
 - Navigation must be immediate and spatially stable: no slide, jump, entrance, page-transition, automatic smooth-scroll, or hover-translation effects. Only the content panel changes when opening a node. Restore the content position on browser Back.
 - On mobile, use the same tree in an accessible expandable panel, with separate disclosure controls and links.
 - Clicking a branch name toggles its children in both directions and opens its page when one exists. The arrow toggles without navigating. Route-driven expansion must not undo an explicit name toggle; direct URLs and navigation from outside the tree still reveal their ancestors.
-- Use the same four interactive tree levels for every group: group → branch → locality → lesson. Classification and URL parents must be valid. Keep sourced clusters such as Tsuan-Chiang and Teo Swa as non-interactive captions beside their locality lists and in locality references, not extra expandable levels. Quanzhang is the Mandarin spelling alias of Tsuan-Chiang. Preserve source taxonomy; do not invent or remove linguistic classifications to make navigation uniform, or fabricate an article just to add a URL segment.
+- The four classification levels are group → branch → cluster → locality. Words, Photos, Sounds and Practice are learning destinations, not ranks. Keep sourced clusters such as Tsuan-Chiang and Teo Swa as real navigable pages. Distinguish source classifications from explicitly geographic collections; uniform website depth does not authorize inventing linguistic subdivisions.
 - Use one familiar or local name in visible navigation, without parenthetical alternative names. Use local names for geographically specific nodes, such as Tsuan-Chiang for 泉漳 and Amoy for 廈門. Do not replace a specific cluster with a broader label or treat Min, Southern Min, Hokkien, and Hoklo as interchangeable. Preserve alternate names in search and source notes; stable URL identifiers need not change with display names.
 - Priority: equal levels, linguistic/geographic precision, and community-owned names. Locality leaves must be comparable places: Taipak, Singapore, and George Town belong alongside Amoy under Tsuan-Chiang. Do not put a whole regional language such as Taigi at the same level as a city. Explain regional context inside the locality article.
 - Prefer documented names used in the language being described, not automatic Mandarin pinyin or English replacement. Keep source romanizations distinct from HanLingo’s trial spelling. Do not invent an endonym when evidence is missing.
@@ -43,3 +43,9 @@ See `docs/NAVIGATION.md` for the architecture. Local review uses `http://127.0.0
 - Keep generated translations visibly separate from sourced learning material. Automated review is not native-speaker verification. Never generate lesson IPA, tone sandhi or HanLingo spelling from unverified translated text.
 - Model credentials belong only in the backend environment. GitHub Pages needs a separately hosted API; frontend publication alone must never be reported as a working translation service.
 - Run `npm test` (including the server protocol tests) and verify a real configured provider before claiming automatic translation works. Injected fixture tests establish protocol behavior only.
+
+## Four-level catalogue update
+
+The latest user request explicitly supersedes the earlier flattened cluster-caption structure. Use group → branch → cluster → locality, with a page at every classification level. Keep source ranks and editions visible; geographic collections must be labelled as such rather than claimed as formal subbranches. Preserve old locality and learning URLs as redirects.
+
+`src/data/atlas/` records sourced catalogue points separately from developed learning collections. Catalogue-only references need named source locations, geographic scope and a real four-level route; they must not claim uncollected IPA, photographs or completed lessons. The existing learning content requirements still govern Words, Photos, Sounds and Practice. Report the two coverage counts separately.

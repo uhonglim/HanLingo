@@ -1,8 +1,9 @@
+import { atlasLocalities, atlasLocalityPath } from "../data/atlas";
+import { AtlasBranchCards } from "../pages/AtlasCatalogue";
 import { getBranchLearning, getLocalLearning } from "../data/learning";
 import BranchLearning from "./BranchLearning";
 import LocalityScenes from "./LocalityScenes";
 import RegionalDifferences from "./RegionalDifferences";
-import { branchDepth, localityDepth } from "../data/content-depth";
 import { getLocalGallery } from "../data/galleries";
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
@@ -20,8 +21,6 @@ import { minCommunityPhotos } from "../data/min-community-photos";
 import {
   groupPath,
   resolveReferenceRoute,
-  subgroupPath,
-  varietyPath,
 } from "../routing";
 import AtlasMap from "./AtlasMap";
 import "./ReferencePages.css";
@@ -95,7 +94,6 @@ export default function ReferencePage() {
           (!localCluster || place.hierarchy[3] === localCluster),
       )
     : [];
-  const childSubgroups = group && !subgroup ? group.subgroups : [];
 
   return (
     <div
@@ -172,112 +170,7 @@ export default function ReferencePage() {
             </figure>
           )}
 
-          {!point && (
-            <section className="reference-explore" id="reference-explore">
-              <div className="reference-section-heading">
-                <div>
-                  <h2>{subgroup ? "Localities" : "Branches"}</h2>
-                </div>
-                <span>
-                  {subgroup
-                    ? `${localPoints.length} ${localPoints.length === 1 ? "locality" : "localities"}`
-                    : `${childSubgroups.length} branches`}
-                </span>
-              </div>
-              <div className="reference-child-grid">
-                {childSubgroups.map((child) => {
-                  return (
-                    <Link
-                      to={subgroupPath(group.id, child.id)}
-                      className="reference-child-card"
-                      key={child.id}
-                    >
-                      {(() => {
-                        const representative = mapPoints.find(
-                          (place) =>
-                            place.groupId === group.id &&
-                            place.subgroupId === child.id,
-                        );
-                        const image =
-                          representative &&
-                          getLocalGallery(representative.id)[0];
-                        return (
-                          image && (
-                            <>
-                              <img
-                                className="reference-child-photo"
-                                src={image.src}
-                                alt={image.alt}
-                                loading="lazy"
-                              />
-                              <span className="reference-child-credit">
-                                {image.author} · {image.license}
-                              </span>
-                            </>
-                          )
-                        );
-                      })()}
-                      <h3>
-                        {placeLabel(child)}
-                        <span className="reference-child-native" lang="zh-Hant">
-                          {child.nativeName}
-                        </span>
-                      </h3>
-                      <p>{child.description}</p>
-                      <p className="reference-content-count">
-                        {(() => {
-                          const depth = branchDepth(group.id, child.id);
-                          return `${depth.localities} ${depth.localities === 1 ? "locality" : "localities"} · ${depth.words ? `${depth.words} ${depth.words === 1 ? "word" : "words"} · ` : ""}${depth.photos} photos`;
-                        })()}
-                      </p>
-                    </Link>
-                  );
-                })}
-                {subgroup &&
-                  localPoints.map((child) => (
-                    <Link
-                      to={varietyPath(child)}
-                      className="reference-child-card"
-                      key={child.id}
-                    >
-                      {getLocalGallery(child.id)[0] && (
-                        <>
-                          <img
-                            className="reference-child-photo"
-                            src={getLocalGallery(child.id)[0].src}
-                            alt={getLocalGallery(child.id)[0].alt}
-                            loading="lazy"
-                          />
-                          <span className="reference-child-credit">
-                            {getLocalGallery(child.id)[0].author} ·{" "}
-                            {getLocalGallery(child.id)[0].license}
-                          </span>
-                        </>
-                      )}
-                      <h3>
-                        {placeLabel(child)}
-                        <span className="reference-child-native" lang="zh-Hant">
-                          {child.nativeName}
-                        </span>
-                      </h3>
-                      <p>
-                        {varietyArticles[child.id]?.dek ??
-                          child.hierarchy.join(" · ")}
-                      </p>
-                      <p className="reference-content-count">
-                        {(() => {
-                          const depth = localityDepth(child.id);
-                          return `${depth.words ? `${depth.words} ${depth.words === 1 ? "word" : "words"} · ` : ""}${depth.photos} photos`;
-                        })()}
-                      </p>
-                    </Link>
-                  ))}
-              </div>
-              <p className="reference-curation-note">
-                Selected localities; this is not a complete classification.
-              </p>
-            </section>
-          )}
+          {!point && <AtlasBranchCards groupId={group.id} />}
 
           <BranchLearning
             groupId={group.id}
@@ -314,13 +207,13 @@ export default function ReferencePage() {
             </div>
             <div className="reference-map-frame">
               <AtlasMap
-                points={localPoints}
+                points={point ? localPoints : atlasLocalities.filter(place => place.groupId === group.id)}
                 selectedGroup={group.id}
                 selectedPoint={point?.id ?? null}
                 onSelectPoint={(id) => {
-                  const selected = mapPoints.find((place) => place.id === id);
+                  const selected = atlasLocalities.find((place) => place.id === id);
                   if (selected && selected.id !== point?.id)
-                    navigate(varietyPath(selected));
+                    navigate(atlasLocalityPath(selected));
                 }}
                 compact
               />

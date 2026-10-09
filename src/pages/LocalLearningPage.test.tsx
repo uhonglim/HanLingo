@@ -11,6 +11,7 @@ function render(path: string) {
   return renderToStaticMarkup(
     <MemoryRouter initialEntries={[path]}>
       <Routes>
+        <Route path="/:languageId/:subgroupId/:clusterId/:varietyId/:chapter" element={<LocalLearningPage />} />
         <Route
           path="/:languageId/:subgroupId/:varietyId/:chapter"
           element={<LocalLearningPage />}

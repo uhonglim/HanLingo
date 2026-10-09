@@ -1,3 +1,4 @@
+import { findAtlasLocality, atlasLocalityPath } from "../../data/atlas";
 import { Link } from "react-router-dom";
 import { xiamenPhotos } from "../../data/xiamen-photos";
 import type { XiamenPhoto } from "../../data/xiamen-photos";
@@ -6,7 +7,7 @@ import { romanizeXiamen } from "../../data/xiamen-romanization";
 import PhotoGallery from "../../components/gallery/PhotoGallery";
 import type { GalleryPhoto } from "../../data/galleries/types";
 
-const WORDS_PATH = "/min/southern-min/xiamen/words";
+const WORDS_PATH = `${atlasLocalityPath(findAtlasLocality("xiamen")!)}/words`;
 export const galleryCategories = [
   "All",
   "Food",

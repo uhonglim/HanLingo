@@ -3,11 +3,12 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { languages, mapPoints } from "../data/languages";
+import { atlasBranches, atlasClusters, atlasLocalities, atlasClusterPath, atlasLocalityPath, findAtlasLocality, findAtlasCluster } from "../data/atlas";
+import { getBreadcrumbs } from "../navigation";
 import {
   groupPath,
   subgroupPath,
   varietyPath,
-  resolveReferenceRoute,
 } from "../routing";
 import LanguageTree from "./LanguageTree";
 
@@ -59,20 +60,20 @@ const xiamenPath = varietyPath(xiamen);
 const lessons = ["words", "culture", "sounds", "practice"];
 
 describe("persistent language tree", () => {
-  it("shows sourced clusters as captions without a fifth navigation level", () => {
-    const html = renderTree("/min/southern-min/shantou");
-    expectExpanded(html, "Min");
-    expectExpanded(html, "Southern Min");
-    const current = links(html).filter(
-      (link) => link.attrs["aria-current"] === "page",
-    );
+  it("opens the source cluster as a real ancestor of its locality", () => {
+    const place = findAtlasLocality("shantou")!;
+    const cluster = findAtlasCluster(place.groupId, place.branchId, place.clusterId)!;
+    const html = renderTree(atlasLocalityPath(place));
+    for (const name of ["Min", "Southern Min", cluster.name]) expectExpanded(html, name);
+    const renderedLinks = links(html);
+    const current = renderedLinks.filter(link => link.attrs["aria-current"] === "page");
     expect(current).toHaveLength(1);
-    expect(current[0].content).toContain("Swatow");
-    const captions = [...html.matchAll(/<span class="language-tree-cluster-caption">([^<]+)<\/span>/g)]
-      .map((match) => match[1]);
-    expect(captions).toEqual(["Tsuan-Chiang", "Teo Swa"]);
-    expect(openingTags(html, "button").some((item) => /Tsuan-Chiang|Teo Swa/.test(item["aria-label"] ?? ""))).toBe(false);
-    expect(html).not.toContain("cluster_min");
+    expect(current[0].content).toContain(place.name);
+    expect(renderedLinks.filter(link => link.attrs.href === atlasClusterPath(cluster))).toHaveLength(1);
+    expect(getBreadcrumbs(atlasLocalityPath(place)).map(crumb => crumb.path)).toEqual([
+      "/", "/min", "/min/southern-min", atlasClusterPath(cluster), atlasLocalityPath(place),
+    ]);
+    expect(html).not.toContain("language-tree-cluster-caption");
   });
 
   it("gives every locality and chapter the same tree depth as its URL", () => {
@@ -88,11 +89,16 @@ describe("persistent language tree", () => {
         depths.set(attributes(raw).href, listStack.filter(Boolean).length);
       }
     }
-    for (const point of mapPoints) {
-      const path = varietyPath(point);
-      expect(depths.get(path), point.id).toBe(2);
-      for (const section of availableSections(point)) {
-        expect(depths.get(`${path}/${section}`), `${point.id}/${section}`).toBe(3);
+    for (const cluster of atlasClusters)
+      expect(depths.get(atlasClusterPath(cluster)), cluster.id).toBe(2);
+    for (const place of atlasLocalities) {
+      const path = atlasLocalityPath(place);
+      expect(depths.get(path), place.id).toBe(3);
+      expect(getBreadcrumbs(path), place.id).toHaveLength(5); // family root + four linguistic levels
+      const point = mapPoints.find(point => point.id === place.id);
+      for (const section of point ? availableSections(point) : []) {
+        expect(depths.get(`${path}/${section}`), `${place.id}/${section}`).toBe(4);
+        expect(getBreadcrumbs(`${path}/${section}`)).toHaveLength(6);
       }
     }
   });
@@ -130,7 +136,7 @@ describe("persistent language tree", () => {
     expect(current).toHaveLength(1);
     expect(current[0].attrs.href).toBe(path);
     expect(current[0].content).toContain("Photos");
-    for (const name of ["Min", "Southern Min", "Amoy"])
+    for (const name of ["Min", "Southern Min", findAtlasCluster("min", "southern-min", findAtlasLocality("xiamen")!.clusterId)!.name, "Amoy"])
       expectExpanded(html, name);
 
     const targets = [...openingTags(html, "ul"), ...openingTags(html, "div")];
@@ -158,37 +164,29 @@ describe("persistent language tree", () => {
     ).toHaveLength(1);
   });
 
-  it("links every published variety through its real parents without a languages prefix or invented cluster route", () => {
-    const destinations = new Set(
-      links(renderTree("/")).map((link) => link.attrs.href),
-    );
-    for (const group of languages) {
-      expect(destinations.has(groupPath(group.id))).toBe(true);
-      for (const subgroup of group.subgroups)
-        expect(destinations.has(subgroupPath(group.id, subgroup.id))).toBe(
-          true,
-        );
-    }
-    for (const point of mapPoints)
-      expect(destinations.has(varietyPath(point)), point.name).toBe(true);
+  it("links every sourced locality through its actual four parents", () => {
+    const destinations = new Set(links(renderTree("/")).map(link => link.attrs.href));
+    for (const group of languages) expect(destinations.has(groupPath(group.id))).toBe(true);
+    for (const branch of atlasBranches)
+      expect(destinations.has(subgroupPath(branch.groupId, branch.id))).toBe(true);
+    for (const cluster of atlasClusters)
+      expect(destinations.has(atlasClusterPath(cluster))).toBe(true);
+    for (const place of atlasLocalities)
+      expect(destinations.has(atlasLocalityPath(place)), place.name).toBe(true);
 
     for (const href of destinations) {
       expect(href).not.toMatch(/^\/languages(?:\/|$)/);
       if (["/", "/written-chinese", "/about"].includes(href)) continue;
-      const [languageId, subgroupId, varietyId, lesson, ...extra] = href
-        .split("/")
-        .filter(Boolean);
-      expect(extra).toHaveLength(0);
-      const route = resolveReferenceRoute({
-        languageId,
-        subgroupId,
-        varietyId,
-      });
-      expect(route, `Invalid language hierarchy: ${href}`).not.toBeNull();
-      if (lesson) {
-        expect(route?.point).toBeDefined();
-        expect(availableSections(route!.point!)).toContain(lesson);
-        expect(lessons).toContain(lesson);
+      const crumbs = getBreadcrumbs(href);
+      expect(crumbs.at(-1)?.label, `Invalid language hierarchy: ${href}`).not.toBe("Page not found");
+      expect(crumbs.at(-1)?.path).toBe(href);
+      expect(crumbs.slice(1).every(crumb => destinations.has(crumb.path))).toBe(true);
+      const segments = href.split("/").filter(Boolean);
+      expect(segments.length).toBeLessThanOrEqual(5);
+      if (segments.length === 5) {
+        const point = mapPoints.find(point => point.id === segments[3]);
+        expect(point).toBeDefined();
+        expect(availableSections(point!)).toContain(segments[4]);
       }
     }
   });

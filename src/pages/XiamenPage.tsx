@@ -1,3 +1,4 @@
+import { findAtlasLocality, atlasLocalityPath } from "../data/atlas";
 import { useEffect, useMemo, useState } from "react";
 import {
   Link,
@@ -37,7 +38,7 @@ import RegionalDifferences, {
   RegionalWord,
 } from "../components/RegionalDifferences";
 
-const BASE = "/min/southern-min/xiamen";
+const BASE = atlasLocalityPath(findAtlasLocality("xiamen")!);
 type Word = (typeof xiamenWords)[number];
 type Photo = (typeof xiamenPhotos)[number];
 const roman = (word: Word) => romanizeXiamen(word.segments, word.tones);
@@ -293,7 +294,7 @@ function Overview({
           selectedPoint="xiamen"
           onSelectPoint={(id) => {
             const point = mapPoints.find((item) => item.id === id);
-            if (point && id !== "xiamen") navigate(`/min/southern-min/${id}`);
+            if (point && id !== "xiamen") navigate(atlasLocalityPath(findAtlasLocality(id)!));
           }}
         />
       </section>

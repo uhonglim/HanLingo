@@ -20,10 +20,6 @@ function Missing() { return <section className="atlas-catalogue"><h1>Page not fo
 function Source({ source }: { source: AtlasSource }) {
   return <p className="atlas-source"><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a><span>{source.locator}</span></p>;
 }
-export function localityHasLearning(place: AtlasLocality) {
-  const point = findLearningPlace(place.id);
-  return point ? availableSections(point).length > 0 : false;
-}
 function PlaceList({ places }: { places: AtlasLocality[] }) {
   return <div className="atlas-place-list">{places.map(place => {
     const point = findLearningPlace(place.id)!;
@@ -43,17 +39,6 @@ function ContextMap({ places, selected }: { places: AtlasLocality[]; selected?: 
       const place = findAtlasLocality(id); if (place) navigate(atlasLocalityPath(place));
     }} compact/>
     <p className="atlas-scope">Markers locate reference places, not dialect boundaries. Open Map to explore all five groups.</p>
-  </section>;
-}
-/** Nearby evidence is explicitly labelled and linked, never reattributed to this locality. */
-function RelatedLearning({ place }: { place: AtlasLocality }) {
-  const siblings = atlasLocalities.filter(p => p.id !== place.id && p.groupId === place.groupId && p.branchId === place.branchId && localityHasLearning(p));
-  const candidates = siblings.length ? siblings : atlasLocalities.filter(p => p.id !== place.id && p.groupId === place.groupId && localityHasLearning(p));
-  if (!candidates.length) return null;
-  const branch = atlasBranches.find(b => b.groupId === place.groupId && b.id === place.branchId);
-  return <section className="atlas-related"><h2>{siblings.length ? `Elsewhere in ${branch?.name}` : 'Other local voices'}</h2>
-    <p>Separate local collections. These readings and photographs belong to the places named below.</p>
-    <PlaceList places={candidates.slice(0, 6)}/>
   </section>;
 }
 export function AtlasBranchCards({ groupId }: { groupId: string }) {
@@ -100,9 +85,8 @@ function CatalogueLocalityPage({ place }: { place: AtlasLocality }) {
     {getLocalGallery(place.id).length > 0 && <LocalityScenes point={point}/>}
     {data.words.length > 0 && <p className="atlas-reading-scope">{[...new Set(data.words.map(w => w.registerLabel).filter(Boolean))].join(' · ')}</p>}
     <BranchLearning groupId={place.groupId} subgroupId={place.branchId} point={point}/>
-    {!data.words.length && <p className="atlas-scope">Local IPA readings are still being documented. The linked collections below retain their own locality and speaker references.</p>}
+    {!data.words.length && <p className="atlas-scope">Local IPA readings are still being documented.</p>}
     <ContextMap places={neighbours} selected={place}/>
-    <RelatedLearning place={place}/>
     <section><h2>Sources</h2><Source source={place.source}/>{place.source.url !== cluster.source.url && <Source source={cluster.source}/>}
       <details className="atlas-reference-notes"><summary>Place and naming notes</summary><p>{place.scope}</p><p>{cluster.description}</p>{naming && <p>{naming.note} <a href={naming.source.url} target="_blank" rel="noreferrer">{naming.source.title}</a></p>}</details>
     </section>

@@ -1,8 +1,8 @@
 {
   "id": "hanlingo-ipa-1",
-  "version": "2.1",
+  "version": "2.2",
   "title": "HanLingo IPA sound pack",
-  "scope": "Human-recorded general IPA demonstrations: 15 vowels and 6 consonants. Consonant clips retain any supporting vowels. These are not local words, synthesized speech, lexical tones or sandhi.",
+  "scope": "Human-recorded general IPA demonstrations: 16 vowels and 6 consonants. Consonant clips retain any supporting vowels. These are not local words, synthesized speech, lexical tones or sandhi.",
   "samples": [
     {
       "id": "0069",
@@ -273,6 +273,24 @@
       "duration": 0.626939,
       "originalSha1": "ee33026172662d8e770c2965cc0958938cbec25e",
       "sha256": "0cfc783a3d0cf44c97350231b99a95b1783f29910d508e75d623b1356c9d1640"
+    },
+    {
+      "id": "028c",
+      "ipa": "ʌ",
+      "name": "Open-mid back unrounded vowel",
+      "category": "Vowels",
+      "file": "028c.mp3",
+      "src": "/audio/ipa/028c.mp3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Open-mid_back_unrounded_vowel.ogg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Open-mid_back_unrounded_vowel.ogg",
+      "author": "Denelson83",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Transcoded from Ogg to MP3; not trimmed or pitch-shifted.",
+      "context": "General phonetic demonstration. Not a Jinyun word, speaker sample or lexical tone.",
+      "duration": 0.679184,
+      "originalSha1": "68c363004297b56414c91cc6421345c98d981ffb",
+      "sha256": "dd17734c85d17e2e2f5ed78ddfd70d738d82e8c1445409bb02b21f5eaf53caf5"
     },
     {
       "id": "0070",

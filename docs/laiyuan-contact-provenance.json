@@ -1,0 +1,491 @@
+{
+  "source": {
+    "author": "何純惠 / Ho Chun-Hui",
+    "title": "客語汀州片混合方言研究—以連城縣賴源鄉方言為探討對象",
+    "year": 2016,
+    "url": "https://cloud.hakka.gov.tw/site/hakka/public/attachment/105A0010.pdf",
+    "publisher": "Hakka Affairs Council research report",
+    "openLicense": null,
+    "rights": "No open licence identified. Bounded factual selection of24 lexical responses; no source scans, extended prose or recordings redistributed.",
+    "pdfSha256": "69a243fa0cde84c112b63c4f4c61e680f35cb45ae21ccece6a3f73785f49d616"
+  },
+  "scope": {
+    "collection": "Fieldwork26June–10July2016, within travel24June–12July2016; pp47–49.",
+    "classification": "Sourcepp2/19 explicitly declines direct Min or Hakka classification and uses Western Fujian mixed varieties. Contact varieties/Western Fujian/Laiyuan are editorial geographic collections, not source genealogical ranks.",
+    "huangzong": "Published Huangzong reference combines consultantsB/C from Nanyang and Dakengtou natural villages within Huangzong administrative village; individual contrasts are acknowledged p20.",
+    "niujia": "Main consultantD from Dongkenglong natural village within Niujia administrative village; consultantE also from Niujia.",
+    "toneNotation": "Historical tone categories defined p16note20, not pitch contours; category67 is a merger, retained as T67. No Table9pitch substitution or sandhi derivation."
+  },
+  "transformations": [
+    "IPA glyphs manually visually transcribed from source tables; legacy font extraction not used as sound evidence.",
+    "Superscript aspiration rendered as Unicodeʰ, nasalization retained; source numeral categories preserved.",
+    "Spaces delimit source syllables; the source digit attached to each syllable retained in ipa and sourceToneCategories.",
+    "Han supplied only where the source discussion explicitly identifies writing; table concept headings alone are not spellings.",
+    "Short English labels follow table glosses; eat includes drink based on explicitp29usage."
+  ],
+  "independentReview": {
+    "reviewer": "min_overseas_readings",
+    "date": "2026-10-09",
+    "result": "All24IPA/category/gloss cells and12written/12phonetic-only statuses visually checked againstpp16,24,27,29–33. Huangzong narrow hi8 retains absence of glottalstop."
+  },
+  "records": [
+    {
+      "id": "ho2016-niujia-foot",
+      "english": "foot",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "kʰia",
+      "sourceToneCategories": [
+        "1"
+      ],
+      "table": "11-1",
+      "sourceRow": "牛家",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[kʰia1]",
+      "sourceForm": "kʰia1",
+      "sourcePage": 24
+    },
+    {
+      "id": "ho2016-niujia-bite",
+      "english": "bite",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "koʔ",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "11-1",
+      "sourceRow": "牛家",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[koʔ8]",
+      "sourceForm": "koʔ8",
+      "sourcePage": 24
+    },
+    {
+      "id": "ho2016-niujia-thick",
+      "english": "thick",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "kʰiauʔ",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "11-1",
+      "sourceRow": "牛家",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[kʰiauʔ8]",
+      "sourceForm": "kʰiauʔ8",
+      "sourcePage": 24
+    },
+    {
+      "id": "ho2016-niujia-stand",
+      "english": "stand",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "kʰiʔ",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "12-1",
+      "sourceRow": "牛家",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[kʰiʔ8]",
+      "sourceForm": "kʰiʔ8",
+      "sourcePage": 27
+    },
+    {
+      "id": "ho2016-niujia-give",
+      "english": "give",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "pã",
+      "sourceToneCategories": [
+        "1"
+      ],
+      "table": "12-1",
+      "sourceRow": "牛家",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[pã1]",
+      "sourceForm": "pã1",
+      "sourcePage": 27
+    },
+    {
+      "id": "ho2016-niujia-eat",
+      "english": "eat; drink",
+      "han": "食",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "ʃeʔ",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "12-1",
+      "sourceRow": "牛家",
+      "hanLocator": "p29 §6-2-3 explicitly 食 for eat/drink",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[ʃeʔ8]",
+      "sourceForm": "ʃeʔ8",
+      "sourcePage": 27
+    },
+    {
+      "id": "ho2016-niujia-not",
+      "english": "not",
+      "han": "不",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "aŋ",
+      "sourceToneCategories": [
+        "67"
+      ],
+      "table": "13-1",
+      "sourceRow": "牛家",
+      "hanLocator": "pp31–32 §6-3-1 explicitly connects 不/五 with these Laiyuan forms",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[aŋ67]",
+      "sourceForm": "aŋ67",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-niujia-five",
+      "english": "five",
+      "han": "五",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "aŋ",
+      "sourceToneCategories": [
+        "3"
+      ],
+      "table": "13-1",
+      "sourceRow": "牛家",
+      "hanLocator": "pp31–32 §6-3-1 explicitly calls 五 a character and discusses its source tone",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[aŋ3]",
+      "sourceForm": "aŋ3",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-niujia-ear",
+      "english": "ear",
+      "han": "耳菇",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "ɲieŋ ku",
+      "sourceToneCategories": [
+        "3",
+        "1"
+      ],
+      "table": "13-1",
+      "sourceRow": "牛家",
+      "hanLocator": "p32 §6-3-2 explicitly 耳 + kʰaŋ1(空) or 耳 + ku1(菇), matching this table response",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[ɲieŋ3 ku1]",
+      "sourceForm": "ɲieŋ3 ku1",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-niujia-sleep",
+      "english": "sleep",
+      "han": "睡",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "fai",
+      "sourceToneCategories": [
+        "67"
+      ],
+      "table": "13-1",
+      "sourceRow": "牛家",
+      "hanLocator": "pp32–33 §6-3-3 explicitly 睡、水兩字",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[fai67]",
+      "sourceForm": "fai67",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-niujia-water",
+      "english": "water",
+      "han": "水",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "fy",
+      "sourceToneCategories": [
+        "3"
+      ],
+      "table": "13-1",
+      "sourceRow": "牛家",
+      "hanLocator": "pp32–33 §6-3-3 explicitly 睡、水兩字",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[fy3]",
+      "sourceForm": "fy3",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-niujia-narrow",
+      "english": "narrow",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "hieʔ",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "13-1",
+      "sourceRow": "牛家",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "niujia-laiyuan",
+      "ipa": "[hieʔ8]",
+      "sourceForm": "hieʔ8",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-huangzong-foot",
+      "english": "foot",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "kʰa",
+      "sourceToneCategories": [
+        "1"
+      ],
+      "table": "11-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[kʰa1]",
+      "sourceForm": "kʰa1",
+      "sourcePage": 24
+    },
+    {
+      "id": "ho2016-huangzong-bite",
+      "english": "bite",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "ha",
+      "sourceToneCategories": [
+        "1"
+      ],
+      "table": "11-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[ha1]",
+      "sourceForm": "ha1",
+      "sourcePage": 24
+    },
+    {
+      "id": "ho2016-huangzong-thick",
+      "english": "thick",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "kʰioʔ",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "11-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[kʰioʔ8]",
+      "sourceForm": "kʰioʔ8",
+      "sourcePage": 24
+    },
+    {
+      "id": "ho2016-huangzong-stand",
+      "english": "stand",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "kʰi",
+      "sourceToneCategories": [
+        "1"
+      ],
+      "table": "12-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[kʰi1]",
+      "sourceForm": "kʰi1",
+      "sourcePage": 27
+    },
+    {
+      "id": "ho2016-huangzong-give",
+      "english": "give",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "kuo",
+      "sourceToneCategories": [
+        "67"
+      ],
+      "table": "12-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[kuo67]",
+      "sourceForm": "kuo67",
+      "sourcePage": 27
+    },
+    {
+      "id": "ho2016-huangzong-eat",
+      "english": "eat; drink",
+      "han": "食",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "ɕiʔ",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "12-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "p29 §6-2-3 explicitly 食 for eat/drink",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[ɕiʔ8]",
+      "sourceForm": "ɕiʔ8",
+      "sourcePage": 27
+    },
+    {
+      "id": "ho2016-huangzong-not",
+      "english": "not",
+      "han": "不",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "aŋ",
+      "sourceToneCategories": [
+        "1"
+      ],
+      "table": "13-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "pp31–32 §6-3-1 explicitly connects 不/五 with these Laiyuan forms",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[aŋ1]",
+      "sourceForm": "aŋ1",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-huangzong-five",
+      "english": "five",
+      "han": "五",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "aŋ",
+      "sourceToneCategories": [
+        "3"
+      ],
+      "table": "13-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "pp31–32 §6-3-1 explicitly calls 五 a character and discusses its source tone",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[aŋ3]",
+      "sourceForm": "aŋ3",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-huangzong-ear",
+      "english": "ear",
+      "han": "耳空",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "ɲi kʰaŋ",
+      "sourceToneCategories": [
+        "3",
+        "1"
+      ],
+      "table": "13-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "p32 §6-3-2 explicitly 耳 + kʰaŋ1(空) or 耳 + ku1(菇), matching this table response",
+      "note": "The source also lists 耳菇: [ɲi] in category 3 followed by [ku] in category 1.",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[ɲi3 kʰaŋ1]",
+      "sourceForm": "ɲi3 kʰaŋ1",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-huangzong-sleep",
+      "english": "sleep",
+      "han": "睡",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "fi",
+      "sourceToneCategories": [
+        "67"
+      ],
+      "table": "13-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "pp32–33 §6-3-3 explicitly 睡、水兩字",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[fi67]",
+      "sourceForm": "fi67",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-huangzong-water",
+      "english": "water",
+      "han": "水",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "ipaSegments": "fy",
+      "sourceToneCategories": [
+        "3"
+      ],
+      "table": "13-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "pp32–33 §6-3-3 explicitly 睡、水兩字",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[fy3]",
+      "sourceForm": "fy3",
+      "sourcePage": 30
+    },
+    {
+      "id": "ho2016-huangzong-narrow",
+      "english": "narrow",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "ipaSegments": "hi",
+      "sourceToneCategories": [
+        "8"
+      ],
+      "table": "13-1",
+      "sourceRow": "黃宗",
+      "hanLocator": "Concept headings are not transferred to local writing.",
+      "note": "",
+      "localityId": "huangzong-laiyuan",
+      "ipa": "[hi8]",
+      "sourceForm": "hi8",
+      "sourcePage": 30
+    }
+  ]
+}

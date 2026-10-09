@@ -51,6 +51,16 @@ describe("public IPA spelling demonstrator", () => {
     expect(convertIpa("p̈a̤2143")[0].spelling).not.toBe(convertIpa("p̤a̤2143")[0].spelling);
     expect(() => convertIpa("̈a23")).toThrow();
   });
+  it("shares the back unrounded reading family without changing exact IPA or tone", () => {
+    expect(convertIpa("mʌw131")[0]).toMatchObject({ ipa: "mʌw˩˧˩", spelling: "meuw131" });
+    expect(convertIpa("mʌw331")[0].spelling).toBe("meuw331");
+    expect(convertIpa("tʌ411")[0].spelling).toBe("teu411");
+    // Mapping fixtures, not locality attestations; the merger is global and explicit.
+    expect(convertIpa("ʌ", "unspecified")[0].spelling).toBe(convertIpa("ɤ", "unspecified")[0].spelling);
+    expect(convertIpa("ʌ", "unspecified")[0].spelling).not.toBe(convertIpa("ə", "unspecified")[0].spelling);
+    expect(convertIpa("ʌ3", "source-category")[0].spelling).toBe("eu·T3");
+    expect(convertIpa("ʌ̃ː", "unspecified")[0].spelling).toBe("eu~:");
+  });
 });
 
 

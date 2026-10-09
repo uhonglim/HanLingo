@@ -46,7 +46,7 @@ export default function Pronunciation({
       : toneNotation === "unspecified"
         ? /[˩˨˧˦˥0-9⁰¹²³⁴⁵⁶⁷⁸⁹]/u.test(ipa)
           ? " · source tone notation"
-          : " · tones not given"
+          : " · segments only"
         : "";
   return (
     <div className="pronunciation">

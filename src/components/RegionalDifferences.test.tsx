@@ -65,9 +65,9 @@ describe("local references and IPA", () => {
     const html = renderToStaticMarkup(
       <Pronunciation ipa="[pa]" spelling="pa" toneNotation="unspecified" />,
     );
-    expect(html).toContain("tones not given");
+    expect(html).toContain("segments only");
     expect(html).not.toContain("<svg");
-    expect(html).toContain("HanLingo spelling · tones not given");
+    expect(html).toContain("HanLingo spelling · segments only");
     expect(html).toContain("<strong>pa</strong>");
   });
 

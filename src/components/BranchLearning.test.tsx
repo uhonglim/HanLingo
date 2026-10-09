@@ -56,4 +56,12 @@ describe("learning overviews", () => {
     expect(html).toContain("sap-bûn");
     expect(html).not.toContain("HanLingo spelling");
   });
+  it("shows both Laiyuan villages at the collection root instead of filling it with the first village", () => {
+    const html = renderToStaticMarkup(<MemoryRouter><BranchLearning groupId="contact" /></MemoryRouter>);
+    expect(html).toContain('/contact/western-fujian/laiyuan/niujia-laiyuan/words');
+    expect(html).toContain('/contact/western-fujian/laiyuan/huangzong-laiyuan/words');
+    expect(html).toContain('khia·T1');
+    expect(html).toContain('kha·T1');
+    expect((html.match(/class="learning-locality"/g) ?? []).length).toBe(12);
+  });
 });

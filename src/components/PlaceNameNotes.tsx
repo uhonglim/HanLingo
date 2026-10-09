@@ -9,7 +9,7 @@ export default function PlaceNameNotes({ point }: { point: { id: string; name: s
     {common && <p>{common.note} <a href={common.source.url} target="_blank" rel="noreferrer">{common.source.title}</a></p>}
     {pronunciation && <p><strong>HanLingo spelling: {placeNameSpelling(point.id)}</strong>{' '}·{' '}
       {pronunciation.toneNotation === 'source-category' ? 'IPA segments + source tone categories' : 'IPA'}: {pronunciation.ipa}.{' '}
-      {pronunciation.toneNotation === 'unspecified' && 'Tones not supplied. '}{pronunciation.note}{' '}
+      {pronunciation.toneNotation === 'unspecified' && 'Segments only. '}{pronunciation.note}{' '}
       <a href={pronunciation.source.url} target="_blank" rel="noreferrer">{pronunciation.source.title}</a>{' '}
       {pronunciation.mappingSource && <a href={pronunciation.mappingSource.url} target="_blank" rel="noreferrer">{pronunciation.mappingSource.title}</a>}</p>}
     {reading && <p><strong>Source spelling: {reading.localName}</strong> — {reading.convention}. {reading.note}{' '}

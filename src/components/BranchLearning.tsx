@@ -32,7 +32,9 @@ export function balancedPreview<T>(
   const groups = new Map<string, T[]>();
   items.forEach((item) => {
     const id = key(item);
-    groups.set(id, [...(groups.get(id) ?? []), item]);
+    const group = groups.get(id);
+    if (group) group.push(item);
+    else groups.set(id, [item]);
   });
   const result: T[] = [];
   for (let row = 0; result.length < Math.min(limit, items.length); row++) {
@@ -130,7 +132,11 @@ export default function BranchLearning({
     ],
   };
   const words = balancedPreview(
-    data.words,
+    // At a group root, balance places within each branch as well as branches.
+    // Otherwise a branch's first large word list hides every later locality.
+    !subgroupId && !point
+      ? balancedPreview(data.words, word => word.localityId, data.words.length)
+      : data.words,
     (word) => {
       const place = mapPoints.find((place) => place.id === word.localityId)!;
       return subgroupId ? word.localityId : place.subgroupId;

@@ -29,8 +29,9 @@ describe('reviewed thousand-locality atlas', () => {
       expect(findAtlasCluster(place.groupId, place.branchId, place.clusterId)).toBeDefined();
       expect(filterMapLocalities(atlasLocalities, row.code).map(match => match.id)).toContain(place.id);
       // Only a subsequently sourced exact-place learning collection unlocks lessons.
-      if (['rongcheng-371082', 'gan-county-360902'].includes(place.id)) {
+      if (['rongcheng-371082', 'gan-county-360902', 'jinyun-county-331122', 'gan-county-360602'].includes(place.id)) {
         expect(availableSections(findLearningPlace(place.id)!)).toEqual(['words', 'culture', 'sounds', 'practice']);
+
       } else expect(availableSections(findLearningPlace(place.id)!)).toEqual([]);
     }
   });

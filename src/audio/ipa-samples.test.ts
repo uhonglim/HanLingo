@@ -30,6 +30,10 @@ describe('sourced IPA sound pack', () => {
     expect(sampleFor('j')).toBeUndefined(); // Never use [y] audio for the y glide.
     expect(sampleFor('ɛ')).toBeUndefined(); // Source hash mismatch held for review.
     expect(sampleFor('y')!.src).not.toBe(sampleFor('ʏ')!.src);
+    expect(sampleSpelling(sampleFor('ʌ')!)).toBe('eu');
+    expect(sampleSpelling(sampleFor('ɤ')!)).toBe('eu');
+    expect(sampleFor('ʌ')!.src).not.toBe(sampleFor('ɤ')!.src);
+    expect(sampleFor('ʌ')!.context).toContain('Not a Jinyun word');
   });
   it('keeps exact segment requirements and never substitutes an unmarked recording', () => {
     for (const ipa of ['pʰ', 'yː', 'ã', 'm̩', 'p̚', 'a̤', 'a̰', 'y̯']) {
@@ -38,6 +42,7 @@ describe('sourced IPA sound pack', () => {
     }
     expect(planIpaAudio('ju').missing).toEqual(['j']);
     expect(planIpaAudio('y').samples.map(s => s.ipa)).toEqual(['y']);
+    expect(planIpaAudio('ʌ ɤ').samples.map(s => s.ipa)).toEqual(['ʌ', 'ɤ']);
     expect(planIpaAudio('[y˥]', 'pitch-contour').samples.map(s => s.ipa)).toEqual(['y']);
     expect(planIpaAudio('[y6]', 'source-category').samples.map(s => s.ipa)).toEqual(['y']);
     expect(planIpaAudio('g').missing).toEqual(['g']);

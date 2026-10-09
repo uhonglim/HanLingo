@@ -195,7 +195,7 @@ export default function RomanizationPage() {
                 >
                   <option value="pitch-contour">Pitch contours</option>
                   <option value="source-category">Source tone categories</option>
-                  <option value="unspecified">Tones not supplied</option>
+                  <option value="unspecified">Segments only</option>
                 </select>
               </div>
               <p id="roman-input-help" className="roman-note">
@@ -218,7 +218,7 @@ export default function RomanizationPage() {
                     <p className="roman-note">
                       {toneNotation === "source-category"
                         ? "·T marks a source tone category, not a pitch contour."
-                        : "Tones not supplied · segment spelling only."}
+                        : "Segments only · no tone value is inferred."}
                     </p>
                   )}
                 </>
@@ -355,7 +355,7 @@ export default function RomanizationPage() {
                       <p className="roman-note">
                         {word.toneNotation === "source-category"
                           ? "·T marks source tone categories, not pitch."
-                          : "Tones not supplied · segment spelling only."}
+                          : "Segments only · no tone value is inferred."}
                       </p>
                     )}
                     <details>

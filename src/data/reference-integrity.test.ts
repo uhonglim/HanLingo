@@ -217,9 +217,15 @@ describe("reference page coverage", () => {
 });
 
 describe("documentary photo integration", () => {
-  it("provides a real bundled image for every group without unsafe paths", () => {
+  it("uses real documented group images and preserves the uncollected Laiyuan photo gap", () => {
     for (const group of languages) {
-      expect(groupPhotos[group.id] ?? atlasLocalities.filter(place => place.groupId === group.id).flatMap(place => getLocalGallery(place.id))[0], group.name).toBeDefined();
+      const photo = groupPhotos[group.id] ?? atlasLocalities.filter(place => place.groupId === group.id).flatMap(place => getLocalGallery(place.id))[0];
+      if (group.id === 'contact') {
+        // A primary linguistic report is not permission to reuse its photographs.
+        expect(group.collectionKind).toBe('geographic');
+        expect(photo).toBeUndefined();
+        expect(atlasLocalities.filter(place => place.groupId === group.id).map(place => place.id).sort()).toEqual(['huangzong-laiyuan', 'niujia-laiyuan']);
+      } else expect(photo, group.name).toBeDefined();
     }
     const publicRoot = fileURLToPath(new URL("../../public/", import.meta.url));
 

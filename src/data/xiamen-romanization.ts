@@ -10,6 +10,7 @@ export const xiamenSpellingKey: SpellingRule[] = rules([
 ]);
 
 export const sharedSpellingExtensions: SpellingRule[] = [
+  ...rules([["ʌ", "eu"]], "Shared", "The open-mid back unrounded vowel shares eu with [ɤ]. This is a reading simplification; exact IPA preserves their height difference."),
   ...rules([["h", "h"], ["x", "h"], ["χ", "h"]], "Shared", "The h family shares a spelling; IPA preserves the place of friction."),
   ...rules([["ɕ", "sh"], ["ʃ", "sh"], ["ʂ", "sh"],
     ["ʑ", "zh"], ["ʒ", "zh"], ["ʐ", "zh"],

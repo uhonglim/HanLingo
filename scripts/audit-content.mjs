@@ -33,7 +33,7 @@ try {
     "",
     `IPA evidence comprises **${total("lexicalEntries")} lexical or grammatical entries** and **${total("characterReadings")} character readings**. Character readings are excluded from meaning quizzes. **${total("incompleteWrittenForms")} lexical entries lack a complete source-supplied written form**; their pronunciation and meaning are retained without invented characters. Source citation-tone inventories: **${total("citationToneInventories")}** with **${total("citationToneCategories")}** category/contour pairs; these are not words or recordings.`,
     "",
-    `Of the IPA entries, ${total("segmentalEntries")} retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.`,
+    `Of the IPA entries, ${total("segmentalEntries")} are displayed as segments only. Their sources either omit tones or print notation without a usable key; the cards preserve that distinction in their reading notes.`,
     "",
     "## Branch inventory",
     "",

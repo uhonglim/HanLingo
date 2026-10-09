@@ -41,9 +41,9 @@ describe("local learning chapters", () => {
   it("keeps omitted-tone examples separate from the new dated tonal survey", () => {
     const words = render("/mandarin/southwestern/chengdu/words?q=倒拐");
     expect(words).toContain("tones not supplied");
-    expect(words).toContain("IPA · tones not given");
+    expect(words).toContain("IPA · segments only");
     expect(words).not.toContain('aria-label="Pitch contour');
-    expect(words).toContain("HanLingo spelling · tones not given");
+    expect(words).toContain("HanLingo spelling · segments only");
     const all = render("/mandarin/southwestern/chengdu/words");
     expect(all).toContain("1950s survey · published 1964");
     for (const card of all.match(/<article class="learning-word">[\s\S]*?<\/article>/g) ?? []) {

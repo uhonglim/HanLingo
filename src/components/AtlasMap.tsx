@@ -59,7 +59,7 @@ const COLORS: Record<string, string> = {
   hakka: "#92769b",
   wu: "#588785",
   gan: "#8d5c43", xiang: "#596747", jin: "#766149",
-  hui: "#566b70", pinghua: "#6c7550", tuhua: "#826b75",
+  hui: "#566b70", pinghua: "#6c7550", tuhua: "#826b75", contact: "#6e717e",
 };
 const topology = world as unknown as Topology<{
   countries: GeometryCollection;

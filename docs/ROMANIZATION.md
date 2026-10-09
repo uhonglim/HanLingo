@@ -43,7 +43,7 @@ Append **h** to mark aspiration: `p → ph`, `ts → tsh`, `ch → chh`. Alveolo
 - Syllabicity and unreleased-stop marks stay in IPA but are omitted from HanLingo: [ŋ̍] → `ng`, [p̚] → `p`. This omission does not change the source pronunciation.
 - Supported breathy, creaky, voiceless and voiced combining marks remain visible: [a̤ a̰ m̥ s̬].
 - Supplied pitch contours use digits **1 low** through **5 high**: [˧˥] → `35`, [˥˩] → `51`. Preserve the source’s one-digit or multidigit contour; never reinterpret a tone-category number as pitch.
-- Explicit source tone categories use `·T` plus their number. Readings without supplied tones receive segment spellings only and a visible “tones not given” qualification. No missing tones are inferred.
+- Explicit source tone categories use `·T` plus their number. Readings without supplied tones or without an established source tone key receive segment spellings and a visible “segments only” qualification. Their notes distinguish missing tones from unkeyed source numbers, retaining any original numbered form. No missing tones or undocumented number meanings are inferred.
 
 Amoy 茶 “tea” remains **[te˨˦] → te24**, a dictionary-based citation reading documented in [the Xiamen source notes](XIAMEN-LANGUAGE-SOURCES.md). The attested `hui44 ki44 → hui22 ki44` example shows citation and connected readings from [Ge & Mok 2024, example 1](https://ling.cuhk.edu.hk/people/peggy/SP2024_GeMok_Phonotactics.pdf). The converter does not apply tone sandhi automatically.
 
@@ -78,6 +78,8 @@ Use **ü** for [y ʏ], **y** for [j], and **u** for [u ʊ]. The former yu vowel 
 The dots identify vowel quality, never tone or nasalization. Always keep ü, including after ch, chh and sh; do not adopt Pinyin’s context-dependent omission. Supplied [yː] → ü:, [ỹ] → ü~; pitch and source-category suffixes follow their existing rules. [ɥ] and explicit [y̯] remain yw. Source Jyutping yu and IPA y remain unchanged in their labelled source fields. The tradeoff is one non-ASCII letter for a clearer distinction from the glide-plus-vowel sequence; no new keyboard or display mode is needed.
 
 The central-vowel reading aid **eo** also covers [ɘ], attested in the dated Tong’an comparison in Wang (2022). This is a deliberate many-to-one extension; exact IPA remains visible, and [ə], [ɘ] and [ɜ] are not claimed to be identical sounds.
+
+The back unrounded vowel **[ʌ] shares eu with [ɤ]**. The two vowel heights remain distinct in IPA; this is a deliberate reading-aid merger, separate from central `eo` and low `a/ă`. It supports the exact Jinyun examples in [Steed & Rose 2009, p. 2297](https://www.isca-archive.org/interspeech_2009/steed09_interspeech.pdf): 麻 `[mʌw131]` → `meuw131`, 马 `[mʌw331]` → `meuw331`, and 大 `[tʌ411]` → `teu411`. These are the source’s citation contours, not inferred tone values. No other spelling or source transcription changes.
 
 The source apical-vowel symbols **ɿ** and **ʅ** share **ir** in the reading aid. The latter retains its retroflex distinction in the displayed source transcription. This follows the existing shared-sibilant reading families, not a claim that these vowels sound identical. Tone categories remain category labels, e.g. source `[ʂʅ1]` → `shir·T1`; no pitch contour is inferred.
 

@@ -75,7 +75,7 @@ describe("shared romanization workshop", () => {
     expect(html).toContain("Standard Mandarin · Beijing speaker");
     expect(html).toContain("Current converter coverage");
     expect(html).toContain("not a shared seven-tone inventory");
-    expect(html).toContain("Tones not supplied");
+    expect(html).toContain("Segments only");
     expect(html).toContain("Source tone categories");
     expect(html).toContain("ă represents [ɐ]; a~ represents nasal [ã]");
     expect(html).toContain("The same IPA gets the same spelling everywhere");

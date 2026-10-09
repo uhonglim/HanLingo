@@ -43,3 +43,9 @@ After the earlier retry interval had long elapsed, a bounded three-file retrieva
 - [l]: [Alveolar lateral approximant](https://commons.wikimedia.org/wiki/File:Alveolar_lateral_approximant.ogg), demonstrated between two [a] vowels; the original file page was rechecked for author and licence.
 
 The pack now contains21 general demonstrations:15 vowels and6 consonants. These clips do not become local word recordings, and their supporting vowels must not be removed or mistaken for lexical syllables. [n] and [ɛ] remain held; no disputed source was silently repaired.
+
+## Version 2.2: a separate [ʌ] demonstration
+
+Adds [Open-mid back unrounded vowel](https://commons.wikimedia.org/wiki/File:Open-mid_back_unrounded_vowel.ogg), credited to Denelson83 by the source description and offered under CC BY-SA 3.0. Fresh Commons metadata and the original Ogg agree on SHA-1 `68c363004297b56414c91cc6421345c98d981ffb`. The complete clip is transcoded without trimming or pitch changes; its MP3 hash and duration are in the manifest. The pack contains **22 demonstrations: 16 vowels and 6 consonants**.
+
+Although [ʌ] and [ɤ] share `eu` in the reading aid, their recordings remain separate and match exact IPA. The [ʌ] clip is a general demonstration, not the Jinyun consultant, a local word or its lexical tone. Existing holds on [n] and [ɛ] remain unchanged.

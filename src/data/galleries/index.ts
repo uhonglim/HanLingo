@@ -1,3 +1,4 @@
+import { jinyunYuehuGalleries } from "./jinyun-yuehu";
 import { yichunYuanzhouGalleries } from "./yichun-yuanzhou";
 import { jinTunxiGalleries } from "./jin-tunxi";
 import { xiangStudyGalleries } from "./xiang-study";
@@ -18,6 +19,7 @@ import type { GalleryPhoto } from "./types";
 export const localityGalleries: Record<string, GalleryPhoto[]> = {
   ...otherSiniticGalleries,
   ...jinTunxiGalleries,
+  ...jinyunYuehuGalleries,
   ...xiangStudyGalleries,
   ...lexicalStudyGalleries,
   ...yichunYuanzhouGalleries,

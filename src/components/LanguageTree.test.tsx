@@ -109,7 +109,7 @@ describe("persistent language tree", () => {
     const html = renderTree("/");
     const renderedLinks = links(html);
     const destinations = new Set(renderedLinks.map((link) => link.attrs.href));
-    expect(languages).toHaveLength(11);
+    expect(languages).toHaveLength(12);
     for (const group of languages)
       expect(destinations.has(groupPath(group.id)), group.name).toBe(true);
     expect(destinations.has(subgroupPath("min", "southern-min"))).toBe(false);

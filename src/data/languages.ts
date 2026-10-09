@@ -4,7 +4,7 @@ import { siteTerms } from "./site-terms";
 import { chaoshanPoints } from "./chaoshan";
 import { expandedBranches, expandedPlaces } from "./expansion";
 
-export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu" | "gan" | "xiang" | "jin" | "hui" | "pinghua" | "tuhua";
+export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu" | "gan" | "xiang" | "jin" | "hui" | "pinghua" | "tuhua" | "contact";
 
 export interface Language {
   id: LanguageId;

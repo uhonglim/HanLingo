@@ -197,7 +197,7 @@ describe("letter comparison data", () => {
 
   it("keeps the formal written register out of the spoken group maps", () => {
     expect(languages.map((language) => language.id).sort()).toEqual(
-      ["mandarin", "min", "yue", "hakka", "wu", "gan", "xiang", "jin", "hui", "pinghua", "tuhua"].sort(),
+      ["mandarin", "min", "yue", "hakka", "wu", "gan", "xiang", "jin", "hui", "pinghua", "tuhua", "contact"].sort(),
     );
     expect(mapPoints.map((point) => point.groupId)).not.toContain("formal");
     expect(letters.find((letter) => letter.id === "formal")).toBeDefined();

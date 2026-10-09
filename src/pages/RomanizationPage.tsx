@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import type { AttestedWord } from "../data/learning/types";
 import { pitchLetters } from "../data/xiamen-romanization";
 import { convertIpa, conversionRules } from "../data/romanization-method";
+import { placeNamePronunciations, placeNameSpelling } from "../data/place-name-pronunciations";
 import {
   romanizationGroups,
   romanizationReadings as readingExamples,
@@ -53,9 +54,9 @@ const marks = [
 
 const featuredReadings = [
   {
-    localityId: "beijing-city", han: "灰",
-    title: "A familiar h",
-    note: "[x], [h], and [χ] share h. Plain [u] stays u; only explicit [u̯] becomes w.",
+    localityId: "beijing-city", han: "說",
+    title: "sh, not sr",
+    note: "[ʂ], [ʃ], and [ɕ] share sh. The simpler spelling keeps s separate; IPA preserves tongue position.",
   },
   {
     localityId: "zhangzhou", han: "飯",
@@ -65,7 +66,7 @@ const featuredReadings = [
   {
     localityId: "guangzhou", han: "心",
     title: "A vowel worth keeping",
-    note: "ă keeps [ɐ] distinct from a. The breve changes vowel quality, never tone.",
+    note: "ă keeps [ɐ] distinct from a. Merging them would make this source’s 三 and 心 identical in spelling and tone. The breve marks vowel quality, never tone.",
   },
 ].map((example) => {
   const word = readingExamples.find((item) =>
@@ -74,7 +75,8 @@ const featuredReadings = [
   if (!word) throw new Error(`Missing workshop reading: ${example.localityId} ${example.han}`);
   return { ...example, word };
 });
-const initialWord = featuredReadings[0].word;
+const initialWord = readingExamples.find(word => word.id.endsWith(':beijing-city-ipa-ash'))!;
+const cantonVowelContrast = ['三', '心'].map(han => readingExamples.find(word => word.localityId === 'guangzhou' && word.han === han)!);
 const sharedSpellingExample = ["衣", "煙"].map((han) => {
   const word = readingExamples.find((item) => item.localityId === "suzhou" && item.han === han);
   if (!word) throw new Error(`Missing Suzhou spelling contrast: ${han}`);
@@ -424,8 +426,9 @@ export default function RomanizationPage() {
             <div>
               <h3>Shared spellings, distinct sounds</h3>
               <p>
-                ch covers [tɕ] and [tʃ]; sh covers [ɕ] and [ʃ]. Retroflex
-                tsr / tsrh / sr / zr remain separate. hl marks [ɬ], while
+                ch covers [tɕ], [tʃ], and [tʂ]; sh covers [ɕ], [ʃ], and [ʂ].
+                Write sha for [ʂa], not sra. s / ts / tsh stay separate.
+                hl marks [ɬ], while
                 ḅ / ḍ keep implosives [ɓ] / [ɗ] separate from b / d.
                 A shared spelling does not make two sounds identical.
               </p>
@@ -455,11 +458,19 @@ export default function RomanizationPage() {
                 [y] or [ʏ]; oe covers [ø] and [œ]. Digraphs name vowel
                 qualities; only : marks supplied length.
               </p>
+              {cantonVowelContrast.map(word => <p key={word.id}>
+                <span lang="zh-Hant">{word.han}</span> “{word.english}” {word.displayIpa}
+                {' → '}<strong>{word.spelling}</strong>
+              </p>)}
+              <p>This Canton table does not mark length. We keep its vowel contrast instead of guessing long vowels.{' '}
+                <a href={cantonVowelContrast[0].source.url} target="_blank" rel="noreferrer">Canton source table</a>
+              </p>
             </div>
           </div>
         </div>
         <p className="roman-note">
-          y represents IPA [j]; j represents [dʑ] or [dʒ]. Explicit [i̯],
+          y represents IPA [j]; j represents [dʑ], [dʒ], or [dʐ].
+          r covers [r], [ɹ], and [ɻ]; fricative [ʐ] uses zh. Explicit [i̯],
           [u̯], and [y̯] become y, w, and yw. Plain vowels are never silently
           reinterpreted as glides. Not every variety uses every sound in this key.
         </p>
@@ -594,7 +605,14 @@ export default function RomanizationPage() {
             </p>
           </div>
           <div>
-            <h3>Next decisions</h3>
+            <h3>Names follow local speech</h3>
+            <p>
+              Shanghai is the common name. Its sourced Shanghai reading{' '}
+              [{placeNamePronunciations.shanghai.ipa}] becomes{' '}
+              <strong>{placeNameSpelling('shanghai')}</strong>, not shang or srang.
+              The source uses tone categories.{' '}
+              <a href={placeNamePronunciations.shanghai.source.url} target="_blank" rel="noreferrer">Shanghai name source</a>
+            </p>
             <p>
               This is a reading aid, not a reversible phonetic alphabet. Shared
               spellings cannot reconstruct the original IPA. The converter does
@@ -653,8 +671,9 @@ export default function RomanizationPage() {
           differ. Min, Mandarin, Yue, Hakka, and Wu each need locality-specific
           inventories and pronunciation evidence. This is our working proposal,
           not a completed standard or an automatic character-to-speech system.
-          Documented place names such as Ko-hiông retain their source spelling;
-          they are not silently converted into HanLingo spelling.
+          Common place names stay familiar. Their pronunciation labels use HanLingo
+          spelling derived from documented IPA; source romanizations remain in
+          the reference notes.
         </p>
         <div className="roman-sources">
           <a

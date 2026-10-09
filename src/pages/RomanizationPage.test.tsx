@@ -7,12 +7,12 @@ import {
   romanizationReadings,
 } from "../data/romanization-examples";
 import { convertIpa } from "../data/romanization-method";
-import { mapPoints } from "../data/languages";
+import { learningPlaces } from "../data/learning/places";
 import { getLocalLearning } from "../data/learning";
 
 describe("shared romanization workshop", () => {
   it("offers every published IPA reading with its original tone convention", () => {
-    const allWords = mapPoints.flatMap((point) => getLocalLearning(point).words);
+    const allWords = learningPlaces.flatMap((point) => getLocalLearning(point).words);
     expect(romanizationReadings).toHaveLength(allWords.length);
     for (const word of romanizationReadings) {
       expect(convertIpa(word.ipa, word.toneNotation ?? "unspecified")
@@ -108,7 +108,7 @@ describe("readability-first workshop", () => {
     expect(html).toMatch(/<textarea[^>]*>xuei˥<\/textarea>/);
     expect(html).toContain('<output for="roman-ipa">huei5</output>');
     for (const [locality, han, spelling] of [
-      ["beijing-city", "灰", "huei5"],
+      ["beijing-city", "說", "shuo55"],
       ["zhangzhou", "飯", "pui~22"],
       ["guangzhou", "心", "săm55"],
     ]) {
@@ -118,6 +118,10 @@ describe("readability-first workshop", () => {
       expect(html).toContain(word!.source.url.replaceAll("&", "&amp;"));
     }
     expect(html).toContain("Standard Mandarin · Beijing speaker");
+    expect(html).toContain("sh, not sr");
+    expect(html).toContain("za~·T3 he·T2");
+    expect(html).toContain("sam55");
+    expect(html).toContain("săm55");
     expect(html).toContain("a~");
     expect(html).toContain("a:");
     expect(html).toContain("Syllabicity and unreleased");

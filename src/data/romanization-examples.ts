@@ -1,11 +1,12 @@
 import { varietyPath } from "../routing";
-import { languages, mapPoints, type LanguageId } from "./languages";
+import { languages, type LanguageId } from "./languages";
 import { placeDisplayName } from "./language-names";
 import { getLocalLearning, spellingFor } from "./learning";
+import { learningPlaces } from "./learning/places";
 import { displayIpa } from "./ipa-display";
 
 /** Source records, not a second hand-maintained transcription collection. */
-export const romanizationReadings = mapPoints.flatMap((point) =>
+export const romanizationReadings = learningPlaces.flatMap((point) =>
   getLocalLearning(point)
     .words
     .map((word) => ({

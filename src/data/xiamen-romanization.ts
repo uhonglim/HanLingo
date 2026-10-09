@@ -11,15 +11,18 @@ export const xiamenSpellingKey: SpellingRule[] = rules([
 
 export const sharedSpellingExtensions: SpellingRule[] = [
   ...rules([["h", "h"], ["x", "h"], ["χ", "h"]], "Shared", "The h family shares a spelling; IPA preserves the place of friction."),
-  ...rules([["ɕ", "sh"], ["ʃ", "sh"], ["ʑ", "zh"], ["ʒ", "zh"],
-    ["tɕ", "ch"], ["tʃ", "ch"], ["tɕʰ", "chh"], ["tʃʰ", "chh"],
-    ["dʑ", "j"], ["dʒ", "j"]], "Shared", "Palatal and postalveolar sounds share a reading spelling; retroflex sounds stay separate."),
+  ...rules([["ɕ", "sh"], ["ʃ", "sh"], ["ʂ", "sh"],
+    ["ʑ", "zh"], ["ʒ", "zh"], ["ʐ", "zh"],
+    ["tɕ", "ch"], ["tʃ", "ch"], ["tʂ", "ch"],
+    ["tɕʰ", "chh"], ["tʃʰ", "chh"], ["tʂʰ", "chh"],
+    ["dʑ", "j"], ["dʒ", "j"], ["dʐ", "j"]], "Shared", "Alveolopalatal, postalveolar and retroflex sounds share a reading family. IPA preserves their articulation; s/ts/tsh stay separate."),
+  ...rules([["ɹ", "r"], ["ɻ", "r"]], "Shared", "Approximants use r. Retroflex fricative [ʐ] uses zh; source IPA determines the choice."),
   ...rules([["ɲ", "ny"], ["ȵ", "ny"]], "Shared", "These nasal transcriptions share a spelling, not a claim of identical articulation."),
   ...rules([["a", "a"], ["ɑ", "a"], ["i", "i"], ["ɪ", "i"],
     ["u", "u"], ["ʊ", "u"], ["y", "yu"], ["ʏ", "yu"],
     ["ø", "oe"], ["œ", "oe"], ["ɵ", "oe"], ["ə", "eo"], ["ɜ", "eo"]],
     "Shared", "A vowel family shares its reading spelling. Consult IPA for the exact vowel quality."),
-  ...rules([["cʰ", "kyh"], ["c", "ky"], ["ɟ", "gy"], ["tʂʰ", "tsrh"], ["tʂ", "tsr"], ["ʂ", "sr"], ["ʐ", "zr"],
+  ...rules([["cʰ", "kyh"], ["c", "ky"], ["ɟ", "gy"],
     ["dz", "dz"], ["pfʰ", "pfh"], ["pf", "pf"],
     ["kʷʰ", "kwh"], ["kʰʷ", "kwh"], ["kʷ", "kw"],
     ["ɦ", "hh"], ["ɣ", "gh"], ["ɬ", "hl"], ["ɸ", "ff"], ["β", "vv"],
@@ -41,7 +44,7 @@ export const sharedSpellingRules: SpellingRule[] = [
 export function normalizeSegments(input: string): string {
   return input.replace(/[ʦʨʣʥʧʤ]/gu, symbol => ({ "ʦ": "ts", "ʨ": "tɕ", "ʣ": "dz", "ʥ": "dʑ", "ʧ": "tʃ", "ʤ": "dʒ" })[symbol]!)
     .replace(/t[͜͡]?s/gu, "t͡s")
-    .replace(/([td])[͜͡]([ɕʑʃʒʂz])/gu, "$1$2")
+    .replace(/([td])[͜͡]([ɕʑʃʒʂʐz])/gu, "$1$2")
     .replace(/p[͜͡]f/gu, "pf");
 }
 

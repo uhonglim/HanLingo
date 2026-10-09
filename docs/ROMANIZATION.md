@@ -1,6 +1,6 @@
 # HanLingo spelling
 
-Working proposal, revised 2026-10-09. HanLingo is a shared reading aid beside source IPA. It deliberately uses fewer distinctions than IPA; it is not a phonemic standard for the languages or an existing community orthography.
+Working proposal v3, revised 2026-10-09. HanLingo is a shared reading aid beside source IPA. It deliberately uses fewer distinctions than IPA; it is not a phonemic standard for the languages or an existing community orthography.
 
 ## One global key
 
@@ -20,21 +20,21 @@ Romanization need not be a reversible encoding of phonetic transcription. The [o
 | --- | --- |
 | [p pʰ b], [t tʰ d], [k kʰ ɡ] | p ph b, t th d, k kh g |
 | [t͡s t͡sʰ] | ts tsh |
-| [tɕ tʃ], [tɕʰ tʃʰ] | ch, chh |
-| [dʑ dʒ] | j |
-| [ɕ ʃ], [ʑ ʒ] | sh, zh |
+| [tɕ tʃ tʂ], [tɕʰ tʃʰ tʂʰ] | ch, chh |
+| [dʑ dʒ dʐ] | j |
+| [ɕ ʃ ʂ], [ʑ ʒ ʐ] | sh, zh |
 | [h x χ] | h |
 | [ɲ ȵ] | ny |
-| [tʂ tʂʰ ʂ ʐ] | tsr tsrh sr zr |
+| [r ɹ ɻ] | r |
 | [ŋ ʔ ɦ ɣ ɬ ɓ ɗ] | ng q hh gh hl ḅ ḍ |
 | [a ɑ], [i ɪ], [u ʊ], [y ʏ] | a, i, u, yu |
 | [ø œ], [ə ɜ] | oe, eo |
 | [ɐ ɛ ɔ æ ɒ ɯ ɤ ɨ ɿ ʮ] | ă ae oo ea ao uu eu ii ir yr |
 | [j ɥ], explicit [i̯ u̯ y̯] | y yw, y w yw |
 
-Append **h** to mark aspiration: `p → ph`, `ts → tsh`, `ch → chh`. The retroflex series and implosives retain separate spellings. Plain [u] stays `u`; only explicitly nonsyllabic [u̯] becomes `w`. For example, supplied `xuei5` becomes `huei5`, without inferring a glide.
+Append **h** to mark aspiration: `p → ph`, `ts → tsh`, `ch → chh`. Alveolopalatal, postalveolar and retroflex sibilants share the sh/ch family; alveolar s/ts/tsh stay separate. Implosives retain separate spellings. Plain [u] stays `u`; only explicitly nonsyllabic [u̯] becomes `w`. For example, supplied `xuei5` becomes `huei5`, without inferring a glide.
 
-`ă` represents [ɐ], not nasalization or tone. Doubled letters such as `oo` identify a vowel quality; they do not imply length. `/romanization` displays the complete supported key and the individual conversion steps. **Core** labels direct mappings, **Shared** labels the deliberate sound families, **Detail** labels omitted IPA detail, and **Retained** labels supported marks copied into the spelling. These are mapping roles, not levels of source verification.
+`ă` represents [ɐ], not nasalization or tone. It is retained after checking the actual corpus: merging it into a makes Canton 三/心 and 山/新, and Hong Kong 嘥/西 and 筲/收, identical in both spelling and supplied tone. The sources do not all mark length, so inventing a long vowel is not a valid repair. Doubled letters such as `oo` identify a vowel quality; they do not imply length. `/romanization` displays the complete supported key and the individual conversion steps. **Core** labels direct mappings, **Shared** labels the deliberate sound families, **Detail** labels omitted IPA detail, and **Retained** labels supported marks copied into the spelling. These are mapping roles, not levels of source verification.
 
 ## Marks and tones
 
@@ -58,3 +58,15 @@ The public workshop supports space-separated syllables with an explicit source t
 ### Additional Huangyan source symbols
 
 Palatal stops use `c → ky`, `cʰ → kyh`, and `ɟ → gy`; aspiration still appends `h`. The rounded vowel `ɵ` shares `oe` with `ø/œ` in the reading spelling, while original IPA preserves vowel quality. Legacy affricate ligatures `ʦ ʨ ʣ ʥ ʧ ʤ` normalize to the equivalent expanded IPA symbols only during conversion and sound filtering. Source transcriptions keep their original glyphs. Huangyan JIPA digits are tone categories, displayed as `·Tn`, never pitch contours.
+
+## Design decisions in v3
+
+The target is one learnable reading key across Han varieties, not a lossless substitute for IPA or an adoption of Pinyin. Stable priorities are consistent mapping, stop voicing and aspiration, useful distinctions in real words, then ease of reading and typing. A shorter alphabet is useful only when its omissions are understood.
+
+- **sha, not sra:** [ʂ ʃ ɕ] share sh; their corresponding affricates use ch/chh and voiced series zh/j. The letter r no longer acts as a retroflex modifier. It remains for actual rhotic sounds; [ʐ] is a fricative and uses zh, not r. The revision also supports tied [d͡ʐ] consistently.
+- **Keep ă:** a hypothetical [ɐ]→a merger introduces four additional same-locality, same-tone collision groups in the current 1,789-record corpus. The chosen sibilant mergers introduce none in that sample. This sample does not prove that those sounds never contrast elsewhere. We keep the useful vowel distinction with one letter rather than adding a less familiar ASCII sequence such as ax.
+- **Keep the remaining vowel key:** i/u/yu, e/ae, o/oo, eo/eu, oe, ii/uu express selected vowel families consistently. Double letters name a vowel quality; only : marks supplied length. Tone marks do not change the vowel identity.
+- **Keep the evidence:** nasalization ~, supplied length :, voiced/voiceless and phonation marks, pitch contours and source categories retain their separate meanings. The spelling never adds a missing tone, glide, length distinction or sandhi pattern.
+- **Place names do not dictate sound values:** the common name Shanghai remains Shanghai. Its documented name transcription [zɑ̃3 he2] gives za~·T3 he·T2. A Mandarin pronunciation of the same characters must be labelled Mandarin; it does not become Shanghai’s local name. Likewise, a Mandarin spelling of 長沙 cannot establish the local Xiang pronunciation.
+
+Sourced examples: Beijing 說 [ʂuo55] → shuo55 and 茶 [tʂʰa35] → chha35 use the 1950s survey published in 1964, not a newly recorded contemporary speaker. Canton 三 [sam55] → sam55 and 心 [sɐm55] → săm55 preserve Ding’s comparative-table transcription. The interactive workshop links these exact records and keeps their dates and qualifications.

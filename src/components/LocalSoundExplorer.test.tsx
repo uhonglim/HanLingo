@@ -1,4 +1,6 @@
-import { renderToStaticMarkup } from "react-dom/server";
+import { MemoryRouter } from "react-router-dom";
+import type { ReactNode } from "react";
+import { renderToStaticMarkup as renderHtml } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import type { AttestedWord } from "../data/learning/types";
 import LocalSoundExplorer, {
@@ -6,6 +8,8 @@ import LocalSoundExplorer, {
   splitLocalIpaSymbols,
   wordsWithLocalSound,
 } from "./LocalSoundExplorer";
+
+const renderToStaticMarkup = (node: ReactNode) => renderHtml(<MemoryRouter>{node}</MemoryRouter>);
 
 function example(
   id: string,

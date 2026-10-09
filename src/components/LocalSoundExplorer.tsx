@@ -1,3 +1,4 @@
+import { IpaAudioPreview } from "./IpaAudio";
 import { useId, useMemo, useState } from "react";
 import type { AttestedWord } from "../data/learning/types";
 import { normalizeSegments } from "../data/xiamen-romanization";
@@ -129,6 +130,7 @@ export default function LocalSoundExplorer({
           );
         })}
       </div>
+      <IpaAudioPreview ipa={active} />
       <div id={examplesId} className="local-sound-examples">
         <p className="local-sound-count" role="status" aria-live="polite">
           <span>[{active}]</span> in {examples.length}{" "}

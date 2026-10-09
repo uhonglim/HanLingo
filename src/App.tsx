@@ -1,3 +1,4 @@
+import { IpaAudioHost } from "./components/IpaAudio";
 import { legacyMinQueryTarget } from "./routing";
 import { siteTerms } from "./data/site-terms";
 import { Suspense, lazy, useEffect, useLayoutEffect, useRef } from "react";
@@ -221,6 +222,7 @@ export default function App() {
           <NavLink to="/romanization">{siteTerms.romanization}</NavLink>
         </nav>
       </header>
+      <IpaAudioHost />
       <div className="site-workspace">
         <LanguageTree />
         <div className="page-panel" id="page-panel">

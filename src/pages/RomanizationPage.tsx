@@ -1,3 +1,4 @@
+import IpaSoundLab, { IpaAudioPreview } from "../components/IpaAudio";
 import { siteTerms } from "../data/site-terms";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
@@ -259,6 +260,7 @@ export default function RomanizationPage() {
               ))}
             </div>
           )}
+          {!conversion.error && <IpaAudioPreview ipa={input} notation={toneNotation} />}
           {selectedWord && (
             <div className="roman-word-source">
               <strong lang="zh-Hant">{selectedWord.han}</strong>
@@ -281,6 +283,8 @@ export default function RomanizationPage() {
           )}
         </div>
       </section>
+
+      <IpaSoundLab />
 
       <section className="roman-section" aria-labelledby="roman-reading-title">
         <h2 id="roman-reading-title">Read the spelling</h2>

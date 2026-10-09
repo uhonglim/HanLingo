@@ -1,3 +1,4 @@
+import { IpaAudioPreview } from "../../components/IpaAudio";
 import PlaceName from "../../components/PlaceName";
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -449,6 +450,7 @@ export default function IpaGallery() {
             {soundWords.length} {soundWords.length === 1 ? "word" : "words"}
           </span>
         </div>
+        <IpaAudioPreview ipa={sound} />
         <WordExamples key={`sound-${sound}`} words={soundWords} sound={sound} />
         <p className="ipa-gallery-caption">
           IPA above, HanLingo spelling below.{" "}

@@ -11,6 +11,12 @@
   <url><loc>https://hanlingo.pairup.world/yue/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/northeastern/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/jilu/</loc></url>
@@ -47,6 +53,38 @@
   <url><loc>https://hanlingo.pairup.world/hakka/yuxin/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/ninglong/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/jinqu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/leizi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/chenxu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/dongsui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/luliang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/shangdang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/dabao/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhanghu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/hanxin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhiyan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/qiwu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jingzhan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/yanzhou/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/northern-guangdong/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/eastern-guangxi/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/chaofeng/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/northeastern/jishen/</loc></url>
@@ -141,6 +179,48 @@
   <url><loc>https://hanlingo.pairup.world/wu/taihu/shanghai-2012/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/jinqu/jinqu-county-references/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taizhou/taizhou-county-references/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/quanzi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/leizi/leizi-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengshan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/dongqi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/chenxu/chenxu-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/suihui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/lianmei/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xinhua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/wushao/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/dongsui/dongsui-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/yiyuan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/yingyi-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/yiliu-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/luliang/fenzhou/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/luliang/xixian/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/shangdang/jincheng/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/dabao/datong-baotou/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhanghu/zhangjiakou-hohhot/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/hanxin/huoji/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhiyan/northern-shaanxi/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/qiwu/qimen-wuyuan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jingzhan/shitaixian/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/yanzhou/jiande-area/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/northern-guangdong/lianzhou-area/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/eastern-guangxi/hezhou-area/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/huairou/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/miyun/</loc></url>
@@ -1141,6 +1221,161 @@
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/chuanqian/youyang-tujia-and-miao-autonomous-county-500242/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/central-plains/nanlu/ruyang-county-410326/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/jilu/canghui/changle-county-370725/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/nanchang-gan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/changsha-xiang/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-county-340822/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-county-340826/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-county-340825/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-county-340827/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/huaiyue/huaiyue-localities/gan-county-340828/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-350430/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-350429/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/quanzi/xiang-county-450324/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-420281/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-420202/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-420205/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-420203/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-420204/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-420222/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-421281/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-421223/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-421222/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-421224/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-421202/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/leizi/leizi-localities/gan-county-431023/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/leizi/leizi-localities/gan-county-430482/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengshan/xiang-county-430424/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/xiang-county-430422/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/xiang-county-430421/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/leizi/leizi-localities/gan-county-430481/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/dongqi/xiang-county-430426/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/xiang-county-430407/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/xiang-county-430406/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/xiang-county-430408/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/hengzhou/hengyang/xiang-county-430405/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/chenxu/chenxu-localities/xiang-county-431223/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/suihui/xiang-county-431225/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/chenxu/chenxu-localities/xiang-county-431224/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/lianmei/xiang-county-431382/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/xiang-county-431302/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/xiang-county-431321/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xinhua/xiang-county-431322/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/wushao/xiang-county-430511/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/wushao/xiang-county-430529/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/wushao/xiang-county-430503/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/dongsui/dongsui-localities/gan-county-430525/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/wushao/xiang-county-430502/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/wushao/xiang-county-430528/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/wushao/xiang-county-430522/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/xiang-county-430382/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430321/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/loushao/xiangshuang/xiang-county-430381/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430302/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430304/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430921/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/yiyuan/xiang-county-430922/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/yiyuan/xiang-county-430981/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/yiyuan/xiang-county-430902/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-430611/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-430682/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430624/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-430602/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-localities/gan-county-430603/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430102/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430105/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430103/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430112/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430111/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430104/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430121/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430202/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430203/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430204/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/xiang-county-430211/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361024/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361003/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361027/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361025/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361022/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361002/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361021/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361023/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361026/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-361028/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360829/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360822/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360802/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360803/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360823/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/yingyi-localities/gan-county-360281/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360426/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360428/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360482/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360429/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360483/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/yingyi-localities/gan-county-360430/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360425/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360123/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360102/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/fuguang-localities/gan-county-360124/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360121/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360111/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360104/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/gan-county-360112/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360302/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360323/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360322/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/gan-county-360313/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/yingyi-localities/gan-county-361128/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/yingyi-localities/gan-county-361129/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/yingyi-localities/gan-county-361127/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/yiliu-localities/gan-county-360981/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/yiliu-localities/gan-county-360923/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/yiliu-localities/gan-county-360902/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/yiliu-localities/gan-county-360982/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yingyi/yingyi-localities/gan-county-360602/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/yiliu-localities/gan-county-360502/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/yiliu/yiliu-localities/gan-county-360521/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/taiyuan-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/pingyao-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/qingxu-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/luliang/fenzhou/fenyang-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/luliang/fenzhou/lishi-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/luliang/xixian/xixian-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/shangdang/jincheng/jincheng-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/wutai-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/dabao/datong-baotou/datong-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/dabao/datong-baotou/baotou-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhanghu/zhangjiakou-hohhot/hohhot-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhanghu/zhangjiakou-hohhot/zhangjiakou-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/hanxin/huoji/jiaozuo-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhiyan/northern-shaanxi/zhidan-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/zhiyan/northern-shaanxi/yanchuan-jin/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/yixian-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/xiuning-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/qiwu/qimen-wuyuan/qimen-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/qiwu/qimen-wuyuan/wuyuan-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jingzhan/shitaixian/shitai-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/yanzhou/jiande-area/jiande-meicheng-hui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/lingchuan-sanjie/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/lingui-wutong-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/nanning-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/binyang-luxu-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/baise-nabi-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/jiangyong-baishui/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/daoxian-tuhua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/northern-guangdong/lianzhou-area/lianzhou-tuhua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/northern-guangdong/lianzhou-area/fengyang-tuhua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/northern-guangdong/lianzhou-area/xingzi-tuhua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/eastern-guangxi/hezhou-area/zhongshan-gongan-tuhua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/eastern-guangxi/hezhou-area/hezhou-jiudu-tuhua/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/sounds/</loc></url>
@@ -1396,4 +1631,27 @@
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/overseas-hainanese/singapore-hainanese/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/haikou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/min/hainan-min/northeast-hainan/haikou/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/nanchang-gan/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/nanchang-gan/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/nanchang-gan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/changdu/changdu-localities/nanchang-gan/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/changsha-xiang/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/changsha-xiang/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/changsha-xiang/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/changyi/changzhutan/changsha-xiang/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/taiyuan-jin/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/taiyuan-jin/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/taiyuan-jin/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/taiyuan-jin/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/nanning-pinghua/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/jiangyong-baishui/culture/</loc></url>
 </urlset>

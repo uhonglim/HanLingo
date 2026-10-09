@@ -1,5 +1,7 @@
+import { expandedBranchArticles, expandedLocalityArticles } from "./expansion";
 import { minSources } from "./min-sources";
 import { chaoshanArticles } from "./chaoshan";
+import { languages } from "./languages";
 import type { LanguageId } from "./languages";
 
 export type ArticleSection = { heading: string; paragraphs: string[] };
@@ -327,7 +329,7 @@ const S = {
   ),
 };
 
-export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
+const baseGroupArticles: Record<LanguageId, EncyclopediaEntry> = {
   mandarin: article(
     "Mandarin",
     "A group spanning northern and southwestern China, with regional varieties distinct from Standard Mandarin.",
@@ -347,8 +349,8 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
         "A tone learned from an isolated syllable is only part of pronunciation. Experimental research on Mandarin examines how tones change when syllables combine, including familiar third-tone changes. Jinan and Nanjing have their own studied sandhi patterns. Comparing their rules shows why identifying a tone category and describing its actual pitch are separate tasks.",
       ),
       section(
-        "Four regional paths",
-        "The Beijing grouping anchors the northern route. Ji–Lu introduces Jinan and a different regional setting in Hebei and Shandong. Jianghuai leads to the lower Yangtze, with Nanjing and Yangzhou among its reference varieties. Southwestern Mandarin reaches Chengdu and Chongqing. These are selected branches, not a complete map of Mandarin, and the city points do not mark exclusive speech territories.",
+        "Regional paths",
+        "The Beijing grouping anchors the northern route. Ji–Lu introduces Jinan and a different regional setting in Hebei and Shandong. Jianghuai leads to the lower Yangtze, with Nanjing and Yangzhou among its reference varieties. Southwestern Mandarin reaches Chengdu and Chongqing. Northeastern Mandarin introduces Harbin and Shenyang; Jiao–Liao links the Shandong and Liaodong peninsulas. Central Plains and Lan–Yin extend the atlas westward through Zhengzhou, Xi’an, and Lanzhou. City points locate reference places, not exclusive speech territories.",
       ),
       section(
         "Reading the letter carefully",
@@ -377,7 +379,7 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
       section(
         "Begin with more than Southern Min",
         "Min is a Sinitic group rooted in Fujian, with communities in neighboring regions, Taiwan, and overseas. Southern Min, Eastern Min, Northern Min, Central Min, and Puxian have distinct local sound systems. An Amoy pronunciation cannot represent them all.",
-        "These five branches are a selection; classifications differ in the divisions they recognize.",
+        "Hainan Min extends the atlas beyond Fujian through Wenchang. These regional branches are a selection; classifications differ in the divisions they recognize.",
       ),
       section(
         "Branches, clusters, and localities",
@@ -420,7 +422,7 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
     [
       section(
         "Cantonese within a wider group",
-        "Yue includes Cantonese as associated with Guangzhou and Hong Kong, as well as regional varieties that should not be collapsed into that familiar reference. Our atlas selects Guangfu, Siyi, and Goulou. These paths connect the Pearl River region with Taishan and with Yulin in southeastern Guangxi, making internal diversity visible before detailed pronunciation is introduced.",
+        "Yue includes Cantonese as associated with Guangzhou and Hong Kong, as well as regional varieties that should not be collapsed into that familiar reference. The atlas connects Pearl River cities with Siyi, inland Goulou, and additional coastal and Guangxi branches. These paths make internal diversity visible before detailed pronunciation is introduced.",
         "Some sources use Cantonese for a wider range of Yue varieties. Here, Cantonese refers to Guangzhou and Hong Kong varieties unless another locality is specified.",
       ),
       section(
@@ -429,8 +431,8 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
         "Tone descriptions may count these syllables differently depending on whether the author is discussing pitch contrasts or traditional categories. A bare tone count can therefore mislead unless its convention is stated.",
       ),
       section(
-        "Three selected regional paths",
-        "Guangfu includes Guangzhou and Hong Kong Cantonese. Siyi includes Taishan and neighboring places such as Kaiping, Enping, and Xinhui. Goulou takes the reader inland, with Yulin as the selected point. The Language Atlas tradition recognizes additional Yue divisions; these three are deliberately chosen entry points rather than an exhaustive list.",
+        "Regional paths across Guangdong and Guangxi",
+        "Guangfu includes Guangzhou and Hong Kong Cantonese. Siyi includes Taishan and neighboring places such as Kaiping, Enping, and Xinhui. Goulou takes the reader inland, with Yulin as the selected point. Yong–Xun, Qin–Lian, Gao–Yang, and Wu–Hua extend the comparison beyond these familiar reference areas. Each city page identifies the classification and locality scope used by its source.",
         "Taishan research compares its phonology directly with Cantonese while documenting incomplete mutual intelligibility. Work on Yulin compares kinship terminology. Together, these studies show that useful contrasts include vocabulary and social meanings as well as individual sounds.",
       ),
       section(
@@ -509,7 +511,7 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
       section(
         "Shanghai is one starting point",
         "Wu is associated with Shanghai, southern Jiangsu, Zhejiang, and neighboring areas. Shanghainese is a prominent local example, but the group also includes Suzhou, Wenzhou, Lishui, and many other varieties. The first task is therefore to distinguish the group from its most familiar city name.",
-        "The three Wu branches shown here are Taihu in the north, Oujiang around Wenzhou, and Chuqu inland. Other branches lie outside this selection.",
+        "Taihu connects northern Wu localities, Oujiang leads to Wenzhou, and Chuqu goes inland. The Taizhou branch extends the map to Linhai; its local sound system requires separate evidence from northern Wu.",
       ),
       section(
         "Consonants and voice quality",
@@ -550,7 +552,22 @@ export const groupArticles: Record<LanguageId, EncyclopediaEntry> = {
   ),
 };
 
+// Keep the overview's branch inventory synchronized with the actual navigation tree.
+export const groupArticles: Record<LanguageId, EncyclopediaEntry> = Object.fromEntries(
+  languages.map((group) => [group.id, {
+    ...baseGroupArticles[group.id],
+    facts: baseGroupArticles[group.id].facts.map((fact) => fact.label === "Selected branches"
+      ? { ...fact, value: group.subgroups.map((branch) => branch.name).join(" · ") }
+      : fact),
+    sources: [...new Map([
+      ...baseGroupArticles[group.id].sources,
+      ...group.subgroups.flatMap((branch) => expandedBranchArticles[`${group.id}/${branch.id}`]?.sources ?? []),
+    ].map((source) => [source.url, source])).values()],
+  }]),
+) as Record<LanguageId, EncyclopediaEntry>;
+
 export const subgroupArticles: Record<string, EncyclopediaEntry> = {
+  ...expandedBranchArticles,
   "mandarin/beijing": article(
     "Beijing Mandarin",
     "The northern Mandarin branch that includes local Beijing speech.",
@@ -769,7 +786,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
     [
       section(
         "The selected regional set",
-        "The cited atlas discussion associates Siyi with Taishan, Enping, Kaiping, and Xinhui. Taishan is the map’s reference point. The regional label groups related varieties; it does not imply that one Taishan description exhausts the local variation across all four places.",
+        "The cited atlas discussion associates Siyi with Taishan, Enping, Kaiping, and Xinhui. Taishan, Kaiping, and Jiangmen provide separate reference points on the map. The regional label groups related varieties; it does not imply that one Taishan description exhausts the local variation across all four places.",
       ),
       section(
         "Resemblance without identity",
@@ -926,6 +943,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
 };
 
 export const varietyArticles: Record<string, EncyclopediaEntry> = {
+  ...expandedLocalityArticles,
   ...chaoshanArticles,
   "beijing-city": article(
     "Beijing Mandarin",

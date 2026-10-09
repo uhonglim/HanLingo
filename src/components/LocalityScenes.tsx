@@ -6,17 +6,10 @@ import type { GalleryPhoto } from "../data/galleries/types";
 import { getLocalGallery } from "../data/galleries";
 import { getLocalLearning, spellingFor } from "../data/learning";
 import { varietyPath } from "../routing";
-import { wordTopic, type WordTopic } from "../data/learning/word-topics";
 import { PhotoCredit } from "./gallery/PhotoGallery";
 import Pronunciation from "./Pronunciation";
 import "./LocalityScenes.css";
 
-const relatedTopics: Record<GalleryPhoto["category"], WordTopic[]> = {
-  Food: ["Food & drink"],
-  Landscape: ["Nature"],
-  Streets: ["Around town", "People & body"],
-  Culture: ["Around town", "People & body"],
-};
 export function wordsForPhoto(photo: GalleryPhoto, words: AttestedWord[]) {
   const subject = `${photo.title} ${photo.alt} ${photo.caption}`.toLowerCase();
   const priority = [
@@ -42,9 +35,12 @@ export function wordsForPhoto(photo: GalleryPhoto, words: AttestedWord[]) {
     return index < 0 ? priority.length : index;
   };
   return words
-    .filter((word) =>
-      relatedTopics[photo.category].includes(wordTopic(word.english)),
-    )
+    .filter((word) => word.english.split(/[;,]/).some((meaning) => {
+      const gloss = meaning.trim().toLowerCase().replace(/^to /, "");
+      if (gloss.length < 3) return false;
+      const escaped = gloss.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return new RegExp(`\\b${escaped}s?\\b`).test(subject);
+    }))
     .sort((a, b) => rank(a) - rank(b))
     .slice(0, 3);
 }

@@ -1,3 +1,4 @@
+import { expandedGalleries } from "../expansion";
 import { chaoshanGalleries } from "./chaoshan";
 import { minGalleries } from "./min";
 import { otherGalleries } from "./other";
@@ -8,6 +9,7 @@ export const localityGalleries: Record<string, GalleryPhoto[]> = {
   ...minGalleries,
   ...otherGalleries,
   ...chaoshanGalleries,
+  ...expandedGalleries,
   xiamen: xiamenPhotos.map((photo) => ({
     ...photo,
     title: photo.caption,

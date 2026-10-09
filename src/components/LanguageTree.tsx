@@ -328,6 +328,7 @@ export default function LanguageTree() {
               value={query}
               onChange={(event) => changeQuery(event.target.value)}
               placeholder="Find a language or place"
+              aria-label="Find a language or place"
               autoComplete="off"
               spellCheck={false}
             />

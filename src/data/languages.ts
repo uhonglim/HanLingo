@@ -1,5 +1,6 @@
 import { siteTerms } from "./site-terms";
 import { chaoshanPoints } from "./chaoshan";
+import { expandedBranches, expandedPlaces } from "./expansion";
 
 export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu";
 
@@ -24,7 +25,7 @@ export interface Language {
 }
 
 /** A curated introduction to present-day varieties, not a complete taxonomy. */
-export const languages: Language[] = [
+const baseLanguages: Language[] = [
   {
     id: "mandarin",
     name: "Mandarin",
@@ -259,6 +260,20 @@ export const languages: Language[] = [
     hierarchy: ["Sinitic", "Wu", "Taihu", "Shanghai"],
   },
 ];
+
+export const languages: Language[] = baseLanguages.map((group) => ({
+  ...group,
+  subgroups: [
+    ...group.subgroups,
+    ...expandedBranches.filter((branch) => branch.groupId === group.id),
+  ].map((branch) => ({
+    ...branch,
+    places: [...new Set([
+      ...branch.places,
+      ...expandedPlaces.filter(({ point }) => point.groupId === group.id && point.subgroupId === branch.id).map(({ point }) => point.name),
+    ])],
+  })),
+}));
 
 export interface MapPoint {
   id: string;
@@ -619,6 +634,7 @@ export const mapPoints: MapPoint[] = [
     hierarchy: ["Sinitic", "Wu", "Chuqu", "Lishui"],
   },
   ...chaoshanPoints,
+  ...expandedPlaces.map((place) => place.point),
 ];
 
 export interface Letter {

@@ -148,7 +148,7 @@ export default function ReferencePage() {
             </div>
           </header>
 
-          {point && <LocalityScenes key={point.id} point={point} />}
+          {point && <LocalityScenes key={`scenes-${point.id}`} point={point} />}
           {photo && !point && (
             <figure className="reference-hero-photo">
               <img
@@ -287,7 +287,7 @@ export default function ReferencePage() {
           />
 
           {point && (
-            <RegionalDifferences key={point.id} localityId={point.id} />
+            <RegionalDifferences key={`differences-${point.id}`} localityId={point.id} />
           )}
 
           <details className="reference-language-notes">

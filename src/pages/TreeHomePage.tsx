@@ -1,7 +1,7 @@
 import { siteTerms } from "../data/site-terms";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
-import { languages } from "../data/languages";
+import { languages, mapPoints } from "../data/languages";
 import { xiamenPhotos } from "../data/xiamen-photos";
 import { xiamenWords } from "../data/xiamen-lexicon";
 import { romanizeXiamen } from "../data/xiamen-romanization";
@@ -32,10 +32,10 @@ export default function TreeHomePage() {
         {languages.map((group) => (
           <div key={group.id}>
             <dt>
-              {group.name}
+              <Link to={`/${group.id}`}>{group.name}</Link>
               <span lang="zh-Hant">{group.nativeName}</span>
             </dt>
-            <dd>{group.feature}</dd>
+            <dd>{group.feature}<span className="thp-group-depth">{group.subgroups.length} branches · {mapPoints.filter((place) => place.groupId === group.id).length} localities</span></dd>
           </div>
         ))}
       </dl>

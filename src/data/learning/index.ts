@@ -1,3 +1,4 @@
+import { expandLearningPacks } from "../expansion";
 import { xiamenWords } from "../xiamen-lexicon";
 import { ipaSearchForms } from "../ipa-display";
 import { localityPhotos } from "./locality-photos";
@@ -14,12 +15,12 @@ import { regionalReadingsFor } from "../regional-words";
 import { wordMeaning } from "../word-meaning";
 import { getLocalGallery } from "../galleries";
 
-export const branchLearning: BranchLearning[] = [
+export const branchLearning: BranchLearning[] = expandLearningPacks([
   ...minLearning,
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-].map((pack) => ({
+]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,

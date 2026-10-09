@@ -281,3 +281,5 @@
     padding: 15px 0;
   }
 }
+
+.thp-group-depth { display: block; margin-top: 5px; color: var(--thp-muted); font-size: 12px; font-variant-numeric: tabular-nums; }

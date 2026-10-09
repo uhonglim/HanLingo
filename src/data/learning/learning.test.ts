@@ -106,11 +106,11 @@ describe("learning coverage across every branch", () => {
       "te24",
     );
     expect(
-      spellingFor({ ipa: "[ɬɜ˧]", toneNotation: "pitch-contour" }),
+      spellingFor({ ipa: "[ʙɜ˧]", toneNotation: "pitch-contour" }),
     ).toBeUndefined();
     expect(
       spellingFor({ ipa: "pa1", toneNotation: "source-category" }),
-    ).toBeUndefined();
+    ).toBe("pa·T1");
     expect(spellingFor({ ipa: "pa1" })).toBeUndefined();
     expect(spellingFor({ ipa: "te²⁴", toneNotation: "pitch-contour" })).toBe(
       "te24",

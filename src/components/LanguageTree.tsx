@@ -20,6 +20,7 @@ type TreeNode = {
   href?: string;
   aliases?: string;
   children?: TreeNode[];
+  cluster?: string;
 };
 
 const aliases: Record<string, string> = {
@@ -28,7 +29,7 @@ const aliases: Record<string, string> = {
   yue: "yue 粤语 广东话 廣東話 cantonese",
   hakka: "客家 kejia",
   wu: "吴语 wuyu",
-  "min/southern-min": "闽南 hokkien hoklo minnan 泉漳 quanzhang",
+  "min/southern-min": "闽南 minnan",
   "min/eastern-min": "闽东 閩東 mindong",
   "min/northern-min": "闽北 閩北 minbei",
   "min/puxian": "莆仙 puxian",
@@ -66,33 +67,28 @@ function buildTree(): TreeNode {
           (item) =>
             item.groupId === language.id && item.subgroupId === subgroup.id,
         )) {
-          let parent = children;
-          // Keep intermediate clusters; they have no separate article route.
-          for (const cluster of point.hierarchy.slice(3, -1)) {
-            const id = `cluster/${language.id}/${subgroup.id}/${cluster}`;
-            let clusterNode = parent.find((node) => node.id === id);
-            if (!clusterNode) {
-              clusterNode = {
-                id,
-                name: clusterLabel(cluster),
-                aliases:
-                  cluster === "Quanzhang cluster"
-                    ? hokkienAliases
-                    : cluster === "Chaoshan cluster"
-                      ? "chaoshan chao shan 潮汕 teochew swatow"
-                      : undefined,
-                children: [],
-              };
-              parent.push(clusterNode);
-            }
-            parent = clusterNode.children!;
-          }
-          parent.push({
+          const cluster = point.hierarchy
+            .slice(3, -1)
+            .map(clusterLabel)
+            .join(" · ");
+          const clusterAliases = point.hierarchy.includes("Quanzhang cluster")
+            ? hokkienAliases
+            : point.hierarchy.includes("Chaoshan cluster")
+              ? "chaoshan chao shan 潮汕 teochew swatow"
+              : "";
+          children.push({
             id: `place/${point.id}`,
             name: placeLabel(point),
             nativeName: point.nativeName,
             href: varietyPath(point),
-            aliases: [point.name, aliases[point.id], communityAliases[point.id]]
+            cluster: cluster || undefined,
+            aliases: [
+              point.name,
+              aliases[point.id],
+              communityAliases[point.id],
+              cluster,
+              clusterAliases,
+            ]
               .filter(Boolean)
               .join(" "),
             children: availableSections(point).map((section) => ({
@@ -108,6 +104,11 @@ function buildTree(): TreeNode {
             })),
           });
         }
+        // Preserve cluster membership as a caption, never as an extra navigation level.
+        const clusters = [...new Set(children.map((node) => node.cluster))];
+        children.sort(
+          (a, b) => clusters.indexOf(a.cluster) - clusters.indexOf(b.cluster),
+        );
         return {
           id: `subgroup/${language.id}/${subgroup.id}`,
           name: subgroup.name,
@@ -228,7 +229,16 @@ export default function LanguageTree() {
     setSearchClosed(new Set());
   }
 
-  function renderNode(node: TreeNode) {
+  function renderNodes(nodes: TreeNode[]) {
+    return nodes.map((node, index) =>
+      renderNode(
+        node,
+        Boolean(node.cluster && node.cluster !== nodes[index - 1]?.cluster),
+      ),
+    );
+  }
+
+  function renderNode(node: TreeNode, showCluster = false) {
     const hasChildren = Boolean(node.children?.length);
     const expanded = searching ? !searchClosed.has(node.id) : open.has(node.id);
     const active = node.id === currentId;
@@ -236,6 +246,9 @@ export default function LanguageTree() {
     const childrenId = `language-tree-children-${instanceId}-${node.id.replace(/[^a-zA-Z0-9_-]/g, "_")}`;
     return (
       <li className="language-tree-item" key={node.id}>
+        {showCluster && (
+          <span className="language-tree-cluster-caption">{node.cluster}</span>
+        )}
         <div
           className={`language-tree-row${active ? " language-tree-row--active" : ""}${ancestor ? " language-tree-row--ancestor" : ""}`}
         >
@@ -280,15 +293,7 @@ export default function LanguageTree() {
               )}
             </Link>
           ) : (
-            <button
-              type="button"
-              className="language-tree-cluster"
-              aria-expanded={expanded}
-              aria-controls={childrenId}
-              onClick={() => toggle(node.id)}
-            >
-              {node.name}
-            </button>
+            <span className="language-tree-link">{node.name}</span>
           )}
         </div>
         {hasChildren && (
@@ -297,7 +302,7 @@ export default function LanguageTree() {
             id={childrenId}
             hidden={!expanded}
           >
-            {node.children!.map(renderNode)}
+            {renderNodes(node.children!)}
           </ul>
         )}
       </li>
@@ -349,7 +354,7 @@ export default function LanguageTree() {
         <nav className="language-tree-navigation" aria-label="Language family">
           {visibleTree && (
             <ul className="language-tree-root">
-              {visibleTree.children?.map(renderNode)}
+              {renderNodes(visibleTree.children ?? [])}
             </ul>
           )}
           {visibleReferences.length > 0 && (
@@ -357,7 +362,7 @@ export default function LanguageTree() {
               className="language-tree-reference-links"
               aria-label="Reference pages"
             >
-              {visibleReferences.map(renderNode)}
+              {renderNodes(visibleReferences)}
             </ul>
           )}
           {!visibleTree && !visibleReferences.length && (

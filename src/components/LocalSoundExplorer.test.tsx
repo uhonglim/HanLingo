@@ -85,10 +85,12 @@ describe("local sound matching", () => {
     expect(html).toContain("tied-aspirated");
     expect(html).not.toContain("plain-affricate</h3>");
     expect(html).toContain("Source dictionary");
+    expect(html).toContain("IPA above, HanLingo spelling below");
+    expect(html).toContain("<small>tsh</small>");
     expect(html).not.toContain("<audio");
     expect(renderToStaticMarkup(<LocalSoundExplorer words={[]} />)).toBe("");
   });
-  it("preserves source tone categories without pitch graphs or HanLingo conversion", () => {
+  it("spells segments with explicitly marked source categories rather than pitch graphs", () => {
     const html = renderToStaticMarkup(
       <LocalSoundExplorer
         words={[example("source-category", "[tsʰa8]", "source-category")]}
@@ -96,7 +98,8 @@ describe("local sound matching", () => {
     );
     expect(html).toContain("[tsʰa8]");
     expect(html).toContain("IPA · source tone categories");
-    expect(html).not.toContain("HanLingo spelling");
+    expect(html).toContain("HanLingo spelling · source tone categories");
+    expect(html).toContain("tsha·T8");
     expect(html).not.toContain("Pitch contour");
   });
 });

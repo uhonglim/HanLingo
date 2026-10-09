@@ -13,7 +13,7 @@ Canonical article paths start directly with their language group. Do not add a `
 - `/min/southern-min/xiamen`
 - `/min/southern-min/xiamen/words` (also culture, sounds, practice)
 
-Tsuan-Chiang names the 泉漳 cluster within Southern Min in the tree, with Quanzhang retained as a search alias. It has no separate article route; old `/languages/...` URLs redirect once to their corresponding canonical path, preserving query strings and fragments. Display names use one familiar or local name without bracketed alternatives: Amoy and Tsuan-Chiang. Names at different taxonomic and geographic levels are not interchangeable. Technical names stay in source notes and search aliases. Stable URL identifiers are unchanged.
+All five groups use the same four interactive levels: **group → branch → locality → lesson**. Sourced clusters are non-interactive captions at the locality level, not additional expandable nodes. Tsuan-Chiang names the 泉漳 cluster within Southern Min, with Quanzhang retained as a search alias; Teo Swa remains a separate caption for Teochew and Swatow. This is navigation consistency, not a claim that every group has the same linguistic taxonomy. Cluster membership stays in locality references and source data. Clusters have no separate article route; old `/languages/...` URLs redirect once to their corresponding canonical path, preserving query strings and fragments. Display names use one familiar or local name without bracketed alternatives: Amoy and Tsuan-Chiang. Names at different taxonomic and geographic levels are not interchangeable. Technical names stay in source notes and search aliases. Stable URL identifiers are unchanged.
 
 Taipak, Singapore, and George Town are locality peers alongside Amoy, Tsuân-tsiu, and Tsiang-tsiu. Their articles explain Taiwan, Singapore, and Penang Hokkien in local context; regional language names are not mixed into the city level. Their map points locate reference places, not exclusive language territories. See [naming priorities](NAMING.md). The five featured groups are a selection from Sinitic, not a complete classification.
 
@@ -23,7 +23,7 @@ Southern Min also contains the **Teo Swa** cluster, with Teochew and Swatow loca
 
 ## Final presentation structure
 
-The three shared destinations are always visible in the top bar, including on mobile. The tree is the only persistent hierarchical navigator; breadcrumbs retain the requested ancestry. The homepage gives a compact overview of the five featured groups and an Amoy sample. Min uses a single map with branch and locality selectors, rather than a second locality directory. Its selected place opens through the existing article link.
+The three shared destinations are always visible in the top bar, including on mobile. The tree is the only persistent hierarchical navigator; breadcrumbs retain the requested ancestry. The homepage gives equal photo and pronunciation previews for the five featured groups. Min uses a single map with branch and locality selectors, rather than a second locality directory. Its selected place opens through the existing article link.
 
 Reference articles use simple content rows for child summaries and end at their sources. Do not append a second related-links directory or repeat the site navigation in a footer. Learning pages retain only controls that operate the current lesson; avoid duplicate overview buttons pointing to destinations already in the tree. The romanization workshop uses its one word selector instead of duplicate sample buttons.
 

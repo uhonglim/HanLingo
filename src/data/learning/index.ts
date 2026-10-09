@@ -123,15 +123,8 @@ export function availableSections(point: MapPoint): LearningSection[] {
 export function spellingFor(
   word: Pick<AttestedWord, "ipa" | "toneNotation">,
 ): string | undefined {
-  if (word.toneNotation !== "pitch-contour") return undefined;
   try {
-    return convertIpa(
-      word.ipa.replace(
-        /[¹²³⁴⁵]/gu,
-        (digit) =>
-          ({ "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5" })[digit]!,
-      ),
-    )
+    return convertIpa(word.ipa, word.toneNotation ?? "unspecified")
       .map((item) => item.spelling)
       .join(" ");
   } catch {

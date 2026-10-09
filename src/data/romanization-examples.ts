@@ -6,7 +6,7 @@ import { displayIpa } from "./ipa-display";
 /** Source records, not a second hand-maintained transcription collection. */
 export const romanizationReadings = mapPoints.flatMap((point) =>
   getLocalLearning(point)
-    .words.filter((word) => word.toneNotation === "pitch-contour")
+    .words
     .map((word) => ({
       ...word,
       id: `${point.id}:${word.id}`,

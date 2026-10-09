@@ -28,8 +28,8 @@
 .language-tree-item { position: relative; margin: 0; padding: 0; }
 .language-tree-children { margin: 0 0 0 11px; padding: 0 0 0 9px; border-left: 1px solid #dce2eb; }
 .language-tree-children[hidden] { display: none; }
-.language-tree-children > .language-tree-item::before { position: absolute; top: 18px; left: -10px; width: 9px; height: 1px; background: #dce2eb; content: ""; }
-.language-tree-row { display: flex; align-items: center; min-height: 36px; border-radius: 4px; margin: 1px 0; }
+.language-tree-children > .language-tree-item > .language-tree-row::before { position: absolute; top: 50%; left: -10px; width: 9px; height: 1px; background: #dce2eb; content: ""; }
+.language-tree-row { position: relative; display: flex; align-items: center; min-height: 36px; border-radius: 4px; margin: 1px 0; }
 .language-tree-row--active { background: #eaf0ff; color: #1644cc; }
 .language-tree-row--ancestor > .language-tree-link { font-weight: 500; }
 .language-tree-disclosure { display: grid; place-items: center; flex: 0 0 22px; width: 22px; height: 32px; padding: 0; background: transparent; border-radius: 3px; color: #6e7b8d; }
@@ -41,8 +41,7 @@
 .language-tree-link[aria-current="page"] { font-weight: 500; }
 .language-tree-native { font-size: 11px; color: #707d8c; white-space: nowrap; }
 .language-tree-row--active .language-tree-native { color: #4666b7; }
-.language-tree-cluster { flex: 1; min-width: 0; padding: 8px 4px 8px 0; font: inherit; font-size: 12px; line-height: 1.5; color: #616e80; background: transparent; text-align: left; }
-.language-tree-cluster:hover { color: #2155f5; }
+.language-tree-cluster-caption { display: block; padding: 12px 5px 3px 22px; font-size: 11px; font-weight: 500; line-height: 1.5; color: #616e80; }
 .language-tree-empty { margin: 6px 9px; font-size: 13px; color: #657184; line-height: 1.7; }
 .language-tree a:focus-visible, .language-tree button:focus-visible { outline: 2px solid #2155f5; outline-offset: 1px; }
 @media (max-width: 900px) {
@@ -58,7 +57,6 @@
   .language-tree-link { font-size: 14px; padding-top: 9px; padding-bottom: 9px; }
   .language-tree-disclosure { height: 38px; width: 26px; flex-basis: 26px; }
   .language-tree-spacer { width: 26px; flex-basis: 26px; }
-  .language-tree-children > .language-tree-item::before { top: 21px; }
   .language-tree-native { font-size: 12px; }
-  .language-tree-cluster { font-size: 13px; }
+  .language-tree-cluster-caption { padding-left: 26px; font-size: 12px; }
 }

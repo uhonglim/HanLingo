@@ -39,3 +39,7 @@ Use existing HanLingo identity assets (`public/hanlingo-logo.svg`, `public/hanli
 Use ordinary learning examples. Do not restore the removed Xi Jinping romanization demonstration; this was a specific editorial removal, not a rule to erase linguistic or geographic facts.
 
 If a new direct request clearly changes an earlier naming preference, follow the new instruction while keeping geographic and evidence scope explicit. If the wording ambiguously mixes a place with a regional language, explain that concrete distinction and clarify only the unresolved choice. A user-chosen label is not automatically a documented community endonym; never fabricate evidence to justify it.
+
+## Uniform navigation depth
+
+The 2026-10-09 update makes every interactive tree path group → branch → locality → lesson. Southern Min’s Tsuan-Chiang and Teo Swa remain sourced cluster captions, not additional expandable steps. Source classification records and canonical URLs stay intact.

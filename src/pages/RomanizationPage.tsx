@@ -2,6 +2,7 @@ import { siteTerms } from "../data/site-terms";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import type { AttestedWord } from "../data/learning/types";
 import { pitchLetters } from "../data/xiamen-romanization";
 import { convertIpa, conversionRules } from "../data/romanization-method";
 import {
@@ -31,6 +32,18 @@ const marks = [
     "Keep the unreleased mark when the source supplies it.",
   ],
   [
+    "[a̤] / [a̰]",
+    "a̤ / a̰",
+    "Breathy and creaky voice",
+    "Keep the source’s phonation mark. It is separate from vowel quality and tone.",
+  ],
+  [
+    "[m̥] / [s̬]",
+    "m̥ / s̬",
+    "Voicing detail",
+    "Keep a supplied voiceless or voiced diacritic; do not replace it with a different consonant.",
+  ],
+  [
     "[aː]",
     "aː",
     "Length",
@@ -42,17 +55,18 @@ export default function RomanizationPage() {
   const [input, setInput] = useState(romanizationGroups[0].examples[0].ipa);
   const [wordId, setWordId] = useState(romanizationGroups[0].examples[0].id);
   const [query, setQuery] = useState("");
+  const [toneNotation, setToneNotation] = useState<NonNullable<AttestedWord["toneNotation"]>>("pitch-contour");
   const selectedWord = readingExamples.find((word) => word.id === wordId);
   const conversion = useMemo(() => {
     try {
-      return { syllables: convertIpa(input), error: "" };
+      return { syllables: convertIpa(input, toneNotation), error: "" };
     } catch (error) {
       return {
         syllables: [],
         error: error instanceof Error ? error.message : "Unsupported input.",
       };
     }
-  }, [input]);
+  }, [input, toneNotation]);
   const rules = conversionRules
     .filter((rule) => !/^\p{M}/u.test(rule.ipa) && rule.ipa !== "ː")
     .filter((rule) =>
@@ -66,6 +80,9 @@ export default function RomanizationPage() {
     const word = readingExamples.find((item) => item.id === id);
     if (word) {
       setInput(word.ipa);
+      setToneNotation(word.toneNotation ?? "unspecified");
+    } else {
+      setToneNotation("pitch-contour");
     }
   };
   return (
@@ -102,7 +119,7 @@ export default function RomanizationPage() {
           <div className="roman-conversion-grid">
             <div className="roman-input">
               <div className="roman-input-heading">
-                <label htmlFor="roman-ipa">IPA with tones</label>
+                <label htmlFor="roman-ipa">Source IPA</label>
                 <select
                   aria-label="Load a sourced reading"
                   value={wordId}
@@ -133,9 +150,24 @@ export default function RomanizationPage() {
                 aria-describedby="roman-input-help"
                 maxLength={500}
               />
+              <div className="roman-notation">
+                <label htmlFor="roman-tone-notation">Tone notation</label>
+                <select
+                  id="roman-tone-notation"
+                  value={toneNotation}
+                  onChange={(event) => {
+                    setToneNotation(event.target.value as NonNullable<AttestedWord["toneNotation"]>);
+                    setWordId("");
+                  }}
+                >
+                  <option value="pitch-contour">Pitch contours</option>
+                  <option value="source-category">Source tone categories</option>
+                  <option value="unspecified">Tones not supplied</option>
+                </select>
+              </div>
               <p id="roman-input-help" className="roman-note">
-                [te˨˦] or te24 · Separate syllables with spaces. Supplied sounds
-                only; the converter does not predict pronunciation.
+                Separate syllables with spaces. Choose the source’s tone notation;
+                the converter does not infer missing pronunciation.
               </p>
             </div>
             <div className="roman-result" aria-live="polite" aria-atomic="true">
@@ -149,6 +181,13 @@ export default function RomanizationPage() {
                       .map((syllable) => syllable.spelling)
                       .join(" ")}
                   </output>
+                  {toneNotation !== "pitch-contour" && (
+                    <p className="roman-note">
+                      {toneNotation === "source-category"
+                        ? "·T marks a source tone category, not a pitch contour."
+                        : "Tones not supplied · segment spelling only."}
+                    </p>
+                  )}
                 </>
               )}
             </div>
@@ -173,14 +212,16 @@ export default function RomanizationPage() {
                         <small>{step.status}</small>
                       </li>
                     ))}
-                    <li>
-                      <span className="roman-symbol">
-                        {pitchLetters(syllable.tone)}
-                      </span>
-                      <span aria-hidden="true">→</span>
-                      <strong>{syllable.tone}</strong>
-                      <small>Pitch contour</small>
-                    </li>
+                    {syllable.tone && (
+                      <li>
+                        <span className="roman-symbol">
+                          {toneNotation === "pitch-contour" ? pitchLetters(syllable.tone) : syllable.tone}
+                        </span>
+                        <span aria-hidden="true">→</span>
+                        <strong>{toneNotation === "source-category" ? `·T${syllable.tone}` : syllable.tone}</strong>
+                        <small>{toneNotation === "source-category" ? "Source tone category" : "Pitch contour"}</small>
+                      </li>
+                    )}
                   </ul>
                 </div>
               ))}
@@ -249,6 +290,13 @@ export default function RomanizationPage() {
                       <ArrowRight size={16} aria-hidden="true" />
                       <strong>{word.spelling}</strong>
                     </div>
+                    {word.toneNotation !== "pitch-contour" && (
+                      <p className="roman-note">
+                        {word.toneNotation === "source-category"
+                          ? "·T marks source tone categories, not pitch."
+                          : "Tones not supplied · segment spelling only."}
+                      </p>
+                    )}
                     <details>
                       <summary>Reading and source</summary>
                       <p>
@@ -321,16 +369,18 @@ export default function RomanizationPage() {
               <h3>Different places of articulation</h3>
               <p>
                 ts / tsh represent [t͡s] / [t͡sʰ]; ch / chh represent [tɕ] /
-                [tɕʰ]. They remain separate even when another spelling system
-                uses the same letters.
+                [tɕʰ]. Trial sh, š, sr, and hl keep [ɕ], [ʃ], [ʂ], and [ɬ]
+                distinct. Trial ḅ and ḍ mark implosives [ɓ] and [ɗ], separate
+                from b and d.
               </p>
             </div>
             <div>
               <h3>Vowels stay separate from tone</h3>
               <p>
-                Trial â represents [ɐ], not a tone. Trial oo, oe, er, and ae
-                represent [ɔ], [ɤ], [ə], and [ɛ]. Tone follows the syllable as
-                numbers.
+                Trial ă represents [ɐ]; ã represents nasal [ã]. The breve
+                changes vowel quality; the tilde marks nasalization. Neither
+                marks tone. Trial oo, oe, er, and ae represent [ɔ], [ɤ], [ə],
+                and [ɛ]; ː marks length when the source supplies it.
               </p>
             </div>
           </div>
@@ -464,17 +514,19 @@ export default function RomanizationPage() {
               stay attached to each word.
             </p>
             <p>
-              Readings without documented pitch contours stay out of this
-              converter. Source spelling alone cannot supply missing IPA.
+              Readings with no supplied tones receive segment spellings only.
+              Source tone categories use ·T followed by the original category;
+              they never become pitch contours. Source spelling alone cannot
+              supply missing IPA.
             </p>
           </div>
           <div>
             <h3>Next decisions</h3>
             <p>
-              The full vowel inventory; candidate sh for [ɕ] versus a distinct
-              spelling for [ʂ]; voiced affricates; phonation; syllable
-              boundaries; and consistent detail across sources. Digraphs such as
-              ng still need boundary rules. The converter does not validate
+              The expanded sound key is a trial proposal: its vowel spellings,
+              retroflexes, voiced affricates, and phonation conventions remain
+              open to revision. Syllable boundaries and consistent detail across
+              sources still need decisions. Digraphs such as ng need boundary rules. The converter does not validate
               phonotactics or provide a universal reverse conversion.
             </p>
           </div>

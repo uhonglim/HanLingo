@@ -1,5 +1,6 @@
 import { useId, useMemo, useState } from "react";
 import type { AttestedWord } from "../data/learning/types";
+import { spellingFor } from "../data/learning";
 import { LearningWord } from "./BranchLearning";
 import "./LocalSoundExplorer.css";
 
@@ -99,25 +100,32 @@ export default function LocalSoundExplorer({
     <section className="local-sound-explorer" aria-labelledby={headingId}>
       <header>
         <h2 id={headingId}>Sounds in these words</h2>
-        <p>Choose a sound to see the words that contain it.</p>
+        <p>IPA above, HanLingo spelling below. Choose a sound to find words.</p>
       </header>
       <div
         className="local-sound-selector"
         role="group"
         aria-label="Choose an IPA sound"
       >
-        {sounds.map((sound) => (
-          <button
-            type="button"
-            key={sound}
-            aria-label={`IPA sound [${sound}]`}
-            aria-pressed={active === sound}
-            aria-controls={examplesId}
-            onClick={() => setSelection(sound)}
-          >
-            [{sound}]
-          </button>
-        ))}
+        {sounds.map((sound) => {
+          const spelling = spellingFor({
+            ipa: `[${sound}]`,
+            toneNotation: "unspecified",
+          });
+          return (
+            <button
+              type="button"
+              key={sound}
+              aria-label={`IPA sound [${sound}]. ${spelling ? `HanLingo ${spelling}` : "Spelling not yet mapped"}`}
+              aria-pressed={active === sound}
+              aria-controls={examplesId}
+              onClick={() => setSelection(sound)}
+            >
+              <span>[{sound}]</span>
+              <small>{spelling ?? "Unmapped"}</small>
+            </button>
+          );
+        })}
       </div>
       <div id={examplesId} className="local-sound-examples">
         <p className="local-sound-count" role="status" aria-live="polite">

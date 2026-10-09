@@ -14,12 +14,12 @@ describe('new regional pronunciation evidence', () => {
       expect(word.registerLabel).toBe('Recorded Wenchang speakers');
     }
   });
-  it('preserves Wenchang’s implosives without silently inventing shared spellings', () => {
+  it('keeps Wenchang’s implosives distinct in the trial spelling', () => {
     const words = readings('wenchang');
     expect(spellingFor(words.find((word) => word.han === '马')!)).toBe('be31');
     const disease = words.find((word) => word.han === '病')!;
     expect(disease.ipa).toBe('[ɓe34]');
-    expect(spellingFor(disease)).toBeUndefined();
+    expect(spellingFor(disease)).toBe("ḅe34");
   });
   it('keeps Lanzhou’s source examples visibly toneless', () => {
     const words = readings('lanzhou');
@@ -27,7 +27,8 @@ describe('new regional pronunciation evidence', () => {
     for (const word of words) {
       expect(word.registerLabel).toMatch(/tones omitted/i);
       expect(word.ipa).not.toMatch(/[1-5¹²³⁴⁵˩˨˧˦˥]/u);
-      expect(spellingFor(word)).toBeUndefined();
+      expect(spellingFor(word)).toBeTruthy();
+      expect(spellingFor(word)).not.toMatch(/[0-9]/u);
     }
   });
 });

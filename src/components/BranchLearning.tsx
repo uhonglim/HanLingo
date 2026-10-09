@@ -76,9 +76,7 @@ export function LearningWord({ word }: { word: AttestedWord }) {
         {word.note && <p>{word.note}</p>}
         {!spelling && (
           <p>
-            {word.toneNotation === "source-category"
-              ? "The source gives tone categories, not pitch contours. They are not converted into HanLingo tone numbers."
-              : "This source reading is not yet fully mapped to HanLingo spelling."}
+            This source reading is not yet fully mapped to HanLingo spelling.
           </p>
         )}
         <a href={word.source.url} target="_blank" rel="noreferrer">

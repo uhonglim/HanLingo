@@ -59,19 +59,42 @@ const xiamenPath = varietyPath(xiamen);
 const lessons = ["words", "culture", "sounds", "practice"];
 
 describe("persistent language tree", () => {
-  it("keeps Teo Swa separate from Tsuan-Chiang and opens its own locality", () => {
+  it("shows sourced clusters as captions without a fifth navigation level", () => {
     const html = renderTree("/min/southern-min/shantou");
-    expectExpanded(html, "Teo Swa");
+    expectExpanded(html, "Min");
+    expectExpanded(html, "Southern Min");
     const current = links(html).filter(
       (link) => link.attrs["aria-current"] === "page",
     );
     expect(current).toHaveLength(1);
     expect(current[0].content).toContain("Swatow");
-    expect(
-      openingTags(html, "button").find(
-        (item) => item["aria-label"] === "Expand Tsuan-Chiang",
-      )?.["aria-expanded"],
-    ).toBe("false");
+    const captions = [...html.matchAll(/<span class="language-tree-cluster-caption">([^<]+)<\/span>/g)]
+      .map((match) => match[1]);
+    expect(captions).toEqual(["Tsuan-Chiang", "Teo Swa"]);
+    expect(openingTags(html, "button").some((item) => /Tsuan-Chiang|Teo Swa/.test(item["aria-label"] ?? ""))).toBe(false);
+    expect(html).not.toContain("cluster_min");
+  });
+
+  it("gives every locality and chapter the same tree depth as its URL", () => {
+    const html = renderTree("/");
+    const listStack: boolean[] = [];
+    const depths = new Map<string, number>();
+    for (const match of html.matchAll(/<(\/?)(ul|a)\b([^>]*)>/g)) {
+      const [, closing, tag, raw] = match;
+      if (tag === "ul") {
+        if (closing) listStack.pop();
+        else listStack.push(attributes(raw).class === "language-tree-children");
+      } else if (!closing) {
+        depths.set(attributes(raw).href, listStack.filter(Boolean).length);
+      }
+    }
+    for (const point of mapPoints) {
+      const path = varietyPath(point);
+      expect(depths.get(path), point.id).toBe(2);
+      for (const section of availableSections(point)) {
+        expect(depths.get(`${path}/${section}`), `${point.id}/${section}`).toBe(3);
+      }
+    }
   });
   it("exposes five groups at the family root without opening an arbitrary branch", () => {
     const html = renderTree("/");
@@ -107,7 +130,7 @@ describe("persistent language tree", () => {
     expect(current).toHaveLength(1);
     expect(current[0].attrs.href).toBe(path);
     expect(current[0].content).toContain("Photos");
-    for (const name of ["Min", "Southern Min", "Tsuan-Chiang", "Amoy"])
+    for (const name of ["Min", "Southern Min", "Amoy"])
       expectExpanded(html, name);
 
     const targets = [...openingTags(html, "ul"), ...openingTags(html, "div")];

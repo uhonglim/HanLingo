@@ -582,3 +582,17 @@
     border-top: 1px solid #edf0f4;
   }
 }
+
+.roman-notation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #596777;
+}
+.roman-notation select {
+  flex: 1;
+  min-width: 170px;
+}

@@ -50,18 +50,25 @@ describe("local references and IPA", () => {
     expect(displayIpa("[ke44]", "pitch-contour")).toBe("[ke˦˦]");
     expect(displayIpa("[pa1]", "source-category")).toBe("[pa1]");
     const categories = renderToStaticMarkup(
-      <Pronunciation ipa="[pa1]" toneNotation="source-category" />,
+      <Pronunciation
+        ipa="[pa1]"
+        spelling="pa·T1"
+        toneNotation="source-category"
+      />,
     );
-    expect(categories).toContain("source tone categories");
+    expect(categories).toContain("IPA · source tone categories");
+    expect(categories).toContain("HanLingo spelling · source tone categories");
+    expect(categories).toContain("pa·T1");
     expect(categories).not.toContain("<svg");
   });
   it("keeps omitted tones visible instead of plotting an invented contour", () => {
     const html = renderToStaticMarkup(
-      <Pronunciation ipa="[pa]" toneNotation="unspecified" />,
+      <Pronunciation ipa="[pa]" spelling="pa" toneNotation="unspecified" />,
     );
     expect(html).toContain("tones not given");
     expect(html).not.toContain("<svg");
-    expect(html).not.toContain("HanLingo spelling");
+    expect(html).toContain("HanLingo spelling · tones not given");
+    expect(html).toContain("<strong>pa</strong>");
   });
 
   it("does not repeat identical Shanghai dictionary entries after vocabulary expansion", () => {

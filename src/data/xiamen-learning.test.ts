@@ -61,7 +61,7 @@ describe("Xiamen learning readings", () => {
       ),
     ).toBe("tsa44 tsha44 pa44 pha44 ba44");
     expect(romanizeXiamen(["tɕi", "tɕʰi", "kɐn"], ["35", "35", "22"])).toBe(
-      "chi35 chhi35 kân22",
+      "chi35 chhi35 kăn22",
     );
 
     for (const [ipa, spelling] of [
@@ -122,7 +122,7 @@ describe("Xiamen learning readings", () => {
     expect(() => romanizeXiamen(["pa", "ta"], ["44"])).toThrow();
     expect(() => romanizeXiamen(["pa"], ["6"])).toThrow();
     expect(() => romanizeXiamen(["pa"], [""])).toThrow();
-    expect(() => romanizeXiamen(["ɬa"], ["44"])).toThrow();
+    expect(() => romanizeXiamen(["ʙa"], ["44"])).toThrow();
   });
 });
 

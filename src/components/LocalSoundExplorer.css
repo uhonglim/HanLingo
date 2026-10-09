@@ -39,6 +39,15 @@
   line-height: 1.4;
   cursor: pointer;
 }
+.local-sound-selector button > span,
+.local-sound-selector button > small {
+  display: block;
+}
+.local-sound-selector button > small {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 3px;
+}
 .local-sound-selector button[aria-pressed="true"] {
   background: var(--ink, #172128);
   color: white;

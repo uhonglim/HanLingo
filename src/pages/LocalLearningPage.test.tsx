@@ -43,7 +43,8 @@ describe("local learning chapters", () => {
       expect(html).toContain("IPA · tones not given");
       const localOnly = html.split('<section class="regional-differences"')[0];
       expect(localOnly).not.toContain('aria-label="Pitch contour');
-      expect(localOnly).not.toContain('class="pronunciation-spelling"');
+      expect(localOnly).toContain("HanLingo spelling · tones not given");
+      expect(localOnly).toContain('class="pronunciation-spelling"');
     }
   });
   it("does not create empty word or practice routes for a locality without attested words", () => {

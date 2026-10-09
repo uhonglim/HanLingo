@@ -1,6 +1,7 @@
 import "./Pronunciation.css";
 
 import { displayIpa, pitchContours } from "../data/ipa-display";
+import { siteTerms } from "../data/site-terms";
 export { displayIpa, pitchContours } from "../data/ipa-display";
 
 export function PitchTrace({ contour }: { contour: string }) {
@@ -39,17 +40,20 @@ export default function Pronunciation({
   toneNotation?: "pitch-contour" | "source-category" | "unspecified";
 }) {
   const contours = toneNotation === "pitch-contour" ? pitchContours(ipa) : [];
+  const qualification =
+    toneNotation === "source-category"
+      ? " · source tone categories"
+      : toneNotation === "unspecified"
+        ? /[˩˨˧˦˥0-9⁰¹²³⁴⁵⁶⁷⁸⁹]/u.test(ipa)
+          ? " · source tone notation"
+          : " · tones not given"
+        : "";
   return (
     <div className="pronunciation">
       <div className="pronunciation-ipa-row">
         <div>
           <span className="pronunciation-label">
-            {toneNotation === "source-category"
-              ? "IPA · source tone categories"
-              : toneNotation === "unspecified" &&
-                  !/[˩˨˧˦˥1-9¹²³⁴⁵⁶⁷⁸⁹]/u.test(ipa)
-                ? "IPA · tones not given"
-                : "IPA"}
+            IPA{qualification}
           </span>
           <p className="pronunciation-ipa">{displayIpa(ipa, toneNotation)}</p>
         </div>
@@ -63,7 +67,9 @@ export default function Pronunciation({
       </div>
       {spelling && (
         <p className="pronunciation-spelling">
-          <span className="pronunciation-label">HanLingo spelling</span>
+          <span className="pronunciation-label">
+            {siteTerms.spelling}{qualification}
+          </span>
           <strong>{spelling}</strong>
         </p>
       )}

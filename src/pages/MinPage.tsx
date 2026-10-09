@@ -256,8 +256,8 @@ export default function MinPage() {
           <div>
             <h2 id="min-classification-title">Names and branches</h2>
             <p>
-              Min → Southern Min → Tsuan-Chiang → Amoy. The tree separates
-              groups, branches, clusters, and localities.
+              Min → Southern Min → Amoy → Words. Every group follows the same
+              navigation levels; cluster captions keep local relationships visible.
             </p>
             <dl className="min-name-guide">
               <div>

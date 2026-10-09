@@ -104,7 +104,10 @@ describe('map keyboard access and dense localities', () => {
     const html = renderToStaticMarkup(<AtlasMap points={minPoints} selectedGroup="all" selectedPoint={null} onSelectPoint={() => {}}/>);
     expect(html).toMatch(/class="atlas-map-canvas"[^>]*tabindex="0"/);
     expect(html).toContain('Use arrow keys to pan, plus and minus to zoom, and Home to reset.');
-    for (const label of ['Zoom in', 'Zoom out', 'Reset map view']) expect(html).toContain(`aria-label="${label}"`);
+    expect(html).toContain('aria-label="Reset map view"');
+    expect(html).toContain('Scroll or pinch to zoom');
+    expect(html).not.toContain('aria-label="Zoom in"');
+    expect(html).not.toContain('aria-label="Zoom out"');
   });
   it('can separate close locality anchors by zooming without moving the selected anchor', () => {
     const coords: [number, number][] = [[113.122, 23.028], [113.14, 23.05]];

@@ -6,7 +6,8 @@ import {
   useRef,
   useState,
 } from "react";
-import type { KeyboardEvent, PointerEvent } from "react";
+import type { KeyboardEvent } from "react";
+import { attachAtlasGestures } from "./atlasGestures";
 import { geoGraticule, geoPath } from "d3-geo";
 import { merge, mesh } from "topojson-client";
 import type {
@@ -141,27 +142,15 @@ export default function AtlasMap({
   }, [compact, geometryKey]);
   const minZoom = Math.min(0.8, initialView.zoom * 0.8);
   const svgRef = useRef<SVGSVGElement>(null);
-  const drag = useRef<{
-    pointerId: number;
-    clientX: number;
-    clientY: number;
-    viewX: number;
-    viewY: number;
-    scale: number;
-    moved: boolean;
-    labels: Map<string, Label>;
-  } | null>(null);
-  const frame = useRef<number | null>(null);
-  const pendingView = useRef<View | null>(null);
-  const suppressClick = useRef(false);
+  const drag = useRef<{ view: View; labels: Map<string, Label> } | null>(null);
+  const labelsRef = useRef(new Map<string, Label>());
   const [viewport, setViewport] = useState(() => atlasViewport(WIDTH, HEIGHT));
-  useEffect(
-    () => () => {
-      if (frame.current !== null) cancelAnimationFrame(frame.current);
-    },
-    [],
-  );
-  const [view, setView] = useState<View>(initialView);
+  const [view, setRenderedView] = useState<View>(initialView);
+  const viewRef = useRef(view);
+  function setView(next: View | ((previous: View) => View)) {
+    viewRef.current = typeof next === 'function' ? next(viewRef.current) : next;
+    setRenderedView(viewRef.current);
+  }
   const [dragging, setDragging] = useState(false);
   const [layout, setLayout] = useState<{ scale: number; reserved: Label[] }>({
     scale: 1,
@@ -251,8 +240,8 @@ export default function AtlasMap({
           id,
           {
             ...label,
-            x: label.x + view.x - gesture.viewX,
-            y: label.y + view.y - gesture.viewY,
+            x: (label.x - gesture.view.x) * view.zoom / gesture.view.zoom + view.x,
+            y: (label.y - gesture.view.y) * view.zoom / gesture.view.zoom + view.y,
           },
         ]),
       );
@@ -341,6 +330,22 @@ export default function AtlasMap({
     viewport,
   ]);
 
+  labelsRef.current = labels;
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    return attachAtlasGestures(svg, {
+      getView: () => viewRef.current,
+      onView: setView,
+      onActive: active => {
+        drag.current = active ? { view: viewRef.current, labels: labelsRef.current } : null;
+        setDragging(active);
+      },
+      minZoom,
+      maxZoom,
+    });
+  }, [minZoom, maxZoom]);
+
   function zoom(factor: number) {
     setView((previous) => {
       const selected = selectedCoordinates
@@ -375,60 +380,6 @@ export default function AtlasMap({
     }
   }
 
-  function startDrag(event: PointerEvent<SVGSVGElement>) {
-    if (event.button !== 0 || drag.current) return;
-    suppressClick.current = false;
-    drag.current = {
-      pointerId: event.pointerId,
-      clientX: event.clientX,
-      clientY: event.clientY,
-      viewX: view.x,
-      viewY: view.y,
-      scale: svgRef.current?.getScreenCTM()?.a ?? 1,
-      moved: false,
-      labels,
-    };
-  }
-
-  function moveDrag(event: PointerEvent<SVGSVGElement>) {
-    const gesture = drag.current;
-    if (!gesture || gesture.pointerId !== event.pointerId) return;
-    const dx = event.clientX - gesture.clientX;
-    const dy = event.clientY - gesture.clientY;
-    if (!gesture.moved && Math.hypot(dx, dy) < 4) return;
-    if (!gesture.moved) {
-      gesture.moved = true;
-      event.currentTarget.setPointerCapture(event.pointerId);
-      setDragging(true);
-    }
-    pendingView.current = {
-      ...view,
-      x: gesture.viewX + dx / gesture.scale,
-      y: gesture.viewY + dy / gesture.scale,
-    };
-    if (frame.current === null) {
-      frame.current = requestAnimationFrame(() => {
-        if (pendingView.current) setView(pendingView.current);
-        pendingView.current = null;
-        frame.current = null;
-      });
-    }
-  }
-
-  function endDrag(event: PointerEvent<SVGSVGElement>) {
-    if (!drag.current || drag.current.pointerId !== event.pointerId) return;
-    suppressClick.current = drag.current.moved;
-    if (frame.current !== null) cancelAnimationFrame(frame.current);
-    frame.current = null;
-    if (pendingView.current) setView(pendingView.current);
-    pendingView.current = null;
-    drag.current = null;
-    setDragging(false);
-    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
-      event.currentTarget.releasePointerCapture(event.pointerId);
-    }
-  }
-
   function selectWithKeyboard(
     event: KeyboardEvent<SVGGElement>,
     pointId: string,
@@ -444,9 +395,9 @@ export default function AtlasMap({
       className={`atlas-map${compact ? " atlas-map--compact" : ""}${dragging ? " atlas-map--dragging" : ""}`}
     >
       <span className="atlas-map-hint">
-        <span aria-hidden="true">↔</span> Drag to explore
+        Drag to move · Scroll or pinch to zoom
       </span>
-      <span className="sr-only" id={instructionsId}>Use arrow keys to pan, plus and minus to zoom, and Home to reset. Select a locality with Enter or Space.</span>
+      <span className="sr-only" id={instructionsId}>Scroll or pinch to zoom, drag to move, or double-click to zoom in. Use arrow keys to pan, plus and minus to zoom, and Home to reset. Select a locality with Enter or Space.</span>
       <svg
         ref={svgRef}
         className="atlas-map-canvas"
@@ -455,20 +406,6 @@ export default function AtlasMap({
         aria-describedby={instructionsId}
         tabIndex={0}
         onKeyDown={mapKeyboard}
-        onPointerDown={startDrag}
-        onPointerMove={moveDrag}
-        onPointerUp={endDrag}
-        onPointerCancel={endDrag}
-        onPointerLeave={(event) => {
-          if (!drag.current?.moved) endDrag(event);
-        }}
-        onClickCapture={(event) => {
-          if (suppressClick.current) {
-            event.stopPropagation();
-            suppressClick.current = false;
-          }
-        }}
-        onLostPointerCapture={endDrag}
       >
         <defs>
           <clipPath id={clipId}>
@@ -638,28 +575,6 @@ export default function AtlasMap({
         </svg>
       </div>
       <div className="atlas-map-controls" aria-label="Map controls">
-        <button
-          type="button"
-          aria-label="Zoom in"
-          title="Zoom in"
-          onClick={() => zoom(1.3)}
-          disabled={view.zoom >= maxZoom}
-        >
-          <svg viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M10 4v12M4 10h12" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          aria-label="Zoom out"
-          title="Zoom out"
-          onClick={() => zoom(1 / 1.3)}
-          disabled={view.zoom <= minZoom}
-        >
-          <svg viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M4 10h12" />
-          </svg>
-        </button>
         <button
           type="button"
           aria-label="Reset map view"

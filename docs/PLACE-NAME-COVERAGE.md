@@ -212,7 +212,7 @@ Common names remain when a local reading is unavailable. Mandarin pinyin and nei
 | Huazhou | — | — | Phonetic reading not yet sourced | yue · 化州 | [Locality record](https://hanlingo.pairup.world/yue/wuhua/wu-hua-localities/huazhou) |
 | Wuchuan | — | — | Phonetic reading not yet sourced | yue · 吳川 | [Locality record](https://hanlingo.pairup.world/yue/wuhua/wu-hua-localities/wuchuan-yue) |
 | Shanghai | za~·T3 he·T2 | Zaonhe | zɑ̃3 he2; source-category | wu · 上海 | [Name source](https://escholarship.org/content/qt5hm0n8b7/qt5hm0n8b7.pdf#page=179) |
-| Suzhou | seou tsoeyu | Soutseu | səu tsøʏ; unspecified | wu · 蘇州 | [Name source](https://github.com/NGLI/rime-wugniu_soutseu/blob/9abdfb18cd5a7eb9b6422e3ea880cfa4b2b7227f/wugniu_soutseu.schema.yaml#L4-L16) · [IPA key](https://github.com/NGLI/rime-wugniu_soutseu/blob/9abdfb18cd5a7eb9b6422e3ea880cfa4b2b7227f/README.md#音系及拼音方案) |
+| Suzhou | seou tsoeü | Soutseu | səu tsøʏ; unspecified | wu · 蘇州 | [Name source](https://github.com/NGLI/rime-wugniu_soutseu/blob/9abdfb18cd5a7eb9b6422e3ea880cfa4b2b7227f/wugniu_soutseu.schema.yaml#L4-L16) · [IPA key](https://github.com/NGLI/rime-wugniu_soutseu/blob/9abdfb18cd5a7eb9b6422e3ea880cfa4b2b7227f/README.md#音系及拼音方案) |
 | Taicang | — | — | Phonetic reading not yet sourced | wu · 太倉 | [Locality record](https://hanlingo.pairup.world/wu/taihu/su-hu-jia/taicang) |
 | Jiading | — | — | Phonetic reading not yet sourced | wu · 嘉定 | [Locality record](https://hanlingo.pairup.world/wu/taihu/su-hu-jia/jiading) |
 | Baoshan | — | — | Phonetic reading not yet sourced | wu · 寶山 | [Locality record](https://hanlingo.pairup.world/wu/taihu/su-hu-jia/baoshan) |

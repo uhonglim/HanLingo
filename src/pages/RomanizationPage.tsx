@@ -454,7 +454,7 @@ export default function RomanizationPage() {
               <h3>Vowels stay separate from tone</h3>
               <p>
                 ă represents [ɐ]; a~ represents nasal [ã]. ae / oo preserve
-                [ɛ] / [ɔ], while eo covers [ə] and [ɜ]. eu is [ɤ]; yu is
+                [ɛ] / [ɔ], while eo covers [ə] and [ɜ]. eu is [ɤ]; ü is
                 [y] or [ʏ]; oe covers [ø] and [œ]. Digraphs name vowel
                 qualities; only : marks supplied length.
               </p>
@@ -469,7 +469,10 @@ export default function RomanizationPage() {
           </div>
         </div>
         <p className="roman-note">
-          y represents IPA [j]; j represents [dʑ], [dʒ], or [dʐ].
+          ü represents the rounded vowel [y] or [ʏ]; y represents the glide [j].
+          Thus [y] → ü, [ju] → yu, and [jy] → yü. The dots mark vowel quality,
+          not tone; ü is never shortened to u after ch, chh, or sh.
+          j represents [dʑ], [dʒ], or [dʐ].
           r covers [r], [ɹ], and [ɻ]; fricative [ʐ] uses zh. Explicit [i̯],
           [u̯], and [y̯] become y, w, and yw. Plain vowels are never silently
           reinterpreted as glides. Not every variety uses every sound in this key.

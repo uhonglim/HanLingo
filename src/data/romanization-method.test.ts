@@ -62,7 +62,7 @@ describe("shared spelling coverage and evidence boundaries", () => {
     expect(spell("ɓe34")).toBe("ḅe34");
     expect(spell("be34")).toBe("be34");
     expect(spell("ɦoŋ13")).toBe("hhong13");
-    expect(spell("ȵy213")).toBe("nyyu213");
+    expect(spell("ȵy213")).toBe("nyü213");
   });
   it("does not turn tone categories or missing tones into pitch", () => {
     expect(convertIpa("[pat⁶]", "source-category")[0]).toMatchObject({spelling: "pat·T6", tone: "6", ipa: "pat6"});
@@ -96,6 +96,19 @@ describe("reading spelling v3", () => {
     expect(spell("ʂa5").spelling).toBe("sha5");
     expect(spell("ɻa5").spelling).toBe("ra5");
     expect(spell("ʐa5").spelling).toBe("zha5");
+  });
+  it("separates the rounded vowel from y plus u without changing tone or marks", () => {
+    expect(spell("y35").spelling).toBe("ü35");
+    expect(spell("ʏ35").spelling).toBe("ü35");
+    expect(spell("ju35").spelling).toBe("yu35");
+    expect(spell("jy35").spelling).toBe("yü35");
+    expect(spell("yː35").spelling).toBe("ü:35");
+    expect(spell("ỹ35").spelling).toBe("ü~35");
+    expect(spell("ɥe35").spelling).toBe("ywe35");
+    expect(spell("y̯e35").spelling).toBe("ywe35");
+    expect(convertIpa("y6", "source-category")[0].spelling).toBe("ü·T6");
+    expect(convertIpa("y", "unspecified")[0].spelling).toBe("ü");
+    expect(new Set(["y35", "ju35", "u35"].map(ipa => spell(ipa).spelling)).size).toBe(3);
   });
   it("keeps both sourced words searchable when their reading spellings coincide", () => {
     const words = getLocalLearning(mapPoints.find(p=>p.id === "suzhou")!).words;

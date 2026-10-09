@@ -19,7 +19,7 @@ export const sharedSpellingExtensions: SpellingRule[] = [
   ...rules([["ɹ", "r"], ["ɻ", "r"]], "Shared", "Approximants use r. Retroflex fricative [ʐ] uses zh; source IPA determines the choice."),
   ...rules([["ɲ", "ny"], ["ȵ", "ny"]], "Shared", "These nasal transcriptions share a spelling, not a claim of identical articulation."),
   ...rules([["a", "a"], ["ɑ", "a"], ["i", "i"], ["ɪ", "i"],
-    ["u", "u"], ["ʊ", "u"], ["y", "yu"], ["ʏ", "yu"],
+    ["u", "u"], ["ʊ", "u"], ["y", "ü"], ["ʏ", "ü"],
     ["ø", "oe"], ["œ", "oe"], ["ɵ", "oe"], ["ə", "eo"], ["ɜ", "eo"]],
     "Shared", "A vowel family shares its reading spelling. Consult IPA for the exact vowel quality."),
   ...rules([["cʰ", "kyh"], ["c", "ky"], ["ɟ", "gy"],

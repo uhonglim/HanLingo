@@ -1,6 +1,6 @@
 # HanLingo spelling
 
-Working proposal v3, revised 2026-10-09. HanLingo is a shared reading aid beside source IPA. It deliberately uses fewer distinctions than IPA; it is not a phonemic standard for the languages or an existing community orthography.
+Working proposal v3.1, revised 2026-10-09. HanLingo is a shared reading aid beside source IPA. It deliberately uses fewer distinctions than IPA; it is not a phonemic standard for the languages or an existing community orthography.
 
 ## One global key
 
@@ -27,7 +27,7 @@ Romanization need not be a reversible encoding of phonetic transcription. The [o
 | [ɲ ȵ] | ny |
 | [r ɹ ɻ] | r |
 | [ŋ ʔ ɦ ɣ ɬ ɓ ɗ] | ng q hh gh hl ḅ ḍ |
-| [a ɑ], [i ɪ], [u ʊ], [y ʏ] | a, i, u, yu |
+| [a ɑ], [i ɪ], [u ʊ], [y ʏ] | a, i, u, ü |
 | [ø œ], [ə ɜ] | oe, eo |
 | [ɐ ɛ ɔ æ ɒ ɯ ɤ ɨ ɿ ʮ] | ă ae oo ea ao uu eu ii ir yr |
 | [j ɥ], explicit [i̯ u̯ y̯] | y yw, y w yw |
@@ -65,8 +65,14 @@ The target is one learnable reading key across Han varieties, not a lossless sub
 
 - **sha, not sra:** [ʂ ʃ ɕ] share sh; their corresponding affricates use ch/chh and voiced series zh/j. The letter r no longer acts as a retroflex modifier. It remains for actual rhotic sounds; [ʐ] is a fricative and uses zh, not r. The revision also supports tied [d͡ʐ] consistently.
 - **Keep ă:** a hypothetical [ɐ]→a merger introduces four additional same-locality, same-tone collision groups in the current 1,789-record corpus. The chosen sibilant mergers introduce none in that sample. This sample does not prove that those sounds never contrast elsewhere. We keep the useful vowel distinction with one letter rather than adding a less familiar ASCII sequence such as ax.
-- **Keep the remaining vowel key:** i/u/yu, e/ae, o/oo, eo/eu, oe, ii/uu express selected vowel families consistently. Double letters name a vowel quality; only : marks supplied length. Tone marks do not change the vowel identity.
+- **Keep the remaining vowel key:** i/u/ü, e/ae, o/oo, eo/eu, oe, ii/uu express selected vowel families consistently. Double letters name a vowel quality; only : marks supplied length. Tone marks do not change the vowel identity.
 - **Keep the evidence:** nasalization ~, supplied length :, voiced/voiceless and phonation marks, pitch contours and source categories retain their separate meanings. The spelling never adds a missing tone, glide, length distinction or sandhi pattern.
 - **Place names do not dictate sound values:** the common name Shanghai remains Shanghai. Its documented name transcription [zɑ̃3 he2] gives za~·T3 he·T2. A Mandarin pronunciation of the same characters must be labelled Mandarin; it does not become Shanghai’s local name. Likewise, a Mandarin spelling of 長沙 cannot establish the local Xiang pronunciation.
 
 Sourced examples: Beijing 說 [ʂuo55] → shuo55 and 茶 [tʂʰa35] → chha35 use the 1950s survey published in 1964, not a newly recorded contemporary speaker. Canton 三 [sam55] → sam55 and 心 [sɐm55] → săm55 preserve Ding’s comparative-table transcription. The interactive workshop links these exact records and keeps their dates and qualifications.
+
+## Rounded vowel and glide in v3.1
+
+Use **ü** for [y ʏ], **y** for [j], and **u** for [u ʊ]. The former yu vowel spelling collided with the sequence [ju]; now [y] → ü, [ju] → yu and [jy] → yü. These are conversion examples, not claims that each sequence occurs in every locality. [y] and [ʏ] remain an explicitly shared vowel family; IPA preserves the distinction.
+
+The dots identify vowel quality, never tone or nasalization. Always keep ü, including after ch, chh and sh; do not adopt Pinyin’s context-dependent omission. Supplied [yː] → ü:, [ỹ] → ü~; pitch and source-category suffixes follow their existing rules. [ɥ] and explicit [y̯] remain yw. Source Jyutping yu and IPA y remain unchanged in their labelled source fields. The tradeoff is one non-ASCII letter for a clearer distinction from the glide-plus-vowel sequence; no new keyboard or display mode is needed.

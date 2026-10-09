@@ -77,6 +77,7 @@ describe("shared romanization workshop", () => {
     expect(html).toContain("Source tone categories");
     expect(html).toContain("ă represents [ɐ]; a~ represents nasal [ã]");
     expect(html).toContain("The same IPA gets the same spelling everywhere");
+    expect(html).toContain("[y] → ü, [ju] → yu, and [jy] → yü");
     expect(html).not.toContain("One sound, one working spelling");
   });
 });

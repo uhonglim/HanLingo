@@ -37,3 +37,7 @@ The ledger retains nine rejected candidates and their reasons. These exclusions 
 Local evidence helpers `photos.py`, `collect.py`, `selection.json`, `captions.json` and `publish.py` are in `.evidence/lexical-study-galleries/`. The collector caches source pages and media metadata; the publisher emits `lexicalStudyGalleries`, its asset files and the public ledger. The tracked ledger preserves exact URLs, captions and checksums independently of the helper cache.
 
 Run `npx vitest run src/data/galleries/lexical-study.test.ts`. The tests verify the existing locality identities, 9/9/10 actual counts, Harbin’s retained collection, unique source URLs/asset hashes, source credits, dimensions and documented exclusions. Shared gallery-index integration belongs to the parent release task.
+
+## Photo-to-reading associations
+
+Four manually reviewed links connect visible vegetables, trees and water to the exact locality’s independently sourced lexical records. The provenance ledger gives each association and rationale. These are learning prompts, not evidence of what a pictured person speaks. The Kunming rice-noodle photograph is deliberately not linked to the source’s 面 entry: the photo’s specific dish and that lexical heading should not be silently equated.

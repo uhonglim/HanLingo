@@ -33,3 +33,13 @@ Adds Peter Isotalo’s Commons recordings of [p], [m] and [ŋ] under their offer
 The earlier600-second source retry interval had elapsed by more than10,000seconds before this bounded retrieval. Retrieval stopped after a later HTTP429 on [f]; [f], [s] and [l] remain absent. [n] and [ɛ] remain held for the earlier description/hash discrepancies. Version2 therefore contains18 demonstrations, not a complete consonant inventory.
 
 Sources: [bilabial plosive](https://commons.wikimedia.org/wiki/File:Voiceless_bilabial_plosive.ogg), [bilabial nasal](https://commons.wikimedia.org/wiki/File:Bilabial_nasal.ogg), [velar nasal](https://commons.wikimedia.org/wiki/File:Velar_nasal.ogg). Attribution, selected licence, original bytes’ hashes and conversion hashes remain in the distributed manifest and offline-pack credits.
+
+## Version2.1: three more consonant demonstrations
+
+After the earlier retry interval had long elapsed, a bounded three-file retrieval succeeded for [f], [s] and [l]. Every original Ogg matched its previously recorded source SHA1. The files are full recordings by Peter Isotalo under CC BY-SA3.0; source attribution, licence links and delivered MP3 SHA256 are in the manifest and downloadable pack. They were transcoded, never trimmed or pitch-shifted.
+
+- [f]: [Voiceless labiodental fricative](https://commons.wikimedia.org/wiki/File:Voiceless_labiodental_fricative.ogg), demonstrated between two [a] vowels.
+- [s]: [Voiceless alveolar sibilant](https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_sibilant.ogg), source description gives [sa asa].
+- [l]: [Alveolar lateral approximant](https://commons.wikimedia.org/wiki/File:Alveolar_lateral_approximant.ogg), demonstrated between two [a] vowels; the original file page was rechecked for author and licence.
+
+The pack now contains21 general demonstrations:15 vowels and6 consonants. These clips do not become local word recordings, and their supporting vowels must not be removed or mistaken for lexical syllables. [n] and [ɛ] remain held; no disputed source was silently repaired.

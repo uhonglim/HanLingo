@@ -1,3 +1,6 @@
+import { atlasLexibankDeeperPacks } from "./atlas-lexibank-deeper";
+import { yichunYuanzhouLearning } from "./yichun-yuanzhou";
+import { jinComparativeLearning } from "./jin-comparative";
 import { weiziluLearning } from "./weizilu";
 import { shanghaiCharacterSupplement } from "./shanghai-character-supplement";
 import { yunlouGanLearning } from "./yunlou-gan";
@@ -43,7 +46,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning, ...atlasLexibankDeeperPacks, ...yichunYuanzhouLearning, ...jinComparativeLearning]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,

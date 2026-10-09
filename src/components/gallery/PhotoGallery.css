@@ -242,6 +242,15 @@
 .photo-viewer-detail {
   font-size: 13px;
 }
+.photo-viewer-detail .scene-readings {
+  --muted: #a8b3b3;
+  --line: #3a4444;
+  margin-top: 0;
+}
+.photo-viewer-detail .scene-reading > a {
+  color: #d9e1e1;
+  text-underline-offset: 3px;
+}
 .photo-viewer-detail ul {
   list-style: none;
   padding: 0;

@@ -21,6 +21,12 @@ describe('sourced IPA sound pack', () => {
       expect(sampleFor(ipa)?.context).toContain('supporting vowels');
     }
     expect(sampleSpelling(sampleFor('ŋ')!)).toBe('ng');
+    for (const ipa of ['f', 's', 'l']) {
+      expect(sampleFor(ipa)?.category).toBe('Consonants');
+      expect(sampleFor(ipa)?.context).toContain('Not an isolated local syllable');
+    }
+    expect(sampleFor('s')?.context).toContain('[sa asa]');
+    expect(sampleFor('l')?.context).toContain('between two [a]');
     expect(sampleFor('j')).toBeUndefined(); // Never use [y] audio for the y glide.
     expect(sampleFor('ɛ')).toBeUndefined(); // Source hash mismatch held for review.
     expect(sampleFor('y')!.src).not.toBe(sampleFor('ʏ')!.src);

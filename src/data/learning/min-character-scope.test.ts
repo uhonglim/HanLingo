@@ -26,7 +26,7 @@ describe('Original Min character-reference scope', () => {
   it('preserves the separately sourced Foochow lexical collection', () => {
     const point = learningPlaces.find(place => place.id === 'fuzhou')!;
     const lexical = getLocalLearning(point).words.filter(word => word.id.startsWith('beida1964-'));
-    expect(lexical).toHaveLength(80);
+    expect(lexical).toHaveLength(199); // One conflicting gold reading is held for primary-source review.
     expect(meaningPracticeWords(lexical)).toEqual(lexical);
     expect(lexical.find(word => word.han === '米')?.english).toBe('rice');
   });

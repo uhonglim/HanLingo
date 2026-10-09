@@ -56,7 +56,7 @@
 }
 .scene-readings > div {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
   gap: 16px;
 }
 .locality-scene:first-child .scene-readings > div {
@@ -136,8 +136,9 @@
   .locality-scene:first-child .scene-readings {
     margin-top: 24px;
   }
+  .scene-readings > div,
   .locality-scene:first-child .scene-readings > div {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 380px) {

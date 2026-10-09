@@ -30,7 +30,7 @@ describe("photo reading relevance", () => {
 
   it("resolves every curated wider-atlas photo reading within its own locality", () => {
     let associations = 0;
-    for (const localityId of ['changsha-xiang', 'taiyuan-jin', 'jixi-hui', 'guilin-pinghua']) {
+    for (const localityId of ['changsha-xiang', 'taiyuan-jin', 'jixi-hui', 'guilin-pinghua', 'kunming-study', 'loudi-study', 'rongcheng-371082']) {
       const localWords = branchLearning.flatMap(pack => pack.words).filter(word => word.localityId === localityId);
       for (const entry of getLocalGallery(localityId)) {
         if (!entry.relatedWordIds?.length) continue;
@@ -38,7 +38,7 @@ describe("photo reading relevance", () => {
         expect(wordsForPhoto(entry, localWords).map(word => word.id)).toEqual(entry.relatedWordIds);
       }
     }
-    expect(associations).toBe(5);
+    expect(associations).toBe(9);
   });
 
   it("shows only explicitly associated readings available in this locality", () => {

@@ -54,7 +54,7 @@ describe('atlas-wide learning integration', () => {
       expect(word.source.url).toMatch(/\/blob\/[a-f0-9]{40}\/cldf\/forms.csv#L\d+$/);
       expect(Boolean(spellingFor(word)), word.id).toBe(true);
     }
-    expect(getLocalLearning(findLearningPlace('hefei')!).words).toHaveLength(80);
+    expect(getLocalLearning(findLearningPlace('hefei')!).words).toHaveLength(200);
   });
   it('keeps all catalogue gaps measurable, including entries with no lessons', () => {
     expect(learningPlaces).toHaveLength(atlasLocalities.length);

@@ -1,3 +1,4 @@
+import { yichunYuanzhouGalleries } from "./yichun-yuanzhou";
 import { xiangStudyGalleries } from "./xiang-study";
 import { lexicalStudyGalleries } from "./lexical-study";
 import { otherSiniticGalleries } from "./other-sinitic";
@@ -17,6 +18,7 @@ export const localityGalleries: Record<string, GalleryPhoto[]> = {
   ...otherSiniticGalleries,
   ...xiangStudyGalleries,
   ...lexicalStudyGalleries,
+  ...yichunYuanzhouGalleries,
   ...minGalleries,
   ...otherGalleries,
   ...chaoshanGalleries,

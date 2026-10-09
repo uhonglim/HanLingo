@@ -1,8 +1,8 @@
 {
   "id": "hanlingo-ipa-1",
-  "version": "2.0",
+  "version": "2.1",
   "title": "HanLingo IPA sound pack",
-  "scope": "Human-recorded general IPA demonstrations: 15 vowels and 3 consonants. Consonant clips retain any supporting vowels. These are not local words, synthesized speech, lexical tones or sandhi.",
+  "scope": "Human-recorded general IPA demonstrations: 15 vowels and 6 consonants. Consonant clips retain any supporting vowels. These are not local words, synthesized speech, lexical tones or sandhi.",
   "samples": [
     {
       "id": "0069",
@@ -327,6 +327,60 @@
       "duration": 1.959184,
       "originalSha1": "2a61afbbfddff3ee4c9caf9827bd0829dd7b44de",
       "sha256": "170f966e0a433dad346d012c2dde548a9df64890e16179f1dce8bae02e91970a"
+    },
+    {
+      "id": "0066",
+      "ipa": "f",
+      "name": "Voiceless labiodental fricative",
+      "category": "Consonants",
+      "file": "0066.mp3",
+      "src": "/audio/ipa/0066.mp3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Voiceless_labiodental_fricative.ogg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Voiceless_labiodental_fricative.ogg",
+      "author": "Peter Isotalo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Transcoded from Ogg to MP3; not trimmed or pitch-shifted.",
+      "context": "Full consonant demonstration between two [a] vowels. Not an isolated local syllable or a word recording.",
+      "duration": 0.757551,
+      "originalSha1": "ee060dc62b68ac348f87ab6afb511460855226b3",
+      "sha256": "8563323a0227488da5c5790a899332269aab878aa9731d1e5d9c8e89b1b61e78"
+    },
+    {
+      "id": "0073",
+      "ipa": "s",
+      "name": "Voiceless alveolar sibilant",
+      "category": "Consonants",
+      "file": "0073.mp3",
+      "src": "/audio/ipa/0073.mp3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_sibilant.ogg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Voiceless_alveolar_sibilant.ogg",
+      "author": "Peter Isotalo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Transcoded from Ogg to MP3; not trimmed or pitch-shifted.",
+      "context": "Full demonstration [sa asa], including supporting vowels. Not an isolated local syllable or a word recording.",
+      "duration": 2.638367,
+      "originalSha1": "92d215b4003a0184eded8b5ce8b96083a546386d",
+      "sha256": "b6d0f0cd0761ba6de5919b312676d327d9a3c91bfc27f4fa65a7c3642667b6d7"
+    },
+    {
+      "id": "006c",
+      "ipa": "l",
+      "name": "Alveolar lateral approximant",
+      "category": "Consonants",
+      "file": "006c.mp3",
+      "src": "/audio/ipa/006c.mp3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alveolar_lateral_approximant.ogg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Alveolar_lateral_approximant.ogg",
+      "author": "Peter Isotalo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Transcoded from Ogg to MP3; not trimmed or pitch-shifted.",
+      "context": "Full consonant demonstration between two [a] vowels. Not an isolated local syllable or a word recording.",
+      "duration": 2.194286,
+      "originalSha1": "c72c45678fbca0aca52b98fed9b1977b648de3b9",
+      "sha256": "15e936f9db5c9ffbc56dddc72c5cbb95940ce1b2a8434a355fdf80977e8d297f"
     }
   ]
 }

@@ -94,6 +94,7 @@ export const lexicalStudyGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "lexical-study-rongcheng-12",
+      "relatedWordIds": ["liu2007-Rongcheng-123_water-1"],
       "title": "Lüdaohu wetland",
       "category": "Landscape",
       "src": "/images/lexical-study-rongcheng-12.webp",
@@ -171,6 +172,7 @@ export const lexicalStudyGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "lexical-study-loudi-4",
+      "relatedWordIds": ["liu2007-Loudi-119_tree-1"],
       "title": "Sunshui Park",
       "category": "Landscape",
       "src": "/images/lexical-study-loudi-4.webp",
@@ -201,6 +203,7 @@ export const lexicalStudyGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "lexical-study-loudi-6",
+      "relatedWordIds": ["liu2007-Loudi-123_water-1"],
       "title": "A city bridge",
       "category": "Streets",
       "src": "/images/lexical-study-loudi-6.webp",
@@ -366,6 +369,7 @@ export const lexicalStudyGalleries: Record<string, GalleryPhoto[]> = {
     },
     {
       "id": "lexical-study-kunming-8",
+      "relatedWordIds": ["beida1964-Kunming-153_vegetable-1"],
       "title": "Vegetables at the market",
       "category": "Food",
       "src": "/images/lexical-study-kunming-8.webp",

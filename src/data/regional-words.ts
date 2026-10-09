@@ -1,5 +1,5 @@
 import { lexicalExpansionLearning } from "./learning/lexical-expansion";
-import { atlasLexibankPacks } from "./learning/atlas-lexibank";
+import { publishedAtlasLexibankPacks as atlasLexibankPacks } from "./learning/atlas-lexibank-published";
 import { ganXiangLearning } from "./learning/gan-xiang";
 import { otherSiniticLearning } from "./learning/other-sinitic";
 import { southernMinLearning } from "./learning/southern-min";

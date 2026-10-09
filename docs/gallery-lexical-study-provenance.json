@@ -808,5 +808,35 @@
       "candidate": "kunming-4",
       "reason": "The frame shows a display of photographs beside an old area, not a direct street scene; omitted rather than captioned as the buildings shown in the display."
     }
+  ],
+  "readingAssociations": [
+    {
+      "photoId": "lexical-study-kunming-8",
+      "relatedWordIds": [
+        "beida1964-Kunming-153_vegetable-1"
+      ],
+      "rationale": "The produce stall visibly contains vegetables; the Kunming survey records 小菜 for vegetable. This is a learning association, not a claim about the stallholder’s speech."
+    },
+    {
+      "photoId": "lexical-study-loudi-4",
+      "relatedWordIds": [
+        "liu2007-Loudi-119_tree-1"
+      ],
+      "rationale": "Trees line the photographed Sunshui Park path; the exact Loudi tree record is independently sourced."
+    },
+    {
+      "photoId": "lexical-study-loudi-6",
+      "relatedWordIds": [
+        "liu2007-Loudi-123_water-1"
+      ],
+      "rationale": "The photograph shows river water beneath a bridge; the exact Loudi water record is independently sourced."
+    },
+    {
+      "photoId": "lexical-study-rongcheng-12",
+      "relatedWordIds": [
+        "liu2007-Rongcheng-123_water-1"
+      ],
+      "rationale": "The wetland photograph shows water among reeds; use the Rongcheng source for water, without claiming an exact lexical fieldwork location."
+    }
   ]
 }

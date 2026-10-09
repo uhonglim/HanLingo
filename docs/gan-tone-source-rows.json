@@ -1,0 +1,1314 @@
+[
+  {
+    "localityId": "gan-tongcheng-juanshui",
+    "town": "隽水",
+    "pdfPage": 102,
+    "printedPage": 96,
+    "table": 3,
+    "rawExtractedRow": "隽水 阴平 212 阳平 33 上声 42 上声 42 阳去 44 阴去 24 阳去 44 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "212"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "24"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-magang",
+    "town": "马港",
+    "pdfPage": 102,
+    "printedPage": 96,
+    "table": 3,
+    "rawExtractedRow": "马港 阴平 24 阳平 33 上声 42 上声 42 阳去 44 阴去 34 阳去 44 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "24"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "34"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-guandao",
+    "town": "关刀",
+    "pdfPage": 102,
+    "printedPage": 96,
+    "table": 3,
+    "rawExtractedRow": "关刀 阴平 24 阳平 33 上声 42 上声 42 阳去 34 阴去 324 阳去 34 全入 55，次入 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "24"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "34"
+      ],
+      [
+        "阴去",
+        "324"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-maishi",
+    "town": "麦市",
+    "pdfPage": 102,
+    "printedPage": 96,
+    "table": 3,
+    "rawExtractedRow": "麦市 阴平 313 阳平 33 上声 42 上声 42 阳去 34 阴去 214 阳去 34 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "313"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "34"
+      ],
+      [
+        "阴去",
+        "214"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-tanghu",
+    "town": "塘湖",
+    "pdfPage": 102,
+    "printedPage": 96,
+    "table": 3,
+    "rawExtractedRow": "塘湖 阴平 213 阳平 33 上声 42 上声 42 阳去 44 阴去 34 阳去 44 全入 55，次入 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "213"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "34"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-shadui",
+    "town": "沙堆",
+    "pdfPage": 102,
+    "printedPage": 96,
+    "table": 3,
+    "rawExtractedRow": "沙堆 阴平 313 阳平 33 上声 42 上声 42 阳去 44 阴去 214 阳去 44 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "313"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "214"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-sizhuang",
+    "town": "四庄",
+    "pdfPage": 102,
+    "printedPage": 96,
+    "table": 3,
+    "rawExtractedRow": "四庄 阴平 313 阳平 33 上声 42 上声 42 阳去 44 阴去 214 阳去 44 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "313"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "214"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-daye-chengui",
+    "town": "陈贵",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 4,
+    "rawExtractedRow": "陈贵 阴平 22 阳平 31 上声 44 上声 44 阳去 24 阴去 45 阳去 24 入声 213 入声 213 阴平 22",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "22"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "阳去",
+        "24"
+      ],
+      [
+        "阴去",
+        "45"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-fenglin",
+    "town": "枫林",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 4,
+    "rawExtractedRow": "枫林 阴平 44 阳平 31 上声 33 上声 33 阳去 42 阴去 24 阳去 42 入声 35 入声 35 阳平 31",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "44"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "33"
+      ],
+      [
+        "阳去",
+        "42"
+      ],
+      [
+        "阴去",
+        "24"
+      ],
+      [
+        "入声",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongshan-tongyang",
+    "town": "通羊",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 4,
+    "rawExtractedRow": "通羊 阴平 24 阳平 31 上声 42 上声 42 阳去 44 阴去 45 阳去 44 入声 55 阳去 44 阳去 44",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "24"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "45"
+      ],
+      [
+        "入声",
+        "55"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-xianan-fushan",
+    "town": "浮山",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 4,
+    "rawExtractedRow": "浮山 阴平 44 阳平 31 上声 42 上声 42 阳去 22 阴去 213 阳去 22 入声 55 入声 55 阳去 22",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "44"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "22"
+      ],
+      [
+        "阴去",
+        "213"
+      ],
+      [
+        "入声",
+        "55"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-jiayu-yuyue",
+    "town": "鱼岳",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 4,
+    "rawExtractedRow": "鱼岳 阴平 34 阳平 33 上声 42 上声 42 阳去 44 阴去 212 阳去 44 入声 55 入声 55 阳平 33",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "34"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "212"
+      ],
+      [
+        "入声",
+        "55"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-chibi-chebu",
+    "town": "车埠",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 4,
+    "rawExtractedRow": "车埠 阴平 45 阳平 34 上声 42 上声 42 阳去 44 阴去 213 阳去 44 入声 55 入声 55 阴去 213",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "45"
+      ],
+      [
+        "阳平",
+        "34"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "213"
+      ],
+      [
+        "入声",
+        "55"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-chongyang-shicheng",
+    "town": "石城",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 4,
+    "rawExtractedRow": "石城 阴平 22 阳平 31 上声 42 上声 42 阳去 44 阴去 214 阳去 44 入声 55 入声 55 入声 55",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "22"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "44"
+      ],
+      [
+        "阴去",
+        "214"
+      ],
+      [
+        "入声",
+        "55"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-shinan",
+    "town": "石南",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 5,
+    "rawExtractedRow": "石南 阴平 34 阳平 33 上声 42 上声 42 阴平 34 去声 213 阴平 34 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "34"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "213"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-beigang",
+    "town": "北港",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 5,
+    "rawExtractedRow": "北港 阴平 34 阳平 33 上声 42 上声 42 阴平 34 去声 213 阴平 34 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "34"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "213"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-tongcheng-daping",
+    "town": "大坪",
+    "pdfPage": 103,
+    "printedPage": 97,
+    "table": 5,
+    "rawExtractedRow": "大坪 阴平 34 阳平 33 上声 42 上声 42 阴平 34 去声 213 阴平 34 全入 55，次入 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "34"
+      ],
+      [
+        "阳平",
+        "33"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "213"
+      ],
+      [
+        "全入",
+        "55"
+      ],
+      [
+        "次入",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-daye-jinhu",
+    "town": "金湖",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "金湖 阴平 33 阳平 31 上声 44 阴平 33 去声 35 阴平 33 入声 213 阴平 33",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-daye-yinzu",
+    "town": "殷祖",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "殷祖 阴平 33 阳平 31 上声 44 阴平 33 去声 35 阴平 33 入声 213 阴平 33",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-daye-dajipu",
+    "town": "大箕铺",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "大箕铺 阴平 33 阳平 31 上声 44 阴平 33 去声 35 阴平 33 入声 213 阴平 33",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-daye-jinshandian",
+    "town": "金山店",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "金山店 阴平 33 阳平 31 上声 44 阴平 33 去声 35 阴平 33 入声 213 阴平 33",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "hold-coordinate"
+  },
+  {
+    "localityId": "gan-daye-liurenba",
+    "town": "刘仁八",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "刘仁八 阴平 33 阳平 31 上声 44 阴平 33 阴去 35 阴平 33 入声 213 阴平 33",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "阴去",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-taizi",
+    "town": "太子",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "太子 阴平 33 阳平 212 上声 21 阴平 33 去声 35 阴平 33 入声 13",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "212"
+      ],
+      [
+        "上声",
+        "21"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "13"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-dawang",
+    "town": "大王",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "大王 阴平 33 阳平 31 上声 42 阴平 33 去声 35 阴平 33 入声 213",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-weiyuankou",
+    "town": "韦源口",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "韦源口 阴平 33 阳平 42 上声 31 阴平 33 去声 35 阴平 33 入声 213",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "42"
+      ],
+      [
+        "上声",
+        "31"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "hold-coordinate"
+  },
+  {
+    "localityId": "gan-yangxin-huangsangkou",
+    "town": "黄颡口",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "黄颡口 阴平 31 阳平 42 上声 44 阴平 31 去声 35 阴平 31 入声 213",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "31"
+      ],
+      [
+        "阳平",
+        "42"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-fuchi",
+    "town": "富池",
+    "pdfPage": 104,
+    "printedPage": 98,
+    "table": 6,
+    "rawExtractedRow": "富池 阴平 33 阳平 31 上声 44 阴平 33 去声 35 阴平 33 入声 24 阳平 31",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "44"
+      ],
+      [
+        "去声",
+        "35"
+      ],
+      [
+        "入声",
+        "24"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-paishi",
+    "town": "排市",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 7,
+    "rawExtractedRow": "排市 阴平 33 阳平 31 上声 42 去声 24 入声 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "24"
+      ],
+      [
+        "入声",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-mugang",
+    "town": "木港",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 7,
+    "rawExtractedRow": "木港 阴平 33 阳平 42 上声 22 去声 24 入声 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "42"
+      ],
+      [
+        "上声",
+        "22"
+      ],
+      [
+        "去声",
+        "24"
+      ],
+      [
+        "入声",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-yanggang",
+    "town": "洋港",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 7,
+    "rawExtractedRow": "洋港 阴平 55 阳平 31 上声 42 去声 24 入声 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "55"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "24"
+      ],
+      [
+        "入声",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-longgang",
+    "town": "龙港",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 7,
+    "rawExtractedRow": "龙港 阴平 55 阳平 31 上声 42 去声 24 人声 34",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "55"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "24"
+      ],
+      [
+        "人声",
+        "34"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "hold-category-label"
+  },
+  {
+    "localityId": "gan-tongshan-yanxia",
+    "town": "燕厦",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 7,
+    "rawExtractedRow": "燕厦 阴平 55 阳平 31 上声 42 去声 213 入声 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "55"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "去声",
+        "213"
+      ],
+      [
+        "入声",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-xianan-damu",
+    "town": "大幕",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 8,
+    "rawExtractedRow": "大幕 阴平 22 阳平 31 上声 42 阳去 45 阴去 213 阳去 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "22"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "阳去",
+        "45"
+      ],
+      [
+        "阴去",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-baisha",
+    "town": "白沙",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 9,
+    "rawExtractedRow": "白沙 阴平 33 阳平 31 上声 42 阴平 33 入声 213",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "入声",
+        "213"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-futu",
+    "town": "浮屠",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 9,
+    "rawExtractedRow": "浮屠 阴平 44 阳平 31 上声 42 阴平 44 入声 35",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "44"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "上声",
+        "42"
+      ],
+      [
+        "入声",
+        "35"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-xingguo",
+    "town": "兴国",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 9,
+    "rawExtractedRow": "兴国 阴平 33 阳平 212 上声 31 阴平 33 入声 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "212"
+      ],
+      [
+        "上声",
+        "31"
+      ],
+      [
+        "入声",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-taogang",
+    "town": "陶港",
+    "pdfPage": 105,
+    "printedPage": 99,
+    "table": 9,
+    "rawExtractedRow": "陶港 阴平 33 阳平 42 上声 31 阴平 33 入声 45",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "42"
+      ],
+      [
+        "上声",
+        "31"
+      ],
+      [
+        "入声",
+        "45"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-wangying",
+    "town": "王英",
+    "pdfPage": 106,
+    "printedPage": 100,
+    "table": 10,
+    "rawExtractedRow": "王英 阴平 22 阳平 31 阴平 22 入声 24",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "22"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "入声",
+        "24"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  },
+  {
+    "localityId": "gan-yangxin-sanxi",
+    "town": "三溪",
+    "pdfPage": 106,
+    "printedPage": 100,
+    "table": 10,
+    "rawExtractedRow": "三溪 阴平 33 阳平 31 阴平 33 入声 24",
+    "uniqueCategoryContours": [
+      [
+        "阴平",
+        "33"
+      ],
+      [
+        "阳平",
+        "31"
+      ],
+      [
+        "入声",
+        "24"
+      ]
+    ],
+    "matchesLedger": true,
+    "reviewStatus": "visually-checked"
+  }
+]

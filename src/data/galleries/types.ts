@@ -8,4 +8,6 @@ export type GalleryPhoto = GroupPhoto & {
   width?: number;
   height?: number;
   searchText?: string;
+  /** Curated associations; IDs must resolve within this locality’s attested readings. */
+  relatedWordIds?: string[];
 };

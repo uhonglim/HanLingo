@@ -31,6 +31,8 @@ try {
     "",
     `Amoy-count benchmark: ${baseline.ipaWords} source readings and ${baseline.photos} photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **${parity.length} of ${places.length} localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.`,
     "",
+    `Separately typed character readings: **${total("characterReadings")}** (included in IPA entries, excluded from meaning quizzes). Source citation-tone inventories: **${total("citationToneInventories")}** with **${total("citationToneCategories")}** category/contour pairs; these are not words or recordings.`,
+    "",
     `Of the IPA entries, ${total("segmentalEntries")} retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.`,
     "",
     "## Branch inventory",

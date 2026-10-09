@@ -3,6 +3,7 @@ import type { GroupPhoto } from "../photography";
 export type LearningSource = { title: string; url: string };
 export type AttestedWord = {
   id: string;
+  learningKind?: "word" | "character-reading";
   han: string;
   english: string;
   ipa: string;

@@ -2,11 +2,11 @@
 
 Reviewed 9 October 2026. These photographs illustrate documented places and cultural objects. They do not authenticate pronunciation or identify a pictured person’s language. Nanning city scenes are broader context for the specific Tingzi Pinghua reading reference. Jiangyong county scenes are broader context for Baishui village, not photographs of Baishui itself. Jixi scenes include specifically named villages within the county; the language source does not identify these as recording sites. Guilin photographs illustrate the city and documented regional activities, not a claim that the pictured people speak Pinghua.
 
-Seven city and county galleries contain nine distinct subjects each. Jiangyong retains two documented county scenes because the available Commons category did not provide nine distinct local scenes; duplicate panoramas, maps and exhibits photographed outside the county were excluded.
+Nanchang, Changsha, Taiyuan, Jixi and Guilin contain eleven distinct scenes each. Tunxi and Nanning contain nine each. Jiangyong retains two documented county scenes because the available Commons category did not provide nine distinct local scenes; duplicate panoramas, maps and exhibits photographed outside the county were excluded.
 
 Source Commons description pages were read for author, licence and scene descriptions. Originals were resized without cropping to a maximum of 1440 pixels, converted to WebP, and visually checked in contact sheets. No generated imagery or invented recordings. Each derivative remains under its source licence. Original SHA-256 hashes are recorded below.
 
-## Nanchang — 9 scenes
+## Nanchang — 11 scenes
 
 - **Opera in street sculpture** — [Nanchang_Tea-Picking_Opera_南昌采茶戏.jpg](https://commons.wikimedia.org/wiki/File:Nanchang_Tea-Picking_Opera_%E5%8D%97%E6%98%8C%E9%87%87%E8%8C%B6%E6%88%8F.jpg); Yinweiaiqing; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). A street relief in Nanchang depicting tea-picking opera. This is a sculpture, not a live performance.
   - Original SHA-256: `002d3d7cc44e479036b40101b61a88e6c516fe15a82fb80e8bac8ad58ba2f4b1`; source date: 14 December 2023, 12:55:20.
@@ -26,8 +26,12 @@ Source Commons description pages were read for author, licence and scene descrip
   - Original SHA-256: `617767bff2ff1f83afe7fd5a5404b7e17fe25dd2e30f09e8f580a2831329f48d`; source date: Taken on 13 May 2008.
 - **Zhuangyuan Bridge** — [Zhuangyuan_Bridge.JPG](https://commons.wikimedia.org/wiki/File:Zhuangyuan_Bridge.JPG); Marchrius; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Zhuangyuan Bridge in Nanchang.
   - Original SHA-256: `b12cd0a98f3e38814712357dc2486cce4f8b9668fca550b7a20a63868ad30bb6`; source date: 16 August 2009.
+- **New Year fireworks** — [Nanchang_fireworks_2024.jpg](https://commons.wikimedia.org/wiki/File:Nanchang_fireworks_2024.jpg); UserAlbert; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Fireworks at Nanchang’s 2024 Chinese New Year gala.
+  - Original SHA-256: `fb8167f6b012a2abb850bfbb5320b03bf7ef0770752f30abaa1af1c33d830531`; source date: 10 February 2024.
+- **Xu Ruzi’s tomb** — [Xu_Ruzi_Tomb.JPG](https://commons.wikimedia.org/wiki/File:Xu_Ruzi_Tomb.JPG); Marchrius; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). The tomb of Xu Ruzi in Nanchang, with its stone enclosure and commemorative stele.
+  - Original SHA-256: `f632abf353ca404274d8238925698cc288c322992a44326e357bdb82036ef307`; source date: 18 August 2009.
 
-## Taiyuan — 9 scenes
+## Taiyuan — 11 scenes
 
 - **Twin pagodas** — [太原永祚寺双塔_The_Twin_Pagodas_of_Yongzuo_Temple_in_Taiyuan.jpg](https://commons.wikimedia.org/wiki/File:%E5%A4%AA%E5%8E%9F%E6%B0%B8%E7%A5%9A%E5%AF%BA%E5%8F%8C%E5%A1%94_The_Twin_Pagodas_of_Yongzuo_Temple_in_Taiyuan.jpg); HerryCFPL; [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en). Twin pagodas, Taiyuan.
   - Original SHA-256: `0c90b77a1f793bc5437df18b72172d9ac73bfe80fee8d504f0989ebfdfa295cd`; source date: 27 June 2025.
@@ -47,6 +51,10 @@ Source Commons description pages were read for author, licence and scene descrip
   - Original SHA-256: `93979d1820ef983ac865182207c2fd73f5c6505f405d5f7e0da8e0d1227afad3`; source date: 15 June 2014 (according to Exif data).
 - **Shanxi Grand Theatre** — [Shanxi_Grand_Theatre_(54573252723).jpg](https://commons.wikimedia.org/wiki/File:Shanxi_Grand_Theatre_(54573252723).jpg); xiquinhosilva; [CC BY 2.0](https://creativecommons.org/licenses/by/2.0). Shanxi Grand Theatre, Taiyuan.
   - Original SHA-256: `9bf7b0795372109378d6e222b875de6cd05d92e8707d90e2c7142210dd7d3214`; source date: 8 December 2019, 15:43.
+- **Puffed grains on the street** — [J84878_Taiyuan_20140717-175938.61_popper.jpg](https://commons.wikimedia.org/wiki/File:J84878_Taiyuan_20140717-175938.61_popper.jpg); Emdx; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). A vendor preparing puffed rice and corn on Donggang Road in Taiyuan.
+  - Original SHA-256: `8986f0a26e1f136468a2b27c5ade1422bb79606effb03c2251f39f95ee2d3526`; source date: 17 July 2014, 17:59:38.
+- **The Holy Mother Hall at Jinci** — [Goddess_Temple_Jinsi.JPG](https://commons.wikimedia.org/wiki/File:Goddess_Temple_Jinsi.JPG); Gisling; [CC BY 3.0](https://creativecommons.org/licenses/by/3.0). The Holy Mother Hall at Jinci, in Taiyuan’s Jinyuan district.
+  - Original SHA-256: `068f0cf057e923a468cd314a7b76ec3bd61c4d3c0f32d70bba6d616da2346749`; source date: October 2008.
 
 ## Tunxi — 9 scenes
 
@@ -69,7 +77,7 @@ Source Commons description pages were read for author, licence and scene descrip
 - **Wancui building** — [屯溪老街万粹楼,_2010-10-19.jpg](https://commons.wikimedia.org/wiki/File:%E5%B1%AF%E6%BA%AA%E8%80%81%E8%A1%97%E4%B8%87%E7%B2%B9%E6%A5%BC,_2010-10-19.jpg); 江上清风1961; [CC BY 3.0](https://creativecommons.org/licenses/by/3.0). Wancui building, Tunxi.
   - Original SHA-256: `64ea8aecf1e79ae3756c9b28e56bb0b0ff2fab9a38f1ca872e5ebeceef9d5d63`; source date: Taken on 19 October 2010.
 
-## Changsha — 9 scenes
+## Changsha — 11 scenes
 
 - **Stinky tofu** — [Changsha_Stinky_Tofu.jpg](https://commons.wikimedia.org/wiki/File:Changsha_Stinky_Tofu.jpg); Lennartbj; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Stinky tofu, Changsha.
   - Original SHA-256: `ba62cd36e5632c4006a1f4953a3be206fe328fbc0b9a3ad95c0438ee4c75bc7b`; source date: 15 November 2017.
@@ -89,6 +97,10 @@ Source Commons description pages were read for author, licence and scene descrip
   - Original SHA-256: `cdb566247f4dd8030c645b01f7fc97060b9d931b75bbaabfd4a9f697eabdf06b`; source date: 29 October 2018.
 - **Cake moulds** — [Cake_Moulds_(10113310023).jpg](https://commons.wikimedia.org/wiki/File:Cake_Moulds_(10113310023).jpg); Gary Todd from Xinzheng, China; [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en). Wooden cake moulds displayed at the City Museum in Changsha.
   - Original SHA-256: `7c65e6aa55e856a740fa5a40d946445da0f3e1f57e98235e1af5bb34e37cf7b6`; source date: 19 August 2010, 13:15.
+- **A sedan chair** — [Sedan_Chair_(10114217906).jpg](https://commons.wikimedia.org/wiki/File:Sedan_Chair_(10114217906).jpg); Gary Todd from Xinzheng, China; [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en). A red sedan chair displayed at the City Museum in Changsha.
+  - Original SHA-256: `c8a7d4cbe9e22e0f4b5488989e809462c6cb4294066f2724cd9b6df39b09a875`; source date: 19 August 2010, 13:15.
+- **Milk tea and toppings** — [茶颜悦色奶茶实拍图.jpg](https://commons.wikimedia.org/wiki/File:%E8%8C%B6%E9%A2%9C%E6%82%A6%E8%89%B2%E5%A5%B6%E8%8C%B6%E5%AE%9E%E6%8B%8D%E5%9B%BE.jpg); CHENG SHIYI; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Chayan Yuese milk tea with cream and toppings. The source places the image in its Changsha food collection but does not name the shop.
+  - Original SHA-256: `56d14067231afce5dd2d4893c9653328a308b4b8287eb0a6e0369dcd54d2f17f`; source date: 24 September 2023.
 
 ## Nanning — 9 scenes
 
@@ -118,7 +130,7 @@ Source Commons description pages were read for author, licence and scene descrip
 - **Jiangyong railway station** — [江永站站房（2023）.jpg](https://commons.wikimedia.org/wiki/File:%E6%B1%9F%E6%B0%B8%E7%AB%99%E7%AB%99%E6%88%BF%EF%BC%882023%EF%BC%89.jpg); BMSBridge; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Jiangyong railway station in 2023. A county transport scene, not Baishui village or evidence of a speaker’s dialect.
   - Original SHA-256: `f44bf9b2fb53bb43ab41baa93439bce4d3e06b9ec4be3869946c4f28e5e6e66a`; source date: 24 April 2023, 19:00:42.
 
-## Jixi County — 9 scenes
+## Jixi County — 11 scenes
 
 - **Jixi Museum** — [绩溪博物馆馆舍1.JPG](https://commons.wikimedia.org/wiki/File:%E7%BB%A9%E6%BA%AA%E5%8D%9A%E7%89%A9%E9%A6%86%E9%A6%86%E8%88%8D1.JPG); 三猎; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). The Jixi Museum building in Jixi County.
   - Original SHA-256: `7cb6196186292feb58eebfcb8f424234e0e1b3875d61f1c8f2bd4d8f11384106`; source date: 27 February 2016, 11:00:24.
@@ -138,8 +150,12 @@ Source Commons description pages were read for author, licence and scene descrip
   - Original SHA-256: `f17c5a24266e99fbb1e3984d2591702be486edc45465f40573cbb7754f3b4c6c`; source date: 2 January 2015, 11:20:26.
 - **Dragon-head woodcarving** — [Camel's_Hump_in_Jixi_Museum,_Anhui_01_2015-01.JPG](https://commons.wikimedia.org/wiki/File:Camel%27s_Hump_in_Jixi_Museum,_Anhui_01_2015-01.JPG); 猫猫的日记本; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). A Qing-dynasty wooden carving with ruyi and dragon-head decoration at Jixi Museum.
   - Original SHA-256: `d907323e0055275c8f3926483907c038e59dcf91cbb4a57e30e24fb57d7dd842`; source date: 2 January 2015, 09:10:02.
+- **Watching opera in Jiapeng** — [Img_WmI5N21xNThaekFwWlhxREZZdCszNTRhUHMva1FRbi9oWGZUeno1ZHFKdTN5TUVDZFhCOXBnPT0.jpg](https://commons.wikimedia.org/wiki/File:Img_WmI5N21xNThaekFwWlhxREZZdCszNTRhUHMva1FRbi9oWGZUeno1ZHFKdTN5TUVDZFhCOXBnPT0.jpg); 清溪; [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5). A performance and its audience in Jiapeng township, Jixi County. The photograph does not identify the language of individual participants.
+  - Original SHA-256: `8eb068d177ad3e78c6fb7270da803c6185a10fe7bc7342eae4e64087f404d873`; source date: 2 April 2014.
+- **A tea shelter on the ancient trail** — [徽杭古道_施茶亭.JPG](https://commons.wikimedia.org/wiki/File:%E5%BE%BD%E6%9D%AD%E5%8F%A4%E9%81%93_%E6%96%BD%E8%8C%B6%E4%BA%AD.JPG); 三猎; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). The Shicha tea shelter on the Huizhou–Hangzhou ancient trail near Jixi’s Jiangnan First Pass. County cultural context, not an identified language-recording site.
+  - Original SHA-256: `f9ccae14ad1f0650b96c8e940a4a8c0c102ac64a770c99bc16ae01b1a4776a3b`; source date: 26 February 2016, 10:30:52.
 
-## Guilin — 9 scenes
+## Guilin — 11 scenes
 
 - **Tai chi in the park** — [20090503_Guilin_tai_chi_6335.jpg](https://commons.wikimedia.org/wiki/File:20090503_Guilin_tai_chi_6335.jpg); Jakub Hałun; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). A tai chi demonstration in a Guilin city park. The scene does not establish the participants’ language.
   - Original SHA-256: `8253efe56b537b9331fd4e2a7a59c052cce84b70d68fd0e8e4221106b4e02f92`; source date: 3 May 2009.
@@ -159,3 +175,14 @@ Source Commons description pages were read for author, licence and scene descrip
   - Original SHA-256: `060a9aa21d4a449d901e4c0638f811561bce295499b2c3652c876b0b8d8e6fa7`; source date: Taken on 31 December 2011.
 - **Cormorants by the river** — [Cormorant_fishing_-Guilin_-China-25June2007.jpg](https://commons.wikimedia.org/wiki/File:Cormorant_fishing_-Guilin_-China-25June2007.jpg); Nat Welch from SLO, CA, USA; [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0). Cormorants on bamboo rafts in a fishing scene documented in Guilin.
   - Original SHA-256: `b3a68d113506bb9a07e0d3472a294b448b13ef079bff007c101336bf355eb28d`; source date: 25 June 2007, 20:10.
+- **The palace garden** — [Jingjiang_Princes_City_89813-Guilin_(49040806076).jpg](https://commons.wikimedia.org/wiki/File:Jingjiang_Princes_City_89813-Guilin_(49040806076).jpg); xiquinhosilva; [CC BY 2.0](https://creativecommons.org/licenses/by/2.0). A garden pond and pavilion at Jingjiang Princes’ City in Guilin.
+  - Original SHA-256: `b685f2341e33a15e8922fd69c91a9cb9a6d4a61598763c6fd195359d4138e3a2`; source date: 16 June 2018, 14:31.
+- **Oil-tea accompaniments** — [桂林油茶_(6659768217).jpg](https://commons.wikimedia.org/wiki/File:%E6%A1%82%E6%9E%97%E6%B2%B9%E8%8C%B6_(6659768217).jpg); Rhea Lee from Perth, Australia; [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0). Puffed rice, peanuts and other accompaniments for Guilin oil tea. The source identifies the dish but does not specify the restaurant location.
+  - Original SHA-256: `ab7b09617fd6c66b5b73d54c10cedba40c87dc823322c531d07083dbaf3bd1d3`; source date: 9 December 2011, 13:42.
+
+
+## Supplemental scene review
+
+The ten additions retain all original photographs. They add separate subjects, not alternate angles or crops. The Nanchang advertising-poster candidate was excluded; the trail landscape candidate with conflicting category metadata was also excluded. The Jiapeng performance is licensed on Commons by attribution to 清溪, with its original Lofter source retained on the Commons description page. The original Lofter page was not accessible during this audit; the reuse licence is the explicit Commons CC BY-SA 2.5 record.
+
+Jixi trail scope is corroborated by the [Jixi County trail description](https://www.cnjx.gov.cn/About/show/1121214.html) and the trail sequence in the [2019 Anhui University of Technology journal article](https://xuebaosk.ahut.edu.cn/cn/article/pdf/preview/10.3969/j.issn.1671-9247.2019.03.006.pdf). The photo caption identifies the Shicha shelter, without assigning it a recording location.

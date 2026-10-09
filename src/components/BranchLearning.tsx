@@ -1,3 +1,4 @@
+import SourceToneInventory from "./SourceToneInventory";
 import PlaceName from "./PlaceName";
 import { Bookmark } from "lucide-react";
 import { useWordNotebook } from "../hooks/useWordNotebook";
@@ -111,6 +112,7 @@ export default function BranchLearning({
   const localData = places.map((place) => getLocalLearning(place));
   const data = {
     words: localData.flatMap((local) => local.words),
+    toneInventories: localData.flatMap(local => local.toneInventories),
     soundNotes: [...new Map(localData.flatMap(local => local.soundNotes).map(item => [`${item.title}/${item.localityIds.join('/')}`, item])).values()],
     culture: [...new Map(localData.flatMap(local => local.culture).map(item => [`${item.title}/${item.localityIds.join('/')}`, item])).values()],
     resources: [...localData.flatMap(local => local.resources),
@@ -220,7 +222,7 @@ export default function BranchLearning({
           </div>
         </section>
       )}
-      {soundNotes.length > 0 && (
+      {(soundNotes.length > 0 || data.toneInventories.length > 0) && (
         <section className="learning-sound-preview">
           <h2>
             {point ? (
@@ -229,6 +231,13 @@ export default function BranchLearning({
               "Sounds"
             )}
           </h2>
+          {data.toneInventories.slice(0, point ? 1 : 3).map(inventory => {
+            const locality = places.find(place => place.id === inventory.localityId)!;
+            return <div key={inventory.id}>
+              {!point && <Link className="learning-locality" to={`${varietyPath(locality)}/sounds`}><PlaceName point={locality}/></Link>}
+              <SourceToneInventory inventory={inventory}/>
+            </div>;
+          })}
           <div className="learning-sound-grid">
             {soundNotes.map((note) => (
               <article key={`${note.localityIds.join("/")}/${note.title}`}>

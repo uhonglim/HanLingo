@@ -24,8 +24,18 @@ Use `npm run audit:content` to count all localities, including those with zero l
 - Respect unavailable or blocked source hosts; use independent accessible sources or preserve the gap.
 - Cultural photographs show their named scene. They do not establish a photographed person's language, and a city scene must not be captioned as a different village.
 
-## Current batch
+## First wider-atlas batch
 
 The first integrated batch has eleven top-level entries: ten named groups and the explicitly geographic Tuhua collections. It preserves the original 1,000 references and adds 155, across 32 additional branches. New lexical material is 921 source readings in Nanchang, Changsha, Taiyuan, Jixi and the source-qualified Guilin Pinghua reference. The gallery addition is 65 distinct documented scenes across eight places. Unresolved source-character rows are held out after independent review.
 
 The authoritative full-site counts are regenerated in `CONTENT-DEPTH.md` and `ATLAS-INVENTORY.md`. This batch does not complete the whole-atlas objective: only 51 localities currently have IPA, 83 have galleries, and the majority of catalogue places still lack local learning material. No new connected-speech recordings have been added in this batch. Next work prioritizes the remaining Gan/Xiang branches, primary Tuhua pronunciation evidence, source-qualified modern comparison material and geographically matched galleries.
+
+## Township tones and Xiang comparisons
+
+The next batch adds 36 source-named Da–Tong Gan towns and one Hengyang study reference, bringing the atlas to 1,192 locality references. Three Xiang county references are reused rather than duplicated. Wu 2024 supplies 238 character readings for Shuangfeng, Hengyang, Xupu and Chenxi; these remain distinct from everyday vocabulary and cannot create meaning quizzes. The source’s category numbers are never plotted as pitch. Hengshan readings remain held because the named source reference does not resolve the competing county classifications.
+
+Zhang and Wang 2022 supply 36 citation-tone inventories with 196 category/contour pairs. These have their own visual charts under Sounds and do not count as words, speaker recordings or complete courses. Three original rows remain unpublished: one unresolved source category label and two geographic anchors. Independent PDF-text and image review corrected two initial transcription mistakes before publication.
+
+Nanchang, Changsha, Taiyuan, Jixi and Guilin now each have 11 distinct licensed scenes. Full-site coverage is 55 localities with IPA, 83 with photographs, 4,644 IPA entries including the 238 explicitly typed character readings, and 783 gallery placements of 765 distinct images. Seven localities meet the existing Amoy count benchmark; this remains a small share of the atlas. The live recording count has not increased.
+
+Photo-related readings now require explicit locality word links. Incidental words in a caption no longer produce false vocabulary associations. Source-only tone charts and character readings have separate coverage counters and route/quiz checks.

@@ -2,9 +2,11 @@
 
 Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.
 
-Inventory: **68 branches · 1155 locality references**. Actual learning coverage: **51 localities with IPA**, **83 with photos**, **4406 IPA entries**, **32 additional source-spelling entries**, **773 gallery placements of 755 distinct image assets**, **3 publisher-hosted recording clips**.
+Inventory: **68 branches · 1192 locality references**. Actual learning coverage: **55 localities with IPA**, **83 with photos**, **4644 IPA entries**, **32 additional source-spelling entries**, **783 gallery placements of 765 distinct image assets**, **3 publisher-hosted recording clips**.
 
-Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **2 of 1155 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
+Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **7 of 1192 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
+
+Separately typed character readings: **238** (included in IPA entries, excluded from meaning quizzes). Source citation-tone inventories: **36** with **196** category/contour pairs; these are not words or recordings.
 
 Of the IPA entries, 64 retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.
 
@@ -51,18 +53,18 @@ Of the IPA entries, 64 retain source transcriptions with tones omitted. Their ca
 | gan/huaiyue | 5 | 0 | 0 | 0 | 0 | 0 | 0 |
 | gan/fuguang | 13 | 0 | 0 | 0 | 0 | 0 | 0 |
 | xiang/yongquan | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/datong | 15 | 0 | 0 | 0 | 0 | 0 | 0 |
+| gan/datong | 51 | 0 | 0 | 0 | 0 | 0 | 0 |
 | gan/leizi | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
-| xiang/hengzhou | 7 | 0 | 0 | 0 | 0 | 0 | 0 |
-| xiang/chenxu | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| xiang/loushao | 13 | 0 | 0 | 0 | 0 | 0 | 0 |
+| xiang/hengzhou | 8 | 58 | 58 | 0 | 2 | 2 | 4 |
+| xiang/chenxu | 2 | 119 | 119 | 0 | 4 | 4 | 8 |
+| xiang/loushao | 13 | 61 | 61 | 0 | 2 | 2 | 4 |
 | gan/dongsui | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| xiang/changyi | 20 | 250 | 250 | 9 | 2 | 2 | 4 |
+| xiang/changyi | 20 | 250 | 250 | 11 | 2 | 2 | 4 |
 | gan/jicha | 9 | 0 | 0 | 0 | 0 | 0 | 0 |
 | gan/yingyi | 6 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/changdu | 13 | 250 | 250 | 9 | 2 | 2 | 4 |
+| gan/changdu | 13 | 250 | 250 | 11 | 2 | 2 | 4 |
 | gan/yiliu | 6 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/bingzhou | 3 | 172 | 172 | 9 | 3 | 2 | 2 |
+| jin/bingzhou | 3 | 172 | 172 | 11 | 3 | 2 | 2 |
 | jin/luliang | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
 | jin/shangdang | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | jin/wutai | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -70,12 +72,12 @@ Of the IPA entries, 64 retain source transcriptions with tones omitted. Their ca
 | jin/zhanghu | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | jin/hanxin | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | jin/zhiyan | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| hui/jishe | 2 | 115 | 115 | 9 | 3 | 2 | 2 |
+| hui/jishe | 2 | 115 | 115 | 11 | 3 | 2 | 2 |
 | hui/xiuyi | 3 | 0 | 0 | 9 | 0 | 0 | 0 |
 | hui/qiwu | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | hui/jingzhan | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
 | hui/yanzhou | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| pinghua/northern-pinghua | 3 | 134 | 134 | 9 | 4 | 2 | 2 |
+| pinghua/northern-pinghua | 3 | 134 | 134 | 11 | 4 | 2 | 2 |
 | pinghua/southern-pinghua | 3 | 0 | 0 | 9 | 0 | 0 | 0 |
 | tuhua/southern-hunan | 2 | 0 | 0 | 2 | 0 | 0 | 0 |
 | tuhua/northern-guangdong | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -1124,6 +1126,42 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | gan-county-430682 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-430602 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-430603 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| gan-tongcheng-juanshui | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-magang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-guandao | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-maishi | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-tanghu | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-shadui | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-sizhuang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-daye-chengui | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-fenglin | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongshan-tongyang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-xianan-fushan | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-jiayu-yuyue | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-chibi-chebu | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-chongyang-shicheng | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-shinan | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-beigang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongcheng-daping | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-daye-jinhu | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-daye-yinzu | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-daye-dajipu | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-daye-liurenba | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-taizi | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-dawang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-huangsangkou | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-fuchi | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-paishi | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-mugang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-yanggang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-tongshan-yanxia | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-xianan-damu | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-baisha | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-futu | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-xingguo | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-taogang | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-wangying | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
+| gan-yangxin-sanxi | 0 | 0 | 0 | 0 | 0 | 0 | 0 | sounds |
 | gan-county-431023 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-430482 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-430481 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1134,12 +1172,13 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | xiang-county-430406 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430408 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430405 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| xiang-county-431223 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| xiang-county-431224 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| hengyang-xiang | 58 | 0 | 0 | 0 | 2 | 2 | 4 | words, sounds |
+| xiang-county-431223 | 61 | 0 | 0 | 0 | 2 | 2 | 4 | words, sounds |
+| xiang-county-431224 | 58 | 0 | 0 | 0 | 2 | 2 | 4 | words, sounds |
 | xiang-county-431225 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-431382 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-431302 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| xiang-county-431321 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| xiang-county-431321 | 61 | 0 | 0 | 0 | 2 | 2 | 4 | words, sounds |
 | xiang-county-431322 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430511 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430529 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1150,7 +1189,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | xiang-county-430382 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430381 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-430525 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| changsha-xiang | 250 | 0 | 0 | 9 | 2 | 2 | 4 | words, culture, sounds, practice |
+| changsha-xiang | 250 | 0 | 0 | 11 | 2 | 2 | 4 | words, culture, sounds, practice |
 | xiang-county-430321 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430302 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430304 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1185,7 +1224,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | gan-county-361129 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-361127 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360602 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| nanchang-gan | 250 | 0 | 0 | 9 | 2 | 2 | 4 | words, culture, sounds, practice |
+| nanchang-gan | 250 | 0 | 0 | 11 | 2 | 2 | 4 | words, culture, sounds, practice |
 | gan-county-360426 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360428 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360482 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1204,7 +1243,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | gan-county-360982 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360502 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360521 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| taiyuan-jin | 172 | 0 | 0 | 9 | 3 | 2 | 2 | words, culture, sounds, practice |
+| taiyuan-jin | 172 | 0 | 0 | 11 | 3 | 2 | 2 | words, culture, sounds, practice |
 | pingyao-jin | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | qingxu-jin | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | fenyang-jin | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1222,7 +1261,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | jiaozuo-jin | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | zhidan-jin | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | yanchuan-jin | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| jixi-hui | 115 | 0 | 0 | 9 | 3 | 2 | 2 | words, culture, sounds, practice |
+| jixi-hui | 115 | 0 | 0 | 11 | 3 | 2 | 2 | words, culture, sounds, practice |
 | shexian-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | tunxi-hui | 0 | 0 | 0 | 9 | 0 | 0 | 0 | culture |
 | yixian-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1231,7 +1270,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | wuyuan-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | shitai-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | jiande-meicheng-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| guilin-pinghua | 134 | 0 | 0 | 9 | 4 | 2 | 2 | words, culture, sounds, practice |
+| guilin-pinghua | 134 | 0 | 0 | 11 | 4 | 2 | 2 | words, culture, sounds, practice |
 | lingchuan-sanjie | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | lingui-wutong-pinghua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | nanning-pinghua | 0 | 0 | 0 | 9 | 0 | 0 | 0 | culture |
@@ -2240,6 +2279,42 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **gan-county-430682:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-430602:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-430603:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-juanshui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-magang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-guandao:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-maishi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-tanghu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-shadui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-sizhuang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-daye-chengui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-fenglin:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongshan-tongyang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-xianan-fushan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-jiayu-yuyue:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-chibi-chebu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-chongyang-shicheng:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-shinan:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-beigang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongcheng-daping:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-daye-jinhu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-daye-yinzu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-daye-dajipu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-daye-liurenba:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-taizi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-dawang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-huangsangkou:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-fuchi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-paishi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-mugang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-yanggang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-tongshan-yanxia:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-xianan-damu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-baisha:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-futu:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-xingguo:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-taogang:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-wangying:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **gan-yangxin-sanxi:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-431023:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-430482:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **gan-county-430481:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
@@ -2250,12 +2325,9 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **xiang-county-430406:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-430408:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-430405:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **xiang-county-431223:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **xiang-county-431224:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-431225:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-431382:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-431302:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **xiang-county-431321:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-431322:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-430511:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiang-county-430529:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.

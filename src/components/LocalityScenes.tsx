@@ -11,37 +11,14 @@ import Pronunciation from "./Pronunciation";
 import "./LocalityScenes.css";
 
 export function wordsForPhoto(photo: GalleryPhoto, words: AttestedWord[]) {
-  const subject = `${photo.title} ${photo.alt} ${photo.caption}`.toLowerCase();
-  const priority = [
-    "fish",
-    "tea",
-    "water",
-    "rice",
-    "eat",
-    "drink",
-    "door",
-    "house",
-    "road",
-    "tree",
-    "sky",
-    "mountain",
-    "river",
-    "flower",
-  ];
-  const rank = (word: AttestedWord) => {
-    const gloss = word.english.toLowerCase().split(";")[0].trim();
-    if (gloss.length > 2 && subject.includes(gloss)) return -1;
-    const index = priority.indexOf(gloss);
-    return index < 0 ? priority.length : index;
-  };
-  return words
-    .filter((word) => word.english.split(/[;,]/).some((meaning) => {
-      const gloss = meaning.trim().toLowerCase().replace(/^to /, "");
-      if (gloss.length < 3) return false;
-      const escaped = gloss.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      return new RegExp(`\\b${escaped}s?\\b`).test(subject);
-    }))
-    .sort((a, b) => rank(a) - rank(b))
+  // Only a curated association can connect a reading to a pictured subject.
+  // Caption words also include source qualifications, not just visible objects.
+  const localWords = new Map(words.map((word) => [word.id, word]));
+  return [...new Set(photo.relatedWordIds ?? [])]
+    .flatMap((id) => {
+      const word = localWords.get(id);
+      return word ? [word] : [];
+    })
     .slice(0, 3);
 }
 export function scenePhotos(photos: GalleryPhoto[]) {

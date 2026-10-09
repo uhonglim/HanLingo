@@ -1,3 +1,6 @@
+import { ganToneInventories } from "./gan-tone-inventories";
+import { xiangComparativeLearning } from "./xiang-comparative";
+import { meaningPracticeWords } from "./practice";
 import { otherSiniticLearning } from "./other-sinitic";
 import { ganXiangLearning } from "./gan-xiang";
 import { minMainlandCulture } from './min-mainland-culture';
@@ -30,7 +33,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,
@@ -90,7 +93,7 @@ export function getLocalLearning(point: MapPoint) {
   return {
     words: [
       ...baseWords,
-      ...additions.map((reading) => ({
+      ...additions.map((reading): AttestedWord => ({
         id: reading.id,
         han: reading.han,
         english: reading.english,
@@ -103,6 +106,7 @@ export function getLocalLearning(point: MapPoint) {
         source: reading.source,
       })),
     ],
+    toneInventories: ganToneInventories.filter(item => item.localityId === point.id),
     soundNotes:
       pack?.soundNotes.filter((item) => item.localityIds.includes(point.id)) ??
       [],
@@ -124,8 +128,8 @@ export function availableSections(point: MapPoint): LearningSection[] {
     data.culture.some((item) => item.photo)
       ? ["culture" as const]
       : []),
-    ...(data.soundNotes.length || data.words.length ? ["sounds" as const] : []),
-    ...(new Set(data.words.map((word) => word.english)).size >= 4
+    ...(data.soundNotes.length || data.words.length || data.toneInventories.length ? ["sounds" as const] : []),
+    ...(new Set(meaningPracticeWords(data.words).map((word) => word.english)).size >= 4
       ? ["practice" as const]
       : []),
   ];

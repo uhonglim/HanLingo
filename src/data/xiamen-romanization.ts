@@ -22,12 +22,13 @@ export const sharedSpellingExtensions: SpellingRule[] = [
     ["u", "u"], ["ʊ", "u"], ["y", "ü"], ["ʏ", "ü"],
     ["ø", "oe"], ["œ", "oe"], ["ɵ", "oe"], ["ə", "eo"], ["ɘ", "eo"], ["ɜ", "eo"]],
     "Shared", "A vowel family shares its reading spelling. Consult IPA for the exact vowel quality."),
+  ...rules([["ɿ", "ir"], ["ʅ", "ir"]], "Shared", "Sinological apical-vowel symbols share ir. The retroflex distinction remains in source IPA; these are not interchangeable pronunciations."),
   ...rules([["cʰ", "kyh"], ["c", "ky"], ["ɟ", "gy"],
     ["dz", "dz"], ["pfʰ", "pfh"], ["pf", "pf"],
     ["kʷʰ", "kwh"], ["kʰʷ", "kwh"], ["kʷ", "kw"],
     ["ɦ", "hh"], ["ɣ", "gh"], ["ɬ", "hl"], ["ɸ", "ff"], ["β", "vv"],
     ["ɓ", "ḅ"], ["ɗ", "ḍ"], ["ɒ", "ao"], ["æ", "ea"], ["ɯ", "uu"],
-    ["ɨ", "ii"], ["ɿ", "ir"], ["ʮ", "yr"], ["j", "y"], ["ɥ", "yw"],
+    ["ɨ", "ii"], ["ʮ", "yr"], ["j", "y"], ["ɥ", "yw"],
     ["i̯", "y"], ["u̯", "w"], ["y̯", "yw"]]),
 ];
 

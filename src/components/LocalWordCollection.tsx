@@ -1,3 +1,4 @@
+import { meaningPracticeWords } from "../data/learning/practice";
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import type { AttestedWord } from "../data/learning/types";
@@ -23,6 +24,8 @@ export default function LocalWordCollection({
   const { saved } = useWordNotebook();
   const query = params.get("q") ?? "";
   const requested = params.get("topic") ?? "";
+  const characterOnly = words.length > 0 && words.every(word => word.learningKind === "character-reading");
+  const entryLabel = characterOnly ? "readings" : "words";
   const regional = extraRegionalWords(localityId, words);
   const topics = wordTopics.filter((topic) =>
     [...words, ...regional].some((word) => wordTopic(word.english) === topic),
@@ -46,7 +49,7 @@ export default function LocalWordCollection({
   const savedWords = words.filter((word) => saved.includes(word.id));
   const savedCount = savedWords.length;
   const canPracticeSaved =
-    new Set(savedWords.map((word) => word.english)).size >= 4;
+    new Set(meaningPracticeWords(savedWords).map((word) => word.english)).size >= 4;
   const update = (name: string, value: string) => {
     const next = new URLSearchParams(params);
     if (value) next.set(name, value);
@@ -55,17 +58,18 @@ export default function LocalWordCollection({
   };
   return (
     <>
+      {characterOnly && <p className="learning-register">Source character readings. These identify the written characters; they are not translations of everyday words.</p>}
       <div className="local-word-tools">
         <label className="local-learning-search">
           <span className="sr-only">Search words</span>
           <input
             type="search"
             value={query}
-            placeholder="Word, meaning, IPA, or spelling"
+            placeholder={characterOnly ? "Character, IPA, or spelling" : "Word, meaning, IPA, or spelling"}
             onChange={(event) => update("q", event.target.value)}
           />
         </label>
-        <label className="local-topic-select">
+        {!characterOnly && <label className="local-topic-select">
           <span className="sr-only">Word topic</span>
           <select
             aria-label="Word topic"
@@ -77,7 +81,7 @@ export default function LocalWordCollection({
               <option key={item}>{item}</option>
             ))}
           </select>
-        </label>
+        </label>}
         {words.length > 0 && (
           <label className="local-saved-toggle">
             <input
@@ -93,7 +97,7 @@ export default function LocalWordCollection({
       </div>
       <div className="local-word-results">
         <p role="status">
-          {count} of {words.length + regional.length} words
+          {count} of {words.length + regional.length} {entryLabel}
         </p>
         {savedOnly && canPracticeSaved && (
           <Link to={`${base}/practice?saved=1`}>Practice saved words</Link>
@@ -112,12 +116,12 @@ export default function LocalWordCollection({
         <div className="local-words-empty">
           <h2>
             {savedOnly && !savedCount
-              ? "Your word collection starts here"
-              : "No matching words"}
+              ? (characterOnly ? "Your reading collection starts here" : "Your word collection starts here")
+              : `No matching ${entryLabel}`}
           </h2>
           <p>
             {savedOnly && !savedCount
-              ? "Save a word with its bookmark, then return here to review it."
+              ? "Save an entry with its bookmark, then return here to review it."
               : "Try another meaning, sound, or topic."}
           </p>
           <button
@@ -125,11 +129,11 @@ export default function LocalWordCollection({
               setParams({}, { replace: true, preventScrollReset: true })
             }
           >
-            Show all words
+            Show all {entryLabel}
           </button>
         </div>
       )}
-      {count > visibleCount && <button className="learning-show-more" onClick={() => setWindow({ key: viewKey, size: visibleCount + 48 })}>Show more words · {Math.min(visibleCount, count)} of {count}</button>}
+      {count > visibleCount && <button className="learning-show-more" onClick={() => setWindow({ key: viewKey, size: visibleCount + 48 })}>Show more {entryLabel} · {Math.min(visibleCount, count)} of {count}</button>}
       <RegionalDifferences
         key={localityId}
         localityId={localityId}

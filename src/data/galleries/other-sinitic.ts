@@ -137,6 +137,36 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
       "width": 1440,
       "height": 1080,
       "year": "2009"
+    },
+    {
+      "id": "other-sinitic-nanchang-gan-10",
+      "title": "New Year fireworks",
+      "category": "Culture",
+      "src": "/images/other-sinitic-nanchang-gan-10.webp",
+      "alt": "Fireworks at Nanchang’s 2024 Chinese New Year gala.",
+      "caption": "Fireworks at Nanchang’s 2024 Chinese New Year gala.",
+      "author": "UserAlbert",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanchang_fireworks_2024.jpg",
+      "width": 1440,
+      "height": 960,
+      "year": "2024"
+    },
+    {
+      "id": "other-sinitic-nanchang-gan-11",
+      "title": "Xu Ruzi’s tomb",
+      "category": "Culture",
+      "src": "/images/other-sinitic-nanchang-gan-11.webp",
+      "alt": "The tomb of Xu Ruzi in Nanchang, with its stone enclosure and commemorative stele.",
+      "caption": "The tomb of Xu Ruzi in Nanchang, with its stone enclosure and commemorative stele.",
+      "author": "Marchrius",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xu_Ruzi_Tomb.JPG",
+      "width": 1440,
+      "height": 1080,
+      "year": "2009"
     }
   ],
   "taiyuan-jin": [
@@ -274,6 +304,36 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
       "width": 1440,
       "height": 958,
       "year": "2019"
+    },
+    {
+      "id": "other-sinitic-taiyuan-jin-10",
+      "title": "Puffed grains on the street",
+      "category": "Food",
+      "src": "/images/other-sinitic-taiyuan-jin-10.webp",
+      "alt": "A vendor preparing puffed rice and corn on Donggang Road in Taiyuan.",
+      "caption": "A vendor preparing puffed rice and corn on Donggang Road in Taiyuan.",
+      "author": "Emdx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:J84878_Taiyuan_20140717-175938.61_popper.jpg",
+      "width": 1440,
+      "height": 900,
+      "year": "2014"
+    },
+    {
+      "id": "other-sinitic-taiyuan-jin-11",
+      "title": "The Holy Mother Hall at Jinci",
+      "category": "Culture",
+      "src": "/images/other-sinitic-taiyuan-jin-11.webp",
+      "alt": "The Holy Mother Hall at Jinci, in Taiyuan’s Jinyuan district.",
+      "caption": "The Holy Mother Hall at Jinci, in Taiyuan’s Jinyuan district.",
+      "author": "Gisling",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goddess_Temple_Jinsi.JPG",
+      "width": 1440,
+      "height": 1080,
+      "year": "2008"
     }
   ],
   "tunxi-hui": [
@@ -548,6 +608,36 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
       "width": 1440,
       "height": 960,
       "year": "2010"
+    },
+    {
+      "id": "other-sinitic-changsha-xiang-10",
+      "title": "A sedan chair",
+      "category": "Culture",
+      "src": "/images/other-sinitic-changsha-xiang-10.webp",
+      "alt": "A red sedan chair displayed at the City Museum in Changsha.",
+      "caption": "A red sedan chair displayed at the City Museum in Changsha.",
+      "author": "Gary Todd from Xinzheng, China",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sedan_Chair_(10114217906).jpg",
+      "width": 1440,
+      "height": 960,
+      "year": "2010"
+    },
+    {
+      "id": "other-sinitic-changsha-xiang-11",
+      "title": "Milk tea and toppings",
+      "category": "Food",
+      "src": "/images/other-sinitic-changsha-xiang-11.webp",
+      "alt": "Chayan Yuese milk tea with cream and toppings. The source places the image in its Changsha food collection but does not name the shop.",
+      "caption": "Chayan Yuese milk tea with cream and toppings. The source places the image in its Changsha food collection but does not name the shop.",
+      "author": "CHENG SHIYI",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%8C%B6%E9%A2%9C%E6%82%A6%E8%89%B2%E5%A5%B6%E8%8C%B6%E5%AE%9E%E6%8B%8D%E5%9B%BE.jpg",
+      "width": 1080,
+      "height": 1440,
+      "year": "2023"
     }
   ],
   "nanning-pinghua": [
@@ -854,6 +944,36 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
       "width": 1440,
       "height": 957,
       "year": "2015"
+    },
+    {
+      "id": "other-sinitic-jixi-hui-10",
+      "title": "Watching opera in Jiapeng",
+      "category": "Culture",
+      "src": "/images/other-sinitic-jixi-hui-10.webp",
+      "alt": "A performance and its audience in Jiapeng township, Jixi County. The photograph does not identify the language of individual participants.",
+      "caption": "A performance and its audience in Jiapeng township, Jixi County. The photograph does not identify the language of individual participants.",
+      "author": "清溪",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Img_WmI5N21xNThaekFwWlhxREZZdCszNTRhUHMva1FRbi9oWGZUeno1ZHFKdTN5TUVDZFhCOXBnPT0.jpg",
+      "width": 1200,
+      "height": 870,
+      "year": "2014"
+    },
+    {
+      "id": "other-sinitic-jixi-hui-11",
+      "title": "A tea shelter on the ancient trail",
+      "category": "Culture",
+      "src": "/images/other-sinitic-jixi-hui-11.webp",
+      "alt": "The Shicha tea shelter on the Huizhou–Hangzhou ancient trail near Jixi’s Jiangnan First Pass. County cultural context, not an identified language-recording site.",
+      "caption": "The Shicha tea shelter on the Huizhou–Hangzhou ancient trail near Jixi’s Jiangnan First Pass. County cultural context, not an identified language-recording site.",
+      "author": "三猎",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%BE%BD%E6%9D%AD%E5%8F%A4%E9%81%93_%E6%96%BD%E8%8C%B6%E4%BA%AD.JPG",
+      "width": 1440,
+      "height": 810,
+      "year": "2016"
     }
   ],
   "guilin-pinghua": [
@@ -991,6 +1111,36 @@ export const otherSiniticGalleries: Record<string, GalleryPhoto[]> = {
       "width": 1440,
       "height": 1080,
       "year": "2007"
+    },
+    {
+      "id": "other-sinitic-guilin-pinghua-10",
+      "title": "The palace garden",
+      "category": "Culture",
+      "src": "/images/other-sinitic-guilin-pinghua-10.webp",
+      "alt": "A garden pond and pavilion at Jingjiang Princes’ City in Guilin.",
+      "caption": "A garden pond and pavilion at Jingjiang Princes’ City in Guilin.",
+      "author": "xiquinhosilva",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jingjiang_Princes_City_89813-Guilin_(49040806076).jpg",
+      "width": 1440,
+      "height": 960,
+      "year": "2018"
+    },
+    {
+      "id": "other-sinitic-guilin-pinghua-11",
+      "title": "Oil-tea accompaniments",
+      "category": "Food",
+      "src": "/images/other-sinitic-guilin-pinghua-11.webp",
+      "alt": "Puffed rice, peanuts and other accompaniments for Guilin oil tea. The source identifies the dish but does not specify the restaurant location.",
+      "caption": "Puffed rice, peanuts and other accompaniments for Guilin oil tea. The source identifies the dish but does not specify the restaurant location.",
+      "author": "Rhea Lee from Perth, Australia",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%A1%82%E6%9E%97%E6%B2%B9%E8%8C%B6_(6659768217).jpg",
+      "width": 1440,
+      "height": 964,
+      "year": "2011"
     }
   ]
 };

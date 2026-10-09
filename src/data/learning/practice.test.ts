@@ -1,9 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { localWordCanDistract } from './practice';
+import { meaningPracticeWords, localWordCanDistract } from './practice';
 import { ganXiangLearning } from './gan-xiang';
+import { xiangComparativeLearning } from './xiang-comparative';
 import { makeQuiz } from '../xiamen-romanization';
 
 describe('local word practice', () => {
+  it('does not quiz source character identifications as lexical meanings', () => {
+    const characters = xiangComparativeLearning.flatMap(pack => pack.words);
+    expect(characters.length).toBeGreaterThan(200);
+    expect(meaningPracticeWords(characters)).toEqual([]);
+  });
   it('does not mark another attested sense of 吃 wrong in Nanchang', () => {
     const words = ganXiangLearning.flatMap(pack => pack.words).filter(word => word.localityId === 'nanchang-gan');
     const eat = words.find(word => word.english === 'eat')!;

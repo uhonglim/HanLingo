@@ -1,4 +1,5 @@
-import { localWordCanDistract } from "../data/learning/practice";
+import SourceToneInventory from "../components/SourceToneInventory";
+import { meaningPracticeWords, localWordCanDistract } from "../data/learning/practice";
 import LocalRecordings from '../components/LocalRecordings';
 import PlaceName from "../components/PlaceName";
 import { useState } from "react";
@@ -169,7 +170,8 @@ export default function LocalLearningPage() {
         />
       </div>
     );
-  const savedWords = data.words.filter((word) => saved.includes(word.id));
+  const practiceWords = meaningPracticeWords(data.words);
+  const savedWords = practiceWords.filter((word) => saved.includes(word.id));
   const savedPractice =
     query.get("saved") === "1" &&
     new Set(savedWords.map((word) => word.english)).size >= 4;
@@ -191,6 +193,7 @@ export default function LocalLearningPage() {
       {chapter === "sounds" && (
         <>
           <LocalRecordings localityId={point.id} />
+          {data.toneInventories.map(inventory => <SourceToneInventory key={inventory.id} inventory={inventory} />)}
           <LocalSoundExplorer key={`${point.id}-sounds`} words={data.words} />
           <LocalToneExplorer key={`${point.id}-tones`} words={data.words} />
           <RegionalDifferences key={`${point.id}-differences`} localityId={point.id} />
@@ -245,7 +248,7 @@ export default function LocalLearningPage() {
             )}
             <Practice
               key={`${point.id}/${savedPractice ? savedWords.map((word) => word.id).join(",") : "all"}`}
-              words={savedPractice ? savedWords : data.words}
+              words={savedPractice ? savedWords : practiceWords}
             />
           </>
         )

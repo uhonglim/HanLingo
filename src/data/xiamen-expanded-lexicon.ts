@@ -14,6 +14,7 @@ const categories: Record<string, XiamenWordCategory> = {
 const additions: XiamenWord[] = minSouthernExpanded.flatMap(pack => pack.words)
   .filter(word => word.localityId === 'xiamen')
   .map(word => {
+    if (!word.han) throw new Error(`Amoy character-card adapter requires an attested written form: ${word.id}`);
     if (word.toneNotation !== 'pitch-contour' || !/^\[.+\]$/u.test(word.ipa))
       throw new Error(`Amoy lesson requires explicitly supplied pitch: ${word.id}`);
     const syllables = word.ipa.slice(1, -1).split(/\s+/u).map(syllable => {

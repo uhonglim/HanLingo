@@ -76,7 +76,8 @@ function Practice({ words, mode }: { words: AttestedWord[]; mode: "meaning" | "s
       <p className="learning-quiz-progress">
         {round + 1} / {deck.length}
       </p>
-      <h2 lang="zh-Hant">{question.han}</h2>
+      {question.han && <h2 lang="zh-Hant">{question.han}</h2>}
+      {question.writingStatus === "not-supplied" && <p className="learning-register">Complete written form not supplied by the source.</p>}
       {question.registerLabel && (
         <p className="learning-register">{question.registerLabel}</p>
       )}

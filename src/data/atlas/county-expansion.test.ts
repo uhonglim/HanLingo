@@ -30,7 +30,7 @@ describe('reviewed thousand-locality atlas', () => {
       expect(filterMapLocalities(atlasLocalities, row.code).map(match => match.id)).toContain(place.id);
       // Only a subsequently sourced exact-place learning collection unlocks lessons.
       if (place.id === 'rongcheng-371082') {
-        expect(availableSections(findLearningPlace(place.id)!)).toEqual(['words', 'sounds', 'practice']);
+        expect(availableSections(findLearningPlace(place.id)!)).toEqual(['words', 'culture', 'sounds', 'practice']);
       } else expect(availableSections(findLearningPlace(place.id)!)).toEqual([]);
     }
   });

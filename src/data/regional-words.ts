@@ -9,6 +9,7 @@ import { mandarinYueLearning } from "./learning/mandarin-yue";
 import { hakkaWuLearning } from "./learning/hakka-wu";
 import { xiamenWords } from "./xiamen-lexicon";
 import type { LearningSource } from "./learning/types";
+import { hasWrittenForm } from "./learning/types";
 
 export type RegionalReading = {
   id: string;
@@ -310,6 +311,7 @@ const sharedConcepts: RegionalConcept[] = shared.map(
           note: word.note,
         })),
       ...existingWords
+        .filter(hasWrittenForm)
         .filter((word) => glosses.includes(word.english))
         .filter(
           (word) =>

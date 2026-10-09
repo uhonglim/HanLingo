@@ -32,68 +32,133 @@
     "Yangzhou": "yangzhou"
   },
   "rejected": {
-    "beijing-city": {
-      "unmapped source IPA": 18,
-      "non-simple or incomplete tone notation": 73
-    },
-    "chaozhou": {
-      "unmapped source IPA": 99,
-      "non-simple or incomplete tone notation": 21,
-      "unresolved local character form": 4,
-      "edited or annotated form needs review": 1
-    },
-    "chengdu": {
-      "unmapped source IPA": 6,
-      "non-simple or incomplete tone notation": 6
-    },
-    "fuzhou": {
-      "unmapped source IPA": 48,
-      "unresolved local character form": 3,
-      "non-simple or incomplete tone notation": 3
-    },
-    "guangzhou": {
-      "non-simple or incomplete tone notation": 19,
-      "unresolved local character form": 3,
-      "unmapped source IPA": 5
-    },
-    "hefei": {
-      "non-simple or incomplete tone notation": 29,
-      "unmapped source IPA": 2
-    },
-    "jinan": {
-      "unmapped source IPA": 5,
-      "non-simple or incomplete tone notation": 62
-    },
-    "meixian": {
-      "non-simple or incomplete tone notation": 7,
-      "unmapped source IPA": 3
-    },
-    "shenyang": {
-      "unmapped source IPA": 14,
-      "non-simple or incomplete tone notation": 73,
-      "edited or annotated form needs review": 1
-    },
-    "suzhou": {
-      "non-simple or incomplete tone notation": 162,
-      "unmapped source IPA": 34
-    },
-    "wenzhou": {
-      "unmapped source IPA": 7,
-      "non-simple or incomplete tone notation": 5,
-      "unresolved local character form": 2
-    },
-    "xian": {
-      "non-simple or incomplete tone notation": 68,
-      "unmapped source IPA": 9
-    },
-    "yangjiang": {
-      "unmapped source IPA": 2,
-      "unresolved local character form": 2
-    },
-    "yangzhou": {
-      "non-simple or incomplete tone notation": 51
-    }
+    "beijing-city": {},
+    "chaozhou": {},
+    "chengdu": {},
+    "fuzhou": {},
+    "guangzhou": {},
+    "hefei": {},
+    "jinan": {},
+    "meixian": {},
+    "shenyang": {},
+    "suzhou": {},
+    "wenzhou": {},
+    "xian": {},
+    "yangjiang": {},
+    "yangzhou": {}
   },
+  "writingRepairs": [
+    {
+      "id": "beida1964-Hefei-42_atdusknightfall-1",
+      "sourceId": "Hefei-42_atdusknightfall-1",
+      "sourceCharacters": "晚 囗 西",
+      "previousHan": "晚囗西",
+      "ipa": "[uæ̃²⁴ pɐʔ⁴ sɿ²¹²]",
+      "english": "at dusk (nightfall)",
+      "localityId": "hefei",
+      "sourceLine": 558,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Fuzhou-751_bad-1",
+      "sourceId": "Fuzhou-751_bad-1",
+      "sourceCharacters": "囗",
+      "previousHan": "囗",
+      "ipa": "[pʰai³¹]",
+      "english": "bad",
+      "localityId": "fuzhou",
+      "sourceLine": 761,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Shenyang-80_cattle-1",
+      "sourceId": "Shenyang-80_cattle-1",
+      "sourceCharacters": "牲 囗",
+      "previousHan": "牲囗",
+      "ipa": "[səŋ³³ kʰou²¹³]",
+      "english": "cattle",
+      "localityId": "shenyang",
+      "sourceLine": 2335,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-XiAn-89_donkeyass-1",
+      "sourceId": "XiAn-89_donkeyass-1",
+      "sourceCharacters": "囗",
+      "previousHan": "囗",
+      "ipa": "[ly²⁴]",
+      "english": "donkey, ass",
+      "localityId": "xian",
+      "sourceLine": 4033,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Meixian-12_lightning-1",
+      "sourceId": "Meixian-12_lightning-1",
+      "sourceCharacters": "囗 囗",
+      "previousHan": "囗囗",
+      "ipa": "[ȵiap²¹ laŋ⁴²]",
+      "english": "lightning",
+      "localityId": "meixian",
+      "sourceLine": 8447,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Jinan-85_malepig-1",
+      "sourceId": "Jinan-85_malepig-1",
+      "sourceCharacters": "囗 豬",
+      "previousHan": "囗豬",
+      "ipa": "[tɕyŋ³¹ tʂu²¹³]",
+      "english": "male pig",
+      "localityId": "jinan",
+      "sourceLine": 8926,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Chaozhou-135_mugwort-1",
+      "sourceId": "Chaozhou-135_mugwort-1",
+      "sourceCharacters": "囗",
+      "previousHan": "囗",
+      "ipa": "[hĩã¹¹]",
+      "english": "mugwort",
+      "localityId": "chaozhou",
+      "sourceLine": 9678,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Fuzhou-732_old-1",
+      "sourceId": "Fuzhou-732_old-1",
+      "sourceCharacters": "囗",
+      "previousHan": "囗",
+      "ipa": "[kuai⁴⁴]",
+      "english": "old",
+      "localityId": "fuzhou",
+      "sourceLine": 10234,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Chaozhou-650_sleep-1",
+      "sourceId": "Chaozhou-650_sleep-1",
+      "sourceCharacters": "囗",
+      "previousHan": "囗",
+      "ipa": "[uk⁴]",
+      "english": "sleep",
+      "localityId": "chaozhou",
+      "sourceLine": 13215,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    },
+    {
+      "id": "beida1964-Fuzhou-34_thedaybeforeyesterday-1",
+      "sourceId": "Fuzhou-34_thedaybeforeyesterday-1",
+      "sourceCharacters": "囗 日",
+      "previousHan": "囗日",
+      "ipa": "[sɔ⁴⁴ niʔ⁴]",
+      "english": "the day before yesterday",
+      "localityId": "fuzhou",
+      "sourceLine": 15180,
+      "reason": "CLDF Benzi contains the unresolved-character placeholder 囗. Existing ID and pronunciation are preserved; no complete written form is supplied."
+    }
+  ],
   "records": [
     {
       "id": "beida1964-Beijing-139_rice-1",

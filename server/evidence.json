@@ -4041,18 +4041,6 @@
       }
     },
     {
-      "recordId": "beida1964-Meixian-12_lightning-1",
-      "localityId": "meixian",
-      "han": "囗囗",
-      "meaning": "lightning",
-      "scope": "Meixian · 1950s survey · published 1964",
-      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
-      "source": {
-        "title": "Beida 1964 · Meixian-12_lightning-1 · CC BY 4.0",
-        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8447"
-      }
-    },
-    {
       "recordId": "beida1964-Meixian-13_thunder-1",
       "localityId": "meixian",
       "han": "雷",

@@ -1,10 +1,11 @@
 import type { GroupPhoto } from "../photography";
 
 export type LearningSource = { title: string; url: string };
-export type AttestedWord = {
+type AttestedWriting =
+  | { han: string; writingStatus?: "attested"; learningKind?: "word" | "character-reading" }
+  | { han: null; writingStatus: "not-supplied"; learningKind: "word" };
+export type AttestedWord = AttestedWriting & {
   id: string;
-  learningKind?: "word" | "character-reading";
-  han: string;
   english: string;
   ipa: string;
   toneNotation?: "pitch-contour" | "source-category" | "unspecified";
@@ -14,6 +15,9 @@ export type AttestedWord = {
   note?: string;
   source: LearningSource;
 };
+export function hasWrittenForm(word: AttestedWord): word is AttestedWord & { han: string } {
+  return typeof word.han === "string" && word.han.length > 0;
+}
 export type CultureItem = {
   title: string;
   text: string;

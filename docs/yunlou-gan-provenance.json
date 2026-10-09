@@ -1,0 +1,358 @@
+{
+  "source": {
+    "authors": [
+      "Meixiang Chang",
+      "Zhaole Yang"
+    ],
+    "title": "From motion to speech act: The discourse function of luai-kʰə in Ji’an Gan Chinese",
+    "year": 2026,
+    "doi": "10.1007/s11049-026-09716-5",
+    "url": "https://link.springer.com/article/10.1007/s11049-026-09716-5",
+    "pdfUrl": "https://link.springer.com/content/pdf/10.1007/s11049-026-09716-5.pdf",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "licensePage": 33,
+    "pdfSha256": "3ba5be84b55ff7fa326a9e956dfad0f7e2396945275fd405cbc8a9ebefe12a25"
+  },
+  "scope": {
+    "locality": "Ji’an Yunlou Gan Chinese",
+    "classification": "Ji–Cha Gan, p. 4 footnote 2",
+    "consultants": "Primarily one native-speaker author, cross-checked by three other native speakers for specified grammaticality judgments; p. 2 footnote 1.",
+    "date": "Publication 2026; collection date unspecified.",
+    "anchor": "GeoNames populated-place marker for Yunlou; the paper supplies no speaker addresses or village-level survey boundary. This marker is not evidence that all its residents use these forms."
+  },
+  "transformations": [
+    "Manually transcribed from visually reviewed PDF glyphs; plain-text font codes are not used as IPA.",
+    "Font-rendered superscript h normalized to Unicode modifier ʰ; font epsilon transcribed as IPA ɛ, source velar nasal as ŋ.",
+    "Digits preserved and represented as Unicode superscripts; typographic within-word hyphens separated by spaces.",
+    "English labels shortened or clarified; source meanings are retained.",
+    "Han supplied only where the source explicitly pairs the written form with its pronunciation; missing writing is null, not guessed."
+  ],
+  "geography": {
+    "sourceUrl": "https://www.geonames.org/1923997/yunlou.html",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceRecord": {
+      "timezone": {
+        "sunrise": "2026-10-09 06:15",
+        "gmtOffset": 8,
+        "timeZoneId": "Asia/Shanghai",
+        "sunset": "2026-10-09 17:57",
+        "dstOffset": 8,
+        "time": "2026-10-09 17:39"
+      },
+      "bbox": {
+        "east": 115.1759154629907,
+        "south": 26.85183965124857,
+        "north": 26.869826948751427,
+        "west": 115.1557511370093,
+        "accuracyLevel": 0
+      },
+      "asciiName": "Yunlou",
+      "astergdem": 68,
+      "countryId": "1814991",
+      "fcl": "P",
+      "srtm3": 73,
+      "adminId2": "1806430",
+      "countryCode": "CN",
+      "adminCodes1": {
+        "ISO3166_2": "JX"
+      },
+      "adminId1": "1806222",
+      "lat": "26.86083",
+      "fcode": "PPL",
+      "continentCode": "AS",
+      "adminCode2": "3608",
+      "adminCode1": "03",
+      "lng": "115.16583",
+      "geonameId": 1923997,
+      "toponymName": "Yunlou",
+      "url": "https://www.geonames.org/1923997/yunlou.html",
+      "adminName5": "",
+      "adminName4": "",
+      "adminName3": "",
+      "alternateNames": [],
+      "adminName2": "Ji’an Shi",
+      "name": "Yunlou",
+      "fclName": "city, village,...",
+      "countryName": "China",
+      "fcodeName": "populated place",
+      "adminName1": "Jiangxi"
+    }
+  },
+  "records": [
+    {
+      "id": "chang-yang2026-yunlou-come",
+      "localityId": "yunlou-gan",
+      "han": "来",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "come",
+      "ipa": "[luai²¹³]",
+      "sourcePage": 3,
+      "sourceExample": "1b; written form p. 4, section 2",
+      "note": "Simple motion verb, contrasted with the fused come-go marker.",
+      "writtenFormPage": 4
+    },
+    {
+      "id": "chang-yang2026-yunlou-go",
+      "localityId": "yunlou-gan",
+      "han": "去",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "go",
+      "ipa": "[kʰə³³]",
+      "sourcePage": 3,
+      "sourceExample": "1b; written form p. 4, section 2",
+      "note": "Simple motion verb, contrasted with the fused come-go marker.",
+      "writtenFormPage": 4
+    },
+    {
+      "id": "chang-yang2026-yunlou-come-go",
+      "localityId": "yunlou-gan",
+      "han": "来去",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "come and go; joint-action marker",
+      "ipa": "[luai²¹³ kʰə³³]",
+      "sourcePage": 2,
+      "sourceExample": "1b; written form p. 4, section 2",
+      "note": "The same sequence has literal motion uses and a fused use involving the speaker and hearer. It is not a context-free translation of English let’s.",
+      "writtenFormPage": 4
+    },
+    {
+      "id": "chang-yang2026-yunlou-additive",
+      "localityId": "yunlou-gan",
+      "han": "连",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "additive particle",
+      "ipa": "[tian²⁴]",
+      "sourcePage": 5,
+      "sourceExample": "section 2.1",
+      "note": "Inserted between the two separate motion verbs; this insertion is not allowed inside the fused marker."
+    },
+    {
+      "id": "chang-yang2026-yunlou-need",
+      "localityId": "yunlou-gan",
+      "han": "要",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "need",
+      "ipa": "[iau³³]",
+      "sourcePage": 11,
+      "sourceExample": "16 and following prose",
+      "note": "Deontic modal in an example proposing joint action."
+    },
+    {
+      "id": "chang-yang2026-yunlou-should",
+      "localityId": "yunlou-gan",
+      "han": "应该",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "should",
+      "ipa": "[in⁵⁵ kuai⁵⁵]",
+      "sourcePage": 11,
+      "sourceExample": "17 and following prose",
+      "note": "Deontic modal; the complete two-syllable form is supplied."
+    },
+    {
+      "id": "chang-yang2026-yunlou-disposal",
+      "localityId": "yunlou-gan",
+      "han": "把",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "disposal marker",
+      "ipa": "[pa⁵¹]",
+      "sourcePage": 22,
+      "sourceExample": "33 and preceding prose",
+      "note": "Grammatical use introducing the affected object; no lexical hold meaning is claimed."
+    },
+    {
+      "id": "chang-yang2026-yunlou-complement",
+      "localityId": "yunlou-gan",
+      "han": "得",
+      "writingStatus": "attested",
+      "learningKind": "word",
+      "english": "complement marker",
+      "ipa": "[tɛ⁵⁵]",
+      "sourcePage": 22,
+      "sourceExample": "33 and preceding prose",
+      "note": "Grammatical particle introducing the complement; no lexical get meaning is claimed."
+    },
+    {
+      "id": "chang-yang2026-yunlou-you",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "you — singular",
+      "ipa": "[hen³²⁴]",
+      "sourcePage": 3,
+      "sourceExample": "1a",
+      "note": "Second-person singular pronoun in the source’s sentence example."
+    },
+    {
+      "id": "chang-yang2026-yunlou-rest",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "rest",
+      "ipa": "[ɕiɛ⁵⁵]",
+      "sourcePage": 3,
+      "sourceExample": "1a",
+      "note": "The rest predicate in a suggestion to take a short break."
+    },
+    {
+      "id": "chang-yang2026-yunlou-a-moment",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "a moment",
+      "ipa": "[ia⁵⁵]",
+      "sourcePage": 3,
+      "sourceExample": "1a",
+      "note": "Duration expression in the same suggestion."
+    },
+    {
+      "id": "chang-yang2026-yunlou-i",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "I",
+      "ipa": "[haŋ³²⁴]",
+      "sourcePage": 3,
+      "sourceExample": "2a",
+      "note": "First-person singular pronoun in a proposal to sweep the floor."
+    },
+    {
+      "id": "chang-yang2026-yunlou-sweep",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "sweep",
+      "ipa": "[sau³³]",
+      "sourcePage": 3,
+      "sourceExample": "2a",
+      "note": "The source separately glosses this predicate sweep within sweep-ground; the following ground form has contextual tone changes and is not silently reduced to citation tones."
+    },
+    {
+      "id": "chang-yang2026-yunlou-to",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "to",
+      "ipa": "[tau³³]",
+      "sourcePage": 5,
+      "sourceExample": "4",
+      "note": "Directional preposition in a travel example."
+    },
+    {
+      "id": "chang-yang2026-yunlou-money",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "money",
+      "ipa": "[tɕʰian²¹³]",
+      "sourcePage": 5,
+      "sourceExample": "4",
+      "note": "Final noun in the source’s round-trip-cost example."
+    },
+    {
+      "id": "chang-yang2026-yunlou-throw",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "throw",
+      "ipa": "[pʰen⁵¹]",
+      "sourcePage": 11,
+      "sourceExample": "16",
+      "note": "Predicate in an example about throwing out rubbish together."
+    },
+    {
+      "id": "chang-yang2026-yunlou-trash",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "trash",
+      "ipa": "[la⁵⁵ tɕi⁵⁵]",
+      "sourcePage": 11,
+      "sourceExample": "16",
+      "note": "The whole two-syllable noun is printed with the source gloss trash."
+    },
+    {
+      "id": "chang-yang2026-yunlou-cook",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "cook",
+      "ipa": "[tɕy⁵¹ fuan³²⁴]",
+      "sourcePage": 11,
+      "sourceExample": "19",
+      "note": "The complete two-syllable predicate is glossed cook; its writing is not supplied."
+    },
+    {
+      "id": "chang-yang2026-yunlou-this",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "this",
+      "ipa": "[nɛn⁵⁵]",
+      "sourcePage": 22,
+      "sourceExample": "33",
+      "note": "Demonstrative in the example about selling bottles."
+    },
+    {
+      "id": "chang-yang2026-yunlou-take",
+      "localityId": "yunlou-gan",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "learningKind": "word",
+      "english": "take",
+      "ipa": "[tʰia²¹³]",
+      "sourcePage": 22,
+      "sourceExample": "33",
+      "note": "Predicate in the example about taking bottles to sell."
+    }
+  ],
+  "holds": [
+    {
+      "form": "luai²¹³ ə⁰",
+      "reason": "Reduced final has source tone 0; this starter does not treat 0 as a pitch level."
+    },
+    {
+      "form": "ɕy⁵⁵⁻⁵¹ yan³²⁴⁻⁵⁵",
+      "reason": "School has explicit contextual tone-change chains; not collapsed into invented citation contours."
+    },
+    {
+      "form": "pʰen³²⁴⁻²⁴ nə⁵⁵",
+      "reason": "Bottle has a source tone-change chain; no citation-form reconstruction."
+    }
+  ],
+  "review": {
+    "status": "independent visual review passed",
+    "reviewedPages": [
+      2,
+      3,
+      4,
+      5,
+      11,
+      22,
+      33
+    ],
+    "corrections": [
+      "Come/go IPA occurs in p. 3 example 1b; explicit written forms are additionally cited to p. 4 section 2.",
+      "Sound notes use exact bracketed IPA rather than mixed source/romanization notation."
+    ]
+  }
+}

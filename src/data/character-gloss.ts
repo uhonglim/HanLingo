@@ -3,7 +3,7 @@ import type { AttestedWord } from './learning/types';
 
 /** General written-character senses never replace an attested local lexical meaning. */
 export function writtenCharacterGloss(word: Pick<AttestedWord, 'han' | 'learningKind'>): string | undefined {
-  if (word.learningKind !== 'character-reading') return undefined;
+  if (word.learningKind !== 'character-reading' || !word.han) return undefined;
   return (glosses as Record<string, string>)[word.han];
 }
 

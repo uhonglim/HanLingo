@@ -1,4 +1,6 @@
+import { atlasWeiziluLocalities } from "./weizilu";
 import { atlasLexicalStudyClusters, atlasLexicalStudyLocalities } from "./lexical-study-localities";
+import { atlasYunlouGanLocalities } from "./yunlou-gan";
 import { atlasOverseasYueClusters, atlasOverseasYueLocalities } from "./overseas-yue";
 import { atlasHuiWuyuanLocalities } from "./hui-wuyuan-localities";
 import { atlasJiangyongChengguanLocalities } from "./jiangyong-chengguan";
@@ -15,7 +17,7 @@ import { atlasMinYueClusters, atlasMinYueLocalities } from './min-yue';
 import { atlasWuHakkaClusters, atlasWuHakkaLocalities } from './wu-hakka';
 export type { AtlasCluster, AtlasLocality, AtlasSource } from './types';
 export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters, ...atlasGanXiangClusters, ...atlasOtherSiniticClusters, ...atlasGanToneClusters, ...atlasOverseasYueClusters, ...atlasLexicalStudyClusters];
-export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities, ...atlasGanXiangLocalities, ...atlasOtherSiniticLocalities, ...atlasGanToneLocalities, ...atlasXiangReadingLocalities, ...atlasJiangyongChengguanLocalities, ...atlasGanHuaiyueLocalities, ...atlasHuiWuyuanLocalities, ...atlasOverseasYueLocalities, ...atlasLexicalStudyLocalities].map((point) => ({
+export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities, ...atlasGanXiangLocalities, ...atlasOtherSiniticLocalities, ...atlasGanToneLocalities, ...atlasXiangReadingLocalities, ...atlasJiangyongChengguanLocalities, ...atlasGanHuaiyueLocalities, ...atlasHuiWuyuanLocalities, ...atlasOverseasYueLocalities, ...atlasLexicalStudyLocalities, ...atlasYunlouGanLocalities, ...atlasWeiziluLocalities].map((point) => ({
   ...point,
   name: placeLabel(point),
   aliases: [...new Set([...placeNameAliases(point), ...(point.aliases ?? [])])],

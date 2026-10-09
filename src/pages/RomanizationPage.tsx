@@ -125,7 +125,7 @@ export default function RomanizationPage() {
         <p>
           The same IPA gets the same spelling everywhere. Some sounds share a
           spelling to make it easier to read; the source IPA keeps the full
-          distinction. One shared proposal for Mandarin, Min, Yue, Hakka, and Wu.
+          distinction. One shared proposal across the Han languages.
         </p>
         <div className="roman-core" aria-label="Core stop consonants">
           {[
@@ -163,7 +163,7 @@ export default function RomanizationPage() {
                     <optgroup key={group.id} label={group.name}>
                       {group.readings.map((word) => (
                         <option key={word.id} value={word.id}>
-                          {word.locality} · {word.han} · {word.english}
+                          {word.locality} · {word.han ? `${word.han} · ` : ""}{word.english}
                           {word.spelling ? "" : " · mapping open"}
                         </option>
                       ))}
@@ -205,7 +205,7 @@ export default function RomanizationPage() {
             </div>
             <div className="roman-result" aria-live="polite" aria-atomic="true">
               {conversion.error ? (
-                <p className="roman-error">{conversion.error}</p>
+                <p className="roman-error">{selectedWord ? "This source reading cannot yet be fully converted. Preserve its supplied pronunciation and check the source qualifications below; do not fill in missing tones." : conversion.error}</p>
               ) : (
                 <>
                   <span>{siteTerms.spelling}</span>
@@ -263,7 +263,8 @@ export default function RomanizationPage() {
           {!conversion.error && <IpaAudioPreview ipa={input} notation={toneNotation} />}
           {selectedWord && (
             <div className="roman-word-source">
-              <strong lang="zh-Hant">{selectedWord.han}</strong>
+              {selectedWord.han && <strong lang="zh-Hant">{selectedWord.han}</strong>}
+              {selectedWord.writingStatus === "not-supplied" && <p className="roman-register">Source does not supply a complete written form.</p>}
               <span>
                 {selectedWord.english} · {selectedWord.locality} ·{" "}
                 {selectedWord.reading}
@@ -637,7 +638,7 @@ export default function RomanizationPage() {
               <tr>
                 <th scope="col">Group</th>
                 <th scope="col">Mapped readings</th>
-                <th scope="col">Readings with unresolved sounds</th>
+                <th scope="col">Readings with unresolved mapping</th>
               </tr>
             </thead>
             <tbody>
@@ -658,7 +659,7 @@ export default function RomanizationPage() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {word.locality} · {word.han}
+                                {word.locality} · {word.han ?? word.english}
                               </a>{" "}
                               <span className="roman-symbol">
                                 {word.displayIpa}
@@ -676,7 +677,7 @@ export default function RomanizationPage() {
         </div>
         <p>
           A shared character can have different spellings when its local sounds
-          differ. Min, Mandarin, Yue, Hakka, and Wu each need locality-specific
+          differ. Every group needs locality-specific
           inventories and pronunciation evidence. This is our working proposal,
           not a completed standard or an automatic character-to-speech system.
           Common place names stay familiar. Their pronunciation labels use HanLingo

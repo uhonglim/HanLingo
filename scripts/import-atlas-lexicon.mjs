@@ -10,6 +10,9 @@ const repository = 'https://github.com/lexibank/beidasinitic';
 const base = `https://raw.githubusercontent.com/lexibank/beidasinitic/${commit}/`;
 const cache = '.evidence/atlas-learning/beidasinitic';
 const limit = 80;
+// Reviewed migration only: keep existing IDs/readings where Benzi has no complete spelling.
+const writingRepairLedger = JSON.parse(await readFile('docs/beida-writing-repairs.json', 'utf8'));
+const writingRepairs = new Map(writingRepairLedger.records.map(row => [row.sourceId, row]));
 // Explicit identity mapping; do not match coordinates or import Glottolog classifications.
 const localities = {
   Beijing: 'beijing-city', Chaozhou: 'chaozhou', Chengdu: 'chengdu', Fuzhou: 'fuzhou',
@@ -58,8 +61,9 @@ const metadata = JSON.parse(await acquire('metadata.json'));
 if (metadata.license !== 'CC-BY-4.0') throw new Error('Unexpected source licence');
 await acquire('LICENSE');
 await acquire('README.md');
-// Everyday concepts first, followed by the source questionnaire order. One form per concept.
-const priority = new Map(('water|rice|eat|drink|tea|fish|meat|egg|salt|sugar|oil|bread|noodles|tofu|milk|vegetable|potato|tomato|fruit|apple|orange|banana|pear|peach|grape|dog|cat|pig|cow|horse|chicken|bird|duck|sheep|goat|person|man|woman|child|father|mother|brother|sister|hand|foot|head|eye|ear|nose|mouth|tooth|hair|heart|sun|moon|star|rain|wind|snow|cloud|sky|fire|earth|mountain|river|tree|leaf|flower|grass|house|door|window|table|chair|bed|bowl|cup|chopsticks|spoon|knife|clothes|shoe|hat|soap|market|one|two|three|four|five|six|seven|eight|nine|ten|today|tomorrow|yesterday|year|day|night|morning|good|bad|big|small|long|short|hot|cold|new|old|white|black|red|yellow|green|blue|come|go|walk|run|sleep|sit|stand|buy|sell|give|see|hear|know|speak|read|write|laugh|cry').split('|').map((word, i) => [word, i]));
+// Keep the published selection and order stable as the shared IPA key evolves.
+// A future expansion must append explicitly reviewed IDs to this source selection.
+const preservedOrder = new Map(writingRepairLedger.preservedSourceIds.map((id, index) => [id, index]));
 const vite = await createServer({ server: { middlewareMode: true }, appType: 'custom' });
 const rejected = {}; const packs = []; const records = [];
 try {
@@ -70,14 +74,17 @@ try {
     if (!point || !languages.has(language)) throw new Error(`Unresolved locality: ${language} → ${localityId}`);
     const placeLabel = point.name;
     const seen = new Set(); const selected = [];
-    const candidates = forms.filter(row => row.Language_ID === language).sort((a,b) => {
-      const score = row => priority.get(concepts.get(row.Parameter_ID).Name.toLowerCase()) ?? (1000 + Number(concepts.get(row.Parameter_ID).Number));
-      return score(a) - score(b) || a.ID.localeCompare(b.ID);
-    });
+    const candidates = forms.filter(row => row.Language_ID === language && preservedOrder.has(row.ID))
+      .sort((a, b) => preservedOrder.get(a.ID) - preservedOrder.get(b.ID));
     const reasons = {};
     const reject = reason => { reasons[reason] = (reasons[reason] ?? 0) + 1; };
     for (const row of candidates) {
       const han = row.Benzi.replaceAll(' ', '');
+      const writingRepair = writingRepairs.get(row.ID);
+      if (writingRepair && writingRepair.sourceCharacters !== row.Benzi) throw new Error(`Changed incomplete source writing: ${row.ID}`);
+      // A Han-script regex alone accepts 囗, the source's unresolved-character placeholder.
+      // Preserve the ten already-published readings; exclude any new placeholder candidate.
+      if (han.includes('囗') && !writingRepair) { reject('unresolved local character placeholder'); continue; }
       // Benzi is the local written form; the questionnaire's Chinese_Gloss is NOT a substitute.
       if (!/^[\p{Script=Han}]+$/u.test(han)) { reject('unresolved local character form'); continue; }
       if (row.Value !== row.Form || row.Comment) { reject('edited or annotated form needs review'); continue; }
@@ -90,17 +97,18 @@ try {
       catch { reject('unmapped source IPA'); continue; }
       if (seen.has(row.Parameter_ID)) continue;
       seen.add(row.Parameter_ID);
-      selected.push({ id: `beida1964-${row.ID}`, han, english: concepts.get(row.Parameter_ID).Name,
+      selected.push({ id: `beida1964-${row.ID}`, han: writingRepair ? null : han,
+        ...(writingRepair ? { writingStatus: 'not-supplied', learningKind: 'word' } : {}), english: concepts.get(row.Parameter_ID).Name,
         ipa, toneNotation: 'pitch-contour', localityId, reading: '1950s survey · published 1964',
         registerLabel: `${placeLabel} · 1950s survey · published 1964`,
-        note: 'Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.',
+        note: 'Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.' + (writingRepair ? ` The source gives incomplete writing “${row.Benzi}”; 囗 marks an unresolved character. No complete written form is supplied.` : ''),
         source: { title: `Beida 1964 · ${row.ID} · CC BY 4.0`, url: `${repository}/blob/${commit}/cldf/forms.csv#L${row.line}` },
       });
       records.push({ id: `beida1964-${row.ID}`, sourceId: row.ID, sourceValue: row.Value, sourceCharacters: row.Benzi, conceptId: row.Parameter_ID, concepticonId: concepts.get(row.Parameter_ID).Concepticon_ID, line: row.line });
       if (selected.length === limit) break;
     }
     rejected[localityId] = reasons;
-    if (selected.length < 20) throw new Error(`Too little verified data for ${localityId}: ${selected.length}`);
+    if (selected.length !== limit) throw new Error(`Preserved selection changed for ${localityId}: ${selected.length}, expected ${limit}`);
     const source = { title: 'Beida 1964 · licensed CLDF edition v5.1', url: 'https://doi.org/10.5281/zenodo.13149151' };
     packs.push({ branchId: `${point.groupId}/${point.branchId}`, words: selected, soundNotes: [
       { title: 'Read the CLDF source forms', text: `${selected[0].han} “${selected[0].english}” is recorded as ${selected[0].ipa}; ${selected[1].han} “${selected[1].english}” as ${selected[1].ipa}. These ${placeLabel} forms were collected in the 1950s, published in 1964 and transcribed in a later CLDF edition with slight IPA adjustments. Their superscript digits are supplied pitch contours, preserved separately from HanLingo spelling.`, localityIds: [localityId], source },
@@ -113,5 +121,5 @@ try {
 } finally { await vite.close(); }
 const output = '// Generated by scripts/import-atlas-lexicon.mjs. Data: CC BY 4.0; see docs/ATLAS-LEARNING-SOURCES.md.\nimport type { BranchLearning } from "./types";\nexport const atlasLexibankPacks: BranchLearning[] = ' + JSON.stringify(packs, null, 2) + ';\n';
 await writeFile('src/data/learning/atlas-lexibank.ts', output);
-await writeFile('src/data/learning/atlas-lexibank-provenance.json', JSON.stringify({ repository, commit, version: 'v5.1', doi: '10.5281/zenodo.13149151', licence: metadata.license, citation: metadata.citation, changes: 'Curated locality match and concept selection; inserted syllable spaces at CLDF source tone boundaries. CLDF source Value and Benzi retained below; the edition already slightly adjusts the 1964 publication’s IPA. No phonetic substitution or tone inference.', limit, checksums, localities, rejected, records }, null, 2) + '\n');
+await writeFile('src/data/learning/atlas-lexibank-provenance.json', JSON.stringify({ repository, commit, version: 'v5.1', doi: '10.5281/zenodo.13149151', licence: metadata.license, citation: metadata.citation, changes: 'Curated locality match and concept selection; inserted syllable spaces at CLDF source tone boundaries. CLDF source Value and Benzi retained below; the edition already slightly adjusts the 1964 publication’s IPA. No phonetic substitution or tone inference.', limit, checksums, localities, rejected, writingRepairs: writingRepairLedger.records, records }, null, 2) + '\n');
 console.log(JSON.stringify({ localities: packs.length, words: packs.reduce((sum, pack) => sum + pack.words.length, 0), counts: packs.map(pack => [pack.words[0].localityId, pack.words.length]), rejected }, null, 2));

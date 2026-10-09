@@ -22,7 +22,7 @@ try {
       const point = mapPoints.find((p) => p.id === id);
       return [
         target,
-        getLocalLearning(point).words.filter(word => word.learningKind !== "character-reading").map((word) => ({
+        getLocalLearning(point).words.filter(word => word.learningKind !== "character-reading" && word.han).map((word) => ({
           recordId: word.id,
           localityId: word.localityId,
           han: word.han,

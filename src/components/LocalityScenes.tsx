@@ -40,9 +40,9 @@ function RevealReading({ word, base }: { word: AttestedWord; base: string }) {
       <button
         aria-expanded={open}
         onClick={() => setOpen(!open)}
-        aria-label={`${open ? "Hide" : "Reveal"} meaning of ${word.han}`}
+        aria-label={`${open ? "Hide" : "Reveal"} meaning of ${word.han ?? word.ipa}`}
       >
-        <span lang="zh-Hant">{word.han}</span>
+        {word.han && <span lang="zh-Hant">{word.han}</span>}
         <span>{open ? word.english : "Show meaning"}</span>
       </button>
       {word.registerLabel && (
@@ -56,7 +56,7 @@ function RevealReading({ word, base }: { word: AttestedWord; base: string }) {
       {open && (
         <Link
           className="learning-source"
-          to={`${base}/words?q=${encodeURIComponent(word.han)}`}
+          to={`${base}/words?q=${encodeURIComponent(word.han ?? word.ipa)}`}
         >
           Reading and source
         </Link>

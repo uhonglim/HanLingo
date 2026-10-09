@@ -1,4 +1,7 @@
+import { weiziluLearning } from "./weizilu";
 import { shanghaiCharacterSupplement } from "./shanghai-character-supplement";
+import { yunlouGanLearning } from "./yunlou-gan";
+import { tunxiLearning } from "./tunxi";
 import { lexicalExpansionLearning } from "./lexical-expansion";
 import { singaporeCantoneseLearning } from "./singapore-cantonese";
 import { huiWuyuanLearning } from "./hui-wuyuan";
@@ -40,7 +43,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,
@@ -156,7 +159,7 @@ export function searchWords(words: AttestedWord[], query: string) {
   const normalized = query.trim().toLocaleLowerCase().normalize("NFC");
   return words.filter((word) =>
     [
-      word.han,
+      word.han ?? "",
       word.english,
       writtenCharacterGloss(word) ?? "",
       ...ipaSearchForms(word.ipa, word.toneNotation),

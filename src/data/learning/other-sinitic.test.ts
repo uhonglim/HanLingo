@@ -9,7 +9,7 @@ describe('reviewed Liu local references', () => {
     for (const id of ['Jixi-39_give-1', 'Jixi-185_stand-1', 'Taiyuan-100_throw-1', 'Taiyuan-67_near-1', 'Jixi-67_near-1']) {
       expect(words.some(word => word.id === `liu2007-${id}`)).toBe(false);
     }
-    expect(words.some(word => word.han.includes('囗'))).toBe(false);
+    expect(words.some(word => word.han?.includes('囗'))).toBe(false);
   });
   it('retains scope and complete supported source transcription', () => {
     expect(words).toHaveLength(421);

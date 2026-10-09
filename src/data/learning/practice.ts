@@ -25,6 +25,6 @@ export function practiceSelection(words: AttestedWord[]): { mode: 'meaning' | 's
 /** A form with multiple attested senses must never make its other sense a wrong answer. */
 export function localWordCanDistract(answer: AttestedWord, candidate: AttestedWord) {
   return wordMeaning(answer.english) !== wordMeaning(candidate.english)
-    && comparable(answer.han) !== comparable(candidate.han)
+    && (!answer.han || !candidate.han || comparable(answer.han) !== comparable(candidate.han))
     && comparable(answer.ipa) !== comparable(candidate.ipa);
 }

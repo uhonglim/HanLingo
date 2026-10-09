@@ -1,4 +1,5 @@
 import { xiangStudyGalleries } from "./xiang-study";
+import { lexicalStudyGalleries } from "./lexical-study";
 import { otherSiniticGalleries } from "./other-sinitic";
 import { minOverseasGalleries } from './min-overseas';
 import { minMainlandExpandedGalleries } from './min-mainland-expanded';
@@ -15,6 +16,7 @@ import type { GalleryPhoto } from "./types";
 export const localityGalleries: Record<string, GalleryPhoto[]> = {
   ...otherSiniticGalleries,
   ...xiangStudyGalleries,
+  ...lexicalStudyGalleries,
   ...minGalleries,
   ...otherGalleries,
   ...chaoshanGalleries,

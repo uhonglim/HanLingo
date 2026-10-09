@@ -117,7 +117,7 @@ describe("learning coverage across every branch", () => {
     );
     const words = branchLearning.flatMap((pack) => pack.words);
     for (const word of words)
-      expect(searchWords([word], word.han)).toEqual([word]);
+      expect(searchWords([word], word.han ?? word.ipa)).toEqual([word]);
     expect(searchWords(words, "unlikely-to-match-a-word")).toEqual([]);
   });
 });

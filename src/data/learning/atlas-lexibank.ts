@@ -1766,14 +1766,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Chaozhou-650_sleep-1",
-        "han": "囗",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "sleep",
         "ipa": "[uk⁴]",
         "toneNotation": "pitch-contour",
         "localityId": "chaozhou",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Teochew · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Chaozhou-650_sleep-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13215"
@@ -2426,14 +2428,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Chaozhou-135_mugwort-1",
-        "han": "囗",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "mugwort",
         "ipa": "[hĩã¹¹]",
         "toneNotation": "pitch-contour",
         "localityId": "chaozhou",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Teochew · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Chaozhou-135_mugwort-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9678"
@@ -4191,14 +4195,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Fuzhou-751_bad-1",
-        "han": "囗",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "bad",
         "ipa": "[pʰai³¹]",
         "toneNotation": "pitch-contour",
         "localityId": "fuzhou",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Foochow · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Fuzhou-751_bad-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L761"
@@ -4311,14 +4317,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Fuzhou-732_old-1",
-        "han": "囗",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "old",
         "ipa": "[kuai⁴⁴]",
         "toneNotation": "pitch-contour",
         "localityId": "fuzhou",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Foochow · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Fuzhou-732_old-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10234"
@@ -4566,14 +4574,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Fuzhou-34_thedaybeforeyesterday-1",
-        "han": "囗日",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "the day before yesterday",
         "ipa": "[sɔ⁴⁴ niʔ⁴]",
         "toneNotation": "pitch-contour",
         "localityId": "fuzhou",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Foochow · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗 日”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Fuzhou-34_thedaybeforeyesterday-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15180"
@@ -7276,14 +7286,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Hefei-42_atdusknightfall-1",
-        "han": "晚囗西",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "at dusk (nightfall)",
         "ipa": "[uæ̃²⁴ pɐʔ⁴ sɿ²¹²]",
         "toneNotation": "pitch-contour",
         "localityId": "hefei",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Hefei · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “晚 囗 西”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Hefei-42_atdusknightfall-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L558"
@@ -8661,14 +8673,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Jinan-85_malepig-1",
-        "han": "囗豬",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "male pig",
         "ipa": "[tɕyŋ³¹ tʂu²¹³]",
         "toneNotation": "pitch-contour",
         "localityId": "jinan",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Jinan · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗 豬”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Jinan-85_malepig-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8926"
@@ -9656,14 +9670,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Meixian-12_lightning-1",
-        "han": "囗囗",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "lightning",
         "ipa": "[ȵiap²¹ laŋ⁴²]",
         "toneNotation": "pitch-contour",
         "localityId": "meixian",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Meixian · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗 囗”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Meixian-12_lightning-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8447"
@@ -10966,14 +10982,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-Shenyang-80_cattle-1",
-        "han": "牲囗",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "cattle",
         "ipa": "[səŋ³³ kʰou²¹³]",
         "toneNotation": "pitch-contour",
         "localityId": "shenyang",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Shenyang · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “牲 囗”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · Shenyang-80_cattle-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2335"
@@ -14851,14 +14869,16 @@ export const atlasLexibankPacks: BranchLearning[] = [
       },
       {
         "id": "beida1964-XiAn-89_donkeyass-1",
-        "han": "囗",
+        "han": null,
+        "writingStatus": "not-supplied",
+        "learningKind": "word",
         "english": "donkey, ass",
         "ipa": "[ly²⁴]",
         "toneNotation": "pitch-contour",
         "localityId": "xian",
         "reading": "1950s survey · published 1964",
         "registerLabel": "Xi’an · 1950s survey · published 1964",
-        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+        "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries. The source gives incomplete writing “囗”; 囗 marks an unresolved character. No complete written form is supplied.",
         "source": {
           "title": "Beida 1964 · XiAn-89_donkeyass-1 · CC BY 4.0",
           "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4033"

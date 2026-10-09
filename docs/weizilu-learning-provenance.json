@@ -1,0 +1,214 @@
+{
+  "source": {
+    "author": "Hilário de Sousa",
+    "year": 2024,
+    "title": "Some Observations on the Cantonese Lexical Suprafixes",
+    "doi": "10.3390/languages9100311",
+    "url": "https://hilario.bambooradical.com/downloadables/languages-09-00311-with-cover.pdf",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sha256": "b477ee82eefa1d47d2bbdf560758c7eda74abf75f64dff4c5b77dd7db327d328"
+  },
+  "scope": "Author’s fieldwork, Nanning Weizilu 南寧位子碌 (Appendix B, printed p.28). No speaker biography or collection date supplied. Exact community, not neighbouring Tingzi. Official community name 位子渌 retained as alias.",
+  "notation": "Source §1.1 p.2 explicitly defines superscript digits as pitch values. In a substitutive suprafix, digits before superscript hyphen are underlying and unpronounced; after it is the realized tone. Display derives spoken IPA by this explicit rule, preserving original morphological notation in notes and this ledger. Cyrillic ә glyph normalized to IPA ə; ordinary hyphen before suffix removed as morphological boundary, space retained. Aspiration superscript h represented by IPA ʰ.",
+  "rows": [
+    {
+      "id": "desousa2024-weizilu-chick-er",
+      "han": "雞兒",
+      "sourceIpa": "kɐi⁵³ -ɲi²¹",
+      "gloss": "chick",
+      "printedPage": 17,
+      "pdfPageOneBased": 18,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Citation-tone suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-kid",
+      "han": "羊兒",
+      "sourceIpa": "jɐŋ²¹ -ɲi²¹",
+      "gloss": "kid (young goat)",
+      "printedPage": 17,
+      "pdfPageOneBased": 18,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Citation-tone suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-car-low",
+      "han": "車兒",
+      "sourceIpa": "tʃʰɛ⁵³ -ɲi²¹",
+      "gloss": "little car",
+      "printedPage": 17,
+      "pdfPageOneBased": 18,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Citation-tone suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-knife-er",
+      "han": "刀兒",
+      "sourceIpa": "tau⁵³ -ɲi²¹",
+      "gloss": "little knife",
+      "printedPage": 17,
+      "pdfPageOneBased": 18,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Citation-tone suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-car-high",
+      "han": "車兒",
+      "sourceIpa": "tʃʰɛ⁵³ -ɲi²¹⁻⁵³",
+      "gloss": "little car",
+      "printedPage": 17,
+      "pdfPageOneBased": 18,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-falling suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-house",
+      "han": "屋兒",
+      "sourceIpa": "ʊk³ -ɲi²¹⁻⁵³",
+      "gloss": "little house",
+      "printedPage": 17,
+      "pdfPageOneBased": 18,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-falling suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-wok",
+      "han": "鐺兒",
+      "sourceIpa": "tʃʰɛŋ⁵³ -ɲi⁵³",
+      "gloss": "little wok",
+      "printedPage": 17,
+      "pdfPageOneBased": 18,
+      "locator": "Section 3.2, Weizilu paragraph; gloss continues on p.18",
+      "register": "High-falling suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-puppy-high",
+      "han": "狗兒",
+      "sourceIpa": "kɐu³³ -ɲi²¹⁻⁵³",
+      "gloss": "puppy",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-falling suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-puppy-low",
+      "han": "狗兒",
+      "sourceIpa": "kɐu³³ -ɲi²¹",
+      "gloss": "puppy",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Citation-tone suffix; more common in the source",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-chick-zai",
+      "han": "雞仔",
+      "sourceIpa": "kɐi⁵³ -tʃai³³",
+      "gloss": "chick",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Newer diminutive suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-piglet",
+      "han": "豬仔",
+      "sourceIpa": "tʃәi⁵³ -tʃai³³",
+      "gloss": "piglet",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Newer diminutive suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-knife-zai",
+      "han": "刀仔",
+      "sourceIpa": "tau⁵³ -tʃai³³",
+      "gloss": "little knife",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Newer diminutive suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-bowl",
+      "han": "碗仔",
+      "sourceIpa": "un³³ -tʃai³³",
+      "gloss": "little bowl",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "Newer diminutive suffix",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-yuan",
+      "han": "文",
+      "sourceIpa": "mɐn²¹⁻⁵³",
+      "gloss": "yuan",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-falling tone replacement",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-mother",
+      "han": "老娘",
+      "sourceIpa": "lau¹³ nɛŋ²¹⁻⁵³",
+      "gloss": "mother",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-falling tone replacement",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-aunt",
+      "han": "姨娘",
+      "sourceIpa": "hәi²¹ nɛŋ²¹⁻⁵⁵",
+      "gloss": "mother’s younger sister",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-level tone replacement",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-grandmother",
+      "han": "奶奶",
+      "sourceIpa": "nai¹³⁻⁵⁵ nai¹³⁻⁵⁵",
+      "gloss": "paternal grandmother",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-level tone replacement",
+      "visualChecked": true
+    },
+    {
+      "id": "desousa2024-weizilu-grandfather",
+      "han": "爺爺",
+      "sourceIpa": "jɛ²¹ jɛ²¹⁻³⁵",
+      "gloss": "paternal grandfather",
+      "printedPage": 18,
+      "pdfPageOneBased": 19,
+      "locator": "Section 3.2, Weizilu paragraph",
+      "register": "High-rising tone replacement; Cantonese loan",
+      "visualChecked": true
+    }
+  ]
+}

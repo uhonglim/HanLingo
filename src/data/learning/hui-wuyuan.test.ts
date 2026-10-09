@@ -25,7 +25,7 @@ describe('Youshan village documentary readings', () => {
     expect(pack.words.find(word => word.han === '女')?.ipa).toBe('[ny31]');
     expect(pack.words.find(word => word.han === '呂')?.ipa).toBe('[li31]');
     expect(pack.words.find(word => word.han === '好')?.note).toContain('verb 好');
-    expect(pack.words.some(word => ['宝', '寶', '飽'].includes(word.han))).toBe(false);
+    expect(pack.words.some(word => word.han && ['宝', '寶', '飽'].includes(word.han))).toBe(false);
   });
   it('keeps the exact village geography and all content at the same scope', () => {
     expect(atlasHuiWuyuanLocalities).toHaveLength(1);

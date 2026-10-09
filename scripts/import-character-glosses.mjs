@@ -17,7 +17,7 @@ const server = await createServer({ server: { middlewareMode: true }, appType: '
 try {
   const { branchLearning } = await server.ssrLoadModule('/src/data/learning/index.ts');
   const characters = [...new Set(branchLearning.flatMap(pack => pack.words)
-    .filter(word => word.learningKind === 'character-reading' && [...word.han].length === 1)
+    .filter(word => word.learningKind === 'character-reading' && word.han && [...word.han].length === 1)
     .map(word => word.han))].sort();
   // Unihan's broad definition does not contain the documented 參差 sense used in this comparison.
   const held = {

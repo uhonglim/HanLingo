@@ -82,3 +82,15 @@ Potential further sources were inspected but **not imported**:
 - Other Lexibank collections: some repeat the same survey cities; others use source fields that are not straightforward IPA or have unresolved locality metadata. They were not used to inflate coverage.
 
 Remaining locality vocabulary gaps must be filled with identifiable dictionaries, recordings or fieldwork references that supply the exact local form and transcription convention. An inherited regional form, guessed tone, translated sentence or local photograph does not close that gap.
+
+## Reviewed incomplete-writing repair
+
+A later source audit identified **10 existing entries containing 囗**, the CLDF edition’s unresolved-character placeholder. A Han-script regular expression had admitted these as if they were complete written forms. The entries remain useful pronunciation-and-meaning evidence, but the placeholder is not taught as a local character.
+
+These 10 records now use `han: null`, `writingStatus: 'not-supplied'`, and `learningKind: 'word'`. Here null means **no complete written form is supplied**: some originals contain known characters alongside the unresolved slot. Exact original `Benzi`, including spaces and known characters, remains in the note and provenance. No inferred character replaces any slot.
+
+The exact IDs, old display forms, original source writing, source lines, IPA, meanings and locality assignments are recorded in [`beida-writing-repairs.json`](beida-writing-repairs.json). They cover Chaozhou sleep/mugwort; Fuzhou bad/old/day-before-yesterday; Hefei dusk; Jinan male pig; Meixian lightning; Shenyang cattle; and Xi’an donkey.
+
+All **1,120 existing IDs, pronunciations, meanings, locality assignments and their order remain unchanged**; the other **1,110 word records remain byte-equivalent after JSON serialization**. Tests verify both preservation hashes and the exact 10 repairs. Every locality still has 80 entries; this repair adds no words.
+
+The importer now follows the ledger’s fixed reviewed source-ID selection instead of recalculating the first 80 eligible rows against a changing IPA converter. It validates each selected source form and fails if a preserved selection becomes invalid. Only the 10 explicitly reviewed IDs receive incomplete-writing handling; newly encountered placeholders remain excluded. The generated `rejected` counters now describe validation of that fixed selection, not a fresh scan of the whole questionnaire. Future vocabulary expansion requires a separately audited selection change rather than raising the limit blindly.

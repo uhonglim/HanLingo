@@ -2,86 +2,86 @@
 
 Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.
 
-Inventory: **68 branches · 1206 locality references**. Actual learning coverage: **71 localities with IPA**, **88 with photos**, **5478 IPA entries**, **32 additional source-spelling entries**, **824 gallery placements of 797 distinct image assets**, **0 inline local recordings**, **7 original-publisher listening links**.
+Inventory: **68 branches · 1208 locality references**. Actual learning coverage: **74 localities with IPA**, **91 with photos**, **5536 IPA entries**, **32 additional source-spelling entries**, **852 gallery placements of 825 distinct image assets**, **0 inline local recordings**, **7 original-publisher listening links**.
 
-Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **7 of 1206 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
+Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **7 of 1208 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
 
-Separately typed character readings: **2236** (included in IPA entries, excluded from meaning quizzes). Source citation-tone inventories: **36** with **196** category/contour pairs; these are not words or recordings.
+IPA evidence comprises **3300 lexical or grammatical entries** and **2236 character readings**. Character readings are excluded from meaning quizzes. **41 lexical entries lack a complete source-supplied written form**; their pronunciation and meaning are retained without invented characters. Source citation-tone inventories: **36** with **196** category/contour pairs; these are not words or recordings.
 
 Of the IPA entries, 69 retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.
 
 ## Branch inventory
 
-| Branch | Places | IPA entries | All word entries | Photos | Sound notes | Culture topics | Local source links |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| mandarin/beijing | 36 | 105 | 105 | 10 | 6 | 2 | 6 |
-| mandarin/northeastern | 119 | 231 | 231 | 18 | 8 | 6 | 11 |
-| mandarin/jilu | 128 | 115 | 115 | 10 | 5 | 2 | 6 |
-| mandarin/jiaoliao | 27 | 150 | 150 | 18 | 6 | 6 | 9 |
-| mandarin/central-plains | 121 | 81 | 81 | 18 | 6 | 4 | 8 |
-| mandarin/lanyin | 63 | 16 | 16 | 9 | 2 | 2 | 3 |
-| mandarin/jianghuai | 88 | 194 | 194 | 28 | 10 | 6 | 14 |
-| mandarin/southwestern | 114 | 354 | 354 | 19 | 12 | 6 | 12 |
-| min/southern-min | 40 | 453 | 485 | 170 | 51 | 34 | 44 |
-| min/eastern-min | 20 | 738 | 738 | 27 | 35 | 8 | 23 |
-| min/northern-min | 6 | 460 | 460 | 19 | 21 | 4 | 13 |
-| min/puxian | 4 | 229 | 229 | 18 | 13 | 4 | 8 |
-| min/central-min | 4 | 120 | 120 | 18 | 9 | 4 | 7 |
-| min/hainan-min | 3 | 29 | 29 | 27 | 7 | 6 | 9 |
-| min/leizhou-min | 5 | 100 | 100 | 9 | 4 | 2 | 4 |
-| yue/guangfu | 28 | 127 | 127 | 56 | 19 | 12 | 25 |
-| yue/siyi | 7 | 0 | 0 | 28 | 7 | 6 | 9 |
-| yue/goulou | 9 | 20 | 20 | 9 | 3 | 2 | 2 |
-| yue/yongxun | 4 | 0 | 0 | 9 | 2 | 2 | 2 |
-| yue/qinlian | 4 | 0 | 0 | 9 | 2 | 2 | 2 |
-| yue/gaoyang | 4 | 80 | 80 | 9 | 4 | 2 | 5 |
-| yue/wuhua | 2 | 0 | 0 | 9 | 2 | 3 | 3 |
-| wu/taihu | 57 | 131 | 131 | 47 | 14 | 10 | 16 |
-| wu/taizhou | 8 | 32 | 32 | 29 | 5 | 7 | 9 |
-| wu/oujiang | 6 | 111 | 111 | 18 | 5 | 4 | 8 |
-| wu/wuzhou | 6 | 0 | 0 | 0 | 0 | 0 | 0 |
-| wu/chuqu | 14 | 1 | 1 | 10 | 4 | 2 | 4 |
-| hakka/yuetai | 22 | 119 | 119 | 38 | 11 | 8 | 12 |
-| hakka/hailu | 26 | 45 | 45 | 18 | 6 | 4 | 5 |
-| hakka/tingzhou | 6 | 0 | 0 | 10 | 3 | 2 | 3 |
-| min/shaojiang | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| hakka/yuebei | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| hakka/tonggui | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| hakka/yuxin | 8 | 0 | 0 | 0 | 0 | 0 | 0 |
-| hakka/ninglong | 5 | 0 | 0 | 0 | 0 | 0 | 0 |
-| wu/jinqu | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/huaiyue | 14 | 106 | 106 | 0 | 18 | 18 | 24 |
-| gan/fuguang | 13 | 0 | 0 | 0 | 0 | 0 | 0 |
-| xiang/yongquan | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/datong | 51 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/leizi | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
-| xiang/hengzhou | 8 | 58 | 58 | 10 | 2 | 2 | 4 |
-| xiang/chenxu | 2 | 119 | 119 | 15 | 4 | 4 | 8 |
-| xiang/loushao | 14 | 202 | 202 | 7 | 4 | 4 | 7 |
-| gan/dongsui | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| xiang/changyi | 20 | 250 | 250 | 11 | 2 | 2 | 4 |
-| gan/jicha | 9 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/yingyi | 6 | 0 | 0 | 0 | 0 | 0 | 0 |
-| gan/changdu | 13 | 250 | 250 | 11 | 2 | 2 | 4 |
-| gan/yiliu | 6 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/bingzhou | 3 | 172 | 172 | 11 | 3 | 2 | 2 |
-| jin/luliang | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/shangdang | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/wutai | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/dabao | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/zhanghu | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/hanxin | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| jin/zhiyan | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| hui/jishe | 2 | 115 | 115 | 11 | 3 | 2 | 2 |
-| hui/xiuyi | 3 | 0 | 0 | 9 | 0 | 0 | 0 |
-| hui/qiwu | 3 | 19 | 19 | 0 | 2 | 2 | 3 |
-| hui/jingzhan | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| hui/yanzhou | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| pinghua/northern-pinghua | 3 | 134 | 134 | 11 | 4 | 2 | 2 |
-| pinghua/southern-pinghua | 3 | 0 | 0 | 9 | 0 | 0 | 0 |
-| tuhua/southern-hunan | 3 | 12 | 12 | 2 | 2 | 2 | 3 |
-| tuhua/northern-guangdong | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
-| tuhua/eastern-guangxi | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Branch | Places | IPA entries | Lexical entries | Character readings | All entries | Photos | Sound notes | Culture topics | Local source links |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| mandarin/beijing | 36 | 105 | 105 | 0 | 105 | 10 | 6 | 2 | 6 |
+| mandarin/northeastern | 119 | 231 | 231 | 0 | 231 | 18 | 8 | 6 | 11 |
+| mandarin/jilu | 128 | 115 | 80 | 35 | 115 | 10 | 5 | 2 | 6 |
+| mandarin/jiaoliao | 27 | 150 | 150 | 0 | 150 | 27 | 6 | 6 | 9 |
+| mandarin/central-plains | 121 | 81 | 81 | 0 | 81 | 18 | 6 | 4 | 8 |
+| mandarin/lanyin | 63 | 16 | 16 | 0 | 16 | 9 | 2 | 2 | 3 |
+| mandarin/jianghuai | 88 | 194 | 160 | 34 | 194 | 28 | 10 | 6 | 14 |
+| mandarin/southwestern | 114 | 354 | 354 | 0 | 354 | 29 | 12 | 6 | 12 |
+| min/southern-min | 40 | 453 | 321 | 132 | 485 | 170 | 51 | 34 | 44 |
+| min/eastern-min | 20 | 738 | 80 | 658 | 738 | 27 | 35 | 8 | 23 |
+| min/northern-min | 6 | 460 | 0 | 460 | 460 | 19 | 21 | 4 | 13 |
+| min/puxian | 4 | 229 | 0 | 229 | 229 | 18 | 13 | 4 | 8 |
+| min/central-min | 4 | 120 | 0 | 120 | 120 | 18 | 9 | 4 | 7 |
+| min/hainan-min | 3 | 29 | 29 | 0 | 29 | 27 | 7 | 6 | 9 |
+| min/leizhou-min | 5 | 100 | 0 | 100 | 100 | 9 | 4 | 2 | 4 |
+| yue/guangfu | 28 | 127 | 122 | 5 | 127 | 56 | 19 | 12 | 25 |
+| yue/siyi | 7 | 0 | 0 | 0 | 0 | 28 | 7 | 6 | 9 |
+| yue/goulou | 9 | 20 | 20 | 0 | 20 | 9 | 3 | 2 | 2 |
+| yue/yongxun | 4 | 0 | 0 | 0 | 0 | 9 | 2 | 2 | 2 |
+| yue/qinlian | 4 | 0 | 0 | 0 | 0 | 9 | 2 | 2 | 2 |
+| yue/gaoyang | 4 | 80 | 80 | 0 | 80 | 9 | 4 | 2 | 5 |
+| yue/wuhua | 2 | 0 | 0 | 0 | 0 | 9 | 2 | 3 | 3 |
+| wu/taihu | 57 | 131 | 88 | 43 | 131 | 47 | 14 | 10 | 16 |
+| wu/taizhou | 8 | 32 | 32 | 0 | 32 | 29 | 5 | 7 | 9 |
+| wu/oujiang | 6 | 111 | 92 | 19 | 111 | 18 | 5 | 4 | 8 |
+| wu/wuzhou | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| wu/chuqu | 14 | 1 | 1 | 0 | 1 | 10 | 4 | 2 | 4 |
+| hakka/yuetai | 22 | 119 | 92 | 27 | 119 | 38 | 11 | 8 | 12 |
+| hakka/hailu | 26 | 45 | 45 | 0 | 45 | 18 | 6 | 4 | 5 |
+| hakka/tingzhou | 6 | 0 | 0 | 0 | 0 | 10 | 3 | 2 | 3 |
+| min/shaojiang | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| hakka/yuebei | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| hakka/tonggui | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| hakka/yuxin | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| hakka/ninglong | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| wu/jinqu | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| gan/huaiyue | 14 | 106 | 0 | 106 | 106 | 0 | 18 | 18 | 24 |
+| gan/fuguang | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| xiang/yongquan | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| gan/datong | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| gan/leizi | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| xiang/hengzhou | 8 | 58 | 0 | 58 | 58 | 10 | 2 | 2 | 4 |
+| xiang/chenxu | 2 | 119 | 0 | 119 | 119 | 15 | 4 | 4 | 8 |
+| xiang/loushao | 14 | 202 | 141 | 61 | 202 | 16 | 4 | 4 | 7 |
+| gan/dongsui | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| xiang/changyi | 20 | 250 | 250 | 0 | 250 | 11 | 2 | 2 | 4 |
+| gan/jicha | 10 | 20 | 20 | 0 | 20 | 0 | 2 | 2 | 3 |
+| gan/yingyi | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| gan/changdu | 13 | 250 | 250 | 0 | 250 | 11 | 2 | 2 | 4 |
+| gan/yiliu | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| jin/bingzhou | 3 | 172 | 172 | 0 | 172 | 11 | 3 | 2 | 2 |
+| jin/luliang | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| jin/shangdang | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| jin/wutai | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| jin/dabao | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| jin/zhanghu | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| jin/hanxin | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| jin/zhiyan | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| hui/jishe | 2 | 115 | 115 | 0 | 115 | 11 | 3 | 2 | 2 |
+| hui/xiuyi | 3 | 20 | 20 | 0 | 20 | 9 | 2 | 2 | 2 |
+| hui/qiwu | 3 | 19 | 0 | 19 | 19 | 0 | 2 | 2 | 3 |
+| hui/jingzhan | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| hui/yanzhou | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| pinghua/northern-pinghua | 3 | 134 | 134 | 0 | 134 | 11 | 4 | 2 | 2 |
+| pinghua/southern-pinghua | 4 | 18 | 18 | 0 | 18 | 9 | 2 | 2 | 3 |
+| tuhua/southern-hunan | 3 | 12 | 1 | 11 | 12 | 2 | 2 | 2 | 3 |
+| tuhua/northern-guangdong | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| tuhua/eastern-guangxi | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 Gallery placements may share city photographs across language references, as in Singapore. This is not a count of additional photographs or evidence of the language spoken by pictured people. Original-publisher listening links are separate from inline recordings, general IPA demonstrations and character readings.
 
@@ -399,7 +399,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | haiyang-370687 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | huancui-district-371002 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | wendeng-district-371003 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| rongcheng-371082 | 150 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds, practice |
+| rongcheng-371082 | 150 | 0 | 0 | 9 | 2 | 2 | 3 | words, culture, sounds, practice |
 | rushan-371083 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | zhengzhou | 0 | 0 | 0 | 9 | 2 | 2 | 3 | culture, sounds |
 | kaifeng | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -786,7 +786,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | shizhu-tujia-autonomous-county-500240 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiushan-tujia-and-miao-autonomous-county-500241 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | youyang-tujia-and-miao-autonomous-county-500242 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| kunming-study | 250 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds, practice |
+| kunming-study | 250 | 0 | 0 | 10 | 2 | 2 | 3 | words, culture, sounds, practice |
 | xiamen | 59 | 0 | 0 | 11 | 2 | 2 | 3 | words, culture, sounds, practice |
 | quanzhou | 23 | 0 | 0 | 10 | 3 | 2 | 2 | words, culture, sounds, practice |
 | zhangzhou | 24 | 0 | 0 | 10 | 3 | 2 | 2 | words, culture, sounds, practice |
@@ -1199,7 +1199,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | xiang-county-430522 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430382 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiang-county-430381 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| loudi-study | 141 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds, practice |
+| loudi-study | 141 | 0 | 0 | 9 | 2 | 2 | 3 | words, culture, sounds, practice |
 | gan-county-430525 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | changsha-xiang | 250 | 0 | 0 | 11 | 2 | 2 | 4 | words, culture, sounds, practice |
 | xiang-county-430321 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1230,6 +1230,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | gan-county-360323 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360322 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360313 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| yunlou-gan | 20 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds, practice |
 | gan-county-360281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-360430 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | gan-county-361128 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1275,7 +1276,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | yanchuan-jin | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | jixi-hui | 115 | 0 | 0 | 11 | 3 | 2 | 2 | words, culture, sounds, practice |
 | shexian-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| tunxi-hui | 0 | 0 | 0 | 9 | 0 | 0 | 0 | culture |
+| tunxi-hui | 20 | 0 | 0 | 9 | 2 | 2 | 2 | words, culture, sounds, practice |
 | yixian-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | xiuning-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | qimen-hui | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1289,6 +1290,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | nanning-pinghua | 0 | 0 | 0 | 9 | 0 | 0 | 0 | culture |
 | binyang-luxu-pinghua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | baise-nabi-pinghua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| weizilu-pinghua | 18 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds, practice |
 | jiangyong-baishui | 0 | 0 | 0 | 2 | 0 | 0 | 0 | culture |
 | daoxian-tuhua | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | jiangyong-chengguan | 12 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds, practice |
@@ -2429,7 +2431,6 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **zhidan-jin:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **yanchuan-jin:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **shexian-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
-- **tunxi-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **yixian-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **xiuning-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **qimen-hui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
@@ -2442,6 +2443,7 @@ A working starter target is 20 attested readings, 3 specific sound notes, 2 cult
 - **nanning-pinghua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **binyang-luxu-pinghua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **baise-nabi-pinghua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
+- **weizilu-pinghua:** 18 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **jiangyong-baishui:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **daoxian-tuhua:** 0 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.
 - **jiangyong-chengguan:** 12 attested IPA entries. Expand from locality-specific dictionaries or speaker-documented studies; do not copy neighbouring accents.

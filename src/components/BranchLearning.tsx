@@ -52,7 +52,7 @@ export function LearningWord({ word }: { word: AttestedWord }) {
   return (
     <article className="learning-word">
       <div className="learning-word-top">
-        <h3 lang="zh-Hant">{word.han}</h3>
+        <h3 lang={word.han ? "zh-Hant" : undefined}>{word.han ?? word.english}</h3>
         <button
           className="learning-save"
           aria-label={`${saved ? "Unsave" : "Save"} ${word.english}`}
@@ -65,7 +65,8 @@ export function LearningWord({ word }: { word: AttestedWord }) {
       {notebook.error && (
         <p role="status">This browser could not save the word.</p>
       )}
-      {characterGloss ? <p className="learning-meaning"><span className="pronunciation-label">Written-character senses</span>{characterGloss.split(";").slice(0, 2).join(";")}</p> : <p className="learning-meaning">{word.english}</p>}
+      {characterGloss ? <p className="learning-meaning"><span className="pronunciation-label">Written-character senses</span>{characterGloss.split(";").slice(0, 2).join(";")}</p> : word.han && <p className="learning-meaning">{word.english}</p>}
+      {word.writingStatus === "not-supplied" && <p className="learning-register">Source does not supply a complete written form.</p>}
       {word.registerLabel && (
         <p className="learning-register">{word.registerLabel}</p>
       )}

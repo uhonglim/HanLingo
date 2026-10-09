@@ -21,6 +21,8 @@ export function localityDepth(localityId: string) {
     branchId: `${point.groupId}/${point.subgroupId}`,
     ipaWords: data.words.length,
     characterReadings: data.words.filter(word => word.learningKind === "character-reading").length,
+    lexicalEntries: data.words.filter(word => word.learningKind !== "character-reading").length,
+    incompleteWrittenForms: data.words.filter(word => word.writingStatus === "not-supplied").length,
     citationToneInventories: data.toneInventories.length,
     citationToneCategories: data.toneInventories.reduce((sum, inventory) => sum + inventory.tones.length, 0),
     segmentalEntries: data.words.filter(
@@ -53,6 +55,7 @@ export function branchDepth(groupId: string, subgroupId: string) {
     words: places.reduce((sum, place) => sum + place.words, 0),
     ipaWords: places.reduce((sum, place) => sum + place.ipaWords, 0),
     characterReadings: places.reduce((sum, place) => sum + place.characterReadings, 0),
+    lexicalEntries: places.reduce((sum, place) => sum + place.lexicalEntries, 0),
     citationToneInventories: places.reduce((sum, place) => sum + place.citationToneInventories, 0),
     photos: places.reduce((sum, place) => sum + place.photos, 0),
     soundNotes: places.reduce((sum, place) => sum + place.soundNotes, 0),

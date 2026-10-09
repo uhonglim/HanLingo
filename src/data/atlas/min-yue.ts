@@ -46,7 +46,7 @@ function cluster(id: string, groupId: 'min' | 'yue', branchId: string,
 
 /** A fixed navigation depth does not make geographic collections formal linguistic subgroups. */
 export const atlasMinYueClusters: AtlasCluster[] = [
-  cluster('tsuan-chiang', 'min', 'southern-min', 'Southern Min', '閩南語', 'Tsuan-Chiang', '泉漳', 'classification', 'The Quanzhang cluster in the cited classification. Taiwan and overseas references retain their own local speech.', minTaxonomy),
+  cluster('tsuan-chiang', 'min', 'southern-min', 'Southern Min', '閩南語', 'Tsuân-Tsiang', '泉漳', 'classification', 'The Quanzhang cluster in the cited classification. Taiwan and overseas references retain their own local speech.', minTaxonomy),
   cluster('teo-swa', 'min', 'southern-min', 'Southern Min', '閩南語', 'Teo Swa', '潮汕', 'classification', 'The Chao-Shan cluster, with distinct city references around Teochew and Swatow.', minTaxonomy),
   cluster('longyan-zhangping', 'min', 'southern-min', 'Southern Min', '閩南語', 'Longyan–Zhangping', '龍巖漳平', 'classification', 'The western Southern Min division in the Fujian gazetteer, distinguished from the coastal references.', fjTable),
   cluster('houguan', 'min', 'eastern-min', 'Eastern Min', '閩東語', 'Houguan', '侯官', 'classification', 'Southern Eastern Min, represented by Fuzhou. The gazetteer names eleven city and county references.', minTaxonomy),
@@ -58,7 +58,7 @@ export const atlasMinYueClusters: AtlasCluster[] = [
   cluster('yongan-cluster', 'min', 'central-min', 'Central Min', '閩中語', 'Southern cluster', '南片', 'classification', 'The gazetteer groups Yong’an, Liedong and Liexi in southern Central Min.', fjTable),
   cluster('shaxian-cluster', 'min', 'central-min', 'Central Min', '閩中語', 'Northern cluster', '北片', 'classification', 'The gazetteer’s northern Central Min division, represented by Shaxian.', fjTable),
   cluster('northeast-hainan', 'min', 'hainan-min', 'Hainan Min', '海南閩語', 'Northeastern Hainan', '海南東北部', 'geographic', 'A geographic collection beginning with Wenchang’s documented speakers, not a newly proposed linguistic subgroup.', wenchang),
-  cluster('leizhou-peninsula', 'min', 'leizhou-min', 'Leizhou Min', '雷州閩語', 'Leizhou Peninsula', '雷州半島', 'geographic', 'Local references on the peninsula. Some classifications place Leizhou within Southern Min; the atlas keeps it separate from Tsuan-Chiang.', minTaxonomy),
+  cluster('leizhou-peninsula', 'min', 'leizhou-min', 'Leizhou Min', '雷州閩語', 'Leizhou Peninsula', '雷州半島', 'geographic', 'Local references on the peninsula. Some classifications place Leizhou within Southern Min; the atlas keeps it separate from Tsuân-Tsiang.', minTaxonomy),
   cluster('pearl-delta', 'yue', 'guangfu', 'Guangfu', '廣府片', 'Pearl River Delta', '珠江三角洲', 'geographic', 'A geographic collection of Guangfu localities. Yuehai and Guangfu are alternative branch names, not parent and child.', yueTable),
   cluster('guan-bao', 'yue', 'guangfu', 'Guangfu', '廣府片', 'Guan–Bao', '莞寶', 'geographic', 'Dongguan and Bao’an fall under Guangfu in the Language Atlas column. Zhan’s different scheme treats Guan–Bao as a branch; this navigation collection does not combine the schemes into a new lineage.', yueTable),
   cluster('xiangshan', 'yue', 'guangfu', 'Guangfu', '廣府片', 'Xiangshan', '香山', 'geographic', 'Zhongshan and Zhuhai lie under Guangfu in the cited Language Atlas scheme. Xiangshan is a separate branch in another classification; here it is a geographic collection.', yueTable),

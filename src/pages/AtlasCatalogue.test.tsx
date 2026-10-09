@@ -8,7 +8,7 @@ import { mapPoints } from '../data/languages';
 function render(path: string, cluster = true) {
   return renderToStaticMarkup(<MemoryRouter initialEntries={[path]}><Routes>
     <Route path={cluster ? '/:languageId/:subgroupId/:clusterId' : '/:languageId/:subgroupId/:clusterId/:varietyId/*'} element={cluster ? <AtlasClusterPage/> : <AtlasLocalityRoute/>}/>
-  </Routes></MemoryRouter>);
+  </Routes></MemoryRouter>).replace(/<svg[\s\S]*?<\/svg>/g, "");
 }
 
 describe('atlas destination pages', () => {
@@ -23,7 +23,7 @@ describe('atlas destination pages', () => {
   });
   it('keeps catalogue-only entries explicit and rejects fabricated parents or lessons', () => {
     const place = atlasLocalities.find(p => !mapPoints.some(m => m.id === p.id))!;
-    expect(render(atlasLocalityPath(place), false)).toContain('Local recordings, IPA lessons and photographs have not yet been added');
+    expect(render(atlasLocalityPath(place), false)).toContain('Local IPA readings are still being documented');
     expect(render(`${atlasLocalityPath(place)}/words`, false)).toContain('Page not found');
     expect(render(`/${place.groupId}/${place.branchId}/wrong/${place.id}`, false)).toContain('Page not found');
   });

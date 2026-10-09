@@ -12,6 +12,7 @@ import {
 import { getBreadcrumbs } from "../../navigation";
 import { varietyPath } from "../../routing";
 import { getLocalGallery } from "../galleries";
+import { learningPlaces } from "./places";
 import { regionalReadingsFor } from "../regional-words";
 
 function sourceUrl(value: string) {
@@ -31,7 +32,7 @@ describe("learning coverage across every branch", () => {
       expect(pack.soundNotes.length, pack.branchId).toBeGreaterThan(0);
       expect(pack.culture.length, pack.branchId).toBeGreaterThan(0);
       expect(pack.resources.length, pack.branchId).toBeGreaterThan(0);
-      const ids = mapPoints
+      const ids = learningPlaces
         .filter(
           (point) => `${point.groupId}/${point.subgroupId}` === pack.branchId,
         )

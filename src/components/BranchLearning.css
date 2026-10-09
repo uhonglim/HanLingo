@@ -504,3 +504,4 @@
     gap: 0;
   }
 }
+.learning-show-more{display:block;margin:24px auto;padding:12px 22px;border:1px solid #dce3e7;border-radius:4px;background:#fff;color:#2155f5;font:inherit;font-size:14px;cursor:pointer}.learning-show-more:hover{border-color:#2155f5}.learning-show-more:focus-visible{outline:2px solid #2155f5;outline-offset:3px}

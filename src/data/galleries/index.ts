@@ -1,3 +1,5 @@
+import { atlasExtraGalleries } from "./atlas-extra";
+import { huangyanPhotos } from "./huangyan";
 import { expandedGalleries } from "../expansion";
 import { chaoshanGalleries } from "./chaoshan";
 import { minGalleries } from "./min";
@@ -10,6 +12,8 @@ export const localityGalleries: Record<string, GalleryPhoto[]> = {
   ...otherGalleries,
   ...chaoshanGalleries,
   ...expandedGalleries,
+  huangyan: huangyanPhotos,
+  ...atlasExtraGalleries,
   xiamen: xiamenPhotos.map((photo) => ({
     ...photo,
     title: photo.caption,

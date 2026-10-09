@@ -1,9 +1,14 @@
+import { placeLabel, placeNameAliases } from "../language-names";
 import { atlasMandarinClusters, atlasMandarinLocalities } from './mandarin';
 import { atlasMinYueClusters, atlasMinYueLocalities } from './min-yue';
 import { atlasWuHakkaClusters, atlasWuHakkaLocalities } from './wu-hakka';
 export type { AtlasCluster, AtlasLocality, AtlasSource } from './types';
 export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters];
-export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities];
+export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities].map((point) => ({
+  ...point,
+  name: placeLabel(point),
+  aliases: [...new Set([...placeNameAliases(point), ...(point.aliases ?? [])])],
+}));
 export const atlasBranches = [...new Map(atlasClusters.map(c => [`${c.groupId}/${c.branchId}`, {
   id: c.branchId, groupId: c.groupId, name: c.branchName, nativeName: c.branchNativeName,
 }])).values()];

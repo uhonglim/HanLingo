@@ -1,51 +1,126 @@
 import { lazy, Suspense } from 'react';
 import { Link, Navigate, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { atlasBranches, atlasClusters, atlasLocalities, atlasClusterPath, atlasLocalityPath, findAtlasCluster, findAtlasLocality } from '../data/atlas';
-import type { AtlasSource } from '../data/atlas';
+import type { AtlasLocality, AtlasSource } from '../data/atlas';
 import { mapPoints } from '../data/languages';
 import { getLocalGallery } from '../data/galleries';
-import { availableSections, learningSections } from '../data/learning';
+import { availableSections, getLocalLearning } from '../data/learning';
+import { findLearningPlace } from '../data/learning/places';
+import { placeNameReference } from '../data/language-names';
+import LanguageNameNotes from "../components/LanguageNameNotes";
 import AtlasMap from '../components/AtlasMap';
 import BranchLearning from '../components/BranchLearning';
+import LocalityScenes from '../components/LocalityScenes';
 import './AtlasCatalogue.css';
 const ReferencePage = lazy(() => import('../components/ReferencePages'));
 const LocalLearningPage = lazy(() => import('./LocalLearningPage'));
 const XiamenPage = lazy(() => import('./XiamenPage'));
+
 function Missing() { return <section className="atlas-catalogue"><h1>Page not found</h1><Link to="/">Han languages</Link></section>; }
-function Source({source}:{source:AtlasSource}) { return <p className="atlas-source"><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a><span>{source.locator}</span></p>; }
-export function AtlasBranchCards({groupId}:{groupId:string}) {
-  return <section className="atlas-directory"><h2>Branches</h2><div className="atlas-directory-grid">{atlasBranches.filter(b=>b.groupId===groupId).map(b=><Link to={`/${b.groupId}/${b.id}`} key={b.id}><h3>{b.name}{" "}<span lang="zh">{b.nativeName}</span></h3><p>{atlasClusters.filter(c=>c.groupId===groupId&&c.branchId===b.id).length} clusters · {atlasLocalities.filter(p=>p.groupId===groupId&&p.branchId===b.id).length} locality references</p></Link>)}</div></section>;
+function Source({ source }: { source: AtlasSource }) {
+  return <p className="atlas-source"><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a><span>{source.locator}</span></p>;
+}
+export function localityHasLearning(place: AtlasLocality) {
+  const point = findLearningPlace(place.id);
+  return point ? availableSections(point).length > 0 : false;
+}
+function PlaceList({ places }: { places: AtlasLocality[] }) {
+  return <div className="atlas-place-list">{places.map(place => {
+    const point = findLearningPlace(place.id)!;
+    const data = getLocalLearning(point);
+    const photos = getLocalGallery(place.id);
+    const detail = [data.words.length ? `${data.words.length} readings` : '', photos.length ? `${photos.length} photos` : ''].filter(Boolean).join(' · ');
+    return <Link to={atlasLocalityPath(place)} key={place.id}>
+      {photos[0] && <img src={photos[0].src} alt="" loading="lazy"/>}
+      <div><h3>{place.name}{' '}<span lang="zh">{place.nativeName}</span></h3><small>{detail || 'Place & classification sources'}</small></div>
+    </Link>;
+  })}</div>;
+}
+function ContextMap({ places, selected }: { places: AtlasLocality[]; selected?: AtlasLocality }) {
+  const navigate = useNavigate();
+  return <section className="atlas-context-map"><h2><Link to={`/map?${selected ? `place=${selected.id}` : `group=${places[0]?.groupId ?? ''}`}`}>Map</Link></h2>
+    <AtlasMap points={places} selectedGroup={places[0]?.groupId ?? 'all'} selectedPoint={selected?.id ?? null} onSelectPoint={id => {
+      const place = findAtlasLocality(id); if (place) navigate(atlasLocalityPath(place));
+    }} compact/>
+    <p className="atlas-scope">Markers locate reference places, not dialect boundaries. Open Map to explore all five groups.</p>
+  </section>;
+}
+/** Nearby evidence is explicitly labelled and linked, never reattributed to this locality. */
+function RelatedLearning({ place }: { place: AtlasLocality }) {
+  const siblings = atlasLocalities.filter(p => p.id !== place.id && p.groupId === place.groupId && p.branchId === place.branchId && localityHasLearning(p));
+  const candidates = siblings.length ? siblings : atlasLocalities.filter(p => p.id !== place.id && p.groupId === place.groupId && localityHasLearning(p));
+  if (!candidates.length) return null;
+  const branch = atlasBranches.find(b => b.groupId === place.groupId && b.id === place.branchId);
+  return <section className="atlas-related"><h2>{siblings.length ? `Elsewhere in ${branch?.name}` : 'Other local voices'}</h2>
+    <p>Separate local collections. These readings and photographs belong to the places named below.</p>
+    <PlaceList places={candidates.slice(0, 6)}/>
+  </section>;
+}
+export function AtlasBranchCards({ groupId }: { groupId: string }) {
+  return <section className="atlas-directory"><h2>Branches</h2><div className="atlas-directory-grid">{atlasBranches.filter(b => b.groupId === groupId).map(b => <Link to={`/${b.groupId}/${b.id}`} key={b.id}><h3>{b.name}{' '}<span lang="zh">{b.nativeName}</span></h3><p>{atlasClusters.filter(c => c.groupId === groupId && c.branchId === b.id).length} clusters · {atlasLocalities.filter(p => p.groupId === groupId && p.branchId === b.id).length} locality references</p></Link>)}</div></section>;
 }
 export function AtlasBranchPage() {
-  const {languageId,subgroupId}=useParams();
-  const branch=atlasBranches.find(b=>b.groupId===languageId&&b.id===subgroupId);
-  if(!branch) return <Missing/>;
-  const clusters=atlasClusters.filter(c=>c.groupId===languageId&&c.branchId===subgroupId);
-  return <article className="atlas-catalogue"><header><h1>{branch.name}{" "}<span lang="zh">{branch.nativeName}</span></h1><p>{clusters.length} clusters · {atlasLocalities.filter(p=>p.groupId===languageId&&p.branchId===subgroupId).length} locality references</p></header><div className="atlas-directory-grid">{clusters.map(c=><Link key={c.id} to={atlasClusterPath(c)}><h2>{c.name}{" "}<span lang="zh">{c.nativeName}</span></h2><p>{c.description}</p><small>{c.kind==='geographic'?'Geographic collection':'Source classification'} · {atlasLocalities.filter(p=>p.groupId===c.groupId&&p.branchId===c.branchId&&p.clusterId===c.id).length} places</small></Link>)}</div><p className="atlas-scope">Four browsing levels: group → branch → cluster → locality. Source ranks vary. Geographic collections organize attested places without inventing a linguistic subbranch.</p><BranchLearning groupId={branch.groupId} subgroupId={branch.id}/></article>;
+  const { languageId, subgroupId } = useParams();
+  const branch = atlasBranches.find(b => b.groupId === languageId && b.id === subgroupId);
+  if (!branch) return <Missing/>;
+  const clusters = atlasClusters.filter(c => c.groupId === languageId && c.branchId === subgroupId);
+  const places = atlasLocalities.filter(p => p.groupId === languageId && p.branchId === subgroupId);
+  return <article className="atlas-catalogue"><header><h1>{branch.name}{' '}<span lang="zh">{branch.nativeName}</span></h1><p>{clusters.length} clusters · {places.length} locality references</p></header>
+    <BranchLearning groupId={branch.groupId} subgroupId={branch.id}/>
+    <section className="atlas-child-directory"><h2>Explore the branch</h2><div className="atlas-directory-grid">{clusters.map(c => <Link key={c.id} to={atlasClusterPath(c)}><h3>{c.name}{' '}<span lang="zh">{c.nativeName}</span></h3><p>{c.description}</p><small>{c.kind === 'geographic' ? 'Geographic collection' : 'Source classification'} · {places.filter(p => p.clusterId === c.id).length} places</small></Link>)}</div></section>
+    <ContextMap places={places}/>
+    {branch.groupId === "min" && branch.id === "southern-min" && <LanguageNameNotes/>}
+    <p className="atlas-scope">Four browsing levels: group → branch → cluster → locality. Source ranks vary; a geographic collection is not an invented linguistic subbranch.</p>
+  </article>;
 }
 export function AtlasClusterPage() {
-  const {languageId='',subgroupId='',clusterId=''}=useParams();
-  const {search,hash}=useLocation();
-  const navigate=useNavigate();
-  const cluster=findAtlasCluster(languageId,subgroupId,clusterId);
-  const old=findAtlasLocality(clusterId);
-  if(!cluster&&old&&mapPoints.some(p=>p.id===old.id&&p.groupId===languageId&&p.subgroupId===subgroupId)) return <Navigate replace to={atlasLocalityPath(old)+search+hash}/>;
-  if(!cluster) return <Missing/>;
-  const places=atlasLocalities.filter(p=>p.groupId===languageId&&p.branchId===subgroupId&&p.clusterId===clusterId);
-  const representative=places.map(p=>getLocalGallery(p.id)[0]).find(Boolean);
-  return <article className="atlas-catalogue"><header><h1>{cluster.name}{" "}<span lang="zh">{cluster.nativeName}</span></h1><p>{cluster.description}</p><small>{cluster.kind==='geographic'?'Geographic collection · not a claimed linguistic subbranch':'Source classification'} · {places.length} locality references</small></header>{representative&&<figure className="atlas-catalogue-photo"><img src={representative.src} alt={representative.alt}/><figcaption>{representative.caption} <a href={representative.sourceUrl}>{representative.author}</a> · <a href={representative.licenseUrl}>{representative.license}</a></figcaption></figure>}<div className="atlas-place-list">{places.map(p=>{const lesson=mapPoints.find(m=>m.id===p.id);return <Link to={atlasLocalityPath(p)} key={p.id}><h2>{p.name}{" "}<span lang="zh">{p.nativeName}</span></h2><small>{lesson?availableSections(lesson).map(s=>learningSections[s]).join(' · '):'Locality reference'}</small></Link>;})}</div><AtlasMap points={places} selectedGroup={languageId} selectedPoint={null} onSelectPoint={id=>{const p=places.find(p=>p.id===id);if(p)navigate(atlasLocalityPath(p));}}/><p className="atlas-scope">Markers locate reference places, not dialect boundaries. A source attestation does not mean that everyone in a city speaks alike.</p><h2>Classification source</h2><Source source={cluster.source}/></article>;
+  const { languageId = '', subgroupId = '', clusterId = '' } = useParams();
+  const { search, hash } = useLocation();
+  const cluster = findAtlasCluster(languageId, subgroupId, clusterId);
+  const old = findAtlasLocality(clusterId);
+  if (!cluster && old && mapPoints.some(p => p.id === old.id && p.groupId === languageId && p.subgroupId === subgroupId)) return <Navigate replace to={atlasLocalityPath(old) + search + hash}/>;
+  if (!cluster) return <Missing/>;
+  const places = atlasLocalities.filter(p => p.groupId === languageId && p.branchId === subgroupId && p.clusterId === clusterId);
+  return <article className="atlas-catalogue"><header><h1>{cluster.name}{' '}<span lang="zh">{cluster.nativeName}</span></h1><p>{cluster.description}</p><small>{cluster.kind === 'geographic' ? 'Geographic collection · not a claimed linguistic subbranch' : 'Source classification'} · {places.length} locality references</small></header>
+    <BranchLearning groupId={languageId} subgroupId={subgroupId} localityIds={places.map(p => p.id)}/>
+    <section className="atlas-child-directory"><h2>Local voices</h2><PlaceList places={places}/></section>
+    <ContextMap places={places}/>{cluster.id === "tsuan-chiang" && <LanguageNameNotes/>}<h2>Classification source</h2><Source source={cluster.source}/>
+  </article>;
+}
+function CatalogueLocalityPage({ place }: { place: AtlasLocality }) {
+  const point = findLearningPlace(place.id)!;
+  const data = getLocalLearning(point);
+  const sections = availableSections(point);
+  const cluster = findAtlasCluster(place.groupId, place.branchId, place.clusterId)!;
+  const neighbours = atlasLocalities.filter(p => p.groupId === place.groupId && p.branchId === place.branchId);
+  const naming = placeNameReference(point);
+  return <article className="atlas-catalogue atlas-locality"><header><h1>{place.name}{' '}<span lang="zh">{place.nativeName}</span></h1>
+    {sections.length > 0 && <p className="atlas-learning-counts">{[data.words.length ? `${data.words.length} source readings` : '', getLocalGallery(place.id).length ? `${getLocalGallery(place.id).length} photographs` : ''].filter(Boolean).join(' · ')}</p>}
+  </header>
+    {getLocalGallery(place.id).length > 0 && <LocalityScenes point={point}/>}
+    {data.words.length > 0 && <p className="atlas-reading-scope">{[...new Set(data.words.map(w => w.registerLabel).filter(Boolean))].join(' · ')}</p>}
+    <BranchLearning groupId={place.groupId} subgroupId={place.branchId} point={point}/>
+    {!data.words.length && <p className="atlas-scope">Local IPA readings are still being documented. The linked collections below retain their own locality and speaker references.</p>}
+    <ContextMap places={neighbours} selected={place}/>
+    <RelatedLearning place={place}/>
+    <section><h2>Sources</h2><Source source={place.source}/>{place.source.url !== cluster.source.url && <Source source={cluster.source}/>}
+      <details className="atlas-reference-notes"><summary>Place and naming notes</summary><p>{place.scope}</p><p>{cluster.description}</p>{naming && <p>{naming.note} <a href={naming.source.url} target="_blank" rel="noreferrer">{naming.source.title}</a></p>}</details>
+    </section>
+  </article>;
 }
 export function AtlasLocalityRoute() {
-  const {languageId='',subgroupId='',clusterId='',varietyId='', '*':rest=''}=useParams();
-  const {search,hash}=useLocation();
-  const old=findAtlasLocality(clusterId);
-  const oldLesson=old&&mapPoints.find(p=>p.id===old.id);
-  if(oldLesson&&old?.groupId===languageId&&oldLesson.subgroupId===subgroupId&&availableSections(oldLesson).some(s=>s===varietyId)&&!rest) return <Navigate replace to={`${atlasLocalityPath(old)}/${varietyId}${search}${hash}`}/>;
-  const place=findAtlasLocality(varietyId);
-  if(!place||place.groupId!==languageId||place.branchId!==subgroupId||place.clusterId!==clusterId) return <Missing/>;
-  const lesson=mapPoints.find(p=>p.id===place.id);
-  if(lesson) return <Suspense fallback={<p>Loading</p>}>{place.id==='xiamen'?<XiamenPage/>:<Routes><Route index element={<ReferencePage/>}/><Route path=":chapter" element={<LocalLearningPage/>}/><Route path="*" element={<Missing/>}/></Routes>}</Suspense>;
-  if(rest) return <Missing/>;
-  const cluster=findAtlasCluster(place.groupId,place.branchId,place.clusterId)!;
-  return <article className="atlas-catalogue"><header><h1>{place.name}{" "}<span lang="zh">{place.nativeName}</span></h1><p>{place.scope}</p></header><section><h2>Language and place</h2><p>{cluster.description}</p><p className="atlas-scope">This entry documents a locality and its source classification. Local recordings, IPA lessons and photographs have not yet been added; neighbouring readings are not substituted.</p></section><AtlasMap points={[place]} selectedGroup={languageId} selectedPoint={place.id} onSelectPoint={()=>{}}/><p className="atlas-scope">The marker is an approximate place anchor, not a dialect boundary or a claim about all residents.</p><h2>Sources</h2><Source source={place.source}/>{place.source.url!==cluster.source.url&&<Source source={cluster.source}/>}</article>;
+  const { languageId = '', subgroupId = '', clusterId = '', varietyId = '', '*': rest = '' } = useParams();
+  const { search, hash } = useLocation();
+  const old = findAtlasLocality(clusterId);
+  const oldLesson = old && mapPoints.find(p => p.id === old.id);
+  if (oldLesson && old?.groupId === languageId && oldLesson.subgroupId === subgroupId && availableSections(oldLesson).some(s => s === varietyId) && !rest) return <Navigate replace to={`${atlasLocalityPath(old)}/${varietyId}${search}${hash}`}/>;
+  const place = findAtlasLocality(varietyId);
+  if (!place || place.groupId !== languageId || place.branchId !== subgroupId || place.clusterId !== clusterId) return <Missing/>;
+  const oldReference = mapPoints.some(p => p.id === place.id);
+  if (rest && !availableSections(findLearningPlace(place.id)!).some(section => section === rest)) return <Missing/>;
+  return <Suspense fallback={<p>Loading</p>}>{place.id === 'xiamen' ? <XiamenPage/> : <Routes>
+    <Route index element={oldReference ? <ReferencePage/> : <CatalogueLocalityPage place={place}/>}/>
+    <Route path=":chapter" element={<LocalLearningPage/>}/>
+    <Route path="*" element={<Missing/>}/>
+  </Routes>}</Suspense>;
 }

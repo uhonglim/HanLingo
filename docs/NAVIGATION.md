@@ -9,3 +9,9 @@ A uniform website depth is not evidence that scholarly classifications have iden
 The catalogue in `src/data/atlas/` includes source-attested locality references. The existing `mapPoints` collection identifies localities with developed learning material. Counts must distinguish catalogue references from learning collections: a new catalogue point does not imply a completed vocabulary bank or photo gallery. Unsourced readings, borrowed neighbouring pronunciations and duplicate place aliases must never pad coverage.
 
 The single persistent tree, search, branch-name toggle symmetry, arrow-only disclosure, scroll preservation, mobile panel and immediate navigation remain unchanged. Opening a direct lesson URL reveals all four ancestors. Do not add a second navigation system or animated transitions.
+
+## Whole-atlas Map
+
+`/map` is a top-navigation destination beside Language tree, Compare and Romanization. It uses the same `AtlasMap` component as embedded maps. Group/branch filters fit their actual locality anchors; search highlights matches without refitting on every keystroke. Selected places use canonical four-level URLs. `group`, `branch`, `q` and `place` query parameters make the view addressable. Keyboard arrows pan, +/- zoom, and Home resets the map.
+
+New atlas learning is not limited to the older `mapPoints` list. `src/data/learning/places.ts` provides addresses for all catalogue entries; actual source data determines which chapters exist. Branch and cluster overviews aggregate only their descendant locality evidence. Explicit branch-comparison resources may appear at group/branch level, but are never turned into a local reading. Undocumented leaves retain a source entry and links to separately named nearby collections.

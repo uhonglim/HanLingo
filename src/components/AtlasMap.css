@@ -295,3 +295,24 @@
     transition: none;
   }
 }
+
+/* Shared cartography: quiet terrain, constant-size anchors and immediate controls. */
+.atlas-map{background:#edf1f1;border:1px solid #dce3e3;border-radius:6px;color:#53666c}
+.atlas-land{fill:#f9faf6;stroke:#bccbca;stroke-width:.8}
+.atlas-borders{stroke:#cad4d2;stroke-opacity:.65}
+.atlas-grid{stroke:#9eb1b4;opacity:.13}
+.atlas-map-hint{top:18px;left:18px;border-color:#dce3e3;background:#ffffffed;color:#63757a;border-radius:4px;font-size:11px;padding:7px 9px}
+.atlas-place-dot{stroke-width:1.6}
+.atlas-place--dimmed .atlas-place-dot{opacity:.13}
+.atlas-place--dimmed .atlas-place-label{opacity:.25}
+.atlas-place--dimmed:hover .atlas-place-dot{opacity:1}
+.atlas-map-canvas:focus-visible{outline:2px solid #2155f5;outline-offset:-3px}
+.atlas-map-controls{right:18px;bottom:64px;border-radius:5px;border-color:#d3dddd;box-shadow:0 2px 8px #243a3a0a}
+.atlas-map-controls button{width:44px;height:44px;transition:none}
+.atlas-map-footer{left:18px;right:18px;bottom:16px;color:#617378}
+.atlas-map-key,.atlas-map-footer a{background:#edf1f1ee;color:#617378}
+.atlas-north{top:18px;right:22px;color:#617378}
+.atlas-country-label{fill:#929f9f;font-size:11px;letter-spacing:3px}
+.atlas-island-label{fill:#8e9fa2}
+.atlas-sea-label{fill:#9caeb2;font-size:9px;letter-spacing:2px}
+@media(max-width:700px){.atlas-map-hint{top:14px;left:14px}.atlas-map-controls{right:14px;bottom:62px}.atlas-map-footer{left:14px;right:14px;bottom:13px}.atlas-north{top:14px;right:18px}}

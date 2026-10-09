@@ -59,7 +59,7 @@ export const chaoshanArticles: Record<string, EncyclopediaEntry> = {
       {
         heading: "Within Southern Min",
         paragraphs: [
-          "Teochew belongs to Southern Min’s Teo Swa cluster, separate from Tsuan-Chiang. Linguist You Rujie uses the name Chaoshan for these eastern Guangdong varieties. Teo Swa is the community spelling used by the Teo Swa General Association of New Zealand; it names the wider cluster, not one uniform accent.",
+          "Teochew belongs to Southern Min’s Teo Swa cluster, separate from Tsuân-Tsiang. Linguist You Rujie uses the name Chaoshan for these eastern Guangdong varieties. Teo Swa is the community spelling used by the Teo Swa General Association of New Zealand; it names the wider cluster, not one uniform accent.",
         ],
       },
       {
@@ -110,7 +110,7 @@ export const chaoshanArticles: Record<string, EncyclopediaEntry> = {
       {
         heading: "Comparing neighbouring varieties",
         paragraphs: [
-          "The same study identifies differences in two-syllable tone sandhi between Swatow and neighbouring Teochew, Chenghai, and Jieyang. This makes the speaker’s locality relevant even within the regional cluster. Learning materials labelled Teochew may use the wider regional name; the speaker’s locality identifies which pronunciation is represented.",
+          "The same study identifies differences in two-syllable tone sandhi between Swatow and neighbouring Teochew, Theng Hai, and Kityang. This makes the speaker’s locality relevant even within the regional cluster. Learning materials labelled Teochew may use the wider regional name; the speaker’s locality identifies which pronunciation is represented.",
         ],
       },
     ],

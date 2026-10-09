@@ -1,3 +1,7 @@
+import { atlasCulturePacks } from "./atlas-culture";
+import { atlasLearningPacks } from "./atlas-learning";
+import { huangyanCulture } from "./huangyan-culture";
+import { mergeLearningPacks } from "./merge";
 import { expandLearningPacks } from "../expansion";
 import { xiamenWords } from "../xiamen-lexicon";
 import { ipaSearchForms } from "../ipa-display";
@@ -15,12 +19,12 @@ import { regionalReadingsFor } from "../regional-words";
 import { wordMeaning } from "../word-meaning";
 import { getLocalGallery } from "../galleries";
 
-export const branchLearning: BranchLearning[] = expandLearningPacks([
+export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLearningPacks([
   ...minLearning,
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,

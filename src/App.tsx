@@ -21,6 +21,7 @@ const TreeHomePage = lazy(() => import("./pages/TreeHomePage"));
 import LanguageTree from "./components/LanguageTree";
 const ReferencePage = lazy(() => import("./components/ReferencePages"));
 const ReadingRoom = lazy(() => import("./pages/ReadingRoom"));
+const MapPage = lazy(() => import("./pages/MapPage"));
 const RomanizationPage = lazy(() => import("./pages/RomanizationPage"));
 const WrittenChinesePage = lazy(() => import("./pages/WrittenChinesePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
@@ -215,6 +216,7 @@ export default function App() {
           >
             {siteTerms.tree}
           </NavLink>
+          <NavLink to="/map">{siteTerms.map}</NavLink>
           <NavLink to="/compare">{siteTerms.compare}</NavLink>
           <NavLink to="/romanization">{siteTerms.romanization}</NavLink>
         </nav>
@@ -234,6 +236,7 @@ export default function App() {
               <PageLocation />
               <Routes>
                 <Route path="/" element={<TreeHomePage />} />
+                <Route path="/map" element={<MapPage />} />
                 <Route path="/languages/*" element={<LegacyLanguageRoute />} />
                 {Object.entries(legacyMinPlaces).map(([oldId, place]) => (
                   <Route

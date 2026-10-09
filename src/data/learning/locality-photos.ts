@@ -72,12 +72,12 @@ export const localityPhotos: Record<
     },
   },
   taishan: {
-    title: "Taishan station",
+    title: "Toishan station",
     photo: {
       src: "/images/locality-taishan.jpg",
-      alt: "Taishan railway station in Guangdong, photographed in October 2018.",
+      alt: "Toishan railway station in Guangdong, photographed in October 2018.",
       caption:
-        "Taishan railway station in Guangdong, photographed in October 2018.",
+        "Toishan railway station in Guangdong, photographed in October 2018.",
       author: "N509FZ",
       license: "CC BY-SA 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",

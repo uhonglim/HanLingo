@@ -1,3 +1,4 @@
+import { findLearningPlace } from "../data/learning/places";
 import { availableSections } from "../data/learning";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
@@ -184,7 +185,7 @@ describe("persistent language tree", () => {
       const segments = href.split("/").filter(Boolean);
       expect(segments.length).toBeLessThanOrEqual(5);
       if (segments.length === 5) {
-        const point = mapPoints.find(point => point.id === segments[3]);
+        const point = findLearningPlace(segments[3]);
         expect(point).toBeDefined();
         expect(availableSections(point!)).toContain(segments[4]);
       }

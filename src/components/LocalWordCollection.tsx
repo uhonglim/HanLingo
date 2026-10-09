@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import type { AttestedWord } from "../data/learning/types";
 import { searchWords } from "../data/learning";
@@ -37,6 +38,11 @@ export default function LocalWordCollection({
     ? []
     : extraRegionalWords(localityId, words, query).filter(matchesTopic);
   const count = filtered.length + other.length;
+  const viewKey = `${localityId}/${query}/${topic}/${savedOnly}`;
+  const [window, setWindow] = useState({ key: viewKey, size: 48 });
+  const visibleCount = window.key === viewKey ? window.size : 48;
+  const shownWords = filtered.slice(0, visibleCount);
+  const shownOther = other.slice(0, Math.max(0, visibleCount - shownWords.length));
   const savedWords = words.filter((word) => saved.includes(word.id));
   const savedCount = savedWords.length;
   const canPracticeSaved =
@@ -95,10 +101,10 @@ export default function LocalWordCollection({
       </div>
       {count > 0 ? (
         <div className="learning-word-grid">
-          {filtered.map((word) => (
+          {shownWords.map((word) => (
             <LearningWord key={word.id} word={word} />
           ))}
-          {other.map((word) => (
+          {shownOther.map((word) => (
             <RegionalWord key={word.id} reading={word} />
           ))}
         </div>
@@ -123,6 +129,7 @@ export default function LocalWordCollection({
           </button>
         </div>
       )}
+      {count > visibleCount && <button className="learning-show-more" onClick={() => setWindow({ key: viewKey, size: visibleCount + 48 })}>Show more words · {Math.min(visibleCount, count)} of {count}</button>}
       <RegionalDifferences
         key={localityId}
         localityId={localityId}

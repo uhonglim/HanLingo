@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import LocalLearningPage from "./LocalLearningPage";
-import { getLocalLearning } from "../data/learning";
+import { getLocalLearning, searchWords } from "../data/learning";
 import { mapPoints } from "../data/languages";
 import { regionalReadingsFor } from "../data/regional-words";
 import { varietyPath } from "../routing";
@@ -23,12 +23,12 @@ function render(path: string) {
 describe("local learning chapters", () => {
   it("searches local words and renders source-qualified spellings", () => {
     const html = render("/hakka/yuetai/meixian/words?q=tea");
-    expect(html).toContain(
-      `1 of ${getLocalLearning(mapPoints.find((point) => point.id === "meixian")!).words.length} words`,
-    );
+    const words = getLocalLearning(mapPoints.find(point => point.id === "meixian")!).words;
+    const matches = searchWords(words, "tea");
+    expect(html).toContain(`${matches.length} of ${words.length} words`);
     expect(html).toContain("tsha11");
     expect(html).toContain("Reading and source");
-    expect(html.match(/class="learning-word"/g)).toHaveLength(1);
+    expect(html.match(/class="learning-word"/g)).toHaveLength(matches.length);
     expect(html).toContain("Local differences");
   });
   it("does not silently replace an empty saved deck with unsaved words", () => {
@@ -37,15 +37,16 @@ describe("local learning chapters", () => {
     expect(html).toContain("Use all words");
     expect(html).not.toContain('aria-label="Word practice"');
   });
-  it("keeps Chengdu's omitted-tone qualification in words, sounds and practice", () => {
-    for (const chapter of ["words", "sounds", "practice"]) {
-      const html = render(`/mandarin/southwestern/chengdu/${chapter}`);
-      expect(html).toContain("tones not supplied");
-      expect(html).toContain("IPA · tones not given");
-      const localOnly = html.split('<section class="regional-differences"')[0];
-      expect(localOnly).not.toContain('aria-label="Pitch contour');
-      expect(localOnly).toContain("HanLingo spelling · tones not given");
-      expect(localOnly).toContain('class="pronunciation-spelling"');
+  it("keeps omitted-tone examples separate from the new dated tonal survey", () => {
+    const words = render("/mandarin/southwestern/chengdu/words?q=倒拐");
+    expect(words).toContain("tones not supplied");
+    expect(words).toContain("IPA · tones not given");
+    expect(words).not.toContain('aria-label="Pitch contour');
+    expect(words).toContain("HanLingo spelling · tones not given");
+    const all = render("/mandarin/southwestern/chengdu/words");
+    expect(all).toContain("1950s survey · published 1964");
+    for (const card of all.match(/<article class="learning-word">[\s\S]*?<\/article>/g) ?? []) {
+      if (card.includes("tones not supplied")) expect(card.includes('aria-label="Pitch contour')).toBe(false);
     }
   });
   it("does not create empty word or practice routes for a locality without attested words", () => {

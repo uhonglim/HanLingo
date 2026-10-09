@@ -39,7 +39,7 @@ export const minExpansion: AtlasExpansion = {
     article: {
       title: 'Hainan Min', dek: 'Explore Wenchang’s implosives, checked syllables, and local tone contrasts.',
       sections: [
-        { heading: 'A Hainan reference', paragraphs: ['Hainan Min is a regional grouping within Min. Some broader classifications include it within Southern Min; this atlas gives it a separate regional branch so a Hainan locality is not folded into Tsuan-Chiang. The current learning material comes from Wenchang, in northeastern Hainan. Its readings do not establish a pronunciation for Haikou or for the whole island.'] },
+        { heading: 'A Hainan reference', paragraphs: ['Hainan Min is a regional grouping within Min. Some broader classifications include it within Southern Min; this atlas gives it a separate regional branch so a Hainan locality is not folded into Tsuân-Tsiang. The current learning material comes from Wenchang, in northeastern Hainan. Its readings do not establish a pronunciation for Haikou or for the whole island.'] },
         { heading: 'Begin with Wenchang', paragraphs: ['Peng’s phonetic study documents contrasts between ordinary voiced stops and implosives, as well as short syllables ending in stops. Its tone table supplies explicit pitch values alongside tone-category labels. Explore the recorded word-list examples first, then compare the local tone notes: older studies and different speech contexts do not always give the same result.'] },
       ], facts: [{ label: 'Reference locality', value: 'Wenchang' }, { label: 'Classification scope', value: 'A regional Min branch; included within Southern Min in some broader schemes' }],
       sources: [study], readingMinutes: 1,

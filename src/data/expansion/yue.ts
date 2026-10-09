@@ -231,7 +231,7 @@ export const yueExpansion: AtlasExpansion = {
           {
             heading: "Cantonese in Macau",
             paragraphs: [
-              "Macau belongs in the Guangfu comparison alongside Guangzhou and Hong Kong. A recent study includes Macau separately when examining changed tones in three-syllable words; the city should not simply inherit Hong Kong recordings.",
+              "Macau belongs in the Guangfu comparison alongside Canton and Hong Kong. A recent study includes Macau separately when examining changed tones in three-syllable words; the city should not simply inherit Hong Kong recordings.",
             ],
           },
           {
@@ -515,7 +515,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title: "Keep Foshan recordings local",
-          text: "The comparative study treats Foshan separately from Guangzhou, Hong Kong and Macau. A familiar shared character is a starting point for comparison, not evidence of the same local realization.",
+          text: "The comparative study treats Foshan separately from Canton, Hong Kong and Macau. A familiar shared character is a starting point for comparison, not evidence of the same local realization.",
           localityIds: ["foshan"],
           source: {
             title:
@@ -702,7 +702,7 @@ export const yueExpansion: AtlasExpansion = {
           {
             heading: "Within Siyi",
             paragraphs: [
-              "Kaiping is one of the seven locality points in Tan’s phonological and lexical comparison of Siyi. That study groups Kaiping with Taishan, Heshan and Doumen in its historical analysis; this does not make their present-day speech identical.",
+              "Kaiping is one of the seven locality points in Tan’s phonological and lexical comparison of Siyi. That study groups Kaiping with Toishan, Heshan and Doumen in its historical analysis; this does not make their present-day speech identical.",
             ],
           },
           {
@@ -754,7 +754,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title: "A local tone system",
-          text: "Liu’s phonetic study includes Kaiping alongside Taishan, Xinhui and Enping. Use its locality-specific tone measurements rather than Guangzhou tone numbers as a substitute.",
+          text: "Liu’s phonetic study includes Kaiping alongside Toishan, Xinhui and Enping. Use its locality-specific tone measurements rather than Canton tone numbers as a substitute.",
           localityIds: ["kaiping"],
           source: {
             title: "Liu: A Phonetic Study of Siyi Tonal Systems",
@@ -945,7 +945,7 @@ export const yueExpansion: AtlasExpansion = {
           {
             heading: "The urban speech point",
             paragraphs: [
-              "Jiangmen here means the urban locality in Siyi linguistic comparisons, not every variety inside the modern municipality. Tan’s historical analysis places Jiangmen with Xinhui and Enping, separately from the Kaiping–Taishan cluster.",
+              "Jiangmen here means the urban locality in Siyi linguistic comparisons, not every variety inside the modern municipality. Tan’s historical analysis places Jiangmen with Xinhui and Enping, separately from the Kaiping–Toishan cluster.",
             ],
           },
           {
@@ -957,7 +957,7 @@ export const yueExpansion: AtlasExpansion = {
           {
             heading: "Compare Jiangmen with Xinhui",
             paragraphs: [
-              "Tan’s historical grouping places Jiangmen, Xinhui and Enping together. This offers a comparison route within Siyi without treating Taishan as the universal representative.",
+              "Tan’s historical grouping places Jiangmen, Xinhui and Enping together. This offers a comparison route within Siyi without treating Toishan as the universal representative.",
             ],
           },
         ],
@@ -984,7 +984,7 @@ export const yueExpansion: AtlasExpansion = {
       soundNotes: [
         {
           title: "Compare Jiangmen with Xinhui",
-          text: "Tan’s historical grouping places Jiangmen, Xinhui and Enping together. This offers a comparison route within Siyi without treating Taishan as the universal representative.",
+          text: "Tan’s historical grouping places Jiangmen, Xinhui and Enping together. This offers a comparison route within Siyi without treating Toishan as the universal representative.",
           localityIds: ["jiangmen"],
           source: {
             title: "Tan: A phonological and lexical study of Siyi dialects",
@@ -993,7 +993,7 @@ export const yueExpansion: AtlasExpansion = {
         },
         {
           title: "Separate a city from its municipality",
-          text: "The study samples Jiangmen as one speech point among seven. Kaiping and Taishan need their own records even though both lie within today’s Jiangmen municipality.",
+          text: "The study samples Jiangmen as one speech point among seven. Kaiping and Toishan need their own records even though both lie within today’s Jiangmen municipality.",
           localityIds: ["jiangmen"],
           source: {
             title: "Tan: A phonological and lexical study of Siyi dialects",

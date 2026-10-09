@@ -651,7 +651,7 @@ export const southernMinLearning: BranchLearning[] = [
       },
       {
         title: "Compare the rhyme, not just the label",
-        text: "The Penang study compares rhyme patterns with Tsiang-tsiu, Tong’an, Amoy, and Tsuân-tsiu. A shared Hokkien label can contain different vowels and tones. Its Penang data should not automatically stand for every George Town speaker.",
+        text: "The Penang study compares rhyme patterns with Tsiang-tsiu, Tung Ann, Amoy, and Tsuân-tsiu. A shared Hokkien label can contain different vowels and tones. Its Penang data should not automatically stand for every George Town speaker.",
         localityIds: ["george-town"],
         source: {
           title: "Wang Kuei-lan: Penang Hokkien phonology and vocabulary",

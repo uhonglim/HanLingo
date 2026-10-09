@@ -17,9 +17,9 @@ export const sharedSpellingExtensions: SpellingRule[] = [
   ...rules([["ɲ", "ny"], ["ȵ", "ny"]], "Shared", "These nasal transcriptions share a spelling, not a claim of identical articulation."),
   ...rules([["a", "a"], ["ɑ", "a"], ["i", "i"], ["ɪ", "i"],
     ["u", "u"], ["ʊ", "u"], ["y", "yu"], ["ʏ", "yu"],
-    ["ø", "oe"], ["œ", "oe"], ["ə", "eo"], ["ɜ", "eo"]],
+    ["ø", "oe"], ["œ", "oe"], ["ɵ", "oe"], ["ə", "eo"], ["ɜ", "eo"]],
     "Shared", "A vowel family shares its reading spelling. Consult IPA for the exact vowel quality."),
-  ...rules([["tʂʰ", "tsrh"], ["tʂ", "tsr"], ["ʂ", "sr"], ["ʐ", "zr"],
+  ...rules([["cʰ", "kyh"], ["c", "ky"], ["ɟ", "gy"], ["tʂʰ", "tsrh"], ["tʂ", "tsr"], ["ʂ", "sr"], ["ʐ", "zr"],
     ["dz", "dz"], ["pfʰ", "pfh"], ["pf", "pf"],
     ["kʷʰ", "kwh"], ["kʰʷ", "kwh"], ["kʷ", "kw"],
     ["ɦ", "hh"], ["ɣ", "gh"], ["ɬ", "hl"], ["ɸ", "ff"], ["β", "vv"],
@@ -39,7 +39,8 @@ export const sharedSpellingRules: SpellingRule[] = [
 
 /** Normalize equivalent tie-bar spellings, not different places of articulation. */
 export function normalizeSegments(input: string): string {
-  return input.replace(/t[͜͡]?s/gu, "t͡s")
+  return input.replace(/[ʦʨʣʥʧʤ]/gu, symbol => ({ "ʦ": "ts", "ʨ": "tɕ", "ʣ": "dz", "ʥ": "dʑ", "ʧ": "tʃ", "ʤ": "dʒ" })[symbol]!)
+    .replace(/t[͜͡]?s/gu, "t͡s")
     .replace(/([td])[͜͡]([ɕʑʃʒʂz])/gu, "$1$2")
     .replace(/p[͜͡]f/gu, "pf");
 }

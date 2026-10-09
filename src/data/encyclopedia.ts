@@ -383,7 +383,7 @@ const baseGroupArticles: Record<LanguageId, EncyclopediaEntry> = {
       ),
       section(
         "Branches, clusters, and localities",
-        "Amoy belongs to the Tsuan-Chiang cluster of Southern Min, alongside Tsuân-tsiu and Tsiang-tsiu. Academia Sinica’s database uses the names Xiamen, Quanzhou, Zhangzhou, and Quanzhang, and distinguishes the branch, cluster, and survey locality.",
+        "Amoy belongs to the Tsuân-Tsiang cluster of Southern Min, alongside Tsuân-tsiu and Tsiang-tsiu. Academia Sinica’s database uses the names Xiamen, Quanzhou, Zhangzhou, and Quanzhang, and distinguishes the branch, cluster, and survey locality.",
       ),
       section(
         "More than one reading of a character",
@@ -392,18 +392,18 @@ const baseGroupArticles: Record<LanguageId, EncyclopediaEntry> = {
       ),
       section(
         "Sound changes across a phrase",
-        "Connected speech brings another dimension. Xiamen research examines how syntax helps delimit tone-sandhi domains; Fuzhou research likewise studies the interaction of phrase structure and pronunciation. The rules are local. A Southern Min tone pattern should not be transferred automatically to Eastern Min.",
+        "Connected speech brings another dimension. Amoy research examines how syntax helps delimit tone-sandhi domains; Foochow research likewise studies the interaction of phrase structure and pronunciation. The rules are local. A Southern Min tone pattern should not be transferred automatically to Eastern Min.",
         "Inland comparisons add further contrasts. Studies of Jian’ou and Yong’an describe different developments in syllable endings. These cases make Min a particularly clear demonstration that shared ancestry can coexist with substantial structural diversity.",
       ),
       section(
         "Writing and contemporary comparison",
         "The Amoy letter is a contributor draft awaiting local-speaker review of vocabulary, grammar, and character choices. It does not represent every Min variety.",
-        "Comparing Amoy, Tsuân-tsiu, and Tsiang-tsiu shows variation within Tsuan-Chiang. Fuzhou, Putian, Jian’ou, and Yong’an extend that comparison to other Min branches.",
+        "Comparing Amoy, Tsuân-tsiu, and Tsiang-tsiu shows variation within Tsuân-Tsiang. Foochow, Putian, Jian’ou, and Yong’an extend that comparison to other Min branches.",
       ),
     ],
     [
       ["Selected branches", "Southern · Eastern · Northern · Puxian · Central"],
-      ["Featured path", "Min → Southern Min → Tsuan-Chiang → Amoy"],
+      ["Featured path", "Min → Southern Min → Tsuân-Tsiang → Amoy"],
       ["Letter reference", "Amoy Southern Min — awaiting local review"],
     ],
     [
@@ -422,8 +422,8 @@ const baseGroupArticles: Record<LanguageId, EncyclopediaEntry> = {
     [
       section(
         "Cantonese within a wider group",
-        "Yue includes Cantonese as associated with Guangzhou and Hong Kong, as well as regional varieties that should not be collapsed into that familiar reference. The atlas connects Pearl River cities with Siyi, inland Goulou, and additional coastal and Guangxi branches. These paths make internal diversity visible before detailed pronunciation is introduced.",
-        "Some sources use Cantonese for a wider range of Yue varieties. Here, Cantonese refers to Guangzhou and Hong Kong varieties unless another locality is specified.",
+        "Yue includes Cantonese as associated with Canton and Hong Kong, as well as regional varieties that should not be collapsed into that familiar reference. The atlas connects Pearl River cities with Siyi, inland Goulou, and additional coastal and Guangxi branches. These paths make internal diversity visible before detailed pronunciation is introduced.",
+        "Some sources use Cantonese for a wider range of Yue varieties. Here, Cantonese refers to Canton and Hong Kong varieties unless another locality is specified.",
       ),
       section(
         "The sound of a checked syllable",
@@ -432,22 +432,22 @@ const baseGroupArticles: Record<LanguageId, EncyclopediaEntry> = {
       ),
       section(
         "Regional paths across Guangdong and Guangxi",
-        "Guangfu includes Guangzhou and Hong Kong Cantonese. Siyi includes Taishan and neighboring places such as Kaiping, Enping, and Xinhui. Goulou takes the reader inland, with Yulin as the selected point. Yong–Xun, Qin–Lian, Gao–Yang, and Wu–Hua extend the comparison beyond these familiar reference areas. Each city page identifies the classification and locality scope used by its source.",
-        "Taishan research compares its phonology directly with Cantonese while documenting incomplete mutual intelligibility. Work on Yulin compares kinship terminology. Together, these studies show that useful contrasts include vocabulary and social meanings as well as individual sounds.",
+        "Guangfu includes Canton and Hong Kong Cantonese. Siyi includes Toishan and neighboring places such as Kaiping, Enping, and Xinhui. Goulou takes the reader inland, with Yulin as the selected point. Yong–Xun, Qin–Lian, Gao–Yang, and Wu–Hua extend the comparison beyond these familiar reference areas. Each city page identifies the classification and locality scope used by its source.",
+        "Toishan research compares its phonology directly with Cantonese while documenting incomplete mutual intelligibility. Work on Yulin compares kinship terminology. Together, these studies show that useful contrasts include vocabulary and social meanings as well as individual sounds.",
       ),
       section(
         "Speech and writing are different layers",
         "Written Cantonese and Standard Written Chinese differ in vocabulary and grammar. This makes the letter comparison more than an exercise in reading shared characters with different pronunciations. Look at the pronouns, everyday verbs, and grammatical words: wording belongs to the variety and register being represented.",
-        "Our Guangfu letter is a contributor sample awaiting review. It is not a Taishan or Yulin letter, and its accessible character text does not substitute for a verified local recording.",
+        "Our Guangfu letter is a contributor sample awaiting review. It is not a Toishan or Yulin letter, and its accessible character text does not substitute for a verified local recording.",
       ),
       section(
         "How to read the map",
-        "A point at Guangzhou or Hong Kong names a reference locality, not a boundary around everyone who speaks Cantonese. The same caution matters even more when an inland variety is represented by one city. Begin with the branch, read the locality’s evidence, and compare like with like. This preserves the connection between the broad Yue label and the specific speech being described.",
+        "A point at Canton or Hong Kong names a reference locality, not a boundary around everyone who speaks Cantonese. The same caution matters even more when an inland variety is represented by one city. Begin with the branch, read the locality’s evidence, and compare like with like. This preserves the connection between the broad Yue label and the specific speech being described.",
       ),
     ],
     [
       ["Selected branches", "Guangfu · Siyi · Goulou"],
-      ["Featured reference", "Guangzhou Cantonese"],
+      ["Featured reference", "Canton speech"],
       ["Sound focus", "Checked syllables and local tone systems"],
     ],
     [
@@ -649,11 +649,11 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "min/southern-min": article(
     "Southern Min",
-    "The Min branch that includes the Tsuan-Chiang and Teo Swa clusters.",
+    "The Min branch that includes the Tsuân-Tsiang and Teo Swa clusters.",
     [
       section(
         "Two clusters of localities",
-        "Tsuan-Chiang, called Quanzhang in linguistic sources, includes Tsuân-tsiu, Tsiang-tsiu, and Amoy, with related varieties in Taiwan, Singapore, and Penang. Teo Swa, also called Chaoshan, is a separate cluster represented here by Teochew and Swatow in eastern Guangdong. Localities within either cluster have their own pronunciations.",
+        "Tsuân-Tsiang, called Quanzhang in linguistic sources, includes Tsuân-tsiu, Tsiang-tsiu, and Amoy, with related varieties in Taiwan, Singapore, and Penang. Teo Swa, also called Chaoshan, is a separate cluster represented here by Teochew and Swatow in eastern Guangdong. Localities within either cluster have their own pronunciations.",
       ),
       section(
         "Readings and connected speech",
@@ -662,7 +662,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Min"],
-      ["Selected clusters", "Tsuan-Chiang · Teo Swa"],
+      ["Selected clusters", "Tsuân-Tsiang · Teo Swa"],
       [
         "Taiwan references",
         "Taipak · Tâi-lâm · Ko-hiông · Gî-lân · Lo̍k-káng · Sam-kiap",
@@ -682,21 +682,21 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "min/eastern-min": article(
     "Eastern Min",
-    "The Min branch that includes Fuzhou, with its own syllable structure and tone sandhi.",
+    "The Min branch that includes Foochow, with its own syllable structure and tone sandhi.",
     [
       section(
         "A separate route through Min",
-        "Eastern Min, also called Min Dong in catalogues, includes the Fuzhou variety used as our mapped reference. It is not another name for Southern Min. Beginning with this distinction helps a reader avoid transferring Xiamen vocabulary, readings, or pronunciation rules to a city whose speech belongs to a different branch.",
+        "Eastern Min, also called Min Dong in catalogues, includes the Foochow variety used as our mapped reference. It is not another name for Southern Min. Beginning with this distinction helps a reader avoid transferring Amoy vocabulary, readings, or pronunciation rules to a city whose speech belongs to a different branch.",
       ),
       section(
         "Where phonology meets grammar",
-        "Fuzhou studies examine tone-sandhi domains, verb–object phrases, and the behavior of final glottal stops. These topics reveal that pronunciation depends on more than a list of isolated syllables. The relevant grammatical grouping can matter too. Fuzhou is a well-documented entry point, but its particular patterns should retain their local label rather than being asserted for all Eastern Min communities.",
+        "Foochow studies examine tone-sandhi domains, verb–object phrases, and the behavior of final glottal stops. These topics reveal that pronunciation depends on more than a list of isolated syllables. The relevant grammatical grouping can matter too. Foochow is a well-documented entry point, but its particular patterns should retain their local label rather than being asserted for all Eastern Min communities.",
       ),
     ],
     [
       ["Group", "Min"],
       ["Catalogue name", "Min Dong"],
-      ["Mapped locality", "Fuzhou"],
+      ["Mapped locality", "Foochow"],
     ],
     [S.easternMin, S.fuzhou, S.fuzhouSyntax],
   ),
@@ -730,7 +730,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "Relationships require evidence",
-        "Comparative research examines Putian and Xianyou alongside Fuqing and Yongchun, evaluating consonants, tones, and vowels to assess their relationships. One analysis finds stronger connections with Eastern Min than with Southern Min. That is a scholarly argument, not a reason to hide classification uncertainty. The local Putian entry introduces this evidence without presenting a disputed deeper grouping as settled fact.",
+        "Comparative research examines Putian and Xianyou alongside Futsing and Yongchun, evaluating consonants, tones, and vowels to assess their relationships. One analysis finds stronger connections with Eastern Min than with Southern Min. That is a scholarly argument, not a reason to hide classification uncertainty. The local Putian entry introduces this evidence without presenting a disputed deeper grouping as settled fact.",
       ),
     ],
     [
@@ -762,11 +762,11 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
   ),
   "yue/guangfu": article(
     "Guangfu",
-    "The Yue branch that includes Guangzhou and Hong Kong Cantonese.",
+    "The Yue branch that includes Canton and Hong Kong Cantonese.",
     [
       section(
         "A familiar reference area",
-        "The Guangfu grouping includes Guangzhou, Hong Kong, and Macau in the cited Language Atlas discussion. Guangzhou and Hong Kong are the two mapped examples here. Their prominence makes Cantonese an accessible starting point, but it should not erase the distinction between Guangfu and other Yue groupings such as Siyi or Goulou.",
+        "The Guangfu grouping includes Canton, Hong Kong, and Macau in the cited Language Atlas discussion. Canton and Hong Kong are the two mapped examples here. Their prominence makes Cantonese an accessible starting point, but it should not erase the distinction between Guangfu and other Yue groupings such as Siyi or Goulou.",
       ),
       section(
         "Speech, tones, and writing",
@@ -775,27 +775,27 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
     ],
     [
       ["Group", "Yue"],
-      ["Mapped localities", "Guangzhou · Hong Kong"],
+      ["Mapped localities", "Canton · Hong Kong"],
       ["Additional reference", "Macau"],
     ],
     [S.yueAtlas, S.cantoneseTones, S.cantoneseWriting],
   ),
   "yue/siyi": article(
     "Siyi",
-    "The Yue branch that includes Taishan, Kaiping, Enping, and Xinhui.",
+    "The Yue branch that includes Toishan, Kaiping, Enping, and Xinhui.",
     [
       section(
         "The selected regional set",
-        "The cited atlas discussion associates Siyi with Taishan, Enping, Kaiping, and Xinhui. Taishan, Kaiping, and Jiangmen provide separate reference points on the map. The regional label groups related varieties; it does not imply that one Taishan description exhausts the local variation across all four places.",
+        "The cited atlas discussion associates Siyi with Toishan, Enping, Kaiping, and Xinhui. Toishan, Kaiping, and Jiangmen provide separate reference points on the map. The regional label groups related varieties; it does not imply that one Toishan description exhausts the local variation across all four places.",
       ),
       section(
         "Resemblance without identity",
-        "Teresa Cheng’s phonological study places Taishan in Siyi and compares its sounds with Cantonese. It describes substantial structural relationships alongside incomplete mutual intelligibility. That combination is useful for understanding the atlas: common ancestry and partial similarity do not guarantee effortless comprehension. Compare Taishan with Guangzhou as two identified varieties, and resist substituting a Cantonese dictionary entry when a Taishan form has not yet been documented.",
+        "Teresa Cheng’s phonological study places Toishan in Siyi and compares its sounds with Cantonese. It describes substantial structural relationships alongside incomplete mutual intelligibility. That combination is useful for understanding the atlas: common ancestry and partial similarity do not guarantee effortless comprehension. Compare Toishan with Canton as two identified varieties, and resist substituting a Cantonese dictionary entry when a Toishan form has not yet been documented.",
       ),
     ],
     [
       ["Group", "Yue"],
-      ["Mapped locality", "Taishan"],
+      ["Mapped locality", "Toishan"],
       ["Regional places", "Enping · Kaiping · Xinhui"],
     ],
     [S.yueAtlas, S.taishan],
@@ -806,7 +806,7 @@ export const subgroupArticles: Record<string, EncyclopediaEntry> = {
     [
       section(
         "Beyond the Cantonese reference",
-        "Goulou is a regional Yue grouping represented here by Yulin in Guangxi. The cited atlas account also names Fengkai. This route broadens the site beyond Guangzhou and Hong Kong and helps prevent the word Yue from becoming a synonym for one familiar Cantonese pronunciation.",
+        "Goulou is a regional Yue grouping represented here by Yulin in Guangxi. The cited atlas account also names Fengkai. This route broadens the site beyond Canton and Hong Kong and helps prevent the word Yue from becoming a synonym for one familiar Cantonese pronunciation.",
       ),
       section(
         "Local evidence changes the picture",
@@ -1035,11 +1035,11 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
   ),
   xiamen: article(
     "Amoy",
-    "Southern Min in Amoy, within the Tsuan-Chiang cluster.",
+    "Southern Min in Amoy, within the Tsuân-Tsiang cluster.",
     [
       section(
-        "Within Tsuan-Chiang",
-        "Amoy is the established local name for Xiamen. Its Southern Min variety belongs to Tsuan-Chiang, called Quanzhang in Academia Sinica’s database. Tsuân-tsiu and Tsiang-tsiu are neighboring localities within the same cluster; Southern Min also includes other clusters.",
+        "Within Tsuân-Tsiang",
+        "Amoy is the established local name for Xiamen. Its Southern Min variety belongs to Tsuân-Tsiang, called Quanzhang in Academia Sinica’s database. Tsuân-tsiu and Tsiang-tsiu are neighboring localities within the same cluster; Southern Min also includes other clusters.",
       ),
       section(
         "A phrase is more than isolated readings",
@@ -1053,7 +1053,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
     ],
     [S.minGuide, S.minIntro, S.xiamen],
   ),
@@ -1062,8 +1062,8 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     "Southern Min in Tsuân-tsiu, with distinct literary and colloquial readings.",
     [
       section(
-        "Within Tsuan-Chiang",
-        "Tsuân-tsiu, called Quanzhou in Mandarin and in the cited research, belongs to Tsuan-Chiang alongside Amoy and Tsiang-tsiu. Their local readings differ even within the shared cluster.",
+        "Within Tsuân-Tsiang",
+        "Tsuân-tsiu, called Quanzhou in Mandarin and in the cited research, belongs to Tsuân-Tsiang alongside Amoy and Tsiang-tsiu. Their local readings differ even within the shared cluster.",
       ),
       section(
         "Literary and colloquial layers",
@@ -1077,7 +1077,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
     ],
     [S.minIntro, S.minCodas, S.minGuide],
   ),
@@ -1086,8 +1086,8 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     "Southern Min in Tsiang-tsiu, where word formation interacts with tone sandhi.",
     [
       section(
-        "Within Tsuan-Chiang",
-        "Tsiang-tsiu, called Zhangzhou in Mandarin and in the cited research, belongs to Tsuan-Chiang alongside Tsuân-tsiu and Amoy. The cluster includes related Hokkien varieties beyond Fujian, each with its own local development.",
+        "Within Tsuân-Tsiang",
+        "Tsiang-tsiu, called Zhangzhou in Mandarin and in the cited research, belongs to Tsuân-Tsiang alongside Tsuân-tsiu and Amoy. The cluster includes related Hokkien varieties beyond Fujian, each with its own local development.",
       ),
       section(
         "Word formation and tone",
@@ -1125,7 +1125,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["Map anchor", "Taipak — city reference, not a dialect boundary"],
       ["Dictionary reference", "Taipei, Quanzhou-leaning reading"],
@@ -1153,7 +1153,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["English name", "Tainan"],
       ["Name convention", "Tâi-lâm — MOE Tâi-lô place name"],
@@ -1178,7 +1178,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["English name", "Kaohsiung"],
       ["Name convention", "Ko-hiông — MOE Tâi-lô place name"],
@@ -1203,7 +1203,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["English name", "Yilan"],
       ["Name convention", "Gî-lân — MOE Tâi-lô place name"],
@@ -1231,7 +1231,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["English name", "Lukang"],
       ["Administrative unit", "Township"],
@@ -1260,7 +1260,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["English name", "Sanxia"],
       ["Administrative unit", "District of New Taipei"],
@@ -1294,7 +1294,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["English name", "Singapore"],
       ["Name source", "Sin-ka-pho — Taigi educational word list"],
@@ -1315,7 +1315,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       section(
         "George Town and Penang Hokkien",
-        "George Town is on Penang Island; the wider state also includes mainland communities. Penang Hokkien research supplies the regional context for this city page. Ông Kuì-lân’s fieldwork compares Penang speech with Zhangzhou, Longhai, Tong’an, Xiamen, and Quanzhou, identifying Zhangzhou-related features alongside local developments. The study also documents Malay and English loanwords. These findings describe Penang Hokkien rather than establishing a single accent used by every George Town speaker.",
+        "George Town is on Penang Island; the wider state also includes mainland communities. Penang Hokkien research supplies the regional context for this city page. Ông Kuì-lân’s fieldwork compares Penang speech with Zhangzhou, Longhai, Tung Ann, Xiamen, and Quanzhou, identifying Zhangzhou-related features alongside local developments. The study also documents Malay and English loanwords. These findings describe Penang Hokkien rather than establishing a single accent used by every George Town speaker.",
       ),
       section(
         "Two dictionary approaches",
@@ -1330,7 +1330,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       ["Group", "Min"],
       ["Branch", "Southern Min"],
-      ["Cluster", "Tsuan-Chiang"],
+      ["Cluster", "Tsuân-Tsiang"],
       ["Entry type", "Locality reference"],
       ["English name", "George Town"],
       [
@@ -1349,20 +1349,20 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     ],
   ),
   fuzhou: article(
-    "Fuzhou",
-    "Eastern Min in Fuzhou, where phrase structure helps shape pronunciation.",
+    "Foochow",
+    "Eastern Min in Foochow, where phrase structure helps shape pronunciation.",
     [
       section(
         "Eastern Min, not Southern Min",
-        "Fuzhou is the selected locality for Eastern Min. This is a separate branch from the Southern Min route through Xiamen. The distinction is basic to the atlas: a common provincial setting does not make the local vocabularies or sound systems interchangeable.",
+        "Foochow is the selected locality for Eastern Min. This is a separate branch from the Southern Min route through Amoy. The distinction is basic to the atlas: a common provincial setting does not make the local vocabularies or sound systems interchangeable.",
       ),
       section(
         "Syllables interact",
-        "Fuzhou research investigates final glottal stops and their behavior in stronger and weaker positions. Other work examines how verb–object structures relate to tone-sandhi domains. Together these studies show that identifying a syllable in isolation is not enough to predict every connected-speech realization.",
+        "Foochow research investigates final glottal stops and their behavior in stronger and weaker positions. Other work examines how verb–object structures relate to tone-sandhi domains. Together these studies show that identifying a syllable in isolation is not enough to predict every connected-speech realization.",
       ),
       section(
         "What a useful example records",
-        "A Fuzhou phrase should preserve its grammatical grouping, source, and transcription convention. The current Southern Min letter cannot supply those details for Eastern Min. This page therefore gives an evidence-based introduction without manufacturing a parallel letter or pronunciation. When local examples are added, they should make the relationship between citation forms and actual phrase-level forms visible.",
+        "A Foochow phrase should preserve its grammatical grouping, source, and transcription convention. The current Southern Min letter cannot supply those details for Eastern Min. This page therefore gives an evidence-based introduction without manufacturing a parallel letter or pronunciation. When local examples are added, they should make the relationship between citation forms and actual phrase-level forms visible.",
       ),
     ],
     [
@@ -1406,7 +1406,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "How relationships are argued",
-        "Comparative research considers Putian and Xianyou alongside Yongchun and Fuqing, using several kinds of sound evidence. One analysis connects Puxian more closely with Eastern Min than Southern Min. This is an argument based on correspondences, not a claim that Putian is simply Fuzhou speech or a blend of two neighbors.",
+        "Comparative research considers Putian and Xianyou alongside Yongchun and Futsing, using several kinds of sound evidence. One analysis connects Puxian more closely with Eastern Min than Southern Min. This is an argument based on correspondences, not a claim that Putian is simply Foochow speech or a blend of two neighbors.",
       ),
       section(
         "What the page can establish",
@@ -1445,12 +1445,12 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [S.minIntro, S.minCodas],
   ),
   guangzhou: article(
-    "Guangzhou Cantonese",
-    "Cantonese in Guangzhou, within the Guangfu branch of Yue.",
+    "Canton",
+    "Cantonese in Canton, within the Guangfu branch of Yue.",
     [
       section(
-        "Guangzhou within Yue",
-        "Guangzhou is one of the atlas’s Guangfu localities. Cantonese associated with Guangzhou and Hong Kong is a major reference for Yue, but it does not stand for Taishan or Yulin. The local label is useful even when an English source uses Cantonese more broadly.",
+        "Canton within Yue",
+        "Canton is one of the atlas’s Guangfu localities. Cantonese associated with Canton and Hong Kong is a major reference for Yue, but it does not stand for Toishan or Yulin. The local label is useful even when an English source uses Cantonese more broadly.",
       ),
       section(
         "Ends of syllables matter",
@@ -1458,7 +1458,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
       ),
       section(
         "The letter and the written reference",
-        "The Cantonese letter uses colloquial wording; the Standard Written Chinese letter uses a formal style. Their vocabulary and grammar differ. The Cantonese text awaits local-speaker review and is not a phonetic record of a Guangzhou speaker.",
+        "The Cantonese letter uses colloquial wording; the Standard Written Chinese letter uses a formal style. Their vocabulary and grammar differ. The Cantonese text awaits local-speaker review and is not a phonetic record of a Canton speaker.",
       ),
     ],
     [
@@ -1474,7 +1474,7 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [
       section(
         "A shared regional route",
-        "Hong Kong Cantonese belongs to the Guangfu path used here, alongside Guangzhou. The shared grouping does not establish that every choice of vocabulary, pronunciation, or register is identical in the two places. Local evidence should retain its label even when both sources use the name Cantonese.",
+        "Hong Kong Cantonese belongs to the Guangfu path used here, alongside Canton. The shared grouping does not establish that every choice of vocabulary, pronunciation, or register is identical in the two places. Local evidence should retain its label even when both sources use the name Cantonese.",
       ),
       section(
         "Speech and written forms",
@@ -1493,20 +1493,20 @@ export const varietyArticles: Record<string, EncyclopediaEntry> = {
     [S.yueAtlas, S.cantoneseWriting, S.cantoneseCorpus],
   ),
   taishan: article(
-    "Taishan",
-    "Siyi Yue in Taishan, related to Cantonese but not fully mutually intelligible with it.",
+    "Toishan",
+    "Siyi Yue in Toishan, related to Cantonese but not fully mutually intelligible with it.",
     [
       section(
         "Inside Siyi",
-        "Taishan is the selected point for Siyi, a Yue grouping also associated with Enping, Kaiping, and Xinhui. Keeping its page distinct from Guangzhou makes the tree more than a list of alternative place names for the same language sample.",
+        "Toishan is the selected point for Siyi, a Yue grouping also associated with Enping, Kaiping, and Xinhui. Keeping its page distinct from Canton makes the tree more than a list of alternative place names for the same language sample.",
       ),
       section(
         "A documented comparison",
-        "Teresa Cheng’s study explicitly compares Taishan phonology with Cantonese. It describes structural and historical similarities while noting that the varieties are not entirely mutually intelligible. This combination matters: belonging to the same group does not guarantee that a listener understands an unfamiliar local conversation.",
+        "Teresa Cheng’s study explicitly compares Toishan phonology with Cantonese. It describes structural and historical similarities while noting that the varieties are not entirely mutually intelligible. This combination matters: belonging to the same group does not guarantee that a listener understands an unfamiliar local conversation.",
       ),
       section(
         "What not to transfer automatically",
-        "The linked study documents Taishan phonology within its local scope. A Guangzhou Cantonese word list or letter cannot establish a Taishan reading; no reviewed Taishan letter is available here yet.",
+        "The linked study documents Toishan phonology within its local scope. A word list from Canton or letter cannot establish a Toishan reading; no reviewed Toishan letter is available here yet.",
       ),
     ],
     [

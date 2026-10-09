@@ -1,3 +1,4 @@
+import { placeLabel, clusterLabel } from "./language-names";
 import { siteTerms } from "./site-terms";
 import { chaoshanPoints } from "./chaoshan";
 import { expandedBranches, expandedPlaces } from "./expansion";
@@ -79,7 +80,7 @@ const baseLanguages: Language[] = [
     shortName: "閩",
     color: "#cf593c",
     intro:
-      "A notably diverse group rooted in Fujian and carried far beyond it. Southern Min and Eastern Min are different branches; Xiamen and Fuzhou should not be treated as interchangeable examples.",
+      "A notably diverse group rooted in Fujian and carried far beyond it. Southern Min and Eastern Min are different branches; Amoy and Foochow should not be treated as interchangeable examples.",
     feature: "Distinct branches across Fujian and coastal communities.",
     geography:
       "Fujian, parts of neighboring provinces, Taiwan, and overseas communities",
@@ -89,7 +90,7 @@ const baseLanguages: Language[] = [
         name: "Southern Min",
         nativeName: "閩南語",
         description:
-          "Includes Tsuan-Chiang and Teo Swa, represented by separate clusters of localities.",
+          "Includes Tsuân-Tsiang and Teo Swa, represented by separate clusters of localities.",
         places: [
           "Xiamen",
           "Quanzhou",
@@ -111,8 +112,8 @@ const baseLanguages: Language[] = [
         name: "Eastern Min",
         nativeName: "閩東語",
         description:
-          "A separate Min branch with Fuzhou as one familiar local variety.",
-        places: ["Fuzhou"],
+          "A separate Min branch with Foochow as one familiar local variety.",
+        places: ["Foochow"],
       },
       {
         id: "northern-min",
@@ -152,24 +153,24 @@ const baseLanguages: Language[] = [
     shortName: "粵",
     color: "#748463",
     intro:
-      "The group that includes Cantonese as spoken in Guangzhou and Hong Kong, alongside varieties such as Taishanese. Cantonese is an entry point into Yue, rather than a name for every local variety.",
-    feature: "Guangzhou Cantonese, Taishanese, and other Yue varieties.",
+      "The group that includes Cantonese as spoken in Canton and Hong Kong, alongside varieties such as Taishanese. Cantonese is an entry point into Yue, rather than a name for every local variety.",
+    feature: "Cantonese, Toishan speech, and other Yue varieties.",
     geography: "Guangdong, Guangxi, Hong Kong, Macau, and overseas communities",
     subgroups: [
       {
         id: "guangfu",
         name: "Guangfu",
         nativeName: "廣府片",
-        description: "Includes Guangzhou and Hong Kong Cantonese.",
-        places: ["Guangzhou", "Hong Kong"],
+        description: "Includes Canton and Hong Kong Cantonese.",
+        places: ["Canton", "Hong Kong"],
       },
       {
         id: "siyi",
         name: "Siyi",
         nativeName: "四邑片",
         description:
-          "Includes Taishan and neighboring communities west of the Pearl River Delta.",
-        places: ["Taishan"],
+          "Includes Toishan and neighboring communities west of the Pearl River Delta.",
+        places: ["Toishan"],
       },
       {
         id: "goulou",
@@ -180,8 +181,8 @@ const baseLanguages: Language[] = [
         places: ["Yulin"],
       },
     ],
-    featuredPlace: "Guangzhou",
-    hierarchy: ["Sinitic", "Yue", "Guangfu", "Guangzhou"],
+    featuredPlace: "Canton",
+    hierarchy: ["Sinitic", "Yue", "Guangfu", "Canton"],
   },
   {
     id: "hakka",
@@ -261,19 +262,6 @@ const baseLanguages: Language[] = [
   },
 ];
 
-export const languages: Language[] = baseLanguages.map((group) => ({
-  ...group,
-  subgroups: [
-    ...group.subgroups,
-    ...expandedBranches.filter((branch) => branch.groupId === group.id),
-  ].map((branch) => ({
-    ...branch,
-    places: [...new Set([
-      ...branch.places,
-      ...expandedPlaces.filter(({ point }) => point.groupId === group.id && point.subgroupId === branch.id).map(({ point }) => point.name),
-    ])],
-  })),
-}));
 
 export interface MapPoint {
   id: string;
@@ -287,7 +275,7 @@ export interface MapPoint {
 }
 
 /** Points locate examples; they do not claim exclusive language territories. */
-export const mapPoints: MapPoint[] = [
+const sourceMapPoints: MapPoint[] = [
   {
     id: "beijing-city",
     name: "Beijing",
@@ -491,12 +479,12 @@ export const mapPoints: MapPoint[] = [
   },
   {
     id: "fuzhou",
-    name: "Fuzhou",
+    name: "Foochow",
     nativeName: "福州",
     coordinates: [119.3, 26.07],
     groupId: "min",
     subgroupId: "eastern-min",
-    hierarchy: ["Sinitic", "Min", "Eastern Min", "Fuzhou"],
+    hierarchy: ["Sinitic", "Min", "Eastern Min", "Foochow"],
   },
   {
     id: "jianou",
@@ -527,12 +515,12 @@ export const mapPoints: MapPoint[] = [
   },
   {
     id: "guangzhou",
-    name: "Guangzhou",
+    name: "Canton",
     nativeName: "廣州",
     coordinates: [113.26, 23.13],
     groupId: "yue",
     subgroupId: "guangfu",
-    hierarchy: ["Sinitic", "Yue", "Guangfu", "Guangzhou"],
+    hierarchy: ["Sinitic", "Yue", "Guangfu", "Canton"],
   },
   {
     id: "hong-kong",
@@ -545,12 +533,12 @@ export const mapPoints: MapPoint[] = [
   },
   {
     id: "taishan",
-    name: "Taishan",
+    name: "Toishan",
     nativeName: "台山",
     coordinates: [112.79, 22.25],
     groupId: "yue",
     subgroupId: "siyi",
-    hierarchy: ["Sinitic", "Yue", "Siyi", "Taishan"],
+    hierarchy: ["Sinitic", "Yue", "Siyi", "Toishan"],
   },
   {
     id: "yulin",
@@ -636,6 +624,35 @@ export const mapPoints: MapPoint[] = [
   ...chaoshanPoints,
   ...expandedPlaces.map((place) => place.point),
 ];
+
+export const mapPoints: MapPoint[] = sourceMapPoints.map((point) => ({
+  ...point,
+  name: placeLabel(point),
+  hierarchy: point.hierarchy.map((label, index) => index === point.hierarchy.length - 1 ? placeLabel(point) : clusterLabel(label)),
+}));
+
+
+export const languages: Language[] = baseLanguages.map((group) => {
+  const resolvePlace = (label: string) => {
+    const point = sourceMapPoints.find((item) => item.groupId === group.id && item.name === label);
+    return point ? placeLabel(point) : label;
+  };
+  return {
+    ...group,
+    featuredPlace: resolvePlace(group.featuredPlace),
+    hierarchy: group.hierarchy.map((label, index) => index === group.hierarchy.length - 1 ? resolvePlace(label) : clusterLabel(label)),
+    subgroups: [
+      ...group.subgroups,
+      ...expandedBranches.filter((branch) => branch.groupId === group.id),
+    ].map((branch) => ({
+      ...branch,
+      places: [...new Set([
+        ...branch.places.map(resolvePlace),
+        ...mapPoints.filter((point) => point.groupId === group.id && point.subgroupId === branch.id).map((point) => point.name),
+      ])],
+    })),
+  };
+});
 
 export interface Letter {
   id: LanguageId | "formal";

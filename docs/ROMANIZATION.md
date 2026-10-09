@@ -54,3 +54,7 @@ This revision changes the reading aid, not the underlying lexical evidence. Sour
 The spelling is intentionally lossy. Equal spellings do not imply equal IPA, and collision-free reverse conversion is not promised. IPA remains necessary for precise pronunciation. The converter also does not infer pronunciation from Han characters, validate phonotactics, generate lesson pronunciations from machine translation, or infer missing tones. Unknown symbols fail visibly.
 
 The public workshop supports space-separated syllables with an explicit source tone convention. Loading a sourced reading selects its convention; editing the input or convention clears the source attribution. Tied and untied forms of the same affricate are normalized, while the supplied source transcription remains available. Live coverage and examples come from the published records; coverage is not a claim that the languages are completely documented.
+
+### Additional Huangyan source symbols
+
+Palatal stops use `c → ky`, `cʰ → kyh`, and `ɟ → gy`; aspiration still appends `h`. The rounded vowel `ɵ` shares `oe` with `ø/œ` in the reading spelling, while original IPA preserves vowel quality. Legacy affricate ligatures `ʦ ʨ ʣ ʥ ʧ ʤ` normalize to the equivalent expanded IPA symbols only during conversion and sound filtering. Source transcriptions keep their original glyphs. Huangyan JIPA digits are tone categories, displayed as `·Tn`, never pitch contours.

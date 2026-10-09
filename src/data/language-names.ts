@@ -1,13 +1,88 @@
 import type { MapPoint } from "./languages";
 
-/** Reader-facing names are independent of stable URL identifiers. */
+export type PlaceNameReference = {
+  label: string;
+  kind: "community" | "conventional" | "source-romanization";
+  aliases: string[];
+  note: string;
+  source: { title: string; url: string };
+};
+const clanDirectory = {
+  title: "SFCCA / NUS Libraries · Bilingual clan association directory",
+  url: "https://nus.edu.sg/nuslibraries/dsprojects/sfcca/clans/name/",
+};
+const communityName = (label: string, aliases: string[], association: string): PlaceNameReference => ({
+  label, aliases, kind: "community",
+  note: `${label} is the place-name spelling used by ${association}. It is a documented community label, not a HanLingo transcription or a claim that every local speaker uses this spelling.`,
+  source: clanDirectory,
+});
+
+/** One reader-facing label per locality ID; never infer a name from HanLingo spelling. */
+export const placeNameReferences: Record<string, PlaceNameReference> = {
+  xiamen: communityName("Amoy", ["Xiamen", "厦门", "廈門"], "the Amoy Association"),
+  quanzhou: {
+    label: "Tsuân-tsiu", aliases: ["Quanzhou", "泉州"], kind: "source-romanization",
+    note: "Tsuân-tsiu is the Ministry of Education dictionary’s place-name example for 泉州. Quanzhou remains a search alias.",
+    source: { title: "Ministry of Education Taigi dictionary · 州, place-name examples", url: "https://sutian.moe.edu.tw/zh-hant/su/2284/" },
+  },
+  zhangzhou: {
+    label: "Tsiang-tsiu", aliases: ["Zhangzhou", "Chang Chow", "漳州"], kind: "source-romanization",
+    note: "Tsiang-tsiu is the Ministry of Education dictionary’s place-name example for 漳州. This is a source spelling, not generated HanLingo.",
+    source: { title: "Ministry of Education Taigi dictionary · 州, place-name examples", url: "https://sutian.moe.edu.tw/zh-hant/su/2284/" },
+  },
+  singapore: {
+    label: "Sin-ka-pho", aliases: ["Singapore", "新加坡"], kind: "source-romanization",
+    note: "Sin-ka-pho is the Hokkien place name in the educational word list; this city reference covers Singapore Hokkien, not every language spoken in Singapore.",
+    source: { title: "Taipei school · Taigi vocabulary", url: "https://www.saihs.edu.tw/uploads/1678269782302fhjagTST.pdf" },
+  },
+  "george-town": {
+    label: "Pho Te", aliases: ["George Town", "Penang", "Pho3 Te4", "檳城", "槟城"], kind: "community",
+    note: "Timothy Tye records Pho3 Te4 for George Town. Navigation omits his tone-category digits; the locality is the city, not all of Penang.",
+    source: { title: "Timothy Tye · Place Names in Penang Hokkien", url: "https://www.penang-traveltips.com/hokkien/place-names.htm" },
+  },
+  guangzhou: {
+    label: "Canton", aliases: ["Guangzhou", "廣州", "广州"], kind: "conventional",
+    note: "Canton is the established English city name identified by Guangzhou’s municipal guide. It names the locality here; Yue remains the wider language group. Canton is not presented as a local-language phonetic transcription.",
+    source: { title: "Guangzhou municipal government · An Expat’s Guide, Basic Facts", url: "https://www.gz.gov.cn/attachment/7/7792/7792046/10199330.pdf" },
+  },
+  jinjiang: communityName("Chin Kang", ["Jinjiang", "晉江", "晋江"], "Singapore Chin Kang Huay Kuan"),
+  anxi: communityName("Ann Kway", ["Anxi", "安溪"], "Singapore Ann Kway Association"),
+  "nanan-min": communityName("Lam Ann", ["Nan’an", "Nanan", "Nan'an", "南安"], "Lam Ann Association"),
+  huian: communityName("Hui Ann", ["Hui’an", "Huian", "Hui'an", "惠安"], "Singapore Hui Ann Association"),
+  tongan: communityName("Tung Ann", ["Tong’an", "Tongan", "Tong'an", "同安"], "Tung Ann District Guild"),
+  fuzhou: communityName("Foochow", ["Fuzhou", "福州"], "Singapore Foochow Association"),
+  fuqing: communityName("Futsing", ["Fuqing", "福清"], "Singapore Futsing Association"),
+  "changle-min": {
+    label: "Dionglok", aliases: ["Changle", "Diòng-lŏ̤h", "長樂", "长乐"], kind: "community",
+    note: "The Foochow Dionglok Association explicitly identifies Dionglok with Changle. The atlas retains the specific Changle locality, separate from urban Foochow.",
+    source: { title: "Singapore Foochow Dionglok Association · Our Story", url: "https://fzcl.sg/" },
+  },
+  "longyan-min": communityName("Lung Yen", ["Longyan", "龍巖", "龙岩"], "Singapore Lung Yen Hui Kuan"),
+  chenghai: communityName("Theng Hai", ["Chenghai", "澄海"], "Theng Hai Huay Kuan"),
+  jieyang: communityName("Kityang", ["Jieyang", "揭陽", "揭阳"], "Kityang Kwee Lim Low Clan Association"),
+  ningbo: communityName("Ningpo", ["Ningbo", "寧波", "宁波"], "Ningpo Guild Singapore"),
+  taishan: communityName("Toishan", ["Taishan", "Toi Shan", "台山", "臺山"], "the Association of the Wong Clan of Toishan"),
+  chayang: communityName("Char Yong", ["Chayang", "茶陽", "茶阳"], "Char Yong Association"),
+};
+
+export function placeNameReference(point: Pick<MapPoint, "id">) {
+  return placeNameReferences[point.id];
+}
 export function placeLabel(point: Pick<MapPoint, "id" | "name">) {
-  return ({ xiamen: "Amoy", quanzhou: "Tsuân-tsiu", zhangzhou: "Tsiang-tsiu", singapore: "Sin-ka-pho", "george-town": "Pho Te" } as Record<string, string>)[point.id] ?? point.name;
+  return placeNameReferences[point.id]?.label ?? point.name;
+}
+export function placeNameAliases(point: Pick<MapPoint, "id" | "name">) {
+  return [...new Set([point.name, ...(placeNameReferences[point.id]?.aliases ?? [])])];
 }
 
-export const quanzhangLabel = "Tsuan-Chiang";
+export const quanzhangLabel = "Tsuân-Tsiang";
+export const quanzhangNameReference = {
+  note: "Tsuân-Tsiang names the 泉漳 cluster. Quanzhang is its Mandarin spelling alias. The Taigi essay uses Tsuân-tsiang; MOE separately records Tsuân-tsiu and Tsiang-tsiu. This name does not rename all Southern Min as Hokkien.",
+  source: { title: "Taigi community essay · 啥人是潮州人？", url: "https://tsbp.tgb.org.tw/2015/04/blog-post_11.html" },
+};
 export function clusterLabel(name: string) {
-  return name === "Quanzhang cluster" ? quanzhangLabel : name === "Chaoshan cluster" ? "Teo Swa" : name;
+  return ["Quanzhang cluster", "Tsuan-Chiang", "Tsuan-Tsiang", "Tsuân-Tsiang"].includes(name)
+    ? quanzhangLabel : name === "Chaoshan cluster" ? "Teo Swa" : name;
 }
 export function placeClusterLabel(point: Pick<MapPoint, "hierarchy">) {
   return point.hierarchy.length > 4 ? clusterLabel(point.hierarchy[3]) : undefined;
@@ -50,3 +125,12 @@ export const communityAliases: Record<string, string> = {
 export const legacyMinPlaces: Record<string, string> = {
   "taiwan-hokkien": "taipak", "singapore-hokkien": "singapore", "penang-hokkien": "george-town",
 };
+
+/** Concise scope notes; these terms are not interchangeable navigation levels. */
+export const languageNameGlossary = [
+  { id: "min", term: "Min", text: "The wider group. Southern Min and Eastern Min are different branches within it.", source: { title: "Tang 2009 · Min classification, §2.3.1", url: "https://www.lotpublications.nl/Documents/228_fulltext.pdf#page=40" } },
+  { id: "southern-min", term: "Southern Min", text: "The branch used here for Tsuân-Tsiang, Teo Swa, and Longyan–Zhangping. A shared branch does not make their speech identical.", source: { title: "Fujian Provincial Gazetteer · Dialect classification table", url: "https://data.fjdsfzw.org.cn/upload/Annals/2011/方言志/epub/ops/8.htm" } },
+  { id: "tsuan-chiang", term: quanzhangLabel, text: "The 泉漳 cluster within Southern Min: Amoy, Tsuân-tsiu, Tsiang-tsiu and related locality references. Quanzhang is its Mandarin spelling alias.", source: { title: "Tang 2009 · Quanzhang cluster, §2.3.1", url: "https://www.lotpublications.nl/Documents/228_fulltext.pdf#page=40" } },
+  { id: "hokkien", term: "Hokkien", text: "A familiar community name, especially in Southeast Asia. Here it describes Tsuân-Tsiang-related local speech, not every language of Fujian or every Min branch.", source: { title: "Luo Futeng · Hokkien in Singapore", url: "https://culturepaedia.singaporeccc.org.sg/language-education/the-hokkien-dialect-in-singapore/" } },
+  { id: "hoklo", term: "Hoklo", text: "A community and language label whose scope depends on who uses it. It remains a search term here, not an extra tree level or a replacement for Min.", source: { title: "Yao Wen-song · 啥人是潮州人？, community naming discussion", url: "https://tsbp.tgb.org.tw/2015/04/blog-post_11.html" } },
+];

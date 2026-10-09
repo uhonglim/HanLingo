@@ -12,7 +12,7 @@ import "./TreeHomePage.css";
 const selections: Record<LanguageId, { locality: string; word: string; scene: string }> = {
   mandarin: { locality: "beijing-city", word: "beijing-city-ipa-eight", scene: "A Chengdu teahouse" },
   min: { locality: "xiamen", word: "xiamen-water", scene: "An Amoy shopping street" },
-  yue: { locality: "guangzhou", word: "guangzhou-ding-heart", scene: "Backstage in Guangzhou" },
+  yue: { locality: "guangzhou", word: "guangzhou-ding-heart", scene: "Backstage in Canton" },
   hakka: { locality: "meixian", word: "meixian-tea", scene: "The Tung Blossom Festival" },
   wu: { locality: "shanghai", word: "shanghai-cuhk-31859", scene: "Suzhou Pingtan performers" },
 };

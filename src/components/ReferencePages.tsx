@@ -10,7 +10,7 @@ import type { CSSProperties } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, MapPin } from "lucide-react";
 import { languages, letters, mapPoints } from "../data/languages";
-import { placeLabel, clusterLabel } from "../data/language-names";
+import { placeLabel, clusterLabel, placeNameReference } from "../data/language-names";
 import {
   groupArticles,
   subgroupArticles,
@@ -22,8 +22,11 @@ import {
   groupPath,
   resolveReferenceRoute,
 } from "../routing";
+import LanguageNameNotes from "./LanguageNameNotes";
 import AtlasMap from "./AtlasMap";
 import "./ReferencePages.css";
+
+const pointNameReference = (point: { id: string } | undefined) => point ? placeNameReference(point) : undefined;
 
 export default function ReferencePage() {
   const params = useParams<{
@@ -55,6 +58,7 @@ export default function ReferencePage() {
   const mapAnchor = entry?.facts.find(
     (fact) => fact.label === "Map anchor",
   )?.value;
+  const nameReference = pointNameReference(route?.point);
   const referenceFacts =
     entry?.facts.filter(
       (fact) =>
@@ -274,14 +278,17 @@ export default function ReferencePage() {
             </section>
           )}
 
+          {!point && group.id === "min" && <LanguageNameNotes/>}
+
           <section className="reference-sources" id="reference-sources">
             <div>
               <BookOpen size={17} />
               <h2>Sources</h2>
             </div>
-            {referenceFacts.length > 0 && (
+            {(referenceFacts.length > 0 || nameReference) && (
               <details className="reference-notes" key={entry.title}>
                 <summary>Reference notes</summary>
+                {nameReference && <p>{nameReference.note} <a href={nameReference.source.url} target="_blank" rel="noreferrer">{nameReference.source.title}</a></p>}
                 <dl>
                   {referenceFacts.map((fact) => (
                     <div key={fact.label}>

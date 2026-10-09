@@ -160,7 +160,7 @@ export const minLearning: BranchLearning[] = [
       },
       {
         title: "Learn phrases with their own readings",
-        text: "Fuzhou pronunciation changes across syllables. Citation tones are useful for looking up a character, but a sequence of dictionary forms is not automatically a natural phrase.",
+        text: "Foochow pronunciation changes across syllables. Citation tones are useful for looking up a character, but a sequence of dictionary forms is not automatically a natural phrase.",
         localityIds: ["fuzhou"],
         source: fuzhouStudy,
       },
@@ -168,14 +168,14 @@ export const minLearning: BranchLearning[] = [
     culture: [
       {
         title: "Three Lanes and Seven Alleys",
-        text: "Fuzhou’s historic district brings old lanes, houses, and present-day shops into the same walk. The photograph records the district in March 2019.",
+        text: "Foochow’s historic district brings old lanes, houses, and present-day shops into the same walk. The photograph records the district in March 2019.",
         localityIds: ["fuzhou"],
         source: lanes,
         photo: {
           src: "/images/min-fuzhou-lanes.jpg",
-          alt: "A lane in Fuzhou’s Three Lanes and Seven Alleys historic district.",
+          alt: "A lane in Foochow’s Three Lanes and Seven Alleys historic district.",
           caption:
-            "Three Lanes and Seven Alleys, Fuzhou, 2019. Resized from the original.",
+            "Three Lanes and Seven Alleys, Foochow, 2019. Resized from the original.",
           author: "Zhangzhugang",
           license: "CC BY-SA 4.0",
           licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -185,14 +185,14 @@ export const minLearning: BranchLearning[] = [
       },
       {
         title: "Lacquer without a permanent mould",
-        text: "For Fuzhou bodiless lacquerware, artisans build layers of cloth and lacquer over a mould, then remove the mould. Polishing, colour, and inlay turn the lightweight shell into bowls, vessels, or display pieces.",
+        text: "For Foochow bodiless lacquerware, artisans build layers of cloth and lacquer over a mould, then remove the mould. Polishing, colour, and inlay turn the lightweight shell into bowls, vessels, or display pieces.",
         localityIds: ["fuzhou"],
         source: lacquer,
       },
     ],
     resources: [
       {
-        title: "Fuzhou character dictionary",
+        title: "Foochow character dictionary",
         description:
           "Look up syllables and pitch contours, then use the speaker icon to hear a dictionary recording.",
         localityIds: ["fuzhou"],
@@ -200,7 +200,7 @@ export const minLearning: BranchLearning[] = [
         url: fuzhouDictionary.url,
       },
       {
-        title: "Fuzhou vowels and tones",
+        title: "Foochow vowels and tones",
         description:
           "Peng’s acoustic study documents speakers, experimental words, vowels, and citation and connected tones.",
         localityIds: ["fuzhou"],

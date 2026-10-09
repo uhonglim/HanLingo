@@ -2,6 +2,7 @@
 export const siteTerms = {
   home: "Han languages",
   tree: "Language tree",
+  map: "Map",
   compare: "Compare",
   romanization: "Romanization",
   writtenChinese: "Standard Written Chinese",

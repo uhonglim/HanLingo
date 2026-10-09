@@ -225,7 +225,7 @@ export const mandarinExpansion: AtlasExpansion = {
           {
             "heading": "Local speech",
             "paragraphs": [
-              "Harbin belongs to Northeastern Mandarin. Jiang’s study treats Harbin speech as its own reference and compares its sound system with Guangzhou Cantonese; neither “Mandarin” nor “Northeastern” makes every city sound the same."
+              "Harbin belongs to Northeastern Mandarin. Jiang’s study treats Harbin speech as its own reference and compares its sound system with Canton speech; neither “Mandarin” nor “Northeastern” makes every city sound the same."
             ]
           },
           {

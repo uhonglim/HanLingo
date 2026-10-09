@@ -1,12 +1,14 @@
+import { normalizeNameSearch as normalize } from "../data/name-search";
 import { atlasBranches, atlasClusters, atlasLocalities, atlasClusterPath, atlasLocalityPath } from "../data/atlas";
 import { availableSections, learningSections } from "../data/learning";
 import { siteTerms } from "../data/site-terms";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Search, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { languages, mapPoints } from "../data/languages";
+import { findLearningPlace } from "../data/learning/places";
+import { languages } from "../data/languages";
 import {
-  communityAliases,
+  communityAliases, hokkienAliases,
 } from "../data/language-names";
 import { groupPath, subgroupPath } from "../routing";
 import "./LanguageTree.css";
@@ -67,10 +69,10 @@ function buildTree(): TreeNode {
         children: atlasClusters.filter(cluster => cluster.groupId === language.id && cluster.branchId === branch.id).map(cluster => ({
           id: `cluster/${language.id}/${branch.id}/${cluster.id}`,
           name: cluster.name, nativeName: cluster.nativeName,
-          aliases: cluster.id === "tsuan-chiang" ? "Hokkien Hoklo Quanzhang 泉漳" : cluster.id === "teo-swa" ? "Chaoshan 潮汕" : undefined,
+          aliases: cluster.id === "tsuan-chiang" ? hokkienAliases : cluster.id === "teo-swa" ? "Chaoshan 潮汕" : undefined,
           href: atlasClusterPath(cluster),
           children: atlasLocalities.filter(place => place.groupId === language.id && place.branchId === branch.id && place.clusterId === cluster.id).map(place => {
-            const lesson = mapPoints.find(point => point.id === place.id);
+            const lesson = findLearningPlace(place.id);
             const path = atlasLocalityPath(place);
             return {
               id: `place/${place.id}`, name: place.name, nativeName: place.nativeName,
@@ -106,11 +108,7 @@ const referencePages: TreeNode[] = [
 ];
 const normalizedPath = (pathname: string) =>
   pathname.replace(/\/+$/, "") || "/";
-const normalize = (text: string) =>
-  text
-    .toLocaleLowerCase()
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f’'–-]/g, "");
+
 
 function routeTrail(node: TreeNode, pathname: string): string[] {
   // Match the deepest destination before its ancestors.

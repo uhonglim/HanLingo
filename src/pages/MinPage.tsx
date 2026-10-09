@@ -119,7 +119,7 @@ export default function MinPage() {
             <Credit photo={streetPhoto} />
           </figure>
           <div className="min-feature-content">
-            <p className="min-feature-location">Southern Min · Tsuan-Chiang</p>
+            <p className="min-feature-location">Southern Min · Tsuân-Tsiang</p>
             <h2 id="min-xiamen-title">
               <Link to={xiamenPath}>
                 Amoy <span lang="zh-Hant">廈門</span>
@@ -261,7 +261,7 @@ export default function MinPage() {
             </p>
             <dl className="min-name-guide">
               <div>
-                <dt>Tsuan-Chiang · 泉漳</dt>
+                <dt>Tsuân-Tsiang · 泉漳</dt>
                 <dd>
                   The Quanzhou–Zhangzhou cluster within Southern Min. Quanzhang
                   is the Mandarin spelling of the same name.

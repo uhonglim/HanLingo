@@ -312,21 +312,21 @@ export const wuHakkaExpansion: AtlasExpansion = {
     {
       point: {
         id: "ningbo",
-        name: "Ningbo",
+        name: "Ningpo",
         nativeName: "寧波",
         coordinates: [121.55, 29.87],
         groupId: "wu",
         subgroupId: "taihu",
-        hierarchy: ["Sinitic", "Wu", "Taihu", "Ningbo"],
+        hierarchy: ["Sinitic", "Wu", "Taihu", "Ningpo"],
       },
       article: {
-        title: "Ningbo",
+        title: "Ningpo",
         dek: "Vowel contrasts from a coastal Wu city.",
         sections: [
           {
             heading: "Local speech",
             paragraphs: [
-              "Ningbo is a Taihu Wu reference locality on Zhejiang’s coast. Fang Hu’s vowel study uses recordings from ten male native speakers collected in Ningbo city in 2001, with an articulatory investigation involving two speakers. It is a precisely identified research sample, not a claim that all ages or all places administered by Ningbo pronounce words identically.",
+              "Ningpo is a Taihu Wu reference locality on Zhejiang’s coast. Fang Hu’s vowel study uses recordings from ten male native speakers collected in Ningpo city in 2001, with an articulatory investigation involving two speakers. It is a precisely identified research sample, not a claim that all ages or all places administered by Ningpo pronounce words identically.",
             ],
           },
           {
@@ -340,7 +340,7 @@ export const wuHakkaExpansion: AtlasExpansion = {
           {
             label: "Reference place",
             value:
-              "Ningbo urban center; named surrounding towns retain their own scope",
+              "Ningpo urban center; named surrounding towns retain their own scope",
           },
           {
             label: "Naming",
@@ -426,7 +426,7 @@ export const wuHakkaExpansion: AtlasExpansion = {
           url: "https://nbtygyh.haishu.gov.cn/",
         },
         {
-          title: "Photographers: Ningbo scenes",
+          title: "Photographers: Ningpo scenes",
           description: "Place-specific cultural context and documentation.",
           localityIds: ["ningbo"],
           kind: "Culture",
@@ -482,11 +482,11 @@ export const wuHakkaExpansion: AtlasExpansion = {
         },
         {
           id: "expansion-ningbo-3",
-          title: "A busy Ningbo street",
+          title: "A busy Ningpo street",
           category: "Streets",
           src: "/images/expansion-wuhakka-ningbo-3.webp",
-          alt: "A busy Ningbo street",
-          caption: "A busy Ningbo street.",
+          alt: "A busy Ningpo street",
+          caption: "A busy Ningpo street.",
           author: "Megan Eaves",
           license: "CC BY-SA 2.0",
           licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",

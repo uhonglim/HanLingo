@@ -1,11 +1,11 @@
 import { Bookmark } from "lucide-react";
 import { useWordNotebook } from "../hooks/useWordNotebook";
 import { Link } from "react-router-dom";
-import { mapPoints } from "../data/languages";
+import { learningPlaces as mapPoints } from "../data/learning/places";
 import type { MapPoint } from "../data/languages";
 import {
-  branchLearning,
   getLocalLearning,
+  branchLearning,
   spellingFor,
 } from "../data/learning";
 import type { AttestedWord } from "../data/learning/types";
@@ -92,35 +92,31 @@ export default function BranchLearning({
   subgroupId,
   point,
   heroPhotoSrc,
+  localityIds,
 }: {
   groupId: string;
   subgroupId?: string;
   point?: MapPoint;
   heroPhotoSrc?: string;
+  localityIds?: string[];
 }) {
   const places = mapPoints.filter(
     (place) =>
       place.groupId === groupId &&
       (!subgroupId || place.subgroupId === subgroupId) &&
-      (!point || place.id === point.id),
-  );
-  const packs = branchLearning.filter(
-    (pack) =>
-      pack.branchId.startsWith(`${groupId}/`) &&
-      (!subgroupId || pack.branchId === `${groupId}/${subgroupId}`),
+      (!point || place.id === point.id) &&
+      (!localityIds || localityIds.includes(place.id)),
   );
   const localData = places.map((place) => getLocalLearning(place));
   const data = {
     words: localData.flatMap((local) => local.words),
-    soundNotes: point
-      ? (localData[0]?.soundNotes ?? [])
-      : packs.flatMap((pack) => pack.soundNotes),
-    culture: point
-      ? (localData[0]?.culture ?? [])
-      : packs.flatMap((pack) => pack.culture),
-    resources: point
-      ? (localData[0]?.resources ?? [])
-      : packs.flatMap((pack) => pack.resources),
+    soundNotes: [...new Map(localData.flatMap(local => local.soundNotes).map(item => [`${item.title}/${item.localityIds.join('/')}`, item])).values()],
+    culture: [...new Map(localData.flatMap(local => local.culture).map(item => [`${item.title}/${item.localityIds.join('/')}`, item])).values()],
+    resources: [...localData.flatMap(local => local.resources),
+      ...(!point && !localityIds ? branchLearning
+        .filter(pack => pack.branchId.startsWith(`${groupId}/`) && (!subgroupId || pack.branchId === `${groupId}/${subgroupId}`))
+        .flatMap(pack => pack.resources.filter(item => item.scope === "branch-comparison")) : []),
+    ],
   };
   const words = balancedPreview(
     data.words,
@@ -128,7 +124,7 @@ export default function BranchLearning({
       const place = mapPoints.find((place) => place.id === word.localityId)!;
       return subgroupId ? word.localityId : place.subgroupId;
     },
-    point ? 6 : 8,
+    point ? 8 : 12,
   );
   const meanings = new Set(
     data.words.map((word) => `${word.localityId}/${wordMeaning(word.english)}`),
@@ -157,10 +153,10 @@ export default function BranchLearning({
     ...new Map(data.resources.map((item) => [item.url, item])).values(),
   ];
   const photoPlaces = balancedPreview(
-    places,
+    places.filter(place => getLocalGallery(place.id).length),
     (place) =>
       subgroupId ? (place.hierarchy[3] ?? place.id) : place.subgroupId,
-    6,
+    9,
   );
   const photos =
     photoPlaces.length === 1

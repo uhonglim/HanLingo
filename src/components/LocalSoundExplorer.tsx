@@ -1,5 +1,6 @@
 import { useId, useMemo, useState } from "react";
 import type { AttestedWord } from "../data/learning/types";
+import { normalizeSegments } from "../data/xiamen-romanization";
 import { spellingFor } from "../data/learning";
 import { LearningWord } from "./BranchLearning";
 import "./LocalSoundExplorer.css";
@@ -28,7 +29,7 @@ const combiningMark = /\p{M}/u;
  * An untied ts / tsʰ in the current datasets is the source's affricate notation.
  */
 export function splitLocalIpaSymbols(ipa: string): string[] {
-  const chars = [...ipa.normalize("NFD")];
+  const chars = [...normalizeSegments(ipa).normalize("NFD")];
   const symbols: string[] = [];
   for (let index = 0; index < chars.length; index++) {
     const start = chars[index];
@@ -90,6 +91,7 @@ export default function LocalSoundExplorer({
   const examplesId = useId();
   const sounds = useMemo(() => localSoundSymbols(words), [words]);
   const [selection, setSelection] = useState("");
+  const [visibleCount, setVisibleCount] = useState(12);
   const active = sounds.includes(selection) ? selection : sounds[0];
   const examples = useMemo(
     () => (active ? wordsWithLocalSound(words, active) : []),
@@ -119,7 +121,7 @@ export default function LocalSoundExplorer({
               aria-label={`IPA sound [${sound}]. ${spelling ? `HanLingo ${spelling}` : "Spelling not yet mapped"}`}
               aria-pressed={active === sound}
               aria-controls={examplesId}
-              onClick={() => setSelection(sound)}
+              onClick={() => { setSelection(sound); setVisibleCount(12); }}
             >
               <span>[{sound}]</span>
               <small>{spelling ?? "Unmapped"}</small>
@@ -133,10 +135,11 @@ export default function LocalSoundExplorer({
           {examples.length === 1 ? "word" : "words"}
         </p>
         <div className="learning-word-grid">
-          {examples.map((word) => (
+          {examples.slice(0, visibleCount).map((word) => (
             <LearningWord key={word.id} word={word} />
           ))}
         </div>
+        {examples.length > visibleCount && <button className="learning-show-more" onClick={() => setVisibleCount(visibleCount + 12)}>Show more examples</button>}
       </div>
     </section>
   );

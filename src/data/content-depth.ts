@@ -1,4 +1,5 @@
-import { languages, mapPoints } from "./languages";
+import { atlasBranches } from "./atlas";
+import { learningPlaces as mapPoints } from "./learning/places";
 import { getLocalLearning, availableSections } from "./learning";
 import { getLocalGallery } from "./galleries";
 import { regionalReadingsFor } from "./regional-words";
@@ -59,7 +60,5 @@ export function branchDepth(groupId: string, subgroupId: string) {
 }
 
 export function contentDepth() {
-  return languages.flatMap((group) =>
-    group.subgroups.map((branch) => branchDepth(group.id, branch.id)),
-  );
+  return atlasBranches.map(branch => branchDepth(branch.groupId, branch.id));
 }

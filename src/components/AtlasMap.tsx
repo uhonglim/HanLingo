@@ -44,6 +44,8 @@ type AtlasMapProps = {
   selectedPoint: string | null;
   onSelectPoint: (id: string) => void;
   compact?: boolean;
+  /** Search emphasis does not reset the reader’s pan or zoom. */
+  highlightedPointIds?: string[];
 };
 
 type Label = { x: number; y: number; width: number; height: number };
@@ -120,6 +122,7 @@ export default function AtlasMap({
   selectedPoint,
   onSelectPoint,
   compact = false,
+  highlightedPointIds,
 }: AtlasMapProps) {
   // The parent may build a fresh points array on every render. A geometry key
   // keeps a reader's pan/zoom intact until the actual mapped places change.
@@ -128,7 +131,8 @@ export default function AtlasMap({
       .map((point) => [point.id, ...point.coordinates] as const)
       .sort((a, b) => a[0].localeCompare(b[0])),
   );
-  const maxZoom = compact ? 5 : 3.2;
+  const maxZoom = 24;
+  const highlighted = useMemo(() => highlightedPointIds ? new Set(highlightedPointIds) : null, [highlightedPointIds]);
   const initialView = useMemo<View>(() => {
     const coordinates = (
       JSON.parse(geometryKey) as [string, number, number][]
@@ -165,6 +169,7 @@ export default function AtlasMap({
   });
   const id = useId().replace(/:/g, "");
   const clipId = `atlas-clip-${id}`;
+  const instructionsId = `atlas-instructions-${id}`;
 
   useLayoutEffect(() => {
     setView(initialView);
@@ -256,7 +261,7 @@ export default function AtlasMap({
     const result = new Map<string, Label>();
     const sorted = [...projectedPoints].sort((a, b) => {
       const priority = (p: MapPoint) =>
-        p.id === selectedPoint ? 3 : p.groupId === selectedGroup ? 2 : 1;
+        p.id === selectedPoint ? 4 : highlighted?.has(p.id) ? 3 : p.groupId === selectedGroup ? 2 : 1;
       return priority(b) - priority(a);
     });
     for (const point of sorted) {
@@ -270,6 +275,8 @@ export default function AtlasMap({
       const active = point.id === selectedPoint;
       if (
         !active &&
+        !highlighted?.has(point.id) &&
+        !(selectedGroup === "all" && (points.length < 40 || view.zoom > initialView.zoom * 1.6)) &&
         point.groupId !== selectedGroup &&
         ![
           "beijing-city",
@@ -321,6 +328,10 @@ export default function AtlasMap({
     return result;
   }, [
     projectedPoints,
+    highlighted,
+    points.length,
+    initialView.zoom,
+    view.zoom,
     selectedGroup,
     selectedPoint,
     layout,
@@ -345,6 +356,23 @@ export default function AtlasMap({
           : [WIDTH / 2, HEIGHT / 2];
       return zoomAtlasView(previous, factor, minZoom, maxZoom, anchor);
     });
+  }
+
+  function mapKeyboard(event: KeyboardEvent<SVGSVGElement>) {
+    if (event.target !== event.currentTarget) return;
+    const step = 60 / layout.scale;
+    const offsets: Record<string, [number, number]> = {
+      ArrowLeft: [step, 0], ArrowRight: [-step, 0], ArrowUp: [0, step], ArrowDown: [0, -step],
+    };
+    if (offsets[event.key]) {
+      event.preventDefault();
+      const [x, y] = offsets[event.key];
+      setView(previous => ({ ...previous, x: previous.x + x, y: previous.y + y }));
+    } else if (['+', '=', '-', 'Home', '0'].includes(event.key)) {
+      event.preventDefault();
+      if (event.key === 'Home' || event.key === '0') setView(initialView);
+      else zoom(event.key === '-' ? 1 / 1.3 : 1.3);
+    }
   }
 
   function startDrag(event: PointerEvent<SVGSVGElement>) {
@@ -418,11 +446,15 @@ export default function AtlasMap({
       <span className="atlas-map-hint">
         <span aria-hidden="true">↔</span> Drag to explore
       </span>
+      <span className="sr-only" id={instructionsId}>Use arrow keys to pan, plus and minus to zoom, and Home to reset. Select a locality with Enter or Space.</span>
       <svg
         ref={svgRef}
         className="atlas-map-canvas"
         viewBox={`${viewport.x} ${viewport.y} ${viewport.width} ${viewport.height}`}
         aria-label="Interactive map of selected Han language varieties and communities. Select a reference point to explore."
+        aria-describedby={instructionsId}
+        tabIndex={0}
+        onKeyDown={mapKeyboard}
         onPointerDown={startDrag}
         onPointerMove={moveDrag}
         onPointerUp={endDrag}
@@ -510,13 +542,14 @@ export default function AtlasMap({
             )
             .map((point) => {
               const active = point.id === selectedPoint;
-              const inGroup = point.groupId === selectedGroup;
+              const inGroup = point.groupId === selectedGroup || selectedGroup === "all";
+              const dimmed = highlighted !== null && !highlighted.has(point.id) && !active;
               const color = COLORS[point.groupId] ?? "#748463";
               const label = labels.get(point.id);
               return (
                 <g
                   key={point.id}
-                  className={`atlas-place${active ? " atlas-place--active" : ""}${inGroup ? " atlas-place--in-group" : ""}`}
+                  className={`atlas-place${active ? " atlas-place--active" : ""}${inGroup ? " atlas-place--in-group" : ""}${dimmed ? " atlas-place--dimmed" : ""}`}
                   style={{ color }}
                   role="button"
                   tabIndex={
@@ -543,13 +576,13 @@ export default function AtlasMap({
                     className="atlas-place-focus"
                     cx={point.x}
                     cy={point.y}
-                    r={15}
+                    r={15 / layout.scale}
                   />
                   {active && (
                     <circle
                       cx={point.x}
                       cy={point.y}
-                      r={11}
+                      r={11 / layout.scale}
                       fill="none"
                       stroke={color}
                       strokeWidth={1}
@@ -561,8 +594,7 @@ export default function AtlasMap({
                     cx={point.x}
                     cy={point.y}
                     r={
-                      (active ? 5.5 : inGroup ? 4.5 : 3.5) /
-                      Math.sqrt(layout.scale)
+                      (active ? 5.5 : inGroup ? 3.8 : 3) / layout.scale
                     }
                     fill={color}
                     opacity={inGroup || active ? 1 : 0.6}
@@ -642,7 +674,7 @@ export default function AtlasMap({
       <div className="atlas-map-footer">
         <span className="atlas-map-key">
           <span aria-hidden="true" />
-          Selected localities · not language boundaries
+          Locality anchors · not language boundaries
         </span>
         <a
           href="https://www.naturalearthdata.com/"

@@ -386,8 +386,8 @@ const guangzhouWords: AttestedWord[] = (
   ipa,
   localityId: "guangzhou",
   toneNotation: "pitch-contour",
-  registerLabel: "Guangzhou comparative word table",
-  reading: "Guangzhou reference · Ding 2010",
+  registerLabel: "Canton comparative word table",
+  reading: "Canton reference · Ding 2010",
   note: "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
   source: guangzhouLexicalSource,
 }));
@@ -751,19 +751,19 @@ export const mandarinYueLearning: BranchLearning[] = [
     soundNotes: [
       {
         title: "Keep the final consonant distinct",
-        text: "Guangzhou 三 [sam55] and 山 [san55] hold the vowel and pitch steady while the final nasal changes. Compare lips together for [m] with the tongue tip touching behind the upper teeth for [n].",
+        text: "Canton 三 [sam55] and 山 [san55] hold the vowel and pitch steady while the final nasal changes. Compare lips together for [m] with the tongue tip touching behind the upper teeth for [n].",
         localityIds: ["guangzhou"],
         source: guangzhouLexicalSource,
       },
       {
         title: "A short syllable still has a tone",
-        text: "The Guangzhou table writes 一 [jɐt55], 八 [pat33] and 十 [sɐp22]. Their final stops close the syllables; the pitch values still differ. The digits here are printed contours, not Jyutping categories.",
+        text: "The Canton table writes 一 [jɐt55], 八 [pat33] and 十 [sɐp22]. Their final stops close the syllables; the pitch values still differ. The digits here are printed contours, not Jyutping categories.",
         localityIds: ["guangzhou"],
         source: guangzhouLexicalSource,
       },
       {
-        title: "Guangzhou tone contrasts are changing",
-        text: "The PolyU study tests production and perception in Guangzhou. It documents speakers merging the mid and low level tones, with differences between speaking and listening. Preserve the speaker and study context instead of declaring one merged inventory for the whole city.",
+        title: "Canton tone contrasts are changing",
+        text: "The PolyU study tests production and perception in Canton. It documents speakers merging the mid and low level tones, with differences between speaking and listening. Preserve the speaker and study context instead of declaring one merged inventory for the whole city.",
         localityIds: ["guangzhou"],
         source: {
           title: "PolyU: Tone merger in Guangzhou Cantonese, 2012",
@@ -772,7 +772,7 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
       {
         title: "Compare the quality of the voice",
-        text: "A study of 191 speakers examines Hong Kong and Guangzhou across three age groups. It investigates phonation—the way the vocal folds vibrate—in addition to consonants, vowels and tones. Accent differences can involve this voice quality even when a phoneme chart is shared.",
+        text: "A study of 191 speakers examines Hong Kong and Canton across three age groups. It investigates phonation—the way the vocal folds vibrate—in addition to consonants, vowels and tones. Accent differences can involve this voice quality even when a phoneme chart is shared.",
         localityIds: ["guangzhou"],
         source: {
           title:
@@ -803,7 +803,7 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
       {
         title: "Keep the locality with the tone",
-        text: "The corpus description distinguishes a high falling 53 contour in Guangzhou speech from the high level 55 favoured by many younger Hong Kong speakers. Age, speaker and locality matter when comparing tone inventories.",
+        text: "The corpus description distinguishes a high falling 53 contour in Canton speech from the high level 55 favoured by many younger Hong Kong speakers. Age, speaker and locality matter when comparing tone inventories.",
         localityIds: ["guangzhou", "hong-kong"],
         source: S.corpus,
       },
@@ -811,7 +811,7 @@ export const mandarinYueLearning: BranchLearning[] = [
     culture: [
       {
         title: "Canton embroidery",
-        text: "Guangzhou embroidery belongs to the Pearl River Delta craft tradition. Museum objects supply patterns for studying composition, colour and stitches, while makers reproduce older pieces to learn their techniques. Guangzhou embroidery and Chaoshan embroidery are distinct traditions within the broader Yue embroidery label.",
+        text: "Canton embroidery belongs to the Pearl River Delta craft tradition. Museum objects supply patterns for studying composition, colour and stitches, while makers reproduce older pieces to learn their techniques. Canton embroidery and Chaoshan embroidery are distinct traditions within the broader Yue embroidery label.",
         localityIds: ["guangzhou"],
         source: {
           title: "Guangzhou culture bureau: Canton embroidery, 2024",
@@ -843,23 +843,23 @@ export const mandarinYueLearning: BranchLearning[] = [
     ],
     resources: [
       {
-        title: "Guangzhou word comparisons",
+        title: "Canton word comparisons",
         description:
-          "Table 5 on page 206 identifies Guangzhou separately from Meixian, Amoy and Suzhou. It supplies the 12 Guangzhou readings here.",
+          "Table 5 on page 206 identifies Canton separately from Meixian, Amoy and Suzhou. It supplies the 12 Canton readings here.",
         localityIds: ["guangzhou"],
         kind: "Study",
         url: guangzhouLexicalSource.url,
       },
       {
-        title: "Guangzhou tone merger",
+        title: "Canton tone merger",
         description:
-          "An experimental study of tone production, perception and changing contrasts in Guangzhou.",
+          "An experimental study of tone production, perception and changing contrasts in Canton.",
         localityIds: ["guangzhou"],
         kind: "Study",
         url: "https://theses.lib.polyu.edu.hk/handle/200/6794",
       },
       {
-        title: "Guangzhou and Hong Kong voice quality",
+        title: "Canton and Hong Kong voice quality",
         description:
           "A study with 191 speakers tests accent and age differences through acoustic measures.",
         localityIds: ["guangzhou", "hong-kong"],
@@ -930,8 +930,8 @@ export const mandarinYueLearning: BranchLearning[] = [
         },
       },
       {
-        title: "Taishan needs its own readings",
-        text: "Cheng compares Taishan and Cantonese phonology while noting that the two are not entirely mutually intelligible. A shared character or membership in Yue does not establish the same pronunciation.",
+        title: "Toishan needs its own readings",
+        text: "Cheng compares Toishan and Cantonese phonology while noting that the two are not entirely mutually intelligible. A shared character or membership in Yue does not establish the same pronunciation.",
         localityIds: ["taishan"],
         source: S.taishan,
       },
@@ -945,7 +945,7 @@ export const mandarinYueLearning: BranchLearning[] = [
     culture: [
       {
         title: "Fushi’s floating-colour procession",
-        text: "In Fushi village, Doushan town within Taishan, makers build frames and props, prepare costumes and train the young performers carried in floating-colour tableaux. Scenes draw on dramatic stories such as Mulan and the Moon Goddess. This is a specific village tradition, not a practice attributed to every Taishan resident.",
+        text: "In Fushi village, Doushan town within Toishan, makers build frames and props, prepare costumes and train the young performers carried in floating-colour tableaux. Scenes draw on dramatic stories such as Mulan and the Moon Goddess. This is a specific village tradition, not a practice attributed to every Toishan resident.",
         localityIds: ["taishan"],
         source: {
           title:
@@ -955,7 +955,7 @@ export const mandarinYueLearning: BranchLearning[] = [
       },
       {
         title: "Letters that carried money home",
-        text: "The Wuyi region’s 銀信 combined family correspondence with remittances. The UNESCO archive preserves messages, receipts and account books linking emigrants with home. This regional history includes communities beyond Taishan.",
+        text: "The Wuyi region’s 銀信 combined family correspondence with remittances. The UNESCO archive preserves messages, receipts and account books linking emigrants with home. This regional history includes communities beyond Toishan.",
         localityIds: ["taishan"],
         source: S.letters,
       },
@@ -978,7 +978,7 @@ export const mandarinYueLearning: BranchLearning[] = [
         url: "https://taishandict.com/",
       },
       {
-        title: "Taishan phonology",
+        title: "Toishan phonology",
         description:
           "Cheng’s 1973 study compares consonants, vowels and tones with Cantonese. Publisher access may be required.",
         localityIds: ["taishan"],

@@ -1,3 +1,4 @@
+import { findLearningPlace } from "./data/learning/places";
 import { legacyMinPlaces } from "./data/language-names";
 import { findAtlasLocality, atlasLocalityPath, atlasBranches } from "./data/atlas";
 import { languages, mapPoints } from "./data/languages";
@@ -33,9 +34,9 @@ export function resolveReferenceRoute(params: {
     (catalogBranch ? { ...catalogBranch, description: "", places: [] } : undefined);
   if (!subgroup) return null;
   if (!params.varietyId) return { level: "subgroup", language, subgroup };
-  const point = mapPoints.find(
+  const point = [mapPoints.find(item => item.id === params.varietyId) ?? findLearningPlace(params.varietyId)].find(
     (item) =>
-      item.id === params.varietyId &&
+      item && item.id === params.varietyId &&
       item.groupId === language.id &&
       (item.subgroupId === subgroup.id || findAtlasLocality(item.id)?.branchId === subgroup.id),
   );

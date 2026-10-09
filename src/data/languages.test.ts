@@ -103,7 +103,7 @@ describe("atlas data integrity", () => {
   });
 
   it("preserves Quanzhang as a cluster between Southern Min and local varieties", () => {
-    const quanzhangPlaces = ["Xiamen", "Quanzhou", "Zhangzhou"];
+    const quanzhangPlaces = ["Amoy", "Tsuân-tsiu", "Tsiang-tsiu"];
 
     for (const place of quanzhangPlaces) {
       const point = mapPoints.find((candidate) => candidate.name === place);
@@ -112,7 +112,7 @@ describe("atlas data integrity", () => {
         "Sinitic",
         "Min",
         "Southern Min",
-        "Quanzhang cluster",
+        "Tsuân-Tsiang",
         place,
       ]);
     }
@@ -120,7 +120,7 @@ describe("atlas data integrity", () => {
     expect(mapPoints.some((point) => point.name === "Quanzhang")).toBe(false);
   });
 
-  it("keeps Tsuan-Chiang localities as peers with distinct map anchors", () => {
+  it("keeps Tsuân-Tsiang localities as peers with distinct map anchors", () => {
     const anchors = [
       ["taipak", 121.5654, 25.033],
       ["tainan", 120.205, 22.997],
@@ -142,7 +142,7 @@ describe("atlas data integrity", () => {
         "Sinitic",
         "Min",
         "Southern Min",
-        "Quanzhang cluster",
+        "Tsuân-Tsiang",
       ]);
       expect(point!.hierarchy).not.toContain("Xiamen");
     }

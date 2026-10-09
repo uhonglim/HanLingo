@@ -85,7 +85,7 @@ const targets: { id: TranslationTarget; name: string; lang: string }[] = [
   { id: "amoy", name: "Amoy", lang: "nan" },
   { id: "beijing", name: "Beijing speech", lang: "cmn" },
   { id: "shanghai", name: "Shanghai", lang: "wuu" },
-  { id: "guangzhou", name: "Guangzhou", lang: "yue" },
+  { id: "guangzhou", name: "Canton", lang: "yue" },
   { id: "meixian", name: "Meixian Hakka", lang: "hak" },
   { id: "written", name: siteTerms.writtenChinese, lang: "zh" },
 ];

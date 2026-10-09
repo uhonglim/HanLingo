@@ -20,10 +20,10 @@ Before adding a place, check current map points, tree data, route aliases and le
 
 Use **group → branch → cluster → locality**. Locality leaves may be comparable towns, urban districts or cities; do not mix Taigi, a regional language label, with Amoy or Taipak as if they were equal places.
 
-- 泉漳 displays as **Tsuan-Chiang**, the user’s Hokkien-style working name. Source **Tsuân-Tsiang** and Mandarin **Quanzhang** remain distinct aliases/reference forms.
+- 泉漳 displays as **Tsuân-Tsiang**, the attested Taigi community spelling; the earlier Tsuan-Chiang remains an alias. Source **Tsuân-Tsiang** and Mandarin **Quanzhang** remain distinct aliases/reference forms.
 - Amoy, Tsuân-tsiu, Tsiang-tsiu, Taipak, Tâi-lâm, Ko-hiông, Gî-lân, Lo̍k-káng, Sam-kiap and overseas Hokkien localities retain documented local naming and exact scope.
 - Singapore can display Sin-ka-pho; George Town can display Pho Te. George Town is not all of Penang. Preserve source spelling conventions instead of generating place names through the IPA converter.
-- Teochew and Swatow belong to the **Teo Swa** cluster under Southern Min, not Tsuan-Chiang.
+- Teochew and Swatow belong to the **Teo Swa** cluster under Southern Min, not Tsuân-Tsiang.
 - Meixian Hakka is the translation reference. Meizhou is a wider administrative area; its name does not imply one uniform accent.
 
 Use one visible name without parenthetical aliases. Aliases belong in search and source notes. Stable route IDs need not change with display names. Do not invent an endonym when documented evidence is missing. Use `src/data/site-terms.ts`, `src/data/language-names.ts` and `docs/NAMING.md` as the current sources of labels.
@@ -43,3 +43,7 @@ If a new direct request clearly changes an earlier naming preference, follow the
 ## Uniform navigation depth
 
 The latest 2026-10-09 request defines four linguistic browsing levels: group → branch → cluster → locality. Lessons sit below localities but do not count as classification. `src/data/atlas/` stores source-attested catalogue references separately from the developed learning collection. Count and label these separately; never claim a newly catalogued place has IPA lessons or a completed gallery. Preserve source editions, geographical scope and competing classifications.
+
+## Whole-atlas learning and map
+
+Use `/map` in the persistent top bar and the shared AtlasMap for every geography view. Preserve canonical four-level locality links and URL-addressable selections. Branch and cluster pages expose real descendant learning, with each item labelled by locality. Neighbouring collections are links, not substituted local pronunciation. Audit all catalogue leaves, including zeros, against the actual Amoy reading/photo counts; distinguish research-era survey references from contemporary speaker records.

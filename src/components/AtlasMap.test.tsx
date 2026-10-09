@@ -98,3 +98,22 @@ describe("responsive atlas frame", () => {
     }
   });
 });
+
+describe('map keyboard access and dense localities', () => {
+  it('exposes keyboard panning, zoom, reset and visible marker selection', () => {
+    const html = renderToStaticMarkup(<AtlasMap points={minPoints} selectedGroup="all" selectedPoint={null} onSelectPoint={() => {}}/>);
+    expect(html).toMatch(/class="atlas-map-canvas"[^>]*tabindex="0"/);
+    expect(html).toContain('Use arrow keys to pan, plus and minus to zoom, and Home to reset.');
+    for (const label of ['Zoom in', 'Zoom out', 'Reset map view']) expect(html).toContain(`aria-label="${label}"`);
+  });
+  it('can separate close locality anchors by zooming without moving the selected anchor', () => {
+    const coords: [number, number][] = [[113.122, 23.028], [113.14, 23.05]];
+    const view = fitAtlasPoints(coords, true);
+    const anchor = atlasPointPosition(coords[0], view);
+    const zoomed = zoomAtlasView(view, 24, .1, 24, anchor);
+    expect(zoomed.zoom).toBe(24);
+    expect(atlasPointPosition(coords[0], zoomed)[0]).toBeCloseTo(anchor[0]);
+    const [x, y] = atlasPointPosition(coords[1], zoomed);
+    expect(Math.hypot(x - anchor[0], y - anchor[1])).toBeGreaterThan(15);
+  });
+});

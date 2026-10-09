@@ -1,15 +1,16 @@
 import { languages, mapPoints } from './data/languages';
+import { learningPlaces } from './data/learning/places';
 import { availableSections } from './data/learning';
 import { legacyMinPlaces } from './data/language-names';
 import { groupPath, varietyPath } from './routing';
 import { atlasBranches, atlasClusters, atlasLocalities, atlasClusterPath, atlasLocalityPath } from './data/atlas';
 export function publicPaths() {
   return [...new Set([
-    '/', '/compare', '/romanization', '/written-chinese', '/about',
+    '/', '/map', '/compare', '/romanization', '/written-chinese', '/about',
     ...languages.map(group=>groupPath(group.id)),
     ...atlasBranches.map(b=>`/${b.groupId}/${b.id}`),
     ...atlasClusters.map(atlasClusterPath), ...atlasLocalities.map(atlasLocalityPath),
-    ...mapPoints.flatMap(point=>availableSections(point).map(section=>`${varietyPath(point)}/${section}`)),
+    ...learningPlaces.flatMap(point=>availableSections(point).map(section=>`${varietyPath(point)}/${section}`)),
   ])];
 }
 export function staticPaths() {

@@ -14,13 +14,19 @@ try {
   console.log(`Atlas: ${atlasLocalities.length} references across ${atlasBranches.length} branches and ${atlasClusters.length} clusters/collections.`);
   const branches = contentDepth();
   const places = branches.flatMap((branch) => branch.places);
+  const taughtPlaces = places.filter(place => place.ipaWords > 0);
+  const photographedPlaces = places.filter(place => place.photos > 0);
+  const baseline = places.find(place => place.localityId === "xiamen");
+  const parity = places.filter(place => place.ipaWords >= baseline.ipaWords && place.photos >= baseline.photos && place.soundNotes >= 2 && place.cultureTopics >= 2 && place.learningSources >= 2);
   const total = (key) => places.reduce((sum, place) => sum + place[key], 0);
   const lines = [
     "# Content depth audit",
     "",
     "Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.",
     "",
-    `Coverage: **${branches.length} branches**, **${places.length} localities**, **${total("ipaWords")} IPA entries**, **${total("sourceSpellingWords")} additional source-spelling entries**, and **${total("photos")} photographs**.`,
+    `Inventory: **${branches.length} branches · ${places.length} locality references**. Actual learning coverage: **${taughtPlaces.length} localities with IPA**, **${photographedPlaces.length} with photos**, **${total("ipaWords")} IPA entries**, **${total("sourceSpellingWords")} additional source-spelling entries**, **${total("photos")} photographs**.`,
+    "",
+    `Amoy-count benchmark: ${baseline.ipaWords} source readings and ${baseline.photos} photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **${parity.length} of ${places.length} localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.`,
     "",
     `Of the IPA entries, ${total("segmentalEntries")} retain source transcriptions with tones omitted. Their cards explicitly say that tones are not given.`,
     "",
@@ -67,6 +73,7 @@ try {
   console.log(
     `Audited ${branches.length} branches and ${places.length} localities: ${total("ipaWords")} IPA entries, ${total("sourceSpellingWords")} source-spelling entries, ${total("photos")} photos.`,
   );
+  console.log(`IPA localities: ${taughtPlaces.length}; photo localities: ${photographedPlaces.length}; Amoy-count benchmark: ${parity.length}/${places.length}.`);
   console.log("Written docs/CONTENT-DEPTH.md");
 } finally {
   await server.close();

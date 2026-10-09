@@ -1,9 +1,10 @@
+import { findLearningPlace } from './data/learning/places';
 import { availableSections, learningSections } from './data/learning';
 import { siteTerms } from './data/site-terms';
 import { languages, mapPoints } from './data/languages';
 import { atlasBranches, atlasClusterPath, atlasLocalityPath, findAtlasCluster, findAtlasLocality } from './data/atlas';
 export type Breadcrumb = { label: string; path: string };
-const pages: Record<string,string> = {'/':'Han languages','/languages':'Han languages','/compare':'Compare','/romanization':'Romanization','/written-chinese':siteTerms.writtenChinese,'/about':siteTerms.about};
+const pages: Record<string,string> = {'/':'Han languages','/languages':'Han languages','/map':siteTerms.map,'/compare':'Compare','/romanization':'Romanization','/written-chinese':siteTerms.writtenChinese,'/about':siteTerms.about};
 export function getBreadcrumbs(pathname: string): Breadcrumb[] {
   const path=pathname.replace(/\/+$/,'')||'/';
   if(pages[path]) return [{label:pages[path],path}];
@@ -29,7 +30,7 @@ export function getBreadcrumbs(pathname: string): Breadcrumb[] {
   if(!point||point.groupId!==groupId||point.branchId!==branchId||point.clusterId!==clusterId) return missing;
   crumbs.push({label:point.name,path:atlasLocalityPath(point)});
   if(chapter) {
-    const lesson=mapPoints.find(p=>p.id===localityId);
+    const lesson=findLearningPlace(localityId);
     if(!lesson||!availableSections(lesson).some(s=>s===chapter)) return missing;
     crumbs.push({label:learningSections[chapter as keyof typeof learningSections],path});
   }

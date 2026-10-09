@@ -234,6 +234,7 @@
   <url><loc>https://hanlingo.pairup.world/yue/guangfu/overseas-cantonese/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/</loc></url>
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/huairou/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/miyun/</loc></url>
@@ -1445,6 +1446,7 @@
   <url><loc>https://hanlingo.pairup.world/xiang/yongquan/dongqi/qiyang-study/</loc></url>
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/niujia-laiyuan/</loc></url>
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/huangzong-laiyuan/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/sounds/</loc></url>
@@ -1754,6 +1756,9 @@
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/sounds/</loc></url>
@@ -1762,6 +1767,7 @@
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/words/</loc></url>
@@ -1774,7 +1780,9 @@
   <url><loc>https://hanlingo.pairup.world/pinghua/northern-pinghua/guilin-area/guilin-pinghua/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/nanning-pinghua/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/tuhua/southern-hunan/yongzhou-area/jiangyong-baishui/culture/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-juanshui/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-juanshui/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-juanshui/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-magang/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-guandao/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-maishi/sounds/</loc></url>
@@ -1788,7 +1796,9 @@
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-jiayu/gan-jiayu-yuyue/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-chibi/gan-chibi-chebu/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-chongyang/gan-chongyang-shicheng/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-shinan/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-shinan/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-shinan/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-beigang/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-tongcheng/gan-tongcheng-daping/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/datong/datong-daye/gan-daye-jinhu/sounds/</loc></url>
@@ -1874,4 +1884,7 @@
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/huangzong-laiyuan/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/huangzong-laiyuan/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/huangzong-laiyuan/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/practice/</loc></url>
 </urlset>

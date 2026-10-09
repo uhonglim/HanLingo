@@ -39,6 +39,7 @@ export const sharedSpellingRules: SpellingRule[] = [
   ...rules([["̃", "~"], ["ː", ":"]], "Core", "Nasalization and supplied length use keyboard punctuation, independently of tone."),
   ...rules([["̩", ""], ["̍", ""], ["̚", ""]], "Detail", "This detail remains in IPA and is omitted from the reading spelling."),
   ...rules(["̤", "̰", "̥", "̬"].map(ipa => [ipa, ipa]), "Retained", "Supplied phonation and voicing marks remain visible."),
+  ...rules([["̈", "̈"]], "Retained", "The source diaeresis is retained. Its phonetic meaning depends on the source convention; the reading key does not reinterpret it."),
 ].sort((a, b) => b.ipa.normalize("NFD").length - a.ipa.normalize("NFD").length);
 
 /** Normalize equivalent tie-bar spellings, not different places of articulation. */
@@ -69,7 +70,7 @@ export function romanizeXiamen(segments: string[], tones: string[]): string {
   if (segments.length !== tones.length || !segments.length)
     throw new Error("Each syllable requires an explicit tone contour.");
   return segments.map((segment, i) => {
-    if (!/^[1-5]{1,3}$/.test(tones[i])) throw new Error("Invalid pitch contour.");
+    if (!/^[1-5]{1,4}$/.test(tones[i])) throw new Error("Invalid pitch contour.");
     return spellSegments(segment).spelling + tones[i];
   }).join(" ");
 }

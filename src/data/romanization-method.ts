@@ -20,7 +20,7 @@ export function convertIpa(input: string, toneNotation: ToneNotation = "pitch-co
     let segment = syllable;
     let tone = "";
     if (toneNotation === "pitch-contour") {
-      const match = /^([^0-9˩˨˧˦˥]+)([1-5]{1,3}|[˩˨˧˦˥]{1,3})$/u.exec(syllable);
+      const match = /^([^0-9˩˨˧˦˥]+)([1-5]{1,4}|[˩˨˧˦˥]{1,4})$/u.exec(syllable);
       if (!match) throw new Error(`Add a pitch contour to “${syllable}”. Use spaces between syllables, or select “Tones not supplied” for a source that omits tones.`);
       segment = match[1];
       tone = [...match[2]].map((symbol) => ({ "˩": "1", "˨": "2", "˧": "3", "˦": "4", "˥": "5" })[symbol] ?? symbol).join("");

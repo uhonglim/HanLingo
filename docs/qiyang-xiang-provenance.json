@@ -1,0 +1,186 @@
+{
+  "source": {
+    "title": "A Seven-tone Dialect in Southern China with Falling-Rising-Falling Contour: A Linguistic Acoustic Analysis",
+    "authors": [
+      "Zhu Xiaonong",
+      "Zhang Caicai"
+    ],
+    "year": 2008,
+    "url": "https://www.isca-archive.org/interspeech_2008/zhu08b_interspeech.pdf",
+    "doi": "10.21437/Interspeech.2008-341",
+    "page": 1113,
+    "table": 1,
+    "rights": "Copyright 2008 ISCA. No open reuse licence found; proposed bounded factual selection only, without scans, audio or substantial prose redistribution.",
+    "sha256": "908ce538ed736967182992aa2c85962b5c3b095aed610ced57db30a0e835dc85",
+    "openLicense": null
+  },
+  "scope": {
+    "sourcePlace": "Qiyang County, southern Hunan",
+    "classificationInPaper": "Old Xiang",
+    "speakers": "Twelve middle-aged native speakers (six male, six female) recorded; three female speakers excluded from acoustic analysis, leaving nine. No exact town, recording date or ages stated.",
+    "modernClassification": "Xiang / Yong–Quan / Dong–Qi, independently supported by Wang Zhongli 2020 publisher abstract. This does not identify the 2008 speakers with Wang’s survey sites.",
+    "classificationSource": "https://www.ruralchina.cn/xcyj/XCBookDetail?ID=7301666&SiteID=18&SubLibID="
+  },
+  "toneScope": "Supplied numeric contours in Table 1, not T1–T7 tone class labels. Four targets 3243 and 2143 must remain intact. Do not substitute the six-tone Hu2011 or four-level MRFL Zhu2012 analysis.",
+  "phonationReview": "Table prints diaeresis ABOVE p and BELOW a, t and i. Paper sections 4.1.1 and 4.1.3 describe these as slack-voiced obstruents. Published IPA preserves the exact above/below glyph positions. No p̈→p̤ normalization, p→b change or phonation deletion is performed. Unicode 17 chapter 7 Table 7-5 cautions that above and below diaeresis have distinct standard semantics; the source-specific description therefore stays beside the forms.",
+  "held": [
+    {
+      "han": "芭",
+      "rawIPA": "pa334",
+      "reason": "Source gives only broad plant; not a well-defined everyday lexical meaning."
+    },
+    {
+      "han": "把",
+      "rawIPA": "pa45",
+      "reason": "Table1 gloss hold but introductory prose a handle; hold rather than select one meaning."
+    },
+    {
+      "han": "八",
+      "rawIPA": "pa44",
+      "reason": "Table1 has44 but introductory prose gives33 for same T6; preserve contradiction."
+    },
+    {
+      "han": "敌",
+      "rawIPA": "ti44",
+      "reason": "Same T6 category affected by unresolved33/44 source discrepancy; conservative hold."
+    }
+  ],
+  "records": [
+    {
+      "id": "qiyang-zhu2008-t1-low",
+      "han": "低",
+      "rawIPA": "ti334",
+      "english": "low",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[ti³³⁴]",
+      "note": "Table 1 elicitation example; source English gloss retained."
+    },
+    {
+      "id": "qiyang-zhu2008-t2-crawl",
+      "han": "爬",
+      "rawIPA": "p̈a̤23",
+      "english": "crawl",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[p̈a̤²³]",
+      "note": "Table 1 elicitation example; source English gloss retained. The source places two dots above p and below a in its slack-voice notation; both positions are preserved exactly."
+    },
+    {
+      "id": "qiyang-zhu2008-t2-leave",
+      "han": "离",
+      "rawIPA": "t̤i̤23",
+      "english": "leave",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[t̤i̤²³]",
+      "note": "Table 1 elicitation example; source English gloss retained. The source places two dots below both t and i in its slack-voice notation; neither mark is removed."
+    },
+    {
+      "id": "qiyang-zhu2008-t3-bottom",
+      "han": "底",
+      "rawIPA": "ti45",
+      "english": "bottom",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[ti⁴⁵]",
+      "note": "Table 1 elicitation example; source English gloss retained."
+    },
+    {
+      "id": "qiyang-zhu2008-t4-tyrant",
+      "han": "霸",
+      "rawIPA": "pa3243",
+      "english": "tyrant",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[pa³²⁴³]",
+      "note": "Table 1 elicitation example; source English gloss retained."
+    },
+    {
+      "id": "qiyang-zhu2008-t4-monarch",
+      "han": "帝",
+      "rawIPA": "ti3243",
+      "english": "monarch",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[ti³²⁴³]",
+      "note": "Table 1 elicitation example; source English gloss retained."
+    },
+    {
+      "id": "qiyang-zhu2008-t5-stop",
+      "han": "罢",
+      "rawIPA": "p̈a̤2143",
+      "english": "stop",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[p̈a̤²¹⁴³]",
+      "note": "Table 1 elicitation example; source English gloss retained. The source places two dots above p and below a in its slack-voice notation; both positions are preserved exactly."
+    },
+    {
+      "id": "qiyang-zhu2008-t7-white",
+      "han": "白",
+      "rawIPA": "p̈a̤24",
+      "english": "white",
+      "learningKind": "word",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[p̈a̤²⁴]",
+      "note": "Table 1 elicitation example; source English gloss retained. The source places two dots above p and below a in its slack-voice notation; both positions are preserved exactly."
+    },
+    {
+      "id": "qiyang-zhu2008-t5-function",
+      "han": "第",
+      "rawIPA": "t̤i̤2143",
+      "english": "function word",
+      "learningKind": "character-reading",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[t̤i̤²¹⁴³]",
+      "note": "Table 1 elicitation example; source English gloss retained. The source places two dots below both t and i in its slack-voice notation; neither mark is removed. This grammatical label is not a standalone lexical definition."
+    },
+    {
+      "id": "qiyang-zhu2008-t7-classifier",
+      "han": "粒",
+      "rawIPA": "t̤i̤24",
+      "english": "quantifier",
+      "learningKind": "character-reading",
+      "page": 1113,
+      "table": 1,
+      "status": "visually-reviewed",
+      "ipa": "[t̤i̤²⁴]",
+      "note": "Table 1 elicitation example; source English gloss retained. The source places two dots below both t and i in its slack-voice notation; neither mark is removed. This grammatical label is not a standalone lexical definition."
+    }
+  ],
+  "geography": {
+    "wikidata": "Q1199641",
+    "coordinates": [
+      111.84812,
+      26.58949
+    ],
+    "source": "https://www.wikidata.org/wiki/Q1199641",
+    "cache": ".evidence/atlas-1000/wikidata-counties.json",
+    "scope": "Regional Qiyang administrative anchor; not a consultant address or identified elicitation settlement."
+  },
+  "review": {
+    "type": "independent visual source review",
+    "reviewer": "min_reading_depth",
+    "status": "Eight lexical examples, two character examples and four holds visually checked. Phonation glyphs retained literally, without reinterpretation or normalization.",
+    "evidenceFile": ".evidence/undercovered-next/qiyang-independent-review.json"
+  }
+}

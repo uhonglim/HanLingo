@@ -80,3 +80,9 @@ The dots identify vowel quality, never tone or nasalization. Always keep ü, inc
 The central-vowel reading aid **eo** also covers [ɘ], attested in the dated Tong’an comparison in Wang (2022). This is a deliberate many-to-one extension; exact IPA remains visible, and [ə], [ɘ] and [ɜ] are not claimed to be identical sounds.
 
 The source apical-vowel symbols **ɿ** and **ʅ** share **ir** in the reading aid. The latter retains its retroflex distinction in the displayed source transcription. This follows the existing shared-sibilant reading families, not a claim that these vowels sound identical. Tone categories remain category labels, e.g. source `[ʂʅ1]` → `shir·T1`; no pitch contour is inferred.
+
+### Four-point pitch contours
+
+Supplied pitch contours may contain one to four targets on the 1–5 scale. This preserves complex source contours such as 3243 and 2143 in [Zhu and Zhang's Qiyang study](https://www.isca-archive.org/interspeech_2008/zhu08b_interspeech.pdf), Table 1, p. 1113, instead of shortening them to a three-point contour. The IPA display, trace and HanLingo suffix keep every supplied target. This parser support does not turn a four-digit source tone category into pitch, supply a missing value, or independently establish a word's pronunciation.
+
+A supplied combining diaeresis above a segment is retained separately from the below-diaeresis. The Qiyang 2008 table prints `p̈a̤`, while its discussion describes slack voice; the source convention and mark placement remain visible. HanLingo does not globally equate an above-diaeresis with breathiness, centralization or the below-diaeresis. A diacritic without a preceding segment remains invalid.

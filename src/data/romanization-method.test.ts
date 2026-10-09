@@ -33,8 +33,23 @@ describe("public IPA spelling demonstrator", () => {
     ).toBe("Core");
   });
   it("rejects missing tones and unsupported IPA instead of guessing", () => {
-    for (const input of ["", "te", "[ʙi35]", "te6", "te2345", "茶24", "ː35", "̃a35"])
+    for (const input of ["", "te", "[ʙi35]", "te6", "te23451", "茶24", "ː35", "̃a35"])
       expect(() => convertIpa(input), input).toThrow();
+  });
+  it("retains four supplied pitch targets without shortening a complex contour", () => {
+    // Parser fixtures, not new local word attestations.
+    for (const input of ["a3243", "a³²⁴³", "a˧˨˦˧"]) {
+      expect(convertIpa(input)[0]).toMatchObject({ spelling: "a3243", tone: "3243", ipa: "a˧˨˦˧" });
+    }
+    expect(romanizeXiamen(["a"], ["2143"])).toBe("a2143");
+    expect(() => convertIpa("a3243", "source-category")).toThrow();
+    expect(() => convertIpa("a3243", "unspecified")).toThrow();
+  });
+  it("preserves source diacritics above and below without conflating their placement", () => {
+    expect(convertIpa("p̈a̤2143")[0].spelling).toBe("p̈a̤2143");
+    expect(convertIpa("t̤i̤23")[0].spelling).toBe("t̤i̤23");
+    expect(convertIpa("p̈a̤2143")[0].spelling).not.toBe(convertIpa("p̤a̤2143")[0].spelling);
+    expect(() => convertIpa("̈a23")).toThrow();
   });
 });
 

@@ -28,6 +28,15 @@ describe("IPA display and copied-text search", () => {
     expect(html).not.toContain("Pitch contour");
     expect(html).not.toContain("pa˩");
   });
+  it("keeps every turning point when displaying a supplied four-target contour", () => {
+    const html = renderToStaticMarkup(<Pronunciation ipa="[a³²⁴³]" spelling="a3243" toneNotation="pitch-contour" />);
+    expect(html).toContain("[a˧˨˦˧]");
+    expect(html).toContain('aria-label="Pitch contour 3243"');
+    const points = html.match(/<polyline points="([^"]+)"/)![1].split(' ');
+    expect(points).toHaveLength(4);
+    expect(points.map(point => Number(point.split(',')[1]))).toEqual([19, 26, 12, 19]);
+    expect(pitchContours("[a³²⁴³]")).toEqual(["3243"]);
+  });
   it("finds a locality word using the exact visible IPA or the original source digits", () => {
     const point = mapPoints.find((point) => point.id === "zhangzhou")!;
     const words = getLocalLearning(point).words;

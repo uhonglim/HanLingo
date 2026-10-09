@@ -73,7 +73,7 @@ export const atlasWuHakkaLocalities: AtlasLocality[] = [
     ['deqing', 'Deqing', '德清', 119.98, 30.55],
     ['yuhang', 'Yuhang', '餘杭', 119.94, 30.27, 'Old Yuhang reference, not the whole modern district.'],
   ]),
-  ...locations('hangzhou-cluster', [['hangzhou', 'Hangzhou', '杭州', 120.16, 30.25, 'Old urban Hangzhou, distinct from Yuhang and Xiaoshan.']]),
+  ...locations('hangzhou-cluster', [['hangzhou', 'Hangzhou', '杭州', 120.16, 30.25, 'Hangzhou Wu reference. Classification sources describe old-city speech, distinct from Yuhang and Xiaoshan; individual studies retain their own locality scope. The city-centre marker is not a speaker location.']]),
   ...locations('linshao', [
     ['fuyang', 'Fuyang', '富陽', 119.96, 30.05],
     ['tonglu', 'Tonglu', '桐廬', 119.68, 29.8],

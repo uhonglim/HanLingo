@@ -60,12 +60,13 @@ export const wuHakkaExpansion: AtlasExpansion = {
       },
       article: {
         title: "Hangzhou",
-        dek: "Old-city Wu beside West Lake.",
+        dek: "Wu beside West Lake.",
         sections: [
           {
             heading: "Local speech",
             paragraphs: [
               "Hangzhou’s old-city speech belongs to the Taihu branch of Wu. The municipality is much larger than this speech area: Xu Yue distinguishes the old city from Yuhang and Xiaoshan, and documents several other language communities within the municipal boundary. A photograph taken in Hangzhou therefore does not identify the language of the person in it.",
+              "The Hou/List word collection is labelled Hangzhou. Its published dataset does not identify a neighbourhood or speaker address; those readings are kept distinct from the old-city classification account.",
             ],
           },
           {
@@ -91,6 +92,10 @@ export const wuHakkaExpansion: AtlasExpansion = {
           {
             title: "Xu Yue: Dialects in Hangzhou",
             url: "https://www.ehangzhou.gov.cn/2018-06/14/c_242896.htm",
+          },
+          {
+            title: "Hou/List: Hangzhou lexical sample · CC BY 4.0 edition",
+            url: "https://github.com/SequenceComparison/houchinese/tree/38d6bd34af5678be7f0c481c6ed765cd0ddfd998",
           },
           {
             title: "UNESCO: West Lake cultural landscape",

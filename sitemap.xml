@@ -1439,6 +1439,7 @@
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/kunming-study/</loc></url>
   <url><loc>https://hanlingo.pairup.world/gan/jicha/jicha-localities/yunlou-gan/</loc></url>
   <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/dongqi/qiyang-study/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/sounds/</loc></url>
@@ -1638,8 +1639,10 @@
   <url><loc>https://hanlingo.pairup.world/wu/taihu/su-hu-jia/suzhou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taihu/su-hu-jia/suzhou/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taihu/su-hu-jia/suzhou/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/wu/taihu/hangzhou-cluster/hangzhou/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taihu/hangzhou-cluster/hangzhou/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taihu/hangzhou-cluster/hangzhou/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/wu/taihu/hangzhou-cluster/hangzhou/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taihu/linshao/shaoxing/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taihu/linshao/shaoxing/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/wu/taihu/yongjiang/ningbo/culture/</loc></url>
@@ -1729,14 +1732,19 @@
   <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/taiyuan-jin/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/bingzhou/taiyuan-basin/taiyuan-jin/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/jixi-hui/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hui/jishe/jixi-shexian/shexian-hui/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hui/xiuyi/tunxi-yixian/tunxi-hui/sounds/</loc></url>
@@ -1838,4 +1846,7 @@
   <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/pinghua/southern-pinghua/yong-river/weizilu-pinghua/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/dongqi/qiyang-study/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/dongqi/qiyang-study/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/xiang/yongquan/dongqi/qiyang-study/practice/</loc></url>
 </urlset>

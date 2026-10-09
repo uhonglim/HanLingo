@@ -16,6 +16,11 @@ describe('sourced IPA sound pack', () => {
       expect(sample.duration).toBeGreaterThan(0);
     }
     expect(sampleSpelling(sampleFor('y')!)).toBe('ü');
+    for (const ipa of ['p', 'm', 'ŋ']) {
+      expect(sampleFor(ipa)?.category).toBe('Consonants');
+      expect(sampleFor(ipa)?.context).toContain('supporting vowels');
+    }
+    expect(sampleSpelling(sampleFor('ŋ')!)).toBe('ng');
     expect(sampleFor('j')).toBeUndefined(); // Never use [y] audio for the y glide.
     expect(sampleFor('ɛ')).toBeUndefined(); // Source hash mismatch held for review.
     expect(sampleFor('y')!.src).not.toBe(sampleFor('ʏ')!.src);

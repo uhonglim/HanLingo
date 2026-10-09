@@ -1,3 +1,5 @@
+import { shanghaiCharacterSupplement } from "./shanghai-character-supplement";
+import { lexicalExpansionLearning } from "./lexical-expansion";
 import { singaporeCantoneseLearning } from "./singapore-cantonese";
 import { huiWuyuanLearning } from "./hui-wuyuan";
 import { writtenCharacterGloss } from "../character-gloss";
@@ -5,7 +7,7 @@ import { jiangyongChengguanLearning } from "./jiangyong-chengguan";
 import { ganHuaiyueLearning } from "./gan-huaiyue";
 import { ganToneInventories } from "./gan-tone-inventories";
 import { xiangComparativeLearning } from "./xiang-comparative";
-import { meaningPracticeWords } from "./practice";
+import { practiceSelection } from "./practice";
 import { otherSiniticLearning } from "./other-sinitic";
 import { ganXiangLearning } from "./gan-xiang";
 import { minMainlandCulture } from './min-mainland-culture';
@@ -38,7 +40,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,
@@ -134,7 +136,7 @@ export function availableSections(point: MapPoint): LearningSection[] {
       ? ["culture" as const]
       : []),
     ...(data.soundNotes.length || data.words.length || data.toneInventories.length ? ["sounds" as const] : []),
-    ...(new Set(meaningPracticeWords(data.words).map((word) => word.english)).size >= 4
+    ...(practiceSelection(data.words)
       ? ["practice" as const]
       : []),
   ];

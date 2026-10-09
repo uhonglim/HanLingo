@@ -1,3 +1,4 @@
+import { meaningPracticeWords, practiceSelection } from "./practice";
 import { describe, expect, it } from 'vitest';
 import { availableSections, getLocalLearning, spellingFor } from './index';
 import { learningPlaces } from './places';
@@ -23,7 +24,9 @@ describe('distinct learning evidence surfaces', () => {
       const place = learningPlaces.find(place => place.id === id)!;
       expect(availableSections(place)).toContain('words');
       expect(availableSections(place)).toContain('sounds');
-      expect(availableSections(place)).not.toContain('practice');
+      expect(availableSections(place)).toContain('practice');
+      expect(meaningPracticeWords(getLocalLearning(place).words)).toEqual([]);
+      expect(practiceSelection(getLocalLearning(place).words)?.mode).toBe('spelling');
     }
     for (const word of words) {
       expect(spellingFor(word)).toMatch(/·T[1-8]/);

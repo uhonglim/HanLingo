@@ -6,13 +6,15 @@ const vite = await createServer({ configFile: false, optimizeDeps: { noDiscovery
 try {
   const { minExpandedReadings: packs } = await vite.ssrLoadModule('/src/data/learning/min-expanded-readings.ts');
   const { convertIpa } = await vite.ssrLoadModule('/src/data/romanization-method.ts');
+  const { meaningPracticeWords } = await vite.ssrLoadModule('/src/data/learning/practice.ts');
   const words = packs.flatMap(p => p.words);
   assert.equal(words.length, 1500);
   assert.equal(new Set(words.map(w => w.id)).size, words.length);
   assert.equal(packs.length, 15);
+  assert.equal(meaningPracticeWords(words).length, 0, 'Character readings must not enter lexical meaning quizzes');
   for (const pack of packs) {
     assert.equal(pack.words.length, 100);
-    assert.ok(new Set(pack.words.map(w => w.english)).size >= 50);
+    assert.equal(new Set(pack.words.map(w => w.han)).size, 100);
     assert.ok(pack.soundNotes.length >= 3);
   }
   assert.ok(!words.some(w => w.localityId === 'leizhou' && w.han === '雞'), 'Conflicting source chicken reading must remain held');
@@ -22,6 +24,8 @@ try {
     assert.ok(raw, word.id);
     assert.equal(word.ipa, `[${raw.initial === '0' ? '' : raw.initial}${raw.rime}${raw.pitch}]`);
     assert.equal(word.toneNotation, 'pitch-contour');
+    assert.equal(word.learningKind, 'character-reading');
+    assert.equal(word.english, `Character ${word.han}`);
     assert.match(word.reading, /character/i);
     assert.ok(word.note.includes(raw.toneCategory));
     assert.ok(word.source.title.includes(`row ${raw.row}, character ID ${raw.sourceId}`));

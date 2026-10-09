@@ -1,3 +1,4 @@
+import { xiangStudyGalleries } from "./xiang-study";
 import { otherSiniticGalleries } from "./other-sinitic";
 import { minOverseasGalleries } from './min-overseas';
 import { minMainlandExpandedGalleries } from './min-mainland-expanded';
@@ -13,6 +14,7 @@ import type { GalleryPhoto } from "./types";
 
 export const localityGalleries: Record<string, GalleryPhoto[]> = {
   ...otherSiniticGalleries,
+  ...xiangStudyGalleries,
   ...minGalleries,
   ...otherGalleries,
   ...chaoshanGalleries,
@@ -26,6 +28,7 @@ export const localityGalleries: Record<string, GalleryPhoto[]> = {
   // Reuse the existing Singapore scenes; exclude the specifically Hokkien temple.
   'singapore-teochew': minGalleries.singapore.filter(photo => photo.id !== 'singapore-thian-hock-keng'),
   'singapore-hainanese': minGalleries.singapore.filter(photo => photo.id !== 'singapore-thian-hock-keng'),
+  'singapore-cantonese': minGalleries.singapore.filter(photo => photo.id !== 'singapore-thian-hock-keng'),
   xiamen: xiamenPhotos.map((photo) => ({
     ...photo,
     title: photo.caption,

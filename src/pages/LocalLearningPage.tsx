@@ -1,5 +1,5 @@
 import SourceToneInventory from "../components/SourceToneInventory";
-import { meaningPracticeWords, localWordCanDistract } from "../data/learning/practice";
+import { practiceSelection, practiceSpelling, localWordCanDistract } from "../data/learning/practice";
 import LocalRecordings from '../components/LocalRecordings';
 import PlaceName from "../components/PlaceName";
 import { useState } from "react";
@@ -26,11 +26,14 @@ import Pronunciation from "../components/Pronunciation";
 import LocalSoundExplorer from "../components/LocalSoundExplorer";
 import { getLocalGallery } from "../data/galleries";
 
-function Practice({ words }: { words: AttestedWord[] }) {
+function Practice({ words, mode }: { words: AttestedWord[]; mode: "meaning" | "spelling" }) {
+  const label = (word: AttestedWord) => mode === "spelling" ? practiceSpelling(word)! : word.english;
+  const pool = [...new Map(words.map(word => [label(word), word])).values()];
+  const canDistract = (answer: AttestedWord, candidate: AttestedWord) => mode === "spelling" ? label(answer) !== label(candidate) : localWordCanDistract(answer, candidate);
   const [deck, setDeck] = useState(() =>
     makeQuiz(
-      [...new Map(words.map((word) => [word.english, word])).values()],
-      10, Math.random, localWordCanDistract,
+      pool,
+      10, Math.random, canDistract,
     ),
   );
   const [round, setRound] = useState(0);
@@ -38,17 +41,17 @@ function Practice({ words }: { words: AttestedWord[] }) {
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
   const question = deck[round].answer;
-  const options = deck[round].options.map((word) => word.english);
+  const options = deck[round].options.map(label);
   const answer = (value: string) => {
     if (selected) return;
     setSelected(value);
-    if (value === question.english) setScore(score + 1);
+    if (value === label(question)) setScore(score + 1);
   };
   const restart = () => {
     setDeck(
       makeQuiz(
-        [...new Map(words.map((word) => [word.english, word])).values()],
-        10, Math.random, localWordCanDistract,
+        pool,
+        10, Math.random, canDistract,
       ),
     );
     setRound(0);
@@ -62,14 +65,14 @@ function Practice({ words }: { words: AttestedWord[] }) {
         <h2>
           {score} / {deck.length}
         </h2>
-        <p>Correct meanings</p>
+        <p>{mode === "spelling" ? "Correct spellings" : "Correct meanings"}</p>
         <button className="learning-quiz-next" onClick={restart}>
           Try again
         </button>
       </section>
     );
   return (
-    <section className="learning-quiz" aria-label="Word practice">
+    <section className="learning-quiz" aria-label={mode === "spelling" ? "IPA spelling practice" : "Word practice"}>
       <p className="learning-quiz-progress">
         {round + 1} / {deck.length}
       </p>
@@ -80,9 +83,9 @@ function Practice({ words }: { words: AttestedWord[] }) {
       <Pronunciation
         ipa={question.ipa}
         toneNotation={question.toneNotation}
-        spelling={spellingFor(question)}
+        spelling={mode === "spelling" && !selected ? undefined : spellingFor(question)}
       />
-      <p>Choose the meaning.</p>
+      <p>{mode === "spelling" ? "Match this IPA to HanLingo spelling." : "Choose the meaning."}</p>
       <div className="learning-quiz-answers">
         {options.map((option) => (
           <button
@@ -98,9 +101,9 @@ function Practice({ words }: { words: AttestedWord[] }) {
       {selected && (
         <div aria-live="polite">
           <p>
-            {selected === question.english
+            {selected === label(question)
               ? "Correct."
-              : `Answer: ${question.english}.`}
+              : `Answer: ${label(question)}.`}
           </p>
           <p>{question.reading}</p>
           {question.note && <p>{question.note}</p>}
@@ -123,7 +126,7 @@ function Practice({ words }: { words: AttestedWord[] }) {
                 }
               }}
             >
-              {round + 1 === deck.length ? "Results" : "Next word"}
+              {round + 1 === deck.length ? "Results" : mode === "spelling" ? "Next reading" : "Next word"}
             </button>
           </p>
         </div>
@@ -170,11 +173,11 @@ export default function LocalLearningPage() {
         />
       </div>
     );
-  const practiceWords = meaningPracticeWords(data.words);
-  const savedWords = practiceWords.filter((word) => saved.includes(word.id));
-  const savedPractice =
-    query.get("saved") === "1" &&
-    new Set(savedWords.map((word) => word.english)).size >= 4;
+  const allPractice = practiceSelection(data.words);
+  const savedWords = data.words.filter((word) => saved.includes(word.id));
+  const savedSelection = practiceSelection(savedWords);
+  const savedPractice = query.get("saved") === "1" && Boolean(savedSelection);
+  const activePractice = savedPractice ? savedSelection : allPractice;
   return (
     <div className="local-learning-page" key={`${point.id}/${chapter}`}>
       <header>
@@ -219,9 +222,9 @@ export default function LocalLearningPage() {
       query.get("saved") === "1" &&
       !savedPractice ? (
         <section className="local-words-empty">
-          <h2>Save four different meanings to practise</h2>
+          <h2>Save four distinct answers to practise</h2>
           <p>
-            Your saved collection needs four distinct meanings for this quiz.
+            Save four different local meanings or four different HanLingo spellings.
           </p>
           <Link
             className="learning-source"
@@ -238,17 +241,18 @@ export default function LocalLearningPage() {
           </Link>
         </section>
       ) : (
-        chapter === "practice" && (
+        chapter === "practice" && activePractice && (
           <>
             {savedPractice && (
               <p className="learning-register">
-                Practising your saved words ·{" "}
+                Practising your saved entries ·{" "}
                 <Link to={`${varietyPath(point)}/practice`}>Use all words</Link>
               </p>
             )}
             <Practice
               key={`${point.id}/${savedPractice ? savedWords.map((word) => word.id).join(",") : "all"}`}
-              words={savedPractice ? savedWords : practiceWords}
+              words={activePractice.words}
+              mode={activePractice.mode}
             />
           </>
         )

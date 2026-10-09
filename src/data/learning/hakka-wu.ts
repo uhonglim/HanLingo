@@ -70,16 +70,18 @@ function words(
   reading: string,
   note: string,
   toneNotation: AttestedWord["toneNotation"] = "pitch-contour",
+  learningKind: AttestedWord["learningKind"] = "word",
 ): AttestedWord[] {
   return entries.map(([id, han, english, ipa]) => ({
     id: `${localityId}-${id}`,
     han,
-    english,
+    english: learningKind === "character-reading" ? `Character ${han}` : english,
+    learningKind,
     ipa,
     localityId,
     toneNotation,
     reading,
-    registerLabel:
+    registerLabel: learningKind === "character-reading" ? "Source character reading" :
       localityId === "haifeng"
         ? "Haifeng Hakka survey · segments only"
         : undefined,
@@ -94,10 +96,12 @@ function cuhkWords(
   localityId: string,
   entries: [string, string, string][],
 ): AttestedWord[] {
-  return entries.map(([han, english, ipa]) => ({
+  return entries.map(([han, , ipa]) => ({
     id: `${localityId}-cuhk-${han.codePointAt(0)}`,
     han,
-    english,
+    english: `Character ${han}`,
+    learningKind: "character-reading",
+    registerLabel: "Source character reading",
     ipa: `[${ipa}]`,
     localityId,
     toneNotation: "pitch-contour",
@@ -215,6 +219,8 @@ const depthWords: Record<string, AttestedWord[]> = {
     ),
     "Vowel-study character reading",
     "Metropolitan Suzhou speakers in their fifties; word tables on pp. 14 and 74. The author’s broad transcription, including sinological apical-vowel symbols ɿ and ʮ, is retained. 44 and 5 are pitch values. These elicitation characters are not all independent everyday words.",
+    "pitch-contour",
+    "character-reading",
   ),
   haifeng: words(
     "haifeng",

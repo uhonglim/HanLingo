@@ -1,4 +1,4 @@
-import { meaningPracticeWords } from "../data/learning/practice";
+import { practiceSelection } from "../data/learning/practice";
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import type { AttestedWord } from "../data/learning/types";
@@ -49,7 +49,7 @@ export default function LocalWordCollection({
   const savedWords = words.filter((word) => saved.includes(word.id));
   const savedCount = savedWords.length;
   const canPracticeSaved =
-    new Set(meaningPracticeWords(savedWords).map((word) => word.english)).size >= 4;
+    Boolean(practiceSelection(savedWords));
   const update = (name: string, value: string) => {
     const next = new URLSearchParams(params);
     if (value) next.set(name, value);
@@ -100,7 +100,7 @@ export default function LocalWordCollection({
           {count} of {words.length + regional.length} {entryLabel}
         </p>
         {savedOnly && canPracticeSaved && (
-          <Link to={`${base}/practice?saved=1`}>Practice saved words</Link>
+          <Link to={`${base}/practice?saved=1`}>Practice saved {entryLabel}</Link>
         )}
       </div>
       {count > 0 ? (

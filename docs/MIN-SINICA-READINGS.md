@@ -1,6 +1,6 @@
 # Min character-reading expansion — 9 October 2026
 
-This collection adds **1,500 sourced character readings**, 100 for each of 15 locality references. It is not a new speech survey, a spoken-word translation list, or 1,500 audio recordings. The glossary explains the character; actual local word choice can differ. Source readings supplement existing collections without replacing them.
+This collection adds **1,500 sourced character readings**, 100 for each of 15 locality references. It is not a new speech survey, a spoken-word translation list, or 1,500 audio recordings. Each record is typed `character-reading` and labelled `Character <han>`; separately attributed written-character senses may help identify the graph, but actual local word choice can differ. These readings are excluded from lexical meaning quizzes. Source readings supplement existing collections without replacing them.
 
 | Branch | Exact locality reference | Readings |
 | --- | --- | ---: |
@@ -29,7 +29,7 @@ No Matsu recording is assigned to Nangan or another island. No Sanming Sanyuan d
 
 The source explicitly separates 聲母 (initial), 韻母 (rime), 調值 (pitch value), 調類 (tone category), and 備註 (notes). The only transcription operation is concatenating initial + rime + pitch value inside IPA brackets. Source initial `0` denotes zero onset and is omitted. No sounds, glides, aspiration, lengths, tones, or sandhi rules are added. IPA is retained in `ipa`; the existing shared converter produces HanLingo spelling at display time.
 
-Selection uses an ordered, manually glossed list spanning food, family, body, landscape, animals, household objects, actions, numbers, time and qualities. It stops at 100 accepted readings per place. Records are excluded when:
+Selection uses an ordered character list spanning food, family, body, landscape, animals, household objects, actions, numbers, time and qualities. It stops at 100 accepted readings per place. Records are excluded when:
 
 - the character is absent or appears in more than one source row;
 - the source has any usage/reading annotation requiring individual interpretation;
@@ -61,6 +61,10 @@ An additional audit compared available simple, unannotated variant entries for �
 
 ## Validation
 
-The importer pins source bytes and retains a per-record ledger. The verification script `node scripts/verify-min-sinica.mjs` checks the 1,500 generated records, exact reconstruction from that ledger, uniqueness, tone labels, and conversion through the shared IPA key. It also checks six independent spot examples and requires at least 50 meanings per locality.
+The importer pins source bytes and retains a per-record ledger. The verification script `node scripts/verify-min-sinica.mjs` checks the 1,500 generated records, exact reconstruction from that ledger, uniqueness, tone labels, and conversion through the shared IPA key. It also checks six independent spot examples, 100 distinct characters per locality, the explicit `character-reading` type, neutral character labels and zero eligibility for lexical meaning quizzes. The 1,500 record IDs, characters, IPA strings and pitch values are unchanged by the record-kind correction.
 
-Full project tests, content inventory, browser acceptance, and release verification remain parent-task integration steps. This file does not claim the new words have audio recordings or that all Min localities now have equal learning depth.
+Full project tests, content inventory, browser acceptance, and release verification remain parent-task integration steps. This file does not claim these readings have audio recordings or that all Min localities now have equal learning depth.
+
+## Character-type correction
+
+An independent integration audit found that these 1,500 records had previously omitted `learningKind` despite being described as character readings. The omission allowed them into meaning practice and counted them as lexical words. The importer now emits `learningKind: character-reading`, neutral `Character <han>` English labels and preserves every source pronunciation and stable ID. Manual character glosses used to prioritize the original selection are not published as source-attested local translations. The shared, independently attributed written-character aid is maintained separately.

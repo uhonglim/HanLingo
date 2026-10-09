@@ -28,8 +28,10 @@ describe('reviewed thousand-locality atlas', () => {
       expect(getBreadcrumbs(path)).toHaveLength(5);
       expect(findAtlasCluster(place.groupId, place.branchId, place.clusterId)).toBeDefined();
       expect(filterMapLocalities(atlasLocalities, row.code).map(match => match.id)).toContain(place.id);
-      // A catalogue addition never fabricates a course or local pronunciation.
-      expect(availableSections(findLearningPlace(place.id)!)).toEqual([]);
+      // Only a subsequently sourced exact-place learning collection unlocks lessons.
+      if (place.id === 'rongcheng-371082') {
+        expect(availableSections(findLearningPlace(place.id)!)).toEqual(['words', 'sounds', 'practice']);
+      } else expect(availableSections(findLearningPlace(place.id)!)).toEqual([]);
     }
   });
   it('does not publish unused ranks or known mislocated source points', () => {

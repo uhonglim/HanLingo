@@ -1,3 +1,7 @@
+import { lexicalExpansionLearning } from "./learning/lexical-expansion";
+import { atlasLexibankPacks } from "./learning/atlas-lexibank";
+import { ganXiangLearning } from "./learning/gan-xiang";
+import { otherSiniticLearning } from "./learning/other-sinitic";
 import { southernMinLearning } from "./learning/southern-min";
 import { displayIpa } from "./ipa-display";
 import { minLearning } from "./learning/min";
@@ -219,35 +223,11 @@ const existingWords = [
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-].flatMap((pack) => pack.words);
-const additionalDictionaryReadings: Record<string, RegionalReading[]> =
-  Object.fromEntries(
-    (
-      [
-        ["tea", "茶", "[zo13]"],
-        ["uncooked-rice", "米", "[mi13]"],
-        ["mountain", "山", "[se53]"],
-        ["fish", "魚", "[ɦŋ̍13]"],
-      ] as const
-    ).map(([conceptId, han, ipa]) => [
-      conceptId,
-      [
-        {
-          id: `${conceptId}-shanghai-cuhk`,
-          localityId: "shanghai",
-          han,
-          ipa,
-          toneNotation: "pitch-contour",
-          source: {
-            title: `CUHK Chinese Character Database · ${han} · Shanghai`,
-            url: `https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=${encodeURIComponent(han)}`,
-          },
-          scope: "CUHK Shanghai character-reading reference",
-          note: "The dictionary reference is separate from the Huangpu speaker in the Shanghai lessons. Isolated readings do not supply compound tones.",
-        },
-      ],
-    ]),
-  );
+  ...atlasLexibankPacks,
+  ...ganXiangLearning,
+  ...otherSiniticLearning,
+  ...lexicalExpansionLearning,
+].flatMap((pack) => pack.words).filter(word => word.learningKind !== "character-reading");
 const shared: [string, string, string[], string][] = [
   [
     "fish",
@@ -301,13 +281,13 @@ const shared: [string, string, string[], string][] = [
     "younger-brother",
     "younger brother",
     ["younger brother"],
-    "These sources record different kinship forms, including a prefixed Hakka form.",
+    "Compare the attested local kinship forms.",
   ],
   [
     "younger-sister",
     "younger sister",
     ["younger sister"],
-    "These sources record different kinship forms, including a prefixed Hakka form.",
+    "Compare the attested local kinship forms.",
   ],
 ];
 const sharedConcepts: RegionalConcept[] = shared.map(
@@ -317,7 +297,6 @@ const sharedConcepts: RegionalConcept[] = shared.map(
     note,
     contrast: id.startsWith("younger-") ? "mixed" : "pronunciation",
     readings: [
-      ...(additionalDictionaryReadings[id] ?? []),
       ...xiamenWords
         .filter((word) => glosses.includes(word.english))
         .map((word) => ({
@@ -363,7 +342,7 @@ export const regionalConcepts: RegionalConcept[] = [
 ].map((concept) => ({
   ...concept,
   readings: deduplicateReadings(concept.readings),
-}));
+})).filter(concept => new Set(concept.readings.map(reading => reading.localityId)).size >= 2);
 
 export function deduplicateReadings(
   readings: RegionalReading[],

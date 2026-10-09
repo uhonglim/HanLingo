@@ -55,13 +55,15 @@ function readings(
   rows: [string, string, string][],
   note?: string,
 ): AttestedWord[] {
-  return rows.map(([han, english, ipa]) => ({
+  return rows.map(([han, , ipa]) => ({
     id: `${localityId}-${han}`,
     han,
-    english,
+    english: `Character ${han}`,
+    learningKind: 'character-reading',
     ipa,
     localityId,
-    reading: "Citation reading",
+    reading: "Dictionary character reading",
+    registerLabel: 'Source character reading',
     toneNotation: "pitch-contour",
     note:
       note ?? "Dictionary character reading; phrase pronunciation may differ.",
@@ -135,13 +137,13 @@ export const minLearning: BranchLearning[] = [
     ]),
     soundNotes: [
       {
-        title: "A book and a sheet of paper",
+        title: "The vowels in 書 and 紙",
         text: "書 [t͡sy˦˦] and 紙 [t͡sai˧˨] share the unaspirated [t͡s] onset. Their vowels and tones differ: [y] is rounded and forward, while [ai] moves between two vowel positions.",
         localityIds: ["fuzhou"],
         source: fuzhouDictionary,
       },
       {
-        title: "Two short food readings",
+        title: "A glottal stop and a nasal ending",
         text: "肉 [nyʔ˥] ends at the glottis, while 糖 [tʰouŋ˥˧] ends in the velar nasal [ŋ]. Keep the endings distinct even when practising the syllables slowly.",
         localityIds: ["fuzhou"],
         source: fuzhouDictionary,
@@ -276,13 +278,13 @@ export const minLearning: BranchLearning[] = [
     ]),
     soundNotes: [
       {
-        title: "Buy and sell: listen for pitch",
+        title: "Pitch distinguishes 買 and 賣",
         text: "買 [mai˨˩] and 賣 [mai˦˦] have the same consonant and vowels in these dictionary readings. The low falling tone of 買 contrasts with the level tone of 賣.",
         localityIds: ["jianou"],
         source: jianouDictionary,
       },
       {
-        title: "A mouth begins with a breath",
+        title: "The aspirated onset in 口",
         text: "口 [kʰe˨˩] begins with aspirated [kʰ]. Compare 家 [ka˥˦], whose [k] has no following aspiration. HanLingo keeps these onsets separate as kh and k.",
         localityIds: ["jianou"],
         source: jianouDictionary,
@@ -390,13 +392,13 @@ export const minLearning: BranchLearning[] = [
     ),
     soundNotes: [
       {
-        title: "Keep the nasal vowel in clear weather",
+        title: "Keep the nasal vowel in 晴",
         text: "晴 [ɬã˩˧] has a nasalized [ã]. Air passes through the nose during the vowel; this is different from adding an [n] or [ŋ] after an oral vowel.",
         localityIds: ["putian"],
         source: putianStudy,
       },
       {
-        title: "Ten ends with a glottal stop",
+        title: "十 ends with a glottal stop",
         text: "十 [ɬieʔ˦] closes with [ʔ]. The source labels this category 8 and gives Putian’s citation pitch as 4; the category number itself is not the pitch.",
         localityIds: ["putian"],
         source: putianStudy,
@@ -415,7 +417,7 @@ export const minLearning: BranchLearning[] = [
       },
       {
         title: "Tone categories are not pitch numbers",
-        text: "The study labels words with traditional tone categories, then supplies a separate Putian contour table. Here category 1 becomes 533, 2 becomes 13, 3 becomes 453, 5 becomes 42, 6 becomes 11, and 8 becomes 4.",
+        text: "The study labels character readings with traditional tone categories, then supplies a separate Putian contour table. Here category 1 becomes 533, 2 becomes 13, 3 becomes 453, 5 becomes 42, 6 becomes 11, and 8 becomes 4.",
         localityIds: ["putian"],
         source: putianStudy,
       },
@@ -450,7 +452,7 @@ export const minLearning: BranchLearning[] = [
     ],
     resources: [
       {
-        title: "Putian words and tones",
+        title: "Putian character readings and tones",
         description:
           "Tables 1–5 give the attested character forms and their tone categories; table 4 gives pitch contours.",
         localityIds: ["putian"],
@@ -504,7 +506,7 @@ export const minLearning: BranchLearning[] = [
         source: yonganDictionary,
       },
       {
-        title: "Buy and sell use different tones",
+        title: "Different tones in 買 and 賣",
         text: "買 [be˨˩] and 賣 [be˨˦] share their segments. In these citation readings, 買 falls from 2 to 1 while 賣 rises from 2 to 4.",
         localityIds: ["yongan"],
         source: yonganDictionary,

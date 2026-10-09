@@ -1539,7 +1539,7 @@ const places: PlaceRows[] = [
 const sourceUrl = "https://xiaoxue.iis.sinica.edu.tw/ccrdata/";
 export const minExpandedReadings: BranchLearning[] = places.map(place => {
   const source = { title: `Academia Sinica 小學堂 · ${place.workbook}`, url: sourceUrl };
-  const example = (row: ReadingRow) => `${row[2]} “${row[3]}” ${row[4]}`;
+  const example = (row: ReadingRow) => `${row[2]} ${row[4]}`;
   const first = place.rows[0];
   const second = place.rows.find(row => row[4].replace(/[1-5]+\]$/, "]") !== first[4].replace(/[1-5]+\]$/, "]")) ?? place.rows[1];
   const tonePair = place.rows.flatMap((a, index) => place.rows.slice(index + 1).filter(b =>
@@ -1547,12 +1547,13 @@ export const minExpandedReadings: BranchLearning[] = places.map(place => {
   ).map(b => [a, b] as const))[0];
   return {
     branchId: place.branchId,
-    words: place.rows.map(([id, row, han, english, ipa, category]) => ({
-      id: `sinica-min-${place.sourceNumber}-${id}`, han, english, ipa,
+    words: place.rows.map(([id, row, han, , ipa, category]) => ({
+      id: `sinica-min-${place.sourceNumber}-${id}`, han, english: `Character ${han}`, ipa,
+      learningKind: "character-reading" as const,
       toneNotation: "pitch-contour" as const, localityId: place.localityId,
       reading: "Dictionary character reading",
       registerLabel: `${place.label} · character reading`,
-      note: `The gloss identifies the character, not necessarily an everyday standalone local word. Source tone category: ${category}; displayed digits come from the separate pitch-value column. No connected-speech or sandhi form is inferred.`,
+      note: `This source supplies a written character and its pronunciation, not an attested local lexical meaning. Source tone category: ${category}; displayed digits come from the separate pitch-value column. No connected-speech or sandhi form is inferred.`,
       source: { title: `${source.title} · row ${row}, character ID ${id}`, url: sourceUrl },
     })),
     soundNotes: [
@@ -1568,7 +1569,7 @@ export const minExpandedReadings: BranchLearning[] = places.map(place => {
       }] : []),
       {
         title: "Character reading and spoken word",
-        text: `These ${place.label} pronunciations are character entries in Academia Sinica’s phonological database. A character can be part of a longer word or have another reading in speech. The English labels explain the written character; they are not an automatic phrasebook.`,
+        text: `These ${place.label} pronunciations are character entries in Academia Sinica’s phonological database. A character can be part of a longer word or have another reading in speech. The English label identifies the written character. Any written-character senses shown separately are a dictionary aid, not an attestation of local word usage.`,
         localityIds: [place.localityId], source,
       },
       {

@@ -23,7 +23,7 @@ describe("local word collections", () => {
     const html = render("?q=tea&topic=Food%20%26%20drink");
     expect(html).toContain(">茶</h3>");
     expect(html).not.toContain(">魚</h3>");
-    expect(html).toContain("CUHK");
+    expect(html).toContain("Beida 1964");
     expect(render("?q=tea&topic=Numbers")).toContain("No matching words");
   });
   it("offers a usable empty notebook without inventing saved content", () => {

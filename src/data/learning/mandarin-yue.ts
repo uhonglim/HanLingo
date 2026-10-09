@@ -146,10 +146,12 @@ const dictionaryWords = (
   point: string,
   rows: [string, string, string, string][],
 ): AttestedWord[] =>
-  rows.map(([id, han, english, ipa]) => ({
+  rows.map(([id, han, , ipa]) => ({
     id: `${localityId}-${id}`,
     han,
-    english,
+    english: `Character ${han}`,
+    learningKind: "character-reading",
+    registerLabel: "Source character reading",
     ipa,
     localityId,
     toneNotation: "pitch-contour",

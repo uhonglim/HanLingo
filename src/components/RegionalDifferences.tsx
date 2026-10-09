@@ -2,7 +2,7 @@ import PlaceName from "./PlaceName";
 import { useState } from "react";
 import { ipaSearchForms } from "../data/ipa-display";
 import { Link } from "react-router-dom";
-import { mapPoints } from "../data/languages";
+import { learningPlaces as mapPoints } from "../data/learning/places";
 import {
   regionalConceptsFor,
   regionalReadingsFor,

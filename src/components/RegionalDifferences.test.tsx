@@ -71,7 +71,7 @@ describe("local references and IPA", () => {
     expect(html).toContain("<strong>pa</strong>");
   });
 
-  it("does not repeat identical Shanghai dictionary entries after vocabulary expansion", () => {
+  it("uses lexical evidence in meaning comparisons and keeps character-only sources in reading collections", () => {
     for (const id of ["mountain", "uncooked-rice"]) {
       const readings = regionalConcepts
         .find((concept) => concept.id === id)!
@@ -80,8 +80,9 @@ describe("local references and IPA", () => {
             reading.localityId === "shanghai" &&
             reading.source.url.includes("cuhk"),
         );
-      expect(readings).toHaveLength(1);
+      expect(readings).toHaveLength(0);
     }
-    expect(regionalReadingsFor("shantou").length).toBeGreaterThan(0);
+    expect(regionalReadingsFor("shantou")).toEqual([]);
+    expect(regionalReadingsFor("meixian").some(reading => reading.source.title.includes("Beida"))).toBe(true);
   });
 });

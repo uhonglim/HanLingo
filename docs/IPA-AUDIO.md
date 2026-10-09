@@ -25,3 +25,11 @@ Run `python3 scripts/build-ipa-pack.py` after a reviewed manifest/audio change. 
 ## Acceptance
 
 `npm test` checks file hashes and attribution, exact matching, marks and tone conventions, queue advancement, failure/retry, timeout, cancellation and stale requests. `npm run build` checks TypeScript and static publishing. Browser acceptance must additionally establish actual media loading/playback, switching sounds, route cancellation, the download, and a narrow viewport. Unit media doubles alone do not prove a browser can decode a recording.
+
+## Version 2: three consonant demonstrations
+
+Adds Peter Isotalo’s Commons recordings of [p], [m] and [ŋ] under their offered CC BY-SA 3.0 licence. Original Ogg SHA-1 values match the recorded Commons metadata. Each MP3 is converted with FFmpeg/libmp3lame quality3, without trimming or pitch shifting; the manifest records duration and SHA-256. The full source clips retain any supporting vowels and are not labelled as local syllables. [pʰ], syllabic [m̩] and other marked variants still require their own exact recordings; a base consonant never substitutes for them.
+
+The earlier600-second source retry interval had elapsed by more than10,000seconds before this bounded retrieval. Retrieval stopped after a later HTTP429 on [f]; [f], [s] and [l] remain absent. [n] and [ɛ] remain held for the earlier description/hash discrepancies. Version2 therefore contains18 demonstrations, not a complete consonant inventory.
+
+Sources: [bilabial plosive](https://commons.wikimedia.org/wiki/File:Voiceless_bilabial_plosive.ogg), [bilabial nasal](https://commons.wikimedia.org/wiki/File:Bilabial_nasal.ogg), [velar nasal](https://commons.wikimedia.org/wiki/File:Velar_nasal.ogg). Attribution, selected licence, original bytes’ hashes and conversion hashes remain in the distributed manifest and offline-pack credits.

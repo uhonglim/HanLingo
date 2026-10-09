@@ -5,6 +5,7 @@ import LocalLearningPage from "./LocalLearningPage";
 import { getLocalLearning, searchWords } from "../data/learning";
 import { mapPoints } from "../data/languages";
 import { regionalReadingsFor } from "../data/regional-words";
+import { practiceSelection } from "../data/learning/practice";
 import { varietyPath } from "../routing";
 
 function render(path: string) {
@@ -33,7 +34,7 @@ describe("local learning chapters", () => {
   });
   it("does not silently replace an empty saved deck with unsaved words", () => {
     const html = render("/min/eastern-min/fuzhou/practice?saved=1");
-    expect(html).toContain("Save four different meanings to practise");
+    expect(html).toContain("Save four distinct answers to practise");
     expect(html).toContain("Use all words");
     expect(html).not.toContain('aria-label="Word practice"');
   });
@@ -56,7 +57,7 @@ describe("local learning chapters", () => {
         expect(render(`${varietyPath(point)}/words`)).toContain(
           "Entry not found",
         );
-      if (new Set(data.words.map((word) => word.english)).size < 4)
+      if (!practiceSelection(data.words))
         expect(render(`${varietyPath(point)}/practice`)).toContain(
           "Entry not found",
         );
@@ -64,6 +65,14 @@ describe("local learning chapters", () => {
     expect(render("/min/southern-min/shanghai/sounds")).toContain(
       "Entry not found",
     );
+  });
+  it("teaches spelling from source character readings without revealing the answer or inventing meanings", () => {
+    const html = render("/hui/qiwu/qimen-wuyuan/youshan-hui/practice");
+    expect(html).toContain('aria-label="IPA spelling practice"');
+    expect(html).toContain("Match this IPA to HanLingo spelling.");
+    expect(html).not.toContain("Choose the meaning");
+    expect(html).not.toContain('class="pronunciation-spelling"');
+    expect(html.match(/aria-pressed="false"/g) ?? []).toHaveLength(4);
   });
   it("provides distinct practice answers and shows credited local photos without duplicate source links", () => {
     const practice = render("/min/eastern-min/fuzhou/practice");

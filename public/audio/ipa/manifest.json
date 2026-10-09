@@ -1,8 +1,8 @@
 {
   "id": "hanlingo-ipa-1",
-  "version": 1,
+  "version": "2.0",
   "title": "HanLingo IPA sound pack",
-  "scope": "General phonetic demonstrations, not locality recordings or fluent speech synthesis. Some consonants include supporting vowels. Tones and connected speech are not performed.",
+  "scope": "Human-recorded general IPA demonstrations: 15 vowels and 3 consonants. Consonant clips retain any supporting vowels. These are not local words, synthesized speech, lexical tones or sandhi.",
   "samples": [
     {
       "id": "0069",
@@ -273,6 +273,60 @@
       "duration": 0.626939,
       "originalSha1": "ee33026172662d8e770c2965cc0958938cbec25e",
       "sha256": "0cfc783a3d0cf44c97350231b99a95b1783f29910d508e75d623b1356c9d1640"
+    },
+    {
+      "id": "0070",
+      "ipa": "p",
+      "name": "Voiceless bilabial plosive",
+      "category": "Consonants",
+      "file": "0070.mp3",
+      "src": "/audio/ipa/0070.mp3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Voiceless_bilabial_plosive.ogg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Voiceless_bilabial_plosive.ogg",
+      "author": "Peter Isotalo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Transcoded from Ogg to MP3; not trimmed or pitch-shifted.",
+      "context": "Full consonant demonstration, including any supporting vowels. Not an isolated local syllable or a word recording.",
+      "duration": 1.567347,
+      "originalSha1": "d130da4673b9eca7f038cdb43ea9db83145a08e9",
+      "sha256": "beaf2055e3a4174ac41aab63917bf8d887b0d89d6fe89bbe8134b43fdce5e7d6"
+    },
+    {
+      "id": "006d",
+      "ipa": "m",
+      "name": "Bilabial nasal",
+      "category": "Consonants",
+      "file": "006d.mp3",
+      "src": "/audio/ipa/006d.mp3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bilabial_nasal.ogg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bilabial_nasal.ogg",
+      "author": "Peter Isotalo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Transcoded from Ogg to MP3; not trimmed or pitch-shifted.",
+      "context": "Full consonant demonstration, including any supporting vowels. Not an isolated local syllable or a word recording.",
+      "duration": 2.063673,
+      "originalSha1": "9aa284e454f590dd1cce25dbd4da61faef2f1af7",
+      "sha256": "c195ddc6da6bf93f82e2bf01c4be81870e8f23beb79b063b7e8989f738712258"
+    },
+    {
+      "id": "014b",
+      "ipa": "ŋ",
+      "name": "Velar nasal",
+      "category": "Consonants",
+      "file": "014b.mp3",
+      "src": "/audio/ipa/014b.mp3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Velar_nasal.ogg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Velar_nasal.ogg",
+      "author": "Peter Isotalo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Transcoded from Ogg to MP3; not trimmed or pitch-shifted.",
+      "context": "Full consonant demonstration, including any supporting vowels. Not an isolated local syllable or a word recording.",
+      "duration": 1.959184,
+      "originalSha1": "2a61afbbfddff3ee4c9caf9827bd0829dd7b44de",
+      "sha256": "170f966e0a433dad346d012c2dde548a9df64890e16179f1dce8bae02e91970a"
     }
   ]
 }

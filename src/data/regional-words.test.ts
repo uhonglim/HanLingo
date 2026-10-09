@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mapPoints } from "./languages";
+import { learningPlaces as mapPoints } from "./learning/places";
 import {
   regionalConcepts,
   regionalConceptsFor,

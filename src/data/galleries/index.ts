@@ -1,3 +1,4 @@
+import { hangzhouSheGalleries } from "./hangzhou-she";
 import { jinyunYuehuGalleries } from "./jinyun-yuehu";
 import { yichunYuanzhouGalleries } from "./yichun-yuanzhou";
 import { jinTunxiGalleries } from "./jin-tunxi";
@@ -27,6 +28,7 @@ export const localityGalleries: Record<string, GalleryPhoto[]> = {
   ...otherGalleries,
   ...chaoshanGalleries,
   ...expandedGalleries,
+  ...hangzhouSheGalleries,
   huangyan: huangyanPhotos,
   ...atlasExtraGalleries,
   ...minMainlandExpandedGalleries,

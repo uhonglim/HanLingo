@@ -3,8 +3,22 @@ import { meaningPracticeWords, localWordCanDistract, practiceSelection, practice
 import { ganXiangLearning } from './gan-xiang';
 import { xiangComparativeLearning } from './xiang-comparative';
 import { makeQuiz } from '../xiamen-romanization';
+import type { AttestedWord } from './types';
 
 describe('local word practice', () => {
+  it('keeps multifunctional readings available for spelling but out of context-free meaning choices', () => {
+    const base = { id: 'fixture', han: '例', writingStatus: 'attested' as const, english: 'example', ipa: '[li]', localityId: 'fixture', reading: 'Test fixture', source: { title: 'Test fixture', url: 'https://example.org' }, toneNotation: 'unspecified' as const };
+    const ambiguous: AttestedWord = { ...base, id: 'polyfunctional', english: 'how; why', ipa: '[tsa]', meaningPracticeExclude: true };
+    const words: AttestedWord[] = [ambiguous, ...['how', 'why', 'who'].map((english, i) => ({ ...base, id: english, english, han: ['何', '為', '誰'][i], ipa: ['[ka]', '[ni]', '[su]'][i] }))];
+    expect(meaningPracticeWords(words).map(word => word.id)).not.toContain('polyfunctional');
+    for (const other of words.slice(1)) {
+      expect(localWordCanDistract(ambiguous, other)).toBe(false);
+      expect(localWordCanDistract(other, ambiguous)).toBe(false);
+    }
+    const selection = practiceSelection(words);
+    expect(selection?.mode).toBe('spelling');
+    expect(selection?.words).toContain(ambiguous);
+  });
   it('does not quiz source character identifications as lexical meanings', () => {
     const characters = xiangComparativeLearning.flatMap(pack => pack.words);
     expect(characters.length).toBeGreaterThan(200);

@@ -1,3 +1,6 @@
+import { ganTongchengReadings } from "./gan-tongcheng-readings";
+import { xinzhouQuestionsLearning } from "./xinzhou-questions";
+import { tongguXihuLearning } from "./tonggu-xihu";
 import { yingtanGanLearning } from "./yingtan-gan";
 import { wuJinyunWuzhouLearning } from "./wu-jinyun-wuzhou";
 import { laiyuanContactLearning } from "./laiyuan-contact";
@@ -51,7 +54,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning, ...atlasLexibankDeeperPacks, ...yichunYuanzhouLearning, ...jinComparativeLearning, ...houHangzhouShexianLearning, ...qiyangXiangLearning, ...laiyuanContactLearning, ...wuJinyunWuzhouLearning, ...yingtanGanLearning]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning, ...atlasLexibankDeeperPacks, ...yichunYuanzhouLearning, ...jinComparativeLearning, ...houHangzhouShexianLearning, ...qiyangXiangLearning, ...laiyuanContactLearning, ...wuJinyunWuzhouLearning, ...yingtanGanLearning, ...xinzhouQuestionsLearning, ...tongguXihuLearning, ...ganTongchengReadings]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,

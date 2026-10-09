@@ -7,6 +7,8 @@ type AttestedWriting =
 export type AttestedWord = AttestedWriting & {
   id: string;
   english: string;
+  /** Keep a multifunctional form visible while excluding ambiguous context-free meaning quizzes. */
+  meaningPracticeExclude?: true;
   ipa: string;
   toneNotation?: "pitch-contour" | "source-category" | "unspecified";
   localityId: string;

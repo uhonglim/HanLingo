@@ -50,7 +50,7 @@ try {
     "",
     "## Locality inventory",
     "",
-    "| Locality | IPA entries | Source-spelling entries | IPA with tones omitted | Photos | Sound notes | Culture topics | Source links | Chapters |",
+    "| Locality | IPA entries | Source-spelling entries | Segment-only IPA | Photos | Sound notes | Culture topics | Source links | Chapters |",
     "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
     ...places.map(
       (place) =>

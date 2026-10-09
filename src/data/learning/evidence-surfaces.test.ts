@@ -12,10 +12,21 @@ describe('distinct learning evidence surfaces', () => {
       expect(place).toBeDefined();
       const data = getLocalLearning(place);
       expect(data.toneInventories).toContain(inventory);
-      expect(data.words).toHaveLength(0);
       expect(availableSections(place)).toContain('sounds');
-      expect(availableSections(place)).not.toContain('practice');
-      expect(availableSections(place)).not.toContain('words');
+      if (['gan-tongcheng-juanshui', 'gan-tongcheng-shinan'].includes(place.id)) {
+        // These towns now have separately transcribed Table16 syllables.
+        // The other inventories still cannot manufacture words from tone categories.
+        expect(data.words).toHaveLength(10);
+        expect(data.words.every(word => word.id.startsWith('zhang-wang2022-t16-'))).toBe(true);
+        expect(meaningPracticeWords(data.words)).toEqual([]);
+        expect(practiceSelection(data.words)?.mode).toBe('spelling');
+        expect(availableSections(place)).toContain('words');
+        expect(availableSections(place)).toContain('practice');
+      } else {
+        expect(data.words).toHaveLength(0);
+        expect(availableSections(place)).not.toContain('practice');
+        expect(availableSections(place)).not.toContain('words');
+      }
     }
   });
   it('keeps source-category character readings out of meaning quizzes', () => {

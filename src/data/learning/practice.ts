@@ -5,7 +5,7 @@ import { convertIpa } from '../romanization-method';
 const comparable = (value: string) => value.normalize('NFC').replace(/[\s\[\]]/g, '');
 
 export const meaningPracticeWords = (words: AttestedWord[]) =>
-  words.filter(word => word.learningKind !== 'character-reading');
+  words.filter(word => word.learningKind !== 'character-reading' && !word.meaningPracticeExclude);
 
 export function practiceSpelling(word: AttestedWord): string | undefined {
   try {
@@ -24,7 +24,8 @@ export function practiceSelection(words: AttestedWord[]): { mode: 'meaning' | 's
 
 /** A form with multiple attested senses must never make its other sense a wrong answer. */
 export function localWordCanDistract(answer: AttestedWord, candidate: AttestedWord) {
-  return wordMeaning(answer.english) !== wordMeaning(candidate.english)
+  return !answer.meaningPracticeExclude && !candidate.meaningPracticeExclude
+    && wordMeaning(answer.english) !== wordMeaning(candidate.english)
     && (!answer.han || !candidate.han || comparable(answer.han) !== comparable(candidate.han))
     && comparable(answer.ipa) !== comparable(candidate.ipa);
 }

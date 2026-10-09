@@ -1,0 +1,399 @@
+{
+  "status": "Reviewed source selection for Tonggu Xihu learning module; publication managed separately.",
+  "source": {
+    "title": "The Phonology of Tonggu Hakka / 铜鼓客家话音系",
+    "authors": [
+      "Jiayu Yang",
+      "Zhiming Zeng",
+      "Tingting Huang",
+      "Yan Du",
+      "Mengbing Xiang"
+    ],
+    "year": 2016,
+    "doi": "10.12677/ml.2016.44015",
+    "url": "https://pdf.hanspub.org/ml20160400000_58054424.pdf",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "pages": "127–160",
+    "sha256": "2a63464d47a55e1c7cdd6395cdf0991729424ec19cadb47d7bcfd712736a952b",
+    "authorsChinese": [
+      "杨加玉",
+      "曾志明",
+      "黄婷婷",
+      "杜严",
+      "项梦冰"
+    ]
+  },
+  "scope": {
+    "place": "Guancang hamlet, Xihu Village, Yongning Town, Tonggu County",
+    "speaker": "Li Sanhong, female, age 41. Bidialectal Gan/Hakka; article records her Hakka, with explicit Gan and Mandarin contact qualifications.",
+    "recording": "12–27 July 2016 at Tonggu No. 2 Primary School, not a private residence.",
+    "sourcePages": [
+      128,
+      129
+    ],
+    "classification": "Jing2025 pinned Language Atlas 2012 county source jing-county.csv lines2251–2252 explicitly assigns Tonggu Hakka to Tonggui; adjacent line2250 separately lists Gan Yiliu. This source-specific pack does not label the entire county Hakka.",
+    "proposedRoute": "/hakka/tonggui/yongning-localities/tonggu-xihu",
+    "geographyStatus": "Approximate Yongning town anchor from Wikidata Q11131540 P625; not a Guancang village pin or recording site."
+  },
+  "tonePolicy": {
+    "page": 132,
+    "conventionalKey": {
+      "yinping": "24",
+      "yangping": "113",
+      "shang": "31",
+      "qu": "44",
+      "yinru": "2",
+      "yangru": "5"
+    },
+    "note": "Published broad citation transcription, not acoustic measurements. Author explicitly reports more narrowly realized values223/112/21 etc but chooses24/113/31 for readability. No substitution with measured values. No sandhi is computed.",
+    "normalization": "Read the printed syllabary onset row+rhyme header+tone letter. Convert the printed tone letter with the article’s explicit numeric key. PUA extraction is preserved in the ignored PDF/text, never treated as valid UnicodeIPA. The printed zero-onset row marker Ø is omitted from the syllable, not interpreted as a vowel or glottal stop."
+  },
+  "records": [
+    {
+      "id": "yang2016-tonggu-he",
+      "han": "佢",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "他",
+      "english": "he / third-person pronoun",
+      "sourceOnset": "tɕ",
+      "sourceRhyme": "i",
+      "sourceConventionalPitch": "113",
+      "ipa": "[tɕi¹¹³]",
+      "page": 139,
+      "locator": "Section 4 homophony syllabary; rhyme i, onset tɕ, tone 113",
+      "note": ""
+    },
+    {
+      "id": "yang2016-tonggu-stand",
+      "han": "徛",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "站立",
+      "english": "stand",
+      "sourceOnset": "tɕʰ",
+      "sourceRhyme": "i",
+      "sourceConventionalPitch": "24",
+      "ipa": "[tɕʰi²⁴]",
+      "page": 139,
+      "locator": "Section 4 homophony syllabary; rhyme i, onset tɕʰ, tone 24",
+      "note": ""
+    },
+    {
+      "id": "yang2016-tonggu-be",
+      "han": "係",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "是",
+      "english": "be / copula",
+      "sourceOnset": "h",
+      "sourceRhyme": "i",
+      "sourceConventionalPitch": "44",
+      "ipa": "[hi⁴⁴]",
+      "page": 139,
+      "locator": "Section 4 homophony syllabary; rhyme i, onset h, tone 44",
+      "note": ""
+    },
+    {
+      "id": "yang2016-tonggu-squat",
+      "han": "跍",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "蹲",
+      "english": "squat",
+      "sourceOnset": "k",
+      "sourceRhyme": "u",
+      "sourceConventionalPitch": "24",
+      "ipa": "[ku²⁴]",
+      "page": 140,
+      "locator": "Section 4 homophony syllabary; rhyme u, onset k, tone 24",
+      "note": "The author supplies 跍 as the written form and follows it with historical comparison; no Linchuan pronunciation is imported."
+    },
+    {
+      "id": "yang2016-tonggu-open",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "张开",
+      "english": "open; spread open",
+      "sourceOnset": "s",
+      "sourceRhyme": "a",
+      "sourceConventionalPitch": "24",
+      "ipa": "[sa²⁴]",
+      "page": 141,
+      "locator": "Section 4 homophony syllabary; rhyme a, onset s, tone 24",
+      "note": "Source writing is □; no character is invented."
+    },
+    {
+      "id": "yang2016-tonggu-touch",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "摸",
+      "english": "touch; feel with the hand",
+      "sourceOnset": "m",
+      "sourceRhyme": "ia",
+      "sourceConventionalPitch": "24",
+      "ipa": "[mia²⁴]",
+      "page": 141,
+      "locator": "Section 4 homophony syllabary; rhyme ia, onset m, tone 24",
+      "note": "Source writing is □."
+    },
+    {
+      "id": "yang2016-tonggu-wither",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "花谢；火慢慢熄灭",
+      "english": "wither / gradually go out",
+      "sourceOnset": "s",
+      "sourceRhyme": "ia",
+      "sourceConventionalPitch": "44",
+      "ipa": "[sia⁴⁴]",
+      "page": 141,
+      "locator": "Section 4 homophony syllabary; rhyme ia, onset s, tone 44",
+      "note": "Flower withering and a fire gradually going out are explicitly given contexts. Proposed 谢 etymology remains a hypothesis; Han null."
+    },
+    {
+      "id": "yang2016-tonggu-hide",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "把东西藏起来",
+      "english": "hide something",
+      "sourceOnset": "k",
+      "sourceRhyme": "e",
+      "sourceConventionalPitch": "31",
+      "ipa": "[ke³¹]",
+      "page": 142,
+      "locator": "Section 4 homophony syllabary; rhyme e, onset k, tone 31",
+      "note": "Two separate unwritten homonyms share ke31; this entry is the action."
+    },
+    {
+      "id": "yang2016-tonggu-aphid",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "蚜虫",
+      "english": "aphid",
+      "sourceOnset": "k",
+      "sourceRhyme": "e",
+      "sourceConventionalPitch": "31",
+      "ipa": "[ke³¹]",
+      "page": 142,
+      "locator": "Section 4 homophony syllabary; rhyme e, onset k, tone 31",
+      "note": "Separate source □ following the hiding word; do not merge meanings or invent 蚜."
+    },
+    {
+      "id": "yang2016-tonggu-lick",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "舔。也说舐",
+      "english": "lick",
+      "sourceOnset": "l",
+      "sourceRhyme": "ie",
+      "sourceConventionalPitch": "31",
+      "ipa": "[lie³¹]",
+      "page": 142,
+      "locator": "Section 4 homophony syllabary; rhyme ie, onset l, tone 31",
+      "note": "Source writing is □. The mention of another word 舐 does not provide writing for this one."
+    },
+    {
+      "id": "yang2016-tonggu-prick",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "扎、刺、挤",
+      "english": "prick; pierce; squeeze",
+      "sourceOnset": "ts",
+      "sourceRhyme": "ie",
+      "sourceConventionalPitch": "24",
+      "ipa": "[tsie²⁴]",
+      "page": 142,
+      "locator": "Section 4 homophony syllabary; rhyme ie, onset ts, tone 24",
+      "note": "Retain the source range of action glosses, not a more specific tool or object."
+    },
+    {
+      "id": "yang2016-tonggu-rub",
+      "han": "捼",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "揉，搓",
+      "english": "rub; knead",
+      "sourceOnset": "n",
+      "sourceRhyme": "o",
+      "sourceConventionalPitch": "113",
+      "ipa": "[no¹¹³]",
+      "page": 142,
+      "locator": "Section 4 homophony syllabary; rhyme o, onset n, tone 113",
+      "note": "Author supplies 捼 with historical etymology, distinct from the following unwritten homonym."
+    },
+    {
+      "id": "yang2016-tonggu-step",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "踩",
+      "english": "step on",
+      "sourceOnset": "n",
+      "sourceRhyme": "o",
+      "sourceConventionalPitch": "113",
+      "ipa": "[no¹¹³]",
+      "page": 142,
+      "locator": "Section 4 homophony syllabary; rhyme o, onset n, tone 113",
+      "note": "Separate source □, not the preceding written 捼."
+    },
+    {
+      "id": "yang2016-tonggu-excrete",
+      "han": "屙",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "排泄大小便",
+      "english": "defecate or urinate",
+      "sourceOnset": "Ø",
+      "sourceRhyme": "o",
+      "sourceConventionalPitch": "24",
+      "ipa": "[o²⁴]",
+      "page": 143,
+      "locator": "Section 4 homophony syllabary; rhyme o, onset Ø, tone 24",
+      "note": "Explicit examples 屙屎/屙尿 support the paired sense; only the cited syllable is selected."
+    },
+    {
+      "id": "yang2016-tonggu-that",
+      "han": "嗰",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "那",
+      "english": "that",
+      "sourceOnset": "k",
+      "sourceRhyme": "ai",
+      "sourceConventionalPitch": "31",
+      "ipa": "[kai³¹]",
+      "page": 143,
+      "locator": "Section 4 homophony syllabary; rhyme ai, onset k, tone 31",
+      "note": ""
+    },
+    {
+      "id": "yang2016-tonggu-carry",
+      "han": "荷",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "挑",
+      "english": "carry a load",
+      "sourceOnset": "kʰ",
+      "sourceRhyme": "ai",
+      "sourceConventionalPitch": "24",
+      "ipa": "[kʰai²⁴]",
+      "page": 143,
+      "locator": "Section 4 homophony syllabary; rhyme ai, onset kʰ, tone 24",
+      "note": "Source gloss 挑, not every sense of Mandarin 荷. Historical form remains author’s supplied writing."
+    },
+    {
+      "id": "yang2016-tonggu-look",
+      "han": "覒",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "看",
+      "english": "look",
+      "sourceOnset": "m",
+      "sourceRhyme": "au",
+      "sourceConventionalPitch": "44",
+      "ipa": "[mau⁴⁴]",
+      "page": 145,
+      "locator": "Section 4 homophony syllabary; rhyme au, onset m, tone 44",
+      "note": "The author supplies 覒; retain his lexical interpretation rather than narrowing it to historical sideways looking."
+    },
+    {
+      "id": "yang2016-tonggu-dry",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "干，不湿",
+      "english": "dry; not wet",
+      "sourceOnset": "ts",
+      "sourceRhyme": "au",
+      "sourceConventionalPitch": "24",
+      "ipa": "[tsau²⁴]",
+      "page": 145,
+      "locator": "Section 4 homophony syllabary; rhyme au, onset ts, tone 24",
+      "note": "Source writing is □."
+    },
+    {
+      "id": "yang2016-tonggu-jump",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "sourceChineseGloss": "跳",
+      "english": "jump",
+      "sourceOnset": "p",
+      "sourceRhyme": "iau",
+      "sourceConventionalPitch": "24",
+      "ipa": "[piau²⁴]",
+      "page": 145,
+      "locator": "Section 4 homophony syllabary; rhyme iau, onset p, tone 24",
+      "note": "Source writing is □. A proposed 猋 etymology is tentative, so do not supply it as confirmed writing."
+    },
+    {
+      "id": "yang2016-tonggu-play",
+      "han": "嫽",
+      "writingStatus": "attested",
+      "sourceChineseGloss": "玩",
+      "english": "play",
+      "sourceOnset": "l",
+      "sourceRhyme": "iau",
+      "sourceConventionalPitch": "44",
+      "ipa": "[liau⁴⁴]",
+      "page": 145,
+      "locator": "Section 4 homophony syllabary; rhyme iau, onset l, tone 44",
+      "note": "Author supplies 嫽 with the gloss 玩. Independent visual review distinguishes this tone44 entry from separate 撩 in the tone24 row."
+    }
+  ],
+  "held": [
+    {
+      "item": "Syllabary compound-context entries such as sister, grandmother, spider and son",
+      "reason": "Do not synthesize complete compounds or their sandhi from independently listed syllables."
+    },
+    {
+      "item": "𠭯 grab",
+      "reason": "Rare-character extraction duplicates the glyph; hold until codepoint and visual form independently confirmed."
+    },
+    {
+      "item": "All unglossed Han readings",
+      "reason": "Do not turn a homophony character inventory into invented lexical meanings."
+    },
+    {
+      "item": "Table2 connected speech",
+      "reason": "Explicit sandhi examples remain useful but require separate exact tone-letter review; do not mix with citation pronunciations."
+    },
+    {
+      "item": "Retroflex/apical vowel glossary entries",
+      "reason": "Not needed for this initial sample; require careful font normalization independently."
+    }
+  ],
+  "geography": {
+    "name": "Yongning town",
+    "wikidata": "Q11131540",
+    "coordinates": [
+      114.37778,
+      28.52819
+    ],
+    "url": "https://www.wikidata.org/wiki/Q11131540",
+    "cache": ".evidence/hakka-empty-next/yongning-wikidata.json",
+    "scope": "Approximate town reference anchor; village and recording-school coordinates are not supplied. Wikidata P625 has no separate underlying reference.",
+    "cacheSha256": "7a5b97cba12a6e23448ebcde959a34a3846f3607e2c031ba62f4ba665e5c191c"
+  },
+  "cultureSources": [
+    {
+      "title": "Jiangxi Daily · Xihu village reading-room activities ·13 August2025",
+      "url": "https://jxrb.jxwmw.cn/system/2025/08/13/020956280.shtml",
+      "scope": "The Xihu rural reading-room sentence only; other places in the article not transferred."
+    },
+    {
+      "title": "Jiangxi Civilization Practice · Family video calls in Xihu ·23 July2021",
+      "url": "https://pyhzy.jxnews.com.cn/volunteer/content.php?id=11372",
+      "scope": "Tonggu section, Xihu Gaoping and Hengling hamlets; distinct from the linguistic consultant’s Guancang hamlet."
+    }
+  ],
+  "review": {
+    "file": ".evidence/hakka-empty-next/tonggu-independent-depth-review.json",
+    "candidateSha256": "24fc21bd6bfe7e95441e30630d8646f460bcbf90a1e215280020bccdc9e94218",
+    "scope": "All20 literal forms/glosses reviewed, corrected play Han 嫽 rather than separate tone24 撩. No phonetic correction or tone inference.",
+    "result": "All20 exact IPA/gloss/Han joins passed after correcting play to嫽; no sourcephonetics changed."
+  },
+  "classificationSource": {
+    "title": "Jing Liwen · Second-edition Language Atlas county tabulation ·2025",
+    "url": "https://doi.org/10.5281/zenodo.15897647",
+    "license": "CC BY4.0",
+    "cache": ".evidence/atlas-1000/jing-county.csv",
+    "sha256": "96efa992fbf5ac435848270e84549ddffc109f8c446202d502a6706a7c449d8e",
+    "lines": [
+      2250,
+      2251,
+      2252
+    ],
+    "note": "Line2250 Gan/Yiliu;2251–2252 Hakka/Tonggui. Duplicate Hakka lines are one classification, not independent attestations. This is a derivative county tabulation with2023 administrative references, not an official digital Atlas."
+  }
+}

@@ -621,6 +621,806 @@
         "title": "Wai-Sum Lee and Eric Zee: Standard Chinese (Beijing), 2003, pp. 109–110",
         "url": "https://doi.org/10.1017/S0025100303001208"
       }
+    },
+    {
+      "han": "米",
+      "meaning": "rice",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-139_rice-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12026"
+      }
+    },
+    {
+      "han": "喝",
+      "meaning": "drink",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-506_drink-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4166"
+      }
+    },
+    {
+      "han": "茶",
+      "meaning": "tea",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-214_tea-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L14973"
+      }
+    },
+    {
+      "han": "雞子",
+      "meaning": "egg",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-204_egg-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4540"
+      }
+    },
+    {
+      "han": "面條",
+      "meaning": "noodles",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-194_noodles-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10040"
+      }
+    },
+    {
+      "han": "靑菜",
+      "meaning": "vegetable",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-153_vegetable-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16751"
+      }
+    },
+    {
+      "han": "香蕉",
+      "meaning": "banana",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-178_banana-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L901"
+      }
+    },
+    {
+      "han": "梨",
+      "meaning": "pear",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-167_pear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10540"
+      }
+    },
+    {
+      "han": "桃",
+      "meaning": "peach",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-166_peach-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10484"
+      }
+    },
+    {
+      "han": "貓",
+      "meaning": "cat",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-92_cat-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2278"
+      }
+    },
+    {
+      "han": "咀",
+      "meaning": "mouth",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-387_mouth-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9614"
+      }
+    },
+    {
+      "han": "星",
+      "meaning": "star",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-3_star-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13866"
+      }
+    },
+    {
+      "han": "下雨",
+      "meaning": "rain",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-492_rain-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11767"
+      }
+    },
+    {
+      "han": "雨",
+      "meaning": "rain",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-5_rain-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11787"
+      }
+    },
+    {
+      "han": "風",
+      "meaning": "wind",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-4_wind-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17544"
+      }
+    },
+    {
+      "han": "雪",
+      "meaning": "snow",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-9_snow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13393"
+      }
+    },
+    {
+      "han": "床",
+      "meaning": "bed",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-271_bed-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1015"
+      }
+    },
+    {
+      "han": "勺",
+      "meaning": "spoon",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-282_spoon-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13710"
+      }
+    },
+    {
+      "han": "今",
+      "meaning": "today",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-29_today-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16048"
+      }
+    },
+    {
+      "han": "明",
+      "meaning": "tomorrow",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-30_tomorrow-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16134"
+      }
+    },
+    {
+      "han": "昨",
+      "meaning": "yesterday",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-33_yesterday-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17902"
+      }
+    },
+    {
+      "han": "好",
+      "meaning": "good",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-750_good-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6270"
+      }
+    },
+    {
+      "han": "壞",
+      "meaning": "bad",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-751_bad-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L763"
+      }
+    },
+    {
+      "han": "大",
+      "meaning": "big",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-691_big-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1182"
+      }
+    },
+    {
+      "han": "小",
+      "meaning": "small",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-692_small-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13257"
+      }
+    },
+    {
+      "han": "長",
+      "meaning": "long",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-696_long-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8601"
+      }
+    },
+    {
+      "han": "矮",
+      "meaning": "short",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-695_short-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12830"
+      }
+    },
+    {
+      "han": "短",
+      "meaning": "short",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-697_short-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12812"
+      }
+    },
+    {
+      "han": "熱",
+      "meaning": "hot",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-757_hot-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7235"
+      }
+    },
+    {
+      "han": "冷",
+      "meaning": "cold",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-758_cold-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2955"
+      }
+    },
+    {
+      "han": "老",
+      "meaning": "old",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-732_old-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10217"
+      }
+    },
+    {
+      "han": "黑",
+      "meaning": "black",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-722_black-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1218"
+      }
+    },
+    {
+      "han": "跑",
+      "meaning": "run",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-568_run-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12356"
+      }
+    },
+    {
+      "han": "睡覺",
+      "meaning": "sleep",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-650_sleep-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13197"
+      }
+    },
+    {
+      "han": "聽",
+      "meaning": "hear",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-503_hear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6839"
+      }
+    },
+    {
+      "han": "說",
+      "meaning": "speak",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-610_speak-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13630"
+      }
+    },
+    {
+      "han": "露水",
+      "meaning": "dew",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-7_dew-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3850"
+      }
+    },
+    {
+      "han": "冰",
+      "meaning": "ice",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-10_ice-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7417"
+      }
+    },
+    {
+      "han": "閃",
+      "meaning": "lightning",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-12_lightning-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8430"
+      }
+    },
+    {
+      "han": "虹",
+      "meaning": "rainbow",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-14_rainbow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11807"
+      }
+    },
+    {
+      "han": "晴天",
+      "meaning": "sunny day",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-16_sunnyday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L14554"
+      }
+    },
+    {
+      "han": "陰天",
+      "meaning": "cloudy day",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-17_cloudyday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2879"
+      }
+    },
+    {
+      "han": "海",
+      "meaning": "sea, ocean",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-18_seaocean-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12574"
+      }
+    },
+    {
+      "han": "湖",
+      "meaning": "lake",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-19_lake-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8080"
+      }
+    },
+    {
+      "han": "風景",
+      "meaning": "landscape",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-21_landscape-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8117"
+      }
+    },
+    {
+      "han": "後",
+      "meaning": "the day after tomorrow",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-31_thedayaftertomorrow-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15143"
+      }
+    },
+    {
+      "han": "大後",
+      "meaning": "three days from now",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-32_threedaysfromnow-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15708"
+      }
+    },
+    {
+      "han": "前",
+      "meaning": "the day before yesterday",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-34_thedaybeforeyesterday-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15162"
+      }
+    },
+    {
+      "han": "大前",
+      "meaning": "three days before",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-35_threedaysbefore-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15689"
+      }
+    },
+    {
+      "han": "擦黑",
+      "meaning": "at dusk (nightfall)",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-42_atdusknightfall-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L553"
+      }
+    },
+    {
+      "han": "大年初一",
+      "meaning": "new year",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-44_newyear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9944"
+      }
+    },
+    {
+      "han": "中秋",
+      "meaning": "the Mid-autumn Festival (15th day of the 8th lunar month)",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-46_themidautumnfestival15thdayofthe8thlunarmonth-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15114"
+      }
+    },
+    {
+      "han": "重陽",
+      "meaning": "the Double-Nine Festival",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-47_thedoubleninefestival-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15069"
+      }
+    },
+    {
+      "han": "銅",
+      "meaning": "copper",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-51_copper-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3206"
+      }
+    },
+    {
+      "han": "鉄",
+      "meaning": "iron",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-52_iron-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7704"
+      }
+    },
+    {
+      "han": "銅",
+      "meaning": "steel",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-53_steel-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13995"
+      }
+    },
+    {
+      "han": "鉛",
+      "meaning": "lead",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-54_lead-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8202"
+      }
+    },
+    {
+      "han": "錫",
+      "meaning": "tin",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-55_tin-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15947"
+      }
+    },
+    {
+      "han": "煤",
+      "meaning": "coal",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-56_coal-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2897"
+      }
+    },
+    {
+      "han": "煤油",
+      "meaning": "kerosine",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-57_kerosine-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7869"
+      }
+    },
+    {
+      "han": "汽油",
+      "meaning": "petrol",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-58_petrol-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10669"
+      }
+    },
+    {
+      "han": "泥",
+      "meaning": "mud, earth",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-60_mudearth-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9632"
+      }
+    },
+    {
+      "han": "土",
+      "meaning": "dust",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-62_dust-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4306"
+      }
+    },
+    {
+      "han": "狼",
+      "meaning": "wolf",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-66_wolf-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17645"
+      }
+    },
+    {
+      "han": "鹿",
+      "meaning": "deer",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-67_deer-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3776"
+      }
+    },
+    {
+      "han": "猴",
+      "meaning": "monkey",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-68_monkey-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9396"
+      }
+    },
+    {
+      "han": "兔",
+      "meaning": "rabbit, hare",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-69_rabbithare-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11728"
+      }
+    },
+    {
+      "han": "大雁",
+      "meaning": "wild goose",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-73_wildgoose-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17507"
+      }
+    },
+    {
+      "han": "家雀",
+      "meaning": "sparrow",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-77_sparrow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13608"
+      }
+    },
+    {
+      "han": "公牛",
+      "meaning": "bull",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-81_bull-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1828"
+      }
+    },
+    {
+      "han": "公馬",
+      "meaning": "stallion",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-83_stallion-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13806"
+      }
+    },
+    {
+      "han": "公豬",
+      "meaning": "male pig",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-85_malepig-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8925"
+      }
+    },
+    {
+      "han": "公狗",
+      "meaning": "male dog",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-87_maledog-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8904"
+      }
+    },
+    {
+      "han": "驢",
+      "meaning": "donkey, ass",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-89_donkeyass-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4030"
+      }
+    },
+    {
+      "han": "羊",
+      "meaning": "sheep, goat",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-91_sheepgoat-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12738"
+      }
+    },
+    {
+      "han": "公雞",
+      "meaning": "rooster (cock)",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-93_roostercock-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12235"
+      }
+    },
+    {
+      "han": "騸雞",
+      "meaning": "capon",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-94_capon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2156"
+      }
+    },
+    {
+      "han": "鵝",
+      "meaning": "goose",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-98_goose-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6358"
+      }
+    },
+    {
+      "han": "鯽魚",
+      "meaning": "crucian carp",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-100_cruciancarp-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3465"
+      }
+    },
+    {
+      "han": "蝦",
+      "meaning": "shrimp",
+      "scope": "Beijing · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Beijing-103_shrimp-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12928"
+      }
     }
   ],
   "shanghai": [
@@ -939,7 +1739,7 @@
     {
       "han": "三",
       "meaning": "three",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -949,7 +1749,7 @@
     {
       "han": "心",
       "meaning": "heart",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -959,7 +1759,7 @@
     {
       "han": "山",
       "meaning": "hill",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -969,7 +1769,7 @@
     {
       "han": "新",
       "meaning": "new",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -979,7 +1779,7 @@
     {
       "han": "星",
       "meaning": "star",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -989,7 +1789,7 @@
     {
       "han": "風",
       "meaning": "wind",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -999,7 +1799,7 @@
     {
       "han": "葉",
       "meaning": "leaf",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -1009,7 +1809,7 @@
     {
       "han": "十",
       "meaning": "ten",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -1019,7 +1819,7 @@
     {
       "han": "八",
       "meaning": "eight",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -1029,7 +1829,7 @@
     {
       "han": "一",
       "meaning": "one",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -1039,7 +1839,7 @@
     {
       "han": "食",
       "meaning": "eat",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
@@ -1049,11 +1849,811 @@
     {
       "han": "六",
       "meaning": "six",
-      "scope": "Guangzhou comparative word table",
+      "scope": "Canton comparative word table",
       "note": "The table explicitly labels this column Guangzhou and credits the Sino-Tibetan Cognates Database. Its vowel symbols, unmarked length and pitch values are retained; this is not the paper’s Hong Kong speaker sample. Han characters identify the table’s glossed items.",
       "source": {
         "title": "Picus Sizhi Ding: Phonological change in Hong Kong Cantonese, 2010, Table 5, p. 206 — Guangzhou column",
         "url": "https://www.abdn.ac.uk/media/site/llmvc/documents/Ding-Phonological-change-in-Hong-Kong-Cantonese.pdf#page=9"
+      }
+    },
+    {
+      "han": "米",
+      "meaning": "rice",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-139_rice-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12039"
+      }
+    },
+    {
+      "han": "食",
+      "meaning": "eat",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-505_eat-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4534"
+      }
+    },
+    {
+      "han": "飲",
+      "meaning": "drink",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-506_drink-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4183"
+      }
+    },
+    {
+      "han": "茶",
+      "meaning": "tea",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-214_tea-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L14985"
+      }
+    },
+    {
+      "han": "雞春",
+      "meaning": "egg",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-204_egg-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4555"
+      }
+    },
+    {
+      "han": "面",
+      "meaning": "noodles",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-194_noodles-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10053"
+      }
+    },
+    {
+      "han": "菜",
+      "meaning": "vegetable",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-153_vegetable-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16764"
+      }
+    },
+    {
+      "han": "生果",
+      "meaning": "fruit",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-165_fruit-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L5864"
+      }
+    },
+    {
+      "han": "香蕉",
+      "meaning": "banana",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-178_banana-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L914"
+      }
+    },
+    {
+      "han": "葡萄",
+      "meaning": "grape",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-171_grape-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6476"
+      }
+    },
+    {
+      "han": "貓",
+      "meaning": "cat",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-92_cat-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2294"
+      }
+    },
+    {
+      "han": "牛乸",
+      "meaning": "cow",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-82_cow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3361"
+      }
+    },
+    {
+      "han": "鴨",
+      "meaning": "duck",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-97_duck-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4257"
+      }
+    },
+    {
+      "han": "頭殼",
+      "meaning": "head",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-381_head-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6834"
+      }
+    },
+    {
+      "han": "眼",
+      "meaning": "eye",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-384_eye-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4741"
+      }
+    },
+    {
+      "han": "鼻哥",
+      "meaning": "nose",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-385_nose-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10090"
+      }
+    },
+    {
+      "han": "咀",
+      "meaning": "mouth",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-387_mouth-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9627"
+      }
+    },
+    {
+      "han": "月光",
+      "meaning": "moon",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-2_moon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9428"
+      }
+    },
+    {
+      "han": "星",
+      "meaning": "star",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-3_star-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13879"
+      }
+    },
+    {
+      "han": "落雨",
+      "meaning": "rain",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-492_rain-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11781"
+      }
+    },
+    {
+      "han": "雨",
+      "meaning": "rain",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-5_rain-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11801"
+      }
+    },
+    {
+      "han": "風",
+      "meaning": "wind",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-4_wind-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17557"
+      }
+    },
+    {
+      "han": "雪",
+      "meaning": "snow",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-9_snow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13406"
+      }
+    },
+    {
+      "han": "椅",
+      "meaning": "chair",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-263_chair-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2479"
+      }
+    },
+    {
+      "han": "床",
+      "meaning": "bed",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-271_bed-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1028"
+      }
+    },
+    {
+      "han": "筷子",
+      "meaning": "chopsticks",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-281_chopsticks-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2704"
+      }
+    },
+    {
+      "han": "匙羹",
+      "meaning": "spoon",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-282_spoon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13727"
+      }
+    },
+    {
+      "han": "衫褲",
+      "meaning": "clothes",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-219_clothes-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2874"
+      }
+    },
+    {
+      "han": "梘",
+      "meaning": "soap",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-305_soap-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13428"
+      }
+    },
+    {
+      "han": "今日",
+      "meaning": "today",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-29_today-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16061"
+      }
+    },
+    {
+      "han": "聽日",
+      "meaning": "tomorrow",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-30_tomorrow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16150"
+      }
+    },
+    {
+      "han": "琴日",
+      "meaning": "yesterday",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-33_yesterday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17916"
+      }
+    },
+    {
+      "han": "日子",
+      "meaning": "day",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-28_day-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3733"
+      }
+    },
+    {
+      "han": "朝早",
+      "meaning": "morning",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-38_morning-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9472"
+      }
+    },
+    {
+      "han": "好",
+      "meaning": "good",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-750_good-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6288"
+      }
+    },
+    {
+      "han": "壞",
+      "meaning": "bad",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-751_bad-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L780"
+      }
+    },
+    {
+      "han": "大",
+      "meaning": "big",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-691_big-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1194"
+      }
+    },
+    {
+      "han": "細",
+      "meaning": "small",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-692_small-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13272"
+      }
+    },
+    {
+      "han": "長",
+      "meaning": "long",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-696_long-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8618"
+      }
+    },
+    {
+      "han": "矮",
+      "meaning": "short",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-695_short-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12844"
+      }
+    },
+    {
+      "han": "短",
+      "meaning": "short",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-697_short-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12825"
+      }
+    },
+    {
+      "han": "熱",
+      "meaning": "hot",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-757_hot-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7249"
+      }
+    },
+    {
+      "han": "冷",
+      "meaning": "cold",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-758_cold-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2968"
+      }
+    },
+    {
+      "han": "老",
+      "meaning": "old",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-732_old-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10230"
+      }
+    },
+    {
+      "han": "黑",
+      "meaning": "black",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-722_black-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1232"
+      }
+    },
+    {
+      "han": "走",
+      "meaning": "run",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-568_run-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12371"
+      }
+    },
+    {
+      "han": "瞓覺",
+      "meaning": "sleep",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-650_sleep-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13211"
+      }
+    },
+    {
+      "han": "聽",
+      "meaning": "hear",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-503_hear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6852"
+      }
+    },
+    {
+      "han": "知",
+      "meaning": "know",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-672_know-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8053"
+      }
+    },
+    {
+      "han": "講",
+      "meaning": "speak",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-610_speak-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13645"
+      }
+    },
+    {
+      "han": "霧",
+      "meaning": "fog",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-6_fog-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L5500"
+      }
+    },
+    {
+      "han": "露水",
+      "meaning": "dew",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-7_dew-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3863"
+      }
+    },
+    {
+      "han": "雪",
+      "meaning": "ice",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-10_ice-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7430"
+      }
+    },
+    {
+      "han": "雹",
+      "meaning": "hail",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-11_hail-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6528"
+      }
+    },
+    {
+      "han": "閃電",
+      "meaning": "lightning",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-12_lightning-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8439"
+      }
+    },
+    {
+      "han": "雷",
+      "meaning": "thunder",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-13_thunder-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15809"
+      }
+    },
+    {
+      "han": "虹",
+      "meaning": "rainbow",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-14_rainbow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11820"
+      }
+    },
+    {
+      "han": "天時",
+      "meaning": "weather",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-15_weather-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17209"
+      }
+    },
+    {
+      "han": "晴天",
+      "meaning": "sunny day",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-16_sunnyday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L14561"
+      }
+    },
+    {
+      "han": "陰天",
+      "meaning": "cloudy day",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-17_cloudyday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2886"
+      }
+    },
+    {
+      "han": "海",
+      "meaning": "sea, ocean",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-18_seaocean-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12587"
+      }
+    },
+    {
+      "han": "湖",
+      "meaning": "lake",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-19_lake-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8093"
+      }
+    },
+    {
+      "han": "塘",
+      "meaning": "pond",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-20_pond-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11252"
+      }
+    },
+    {
+      "han": "景致",
+      "meaning": "landscape",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-21_landscape-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8136"
+      }
+    },
+    {
+      "han": "時",
+      "meaning": "time, season",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-22_timeseason-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15942"
+      }
+    },
+    {
+      "han": "後日",
+      "meaning": "the day after tomorrow",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-31_thedayaftertomorrow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15156"
+      }
+    },
+    {
+      "han": "大後日",
+      "meaning": "three days from now",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-32_threedaysfromnow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15721"
+      }
+    },
+    {
+      "han": "前日",
+      "meaning": "the day before yesterday",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-34_thedaybeforeyesterday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15175"
+      }
+    },
+    {
+      "han": "大前天",
+      "meaning": "three days before",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-35_threedaysbefore-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15702"
+      }
+    },
+    {
+      "han": "夜晚黑",
+      "meaning": "night (opposed to day)",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-37_nightopposedtoday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10035"
+      }
+    },
+    {
+      "han": "上晝",
+      "meaning": "forenoon",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-39_forenoon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L5603"
+      }
+    },
+    {
+      "han": "晏晝",
+      "meaning": "noon",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-40_noon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10072"
+      }
+    },
+    {
+      "han": "下晝",
+      "meaning": "afternoon",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-41_afternoon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L191"
+      }
+    },
+    {
+      "han": "齊黑",
+      "meaning": "at dusk (nightfall)",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-42_atdusknightfall-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L567"
+      }
+    },
+    {
+      "han": "晚頭",
+      "meaning": "evening",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-43_evening-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4703"
+      }
+    },
+    {
+      "han": "年初一",
+      "meaning": "new year",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-44_newyear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9958"
+      }
+    },
+    {
+      "han": "中秋節",
+      "meaning": "the Mid-autumn Festival (15th day of the 8th lunar month)",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-46_themidautumnfestival15thdayofthe8thlunarmonth-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15134"
+      }
+    },
+    {
+      "han": "九月九",
+      "meaning": "the Double-Nine Festival",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-47_thedoubleninefestival-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15068"
+      }
+    },
+    {
+      "han": "年三十晚",
+      "meaning": "Chinese New Year's Eve",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-48_chinesenewyearseve-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L19"
+      }
+    },
+    {
+      "han": "金",
+      "meaning": "gold",
+      "scope": "Canton · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Guangzhou-49_gold-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6265"
       }
     }
   ],
@@ -1446,6 +3046,806 @@
       "source": {
         "title": "Cheung: Vowels and tones in Meixian Hakka, Table 2.1, p. 19",
         "url": "https://lbms03.cityu.edu.hk/theses/c_ftt/phd-ctl-b40860632f.pdf#page=36"
+      }
+    },
+    {
+      "han": "米",
+      "meaning": "rice",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-139_rice-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12038"
+      }
+    },
+    {
+      "han": "食",
+      "meaning": "eat",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-505_eat-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4533"
+      }
+    },
+    {
+      "han": "食",
+      "meaning": "drink",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-506_drink-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4182"
+      }
+    },
+    {
+      "han": "茶",
+      "meaning": "tea",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-214_tea-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L14984"
+      }
+    },
+    {
+      "han": "雞卵",
+      "meaning": "egg",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-204_egg-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4553"
+      }
+    },
+    {
+      "han": "面",
+      "meaning": "noodles",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-194_noodles-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10052"
+      }
+    },
+    {
+      "han": "靑菜",
+      "meaning": "vegetable",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-153_vegetable-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16763"
+      }
+    },
+    {
+      "han": "荷蘭薯",
+      "meaning": "potato",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-152_potato-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11446"
+      }
+    },
+    {
+      "han": "番茄",
+      "meaning": "tomato",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-160_tomato-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16120"
+      }
+    },
+    {
+      "han": "水果",
+      "meaning": "fruit",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-165_fruit-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L5863"
+      }
+    },
+    {
+      "han": "牙蕉",
+      "meaning": "banana",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-178_banana-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L913"
+      }
+    },
+    {
+      "han": "梨",
+      "meaning": "pear",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-167_pear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10547"
+      }
+    },
+    {
+      "han": "葡萄",
+      "meaning": "grape",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-171_grape-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6467"
+      }
+    },
+    {
+      "han": "貓",
+      "meaning": "cat",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-92_cat-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2293"
+      }
+    },
+    {
+      "han": "牛嫲",
+      "meaning": "cow",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-82_cow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3360"
+      }
+    },
+    {
+      "han": "鴨",
+      "meaning": "duck",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-97_duck-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4256"
+      }
+    },
+    {
+      "han": "婦人家",
+      "meaning": "woman",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-402_woman-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17683"
+      }
+    },
+    {
+      "han": "細佬哥",
+      "meaning": "child",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-406_child-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2645"
+      }
+    },
+    {
+      "han": "頭那",
+      "meaning": "head",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-381_head-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6833"
+      }
+    },
+    {
+      "han": "目珠",
+      "meaning": "eye",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-384_eye-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4740"
+      }
+    },
+    {
+      "han": "耳公",
+      "meaning": "ear",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-386_ear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L4419"
+      }
+    },
+    {
+      "han": "鼻公",
+      "meaning": "nose",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-385_nose-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10089"
+      }
+    },
+    {
+      "han": "咀",
+      "meaning": "mouth",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-387_mouth-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9626"
+      }
+    },
+    {
+      "han": "熱頭",
+      "meaning": "sun",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-1_sun-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L14521"
+      }
+    },
+    {
+      "han": "月光",
+      "meaning": "moon",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-2_moon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9427"
+      }
+    },
+    {
+      "han": "星",
+      "meaning": "star",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-3_star-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13878"
+      }
+    },
+    {
+      "han": "落雨",
+      "meaning": "rain",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-492_rain-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11779"
+      }
+    },
+    {
+      "han": "雨",
+      "meaning": "rain",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-5_rain-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11799"
+      }
+    },
+    {
+      "han": "風",
+      "meaning": "wind",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-4_wind-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17556"
+      }
+    },
+    {
+      "han": "雪",
+      "meaning": "snow",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-9_snow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13405"
+      }
+    },
+    {
+      "han": "窗",
+      "meaning": "window",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-252_window-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17573"
+      }
+    },
+    {
+      "han": "床",
+      "meaning": "bed",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-271_bed-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1027"
+      }
+    },
+    {
+      "han": "箸",
+      "meaning": "chopsticks",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-281_chopsticks-2 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2703"
+      }
+    },
+    {
+      "han": "湯匙",
+      "meaning": "spoon",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-282_spoon-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13726"
+      }
+    },
+    {
+      "han": "衫褲",
+      "meaning": "clothes",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-219_clothes-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2873"
+      }
+    },
+    {
+      "han": "番梘",
+      "meaning": "soap",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-305_soap-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13427"
+      }
+    },
+    {
+      "han": "今哺日",
+      "meaning": "today",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-29_today-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16060"
+      }
+    },
+    {
+      "han": "天光日",
+      "meaning": "tomorrow",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-30_tomorrow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L16148"
+      }
+    },
+    {
+      "han": "昨晡日",
+      "meaning": "yesterday",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-33_yesterday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17914"
+      }
+    },
+    {
+      "han": "朝晨頭",
+      "meaning": "morning",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-38_morning-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9471"
+      }
+    },
+    {
+      "han": "好",
+      "meaning": "good",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-750_good-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6286"
+      }
+    },
+    {
+      "han": "壞",
+      "meaning": "bad",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-751_bad-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L779"
+      }
+    },
+    {
+      "han": "大",
+      "meaning": "big",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-691_big-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1193"
+      }
+    },
+    {
+      "han": "細",
+      "meaning": "small",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-692_small-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13271"
+      }
+    },
+    {
+      "han": "長",
+      "meaning": "long",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-696_long-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8613"
+      }
+    },
+    {
+      "han": "矮",
+      "meaning": "short",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-695_short-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12843"
+      }
+    },
+    {
+      "han": "短",
+      "meaning": "short",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-697_short-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12824"
+      }
+    },
+    {
+      "han": "熱",
+      "meaning": "hot",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-757_hot-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7247"
+      }
+    },
+    {
+      "han": "冷",
+      "meaning": "cold",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-758_cold-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2967"
+      }
+    },
+    {
+      "han": "老",
+      "meaning": "old",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-732_old-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L10229"
+      }
+    },
+    {
+      "han": "烏",
+      "meaning": "black",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-722_black-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L1231"
+      }
+    },
+    {
+      "han": "走",
+      "meaning": "run",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-568_run-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12370"
+      }
+    },
+    {
+      "han": "睡目",
+      "meaning": "sleep",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-650_sleep-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13210"
+      }
+    },
+    {
+      "han": "聽",
+      "meaning": "hear",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-503_hear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L6851"
+      }
+    },
+    {
+      "han": "知得",
+      "meaning": "know",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-672_know-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8052"
+      }
+    },
+    {
+      "han": "講",
+      "meaning": "speak",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-610_speak-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L13643"
+      }
+    },
+    {
+      "han": "霧",
+      "meaning": "fog",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-6_fog-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L5499"
+      }
+    },
+    {
+      "han": "露水",
+      "meaning": "dew",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-7_dew-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3862"
+      }
+    },
+    {
+      "han": "霜",
+      "meaning": "frost",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-8_frost-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L5845"
+      }
+    },
+    {
+      "han": "雪",
+      "meaning": "ice",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-10_ice-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L7429"
+      }
+    },
+    {
+      "han": "囗囗",
+      "meaning": "lightning",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-12_lightning-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8447"
+      }
+    },
+    {
+      "han": "雷",
+      "meaning": "thunder",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-13_thunder-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15808"
+      }
+    },
+    {
+      "han": "虹",
+      "meaning": "rainbow",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-14_rainbow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11819"
+      }
+    },
+    {
+      "han": "天氣",
+      "meaning": "weather",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-15_weather-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L17208"
+      }
+    },
+    {
+      "han": "晴天",
+      "meaning": "sunny day",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-16_sunnyday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L14560"
+      }
+    },
+    {
+      "han": "陰天",
+      "meaning": "cloudy day",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-17_cloudyday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L2885"
+      }
+    },
+    {
+      "han": "海",
+      "meaning": "sea, ocean",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-18_seaocean-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L12586"
+      }
+    },
+    {
+      "han": "湖",
+      "meaning": "lake",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-19_lake-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8092"
+      }
+    },
+    {
+      "han": "池塘",
+      "meaning": "pond",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-20_pond-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L11251"
+      }
+    },
+    {
+      "han": "風景",
+      "meaning": "landscape",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-21_landscape-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8135"
+      }
+    },
+    {
+      "han": "時侯",
+      "meaning": "time, season",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-22_timeseason-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15941"
+      }
+    },
+    {
+      "han": "今年",
+      "meaning": "this year",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-23_thisyear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15643"
+      }
+    },
+    {
+      "han": "明年",
+      "meaning": "next year",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-24_nextyear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L9998"
+      }
+    },
+    {
+      "han": "後年",
+      "meaning": "the year after next",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-25_theyearafternext-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15193"
+      }
+    },
+    {
+      "han": "舊年",
+      "meaning": "last year",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-26_lastyear-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L8158"
+      }
+    },
+    {
+      "han": "後日",
+      "meaning": "the day after tomorrow",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-31_thedayaftertomorrow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15155"
+      }
+    },
+    {
+      "han": "大後日",
+      "meaning": "three days from now",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-32_threedaysfromnow-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15720"
+      }
+    },
+    {
+      "han": "前日",
+      "meaning": "the day before yesterday",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-34_thedaybeforeyesterday-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15174"
+      }
+    },
+    {
+      "han": "大前日",
+      "meaning": "three days before",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-35_threedaysbefore-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L15701"
+      }
+    },
+    {
+      "han": "日時頭",
+      "meaning": "day (opposed to night)",
+      "scope": "Meixian · 1950s survey · published 1964",
+      "note": "Historical survey attestation, not a claim about every present-day speaker. The CLDF edition’s local character form and IPA are retained. Its editors slightly adjusted the transcription; spaces separate syllables at supplied tone boundaries.",
+      "source": {
+        "title": "Beida 1964 · Meixian-36_dayopposedtonight-1 · CC BY 4.0",
+        "url": "https://github.com/lexibank/beidasinitic/blob/6bb8f57330f3b28c126a633f2c2adc6d01d0f555/cldf/forms.csv#L3716"
       }
     }
   ]

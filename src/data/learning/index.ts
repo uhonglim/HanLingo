@@ -1,3 +1,5 @@
+import { otherSiniticLearning } from "./other-sinitic";
+import { ganXiangLearning } from "./gan-xiang";
 import { minMainlandCulture } from './min-mainland-culture';
 import { minExpandedReadings } from './min-expanded-readings';
 import { minSouthernExpanded } from './min-southern-expanded';
@@ -28,7 +30,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,

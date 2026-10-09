@@ -13,7 +13,7 @@ export type GroupPhoto = {
 
 // Documentary contexts, not claims about the identity or language of pictured people.
 // Photo licenses apply independently of the application code license.
-export const groupPhotos: Record<LanguageId, GroupPhoto> = {
+export const groupPhotos: Partial<Record<LanguageId, GroupPhoto>> & Record<"mandarin" | "min" | "yue" | "hakka" | "wu", GroupPhoto> = {
   mandarin: {
     src: "/images/chengdu-teahouse.webp",
     alt: "Visitors seated around tables beneath a green awning at a park teahouse in Chengdu.",

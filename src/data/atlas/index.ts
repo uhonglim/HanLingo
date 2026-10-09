@@ -1,3 +1,5 @@
+import { atlasOtherSiniticClusters, atlasOtherSiniticLocalities } from "./other-sinitic";
+import { atlasGanXiangClusters, atlasGanXiangLocalities } from "./gan-xiang";
 import { atlasOverseasMinClusters, atlasOverseasMinLocalities } from './min-overseas';
 import { atlasCountyClusters, atlasCountyLocalities } from './county-expansion';
 import { placeLabel, placeNameAliases } from "../language-names";
@@ -5,8 +7,8 @@ import { atlasMandarinClusters, atlasMandarinLocalities } from './mandarin';
 import { atlasMinYueClusters, atlasMinYueLocalities } from './min-yue';
 import { atlasWuHakkaClusters, atlasWuHakkaLocalities } from './wu-hakka';
 export type { AtlasCluster, AtlasLocality, AtlasSource } from './types';
-export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters];
-export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities].map((point) => ({
+export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters, ...atlasGanXiangClusters, ...atlasOtherSiniticClusters];
+export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities, ...atlasGanXiangLocalities, ...atlasOtherSiniticLocalities].map((point) => ({
   ...point,
   name: placeLabel(point),
   aliases: [...new Set([...placeNameAliases(point), ...(point.aliases ?? [])])],

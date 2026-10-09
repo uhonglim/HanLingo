@@ -1,3 +1,4 @@
+import { learningPlaces } from "../data/learning/places";
 import PlaceNameNotes from "./PlaceNameNotes";
 import PlaceName from "./PlaceName";
 import { atlasLocalities, atlasLocalityPath } from "../data/atlas";
@@ -11,7 +12,7 @@ import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, MapPin } from "lucide-react";
-import { languages, letters, mapPoints } from "../data/languages";
+import { languages, letters } from "../data/languages";
 import { placeLabel, clusterLabel, placeNameReference } from "../data/language-names";
 import {
   groupArticles,
@@ -86,14 +87,14 @@ export default function ReferencePage() {
     (point
       ? (getLocalGallery(point.id)[0] ?? minCommunityPhotos[point.id])
       : group && route?.level === "group"
-        ? groupPhotos[group.id]
+        ? (groupPhotos[group.id] ?? learningPlaces.filter(place => place.groupId === group.id).flatMap(place => getLocalGallery(place.id))[0])
         : undefined) ?? learningPhoto;
   const localLetter =
     point && ["xiamen", "guangzhou", "meixian", "shanghai"].includes(point.id)
       ? letters.find((letter) => letter.id === point.groupId)
       : undefined;
   const localPoints = group
-    ? mapPoints.filter(
+    ? learningPlaces.filter(
         (place) =>
           place.groupId === group.id &&
           (!subgroup || place.subgroupId === subgroup.id) &&

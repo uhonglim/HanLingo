@@ -310,7 +310,7 @@ export default function RomanizationPage() {
       </section>
 
       <section className="roman-section" aria-labelledby="roman-groups-title">
-        <h2 id="roman-groups-title">Across five groups</h2>
+        <h2 id="roman-groups-title">Across the atlas</h2>
         <p>
           Local readings, shared rules. Open a source for its speaker, reading
           convention, and context.
@@ -329,6 +329,7 @@ export default function RomanizationPage() {
                 <span lang="zh-Hant">{group.nativeName}</span>
               </header>
               <div className="roman-examples">
+                {!group.examples.length && <p className="roman-note">Local IPA examples are still being documented. <Link to={`/${group.id}`}>Explore the source collection</Link>.</p>}
                 {group.examples.map((word) => (
                   <div className="roman-example" key={word.id}>
                     <Link

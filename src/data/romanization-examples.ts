@@ -20,7 +20,7 @@ export const romanizationReadings = learningPlaces.flatMap((point) =>
     })),
 );
 
-const examples: Record<LanguageId, string[]> = {
+const examples: Partial<Record<LanguageId, string[]>> = {
   mandarin: [
     "beijing-city-ipa-eight",
     "beijing-city-ipa-lie-prone",
@@ -47,10 +47,15 @@ export const romanizationGroups = languages.map((group) => {
   const readings = romanizationReadings.filter(
     (word) => word.groupId === group.id,
   );
+  const everyday = ['water', 'rice', 'tea', 'house', 'person', 'fish'];
+  const fallback = [...new Map([
+    ...everyday.flatMap(meaning => readings.filter(word => word.english.toLowerCase() === meaning && word.spelling)),
+    ...readings.filter(word => word.spelling),
+  ].map(word => [word.id, word])).values()].slice(0, 4);
   return {
     ...group,
     readings,
-    examples: examples[group.id].map((id) => {
+    examples: (examples[group.id] ?? fallback.map(word => word.id.split(":").slice(1).join(":"))).map((id) => {
       const word = readings.find((word) => word.id.endsWith(`:${id}`));
       if (!word) throw new Error(`Missing romanization example: ${id}`);
       return word;

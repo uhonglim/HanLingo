@@ -1,3 +1,4 @@
+import { localWordCanDistract } from "../data/learning/practice";
 import LocalRecordings from '../components/LocalRecordings';
 import PlaceName from "../components/PlaceName";
 import { useState } from "react";
@@ -28,7 +29,7 @@ function Practice({ words }: { words: AttestedWord[] }) {
   const [deck, setDeck] = useState(() =>
     makeQuiz(
       [...new Map(words.map((word) => [word.english, word])).values()],
-      10,
+      10, Math.random, localWordCanDistract,
     ),
   );
   const [round, setRound] = useState(0);
@@ -46,7 +47,7 @@ function Practice({ words }: { words: AttestedWord[] }) {
     setDeck(
       makeQuiz(
         [...new Map(words.map((word) => [word.english, word])).values()],
-        10,
+        10, Math.random, localWordCanDistract,
       ),
     );
     setRound(0);

@@ -39,7 +39,7 @@ function ContextMap({ places, selected }: { places: AtlasLocality[]; selected?: 
     <AtlasMap points={places} selectedGroup={places[0]?.groupId ?? 'all'} selectedPoint={selected?.id ?? null} onSelectPoint={id => {
       const place = findAtlasLocality(id); if (place) navigate(atlasLocalityPath(place));
     }} compact/>
-    <p className="atlas-scope">Markers locate reference places, not dialect boundaries. Open Map to explore all five groups.</p>
+    <p className="atlas-scope">Markers locate reference places, not dialect boundaries. Open Map to explore the whole atlas.</p>
   </section>;
 }
 export function AtlasBranchCards({ groupId }: { groupId: string }) {

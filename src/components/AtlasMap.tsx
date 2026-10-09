@@ -7,7 +7,7 @@ import {
   useState,
 } from "react";
 import type { KeyboardEvent } from "react";
-import { createAtlasMarkerIndex, atlasMarkerFocus } from "./AtlasMap.layout";
+import { createAtlasMarkerIndex, atlasMarkerFocus, nearestAtlasMarker } from "./AtlasMap.layout";
 import { attachAtlasGestures } from "./atlasGestures";
 import { geoGraticule, geoPath } from "d3-geo";
 import { merge, mesh } from "topojson-client";
@@ -58,6 +58,8 @@ const COLORS: Record<string, string> = {
   yue: "#748463",
   hakka: "#92769b",
   wu: "#588785",
+  gan: "#8d5c43", xiang: "#596747", jin: "#766149",
+  hui: "#566b70", pinghua: "#6c7550", tuhua: "#826b75",
 };
 const topology = world as unknown as Topology<{
   countries: GeometryCollection;
@@ -523,7 +525,15 @@ export default function AtlasMap({
                   onFocus={() => setFocusedPointId(point.id)}
                   aria-label={`Explore ${point.displayName}, ${point.readingName && point.readingName !== point.displayName ? `${point.readingName}, ` : ''}${point.nativeName}`}
                   aria-pressed={active}
-                  onClick={() => onSelectPoint(point.id)}
+                  onClick={(event) => {
+                    const matrix = svgRef.current?.getScreenCTM();
+                    const isLabel = (event.target as Element).closest('.atlas-place-label');
+                    if (!event.detail || isLabel || !matrix) return onSelectPoint(point.id);
+                    const position = new DOMPoint(event.clientX, event.clientY).matrixTransform(matrix.inverse());
+                    const selectedId = nearestAtlasMarker(renderedPoints, position.x, position.y, point.id);
+                    markerRefs.current.get(selectedId)?.focus({ preventScroll: true });
+                    onSelectPoint(selectedId);
+                  }}
                   onKeyDown={(event) => selectWithKeyboard(event, point.id)}
                 >
                   <title>{`${point.fullName} · ${point.nativeName}`}</title>

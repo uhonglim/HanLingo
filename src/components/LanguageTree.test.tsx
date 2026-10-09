@@ -105,11 +105,11 @@ describe("persistent language tree", () => {
       }
     }
   });
-  it("exposes five groups at the family root without opening an arbitrary branch", () => {
+  it("exposes all published groups and collections at the family root without opening an arbitrary branch", () => {
     const html = renderTree("/");
     const renderedLinks = links(html);
     const destinations = new Set(renderedLinks.map((link) => link.attrs.href));
-    expect(languages).toHaveLength(5);
+    expect(languages).toHaveLength(11);
     for (const group of languages)
       expect(destinations.has(groupPath(group.id)), group.name).toBe(true);
     expect(destinations.has(subgroupPath("min", "southern-min"))).toBe(false);

@@ -1,3 +1,4 @@
+import { additionalGroupArticles } from "./additional-languages";
 import { expandedBranchArticles, expandedLocalityArticles } from "./expansion";
 import { minSources } from "./min-sources";
 import { chaoshanArticles } from "./chaoshan";
@@ -331,6 +332,7 @@ const S = {
 };
 
 const baseGroupArticles: Record<LanguageId, EncyclopediaEntry> = {
+  ...additionalGroupArticles as Record<LanguageId, EncyclopediaEntry>,
   mandarin: article(
     "Mandarin",
     "A group spanning northern and southwestern China, with regional varieties distinct from Standard Mandarin.",

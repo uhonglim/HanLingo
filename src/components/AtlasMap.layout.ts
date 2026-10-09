@@ -37,3 +37,14 @@ export function atlasMarkerFocus(ids: readonly string[], current: string, key: s
   if (index === -1) return direction === 1 ? ids[0] : ids[ids.length - 1];
   return ids[(index + direction + ids.length) % ids.length];
 }
+
+/** Overlapping generous hit areas select the closest visible dot, not SVG paint order. */
+export function nearestAtlasMarker(points: readonly AtlasMarkerPosition[], x: number, y: number, fallback: string): string {
+  let id = fallback;
+  let distance = Infinity;
+  for (const point of points) {
+    const next = (point.x - x) ** 2 + (point.y - y) ** 2;
+    if (next < distance) { id = point.id; distance = next; }
+  }
+  return id;
+}

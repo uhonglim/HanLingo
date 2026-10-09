@@ -18,7 +18,7 @@
 .thp-introduction { max-width: 290px; padding-bottom: 3px; }
 .thp-introduction p { margin: 0; font-size: 16px; line-height: 1.6; }
 .thp-introduction .thp-coverage { margin-top: 14px; color: var(--thp-muted); font-size: 13px; font-variant-numeric: tabular-nums; }
-.thp-collection { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.thp-collection { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 44px 24px; }
 .thp-group { min-width: 0; }
 .thp-group-photo { display: block; position: relative; height: clamp(210px, 25cqi, 320px); overflow: hidden; border-radius: 3px; background: #e7ebe7; }
 .thp-group-photo::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgb(0 0 0 / .6)); pointer-events: none; }

@@ -1,3 +1,4 @@
+import { otherSiniticGalleries } from "./other-sinitic";
 import { minOverseasGalleries } from './min-overseas';
 import { minMainlandExpandedGalleries } from './min-mainland-expanded';
 import { minBangkokGalleries } from './min-bangkok';
@@ -11,6 +12,7 @@ import { xiamenPhotos } from "../xiamen-photos";
 import type { GalleryPhoto } from "./types";
 
 export const localityGalleries: Record<string, GalleryPhoto[]> = {
+  ...otherSiniticGalleries,
   ...minGalleries,
   ...otherGalleries,
   ...chaoshanGalleries,

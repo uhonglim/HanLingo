@@ -1,12 +1,14 @@
+import { additionalLanguages } from "./additional-languages";
 import { placeLabel, clusterLabel } from "./language-names";
 import { siteTerms } from "./site-terms";
 import { chaoshanPoints } from "./chaoshan";
 import { expandedBranches, expandedPlaces } from "./expansion";
 
-export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu";
+export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu" | "gan" | "xiang" | "jin" | "hui" | "pinghua" | "tuhua";
 
 export interface Language {
   id: LanguageId;
+  collectionKind?: "geographic";
   name: string;
   nativeName: string;
   shortName: string;
@@ -632,7 +634,7 @@ export const mapPoints: MapPoint[] = sourceMapPoints.map((point) => ({
 }));
 
 
-export const languages: Language[] = baseLanguages.map((group) => {
+export const languages: Language[] = [...baseLanguages, ...additionalLanguages].map((group) => {
   const resolvePlace = (label: string) => {
     const point = sourceMapPoints.find((item) => item.groupId === group.id && item.name === label);
     return point ? placeLabel(point) : label;
@@ -655,7 +657,7 @@ export const languages: Language[] = baseLanguages.map((group) => {
 });
 
 export interface Letter {
-  id: LanguageId | "formal";
+  id: "mandarin" | "min" | "yue" | "hakka" | "wu" | "formal";
   label: string;
   nativeName: string;
   place: string;

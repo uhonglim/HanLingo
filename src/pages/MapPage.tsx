@@ -67,7 +67,7 @@ export default function MapPage() {
           {results.length > 20 && <p>First 20 shown. Refine your search to find a locality.</p>}
         </div>}
       </div>
-      <label className="map-page-select"><span className="sr-only">Language group</span><select aria-label="Language group" value={group} onChange={event => update({ group: event.target.value, branch: null, place: null })}><option value="">All five groups</option>{languages.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
+      <label className="map-page-select"><span className="sr-only">Language group</span><select aria-label="Language group" value={group} onChange={event => update({ group: event.target.value, branch: null, place: null })}><option value="">All groups and collections</option>{languages.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
       <label className="map-page-select"><span className="sr-only">Language branch</span><select aria-label="Language branch" value={branch} onChange={event => { const value = event.target.value; update({ branch: value, group: value ? value.split('/')[0] : group, place: null }); }}><option value="">All branches</option>{branches.map(item => <option key={`${item.groupId}/${item.id}`} value={`${item.groupId}/${item.id}`}>{item.name}</option>)}</select></label>
     </div>
     <div className="map-page-frame"><AtlasMap compact={Boolean(group || branch)} points={points} selectedGroup={group || 'all'} selectedPoint={selected?.id ?? null} highlightedPointIds={query.trim() ? results.map(point => point.id) : undefined} onSelectPoint={select}/></div>

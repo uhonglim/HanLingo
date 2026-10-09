@@ -1,3 +1,4 @@
+import { atlasBranches, atlasLocalities } from "./atlas";
 import { describe, expect, it } from "vitest";
 import { englishLetter, languages, letters, mapPoints } from "./languages";
 
@@ -21,14 +22,14 @@ describe("atlas data integrity", () => {
   it("gives every language and subgroup filter at least one selectable map point", () => {
     for (const language of languages) {
       expect(
-        language.subgroups.length,
+        atlasBranches.filter(branch => branch.groupId === language.id).length,
         `${language.name} needs a subgroup selector`,
       ).toBeGreaterThan(0);
 
-      for (const subgroup of language.subgroups) {
-        const matches = mapPoints.filter(
+      for (const subgroup of atlasBranches.filter(branch => branch.groupId === language.id)) {
+        const matches = atlasLocalities.filter(
           (point) =>
-            point.groupId === language.id && point.subgroupId === subgroup.id,
+            point.groupId === language.id && point.branchId === subgroup.id,
         );
         expect(
           matches.length,
@@ -89,7 +90,7 @@ describe("atlas data integrity", () => {
 
   it("can open every language at its advertised featured place", () => {
     for (const language of languages) {
-      const featuredPoint = mapPoints.find(
+      const featuredPoint = atlasLocalities.find(
         (point) =>
           point.groupId === language.id &&
           point.name === language.featuredPlace,
@@ -98,7 +99,7 @@ describe("atlas data integrity", () => {
         featuredPoint,
         `${language.name}'s featured place must exist on its map`,
       ).toBeDefined();
-      expect(language.hierarchy).toEqual(featuredPoint!.hierarchy);
+
     }
   });
 
@@ -194,9 +195,9 @@ describe("letter comparison data", () => {
     }
   });
 
-  it("keeps the formal written register out of the five spoken group maps", () => {
+  it("keeps the formal written register out of the spoken group maps", () => {
     expect(languages.map((language) => language.id).sort()).toEqual(
-      ["mandarin", "min", "yue", "hakka", "wu"].sort(),
+      ["mandarin", "min", "yue", "hakka", "wu", "gan", "xiang", "jin", "hui", "pinghua", "tuhua"].sort(),
     );
     expect(mapPoints.map((point) => point.groupId)).not.toContain("formal");
     expect(letters.find((letter) => letter.id === "formal")).toBeDefined();

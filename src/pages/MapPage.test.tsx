@@ -14,7 +14,7 @@ describe('whole-site map', () => {
     const html = render('/map');
     expect(html.match(/role="button"/g)).toHaveLength(atlasLocalities.length);
     expect(html).toContain(`${atlasLocalities.length} locality references`);
-    expect(html).toContain('All five groups');
+    expect(html).toContain('All groups and collections');
   });
   it('finds familiar names, community names, Chinese names and family aliases', () => {
     const searches: [string, string][] = [['Xiamen', 'xiamen'], ['Amoy', 'xiamen'], ['厦门', 'xiamen'], ['Tsiang-tsiu', 'zhangzhou'], ['Taipei', 'taipak'], ['Penang', 'george-town'], ['Hokkien Amoy', 'xiamen'], ['Quanzhang', 'xiamen']];

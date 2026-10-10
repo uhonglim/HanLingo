@@ -235,6 +235,8 @@
   <url><loc>https://hanlingo.pairup.world/mandarin/southwestern/yunnan/</loc></url>
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/yuxin/yudu-localities/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/linchuan-localities/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/huairou/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/miyun/</loc></url>
@@ -1447,6 +1449,8 @@
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/niujia-laiyuan/</loc></url>
   <url><loc>https://hanlingo.pairup.world/contact/western-fujian/laiyuan/huangzong-laiyuan/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/yuxin/yudu-localities/gongjiang-hakka/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/linchuan-localities/hunan-fuzhou/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/mandarin/beijing/jingcheng/beijing-city/sounds/</loc></url>
@@ -1757,6 +1761,7 @@
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/shangdang/changzhi/changzhi-jin/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/culture/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/wutai/xinzhou-area/xinzhou-jin/practice/</loc></url>
   <url><loc>https://hanlingo.pairup.world/jin/hanxin/cizhang/handan-jin/words/</loc></url>
@@ -1887,4 +1892,10 @@
   <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/words/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/sounds/</loc></url>
   <url><loc>https://hanlingo.pairup.world/hakka/tonggui/yongning-localities/tonggu-xihu/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/yuxin/yudu-localities/gongjiang-hakka/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/yuxin/yudu-localities/gongjiang-hakka/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/hakka/yuxin/yudu-localities/gongjiang-hakka/practice/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/linchuan-localities/hunan-fuzhou/words/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/linchuan-localities/hunan-fuzhou/sounds/</loc></url>
+  <url><loc>https://hanlingo.pairup.world/gan/fuguang/linchuan-localities/hunan-fuzhou/practice/</loc></url>
 </urlset>

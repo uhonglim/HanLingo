@@ -68,6 +68,20 @@ describe('common and local place names', () => {
     expect(notes).toContain('IPA segments + source tone categories');
   });
 
+  it('uses the documented Shaowu original pitch without losing the source variant', () => {
+    const reading = placeNamePronunciations.shaowu;
+    expect(reading.ipa).toBe('ɕiau213 u55');
+    expect(reading.toneNotation).toBe('pitch-contour');
+    expect(placeReadingName({ id: 'shaowu' })).toBe('shiau213 u55');
+    expect(reading.note).toContain('ɕiau213~21u55');
+    expect(reading.note).toContain('tonal free variant');
+    expect(reading.note).toContain('not vowel nasalization');
+    const notes = renderToStaticMarkup(<PlaceNameNotes point={{ id: 'shaowu', name: 'Shaowu' }}/>);
+    expect(notes).toContain('shiau213 u55');
+    expect(notes).toContain('ɕiau213~21u55');
+    expect(notes).toContain('tonal free variant');
+  });
+
   it('keeps comparison display metadata synchronized with the same name resolver', () => {
     for (const target of targetNames) {
       if (!target.localityId) continue;

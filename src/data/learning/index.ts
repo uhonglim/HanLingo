@@ -1,3 +1,4 @@
+import { shaowuNgai2021Learning } from "./shaowu-ngai2021";
 import { ganTongchengReadings } from "./gan-tongcheng-readings";
 import { xinzhouQuestionsLearning } from "./xinzhou-questions";
 import { tongguXihuLearning } from "./tonggu-xihu";
@@ -54,7 +55,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning, ...atlasLexibankDeeperPacks, ...yichunYuanzhouLearning, ...jinComparativeLearning, ...houHangzhouShexianLearning, ...qiyangXiangLearning, ...laiyuanContactLearning, ...wuJinyunWuzhouLearning, ...yingtanGanLearning, ...xinzhouQuestionsLearning, ...tongguXihuLearning, ...ganTongchengReadings, ...gongjiangHakkaLearning, ...ganFuguangHunanLearning]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning, ...atlasLexibankDeeperPacks, ...yichunYuanzhouLearning, ...jinComparativeLearning, ...houHangzhouShexianLearning, ...qiyangXiangLearning, ...laiyuanContactLearning, ...wuJinyunWuzhouLearning, ...yingtanGanLearning, ...xinzhouQuestionsLearning, ...tongguXihuLearning, ...ganTongchengReadings, ...gongjiangHakkaLearning, ...ganFuguangHunanLearning, ...shaowuNgai2021Learning]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,

@@ -1,3 +1,4 @@
+import { gongjiangGalleries } from "./gongjiang";
 import { hangzhouSheGalleries } from "./hangzhou-she";
 import { jinyunYuehuGalleries } from "./jinyun-yuehu";
 import { yichunYuanzhouGalleries } from "./yichun-yuanzhou";
@@ -18,6 +19,7 @@ import { xiamenPhotos } from "../xiamen-photos";
 import type { GalleryPhoto } from "./types";
 
 export const localityGalleries: Record<string, GalleryPhoto[]> = {
+  ...gongjiangGalleries,
   ...xinzhouGalleries,
   ...otherSiniticGalleries,
   ...jinTunxiGalleries,

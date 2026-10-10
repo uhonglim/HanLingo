@@ -4,7 +4,7 @@ import { placeNamePronunciations, placeNameSpelling } from '../data/place-name-p
 export default function PlaceNameNotes({ point }: { point: { id: string; name: string } }) {
   const common = placeNameReference(point), reading = localPlaceReadings[point.id];
   const pronunciation = placeNamePronunciations[point.id];
-  if (!common && !reading) return null;
+  if (!common && !reading && !pronunciation) return null;
   return <div className="place-name-notes">
     {common && <p>{common.note} <a href={common.source.url} target="_blank" rel="noreferrer">{common.source.title}</a></p>}
     {pronunciation && <p><strong>HanLingo spelling: {placeNameSpelling(point.id)}</strong>{' '}·{' '}

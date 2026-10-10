@@ -2,11 +2,11 @@
 
 Generated from the published data models with `npm run audit:content`. Counts describe entries, not a quality score or a claim of complete language coverage. Character readings are distinguished from phrase lessons in their source notes. Photograph counts do not stand in for vocabulary depth.
 
-Inventory: **69 branches · 1214 locality references**. Actual learning coverage: **92 localities with IPA**, **98 with photos**, **7567 IPA entries**, **32 additional source-spelling entries**, **928 gallery placements of 901 distinct image assets**, **0 inline local recordings**, **7 original-publisher listening links**.
+Inventory: **69 branches · 1215 locality references**. Actual learning coverage: **93 localities with IPA**, **99 with photos**, **7587 IPA entries**, **32 additional source-spelling entries**, **937 gallery placements of 910 distinct image assets**, **0 inline local recordings**, **7 original-publisher listening links**.
 
-Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **9 of 1214 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
+Amoy-count benchmark: 59 source readings and 11 photographs, plus at least 2 sound notes, 2 cultural topics and 2 useful source links. **9 of 1215 localities meet these count thresholds.** Counts alone do not establish teaching quality or complete coverage; related-place links never count as local lessons.
 
-IPA evidence comprises **5260 lexical or grammatical entries** and **2307 character readings**. Character readings are excluded from meaning quizzes. **65 lexical entries lack a complete source-supplied written form**; their pronunciation and meaning are retained without invented characters. Source citation-tone inventories: **36** with **196** category/contour pairs; these are not words or recordings.
+IPA evidence comprises **5280 lexical or grammatical entries** and **2307 character readings**. Character readings are excluded from meaning quizzes. **65 lexical entries lack a complete source-supplied written form**; their pronunciation and meaning are retained without invented characters. Source citation-tone inventories: **36** with **196** category/contour pairs; these are not words or recordings.
 
 Of the IPA entries, 114 are displayed as segments only. Their sources either omit tones or print notation without a usable key; the cards preserve that distinction in their reading notes.
 
@@ -44,10 +44,10 @@ Of the IPA entries, 114 are displayed as segments only. Their sources either omi
 | hakka/yuetai | 22 | 239 | 212 | 27 | 239 | 38 | 11 | 8 | 12 |
 | hakka/hailu | 26 | 45 | 45 | 0 | 45 | 18 | 6 | 4 | 5 |
 | hakka/tingzhou | 6 | 0 | 0 | 0 | 0 | 10 | 3 | 2 | 3 |
-| min/shaojiang | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| min/shaojiang | 3 | 20 | 20 | 0 | 20 | 0 | 3 | 2 | 4 |
 | hakka/yuebei | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | hakka/tonggui | 3 | 20 | 20 | 0 | 20 | 0 | 2 | 2 | 3 |
-| hakka/yuxin | 9 | 8 | 8 | 0 | 8 | 0 | 2 | 2 | 3 |
+| hakka/yuxin | 9 | 8 | 8 | 0 | 8 | 9 | 2 | 2 | 3 |
 | hakka/ninglong | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | wu/jinqu | 2 | 20 | 20 | 0 | 20 | 11 | 2 | 2 | 4 |
 | gan/huaiyue | 14 | 106 | 0 | 106 | 106 | 0 | 18 | 18 | 24 |
@@ -1075,6 +1075,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | liancheng-county-350825 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | mingxi-county-350421 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | jiangle-county-350428 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| shaowu | 20 | 0 | 0 | 0 | 3 | 2 | 4 | words, sounds, practice |
 | shixing-county-440222 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | wengyuan-county-440229 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | rucheng-county-431026 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
@@ -1088,7 +1089,7 @@ Source links are counted per locality; a shared dictionary may appear under mult
 | xingguo-county-360732 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | huichang-county-360733 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | ruijin-360781 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
-| gongjiang-hakka | 8 | 0 | 0 | 0 | 2 | 2 | 3 | words, sounds, practice |
+| gongjiang-hakka | 8 | 0 | 0 | 9 | 2 | 2 | 3 | words, culture, sounds, practice |
 | dingnan-county-360728 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | quannan-county-360729 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | ningdu-county-360730 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |

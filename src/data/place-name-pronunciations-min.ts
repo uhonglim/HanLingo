@@ -26,6 +26,14 @@ const amoyPhoneticKey = {
 
 /** Only names supported by both a name attestation and a documented phonetic key. */
 export const minPlaceNamePronunciations: Record<string, PlaceNamePronunciation> = {
+  shaowu: {
+    ipa: 'ɕiau213 u55', toneNotation: 'pitch-contour',
+    source: {
+      title: 'Sing Sing Ngai · A Grammar of Shaowu · 2021 · pp. LI–LII',
+      url: 'https://api.pageplace.de/preview/DT0400.9781501512483_A42566628/preview-9781501512483_A42566628.pdf',
+    },
+    note: 'The source gives 邵武 as ɕiau213~21u55 in an urban Shaowu sentence. This display selects the explicitly printed original first-syllable pitch 213 and separates the two syllables for readability. The source also records 21 as a tonal free variant; its tilde marks that variation, not vowel nasalization. This is a sourced name reading, not a recording or an invariant connected-speech rule.',
+  },
   xiamen: {
     ipa: 'e7 mŋ̍5', toneNotation: 'source-category',
     source: placeReadingsMin.xiamen.source,

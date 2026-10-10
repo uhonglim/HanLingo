@@ -1,3 +1,4 @@
+import { atlasShaowuNgai2021Clusters, atlasShaowuNgai2021Localities } from "./shaowu-ngai2021";
 import { atlasTongguXihuClusters, atlasTongguXihuLocalities } from "./tonggu-xihu";
 import { atlasLaiyuanContactClusters, atlasLaiyuanContactLocalities } from "./laiyuan-contact";
 import { atlasWeiziluLocalities } from "./weizilu";
@@ -19,8 +20,8 @@ import { atlasMandarinClusters, atlasMandarinLocalities } from './mandarin';
 import { atlasMinYueClusters, atlasMinYueLocalities } from './min-yue';
 import { atlasWuHakkaClusters, atlasWuHakkaLocalities } from './wu-hakka';
 export type { AtlasCluster, AtlasLocality, AtlasSource } from './types';
-export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters, ...atlasGanXiangClusters, ...atlasOtherSiniticClusters, ...atlasGanToneClusters, ...atlasOverseasYueClusters, ...atlasLexicalStudyClusters, ...atlasLaiyuanContactClusters, ...atlasTongguXihuClusters, ...atlasGongjiangHakkaClusters, ...atlasGanFuguangHunanClusters];
-export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities, ...atlasGanXiangLocalities, ...atlasOtherSiniticLocalities, ...atlasGanToneLocalities, ...atlasXiangReadingLocalities, ...atlasJiangyongChengguanLocalities, ...atlasGanHuaiyueLocalities, ...atlasHuiWuyuanLocalities, ...atlasOverseasYueLocalities, ...atlasLexicalStudyLocalities, ...atlasYunlouGanLocalities, ...atlasWeiziluLocalities, ...atlasQiyangLocalities, ...atlasLaiyuanContactLocalities, ...atlasTongguXihuLocalities, ...atlasGongjiangHakkaLocalities, ...atlasGanFuguangHunanLocalities].map((point) => ({
+export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters, ...atlasGanXiangClusters, ...atlasOtherSiniticClusters, ...atlasGanToneClusters, ...atlasOverseasYueClusters, ...atlasLexicalStudyClusters, ...atlasLaiyuanContactClusters, ...atlasTongguXihuClusters, ...atlasGongjiangHakkaClusters, ...atlasGanFuguangHunanClusters, ...atlasShaowuNgai2021Clusters];
+export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities, ...atlasGanXiangLocalities, ...atlasOtherSiniticLocalities, ...atlasGanToneLocalities, ...atlasXiangReadingLocalities, ...atlasJiangyongChengguanLocalities, ...atlasGanHuaiyueLocalities, ...atlasHuiWuyuanLocalities, ...atlasOverseasYueLocalities, ...atlasLexicalStudyLocalities, ...atlasYunlouGanLocalities, ...atlasWeiziluLocalities, ...atlasQiyangLocalities, ...atlasLaiyuanContactLocalities, ...atlasTongguXihuLocalities, ...atlasGongjiangHakkaLocalities, ...atlasGanFuguangHunanLocalities, ...atlasShaowuNgai2021Localities].map((point) => ({
   ...point,
   name: placeLabel(point),
   aliases: [...new Set([...placeNameAliases(point), ...(point.aliases ?? [])])],

@@ -1,0 +1,60 @@
+{
+  "sourceCommit": "6bb8f57330f3b28c126a633f2c2adc6d01d0f555",
+  "policy": "Keep original records unchanged for audit. Exclude these six from published lessons, comparisons, practice and translation grounding until primary-page verification resolves the conflict.",
+  "records": [
+    {
+      "id": "beida1964-Fuzhou-49_gold-1",
+      "value": "kim³³",
+      "segments": "k i ŋ ⁴⁴",
+      "han": "金",
+      "sourceLine": 6269,
+      "status": "withheld",
+      "reason": "Unresolved disagreement between the pinned CLDF Value and Segments fields; no preferred pronunciation inferred."
+    },
+    {
+      "id": "beida1964-Guangzhou-47_thedoubleninefestival-1",
+      "value": "jœŋ²¹",
+      "segments": "k ɐu ³⁵ + i/j y t ²² + k ɐu ³⁵",
+      "han": "九 月 九",
+      "sourceLine": 15068,
+      "status": "withheld",
+      "reason": "Unresolved disagreement between the pinned CLDF Value and Segments fields; no preferred pronunciation inferred."
+    },
+    {
+      "id": "beida1964-Guangzhou-48_chinesenewyearseve-1",
+      "value": "kɐu³⁵jyt²²kɐu³⁵nin¹²ʃa⁵³a²²man²³",
+      "segments": "n i n ²² + ʃ a ⁵³ + a ²² + m a n ²³",
+      "han": "年 三 十 晚",
+      "sourceLine": 19,
+      "status": "withheld",
+      "reason": "Unresolved disagreement between the pinned CLDF Value and Segments fields; no preferred pronunciation inferred."
+    },
+    {
+      "id": "beida1964-Jinan-85_malepig-1",
+      "value": "tɕyŋ³¹tʂu²¹³",
+      "segments": "tɕ y ŋ ²¹ + ʈʂ u ²¹³",
+      "han": "囗 豬",
+      "sourceLine": 8926,
+      "status": "withheld",
+      "reason": "Unresolved disagreement between the pinned CLDF Value and Segments fields; no preferred pronunciation inferred."
+    },
+    {
+      "id": "beida1964-XiAn-751_bad-1",
+      "value": "xuæ⁴³",
+      "segments": "x u/w æ ⁴⁵",
+      "han": "壞",
+      "sourceLine": 768,
+      "status": "withheld",
+      "reason": "Unresolved disagreement between the pinned CLDF Value and Segments fields; no preferred pronunciation inferred."
+    },
+    {
+      "id": "beida1964-Yangjiang-38_morning-1",
+      "value": "tʃiu3³tʃou²¹",
+      "segments": "tʃ i/j u ³³ + tʃ ou ²¹",
+      "han": "朝 早",
+      "sourceLine": 9474,
+      "status": "withheld",
+      "reason": "Unresolved disagreement between the pinned CLDF Value and Segments fields; no preferred pronunciation inferred."
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+.regional-differences {
+  margin: 46px 0 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line, #dde2e6);
+}
+.regional-differences > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.regional-differences > header h2 {
+  font-size: 26px !important;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  margin: 0 0 7px !important;
+}
+.regional-differences > header p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+.regional-differences select {
+  font: inherit;
+  font-size: 15px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 25px 12px 0;
+  color: var(--ink);
+  max-width: 230px;
+}
+.regional-differences .regional-note {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 20px 0 24px;
+  max-width: 760px;
+}
+.regional-place-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.regional-place {
+  min-width: 0;
+  border-top: 1px solid var(--line, #dde2e6);
+  padding: 16px 0 8px;
+}
+.regional-place.is-current {
+  border-top: 2px solid var(--accent, #2155f5);
+  padding-top: 15px;
+}
+.regional-differences .regional-place h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+.regional-differences .regional-place h3 a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.regional-differences .regional-han {
+  font-size: 32px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 400;
+}
+.regional-reading + .regional-reading {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.regional-source-spelling {
+  margin: 20px 0 15px;
+}
+.regional-source-spelling > span {
+  font-size: 12px;
+  display: block;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.regional-source-spelling > strong {
+  font-size: 25px;
+  line-height: 1.5;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.regional-reading details {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.regional-reading summary,
+.regional-more > summary {
+  cursor: pointer;
+  padding: 8px 0;
+}
+.regional-reading details p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 8px 0;
+}
+.regional-reading details a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.regional-more {
+  margin-top: 20px;
+  font-size: 13px;
+}
+.regional-more > .regional-place-grid {
+  margin-top: 20px;
+}
+.regional-place .pronunciation {
+  margin-top: 15px;
+}
+.regional-place .pronunciation-ipa {
+  font-size: 24px;
+}
+.regional-place .pronunciation-pitch {
+  max-width: 44px;
+}
+.regional-place .pronunciation-pitch svg {
+  width: 40px;
+  height: 30px;
+}
+.regional-place .pronunciation-spelling {
+  font-size: 16px;
+}
+@media (max-width: 850px) {
+  .regional-place-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .regional-place-grid > .regional-place:first-child {
+    grid-column: 1/-1;
+  }
+  .regional-place:first-child .pronunciation-ipa-row {
+    justify-content: flex-start;
+  }
+  .regional-place:first-child .pronunciation {
+    max-width: 450px;
+  }
+}
+@media (max-width: 500px) {
+  .regional-differences > header {
+    align-items: start;
+    gap: 12px;
+  }
+  .regional-differences select {
+    max-width: 130px;
+    font-size: 14px;
+  }
+  .regional-differences > header h2 {
+    font-size: 23px !important;
+  }
+  .regional-place-grid {
+    gap: 18px;
+  }
+  .regional-place .pronunciation-ipa {
+    font-size: 21px;
+  }
+  .regional-source-spelling > strong {
+    font-size: 22px;
+  }
+  .regional-place .pronunciation-pitch {
+    display: none;
+  }
+}

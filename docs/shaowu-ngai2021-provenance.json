@@ -1,0 +1,280 @@
+{
+  "status": "Bounded 20-entry lexical starter; source forms and transcription key independently reviewed against authorized preview; original pages retained in ignored evidence.",
+  "source": {
+    "author": "Sing Sing Ngai",
+    "year": 2021,
+    "title": "A Grammar of Shaowu: A Sinitic Language of Northwestern Fujian",
+    "url": "https://doi.org/10.1515/9781501512483",
+    "preview": "https://api.pageplace.de/preview/DT0400.9781501512483_A42566628/preview-9781501512483_A42566628.pdf",
+    "sha256": "3b8a5bb12cf2293227719c93848267882bf3e1204998708dbe0a09ee3da810a0",
+    "rights": "Copyright retained. Authorized 74-page retail preview obtained normally; only twenty factual lexical readings proposed, not book/table/prose reproduction or full lexicon import."
+  },
+  "locality": "Urban centre of Shaowu, Fujian, explicitly p.3; not all county townships. Current Shaojiang Min branch node suitable subject to existing catalogue check.",
+  "fieldwork": "Seven visits from December 2009 to August 2019, p.19. Four consultants: Li Jingxin, female, 91; Li Hougong, male, 82; Gao Ying, female, 68 (ages as of 2020); late Wei Yixin, female, early 70s in December 2009. No item-specific speaker/date assignments.",
+  "transcription": "Printed LI explicitly specifies IPA; LII explains superscript tone values and distinguishes free variants (~) from tone changes (>). Page 3 supplies six pitch descriptions: 21, 22, 55, 213, 35, 53. Raised h is encoded as Unicode ʰ. Compound syllable spaces and baseline contour digits are display normalization only.",
+  "holds": [
+    "No neutral 0, tone-change variants or circle-plus-subscript uncertain written forms enter this 20-word selection.",
+    "Ngai p.4 gives 跤 with 21; the earlier study cited on p.12 has 31. These are not merged.",
+    "Standalone 公21 differs from 牛公22; retain the compound’s supplied 22.",
+    "得 is multifunctional and excluded from context-free meaning practice and distractors. 帮, 拿, 了 and 度 retain source lexical-sense qualifications beside their readings.",
+    "The authorized preview ends on printed p.22. No unauthorized full-book copy is used.",
+    "No openly licensed local word recordings were obtained. The reported field recordings are not treated as a playable library.",
+    "The former museum domain fjswbwg.com returned unrelated Android-game content on review; it is excluded. Culture uses the separately hosted primary architectural study and the indexed museum catalogue profile."
+  ],
+  "rows": [
+    {
+      "han": "剪",
+      "ipa": "[tsien55]",
+      "english": "cut",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-cut",
+      "meaningPracticeExclude": false,
+      "sourceForm": "tsien⁵⁵"
+    },
+    {
+      "han": "梳",
+      "ipa": "[su21]",
+      "english": "comb",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-comb",
+      "meaningPracticeExclude": false,
+      "sourceForm": "su²¹"
+    },
+    {
+      "han": "牛嫲",
+      "ipa": "[ny22 ma22]",
+      "english": "cow",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-cow",
+      "meaningPracticeExclude": false,
+      "sourceForm": "ny²²ma²²"
+    },
+    {
+      "han": "牛公",
+      "ipa": "[ny22 kuŋ22]",
+      "english": "ox",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-ox",
+      "meaningPracticeExclude": false,
+      "sourceForm": "ny²²kuŋ²²"
+    },
+    {
+      "han": "囝",
+      "ipa": "[kin53]",
+      "english": "boy; son",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-boy-son",
+      "meaningPracticeExclude": false,
+      "sourceForm": "kin⁵³"
+    },
+    {
+      "han": "跤",
+      "ipa": "[kʰau21]",
+      "english": "foot; leg",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-foot-leg",
+      "meaningPracticeExclude": false,
+      "sourceForm": "kʰau²¹"
+    },
+    {
+      "han": "颂",
+      "ipa": "[siuŋ35]",
+      "english": "wear",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-wear",
+      "meaningPracticeExclude": false,
+      "sourceForm": "siuŋ³⁵"
+    },
+    {
+      "han": "鼎",
+      "ipa": "[tiaŋ55]",
+      "english": "skillet",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-skillet",
+      "meaningPracticeExclude": false,
+      "sourceForm": "tiaŋ⁵⁵"
+    },
+    {
+      "han": "厝",
+      "ipa": "[tɕʰiɔ213]",
+      "english": "house",
+      "printedPage": 4,
+      "pdfPage": 56,
+      "kind": "word",
+      "id": "shaowu-ngai2021-house",
+      "meaningPracticeExclude": false,
+      "sourceForm": "tɕʰiɔ²¹³"
+    },
+    {
+      "han": "得",
+      "ipa": "[tie53]",
+      "english": "get; give, depending on construction",
+      "printedPage": 5,
+      "pdfPage": 57,
+      "kind": "word",
+      "id": "shaowu-ngai2021-get-give",
+      "meaningPracticeExclude": true,
+      "sourceForm": "tie⁵³"
+    },
+    {
+      "han": "帮",
+      "ipa": "[pɔŋ21]",
+      "english": "help",
+      "printedPage": 5,
+      "pdfPage": 57,
+      "kind": "word",
+      "id": "shaowu-ngai2021-help",
+      "meaningPracticeExclude": false,
+      "sourceForm": "pɔŋ²¹"
+    },
+    {
+      "han": "拿",
+      "ipa": "[na22]",
+      "english": "hold; take",
+      "printedPage": 5,
+      "pdfPage": 57,
+      "kind": "word",
+      "id": "shaowu-ngai2021-hold-take",
+      "meaningPracticeExclude": false,
+      "sourceForm": "na²²"
+    },
+    {
+      "han": "了",
+      "ipa": "[liau55]",
+      "english": "finish",
+      "printedPage": 9,
+      "pdfPage": 61,
+      "kind": "word",
+      "id": "shaowu-ngai2021-finish",
+      "meaningPracticeExclude": false,
+      "sourceForm": "liau⁵⁵"
+    },
+    {
+      "han": "来",
+      "ipa": "[li22]",
+      "english": "come",
+      "printedPage": 9,
+      "pdfPage": 61,
+      "kind": "word",
+      "id": "shaowu-ngai2021-come",
+      "meaningPracticeExclude": false,
+      "sourceForm": "li²²"
+    },
+    {
+      "han": "去",
+      "ipa": "[kʰɔ213]",
+      "english": "go",
+      "printedPage": 9,
+      "pdfPage": 61,
+      "kind": "word",
+      "id": "shaowu-ngai2021-go",
+      "meaningPracticeExclude": false,
+      "sourceForm": "kʰɔ²¹³"
+    },
+    {
+      "han": "度",
+      "ipa": "[tʰɔ35]",
+      "english": "pass through",
+      "printedPage": 9,
+      "pdfPage": 61,
+      "kind": "word",
+      "id": "shaowu-ngai2021-pass-through",
+      "meaningPracticeExclude": false,
+      "sourceForm": "tʰɔ³⁵"
+    },
+    {
+      "han": "让",
+      "ipa": "[niɔŋ213]",
+      "english": "let",
+      "printedPage": 9,
+      "pdfPage": 61,
+      "kind": "word",
+      "id": "shaowu-ngai2021-let",
+      "meaningPracticeExclude": false,
+      "sourceForm": "niɔŋ²¹³"
+    },
+    {
+      "han": "叫",
+      "ipa": "[kiau213]",
+      "english": "call",
+      "printedPage": 9,
+      "pdfPage": 61,
+      "kind": "word",
+      "id": "shaowu-ngai2021-call",
+      "meaningPracticeExclude": false,
+      "sourceForm": "kiau²¹³"
+    },
+    {
+      "han": "行",
+      "ipa": "[xaŋ22]",
+      "english": "walk",
+      "printedPage": 10,
+      "pdfPage": 62,
+      "kind": "word",
+      "id": "shaowu-ngai2021-walk",
+      "meaningPracticeExclude": false,
+      "sourceForm": "xaŋ²²"
+    },
+    {
+      "han": "徛",
+      "ipa": "[kʰi55]",
+      "english": "stand",
+      "printedPage": 11,
+      "pdfPage": 63,
+      "kind": "word",
+      "id": "shaowu-ngai2021-stand",
+      "meaningPracticeExclude": false,
+      "sourceForm": "kʰi⁵⁵"
+    }
+  ],
+  "geography": {
+    "url": "https://www.geonames.org/1795857/shaowu.html",
+    "title": "GeoNames · Shaowu · 1795857",
+    "coordinates": [
+      117.4831,
+      27.34089
+    ],
+    "locator": "Feature P.PPLA3, seat of a third-order administrative division; Fujian, Nanping. Public city-seat anchor, not a consultant home or language boundary. GeoNames CC BY 4.0."
+  },
+  "classification": "Ngai 2021 pp.12 and 22 explicitly describes the Language Atlas of China Shaojiang classification; p.3 restricts the language reference to urban Shaowu. Competing classifications are discussed in pp.12–18. Website Min/Shaojiang placement follows that Atlas convention; shaowu-localities is explicitly geographic, not a claimed formal subdivision.",
+  "cultureSources": [
+    {
+      "title": "Xu Yitao 2025 · Northern Song to Ming–Qing hall-frame forms",
+      "url": "https://img.dpm.org.cn/Uploads/file/2025/12/22/1766400334hKYveGNhs218985.pdf",
+      "locator": "Palace Museum Journal 2025 no.9 (281), Table 1, printed p.138 (PDF p.2): 邵武宝严寺大殿 in 昭阳街道, 嘉靖十二年（1533）, 面阔进深各五间 and 重檐歇山. Footnote 11 cites the hall beam inscription. Visually reviewed from PDF image; only these factual features paraphrased.",
+      "sha256": "6f7ea48da975d634d7af6d3054393da5a4989840c687d420f9ff3be5c92eacd0"
+    },
+    {
+      "title": "Shaowu Museum · museum profile on Museums China",
+      "url": "https://www.museumschina.cn/museums/details?id=35068121800002",
+      "locator": "Museum profile/history: folk museum established 1987, public opening February 1988; address 五四路道家巷3号. Primary museum catalogue entry indexed by search; direct reader failed. No current hours asserted; no images copied."
+    }
+  ],
+  "review": {
+    "independentReport": ".evidence/zero-branch-next/root-independent-review.json",
+    "scope": "Root visually checked 20 selected forms on pp.4, 5, 9, 10, 11 and conventions/scope/fieldwork on LI–LII, 3, 19, 22. No candidate corrections requested. Retained page images in ignored evidence.",
+    "normalization": "sourceForm represents source typography with Unicode superscript digits and aspiration ʰ; compound syllables run together as printed. ipa adds syllable spaces and baseline tone digits, without deriving contours."
+  },
+  "nameReading": {
+    "sourceLocator": "Printed LI–LII",
+    "sourceForm": "ɕiau213~21u55",
+    "displayIpa": "ɕiau213 u55",
+    "qualification": "Selects explicitly printed original first-syllable contour213; source21 free variant retained in visible name reference note; tilde is not nasalization."
+  }
+}

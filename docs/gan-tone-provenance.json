@@ -1,0 +1,2567 @@
+{
+  "source": {
+    "authors": [
+      "张勇生",
+      "王洁"
+    ],
+    "year": 2022,
+    "title": "鄂东南赣语的声调类型及其演变",
+    "printedPages": "94–108",
+    "pdfPages": "100–114",
+    "doi": "https://doi.org/10.5281/zenodo.6342364",
+    "url": "https://geolinguistics.sakura.ne.jp/Monograph/SiG-mono2-2-xia-ebook.pdf",
+    "license": "CC BY 4.0",
+    "sha256": "a74a81cf435e66394113bb98114f94973859109becf43ff07ee2d1530838b0b7",
+    "collectionDate": null,
+    "scope": "Named-town citation-tone inventories; not complete word readings or speaker recordings."
+  },
+  "inventories": [
+    {
+      "town": "隽水",
+      "countyInStudy": "通城",
+      "table": 3,
+      "printedPage": 96,
+      "pdfPage": 102,
+      "citationToneCount": 7,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "212"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.80649,
+        29.25906
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-102.png",
+      "notes": [
+        "全入 / 次入 are the authors’ present-onset-conditioned checked-tone divisions. Do not relabel them yin/yang checked tone."
+      ],
+      "localityId": "gan-tongcheng-juanshui",
+      "displayName": "Juanshui",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14143538",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "隽水镇",
+        "coordinates": [
+          113.80649,
+          29.25906
+        ],
+        "alternatives": [
+          [
+            113.80649,
+            29.25906
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "马港",
+      "countyInStudy": "通城",
+      "table": 3,
+      "printedPage": 96,
+      "pdfPage": 102,
+      "citationToneCount": 7,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.77337,
+        29.18406
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-102.png",
+      "notes": [
+        "全入 / 次入 are the authors’ present-onset-conditioned checked-tone divisions. Do not relabel them yin/yang checked tone."
+      ],
+      "localityId": "gan-tongcheng-magang",
+      "displayName": "Magang",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14143971",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "马港镇",
+        "coordinates": [
+          113.77337,
+          29.18406
+        ],
+        "alternatives": [
+          [
+            113.77623,
+            29.1803
+          ],
+          [
+            113.77337,
+            29.18406
+          ]
+        ],
+        "maxSpreadKm": 0.502,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "关刀",
+      "countyInStudy": "通城",
+      "table": 3,
+      "printedPage": 96,
+      "pdfPage": 102,
+      "citationToneCount": 7,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "324"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        113.90012,
+        29.21745
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-102.png",
+      "notes": [
+        "全入 / 次入 are the authors’ present-onset-conditioned checked-tone divisions. Do not relabel them yin/yang checked tone."
+      ],
+      "localityId": "gan-tongcheng-guandao",
+      "displayName": "Guandao",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10893872",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "关刀镇",
+        "coordinates": [
+          113.90012,
+          29.21745
+        ],
+        "alternatives": [
+          [
+            113.90012,
+            29.21745
+          ],
+          [
+            113.90395,
+            29.21814
+          ]
+        ],
+        "maxSpreadKm": 0.38,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "麦市",
+      "countyInStudy": "通城",
+      "table": 3,
+      "printedPage": 96,
+      "pdfPage": 102,
+      "citationToneCount": 7,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "313"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "214"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.95756,
+        29.17092
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-102.png",
+      "notes": [
+        "全入 / 次入 are the authors’ present-onset-conditioned checked-tone divisions. Do not relabel them yin/yang checked tone."
+      ],
+      "localityId": "gan-tongcheng-maishi",
+      "displayName": "Maishi",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11175478",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "麦市镇",
+        "coordinates": [
+          113.95756,
+          29.17092
+        ],
+        "alternatives": [
+          [
+            113.95756,
+            29.17092
+          ],
+          [
+            113.95,
+            29.1667
+          ],
+          [
+            113.958,
+            29.1733
+          ]
+        ],
+        "maxSpreadKm": 1.069,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "塘湖",
+      "countyInStudy": "通城",
+      "table": 3,
+      "printedPage": 96,
+      "pdfPage": 102,
+      "citationToneCount": 7,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        113.98092,
+        29.21452
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-102.png",
+      "notes": [
+        "全入 / 次入 are the authors’ present-onset-conditioned checked-tone divisions. Do not relabel them yin/yang checked tone."
+      ],
+      "localityId": "gan-tongcheng-tanghu",
+      "displayName": "Tanghu",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10931057",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "塘湖镇",
+        "coordinates": [
+          113.98092,
+          29.21452
+        ],
+        "alternatives": [
+          [
+            113.98092,
+            29.21452
+          ],
+          [
+            113.98269,
+            29.21353
+          ]
+        ],
+        "maxSpreadKm": 0.204,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "沙堆",
+      "countyInStudy": "通城",
+      "table": 3,
+      "printedPage": 96,
+      "pdfPage": 102,
+      "citationToneCount": 7,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "313"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "214"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.89784,
+        29.30531
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-102.png",
+      "notes": [
+        "全入 / 次入 are the authors’ present-onset-conditioned checked-tone divisions. Do not relabel them yin/yang checked tone."
+      ],
+      "localityId": "gan-tongcheng-shadui",
+      "displayName": "Shadui",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11139799",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "沙堆镇",
+        "coordinates": [
+          113.89784,
+          29.30531
+        ],
+        "alternatives": [
+          [
+            113.90062,
+            29.30378
+          ],
+          [
+            113.89784,
+            29.30531
+          ]
+        ],
+        "maxSpreadKm": 0.319,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "四庄",
+      "countyInStudy": "通城",
+      "table": 3,
+      "printedPage": 96,
+      "pdfPage": 102,
+      "citationToneCount": 7,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "313"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "214"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.94849,
+        29.32408
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-102.png",
+      "notes": [
+        "全入 / 次入 are the authors’ present-onset-conditioned checked-tone divisions. Do not relabel them yin/yang checked tone."
+      ],
+      "localityId": "gan-tongcheng-sizhuang",
+      "displayName": "Sizhuang",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10924991",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "四庄乡",
+        "coordinates": [
+          113.94849,
+          29.32408
+        ],
+        "alternatives": [
+          [
+            113.94872,
+            29.324
+          ],
+          [
+            113.94849,
+            29.32408
+          ]
+        ],
+        "maxSpreadKm": 0.024,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "陈贵",
+      "countyInStudy": "大冶",
+      "table": 4,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "22"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "45"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        114.81036,
+        30.05692
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [],
+      "localityId": "gan-daye-chengui",
+      "displayName": "Chengui",
+      "clusterId": "datong-daye",
+      "countyName": "Daye",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14031461",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1179105",
+        "label": "陈贵镇",
+        "coordinates": [
+          114.81036,
+          30.05692
+        ],
+        "alternatives": [
+          [
+            114.81036,
+            30.05692
+          ],
+          [
+            114.8,
+            30.05
+          ]
+        ],
+        "maxSpreadKm": 1.259,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "枫林",
+      "countyInStudy": "阳新",
+      "table": 4,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        115.39633,
+        29.76134
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [],
+      "localityId": "gan-yangxin-fenglin",
+      "displayName": "Fenglin",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11107780",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "枫林镇",
+        "coordinates": [
+          115.39633,
+          29.76134
+        ],
+        "alternatives": [
+          [
+            115.39847,
+            29.76081
+          ],
+          [
+            115.39633,
+            29.76134
+          ]
+        ],
+        "maxSpreadKm": 0.215,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "通羊",
+      "countyInStudy": "通山",
+      "table": 4,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "45"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "55"
+        }
+      ],
+      "coordinates": [
+        114.49122,
+        29.60749
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [],
+      "localityId": "gan-tongshan-tongyang",
+      "displayName": "Tongyang",
+      "clusterId": "datong-tongshan",
+      "countyName": "Tongshan",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14144942",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356703",
+        "label": "通羊镇",
+        "coordinates": [
+          114.49122,
+          29.60749
+        ],
+        "alternatives": [
+          [
+            114.49122,
+            29.60749
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "浮山",
+      "countyInStudy": "咸安",
+      "table": 4,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "22"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "55"
+        }
+      ],
+      "coordinates": [
+        114.31244,
+        29.8665
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [],
+      "localityId": "gan-xianan-fushan",
+      "displayName": "Fushan",
+      "clusterId": "datong-xianan",
+      "countyName": "Xian’an",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11149381",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1199132",
+        "label": "浮山街道",
+        "coordinates": [
+          114.31244,
+          29.8665
+        ],
+        "alternatives": [
+          [
+            114.31244,
+            29.8665
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "鱼岳",
+      "countyInStudy": "嘉鱼",
+      "table": 4,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "212"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "55"
+        }
+      ],
+      "coordinates": [
+        113.90303,
+        29.9833
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [],
+      "localityId": "gan-jiayu-yuyue",
+      "displayName": "Yuyue",
+      "clusterId": "datong-jiayu",
+      "countyName": "Jiayu",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11172893",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1236870",
+        "label": "鱼岳镇",
+        "coordinates": [
+          113.90303,
+          29.9833
+        ],
+        "alternatives": [
+          [
+            113.90303,
+            29.9833
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "车埠",
+      "countyInStudy": "蒲圻",
+      "table": 4,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "45"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "55"
+        }
+      ],
+      "coordinates": [
+        113.75578,
+        29.7673
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [],
+      "localityId": "gan-chibi-chebu",
+      "displayName": "Chebu",
+      "clusterId": "datong-chibi",
+      "countyName": "Chibi",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14145868",
+        "countyEntity": "https://www.wikidata.org/wiki/Q615021",
+        "label": "车埠镇",
+        "coordinates": [
+          113.75578,
+          29.7673
+        ],
+        "alternatives": [
+          [
+            113.75578,
+            29.7673
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "石城",
+      "countyInStudy": "崇阳",
+      "table": 4,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "22"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "214"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "55"
+        }
+      ],
+      "coordinates": [
+        113.92778,
+        29.46435
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [],
+      "localityId": "gan-chongyang-shicheng",
+      "displayName": "Shicheng",
+      "clusterId": "datong-chongyang",
+      "countyName": "Chongyang",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14144406",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1076179",
+        "label": "石城镇",
+        "coordinates": [
+          113.92778,
+          29.46435
+        ],
+        "alternatives": [
+          [
+            113.92778,
+            29.46435
+          ],
+          [
+            113.92683,
+            29.46551
+          ]
+        ],
+        "maxSpreadKm": 0.158,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "石南",
+      "countyInStudy": "通城",
+      "table": 5,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.71296,
+        29.27927
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [
+        "全入 / 次入 are contemporary onset-conditioned divisions; not historical yin/yang names."
+      ],
+      "localityId": "gan-tongcheng-shinan",
+      "displayName": "Shinan",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14143888",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "石南镇",
+        "coordinates": [
+          113.71296,
+          29.27927
+        ],
+        "alternatives": [
+          [
+            113.71296,
+            29.27927
+          ],
+          [
+            113.7123,
+            29.27978
+          ]
+        ],
+        "maxSpreadKm": 0.086,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "北港",
+      "countyInStudy": "通城",
+      "table": 5,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.64957,
+        29.29924
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [
+        "全入 / 次入 are contemporary onset-conditioned divisions; not historical yin/yang names."
+      ],
+      "localityId": "gan-tongcheng-beigang",
+      "displayName": "Beigang",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10903707",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "北港镇",
+        "coordinates": [
+          113.64957,
+          29.29924
+        ],
+        "alternatives": [
+          [
+            113.64957,
+            29.29924
+          ],
+          [
+            113.65669,
+            29.30111
+          ]
+        ],
+        "maxSpreadKm": 0.721,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "大坪",
+      "countyInStudy": "通城",
+      "table": 5,
+      "printedPage": 97,
+      "pdfPage": 103,
+      "citationToneCount": 6,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "34"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "全入",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "次入",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        113.69012,
+        29.32971
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-103.png",
+      "notes": [
+        "全入 / 次入 are contemporary onset-conditioned divisions; not historical yin/yang names."
+      ],
+      "localityId": "gan-tongcheng-daping",
+      "displayName": "Daping",
+      "clusterId": "datong-tongcheng",
+      "countyName": "Tongcheng",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10934471",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356459",
+        "label": "大坪乡",
+        "coordinates": [
+          113.69012,
+          29.32971
+        ],
+        "alternatives": [
+          [
+            113.69427,
+            29.32915
+          ],
+          [
+            113.69012,
+            29.32971
+          ]
+        ],
+        "maxSpreadKm": 0.407,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "金湖",
+      "countyInStudy": "大冶",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        114.92742,
+        30.06287
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [],
+      "localityId": "gan-daye-jinhu",
+      "displayName": "Jinhu",
+      "clusterId": "datong-daye",
+      "countyName": "Daye",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14030198",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1179105",
+        "label": "金湖街道",
+        "coordinates": [
+          114.92742,
+          30.06287
+        ],
+        "alternatives": [
+          [
+            114.92948,
+            30.06359
+          ],
+          [
+            114.92742,
+            30.06287
+          ]
+        ],
+        "maxSpreadKm": 0.214,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "殷祖",
+      "countyInStudy": "大冶",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        114.88672,
+        29.96103
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [],
+      "localityId": "gan-daye-yinzu",
+      "displayName": "Yinzu",
+      "clusterId": "datong-daye",
+      "countyName": "Daye",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11125746",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1179105",
+        "label": "殷祖镇",
+        "coordinates": [
+          114.88672,
+          29.96103
+        ],
+        "alternatives": [
+          [
+            114.8866,
+            29.96029
+          ],
+          [
+            114.88672,
+            29.96103
+          ]
+        ],
+        "maxSpreadKm": 0.083,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "大箕铺",
+      "countyInStudy": "大冶",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        115.01357,
+        30.04192
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [],
+      "localityId": "gan-daye-dajipu",
+      "displayName": "Dajipu",
+      "clusterId": "datong-daye",
+      "countyName": "Daye",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10937237",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1179105",
+        "label": "大箕铺镇",
+        "coordinates": [
+          115.01357,
+          30.04192
+        ],
+        "alternatives": [
+          [
+            115.01367,
+            30.04413
+          ],
+          [
+            115.01357,
+            30.04192
+          ]
+        ],
+        "maxSpreadKm": 0.246,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "金山店",
+      "countyInStudy": "大冶",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": null,
+      "reviewStatus": "hold-coordinate",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [
+        "Competing coordinates more than2km apart; no anchor selected for publication."
+      ],
+      "localityId": "gan-daye-jinshandian",
+      "displayName": "Jinshandian",
+      "clusterId": "datong-daye",
+      "countyName": "Daye",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14030984",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1179105",
+        "label": "金山店镇",
+        "coordinates": [
+          114.81915,
+          30.13979
+        ],
+        "alternatives": [
+          [
+            114.86445,
+            30.14285
+          ],
+          [
+            114.81915,
+            30.13979
+          ]
+        ],
+        "maxSpreadKm": 4.369,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "刘仁八",
+      "countyInStudy": "大冶",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        114.83014,
+        29.93785
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [
+        "Source label 阴去35 preserved exactly."
+      ],
+      "localityId": "gan-daye-liurenba",
+      "displayName": "Liurenba",
+      "clusterId": "datong-daye",
+      "countyName": "Daye",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10897085",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1179105",
+        "label": "刘仁八镇",
+        "coordinates": [
+          114.83014,
+          29.93785
+        ],
+        "alternatives": [
+          [
+            114.82931,
+            29.93909
+          ],
+          [
+            114.83014,
+            29.93785
+          ]
+        ],
+        "maxSpreadKm": 0.159,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "太子",
+      "countyInStudy": "阳新",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "212"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "21"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "13"
+        }
+      ],
+      "coordinates": [
+        115.17582,
+        30.03088
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [],
+      "localityId": "gan-yangxin-taizi",
+      "displayName": "Taizi",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10941197",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "太子镇",
+        "coordinates": [
+          115.17582,
+          30.03088
+        ],
+        "alternatives": [
+          [
+            115.17582,
+            30.03088
+          ],
+          [
+            115.18333,
+            30.03333
+          ]
+        ],
+        "maxSpreadKm": 0.773,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "大王",
+      "countyInStudy": "阳新",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        115.11812,
+        30.03871
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [],
+      "localityId": "gan-yangxin-dawang",
+      "displayName": "Dawang",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10936770",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "大王镇",
+        "coordinates": [
+          115.11812,
+          30.03871
+        ],
+        "alternatives": [
+          [
+            115.11812,
+            30.03871
+          ],
+          [
+            115.11471,
+            30.04092
+          ]
+        ],
+        "maxSpreadKm": 0.41,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "韦源口",
+      "countyInStudy": "阳新",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": null,
+      "reviewStatus": "hold-coordinate",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [
+        "Wikidata Q14028750 incorrectly points near Yangxin county centre. Municipal evidence names Weiyuankou sites about30km north; no centre inferred. Evidence: https://sthjj.huangshi.gov.cn/zwgk/fdzdgk/wsgs/202509/t20250923_1263809.html"
+      ],
+      "localityId": "gan-yangxin-weiyuankou",
+      "displayName": "Weiyuankou",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin"
+    },
+    {
+      "town": "黄颡口",
+      "countyInStudy": "阳新",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        115.33101,
+        30.00969
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [],
+      "localityId": "gan-yangxin-huangsangkou",
+      "displayName": "Huangsangkou",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11178621",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "黄颡口镇",
+        "coordinates": [
+          115.33101,
+          30.00969
+        ],
+        "alternatives": [
+          [
+            115.33101,
+            30.00969
+          ],
+          [
+            115.32795,
+            30.01418
+          ]
+        ],
+        "maxSpreadKm": 0.58,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "富池",
+      "countyInStudy": "阳新",
+      "table": 6,
+      "printedPage": 98,
+      "pdfPage": 104,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "35"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "24"
+        }
+      ],
+      "coordinates": [
+        115.43795,
+        29.85505
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-104.png",
+      "notes": [],
+      "localityId": "gan-yangxin-fuchi",
+      "displayName": "Fuchi",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14028615",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "富池镇",
+        "coordinates": [
+          115.43795,
+          29.85505
+        ],
+        "alternatives": [
+          [
+            115.43795,
+            29.85505
+          ],
+          [
+            115.43449,
+            29.85796
+          ]
+        ],
+        "maxSpreadKm": 0.465,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "排市",
+      "countyInStudy": "阳新",
+      "table": 7,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        115.05451,
+        29.722
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-yangxin-paishi",
+      "displayName": "Paishi",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11078028",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "排市镇",
+        "coordinates": [
+          115.05451,
+          29.722
+        ],
+        "alternatives": [
+          [
+            115.05576,
+            29.723
+          ],
+          [
+            115.05451,
+            29.722
+          ]
+        ],
+        "maxSpreadKm": 0.164,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "木港",
+      "countyInStudy": "阳新",
+      "table": 7,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "22"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        115.24621,
+        29.72339
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-yangxin-mugang",
+      "displayName": "Mugang",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11093078",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "木港镇",
+        "coordinates": [
+          115.24621,
+          29.72339
+        ],
+        "alternatives": [
+          [
+            115.24621,
+            29.72339
+          ],
+          [
+            115.24861,
+            29.72368
+          ]
+        ],
+        "maxSpreadKm": 0.234,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "洋港",
+      "countyInStudy": "阳新",
+      "table": 7,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        115.13735,
+        29.57884
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-yangxin-yanggang",
+      "displayName": "Yanggang",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11145645",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "洋港镇",
+        "coordinates": [
+          115.13735,
+          29.57884
+        ],
+        "alternatives": [
+          [
+            115.13735,
+            29.57884
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "龙港",
+      "countyInStudy": "阳新",
+      "table": 7,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "24"
+        },
+        {
+          "sourceLabel": "人声",
+          "pitchContour": "34"
+        }
+      ],
+      "coordinates": [
+        114.95243,
+        29.61618
+      ],
+      "reviewStatus": "hold-category-label",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [
+        "Source prints 人声34. Table heading/prose concerns checked 入声; raw source label retained pending editorial policy."
+      ],
+      "localityId": "gan-yangxin-longgang",
+      "displayName": "Longgang",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11181490",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "龙港镇",
+        "coordinates": [
+          114.95243,
+          29.61618
+        ],
+        "alternatives": [
+          [
+            114.95028,
+            29.62558
+          ],
+          [
+            114.95243,
+            29.61618
+          ]
+        ],
+        "maxSpreadKm": 1.066,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "燕厦",
+      "countyInStudy": "通山",
+      "table": 7,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "55"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "去声",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        114.86304,
+        29.56837
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-tongshan-yanxia",
+      "displayName": "Yanxia",
+      "clusterId": "datong-tongshan",
+      "countyName": "Tongshan",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14145496",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356703",
+        "label": "燕厦乡",
+        "coordinates": [
+          114.86304,
+          29.56837
+        ],
+        "alternatives": [
+          [
+            114.86304,
+            29.56837
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "大幕",
+      "countyInStudy": "咸安",
+      "table": 8,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 5,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "22"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "阴去",
+          "pitchContour": "213"
+        },
+        {
+          "sourceLabel": "阳去",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        114.53912,
+        29.80877
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [
+        "Source distinguishes 阴去213 and 阳去45."
+      ],
+      "localityId": "gan-xianan-damu",
+      "displayName": "Damu",
+      "clusterId": "datong-xianan",
+      "countyName": "Xian’an",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10935275",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1199132",
+        "label": "大幕乡",
+        "coordinates": [
+          114.53912,
+          29.80877
+        ],
+        "alternatives": [
+          [
+            114.53912,
+            29.80877
+          ],
+          [
+            114.53985,
+            29.81017
+          ]
+        ],
+        "maxSpreadKm": 0.171,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "白沙",
+      "countyInStudy": "阳新",
+      "table": 9,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 4,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "213"
+        }
+      ],
+      "coordinates": [
+        115.06596,
+        29.96065
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-yangxin-baisha",
+      "displayName": "Baisha",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14029114",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "白沙镇",
+        "coordinates": [
+          115.06596,
+          29.96065
+        ],
+        "alternatives": [
+          [
+            115.06596,
+            29.96065
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "浮屠",
+      "countyInStudy": "阳新",
+      "table": 9,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 4,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "44"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "35"
+        }
+      ],
+      "coordinates": [
+        115.08482,
+        29.90353
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-yangxin-futu",
+      "displayName": "Futu",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q11149370",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "浮屠镇",
+        "coordinates": [
+          115.08482,
+          29.90353
+        ],
+        "alternatives": [
+          [
+            115.08482,
+            29.90353
+          ]
+        ],
+        "maxSpreadKm": 0.0,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "兴国",
+      "countyInStudy": "阳新",
+      "table": 9,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 4,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "212"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        115.20866,
+        29.83375
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-yangxin-xingguo",
+      "displayName": "Xingguo",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10894136",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "兴国镇",
+        "coordinates": [
+          115.20866,
+          29.83375
+        ],
+        "alternatives": [
+          [
+            115.20866,
+            29.83375
+          ],
+          [
+            115.20265,
+            29.84337
+          ]
+        ],
+        "maxSpreadKm": 1.217,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "陶港",
+      "countyInStudy": "阳新",
+      "table": 9,
+      "printedPage": 99,
+      "pdfPage": 105,
+      "citationToneCount": 4,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "42"
+        },
+        {
+          "sourceLabel": "上声",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "45"
+        }
+      ],
+      "coordinates": [
+        115.26243,
+        29.93907
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-105.png",
+      "notes": [],
+      "localityId": "gan-yangxin-taogang",
+      "displayName": "Taogang",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14029055",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "陶港镇",
+        "coordinates": [
+          115.26243,
+          29.93907
+        ],
+        "alternatives": [
+          [
+            115.26243,
+            29.93907
+          ],
+          [
+            115.26131,
+            29.9382
+          ]
+        ],
+        "maxSpreadKm": 0.145,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "王英",
+      "countyInStudy": "阳新",
+      "table": 10,
+      "printedPage": 100,
+      "pdfPage": 106,
+      "citationToneCount": 3,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "22"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "24"
+        }
+      ],
+      "coordinates": [
+        114.82984,
+        29.80437
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-106.png",
+      "notes": [],
+      "localityId": "gan-yangxin-wangying",
+      "displayName": "Wangying",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q14029979",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "王英镇",
+        "coordinates": [
+          114.82984,
+          29.80437
+        ],
+        "alternatives": [
+          [
+            114.82984,
+            29.80437
+          ],
+          [
+            114.82855,
+            29.8041
+          ]
+        ],
+        "maxSpreadKm": 0.128,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    },
+    {
+      "town": "三溪",
+      "countyInStudy": "阳新",
+      "table": 10,
+      "printedPage": 100,
+      "pdfPage": 106,
+      "citationToneCount": 3,
+      "tones": [
+        {
+          "sourceLabel": "阴平",
+          "pitchContour": "33"
+        },
+        {
+          "sourceLabel": "阳平",
+          "pitchContour": "31"
+        },
+        {
+          "sourceLabel": "入声",
+          "pitchContour": "24"
+        }
+      ],
+      "coordinates": [
+        114.93978,
+        29.82617
+      ],
+      "reviewStatus": "visually-checked",
+      "image": "gan-tone-pages/page-106.png",
+      "notes": [],
+      "localityId": "gan-yangxin-sanxi",
+      "displayName": "Sanxi",
+      "clusterId": "datong-yangxin",
+      "countyName": "Yangxin",
+      "geography": {
+        "entity": "https://www.wikidata.org/entity/Q10866440",
+        "countyEntity": "https://www.wikidata.org/wiki/Q1356685",
+        "label": "三溪镇",
+        "coordinates": [
+          114.93978,
+          29.82617
+        ],
+        "alternatives": [
+          [
+            114.94637,
+            29.82547
+          ],
+          [
+            114.93978,
+            29.82617
+          ]
+        ],
+        "maxSpreadKm": 0.64,
+        "source": "Wikidata P625 and P131, CC0; direct county match; queried 2026-10-09",
+        "selection": "Most precise existing P625 value within a 2 km cluster; approximate town reference, not speaker coordinates."
+      }
+    }
+  ],
+  "issues": [
+    "Table 1 lists 93 distinct named towns, matching the stated survey count; only 39 have explicit full inventory rows in Tables 3–10.",
+    "Table 1 has 大畈 and 慈口 as five-tone points, but Tables 6–8 give no complete inventories for them. Do not copy a nearby town inventory.",
+    "Table 3 omits 九岭 despite its seven-tone count in Table 1. Do not infer its pitches from 马港.",
+    "Transcription-review correction: initial low-resolution inspection misread 阴 as 阳 in 刘仁八 and 大幕. High-resolution crops and independent PDF text agree on 阴去35 and 阴去213 respectively; the source itself has no contradiction here.",
+    "Table 7 龙港 checked category printed 人声; raw preserved and held from directly published category labels.",
+    "Table 16 repeats 马港 with differing lexical forms. No word forms are extracted here.",
+    "The paper discusses former administrative 蒲圻, renamed 赤壁 in1998. Town identities and coordinates must be verified separately.",
+    "No sampling dates, speaker demographics, audio or representative syllables are provided by these tone-inventory tables."
+  ],
+  "geographyQueryFile": ".evidence/whole-atlas-next/gan-town-wikidata.json",
+  "classificationNote": "The primary paper identifies southeastern Hubei Gan with the historical Da–Tong branch, with scope set out on printed p94. County clusters below this branch are geographic collections, not linguistic subdivisions.",
+  "nameNote": "No local place-name IPA is supplied by these tables. The English labels are conventional romanized geographic labels, never claimed as community endonyms or HanLingo readings.",
+  "heldInventories": [
+    "gan-daye-jinshandian",
+    "gan-yangxin-weiyuankou",
+    "gan-yangxin-longgang"
+  ],
+  "readyInventories": [
+    "gan-tongcheng-juanshui",
+    "gan-tongcheng-magang",
+    "gan-tongcheng-guandao",
+    "gan-tongcheng-maishi",
+    "gan-tongcheng-tanghu",
+    "gan-tongcheng-shadui",
+    "gan-tongcheng-sizhuang",
+    "gan-daye-chengui",
+    "gan-yangxin-fenglin",
+    "gan-tongshan-tongyang",
+    "gan-xianan-fushan",
+    "gan-jiayu-yuyue",
+    "gan-chibi-chebu",
+    "gan-chongyang-shicheng",
+    "gan-tongcheng-shinan",
+    "gan-tongcheng-beigang",
+    "gan-tongcheng-daping",
+    "gan-daye-jinhu",
+    "gan-daye-yinzu",
+    "gan-daye-dajipu",
+    "gan-daye-liurenba",
+    "gan-yangxin-taizi",
+    "gan-yangxin-dawang",
+    "gan-yangxin-huangsangkou",
+    "gan-yangxin-fuchi",
+    "gan-yangxin-paishi",
+    "gan-yangxin-mugang",
+    "gan-yangxin-yanggang",
+    "gan-tongshan-yanxia",
+    "gan-xianan-damu",
+    "gan-yangxin-baisha",
+    "gan-yangxin-futu",
+    "gan-yangxin-xingguo",
+    "gan-yangxin-taogang",
+    "gan-yangxin-wangying",
+    "gan-yangxin-sanxi"
+  ]
+}

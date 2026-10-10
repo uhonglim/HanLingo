@@ -1,0 +1,475 @@
+{
+  "status": "Reviewed bounded selection; 18 records, with prose/table conflict held",
+  "source": {
+    "title": "Phonetic Investigation of the Yingtan Variety of Gan Chinese: A Comparative Analysis Based on Single-Speaker Data",
+    "author": "Xiaotian Liu",
+    "year": 2026,
+    "doi": "10.2991/978-2-38476-597-3_11",
+    "url": "https://www.atlantis-press.com/article/126026097.pdf",
+    "landingUrl": "https://download.atlantis-press.com/proceedings/iclcc-26/126026097",
+    "pages": "88–99",
+    "pdfSha256": "d2811a509deb09c25841aa0cbee028e569d30f0a9116e761d46ba68423f1274d",
+    "license": "CC BY-NC4.0; no assumption of commercial permission",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "reuseScope": "Proposed bounded factual lexical IPA/Han/meaning selection only; no reproduced prose, full tables, figures, photographs, audio or complete corpus."
+  },
+  "localityId": "gan-county-360602",
+  "scope": {
+    "place": "Yuehu urban area of Yingtan, Jiangxi",
+    "pages": [
+      89,
+      92,
+      93,
+      97
+    ],
+    "speaker": "One female speaker Q, age 23, born in the 2000s; acquired Gan in her family and Mandarin from school. She identifies with Yuehu. No neighbourhood or exact recording date is supplied.",
+    "sample": "Remotely instructed self-recording. The paper describes 80 monosyllabic items repeated three times, six sentences repeated three times, and twelve disyllabic phrases once, for 270 tokens. Selected forms are printed surface productions, not a normative city inventory.",
+    "classification": "Paper p. 89 explicitly adopts Ying–Yi Gan. The existing Yuehu District reference gan-county-360602 is a broader geographic anchor.",
+    "date": "2026 is publication year, not recording date.",
+    "map": "The existing district anchor is not the speaker’s address or a dialect boundary."
+  },
+  "toneKey": {
+    "page": 91,
+    "section": "2.3",
+    "convention": "Explicit Chao Yuen Ren suprasegmental tone notation. Published actual surface forms are bracketed in Tables 6–8; the earlier underlying forms in slashes are separate. Table 5 does not authorize replacing a word’s supplied pitch."
+  },
+  "records": [
+    {
+      "id": "liu2026-yingtan-peace",
+      "han": "和",
+      "writingStatus": "attested",
+      "english": "peace",
+      "ipa": "[xo²⁴]",
+      "rawIPA": "xo24",
+      "page": 95,
+      "locator": "Table 6, item 29",
+      "variants": [
+        "χo24"
+      ],
+      "learningKind": "word",
+      "note": "The first repetition is selected; repetitions 2 and 3 are χo24. The underlying column prints /o24/, not /ɣo24/.",
+      "sourceRepetitions": [
+        "xo24",
+        "χo24",
+        "χo24"
+      ],
+      "repetitionNote": "All explicitly printed repetitions are retained, including repeats.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-blind",
+      "han": "瞎",
+      "writingStatus": "attested",
+      "english": "blind",
+      "ipa": "[xaʔ⁵]",
+      "rawIPA": "xaʔ5",
+      "page": 95,
+      "locator": "Table 6, item 94",
+      "variants": [],
+      "learningKind": "word",
+      "note": "Use the printed surface form; do not substitute the /ɣa44/ underlying column.",
+      "sourceRepetitions": [
+        "xaʔ5",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-shoe",
+      "han": "鞋",
+      "writingStatus": "attested",
+      "english": "shoe",
+      "ipa": "[xai²⁴]",
+      "rawIPA": "xai24",
+      "page": 95,
+      "locator": "Table 6, item 95",
+      "variants": [
+        "xai213"
+      ],
+      "learningKind": "word",
+      "note": "First two repetitions xai24; third xai213.",
+      "sourceRepetitions": [
+        "xai24",
+        "xai24",
+        "xai213"
+      ],
+      "repetitionNote": "All explicitly printed repetitions are retained, including repeats.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-nice",
+      "han": "好",
+      "writingStatus": "attested",
+      "english": "nice",
+      "ipa": "[xau³⁴¹]",
+      "rawIPA": "xau341",
+      "page": 95,
+      "locator": "Table 6, item 97",
+      "variants": [
+        "xau34"
+      ],
+      "learningKind": "word",
+      "note": "First two repetitions xau341; third xau34.",
+      "sourceRepetitions": [
+        "xau341",
+        "xau341",
+        "xau34"
+      ],
+      "repetitionNote": "All explicitly printed repetitions are retained, including repeats.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-river",
+      "han": "河",
+      "writingStatus": "attested",
+      "english": "river",
+      "ipa": "[χo²⁴]",
+      "rawIPA": "χo24",
+      "page": 95,
+      "locator": "Table 6, item 98",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "χo24",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-you",
+      "han": "你",
+      "writingStatus": "attested",
+      "english": "second-person singular pronoun",
+      "ipa": "[ni²⁴]",
+      "rawIPA": "ni24",
+      "page": 96,
+      "locator": "Table 7, item 20",
+      "variants": [],
+      "learningKind": "word",
+      "note": "Source gloss: 2nd SG pronoun. Surface [ni24], not underlying syllabic /n̩24/.",
+      "sourceRepetitions": [
+        "ni24"
+      ],
+      "repetitionNote": "All explicitly printed repetitions are retained, including repeats.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-class",
+      "han": "班",
+      "writingStatus": "attested",
+      "english": "class",
+      "ipa": "[pan²²]",
+      "rawIPA": "pan22",
+      "page": 96,
+      "locator": "Table 8, row 1",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "pan22",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-lift",
+      "han": "搬",
+      "writingStatus": "attested",
+      "english": "to lift",
+      "ipa": "[poŋ²²]",
+      "rawIPA": "poŋ22",
+      "page": 96,
+      "locator": "Table 8, row 3",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "poŋ22",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-finished",
+      "han": "完",
+      "writingStatus": "attested",
+      "english": "finished",
+      "ipa": "[βoŋ²⁴]",
+      "rawIPA": "βoŋ24",
+      "page": 96,
+      "locator": "Table 8, row 4",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "βoŋ24",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-stick",
+      "han": "棍",
+      "writingStatus": "attested",
+      "english": "stick",
+      "ipa": "[kyn⁴²]",
+      "rawIPA": "kyn42",
+      "page": 96,
+      "locator": "Table 8, row 5",
+      "variants": [
+        "kʰyn42"
+      ],
+      "learningKind": "word",
+      "note": "First two repetitions kyn42; third kʰyn42. Aspiration variant is not silently generalized.",
+      "sourceRepetitions": [
+        "kyn42",
+        "kyn42",
+        "kʰyn42"
+      ],
+      "repetitionNote": "All explicitly printed repetitions are retained, including repeats.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-edge",
+      "han": "边",
+      "writingStatus": "attested",
+      "english": "the edge",
+      "ipa": "[pien²²]",
+      "rawIPA": "pien22",
+      "page": 96,
+      "locator": "Table 8, row 6",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "pien22",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-run",
+      "han": "奔",
+      "writingStatus": "attested",
+      "english": "to run",
+      "ipa": "[pən²²]",
+      "rawIPA": "pən22",
+      "page": 96,
+      "locator": "Table 8, row 10",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "pən22",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-guest",
+      "han": "宾",
+      "writingStatus": "attested",
+      "english": "the guest",
+      "ipa": "[pin²²]",
+      "rawIPA": "pin22",
+      "page": 96,
+      "locator": "Table 8, row 11",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "pin22",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-use",
+      "han": "用",
+      "writingStatus": "attested",
+      "english": "to use",
+      "ipa": "[joŋ⁴²]",
+      "rawIPA": "joŋ42",
+      "page": 96,
+      "locator": "Table 8, row 12",
+      "variants": [],
+      "learningKind": "word",
+      "note": "Printed English typo “too use” corrected to “to use”; source spelling retained in this note.",
+      "sourceRepetitions": [
+        "joŋ42",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-east",
+      "han": "东",
+      "writingStatus": "attested",
+      "english": "east",
+      "ipa": "[toŋ²²]",
+      "rawIPA": "toŋ22",
+      "page": 96,
+      "locator": "Table 8, row 13",
+      "variants": [],
+      "learningKind": "word",
+      "note": "",
+      "sourceRepetitions": [
+        "toŋ22",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-saw",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "english": "to saw",
+      "ipa": "[kie⁴²]",
+      "rawIPA": "kie42",
+      "page": 96,
+      "locator": "Section 4.3, first paragraph; Figure 2 on p. 97",
+      "variants": [],
+      "learningKind": "word",
+      "note": "Source supplies an English gloss and surface IPA, without a written Chinese form.",
+      "sourceRepetitions": [
+        "kie42"
+      ],
+      "repetitionNote": "All explicitly printed repetitions are retained, including repeats.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-go",
+      "han": null,
+      "writingStatus": "not-supplied",
+      "english": "to go to",
+      "ipa": "[kʰie⁴²]",
+      "rawIPA": "kʰie42",
+      "page": 96,
+      "locator": "Section 4.3, first paragraph; Figure 2 on p. 97",
+      "variants": [],
+      "learningKind": "word",
+      "note": "Source supplies an English gloss and surface IPA, without a written Chinese form.",
+      "sourceRepetitions": [
+        "kʰie42"
+      ],
+      "repetitionNote": "All explicitly printed repetitions are retained, including repeats.",
+      "selectedRepetition": 1
+    },
+    {
+      "id": "liu2026-yingtan-surname",
+      "han": "王",
+      "writingStatus": "attested",
+      "english": "surname Wang",
+      "ipa": "[βɑŋ²⁴]",
+      "rawIPA": "βɑŋ24",
+      "page": 96,
+      "locator": "Table 8, row 9",
+      "variants": [],
+      "learningKind": "character-reading",
+      "note": "Source gloss is “surname”; not a common noun king. Character-reading only.",
+      "sourceRepetitions": [
+        "βɑŋ24",
+        null,
+        null
+      ],
+      "repetitionNote": "Blank source cells remain null; they do not establish additional identical recordings.",
+      "selectedRepetition": 1
+    }
+  ],
+  "held": [
+    {
+      "id": "liu2026-yingtan-help",
+      "han": "帮",
+      "page": 96,
+      "rawIPA": [
+        "pɑŋ22",
+        "pɔŋ22"
+      ],
+      "reason": "Table 8 prints pɑŋ22, while the preceding paragraph prints pɔŋ22 for the same help example. Held pending resolution; neither is silently preferred."
+    },
+    {
+      "han": "憨",
+      "rawIPA": [
+        "xoŋ44",
+        "xoŋ22"
+      ],
+      "reason": "Source English dumb ambiguous between unintelligent and unabletospeak; do notchooseunqualifiedmeaning."
+    },
+    {
+      "han": "五",
+      "rawIPA": [
+        "n̩34"
+      ],
+      "reason": "Source itself marks *Check POA; retain as unresolved ratherthanassertfinal articulation."
+    },
+    {
+      "han": "秧",
+      "rawIPA": [
+        "jɑŋ44"
+      ],
+      "reason": "Source plant istoo broad for the selected written character; noexternalsilentglossrepair."
+    },
+    {
+      "han": "弯",
+      "rawIPA": [
+        "βʷan22"
+      ],
+      "reason": "Visiblelabializedβ needsunsupportedmodifierhandling insharedkey; no strippingʷ. SourceEnglishbended grammar also needsdocumentednormalization."
+    },
+    {
+      "han": "呣",
+      "rawIPA": [
+        "mɛ44"
+      ],
+      "reason": "Modalparticlefunctionunspecified; heldforboundedlexicalscope."
+    },
+    {
+      "description": "Fullsentences p94–95",
+      "reason": "Some syllableslacktone; avoidinferredneutralcontours orwordsegmentation."
+    },
+    {
+      "description": "Figures3swim/medicine andp97cooked/whip,p98explode/outside",
+      "reason": "Outsideinitialboundedselection; remains available primaryevidence forlaterreview, not errors."
+    }
+  ],
+  "transcriptionPolicy": [
+    "Preserve printed IPA segments and actual pitch; superscript digits are display normalization only.",
+    "Select the first explicitly printed repetition for the lesson; retain every printed repetition in this ledger and variants beside the reading.",
+    "Do not infer unchanged repetitions from blank table cells.",
+    "Normalize the obvious English typo too use to to use; preserve its original wording in the record note.",
+    "No written forms are inferred for the two phonetic-only verbs."
+  ],
+  "cultureSources": [
+    {
+      "title": "Jiangxi Daily · onsite interview at the Jiaoshan kiln site · 17 February 2023",
+      "url": "https://epaper.jxxw.com.cn/resfile/2023-02-17/09/jxrb-20230217-009.pdf",
+      "scope": "Reporter’s visit to Tongjia River, Yuehu, with local researcher Wang Hui. Kiln-site and pottery-museum context, not the linguistic consultant’s settlement."
+    },
+    {
+      "title": "Yingtan Taiwan Affairs Office · cultural visit · 22 July 2015",
+      "url": "https://www.gwytb.gov.cn/local/201507/t20150722_10305010.htm",
+      "scope": "Organizer’s dated account explicitly identifies the Tongluowan Yellow Wax Stone Museum in Yuehu. Historical cultural context; no current opening-hours or exhibit claims."
+    }
+  ]
+}

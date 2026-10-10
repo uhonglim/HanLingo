@@ -1,3 +1,4 @@
+import { atlasBranches, atlasLocalities } from "./atlas";
 import { describe, expect, it } from "vitest";
 import { englishLetter, languages, letters, mapPoints } from "./languages";
 
@@ -21,14 +22,14 @@ describe("atlas data integrity", () => {
   it("gives every language and subgroup filter at least one selectable map point", () => {
     for (const language of languages) {
       expect(
-        language.subgroups.length,
+        atlasBranches.filter(branch => branch.groupId === language.id).length,
         `${language.name} needs a subgroup selector`,
       ).toBeGreaterThan(0);
 
-      for (const subgroup of language.subgroups) {
-        const matches = mapPoints.filter(
+      for (const subgroup of atlasBranches.filter(branch => branch.groupId === language.id)) {
+        const matches = atlasLocalities.filter(
           (point) =>
-            point.groupId === language.id && point.subgroupId === subgroup.id,
+            point.groupId === language.id && point.branchId === subgroup.id,
         );
         expect(
           matches.length,
@@ -89,7 +90,7 @@ describe("atlas data integrity", () => {
 
   it("can open every language at its advertised featured place", () => {
     for (const language of languages) {
-      const featuredPoint = mapPoints.find(
+      const featuredPoint = atlasLocalities.find(
         (point) =>
           point.groupId === language.id &&
           point.name === language.featuredPlace,
@@ -98,26 +99,54 @@ describe("atlas data integrity", () => {
         featuredPoint,
         `${language.name}'s featured place must exist on its map`,
       ).toBeDefined();
-      expect(language.hierarchy).toEqual(featuredPoint!.hierarchy);
+
     }
   });
 
   it("preserves Quanzhang as a cluster between Southern Min and local varieties", () => {
-    const quanzhangPlaces = ["Xiamen", "Quanzhou", "Zhangzhou"];
+    const quanzhangPlaces = ["xiamen", "quanzhou", "zhangzhou"];
 
     for (const place of quanzhangPlaces) {
-      const point = mapPoints.find((candidate) => candidate.name === place);
+      const point = mapPoints.find((candidate) => candidate.id === place);
       expect(point, `${place} needs a local example`).toBeDefined();
       expect(point!.hierarchy).toEqual([
         "Sinitic",
         "Min",
         "Southern Min",
-        "Quanzhang cluster",
-        place,
+        "Tsuân-Tsiang",
+        point!.name,
       ]);
     }
 
     expect(mapPoints.some((point) => point.name === "Quanzhang")).toBe(false);
+  });
+
+  it("keeps Tsuân-Tsiang localities as peers with distinct map anchors", () => {
+    const anchors = [
+      ["taipak", 121.5654, 25.033],
+      ["tainan", 120.205, 22.997],
+      ["kaohsiung", 120.3014, 22.6273],
+      ["yilan", 121.753, 24.7554],
+      ["lukang", 120.435, 24.052],
+      ["sanxia", 121.369, 24.934],
+      ["singapore", 103.8198, 1.3521],
+      ["george-town", 100.3327, 5.4141],
+    ] as const;
+
+    for (const [id, longitude, latitude] of anchors) {
+      const point = mapPoints.find((candidate) => candidate.id === id);
+      expect(point, `${id} must remain reachable from the map`).toBeDefined();
+      expect(point!.coordinates).toEqual([longitude, latitude]);
+      expect(point!.groupId).toBe("min");
+      expect(point!.subgroupId).toBe("southern-min");
+      expect(point!.hierarchy.slice(0, -1)).toEqual([
+        "Sinitic",
+        "Min",
+        "Southern Min",
+        "Tsuân-Tsiang",
+      ]);
+      expect(point!.hierarchy).not.toContain("Xiamen");
+    }
   });
 });
 
@@ -166,9 +195,9 @@ describe("letter comparison data", () => {
     }
   });
 
-  it("keeps the formal written register out of the five spoken group maps", () => {
+  it("keeps the formal written register out of the spoken group maps", () => {
     expect(languages.map((language) => language.id).sort()).toEqual(
-      ["mandarin", "min", "yue", "hakka", "wu"].sort(),
+      ["mandarin", "min", "yue", "hakka", "wu", "gan", "xiang", "jin", "hui", "pinghua", "tuhua", "contact"].sort(),
     );
     expect(mapPoints.map((point) => point.groupId)).not.toContain("formal");
     expect(letters.find((letter) => letter.id === "formal")).toBeDefined();

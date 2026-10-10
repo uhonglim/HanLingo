@@ -1,0 +1,4537 @@
+{
+  "repository": "https://github.com/lexibank/beidasinitic",
+  "commit": "6bb8f57330f3b28c126a633f2c2adc6d01d0f555",
+  "version": "v5.1",
+  "doi": "10.5281/zenodo.13149151",
+  "licence": "CC-BY-4.0",
+  "citation": "Běijīng Dàxué 北京大学 (1964): Hànyǔ fāngyán cíhuì 汉语方言词汇 [Chinese dialect vocabularies]. Beijing: Wenzi Gaige.",
+  "changes": "Curated locality match and concept selection; inserted syllable spaces at CLDF source tone boundaries. CLDF source Value and Benzi retained below; the edition already slightly adjusts the 1964 publication’s IPA. No phonetic substitution or tone inference.",
+  "limit": 250,
+  "checksums": {
+    "cldf/forms.csv": "1e7e56677076da4936e2247fc08b5dc905f24030a115b87c0dbdde894481ca68",
+    "cldf/parameters.csv": "e08c90929466b1a2f0b8c9af035887719e9c8f2418c70d47a0557f0d4c57d6f9",
+    "cldf/languages.csv": "b6410c7d5038605a99576d5efb9ae8285efab4dcef5eac7c3e08f6d4a816bf6c",
+    "metadata.json": "2a10d1fd9331dab15d712479e57334a3ae6ec547116c1c00695be5e8262995de",
+    "LICENSE": "945fbcb37deca05bccd7c3ca0e261679f1f5373515504fdbad68f6f3cf6f49b9",
+    "README.md": "65395db5b3de6ae466ccfacc3c85295d3f866c9e0918c435fe013f1c0396d940"
+  },
+  "localities": {
+    "Nanchang": "nanchang-gan",
+    "Changsha": "changsha-xiang"
+  },
+  "rejected": {
+    "nanchang-gan": {
+      "non-simple or incomplete tone notation": 85,
+      "unmapped source IPA": 2,
+      "missing-character marker 囗": 4
+    },
+    "changsha-xiang": {
+      "non-simple or incomplete tone notation": 132,
+      "unmapped source IPA": 1,
+      "missing-character marker 囗": 4,
+      "edited or annotated form needs review": 1
+    }
+  },
+  "records": [
+    {
+      "id": "beida1964-Nanchang-139_rice-1",
+      "sourceId": "Nanchang-139_rice-1",
+      "sourceValue": "mi²¹³",
+      "sourceCharacters": "米",
+      "conceptId": "139_rice",
+      "concepticonId": "926",
+      "line": 12037
+    },
+    {
+      "id": "beida1964-Nanchang-505_eat-1",
+      "sourceId": "Nanchang-505_eat-1",
+      "sourceValue": "tɕʰiak⁵",
+      "sourceCharacters": "吃",
+      "conceptId": "505_eat",
+      "concepticonId": "1336",
+      "line": 4532
+    },
+    {
+      "id": "beida1964-Nanchang-506_drink-1",
+      "sourceId": "Nanchang-506_drink-1",
+      "sourceValue": "tɕʰiak⁵",
+      "sourceCharacters": "吃",
+      "conceptId": "506_drink",
+      "concepticonId": "1401",
+      "line": 4181
+    },
+    {
+      "id": "beida1964-Nanchang-214_tea-1",
+      "sourceId": "Nanchang-214_tea-1",
+      "sourceValue": "tsʰa²⁴",
+      "sourceCharacters": "茶",
+      "conceptId": "214_tea",
+      "concepticonId": "1373",
+      "line": 14983
+    },
+    {
+      "id": "beida1964-Nanchang-204_egg-1",
+      "sourceId": "Nanchang-204_egg-1",
+      "sourceValue": "tɕi⁴²tʰan³¹",
+      "sourceCharacters": "雞 蛋",
+      "conceptId": "204_egg",
+      "concepticonId": "2779",
+      "line": 4552
+    },
+    {
+      "id": "beida1964-Nanchang-194_noodles-1",
+      "sourceId": "Nanchang-194_noodles-1",
+      "sourceValue": "miɛn³¹",
+      "sourceCharacters": "面",
+      "conceptId": "194_noodles",
+      "concepticonId": "973",
+      "line": 10051
+    },
+    {
+      "id": "beida1964-Nanchang-153_vegetable-1",
+      "sourceId": "Nanchang-153_vegetable-1",
+      "sourceValue": "tɕʰiaŋ⁴²tsʰai²¹³",
+      "sourceCharacters": "靑 菜",
+      "conceptId": "153_vegetable",
+      "concepticonId": "924",
+      "line": 16762
+    },
+    {
+      "id": "beida1964-Nanchang-152_potato-1",
+      "sourceId": "Nanchang-152_potato-1",
+      "sourceValue": "iɔŋ⁵⁵y³¹",
+      "sourceCharacters": "洋 芋",
+      "conceptId": "152_potato",
+      "concepticonId": "593",
+      "line": 11444
+    },
+    {
+      "id": "beida1964-Nanchang-160_tomato-1",
+      "sourceId": "Nanchang-160_tomato-1",
+      "sourceValue": "fan⁴²tɕʰia²⁴",
+      "sourceCharacters": "番 茄",
+      "conceptId": "160_tomato",
+      "concepticonId": "986",
+      "line": 16119
+    },
+    {
+      "id": "beida1964-Nanchang-165_fruit-1",
+      "sourceId": "Nanchang-165_fruit-1",
+      "sourceValue": "sui²¹³kuɔ²¹³",
+      "sourceCharacters": "水 果",
+      "conceptId": "165_fruit",
+      "concepticonId": "1507",
+      "line": 5862
+    },
+    {
+      "id": "beida1964-Nanchang-178_banana-1",
+      "sourceId": "Nanchang-178_banana-1",
+      "sourceValue": "ɕiɔŋ⁴²tɕiɛu⁴²",
+      "sourceCharacters": "香 蕉",
+      "conceptId": "178_banana",
+      "concepticonId": "868",
+      "line": 912
+    },
+    {
+      "id": "beida1964-Nanchang-167_pear-1",
+      "sourceId": "Nanchang-167_pear-1",
+      "sourceValue": "li⁵⁵",
+      "sourceCharacters": "梨",
+      "conceptId": "167_pear",
+      "concepticonId": "922",
+      "line": 10546
+    },
+    {
+      "id": "beida1964-Nanchang-171_grape-1",
+      "sourceId": "Nanchang-171_grape-1",
+      "sourceValue": "pʰu²⁴tʰau²⁴",
+      "sourceCharacters": "葡 萄",
+      "conceptId": "171_grape",
+      "concepticonId": "920",
+      "line": 6475
+    },
+    {
+      "id": "beida1964-Nanchang-92_cat-1",
+      "sourceId": "Nanchang-92_cat-1",
+      "sourceValue": "mau⁴²",
+      "sourceCharacters": "貓",
+      "conceptId": "92_cat",
+      "concepticonId": "1208",
+      "line": 2288
+    },
+    {
+      "id": "beida1964-Nanchang-82_cow-1",
+      "sourceId": "Nanchang-82_cow-1",
+      "sourceValue": "mu²¹³ȵiu⁵⁵",
+      "sourceCharacters": "母 牛",
+      "conceptId": "82_cow",
+      "concepticonId": "1007",
+      "line": 3359
+    },
+    {
+      "id": "beida1964-Nanchang-401_man-1",
+      "sourceId": "Nanchang-401_man-1",
+      "sourceValue": "lan⁵⁵ȵin⁵⁵",
+      "sourceCharacters": "男 人",
+      "conceptId": "401_man",
+      "concepticonId": "1554",
+      "line": 8961
+    },
+    {
+      "id": "beida1964-Nanchang-402_woman-1",
+      "sourceId": "Nanchang-402_woman-1",
+      "sourceValue": "ȵy²¹³ȵyin⁵⁵",
+      "sourceCharacters": "女 人",
+      "conceptId": "402_woman",
+      "concepticonId": "962",
+      "line": 17682
+    },
+    {
+      "id": "beida1964-Nanchang-381_head-1",
+      "sourceId": "Nanchang-381_head-1",
+      "sourceValue": "tʰɛu²⁴",
+      "sourceCharacters": "頭",
+      "conceptId": "381_head",
+      "concepticonId": "1256",
+      "line": 6832
+    },
+    {
+      "id": "beida1964-Nanchang-384_eye-1",
+      "sourceId": "Nanchang-384_eye-1",
+      "sourceValue": "ŋan²¹³tɕiaŋ⁴²",
+      "sourceCharacters": "眼 睛",
+      "conceptId": "384_eye",
+      "concepticonId": "1248",
+      "line": 4739
+    },
+    {
+      "id": "beida1964-Nanchang-385_nose-1",
+      "sourceId": "Nanchang-385_nose-1",
+      "sourceValue": "pʰit⁵kuŋ⁴²",
+      "sourceCharacters": "鼻 公",
+      "conceptId": "385_nose",
+      "concepticonId": "1221",
+      "line": 10088
+    },
+    {
+      "id": "beida1964-Nanchang-387_mouth-1",
+      "sourceId": "Nanchang-387_mouth-1",
+      "sourceValue": "tsui²¹³pa⁴²",
+      "sourceCharacters": "咀 巴",
+      "conceptId": "387_mouth",
+      "concepticonId": "674",
+      "line": 9625
+    },
+    {
+      "id": "beida1964-Nanchang-1_sun-1",
+      "sourceId": "Nanchang-1_sun-1",
+      "sourceValue": "ȵit⁵tʰɛu²⁴",
+      "sourceCharacters": "日 頭",
+      "conceptId": "1_sun",
+      "concepticonId": "1343",
+      "line": 14520
+    },
+    {
+      "id": "beida1964-Nanchang-2_moon-1",
+      "sourceId": "Nanchang-2_moon-1",
+      "sourceValue": "ȵiɔt⁵kuɔŋ⁴²",
+      "sourceCharacters": "月 光",
+      "conceptId": "2_moon",
+      "concepticonId": "1313",
+      "line": 9426
+    },
+    {
+      "id": "beida1964-Nanchang-492_rain-1",
+      "sourceId": "Nanchang-492_rain-1",
+      "sourceValue": "lɔk⁵y²¹³",
+      "sourceCharacters": "落 雨",
+      "conceptId": "492_rain",
+      "concepticonId": "1253",
+      "line": 11778
+    },
+    {
+      "id": "beida1964-Nanchang-5_rain-1",
+      "sourceId": "Nanchang-5_rain-1",
+      "sourceValue": "y²¹³",
+      "sourceCharacters": "雨",
+      "conceptId": "5_rain",
+      "concepticonId": "658",
+      "line": 11798
+    },
+    {
+      "id": "beida1964-Nanchang-4_wind-1",
+      "sourceId": "Nanchang-4_wind-1",
+      "sourceValue": "fuŋ⁴²",
+      "sourceCharacters": "風",
+      "conceptId": "4_wind",
+      "concepticonId": "960",
+      "line": 17555
+    },
+    {
+      "id": "beida1964-Nanchang-9_snow-1",
+      "sourceId": "Nanchang-9_snow-1",
+      "sourceValue": "ɕyɔt⁵",
+      "sourceCharacters": "雪",
+      "conceptId": "9_snow",
+      "concepticonId": "784",
+      "line": 13410
+    },
+    {
+      "id": "beida1964-Nanchang-263_chair-1",
+      "sourceId": "Nanchang-263_chair-1",
+      "sourceValue": "kau⁴²i²¹³",
+      "sourceCharacters": "交 椅",
+      "conceptId": "263_chair",
+      "concepticonId": "1476",
+      "line": 2477
+    },
+    {
+      "id": "beida1964-Nanchang-271_bed-1",
+      "sourceId": "Nanchang-271_bed-1",
+      "sourceValue": "tsʰɔŋ²⁴",
+      "sourceCharacters": "床",
+      "conceptId": "271_bed",
+      "concepticonId": "1663",
+      "line": 1026
+    },
+    {
+      "id": "beida1964-Nanchang-282_spoon-1",
+      "sourceId": "Nanchang-282_spoon-1",
+      "sourceValue": "tʰiɛu²⁴kiɛn⁴²",
+      "sourceCharacters": "調 羹",
+      "conceptId": "282_spoon",
+      "concepticonId": "1378",
+      "line": 13725
+    },
+    {
+      "id": "beida1964-Nanchang-305_soap-1",
+      "sourceId": "Nanchang-305_soap-1",
+      "sourceValue": "fei⁵⁵tsʰau³¹",
+      "sourceCharacters": "肥 皂",
+      "conceptId": "305_soap",
+      "concepticonId": "788",
+      "line": 13426
+    },
+    {
+      "id": "beida1964-Nanchang-29_today-1",
+      "sourceId": "Nanchang-29_today-1",
+      "sourceValue": "tɕin⁴²ȵit⁵",
+      "sourceCharacters": "今 日",
+      "conceptId": "29_today",
+      "concepticonId": "1283",
+      "line": 16059
+    },
+    {
+      "id": "beida1964-Nanchang-30_tomorrow-1",
+      "sourceId": "Nanchang-30_tomorrow-1",
+      "sourceValue": "miaŋ⁵⁵ȵit⁵",
+      "sourceCharacters": "明 日",
+      "conceptId": "30_tomorrow",
+      "concepticonId": "1329",
+      "line": 16147
+    },
+    {
+      "id": "beida1964-Nanchang-33_yesterday-1",
+      "sourceId": "Nanchang-33_yesterday-1",
+      "sourceValue": "tsʰɔk⁵ȵit⁵",
+      "sourceCharacters": "昨 日",
+      "conceptId": "33_yesterday",
+      "concepticonId": "1174",
+      "line": 17913
+    },
+    {
+      "id": "beida1964-Nanchang-38_morning-1",
+      "sourceId": "Nanchang-38_morning-1",
+      "sourceValue": "tsau²¹³sɔŋ³¹",
+      "sourceCharacters": "早 上",
+      "conceptId": "38_morning",
+      "concepticonId": "1339",
+      "line": 9470
+    },
+    {
+      "id": "beida1964-Nanchang-750_good-1",
+      "sourceId": "Nanchang-750_good-1",
+      "sourceValue": "hau²¹³",
+      "sourceCharacters": "好",
+      "conceptId": "750_good",
+      "concepticonId": "1035",
+      "line": 6285
+    },
+    {
+      "id": "beida1964-Nanchang-751_bad-1",
+      "sourceId": "Nanchang-751_bad-1",
+      "sourceValue": "fai³¹",
+      "sourceCharacters": "壞",
+      "conceptId": "751_bad",
+      "concepticonId": "1292",
+      "line": 778
+    },
+    {
+      "id": "beida1964-Nanchang-691_big-1",
+      "sourceId": "Nanchang-691_big-1",
+      "sourceValue": "tʰai³¹",
+      "sourceCharacters": "大",
+      "conceptId": "691_big",
+      "concepticonId": "1202",
+      "line": 1192
+    },
+    {
+      "id": "beida1964-Nanchang-692_small-1",
+      "sourceId": "Nanchang-692_small-1",
+      "sourceValue": "ɕi⁵⁵",
+      "sourceCharacters": "細",
+      "conceptId": "692_small",
+      "concepticonId": "1246",
+      "line": 13269
+    },
+    {
+      "id": "beida1964-Nanchang-696_long-1",
+      "sourceId": "Nanchang-696_long-1",
+      "sourceValue": "tsʰɔŋ²⁴",
+      "sourceCharacters": "長",
+      "conceptId": "696_long",
+      "concepticonId": "1203",
+      "line": 8612
+    },
+    {
+      "id": "beida1964-Nanchang-695_short-1",
+      "sourceId": "Nanchang-695_short-1",
+      "sourceValue": "ŋai²¹³",
+      "sourceCharacters": "矮",
+      "conceptId": "695_short",
+      "concepticonId": "2191",
+      "line": 12842
+    },
+    {
+      "id": "beida1964-Nanchang-697_short-1",
+      "sourceId": "Nanchang-697_short-1",
+      "sourceValue": "tɔn²¹³",
+      "sourceCharacters": "短",
+      "conceptId": "697_short",
+      "concepticonId": "1645",
+      "line": 12823
+    },
+    {
+      "id": "beida1964-Nanchang-757_hot-1",
+      "sourceId": "Nanchang-757_hot-1",
+      "sourceValue": "lɛt⁵",
+      "sourceCharacters": "熱",
+      "conceptId": "757_hot",
+      "concepticonId": "2272",
+      "line": 7246
+    },
+    {
+      "id": "beida1964-Nanchang-758_cold-1",
+      "sourceId": "Nanchang-758_cold-1",
+      "sourceValue": "laŋ²¹³",
+      "sourceCharacters": "冷",
+      "conceptId": "758_cold",
+      "concepticonId": "1287",
+      "line": 2966
+    },
+    {
+      "id": "beida1964-Nanchang-732_old-1",
+      "sourceId": "Nanchang-732_old-1",
+      "sourceValue": "lau²¹³",
+      "sourceCharacters": "老",
+      "conceptId": "732_old",
+      "concepticonId": "",
+      "line": 10228
+    },
+    {
+      "id": "beida1964-Nanchang-722_black-1",
+      "sourceId": "Nanchang-722_black-1",
+      "sourceValue": "hɛt⁵",
+      "sourceCharacters": "黑",
+      "conceptId": "722_black",
+      "concepticonId": "163",
+      "line": 1229
+    },
+    {
+      "id": "beida1964-Nanchang-568_run-1",
+      "sourceId": "Nanchang-568_run-1",
+      "sourceValue": "pʰau²¹³",
+      "sourceCharacters": "跑",
+      "conceptId": "568_run",
+      "concepticonId": "1519",
+      "line": 12369
+    },
+    {
+      "id": "beida1964-Nanchang-650_sleep-1",
+      "sourceId": "Nanchang-650_sleep-1",
+      "sourceValue": "kʰun²¹³kau⁵⁵",
+      "sourceCharacters": "睏 覺",
+      "conceptId": "650_sleep",
+      "concepticonId": "1585",
+      "line": 13209
+    },
+    {
+      "id": "beida1964-Nanchang-503_hear-1",
+      "sourceId": "Nanchang-503_hear-1",
+      "sourceValue": "tʰiaŋ⁴²",
+      "sourceCharacters": "聽",
+      "conceptId": "503_hear",
+      "concepticonId": "1408",
+      "line": 6850
+    },
+    {
+      "id": "beida1964-Nanchang-672_know-1",
+      "sourceId": "Nanchang-672_know-1",
+      "sourceValue": "ɕiɛu²¹³tɛt⁵",
+      "sourceCharacters": "曉 得",
+      "conceptId": "672_know",
+      "concepticonId": "1410",
+      "line": 8051
+    },
+    {
+      "id": "beida1964-Nanchang-610_speak-1",
+      "sourceId": "Nanchang-610_speak-1",
+      "sourceValue": "ua³¹",
+      "sourceCharacters": "話",
+      "conceptId": "610_speak",
+      "concepticonId": "1623",
+      "line": 13642
+    },
+    {
+      "id": "beida1964-Nanchang-6_fog-1",
+      "sourceId": "Nanchang-6_fog-1",
+      "sourceValue": "u³¹",
+      "sourceCharacters": "霧",
+      "conceptId": "6_fog",
+      "concepticonId": "249",
+      "line": 5498
+    },
+    {
+      "id": "beida1964-Nanchang-7_dew-1",
+      "sourceId": "Nanchang-7_dew-1",
+      "sourceValue": "lu³¹sui²¹³",
+      "sourceCharacters": "露 水",
+      "conceptId": "7_dew",
+      "concepticonId": "1977",
+      "line": 3861
+    },
+    {
+      "id": "beida1964-Nanchang-8_frost-1",
+      "sourceId": "Nanchang-8_frost-1",
+      "sourceValue": "sɔŋ⁴²",
+      "sourceCharacters": "霜",
+      "conceptId": "8_frost",
+      "concepticonId": "2034",
+      "line": 5844
+    },
+    {
+      "id": "beida1964-Nanchang-10_ice-1",
+      "sourceId": "Nanchang-10_ice-1",
+      "sourceValue": "pin⁴²",
+      "sourceCharacters": "冰",
+      "conceptId": "10_ice",
+      "concepticonId": "617",
+      "line": 7428
+    },
+    {
+      "id": "beida1964-Nanchang-13_thunder-1",
+      "sourceId": "Nanchang-13_thunder-1",
+      "sourceValue": "lui⁵⁵",
+      "sourceCharacters": "雷",
+      "conceptId": "13_thunder",
+      "concepticonId": "1150",
+      "line": 15807
+    },
+    {
+      "id": "beida1964-Nanchang-14_rainbow-1",
+      "sourceId": "Nanchang-14_rainbow-1",
+      "sourceValue": "kɔŋ⁵⁵",
+      "sourceCharacters": "虹",
+      "conceptId": "14_rainbow",
+      "concepticonId": "1733",
+      "line": 11818
+    },
+    {
+      "id": "beida1964-Nanchang-15_weather-1",
+      "sourceId": "Nanchang-15_weather-1",
+      "sourceValue": "tʰiɛn⁴²tɕʰi²¹³",
+      "sourceCharacters": "天 氣",
+      "conceptId": "15_weather",
+      "concepticonId": "952",
+      "line": 17207
+    },
+    {
+      "id": "beida1964-Nanchang-16_sunnyday-1",
+      "sourceId": "Nanchang-16_sunnyday-1",
+      "sourceValue": "tɕʰiaŋ²⁴tʰiɛn⁴²",
+      "sourceCharacters": "晴 天",
+      "conceptId": "16_sunnyday",
+      "concepticonId": "2742",
+      "line": 14559
+    },
+    {
+      "id": "beida1964-Nanchang-17_cloudyday-1",
+      "sourceId": "Nanchang-17_cloudyday-1",
+      "sourceValue": "in⁴²tʰiɛn⁴²",
+      "sourceCharacters": "陰 天",
+      "conceptId": "17_cloudyday",
+      "concepticonId": "2743",
+      "line": 2884
+    },
+    {
+      "id": "beida1964-Nanchang-18_seaocean-1",
+      "sourceId": "Nanchang-18_seaocean-1",
+      "sourceValue": "hai²¹³",
+      "sourceCharacters": "海",
+      "conceptId": "18_seaocean",
+      "concepticonId": "2282",
+      "line": 12585
+    },
+    {
+      "id": "beida1964-Nanchang-19_lake-1",
+      "sourceId": "Nanchang-19_lake-1",
+      "sourceValue": "fu⁵⁵",
+      "sourceCharacters": "湖",
+      "conceptId": "19_lake",
+      "concepticonId": "624",
+      "line": 8091
+    },
+    {
+      "id": "beida1964-Nanchang-20_pond-1",
+      "sourceId": "Nanchang-20_pond-1",
+      "sourceValue": "tsʰɿ²⁴tʰɔŋ²⁴",
+      "sourceCharacters": "池 塘",
+      "conceptId": "20_pond",
+      "concepticonId": "2035",
+      "line": 11250
+    },
+    {
+      "id": "beida1964-Nanchang-21_landscape-1",
+      "sourceId": "Nanchang-21_landscape-1",
+      "sourceValue": "tɕin²¹³tsɿ⁵⁵",
+      "sourceCharacters": "景 致",
+      "conceptId": "21_landscape",
+      "concepticonId": "2342",
+      "line": 8134
+    },
+    {
+      "id": "beida1964-Nanchang-22_timeseason-1",
+      "sourceId": "Nanchang-22_timeseason-1",
+      "sourceValue": "sɿ⁵⁵hɛu³¹",
+      "sourceCharacters": "時 侯",
+      "conceptId": "22_timeseason",
+      "concepticonId": "892",
+      "line": 15940
+    },
+    {
+      "id": "beida1964-Nanchang-23_thisyear-1",
+      "sourceId": "Nanchang-23_thisyear-1",
+      "sourceValue": "tɕin⁴²ȵiɛn⁵⁵",
+      "sourceCharacters": "今 年",
+      "conceptId": "23_thisyear",
+      "concepticonId": "513",
+      "line": 15642
+    },
+    {
+      "id": "beida1964-Nanchang-25_theyearafternext-1",
+      "sourceId": "Nanchang-25_theyearafternext-1",
+      "sourceValue": "hɛu³¹ȵiɛn⁵⁵",
+      "sourceCharacters": "後 年",
+      "conceptId": "25_theyearafternext",
+      "concepticonId": "2330",
+      "line": 15192
+    },
+    {
+      "id": "beida1964-Nanchang-26_lastyear-1",
+      "sourceId": "Nanchang-26_lastyear-1",
+      "sourceValue": "tɕʰiu³¹ȵiɛu⁵⁵",
+      "sourceCharacters": "舊 年",
+      "conceptId": "26_lastyear",
+      "concepticonId": "514",
+      "line": 8157
+    },
+    {
+      "id": "beida1964-Nanchang-27_theyearbeforelast-1",
+      "sourceId": "Nanchang-27_theyearbeforelast-1",
+      "sourceValue": "tɕʰiɛn²⁴ȵiɛn⁵⁵",
+      "sourceCharacters": "前 年",
+      "conceptId": "27_theyearbeforelast",
+      "concepticonId": "2331",
+      "line": 15210
+    },
+    {
+      "id": "beida1964-Nanchang-31_thedayaftertomorrow-1",
+      "sourceId": "Nanchang-31_thedayaftertomorrow-1",
+      "sourceValue": "hɛu³¹ȵit⁵",
+      "sourceCharacters": "後 日",
+      "conceptId": "31_thedayaftertomorrow",
+      "concepticonId": "1179",
+      "line": 15154
+    },
+    {
+      "id": "beida1964-Nanchang-32_threedaysfromnow-1",
+      "sourceId": "Nanchang-32_threedaysfromnow-1",
+      "sourceValue": "uan³¹hɛu³¹ȵit⁵",
+      "sourceCharacters": "萬 後 日",
+      "conceptId": "32_threedaysfromnow",
+      "concepticonId": "2332",
+      "line": 15719
+    },
+    {
+      "id": "beida1964-Nanchang-34_thedaybeforeyesterday-1",
+      "sourceId": "Nanchang-34_thedaybeforeyesterday-1",
+      "sourceValue": "tɕʰiɛn²⁴ȵit⁵",
+      "sourceCharacters": "前 日",
+      "conceptId": "34_thedaybeforeyesterday",
+      "concepticonId": "1180",
+      "line": 15173
+    },
+    {
+      "id": "beida1964-Nanchang-35_threedaysbefore-1",
+      "sourceId": "Nanchang-35_threedaysbefore-1",
+      "sourceValue": "tɕʰiɛn²⁴tɕʰiɛn²⁴ȵit⁵",
+      "sourceCharacters": "前 前 日",
+      "conceptId": "35_threedaysbefore",
+      "concepticonId": "",
+      "line": 15700
+    },
+    {
+      "id": "beida1964-Nanchang-36_dayopposedtonight-2",
+      "sourceId": "Nanchang-36_dayopposedtonight-2",
+      "sourceValue": "ȵit⁵sɔŋ³¹",
+      "sourceCharacters": "日 上",
+      "conceptId": "36_dayopposedtonight",
+      "concepticonId": "1225",
+      "line": 3715
+    },
+    {
+      "id": "beida1964-Nanchang-39_forenoon-1",
+      "sourceId": "Nanchang-39_forenoon-1",
+      "sourceValue": "sɔŋ³¹tɕiu⁵⁵",
+      "sourceCharacters": "上 晝",
+      "conceptId": "39_forenoon",
+      "concepticonId": "2775",
+      "line": 5601
+    },
+    {
+      "id": "beida1964-Nanchang-40_noon-1",
+      "sourceId": "Nanchang-40_noon-1",
+      "sourceValue": "tɔŋ⁴²tɕiu⁵⁵",
+      "sourceCharacters": "當 晝",
+      "conceptId": "40_noon",
+      "concepticonId": "12",
+      "line": 10070
+    },
+    {
+      "id": "beida1964-Nanchang-41_afternoon-1",
+      "sourceId": "Nanchang-41_afternoon-1",
+      "sourceValue": "ha³¹tɕiu⁵⁵",
+      "sourceCharacters": "下 晝",
+      "conceptId": "41_afternoon",
+      "concepticonId": "1807",
+      "line": 189
+    },
+    {
+      "id": "beida1964-Nanchang-42_atdusknightfall-1",
+      "sourceId": "Nanchang-42_atdusknightfall-1",
+      "sourceValue": "tʰɔn³¹ia³¹",
+      "sourceCharacters": "斷 夜",
+      "conceptId": "42_atdusknightfall",
+      "concepticonId": "2297",
+      "line": 564
+    },
+    {
+      "id": "beida1964-Nanchang-43_evening-1",
+      "sourceId": "Nanchang-43_evening-1",
+      "sourceValue": "ia³¹uan²¹³",
+      "sourceCharacters": "夜 晚",
+      "conceptId": "43_evening",
+      "concepticonId": "1629",
+      "line": 4701
+    },
+    {
+      "id": "beida1964-Nanchang-44_newyear-1",
+      "sourceId": "Nanchang-44_newyear-1",
+      "sourceValue": "tʰai³¹ȵiɛn⁵⁵tsʰu⁴²it⁵",
+      "sourceCharacters": "大 年 初 一",
+      "conceptId": "44_newyear",
+      "concepticonId": "",
+      "line": 9955
+    },
+    {
+      "id": "beida1964-Nanchang-45_thedragonboatfestival-1",
+      "sourceId": "Nanchang-45_thedragonboatfestival-1",
+      "sourceValue": "tɔn⁴²u²¹³",
+      "sourceCharacters": "端 午",
+      "conceptId": "45_thedragonboatfestival",
+      "concepticonId": "2186",
+      "line": 15107
+    },
+    {
+      "id": "beida1964-Nanchang-46_themidautumnfestival15thdayofthe8thlunarmonth-1",
+      "sourceId": "Nanchang-46_themidautumnfestival15thdayofthe8thlunarmonth-1",
+      "sourceValue": "tsuŋ⁴²tɕʰiu⁴²",
+      "sourceCharacters": "中 秋",
+      "conceptId": "46_themidautumnfestival15thdayofthe8thlunarmonth",
+      "concepticonId": "2187",
+      "line": 15132
+    },
+    {
+      "id": "beida1964-Nanchang-47_thedoubleninefestival-1",
+      "sourceId": "Nanchang-47_thedoubleninefestival-1",
+      "sourceValue": "tsʰuŋ²⁴iɔŋ⁵⁵",
+      "sourceCharacters": "重 陽",
+      "conceptId": "47_thedoubleninefestival",
+      "concepticonId": "",
+      "line": 15080
+    },
+    {
+      "id": "beida1964-Nanchang-48_chinesenewyearseve-1",
+      "sourceId": "Nanchang-48_chinesenewyearseve-1",
+      "sourceValue": "san⁴²sət⁵",
+      "sourceCharacters": "三 十",
+      "conceptId": "48_chinesenewyearseve",
+      "concepticonId": "2188",
+      "line": 17
+    },
+    {
+      "id": "beida1964-Nanchang-51_copper-1",
+      "sourceId": "Nanchang-51_copper-1",
+      "sourceValue": "tʰuŋ²⁴",
+      "sourceCharacters": "銅",
+      "conceptId": "51_copper",
+      "concepticonId": "1825",
+      "line": 3217
+    },
+    {
+      "id": "beida1964-Nanchang-52_iron-1",
+      "sourceId": "Nanchang-52_iron-1",
+      "sourceValue": "tʰiɛt⁵",
+      "sourceCharacters": "鉄",
+      "conceptId": "52_iron",
+      "concepticonId": "621",
+      "line": 7715
+    },
+    {
+      "id": "beida1964-Nanchang-53_steel-1",
+      "sourceId": "Nanchang-53_steel-1",
+      "sourceValue": "kɔŋ⁴²",
+      "sourceCharacters": "鋼",
+      "conceptId": "53_steel",
+      "concepticonId": "2343",
+      "line": 14006
+    },
+    {
+      "id": "beida1964-Nanchang-54_lead-1",
+      "sourceId": "Nanchang-54_lead-1",
+      "sourceValue": "ȵyɔn⁵⁵",
+      "sourceCharacters": "鉛",
+      "conceptId": "54_lead",
+      "concepticonId": "627",
+      "line": 8213
+    },
+    {
+      "id": "beida1964-Nanchang-55_tin-1",
+      "sourceId": "Nanchang-55_tin-1",
+      "sourceValue": "ɕiak⁵",
+      "sourceCharacters": "錫",
+      "conceptId": "55_tin",
+      "concepticonId": "893",
+      "line": 15958
+    },
+    {
+      "id": "beida1964-Nanchang-56_coal-1",
+      "sourceId": "Nanchang-56_coal-1",
+      "sourceValue": "mei⁵⁵",
+      "sourceCharacters": "煤",
+      "conceptId": "56_coal",
+      "concepticonId": "2658",
+      "line": 2909
+    },
+    {
+      "id": "beida1964-Nanchang-57_kerosine-1",
+      "sourceId": "Nanchang-57_kerosine-1",
+      "sourceValue": "iɔŋ⁵⁵iu⁵⁵",
+      "sourceCharacters": "洋 油",
+      "conceptId": "57_kerosine",
+      "concepticonId": "",
+      "line": 7880
+    },
+    {
+      "id": "beida1964-Nanchang-58_petrol-1",
+      "sourceId": "Nanchang-58_petrol-1",
+      "sourceValue": "tɕʰi²¹³iu⁵⁵",
+      "sourceCharacters": "汽 油",
+      "conceptId": "58_petrol",
+      "concepticonId": "2344",
+      "line": 10680
+    },
+    {
+      "id": "beida1964-Nanchang-59_stone-1",
+      "sourceId": "Nanchang-59_stone-1",
+      "sourceValue": "sak⁵tʰɛu²⁴",
+      "sourceCharacters": "石 頭",
+      "conceptId": "59_stone",
+      "concepticonId": "857",
+      "line": 14178
+    },
+    {
+      "id": "beida1964-Nanchang-60_mudearth-1",
+      "sourceId": "Nanchang-60_mudearth-1",
+      "sourceValue": "ȵi⁵⁵pa⁴²",
+      "sourceCharacters": "泥 巴",
+      "conceptId": "60_mudearth",
+      "concepticonId": "640",
+      "line": 9643
+    },
+    {
+      "id": "beida1964-Nanchang-61_soilearth-1",
+      "sourceId": "Nanchang-61_soilearth-1",
+      "sourceValue": "tʰu²¹³",
+      "sourceCharacters": "土",
+      "conceptId": "61_soilearth",
+      "concepticonId": "1228",
+      "line": 13482
+    },
+    {
+      "id": "beida1964-Nanchang-62_dust-1",
+      "sourceId": "Nanchang-62_dust-1",
+      "sourceValue": "fei⁴²",
+      "sourceCharacters": "灰",
+      "conceptId": "62_dust",
+      "concepticonId": "2",
+      "line": 4321
+    },
+    {
+      "id": "beida1964-Nanchang-63_tiger-1",
+      "sourceId": "Nanchang-63_tiger-1",
+      "sourceValue": "lau²¹³fu²¹³",
+      "sourceCharacters": "老 虎",
+      "conceptId": "63_tiger",
+      "concepticonId": "846",
+      "line": 15863
+    },
+    {
+      "id": "beida1964-Nanchang-65_leopardpanther-1",
+      "sourceId": "Nanchang-65_leopardpanther-1",
+      "sourceValue": "pau⁵⁵",
+      "sourceCharacters": "豹",
+      "conceptId": "65_leopardpanther",
+      "concepticonId": "1139",
+      "line": 8309
+    },
+    {
+      "id": "beida1964-Nanchang-66_wolf-1",
+      "sourceId": "Nanchang-66_wolf-1",
+      "sourceValue": "lɔŋ⁵⁵",
+      "sourceCharacters": "狼",
+      "conceptId": "66_wolf",
+      "concepticonId": "522",
+      "line": 17657
+    },
+    {
+      "id": "beida1964-Nanchang-67_deer-1",
+      "sourceId": "Nanchang-67_deer-1",
+      "sourceValue": "luk⁵",
+      "sourceCharacters": "鹿",
+      "conceptId": "67_deer",
+      "concepticonId": "1936",
+      "line": 3787
+    },
+    {
+      "id": "beida1964-Nanchang-70_ratmouse-1",
+      "sourceId": "Nanchang-70_ratmouse-1",
+      "sourceValue": "lau³¹ɕy²¹³",
+      "sourceCharacters": "老 鼠",
+      "conceptId": "70_ratmouse",
+      "concepticonId": "2139",
+      "line": 11877
+    },
+    {
+      "id": "beida1964-Nanchang-71_hawkeagle-1",
+      "sourceId": "Nanchang-71_hawkeagle-1",
+      "sourceValue": "iɛu³¹in⁴²",
+      "sourceCharacters": "鷂 鷹",
+      "conceptId": "71_hawkeagle",
+      "concepticonId": "2683",
+      "line": 6774
+    },
+    {
+      "id": "beida1964-Nanchang-72_owl-1",
+      "sourceId": "Nanchang-72_owl-1",
+      "sourceValue": "mau⁴²tʰɛu²⁴in⁴²",
+      "sourceCharacters": "貓 頭 鷹",
+      "conceptId": "72_owl",
+      "concepticonId": "735",
+      "line": 10400
+    },
+    {
+      "id": "beida1964-Nanchang-73_wildgoose-1",
+      "sourceId": "Nanchang-73_wildgoose-1",
+      "sourceValue": "ŋan³¹",
+      "sourceCharacters": "雁",
+      "conceptId": "73_wildgoose",
+      "concepticonId": "2776",
+      "line": 17518
+    },
+    {
+      "id": "beida1964-Nanchang-75_crow-1",
+      "sourceId": "Nanchang-75_crow-1",
+      "sourceValue": "lau²¹³ŋa⁴²",
+      "sourceCharacters": "老 鴉",
+      "conceptId": "75_crow",
+      "concepticonId": "913",
+      "line": 3435
+    },
+    {
+      "id": "beida1964-Nanchang-76_magpie-1",
+      "sourceId": "Nanchang-76_magpie-1",
+      "sourceValue": "ɕi²¹³tɕʰiɔk⁵",
+      "sourceCharacters": "喜 鵲",
+      "conceptId": "76_magpie",
+      "concepticonId": "2039",
+      "line": 8832
+    },
+    {
+      "id": "beida1964-Nanchang-81_bull-1",
+      "sourceId": "Nanchang-81_bull-1",
+      "sourceValue": "ȵiu⁵⁵ku²¹³",
+      "sourceCharacters": "牛 牯",
+      "conceptId": "81_bull",
+      "concepticonId": "1008",
+      "line": 1840
+    },
+    {
+      "id": "beida1964-Nanchang-83_stallion-1",
+      "sourceId": "Nanchang-83_stallion-1",
+      "sourceValue": "kuŋ⁴²ma²¹³",
+      "sourceCharacters": "公 馬",
+      "conceptId": "83_stallion",
+      "concepticonId": "936",
+      "line": 13817
+    },
+    {
+      "id": "beida1964-Nanchang-84_mare-1",
+      "sourceId": "Nanchang-84_mare-1",
+      "sourceValue": "mu²¹³ma²¹³",
+      "sourceCharacters": "母 馬",
+      "conceptId": "84_mare",
+      "concepticonId": "938",
+      "line": 9027
+    },
+    {
+      "id": "beida1964-Nanchang-85_malepig-1",
+      "sourceId": "Nanchang-85_malepig-1",
+      "sourceValue": "kuŋ⁴²tɕy⁴²",
+      "sourceCharacters": "公 豬",
+      "conceptId": "85_malepig",
+      "concepticonId": "2487",
+      "line": 8937
+    },
+    {
+      "id": "beida1964-Nanchang-86_sow-1",
+      "sourceId": "Nanchang-86_sow-1",
+      "sourceValue": "tɕy⁴²pʰɔ²⁴",
+      "sourceCharacters": "豬 婆",
+      "conceptId": "86_sow",
+      "concepticonId": "1351",
+      "line": 13579
+    },
+    {
+      "id": "beida1964-Nanchang-88_femaledog-1",
+      "sourceId": "Nanchang-88_femaledog-1",
+      "sourceValue": "kiɛu²¹³pʰɔ²⁴",
+      "sourceCharacters": "狗 婆",
+      "conceptId": "88_femaledog",
+      "concepticonId": "2481",
+      "line": 5046
+    },
+    {
+      "id": "beida1964-Nanchang-89_donkeyass-1",
+      "sourceId": "Nanchang-89_donkeyass-1",
+      "sourceValue": "lu⁵⁵",
+      "sourceCharacters": "驢",
+      "conceptId": "89_donkeyass",
+      "concepticonId": "1862",
+      "line": 4041
+    },
+    {
+      "id": "beida1964-Nanchang-91_sheepgoat-1",
+      "sourceId": "Nanchang-91_sheepgoat-1",
+      "sourceValue": "iɔŋ⁵⁵",
+      "sourceCharacters": "羊",
+      "conceptId": "91_sheepgoat",
+      "concepticonId": "2684",
+      "line": 12756
+    },
+    {
+      "id": "beida1964-Nanchang-93_roostercock-1",
+      "sourceId": "Nanchang-93_roostercock-1",
+      "sourceValue": "tɕi⁴²kuŋ⁴²",
+      "sourceCharacters": "雞 公",
+      "conceptId": "93_roostercock",
+      "concepticonId": "1511",
+      "line": 12245
+    },
+    {
+      "id": "beida1964-Nanchang-94_capon-1",
+      "sourceId": "Nanchang-94_capon-1",
+      "sourceValue": "ɕiɛn⁵⁵tɕi⁴²",
+      "sourceCharacters": "鏾 雞",
+      "conceptId": "94_capon",
+      "concepticonId": "2567",
+      "line": 2151
+    },
+    {
+      "id": "beida1964-Nanchang-95_henchicken-1",
+      "sourceId": "Nanchang-95_henchicken-1",
+      "sourceValue": "tɕi⁴²pʰɔ²⁴",
+      "sourceCharacters": "雞 婆",
+      "conceptId": "95_henchicken",
+      "concepticonId": "1514",
+      "line": 6883
+    },
+    {
+      "id": "beida1964-Nanchang-98_goose-1",
+      "sourceId": "Nanchang-98_goose-1",
+      "sourceValue": "ŋɔ⁵⁵",
+      "sourceCharacters": "鵝",
+      "conceptId": "98_goose",
+      "concepticonId": "1187",
+      "line": 6351
+    },
+    {
+      "id": "beida1964-Nanchang-99_carp-1",
+      "sourceId": "Nanchang-99_carp-1",
+      "sourceValue": "li²¹³ȵiɛ⁵⁵",
+      "sourceCharacters": "鯉 魚",
+      "conceptId": "99_carp",
+      "concepticonId": "2685",
+      "line": 2171
+    },
+    {
+      "id": "beida1964-Nanchang-100_cruciancarp-1",
+      "sourceId": "Nanchang-100_cruciancarp-1",
+      "sourceValue": "tsɛt⁵ȵiɛ⁵⁵",
+      "sourceCharacters": "鯽 魚",
+      "conceptId": "100_cruciancarp",
+      "concepticonId": "2784",
+      "line": 3474
+    },
+    {
+      "id": "beida1964-Nanchang-101_yellowcroaker-1",
+      "sourceId": "Nanchang-101_yellowcroaker-1",
+      "sourceValue": "uɔŋ⁵⁵ŋa⁵⁵tʰɛu²⁴",
+      "sourceCharacters": "黃 牙 頭",
+      "conceptId": "101_yellowcroaker",
+      "concepticonId": "2347",
+      "line": 17889
+    },
+    {
+      "id": "beida1964-Nanchang-102_crab-1",
+      "sourceId": "Nanchang-102_crab-1",
+      "sourceValue": "pʰɔŋ²⁴hai²¹³",
+      "sourceCharacters": "螃 蟹",
+      "conceptId": "102_crab",
+      "concepticonId": "2348",
+      "line": 3377
+    },
+    {
+      "id": "beida1964-Nanchang-105_frog-1",
+      "sourceId": "Nanchang-105_frog-1",
+      "sourceValue": "tʰiɛn²⁴tɕi⁴²",
+      "sourceCharacters": "田 雞",
+      "conceptId": "105_frog",
+      "concepticonId": "503",
+      "line": 5769
+    },
+    {
+      "id": "beida1964-Nanchang-107_turtle-1",
+      "sourceId": "Nanchang-107_turtle-1",
+      "sourceValue": "u⁴²kui⁴²",
+      "sourceCharacters": "烏 龜",
+      "conceptId": "107_turtle",
+      "concepticonId": "112",
+      "line": 16410
+    },
+    {
+      "id": "beida1964-Nanchang-108_snail-1",
+      "sourceId": "Nanchang-108_snail-1",
+      "sourceValue": "uɔ⁴²ȵiu⁵⁵",
+      "sourceCharacters": "蝸 牛",
+      "conceptId": "108_snail",
+      "concepticonId": "1543",
+      "line": 13348
+    },
+    {
+      "id": "beida1964-Nanchang-110_silkworms-1",
+      "sourceId": "Nanchang-110_silkworms-1",
+      "sourceValue": "tsʰɔn²⁴",
+      "sourceCharacters": "蠶",
+      "conceptId": "110_silkworms",
+      "concepticonId": "2351",
+      "line": 13056
+    },
+    {
+      "id": "beida1964-Nanchang-111_bee-1",
+      "sourceId": "Nanchang-111_bee-1",
+      "sourceValue": "mit⁵fuŋ⁴²",
+      "sourceCharacters": "蜜 蜂",
+      "conceptId": "111_bee",
+      "concepticonId": "665",
+      "line": 1080
+    },
+    {
+      "id": "beida1964-Nanchang-112_butterfly-1",
+      "sourceId": "Nanchang-112_butterfly-1",
+      "sourceValue": "fu⁵⁵tʰiɛt⁵",
+      "sourceCharacters": "蝴 蝶",
+      "conceptId": "112_butterfly",
+      "concepticonId": "1791",
+      "line": 1913
+    },
+    {
+      "id": "beida1964-Nanchang-113_dragonfly-1",
+      "sourceId": "Nanchang-113_dragonfly-1",
+      "sourceValue": "tɕʰin⁴²tʰin²⁴",
+      "sourceCharacters": "蜻 蜓",
+      "conceptId": "113_dragonfly",
+      "concepticonId": "2352",
+      "line": 4120
+    },
+    {
+      "id": "beida1964-Nanchang-115_firefly-1",
+      "sourceId": "Nanchang-115_firefly-1",
+      "sourceValue": "ia³¹fɔ²¹³tsʰuŋ²⁴",
+      "sourceCharacters": "夜 火 蟲",
+      "conceptId": "115_firefly",
+      "concepticonId": "206",
+      "line": 5275
+    },
+    {
+      "id": "beida1964-Nanchang-116_cricket-1",
+      "sourceId": "Nanchang-116_cricket-1",
+      "sourceValue": "ɕyy⁵ɕyt⁵",
+      "sourceCharacters": "蟋 蟋",
+      "conceptId": "116_cricket",
+      "concepticonId": "2354",
+      "line": 3416
+    },
+    {
+      "id": "beida1964-Nanchang-118_housefly-1",
+      "sourceId": "Nanchang-118_housefly-1",
+      "sourceValue": "tsʰɔŋ⁴²in⁴²",
+      "sourceCharacters": "蒼 蠅",
+      "conceptId": "118_housefly",
+      "concepticonId": "1504",
+      "line": 7272
+    },
+    {
+      "id": "beida1964-Nanchang-119_mosquito-1",
+      "sourceId": "Nanchang-119_mosquito-1",
+      "sourceValue": "un⁵⁵tsʰuŋ²⁴",
+      "sourceCharacters": "蚊 蟲",
+      "conceptId": "119_mosquito",
+      "concepticonId": "1509",
+      "line": 9494
+    },
+    {
+      "id": "beida1964-Nanchang-120_bedbug-1",
+      "sourceId": "Nanchang-120_bedbug-1",
+      "sourceValue": "tsʰɛu⁵⁵tsʰuŋ²⁴",
+      "sourceCharacters": "臭 蟲",
+      "conceptId": "120_bedbug",
+      "concepticonId": "1949",
+      "line": 1058
+    },
+    {
+      "id": "beida1964-Nanchang-121_spider-1",
+      "sourceId": "Nanchang-121_spider-1",
+      "sourceValue": "tsɿ⁴²tɕy⁴²",
+      "sourceCharacters": "蜘 蛛",
+      "conceptId": "121_spider",
+      "concepticonId": "843",
+      "line": 13661
+    },
+    {
+      "id": "beida1964-Nanchang-122_centipede-1",
+      "sourceId": "Nanchang-122_centipede-1",
+      "sourceValue": "u⁵⁵kuŋ⁴²",
+      "sourceCharacters": "蜈 蚣",
+      "conceptId": "122_centipede",
+      "concepticonId": "1974",
+      "line": 2386
+    },
+    {
+      "id": "beida1964-Nanchang-123_snake-1",
+      "sourceId": "Nanchang-123_snake-1",
+      "sourceValue": "sa⁵⁵",
+      "sourceCharacters": "蛇",
+      "conceptId": "123_snake",
+      "concepticonId": "730",
+      "line": 13370
+    },
+    {
+      "id": "beida1964-Nanchang-125_wing-1",
+      "sourceId": "Nanchang-125_wing-1",
+      "sourceValue": "tsʰɿ²¹³pɔŋ⁵⁵",
+      "sourceCharacters": "翅 膀",
+      "conceptId": "125_wing",
+      "concepticonId": "1257",
+      "line": 17587
+    },
+    {
+      "id": "beida1964-Nanchang-128_tail-1",
+      "sourceId": "Nanchang-128_tail-1",
+      "sourceValue": "ui²¹³pa⁴²",
+      "sourceCharacters": "尾 巴",
+      "conceptId": "128_tail",
+      "concepticonId": "1220",
+      "line": 14801
+    },
+    {
+      "id": "beida1964-Nanchang-129_fishscales-1",
+      "sourceId": "Nanchang-129_fishscales-1",
+      "sourceValue": "lin⁵⁵",
+      "sourceCharacters": "鱗",
+      "conceptId": "129_fishscales",
+      "concepticonId": "266",
+      "line": 5322
+    },
+    {
+      "id": "beida1964-Nanchang-130_plumblossom-1",
+      "sourceId": "Nanchang-130_plumblossom-1",
+      "sourceValue": "mei⁵⁵fa⁴²",
+      "sourceCharacters": "梅 花",
+      "conceptId": "130_plumblossom",
+      "concepticonId": "2744",
+      "line": 11174
+    },
+    {
+      "id": "beida1964-Nanchang-131_apricotblossom-1",
+      "sourceId": "Nanchang-131_apricotblossom-1",
+      "sourceValue": "ɕin³¹fa⁴²",
+      "sourceCharacters": "杏 花",
+      "conceptId": "131_apricotblossom",
+      "concepticonId": "2745",
+      "line": 460
+    },
+    {
+      "id": "beida1964-Nanchang-132_peachblossom-1",
+      "sourceId": "Nanchang-132_peachblossom-1",
+      "sourceValue": "tʰau²⁴fa⁴²",
+      "sourceCharacters": "桃 花",
+      "conceptId": "132_peachblossom",
+      "concepticonId": "2746",
+      "line": 10515
+    },
+    {
+      "id": "beida1964-Nanchang-133_lotus-1",
+      "sourceId": "Nanchang-133_lotus-1",
+      "sourceValue": "hɔ²⁴fa⁴²",
+      "sourceCharacters": "荷 花",
+      "conceptId": "133_lotus",
+      "concepticonId": "2359",
+      "line": 8722
+    },
+    {
+      "id": "beida1964-Nanchang-134_cassia-1",
+      "sourceId": "Nanchang-134_cassia-1",
+      "sourceValue": "kui⁵⁵fa⁴²",
+      "sourceCharacters": "桂 花",
+      "conceptId": "134_cassia",
+      "concepticonId": "2748",
+      "line": 2265
+    },
+    {
+      "id": "beida1964-Nanchang-135_mugwort-1",
+      "sourceId": "Nanchang-135_mugwort-1",
+      "sourceValue": "ŋai³¹",
+      "sourceCharacters": "艾",
+      "conceptId": "135_mugwort",
+      "concepticonId": "2361",
+      "line": 9673
+    },
+    {
+      "id": "beida1964-Nanchang-136_cottonraw-1",
+      "sourceId": "Nanchang-136_cottonraw-1",
+      "sourceValue": "miɛn⁵⁵fa⁴²",
+      "sourceCharacters": "棉 花",
+      "conceptId": "136_cottonraw",
+      "concepticonId": "1850",
+      "line": 3250
+    },
+    {
+      "id": "beida1964-Nanchang-137_riceplant-1",
+      "sourceId": "Nanchang-137_riceplant-1",
+      "sourceValue": "uɔ⁵⁵",
+      "sourceCharacters": "禾",
+      "conceptId": "137_riceplant",
+      "concepticonId": "2026",
+      "line": 12090
+    },
+    {
+      "id": "beida1964-Nanchang-138_ricecrops-1",
+      "sourceId": "Nanchang-138_ricecrops-1",
+      "sourceValue": "kuk⁵",
+      "sourceCharacters": "谷",
+      "conceptId": "138_ricecrops",
+      "concepticonId": "2749",
+      "line": 12053
+    },
+    {
+      "id": "beida1964-Nanchang-140_polishedglutinousrice-1",
+      "sourceId": "Nanchang-140_polishedglutinousrice-1",
+      "sourceValue": "lɔ³¹mi²¹³",
+      "sourceCharacters": "糯 米",
+      "conceptId": "140_polishedglutinousrice",
+      "concepticonId": "2750",
+      "line": 11208
+    },
+    {
+      "id": "beida1964-Nanchang-144_millet-1",
+      "sourceId": "Nanchang-144_millet-1",
+      "sourceValue": "ɕiuk⁵mi²¹³",
+      "sourceCharacters": "粟 米",
+      "conceptId": "144_millet",
+      "concepticonId": "931",
+      "line": 9283
+    },
+    {
+      "id": "beida1964-Nanchang-145_bran-1",
+      "sourceId": "Nanchang-145_bran-1",
+      "sourceValue": "ɕi⁵⁵kʰɔŋ⁴²",
+      "sourceCharacters": "細 糠",
+      "conceptId": "145_bran",
+      "concepticonId": "2362",
+      "line": 1561
+    },
+    {
+      "id": "beida1964-Nanchang-146_chaffhusks-1",
+      "sourceId": "Nanchang-146_chaffhusks-1",
+      "sourceValue": "kʰɔŋ⁴²",
+      "sourceCharacters": "糠",
+      "conceptId": "146_chaffhusks",
+      "concepticonId": "2363",
+      "line": 2443
+    },
+    {
+      "id": "beida1964-Nanchang-148_maize-1",
+      "sourceId": "Nanchang-148_maize-1",
+      "sourceValue": "y³¹mi²¹³",
+      "sourceCharacters": "玉 米",
+      "conceptId": "148_maize",
+      "concepticonId": "506",
+      "line": 8851
+    },
+    {
+      "id": "beida1964-Nanchang-149_peanut-1",
+      "sourceId": "Nanchang-149_peanut-1",
+      "sourceValue": "fa⁴²sɛn⁴²",
+      "sourceCharacters": "花 生",
+      "conceptId": "149_peanut",
+      "concepticonId": "595",
+      "line": 10530
+    },
+    {
+      "id": "beida1964-Nanchang-150_sunflower-1",
+      "sourceId": "Nanchang-150_sunflower-1",
+      "sourceValue": "kʰui²⁴fa⁴²",
+      "sourceCharacters": "蔡 花",
+      "conceptId": "150_sunflower",
+      "concepticonId": "1956",
+      "line": 14545
+    },
+    {
+      "id": "beida1964-Nanchang-151_sweetpotato-1",
+      "sourceId": "Nanchang-151_sweetpotato-1",
+      "sourceValue": "fan⁴²ɕy⁵⁵",
+      "sourceCharacters": "番 薯",
+      "conceptId": "151_sweetpotato",
+      "concepticonId": "159",
+      "line": 14714
+    },
+    {
+      "id": "beida1964-Nanchang-154_cabbage-1",
+      "sourceId": "Nanchang-154_cabbage-1",
+      "sourceValue": "pau⁴²ɕin⁴²tsʰai²¹³",
+      "sourceCharacters": "包 心 菜",
+      "conceptId": "154_cabbage",
+      "concepticonId": "774",
+      "line": 2057
+    },
+    {
+      "id": "beida1964-Nanchang-155_pumpkin-1",
+      "sourceId": "Nanchang-155_pumpkin-1",
+      "sourceValue": "pɛt⁵kua⁴²",
+      "sourceCharacters": "北 瓜",
+      "conceptId": "155_pumpkin",
+      "concepticonId": "864",
+      "line": 11657
+    },
+    {
+      "id": "beida1964-Nanchang-156_waxgourdwhitegourd-1",
+      "sourceId": "Nanchang-156_waxgourdwhitegourd-1",
+      "sourceValue": "tuŋ⁴²kua⁴²",
+      "sourceCharacters": "冬 瓜",
+      "conceptId": "156_waxgourdwhitegourd",
+      "concepticonId": "411",
+      "line": 17135
+    },
+    {
+      "id": "beida1964-Nanchang-157_cucumber-1",
+      "sourceId": "Nanchang-157_cucumber-1",
+      "sourceValue": "uɔŋ⁵⁵kua⁴²",
+      "sourceCharacters": "黃 瓜",
+      "conceptId": "157_cucumber",
+      "concepticonId": "496",
+      "line": 3492
+    },
+    {
+      "id": "beida1964-Nanchang-161_tuberonion-1",
+      "sourceId": "Nanchang-161_tuberonion-1",
+      "sourceValue": "tɕiu²¹³tsʰai²¹³",
+      "sourceCharacters": "韭 菜",
+      "conceptId": "161_tuberonion",
+      "concepticonId": "",
+      "line": 16390
+    },
+    {
+      "id": "beida1964-Nanchang-162_scallionsgreenonions-1",
+      "sourceId": "Nanchang-162_scallionsgreenonions-1",
+      "sourceValue": "tsʰuŋ⁴²",
+      "sourceCharacters": "蔥",
+      "conceptId": "162_scallionsgreenonions",
+      "concepticonId": "2366",
+      "line": 12477
+    },
+    {
+      "id": "beida1964-Nanchang-163_garlic-1",
+      "sourceId": "Nanchang-163_garlic-1",
+      "sourceValue": "tʰai³¹sɔn⁵⁵",
+      "sourceCharacters": "大 蒜",
+      "conceptId": "163_garlic",
+      "concepticonId": "2368",
+      "line": 5958
+    },
+    {
+      "id": "beida1964-Nanchang-164_chilliredpepper-1",
+      "sourceId": "Nanchang-164_chilliredpepper-1",
+      "sourceValue": "lat⁵tɕiɛu⁴²",
+      "sourceCharacters": "辣 椒",
+      "conceptId": "164_chilliredpepper",
+      "concepticonId": "919",
+      "line": 2662
+    },
+    {
+      "id": "beida1964-Nanchang-172_cherry-1",
+      "sourceId": "Nanchang-172_cherry-1",
+      "sourceValue": "in⁴²tʰau²⁴",
+      "sourceCharacters": "櫻 桃",
+      "conceptId": "172_cherry",
+      "concepticonId": "2765",
+      "line": 2553
+    },
+    {
+      "id": "beida1964-Nanchang-173_olive-1",
+      "sourceId": "Nanchang-173_olive-1",
+      "sourceValue": "tɕʰin⁴²kuɔ²¹³",
+      "sourceCharacters": "靑 果",
+      "conceptId": "173_olive",
+      "concepticonId": "1154",
+      "line": 10306
+    },
+    {
+      "id": "beida1964-Nanchang-174_waterchestnut-1",
+      "sourceId": "Nanchang-174_waterchestnut-1",
+      "sourceValue": "pʰit⁵tɕiu⁴²",
+      "sourceCharacters": "荸 糾",
+      "conceptId": "174_waterchestnut",
+      "concepticonId": "",
+      "line": 17078
+    },
+    {
+      "id": "beida1964-Nanchang-176_chestnut-1",
+      "sourceId": "Nanchang-176_chestnut-1",
+      "sourceValue": "pan²¹³lit⁵",
+      "sourceCharacters": "板 栗",
+      "conceptId": "176_chestnut",
+      "concepticonId": "2318",
+      "line": 2571
+    },
+    {
+      "id": "beida1964-Nanchang-177_walnut-1",
+      "sourceId": "Nanchang-177_walnut-1",
+      "sourceValue": "hɛt⁵tʰau²⁴",
+      "sourceCharacters": "核 桃",
+      "conceptId": "177_walnut",
+      "concepticonId": "2042",
+      "line": 16962
+    },
+    {
+      "id": "beida1964-Nanchang-179_litchilychee-1",
+      "sourceId": "Nanchang-179_litchilychee-1",
+      "sourceValue": "li³¹tsɿ⁴²",
+      "sourceCharacters": "荔 枝",
+      "conceptId": "179_litchilychee",
+      "concepticonId": "2768",
+      "line": 8537
+    },
+    {
+      "id": "beida1964-Nanchang-180_longan-1",
+      "sourceId": "Nanchang-180_longan-1",
+      "sourceValue": "pʰau²¹³yɔn⁵⁵",
+      "sourceCharacters": "泡 園",
+      "conceptId": "180_longan",
+      "concepticonId": "",
+      "line": 8630
+    },
+    {
+      "id": "beida1964-Nanchang-181_watermelon-1",
+      "sourceId": "Nanchang-181_watermelon-1",
+      "sourceValue": "ɕi⁴²kua⁴²",
+      "sourceCharacters": "西 瓜",
+      "conceptId": "181_watermelon",
+      "concepticonId": "2766",
+      "line": 17115
+    },
+    {
+      "id": "beida1964-Nanchang-182_pitstoneoffruit-1",
+      "sourceId": "Nanchang-182_pitstoneoffruit-1",
+      "sourceValue": "ut⁵",
+      "sourceCharacters": "核",
+      "conceptId": "182_pitstoneoffruit",
+      "concepticonId": "1762",
+      "line": 11058
+    },
+    {
+      "id": "beida1964-Nanchang-183_peelskinoffruit-1",
+      "sourceId": "Nanchang-183_peelskinoffruit-1",
+      "sourceValue": "pʰi²⁴",
+      "sourceCharacters": "皮",
+      "conceptId": "183_peelskinoffruit",
+      "concepticonId": "2373",
+      "line": 10608
+    },
+    {
+      "id": "beida1964-Nanchang-184_breakfast-1",
+      "sourceId": "Nanchang-184_breakfast-1",
+      "sourceValue": "tsau²¹³fan³¹",
+      "sourceCharacters": "早 飯",
+      "conceptId": "184_breakfast",
+      "concepticonId": "1322",
+      "line": 1582
+    },
+    {
+      "id": "beida1964-Nanchang-185_lunch-1",
+      "sourceId": "Nanchang-185_lunch-1",
+      "sourceValue": "tsuŋ⁴²fan³¹",
+      "sourceCharacters": "中 飯",
+      "conceptId": "185_lunch",
+      "concepticonId": "768",
+      "line": 8794
+    },
+    {
+      "id": "beida1964-Nanchang-186_supper-1",
+      "sourceId": "Nanchang-186_supper-1",
+      "sourceValue": "ia³¹fan³¹",
+      "sourceCharacters": "夜 飯",
+      "conceptId": "186_supper",
+      "concepticonId": "1833",
+      "line": 14587
+    },
+    {
+      "id": "beida1964-Nanchang-187_cookedrice-1",
+      "sourceId": "Nanchang-187_cookedrice-1",
+      "sourceValue": "fan³¹",
+      "sourceCharacters": "飯",
+      "conceptId": "187_cookedrice",
+      "concepticonId": "1191",
+      "line": 3174
+    },
+    {
+      "id": "beida1964-Nanchang-188_ricegruelcongee-1",
+      "sourceId": "Nanchang-188_ricegruelcongee-1",
+      "sourceValue": "tsuk⁵",
+      "sourceCharacters": "粥",
+      "conceptId": "188_ricegruelcongee",
+      "concepticonId": "2049",
+      "line": 12074
+    },
+    {
+      "id": "beida1964-Nanchang-189_thinriceormilletgruel-1",
+      "sourceId": "Nanchang-189_thinriceormilletgruel-1",
+      "sourceValue": "in²¹³tʰɔŋ⁴²",
+      "sourceCharacters": "飮 湯",
+      "conceptId": "189_thinriceormilletgruel",
+      "concepticonId": "",
+      "line": 15502
+    },
+    {
+      "id": "beida1964-Nanchang-190_steamedbun-1",
+      "sourceId": "Nanchang-190_steamedbun-1",
+      "sourceValue": "mɔ⁵⁵mɔ⁵⁵",
+      "sourceCharacters": "饃 饃",
+      "conceptId": "190_steamedbun",
+      "concepticonId": "1969",
+      "line": 13934
+    },
+    {
+      "id": "beida1964-Nanchang-193_dumplingwonton-1",
+      "sourceId": "Nanchang-193_dumplingwonton-1",
+      "sourceValue": "tɕʰin⁴²tʰɔŋ⁴²",
+      "sourceCharacters": "淸 湯",
+      "conceptId": "193_dumplingwonton",
+      "concepticonId": "",
+      "line": 4298
+    },
+    {
+      "id": "beida1964-Nanchang-195_cakespastry-1",
+      "sourceId": "Nanchang-195_cakespastry-1",
+      "sourceValue": "kau⁴²",
+      "sourceCharacters": "糕",
+      "conceptId": "195_cakespastry",
+      "concepticonId": "2408",
+      "line": 2075
+    },
+    {
+      "id": "beida1964-Nanchang-196_stuffinginfood-1",
+      "sourceId": "Nanchang-196_stuffinginfood-1",
+      "sourceValue": "ɕin⁴²",
+      "sourceCharacters": "心",
+      "conceptId": "196_stuffinginfood",
+      "concepticonId": "",
+      "line": 14440
+    },
+    {
+      "id": "beida1964-Nanchang-197_dishfood-1",
+      "sourceId": "Nanchang-197_dishfood-1",
+      "sourceValue": "tsʰai²¹³",
+      "sourceCharacters": "菜",
+      "conceptId": "197_dishfood",
+      "concepticonId": "3542",
+      "line": 3986
+    },
+    {
+      "id": "beida1964-Nanchang-198_meatdishes-1",
+      "sourceId": "Nanchang-198_meatdishes-1",
+      "sourceValue": "fən⁴²tsʰai²¹³",
+      "sourceCharacters": "葷 菜",
+      "conceptId": "198_meatdishes",
+      "concepticonId": "2767",
+      "line": 9208
+    },
+    {
+      "id": "beida1964-Nanchang-199_vegetabledishes-1",
+      "sourceId": "Nanchang-199_vegetabledishes-1",
+      "sourceValue": "su⁵⁵tsʰai²¹³",
+      "sourceCharacters": "素 菜",
+      "conceptId": "199_vegetabledishes",
+      "concepticonId": "",
+      "line": 16781
+    },
+    {
+      "id": "beida1964-Nanchang-200_soup-1",
+      "sourceId": "Nanchang-200_soup-1",
+      "sourceValue": "tʰɔŋ⁴²",
+      "sourceCharacters": "湯",
+      "conceptId": "200_soup",
+      "concepticonId": "1547",
+      "line": 13561
+    },
+    {
+      "id": "beida1964-Nanchang-201_pork-1",
+      "sourceId": "Nanchang-201_pork-1",
+      "sourceValue": "ȵiuk⁵",
+      "sourceCharacters": "肉",
+      "conceptId": "201_pork",
+      "concepticonId": "2769",
+      "line": 11286
+    },
+    {
+      "id": "beida1964-Nanchang-203_porktongue-1",
+      "sourceId": "Nanchang-203_porktongue-1",
+      "sourceValue": "tsɛu⁴²tsʰai²⁴",
+      "sourceCharacters": "招 財",
+      "conceptId": "203_porktongue",
+      "concepticonId": "2777",
+      "line": 11349
+    },
+    {
+      "id": "beida1964-Nanchang-205_fermentedbeancurd-1",
+      "sourceId": "Nanchang-205_fermentedbeancurd-1",
+      "sourceValue": "tʰɛu³¹ə²¹³",
+      "sourceCharacters": "豆 乳",
+      "conceptId": "205_fermentedbeancurd",
+      "concepticonId": "",
+      "line": 5067
+    },
+    {
+      "id": "beida1964-Nanchang-206_thinnoodlesfentiao-1",
+      "sourceId": "Nanchang-206_thinnoodlesfentiao-1",
+      "sourceValue": "mi²¹³fən²¹³",
+      "sourceCharacters": "米 粉",
+      "conceptId": "206_thinnoodlesfentiao",
+      "concepticonId": "",
+      "line": 15483
+    },
+    {
+      "id": "beida1964-Nanchang-207_condimentsseasoning-1",
+      "sourceId": "Nanchang-207_condimentsseasoning-1",
+      "sourceValue": "tsɔk⁵liɛu³¹",
+      "sourceCharacters": "作 料",
+      "conceptId": "207_condimentsseasoning",
+      "concepticonId": "",
+      "line": 3155
+    },
+    {
+      "id": "beida1964-Nanchang-208_porkfat-1",
+      "sourceId": "Nanchang-208_porkfat-1",
+      "sourceValue": "tɕy⁴²iu⁵⁵",
+      "sourceCharacters": "豬 油",
+      "conceptId": "208_porkfat",
+      "concepticonId": "2557",
+      "line": 11309
+    },
+    {
+      "id": "beida1964-Nanchang-209_soysauce-1",
+      "sourceId": "Nanchang-209_soysauce-1",
+      "sourceValue": "tɕiɔŋ⁵⁵iu⁵⁵",
+      "sourceCharacters": "醬 油",
+      "conceptId": "209_soysauce",
+      "concepticonId": "1968",
+      "line": 13599
+    },
+    {
+      "id": "beida1964-Nanchang-210_vinegar-1",
+      "sourceId": "Nanchang-210_vinegar-1",
+      "sourceValue": "tsʰu²¹³",
+      "sourceCharacters": "醋",
+      "conceptId": "210_vinegar",
+      "concepticonId": "985",
+      "line": 16845
+    },
+    {
+      "id": "beida1964-Nanchang-211_sugarsweets-1",
+      "sourceId": "Nanchang-211_sugarsweets-1",
+      "sourceValue": "tʰɔŋ²⁴",
+      "sourceCharacters": "糖",
+      "conceptId": "211_sugarsweets",
+      "concepticonId": "874",
+      "line": 14481
+    },
+    {
+      "id": "beida1964-Nanchang-212_honey-1",
+      "sourceId": "Nanchang-212_honey-1",
+      "sourceValue": "mit⁵",
+      "sourceCharacters": "蜜",
+      "conceptId": "212_honey",
+      "concepticonId": "942",
+      "line": 7155
+    },
+    {
+      "id": "beida1964-Nanchang-213_alcoholicbeverage-1",
+      "sourceId": "Nanchang-213_alcoholicbeverage-1",
+      "sourceValue": "tɕiu²¹³",
+      "sourceCharacters": "酒",
+      "conceptId": "213_alcoholicbeverage",
+      "concepticonId": "404",
+      "line": 247
+    },
+    {
+      "id": "beida1964-Nanchang-215_icecream-1",
+      "sourceId": "Nanchang-215_icecream-1",
+      "sourceValue": "pin⁴²tɕʰi²⁴lin⁵⁵",
+      "sourceCharacters": "冰 其 淋",
+      "conceptId": "215_icecream",
+      "concepticonId": "",
+      "line": 7446
+    },
+    {
+      "id": "beida1964-Nanchang-216_popsicle-1",
+      "sourceId": "Nanchang-216_popsicle-1",
+      "sourceValue": "pin⁴²pʰɔŋ³¹",
+      "sourceCharacters": "冰 棒",
+      "conceptId": "216_popsicle",
+      "concepticonId": "",
+      "line": 11268
+    },
+    {
+      "id": "beida1964-Nanchang-217_boiledwater-1",
+      "sourceId": "Nanchang-217_boiledwater-1",
+      "sourceValue": "kʰai⁴²sui²¹³",
+      "sourceCharacters": "開 水",
+      "conceptId": "217_boiledwater",
+      "concepticonId": "3362",
+      "line": 1423
+    },
+    {
+      "id": "beida1964-Nanchang-218_cigarette-1",
+      "sourceId": "Nanchang-218_cigarette-1",
+      "sourceValue": "ɕiɔŋ⁴²iɛn⁴²",
+      "sourceCharacters": "香 煙",
+      "conceptId": "218_cigarette",
+      "concepticonId": "969",
+      "line": 2743
+    },
+    {
+      "id": "beida1964-Nanchang-221_shirt-1",
+      "sourceId": "Nanchang-221_shirt-1",
+      "sourceValue": "tsʰɛn²¹³san⁴²",
+      "sourceCharacters": "襯 衫",
+      "conceptId": "221_shirt",
+      "concepticonId": "1622",
+      "line": 12768
+    },
+    {
+      "id": "beida1964-Nanchang-222_undershirt-1",
+      "sourceId": "Nanchang-222_undershirt-1",
+      "sourceValue": "hɔn³¹san⁴²",
+      "sourceCharacters": "汗 衫",
+      "conceptId": "222_undershirt",
+      "concepticonId": "",
+      "line": 16669
+    },
+    {
+      "id": "beida1964-Nanchang-223_jiaaocostume-1",
+      "sourceId": "Nanchang-223_jiaaocostume-1",
+      "sourceValue": "kak⁵ŋau²¹³",
+      "sourceCharacters": "裌 襖",
+      "conceptId": "223_jiaaocostume",
+      "concepticonId": "",
+      "line": 55
+    },
+    {
+      "id": "beida1964-Nanchang-225_coat-1",
+      "sourceId": "Nanchang-225_coat-1",
+      "sourceValue": "tʰai³¹i⁴²",
+      "sourceCharacters": "大 衣",
+      "conceptId": "225_coat",
+      "concepticonId": "603",
+      "line": 2928
+    },
+    {
+      "id": "beida1964-Nanchang-228_shorts-1",
+      "sourceId": "Nanchang-228_shorts-1",
+      "sourceValue": "kʰu²¹³tʰɛu²⁴",
+      "sourceCharacters": "褲 頭",
+      "conceptId": "228_shorts",
+      "concepticonId": "",
+      "line": 12863
+    },
+    {
+      "id": "beida1964-Nanchang-231_slippers-1",
+      "sourceId": "Nanchang-231_slippers-1",
+      "sourceValue": "tʰɔ⁴²hai²⁴",
+      "sourceCharacters": "拖 鞋",
+      "conceptId": "231_slippers",
+      "concepticonId": "",
+      "line": 13249
+    },
+    {
+      "id": "beida1964-Nanchang-232_woodenslippers-1",
+      "sourceId": "Nanchang-232_woodenslippers-1",
+      "sourceValue": "tʰɔ⁴²pan²¹³",
+      "sourceCharacters": "拖 板",
+      "conceptId": "232_woodenslippers",
+      "concepticonId": "",
+      "line": 17739
+    },
+    {
+      "id": "beida1964-Nanchang-234_shawl-1",
+      "sourceId": "Nanchang-234_shawl-1",
+      "sourceValue": "ui⁵⁵liaŋ²¹³",
+      "sourceCharacters": "圍 領",
+      "conceptId": "234_shawl",
+      "concepticonId": "2771",
+      "line": 12731
+    },
+    {
+      "id": "beida1964-Nanchang-235_glove-1",
+      "sourceId": "Nanchang-235_glove-1",
+      "sourceValue": "səu²¹³tʰau²¹³",
+      "sourceCharacters": "手 套",
+      "conceptId": "235_glove",
+      "concepticonId": "867",
+      "line": 6208
+    },
+    {
+      "id": "beida1964-Nanchang-237_towelwashcloth-1",
+      "sourceId": "Nanchang-237_towelwashcloth-1",
+      "sourceValue": "səu²¹³tɕin⁴²",
+      "sourceCharacters": "手 巾",
+      "conceptId": "237_towelwashcloth",
+      "concepticonId": "1021",
+      "line": 16277
+    },
+    {
+      "id": "beida1964-Nanchang-240_collar-1",
+      "sourceId": "Nanchang-240_collar-1",
+      "sourceValue": "liaŋ²¹³",
+      "sourceCharacters": "領",
+      "conceptId": "240_collar",
+      "concepticonId": "2012",
+      "line": 3007
+    },
+    {
+      "id": "beida1964-Nanchang-241_sleeve-1",
+      "sourceId": "Nanchang-241_sleeve-1",
+      "sourceValue": "san⁴²tɕʰiu³¹",
+      "sourceCharacters": "衫 袖",
+      "conceptId": "241_sleeve",
+      "concepticonId": "2953",
+      "line": 13229
+    },
+    {
+      "id": "beida1964-Nanchang-244_room-1",
+      "sourceId": "Nanchang-244_room-1",
+      "sourceValue": "fɔŋ⁵⁵kan⁴²",
+      "sourceCharacters": "房 間",
+      "conceptId": "244_room",
+      "concepticonId": "1450",
+      "line": 12226
+    },
+    {
+      "id": "beida1964-Nanchang-245_middleroominthewholehouse-1",
+      "sourceId": "Nanchang-245_middleroominthewholehouse-1",
+      "sourceValue": "tʰɔŋ²⁴uk⁵",
+      "sourceCharacters": "堂 屋",
+      "conceptId": "245_middleroominthewholehouse",
+      "concepticonId": "",
+      "line": 9251
+    },
+    {
+      "id": "beida1964-Nanchang-246_wingroom-1",
+      "sourceId": "Nanchang-246_wingroom-1",
+      "sourceValue": "ɕiɔŋ⁴²fɔŋ⁵⁵",
+      "sourceCharacters": "廂 房",
+      "conceptId": "246_wingroom",
+      "concepticonId": "",
+      "line": 17613
+    },
+    {
+      "id": "beida1964-Nanchang-250_beaminahouse-1",
+      "sourceId": "Nanchang-250_beaminahouse-1",
+      "sourceValue": "uk⁵liɔŋ⁵⁵",
+      "sourceCharacters": "屋 梁",
+      "conceptId": "250_beaminahouse",
+      "concepticonId": "1132",
+      "line": 990
+    },
+    {
+      "id": "beida1964-Nanchang-251_wall-1",
+      "sourceId": "Nanchang-251_wall-1",
+      "sourceValue": "tɕʰiɔŋ²⁴",
+      "sourceCharacters": "墻",
+      "conceptId": "251_wall",
+      "concepticonId": "933",
+      "line": 16950
+    },
+    {
+      "id": "beida1964-Nanchang-253_buckettrap-1",
+      "sourceId": "Nanchang-253_buckettrap-1",
+      "sourceValue": "tʰi³¹mən⁵⁵",
+      "sourceCharacters": "地 門",
+      "conceptId": "253_buckettrap",
+      "concepticonId": "",
+      "line": 1783
+    },
+    {
+      "id": "beida1964-Nanchang-254_flatroof-1",
+      "sourceId": "Nanchang-254_flatroof-1",
+      "sourceValue": "pʰin²⁴tʰai²⁴",
+      "sourceCharacters": "平 臺",
+      "conceptId": "254_flatroof",
+      "concepticonId": "",
+      "line": 5393
+    },
+    {
+      "id": "beida1964-Nanchang-255_balustrade-1",
+      "sourceId": "Nanchang-255_balustrade-1",
+      "sourceValue": "lan⁵⁵kɔn⁴²",
+      "sourceCharacters": "欄 幹",
+      "conceptId": "255_balustrade",
+      "concepticonId": "",
+      "line": 875
+    },
+    {
+      "id": "beida1964-Nanchang-257_stairs-1",
+      "sourceId": "Nanchang-257_stairs-1",
+      "sourceValue": "lɛu⁵⁵tʰi⁴²",
+      "sourceCharacters": "樓 梯",
+      "conceptId": "257_stairs",
+      "concepticonId": "34",
+      "line": 13779
+    },
+    {
+      "id": "beida1964-Nanchang-259_courtyard-1",
+      "sourceId": "Nanchang-259_courtyard-1",
+      "sourceValue": "tʰiɛn⁴²tɕiaŋ²¹³",
+      "sourceCharacters": "天 井",
+      "conceptId": "259_courtyard",
+      "concepticonId": "",
+      "line": 3307
+    },
+    {
+      "id": "beida1964-Nanchang-260_well-1",
+      "sourceId": "Nanchang-260_well-1",
+      "sourceValue": "tɕiaŋ²¹³",
+      "sourceCharacters": "井",
+      "conceptId": "260_well",
+      "concepticonId": "954",
+      "line": 17250
+    },
+    {
+      "id": "beida1964-Nanchang-261_furniture-1",
+      "sourceId": "Nanchang-261_furniture-1",
+      "sourceValue": "ka⁴²tɕy³¹",
+      "sourceCharacters": "家 俱",
+      "conceptId": "261_furniture",
+      "concepticonId": "",
+      "line": 5900
+    },
+    {
+      "id": "beida1964-Nanchang-265_desk-1",
+      "sourceId": "Nanchang-265_desk-1",
+      "sourceValue": "ɕy⁴²tsɔk⁵",
+      "sourceCharacters": "書 桌",
+      "conceptId": "265_desk",
+      "concepticonId": "",
+      "line": 3823
+    },
+    {
+      "id": "beida1964-Nanchang-270_leathercase-1",
+      "sourceId": "Nanchang-270_leathercase-1",
+      "sourceValue": "pʰi²⁴ɕiɔŋ⁴²",
+      "sourceCharacters": "皮 箱",
+      "conceptId": "270_leathercase",
+      "concepticonId": "",
+      "line": 8268
+    },
+    {
+      "id": "beida1964-Nanchang-272_quilt-1",
+      "sourceId": "Nanchang-272_quilt-1",
+      "sourceValue": "pʰi³¹uɔ⁴²",
+      "sourceCharacters": "被 窩",
+      "conceptId": "272_quilt",
+      "concepticonId": "2048",
+      "line": 11719
+    },
+    {
+      "id": "beida1964-Nanchang-275_pillow-1",
+      "sourceId": "Nanchang-275_pillow-1",
+      "sourceValue": "tsən²¹³tʰɛu²⁴",
+      "sourceCharacters": "枕 頭",
+      "conceptId": "275_pillow",
+      "concepticonId": "1044",
+      "line": 11022
+    },
+    {
+      "id": "beida1964-Nanchang-278_cookingpot-1",
+      "sourceId": "Nanchang-278_cookingpot-1",
+      "sourceValue": "uɔ⁴²",
+      "sourceCharacters": "鍋",
+      "conceptId": "278_cookingpot",
+      "concepticonId": "3653",
+      "line": 3193
+    },
+    {
+      "id": "beida1964-Nanchang-280_kitchenknife-1",
+      "sourceId": "Nanchang-280_kitchenknife-1",
+      "sourceValue": "tsʰai²¹³tau⁴²",
+      "sourceCharacters": "菜 刀",
+      "conceptId": "280_kitchenknife",
+      "concepticonId": "2772",
+      "line": 7977
+    },
+    {
+      "id": "beida1964-Nanchang-283_earthenjug-1",
+      "sourceId": "Nanchang-283_earthenjug-1",
+      "sourceValue": "kɔŋ⁴²",
+      "sourceCharacters": "缸",
+      "conceptId": "283_earthenjug",
+      "concepticonId": "270",
+      "line": 4455
+    },
+    {
+      "id": "beida1964-Nanchang-284_baler-2",
+      "sourceId": "Nanchang-284_baler-2",
+      "sourceValue": "pʰiɛu²⁴",
+      "sourceCharacters": "瓢",
+      "conceptId": "284_baler",
+      "concepticonId": "",
+      "line": 842
+    },
+    {
+      "id": "beida1964-Nanchang-288_firewood-1",
+      "sourceId": "Nanchang-288_firewood-1",
+      "sourceValue": "tsʰai²⁴",
+      "sourceCharacters": "柴",
+      "conceptId": "288_firewood",
+      "concepticonId": "10",
+      "line": 5299
+    },
+    {
+      "id": "beida1964-Nanchang-289_woodcharcoal-1",
+      "sourceId": "Nanchang-289_woodcharcoal-1",
+      "sourceValue": "muk⁵tʰan²¹³",
+      "sourceCharacters": "木 炭",
+      "conceptId": "289_woodcharcoal",
+      "concepticonId": "1188",
+      "line": 17720
+    },
+    {
+      "id": "beida1964-Nanchang-291_thermosbottle-1",
+      "sourceId": "Nanchang-291_thermosbottle-1",
+      "sourceValue": "lɛt⁵sui²¹³pʰin²⁴",
+      "sourceCharacters": "熱 水 瓶",
+      "conceptId": "291_thermosbottle",
+      "concepticonId": "",
+      "line": 15253
+    },
+    {
+      "id": "beida1964-Nanchang-292_glue-1",
+      "sourceId": "Nanchang-292_glue-1",
+      "sourceValue": "fei⁴²miɛn³¹",
+      "sourceCharacters": "灰 面",
+      "conceptId": "292_glue",
+      "concepticonId": "1069",
+      "line": 6227
+    },
+    {
+      "id": "beida1964-Nanchang-293_needle-1",
+      "sourceId": "Nanchang-293_needle-1",
+      "sourceValue": "tsən⁴²",
+      "sourceCharacters": "針",
+      "conceptId": "293_needle",
+      "concepticonId": "1382",
+      "line": 9899
+    },
+    {
+      "id": "beida1964-Nanchang-294_thimble-1",
+      "sourceId": "Nanchang-294_thimble-1",
+      "sourceValue": "tiaŋ²¹³tsən⁴²",
+      "sourceCharacters": "頂 針",
+      "conceptId": "294_thimble",
+      "concepticonId": "",
+      "line": 15415
+    },
+    {
+      "id": "beida1964-Nanchang-295_threadwire-1",
+      "sourceId": "Nanchang-295_threadwire-1",
+      "sourceValue": "ɕiɛn⁵⁵",
+      "sourceCharacters": "綫",
+      "conceptId": "295_threadwire",
+      "concepticonId": "1161",
+      "line": 15681
+    },
+    {
+      "id": "beida1964-Nanchang-297_lock-1",
+      "sourceId": "Nanchang-297_lock-1",
+      "sourceValue": "sɔ²¹³",
+      "sourceCharacters": "鎖",
+      "conceptId": "297_lock",
+      "concepticonId": "1596",
+      "line": 8594
+    },
+    {
+      "id": "beida1964-Nanchang-300_umbrella-1",
+      "sourceId": "Nanchang-300_umbrella-1",
+      "sourceValue": "san²¹³",
+      "sourceCharacters": "傘",
+      "conceptId": "300_umbrella",
+      "concepticonId": "3105",
+      "line": 16525
+    },
+    {
+      "id": "beida1964-Nanchang-301_walkingstaff-1",
+      "sourceId": "Nanchang-301_walkingstaff-1",
+      "sourceValue": "kuai²¹³kun⁵⁵",
+      "sourceCharacters": "拐 棍",
+      "conceptId": "301_walkingstaff",
+      "concepticonId": "1296",
+      "line": 16923
+    },
+    {
+      "id": "beida1964-Nanchang-302_flashlight-1",
+      "sourceId": "Nanchang-302_flashlight-1",
+      "sourceValue": "tʰiɛn³¹tʰuŋ²⁴",
+      "sourceCharacters": "電 筒",
+      "conceptId": "302_flashlight",
+      "concepticonId": "",
+      "line": 5357
+    },
+    {
+      "id": "beida1964-Nanchang-303_candle-1",
+      "sourceId": "Nanchang-303_candle-1",
+      "sourceValue": "lat⁵tsuk⁵",
+      "sourceCharacters": "蠟 燭",
+      "conceptId": "303_candle",
+      "concepticonId": "1273",
+      "line": 2116
+    },
+    {
+      "id": "beida1964-Nanchang-304_match-1",
+      "sourceId": "Nanchang-304_match-1",
+      "sourceValue": "iɔŋ⁵⁵fɔ²¹³",
+      "sourceCharacters": "洋 火",
+      "conceptId": "304_match",
+      "concepticonId": "1133",
+      "line": 9117
+    },
+    {
+      "id": "beida1964-Nanchang-307_dishtowel-1",
+      "sourceId": "Nanchang-307_dishtowel-1",
+      "sourceValue": "mɔt⁵pu⁵⁵",
+      "sourceCharacters": "抹 布",
+      "conceptId": "307_dishtowel",
+      "concepticonId": "",
+      "line": 4005
+    },
+    {
+      "id": "beida1964-Changsha-139_rice-1",
+      "sourceId": "Changsha-139_rice-1",
+      "sourceValue": "mi⁴¹",
+      "sourceCharacters": "米",
+      "conceptId": "139_rice",
+      "concepticonId": "926",
+      "line": 12036
+    },
+    {
+      "id": "beida1964-Changsha-505_eat-1",
+      "sourceId": "Changsha-505_eat-1",
+      "sourceValue": "tɕʰia²⁴",
+      "sourceCharacters": "吃",
+      "conceptId": "505_eat",
+      "concepticonId": "1336",
+      "line": 4531
+    },
+    {
+      "id": "beida1964-Changsha-506_drink-1",
+      "sourceId": "Changsha-506_drink-1",
+      "sourceValue": "tɕʰia²⁴",
+      "sourceCharacters": "吃",
+      "conceptId": "506_drink",
+      "concepticonId": "1401",
+      "line": 4180
+    },
+    {
+      "id": "beida1964-Changsha-214_tea-1",
+      "sourceId": "Changsha-214_tea-1",
+      "sourceValue": "tsa¹³",
+      "sourceCharacters": "茶",
+      "conceptId": "214_tea",
+      "concepticonId": "1373",
+      "line": 14982
+    },
+    {
+      "id": "beida1964-Changsha-204_egg-1",
+      "sourceId": "Changsha-204_egg-1",
+      "sourceValue": "tɕi³³tan²¹",
+      "sourceCharacters": "雞 蛋",
+      "conceptId": "204_egg",
+      "concepticonId": "2779",
+      "line": 4551
+    },
+    {
+      "id": "beida1964-Changsha-194_noodles-1",
+      "sourceId": "Changsha-194_noodles-1",
+      "sourceValue": "miẽ²¹",
+      "sourceCharacters": "面",
+      "conceptId": "194_noodles",
+      "concepticonId": "973",
+      "line": 10050
+    },
+    {
+      "id": "beida1964-Changsha-153_vegetable-1",
+      "sourceId": "Changsha-153_vegetable-1",
+      "sourceValue": "tsʰai⁵⁵",
+      "sourceCharacters": "菜",
+      "conceptId": "153_vegetable",
+      "concepticonId": "924",
+      "line": 16761
+    },
+    {
+      "id": "beida1964-Changsha-160_tomato-1",
+      "sourceId": "Changsha-160_tomato-1",
+      "sourceValue": "fan³³tɕie¹³",
+      "sourceCharacters": "番 茄",
+      "conceptId": "160_tomato",
+      "concepticonId": "986",
+      "line": 16117
+    },
+    {
+      "id": "beida1964-Changsha-165_fruit-1",
+      "sourceId": "Changsha-165_fruit-1",
+      "sourceValue": "ɕyei⁴¹ko⁴¹",
+      "sourceCharacters": "水 果",
+      "conceptId": "165_fruit",
+      "concepticonId": "1507",
+      "line": 5861
+    },
+    {
+      "id": "beida1964-Changsha-178_banana-1",
+      "sourceId": "Changsha-178_banana-1",
+      "sourceValue": "ɕian³³tɕiau³³",
+      "sourceCharacters": "香 蕉",
+      "conceptId": "178_banana",
+      "concepticonId": "868",
+      "line": 911
+    },
+    {
+      "id": "beida1964-Changsha-171_grape-1",
+      "sourceId": "Changsha-171_grape-1",
+      "sourceValue": "pu¹³tau¹³",
+      "sourceCharacters": "葡 萄",
+      "conceptId": "171_grape",
+      "concepticonId": "920",
+      "line": 6474
+    },
+    {
+      "id": "beida1964-Changsha-92_cat-1",
+      "sourceId": "Changsha-92_cat-1",
+      "sourceValue": "mau³³",
+      "sourceCharacters": "貓",
+      "conceptId": "92_cat",
+      "concepticonId": "1208",
+      "line": 2287
+    },
+    {
+      "id": "beida1964-Changsha-97_duck-1",
+      "sourceId": "Changsha-97_duck-1",
+      "sourceValue": "ŋa²⁴",
+      "sourceCharacters": "鴨",
+      "conceptId": "97_duck",
+      "concepticonId": "1360",
+      "line": 4254
+    },
+    {
+      "id": "beida1964-Changsha-401_man-1",
+      "sourceId": "Changsha-401_man-1",
+      "sourceValue": "lan¹³zən¹³",
+      "sourceCharacters": "男 人",
+      "conceptId": "401_man",
+      "concepticonId": "1554",
+      "line": 8960
+    },
+    {
+      "id": "beida1964-Changsha-402_woman-1",
+      "sourceId": "Changsha-402_woman-1",
+      "sourceValue": "ȵy⁴¹zən¹³",
+      "sourceCharacters": "女 人",
+      "conceptId": "402_woman",
+      "concepticonId": "962",
+      "line": 17680
+    },
+    {
+      "id": "beida1964-Changsha-381_head-1",
+      "sourceId": "Changsha-381_head-1",
+      "sourceValue": "lau⁴¹kʰo²⁴",
+      "sourceCharacters": "腦 売",
+      "conceptId": "381_head",
+      "concepticonId": "1256",
+      "line": 6831
+    },
+    {
+      "id": "beida1964-Changsha-387_mouth-1",
+      "sourceId": "Changsha-387_mouth-1",
+      "sourceValue": "tsei⁴¹pa³³",
+      "sourceCharacters": "咀 巴",
+      "conceptId": "387_mouth",
+      "concepticonId": "674",
+      "line": 9624
+    },
+    {
+      "id": "beida1964-Changsha-1_sun-1",
+      "sourceId": "Changsha-1_sun-1",
+      "sourceValue": "tʰai⁵⁵ian¹³",
+      "sourceCharacters": "太 陽",
+      "conceptId": "1_sun",
+      "concepticonId": "1343",
+      "line": 14518
+    },
+    {
+      "id": "beida1964-Changsha-2_moon-1",
+      "sourceId": "Changsha-2_moon-1",
+      "sourceValue": "ye²⁴lian²¹",
+      "sourceCharacters": "月 亮",
+      "conceptId": "2_moon",
+      "concepticonId": "1313",
+      "line": 9425
+    },
+    {
+      "id": "beida1964-Changsha-492_rain-1",
+      "sourceId": "Changsha-492_rain-1",
+      "sourceValue": "lo²⁴y⁴¹",
+      "sourceCharacters": "落 雨",
+      "conceptId": "492_rain",
+      "concepticonId": "1253",
+      "line": 11777
+    },
+    {
+      "id": "beida1964-Changsha-5_rain-1",
+      "sourceId": "Changsha-5_rain-1",
+      "sourceValue": "y⁴¹",
+      "sourceCharacters": "雨",
+      "conceptId": "5_rain",
+      "concepticonId": "658",
+      "line": 11797
+    },
+    {
+      "id": "beida1964-Changsha-4_wind-1",
+      "sourceId": "Changsha-4_wind-1",
+      "sourceValue": "xən³³",
+      "sourceCharacters": "風",
+      "conceptId": "4_wind",
+      "concepticonId": "960",
+      "line": 17554
+    },
+    {
+      "id": "beida1964-Changsha-9_snow-1",
+      "sourceId": "Changsha-9_snow-1",
+      "sourceValue": "ɕie²⁴",
+      "sourceCharacters": "雪",
+      "conceptId": "9_snow",
+      "concepticonId": "784",
+      "line": 13399
+    },
+    {
+      "id": "beida1964-Changsha-271_bed-1",
+      "sourceId": "Changsha-271_bed-1",
+      "sourceValue": "tɕyan¹³",
+      "sourceCharacters": "床",
+      "conceptId": "271_bed",
+      "concepticonId": "1663",
+      "line": 1025
+    },
+    {
+      "id": "beida1964-Changsha-282_spoon-1",
+      "sourceId": "Changsha-282_spoon-1",
+      "sourceValue": "tiau¹³kən³³",
+      "sourceCharacters": "調 羹",
+      "conceptId": "282_spoon",
+      "concepticonId": "1378",
+      "line": 13724
+    },
+    {
+      "id": "beida1964-Changsha-305_soap-2",
+      "sourceId": "Changsha-305_soap-2",
+      "sourceValue": "fei¹³tsau⁵⁵",
+      "sourceCharacters": "肥 皂",
+      "conceptId": "305_soap",
+      "concepticonId": "788",
+      "line": 13425
+    },
+    {
+      "id": "beida1964-Changsha-29_today-1",
+      "sourceId": "Changsha-29_today-1",
+      "sourceValue": "tɕin³³zɿ²⁴",
+      "sourceCharacters": "今 日",
+      "conceptId": "29_today",
+      "concepticonId": "1283",
+      "line": 16058
+    },
+    {
+      "id": "beida1964-Changsha-30_tomorrow-1",
+      "sourceId": "Changsha-30_tomorrow-1",
+      "sourceValue": "min¹³zɿ²⁴",
+      "sourceCharacters": "明 日",
+      "conceptId": "30_tomorrow",
+      "concepticonId": "1329",
+      "line": 16146
+    },
+    {
+      "id": "beida1964-Changsha-33_yesterday-1",
+      "sourceId": "Changsha-33_yesterday-1",
+      "sourceValue": "tso²⁴zɿ²⁴",
+      "sourceCharacters": "昨 日",
+      "conceptId": "33_yesterday",
+      "concepticonId": "1174",
+      "line": 17912
+    },
+    {
+      "id": "beida1964-Changsha-38_morning-1",
+      "sourceId": "Changsha-38_morning-1",
+      "sourceValue": "tsau⁴¹san²¹",
+      "sourceCharacters": "早 上",
+      "conceptId": "38_morning",
+      "concepticonId": "1339",
+      "line": 9469
+    },
+    {
+      "id": "beida1964-Changsha-750_good-1",
+      "sourceId": "Changsha-750_good-1",
+      "sourceValue": "xau⁴¹",
+      "sourceCharacters": "好",
+      "conceptId": "750_good",
+      "concepticonId": "1035",
+      "line": 6284
+    },
+    {
+      "id": "beida1964-Changsha-751_bad-1",
+      "sourceId": "Changsha-751_bad-1",
+      "sourceValue": "fai²¹",
+      "sourceCharacters": "壞",
+      "conceptId": "751_bad",
+      "concepticonId": "1292",
+      "line": 777
+    },
+    {
+      "id": "beida1964-Changsha-691_big-1",
+      "sourceId": "Changsha-691_big-1",
+      "sourceValue": "tai²¹",
+      "sourceCharacters": "大",
+      "conceptId": "691_big",
+      "concepticonId": "1202",
+      "line": 1191
+    },
+    {
+      "id": "beida1964-Changsha-692_small-1",
+      "sourceId": "Changsha-692_small-1",
+      "sourceValue": "ɕi⁵⁵",
+      "sourceCharacters": "細",
+      "conceptId": "692_small",
+      "concepticonId": "1246",
+      "line": 13267
+    },
+    {
+      "id": "beida1964-Changsha-696_long-1",
+      "sourceId": "Changsha-696_long-1",
+      "sourceValue": "tsan¹³",
+      "sourceCharacters": "長",
+      "conceptId": "696_long",
+      "concepticonId": "1203",
+      "line": 8611
+    },
+    {
+      "id": "beida1964-Changsha-695_short-1",
+      "sourceId": "Changsha-695_short-1",
+      "sourceValue": "ŋai⁴¹",
+      "sourceCharacters": "矮",
+      "conceptId": "695_short",
+      "concepticonId": "2191",
+      "line": 12841
+    },
+    {
+      "id": "beida1964-Changsha-697_short-1",
+      "sourceId": "Changsha-697_short-1",
+      "sourceValue": "tõ⁴¹",
+      "sourceCharacters": "短",
+      "conceptId": "697_short",
+      "concepticonId": "1645",
+      "line": 12822
+    },
+    {
+      "id": "beida1964-Changsha-757_hot-1",
+      "sourceId": "Changsha-757_hot-1",
+      "sourceValue": "ye²⁴",
+      "sourceCharacters": "熱",
+      "conceptId": "757_hot",
+      "concepticonId": "2272",
+      "line": 7245
+    },
+    {
+      "id": "beida1964-Changsha-758_cold-1",
+      "sourceId": "Changsha-758_cold-1",
+      "sourceValue": "lən⁴¹",
+      "sourceCharacters": "冷",
+      "conceptId": "758_cold",
+      "concepticonId": "1287",
+      "line": 2965
+    },
+    {
+      "id": "beida1964-Changsha-732_old-1",
+      "sourceId": "Changsha-732_old-1",
+      "sourceValue": "lau⁴¹",
+      "sourceCharacters": "老",
+      "conceptId": "732_old",
+      "concepticonId": "",
+      "line": 10227
+    },
+    {
+      "id": "beida1964-Changsha-722_black-1",
+      "sourceId": "Changsha-722_black-1",
+      "sourceValue": "xə²⁴",
+      "sourceCharacters": "黑",
+      "conceptId": "722_black",
+      "concepticonId": "163",
+      "line": 1228
+    },
+    {
+      "id": "beida1964-Changsha-568_run-1",
+      "sourceId": "Changsha-568_run-1",
+      "sourceValue": "pʰau⁴¹",
+      "sourceCharacters": "跑",
+      "conceptId": "568_run",
+      "concepticonId": "1519",
+      "line": 12368
+    },
+    {
+      "id": "beida1964-Changsha-650_sleep-1",
+      "sourceId": "Changsha-650_sleep-1",
+      "sourceValue": "kʰuən⁵⁵kau⁵⁵",
+      "sourceCharacters": "睏 覺",
+      "conceptId": "650_sleep",
+      "concepticonId": "1585",
+      "line": 13208
+    },
+    {
+      "id": "beida1964-Changsha-503_hear-1",
+      "sourceId": "Changsha-503_hear-1",
+      "sourceValue": "tʰin⁵⁵",
+      "sourceCharacters": "聽",
+      "conceptId": "503_hear",
+      "concepticonId": "1408",
+      "line": 6849
+    },
+    {
+      "id": "beida1964-Changsha-672_know-1",
+      "sourceId": "Changsha-672_know-1",
+      "sourceValue": "ɕiau⁴¹tə²⁴",
+      "sourceCharacters": "曉 得",
+      "conceptId": "672_know",
+      "concepticonId": "1410",
+      "line": 8050
+    },
+    {
+      "id": "beida1964-Changsha-610_speak-1",
+      "sourceId": "Changsha-610_speak-1",
+      "sourceValue": "kan⁴¹",
+      "sourceCharacters": "講",
+      "conceptId": "610_speak",
+      "concepticonId": "1623",
+      "line": 13641
+    },
+    {
+      "id": "beida1964-Changsha-6_fog-1",
+      "sourceId": "Changsha-6_fog-1",
+      "sourceValue": "u²¹",
+      "sourceCharacters": "霧",
+      "conceptId": "6_fog",
+      "concepticonId": "249",
+      "line": 5497
+    },
+    {
+      "id": "beida1964-Changsha-7_dew-1",
+      "sourceId": "Changsha-7_dew-1",
+      "sourceValue": "ləu²¹ɕyei⁴¹",
+      "sourceCharacters": "露 水",
+      "conceptId": "7_dew",
+      "concepticonId": "1977",
+      "line": 3860
+    },
+    {
+      "id": "beida1964-Changsha-8_frost-1",
+      "sourceId": "Changsha-8_frost-1",
+      "sourceValue": "ɕyan³³",
+      "sourceCharacters": "霜",
+      "conceptId": "8_frost",
+      "concepticonId": "2034",
+      "line": 5843
+    },
+    {
+      "id": "beida1964-Changsha-10_ice-1",
+      "sourceId": "Changsha-10_ice-1",
+      "sourceValue": "pin³³",
+      "sourceCharacters": "冰",
+      "conceptId": "10_ice",
+      "concepticonId": "617",
+      "line": 7427
+    },
+    {
+      "id": "beida1964-Changsha-11_hail-1",
+      "sourceId": "Changsha-11_hail-1",
+      "sourceValue": "pau⁵⁵",
+      "sourceCharacters": "雹",
+      "conceptId": "11_hail",
+      "concepticonId": "609",
+      "line": 6525
+    },
+    {
+      "id": "beida1964-Changsha-12_lightning-1",
+      "sourceId": "Changsha-12_lightning-1",
+      "sourceValue": "sɣn⁴¹",
+      "sourceCharacters": "閃",
+      "conceptId": "12_lightning",
+      "concepticonId": "1654",
+      "line": 8438
+    },
+    {
+      "id": "beida1964-Changsha-13_thunder-1",
+      "sourceId": "Changsha-13_thunder-1",
+      "sourceValue": "lei¹³",
+      "sourceCharacters": "雷",
+      "conceptId": "13_thunder",
+      "concepticonId": "1150",
+      "line": 15800
+    },
+    {
+      "id": "beida1964-Changsha-14_rainbow-1",
+      "sourceId": "Changsha-14_rainbow-1",
+      "sourceValue": "kan⁵⁵",
+      "sourceCharacters": "虹",
+      "conceptId": "14_rainbow",
+      "concepticonId": "1733",
+      "line": 11817
+    },
+    {
+      "id": "beida1964-Changsha-15_weather-1",
+      "sourceId": "Changsha-15_weather-1",
+      "sourceValue": "tʰiẽ³³tɕʰi⁵⁵",
+      "sourceCharacters": "天 氣",
+      "conceptId": "15_weather",
+      "concepticonId": "952",
+      "line": 17206
+    },
+    {
+      "id": "beida1964-Changsha-16_sunnyday-1",
+      "sourceId": "Changsha-16_sunnyday-1",
+      "sourceValue": "tɕin¹³tʰiẽ³³",
+      "sourceCharacters": "晴 天",
+      "conceptId": "16_sunnyday",
+      "concepticonId": "2742",
+      "line": 14558
+    },
+    {
+      "id": "beida1964-Changsha-17_cloudyday-1",
+      "sourceId": "Changsha-17_cloudyday-1",
+      "sourceValue": "in³³tʰiẽ³³",
+      "sourceCharacters": "陰 天",
+      "conceptId": "17_cloudyday",
+      "concepticonId": "2743",
+      "line": 2883
+    },
+    {
+      "id": "beida1964-Changsha-18_seaocean-1",
+      "sourceId": "Changsha-18_seaocean-1",
+      "sourceValue": "xai⁴¹",
+      "sourceCharacters": "海",
+      "conceptId": "18_seaocean",
+      "concepticonId": "2282",
+      "line": 12584
+    },
+    {
+      "id": "beida1964-Changsha-19_lake-1",
+      "sourceId": "Changsha-19_lake-1",
+      "sourceValue": "fu¹³",
+      "sourceCharacters": "湖",
+      "conceptId": "19_lake",
+      "concepticonId": "624",
+      "line": 8090
+    },
+    {
+      "id": "beida1964-Changsha-20_pond-1",
+      "sourceId": "Changsha-20_pond-1",
+      "sourceValue": "tsɿ¹³tan¹³",
+      "sourceCharacters": "池 塘",
+      "conceptId": "20_pond",
+      "concepticonId": "2035",
+      "line": 11249
+    },
+    {
+      "id": "beida1964-Changsha-21_landscape-1",
+      "sourceId": "Changsha-21_landscape-1",
+      "sourceValue": "xən³³tɕin⁴¹",
+      "sourceCharacters": "風 景",
+      "conceptId": "21_landscape",
+      "concepticonId": "2342",
+      "line": 8132
+    },
+    {
+      "id": "beida1964-Changsha-22_timeseason-1",
+      "sourceId": "Changsha-22_timeseason-1",
+      "sourceValue": "sɿ¹³xəu⁵⁵",
+      "sourceCharacters": "時 候",
+      "conceptId": "22_timeseason",
+      "concepticonId": "892",
+      "line": 15939
+    },
+    {
+      "id": "beida1964-Changsha-23_thisyear-1",
+      "sourceId": "Changsha-23_thisyear-1",
+      "sourceValue": "tɕin³³ȵiẽ¹³",
+      "sourceCharacters": "今 年",
+      "conceptId": "23_thisyear",
+      "concepticonId": "513",
+      "line": 15641
+    },
+    {
+      "id": "beida1964-Changsha-24_nextyear-1",
+      "sourceId": "Changsha-24_nextyear-1",
+      "sourceValue": "mən¹³ȵiẽ¹³",
+      "sourceCharacters": "明 年",
+      "conceptId": "24_nextyear",
+      "concepticonId": "515",
+      "line": 9996
+    },
+    {
+      "id": "beida1964-Changsha-25_theyearafternext-1",
+      "sourceId": "Changsha-25_theyearafternext-1",
+      "sourceValue": "xəu²¹ȵiẽ¹³",
+      "sourceCharacters": "後 年",
+      "conceptId": "25_theyearafternext",
+      "concepticonId": "2330",
+      "line": 15191
+    },
+    {
+      "id": "beida1964-Changsha-26_lastyear-1",
+      "sourceId": "Changsha-26_lastyear-1",
+      "sourceValue": "kʰə⁵⁵ȵiẽ¹³",
+      "sourceCharacters": "去 年",
+      "conceptId": "26_lastyear",
+      "concepticonId": "514",
+      "line": 8156
+    },
+    {
+      "id": "beida1964-Changsha-27_theyearbeforelast-1",
+      "sourceId": "Changsha-27_theyearbeforelast-1",
+      "sourceValue": "tɕiẽ¹³ȵiẽ¹³",
+      "sourceCharacters": "前 年",
+      "conceptId": "27_theyearbeforelast",
+      "concepticonId": "2331",
+      "line": 15209
+    },
+    {
+      "id": "beida1964-Changsha-31_thedayaftertomorrow-1",
+      "sourceId": "Changsha-31_thedayaftertomorrow-1",
+      "sourceValue": "xeu²¹zɿ²⁴",
+      "sourceCharacters": "後 日",
+      "conceptId": "31_thedayaftertomorrow",
+      "concepticonId": "1179",
+      "line": 15153
+    },
+    {
+      "id": "beida1964-Changsha-32_threedaysfromnow-1",
+      "sourceId": "Changsha-32_threedaysfromnow-1",
+      "sourceValue": "ŋai²¹xəu²¹zɿ²⁴",
+      "sourceCharacters": "艾 後 日",
+      "conceptId": "32_threedaysfromnow",
+      "concepticonId": "2332",
+      "line": 15718
+    },
+    {
+      "id": "beida1964-Changsha-34_thedaybeforeyesterday-1",
+      "sourceId": "Changsha-34_thedaybeforeyesterday-1",
+      "sourceValue": "tɕiẽ¹³zɿ²⁴",
+      "sourceCharacters": "前 日",
+      "conceptId": "34_thedaybeforeyesterday",
+      "concepticonId": "1180",
+      "line": 15172
+    },
+    {
+      "id": "beida1964-Changsha-36_dayopposedtonight-1",
+      "sourceId": "Changsha-36_dayopposedtonight-1",
+      "sourceValue": "pə²⁴tʰiẽ³³",
+      "sourceCharacters": "白 天",
+      "conceptId": "36_dayopposedtonight",
+      "concepticonId": "1225",
+      "line": 3712
+    },
+    {
+      "id": "beida1964-Changsha-39_forenoon-1",
+      "sourceId": "Changsha-39_forenoon-1",
+      "sourceValue": "san²¹u⁴¹",
+      "sourceCharacters": "上 午",
+      "conceptId": "39_forenoon",
+      "concepticonId": "2775",
+      "line": 5600
+    },
+    {
+      "id": "beida1964-Changsha-40_noon-1",
+      "sourceId": "Changsha-40_noon-1",
+      "sourceValue": "taən³³u⁴¹",
+      "sourceCharacters": "中 午",
+      "conceptId": "40_noon",
+      "concepticonId": "12",
+      "line": 10069
+    },
+    {
+      "id": "beida1964-Changsha-41_afternoon-1",
+      "sourceId": "Changsha-41_afternoon-1",
+      "sourceValue": "ɕia²¹u⁴¹",
+      "sourceCharacters": "下 午",
+      "conceptId": "41_afternoon",
+      "concepticonId": "1807",
+      "line": 188
+    },
+    {
+      "id": "beida1964-Changsha-44_newyear-1",
+      "sourceId": "Changsha-44_newyear-1",
+      "sourceValue": "tai²¹ȵiẽ¹³tsʰəu³³i²⁴",
+      "sourceCharacters": "大 年 初 一",
+      "conceptId": "44_newyear",
+      "concepticonId": "",
+      "line": 9954
+    },
+    {
+      "id": "beida1964-Changsha-45_thedragonboatfestival-1",
+      "sourceId": "Changsha-45_thedragonboatfestival-1",
+      "sourceValue": "tõ³³u⁴¹",
+      "sourceCharacters": "端 午",
+      "conceptId": "45_thedragonboatfestival",
+      "concepticonId": "2186",
+      "line": 15105
+    },
+    {
+      "id": "beida1964-Changsha-46_themidautumnfestival15thdayofthe8thlunarmonth-1",
+      "sourceId": "Changsha-46_themidautumnfestival15thdayofthe8thlunarmonth-1",
+      "sourceValue": "pa²⁴ye²⁴tɕie²⁴",
+      "sourceCharacters": "八 月 節",
+      "conceptId": "46_themidautumnfestival15thdayofthe8thlunarmonth",
+      "concepticonId": "2187",
+      "line": 15131
+    },
+    {
+      "id": "beida1964-Changsha-47_thedoubleninefestival-1",
+      "sourceId": "Changsha-47_thedoubleninefestival-1",
+      "sourceValue": "tsən¹³ian¹³",
+      "sourceCharacters": "重 陽",
+      "conceptId": "47_thedoubleninefestival",
+      "concepticonId": "",
+      "line": 15079
+    },
+    {
+      "id": "beida1964-Changsha-48_chinesenewyearseve-1",
+      "sourceId": "Changsha-48_chinesenewyearseve-1",
+      "sourceValue": "san³³sɿ²⁴uan⁴¹sau²¹",
+      "sourceCharacters": "三 十 晚 上",
+      "conceptId": "48_chinesenewyearseve",
+      "concepticonId": "2188",
+      "line": 16
+    },
+    {
+      "id": "beida1964-Changsha-51_copper-1",
+      "sourceId": "Changsha-51_copper-1",
+      "sourceValue": "tən¹³",
+      "sourceCharacters": "銅",
+      "conceptId": "51_copper",
+      "concepticonId": "1825",
+      "line": 3216
+    },
+    {
+      "id": "beida1964-Changsha-52_iron-1",
+      "sourceId": "Changsha-52_iron-1",
+      "sourceValue": "tʰie²⁴",
+      "sourceCharacters": "鉄",
+      "conceptId": "52_iron",
+      "concepticonId": "621",
+      "line": 7714
+    },
+    {
+      "id": "beida1964-Changsha-53_steel-1",
+      "sourceId": "Changsha-53_steel-1",
+      "sourceValue": "kan³³",
+      "sourceCharacters": "鋼",
+      "conceptId": "53_steel",
+      "concepticonId": "2343",
+      "line": 14005
+    },
+    {
+      "id": "beida1964-Changsha-54_lead-1",
+      "sourceId": "Changsha-54_lead-1",
+      "sourceValue": "yẽ¹³",
+      "sourceCharacters": "鉛",
+      "conceptId": "54_lead",
+      "concepticonId": "627",
+      "line": 8212
+    },
+    {
+      "id": "beida1964-Changsha-55_tin-1",
+      "sourceId": "Changsha-55_tin-1",
+      "sourceValue": "ɕi²⁴",
+      "sourceCharacters": "錫",
+      "conceptId": "55_tin",
+      "concepticonId": "893",
+      "line": 15957
+    },
+    {
+      "id": "beida1964-Changsha-56_coal-1",
+      "sourceId": "Changsha-56_coal-1",
+      "sourceValue": "mei¹³",
+      "sourceCharacters": "煤",
+      "conceptId": "56_coal",
+      "concepticonId": "2658",
+      "line": 2908
+    },
+    {
+      "id": "beida1964-Changsha-57_kerosine-1",
+      "sourceId": "Changsha-57_kerosine-1",
+      "sourceValue": "ian¹³iəu¹³",
+      "sourceCharacters": "洋 油",
+      "conceptId": "57_kerosine",
+      "concepticonId": "",
+      "line": 7879
+    },
+    {
+      "id": "beida1964-Changsha-58_petrol-1",
+      "sourceId": "Changsha-58_petrol-1",
+      "sourceValue": "tɕʰi⁵⁵iəu¹³",
+      "sourceCharacters": "汽 油",
+      "conceptId": "58_petrol",
+      "concepticonId": "2344",
+      "line": 10679
+    },
+    {
+      "id": "beida1964-Changsha-60_mudearth-1",
+      "sourceId": "Changsha-60_mudearth-1",
+      "sourceValue": "ȵi¹³pa³³",
+      "sourceCharacters": "泥 巴",
+      "conceptId": "60_mudearth",
+      "concepticonId": "640",
+      "line": 9642
+    },
+    {
+      "id": "beida1964-Changsha-61_soilearth-1",
+      "sourceId": "Changsha-61_soilearth-1",
+      "sourceValue": "tʰəu⁴¹",
+      "sourceCharacters": "土",
+      "conceptId": "61_soilearth",
+      "concepticonId": "1228",
+      "line": 13481
+    },
+    {
+      "id": "beida1964-Changsha-62_dust-1",
+      "sourceId": "Changsha-62_dust-1",
+      "sourceValue": "fei³³",
+      "sourceCharacters": "灰",
+      "conceptId": "62_dust",
+      "concepticonId": "2",
+      "line": 4320
+    },
+    {
+      "id": "beida1964-Changsha-63_tiger-1",
+      "sourceId": "Changsha-63_tiger-1",
+      "sourceValue": "lau⁴¹fu⁴¹",
+      "sourceCharacters": "老 虎",
+      "conceptId": "63_tiger",
+      "concepticonId": "846",
+      "line": 15862
+    },
+    {
+      "id": "beida1964-Changsha-66_wolf-1",
+      "sourceId": "Changsha-66_wolf-1",
+      "sourceValue": "lan¹³",
+      "sourceCharacters": "狼",
+      "conceptId": "66_wolf",
+      "concepticonId": "522",
+      "line": 17656
+    },
+    {
+      "id": "beida1964-Changsha-67_deer-1",
+      "sourceId": "Changsha-67_deer-1",
+      "sourceValue": "ləu²⁴",
+      "sourceCharacters": "鹿",
+      "conceptId": "67_deer",
+      "concepticonId": "1936",
+      "line": 3786
+    },
+    {
+      "id": "beida1964-Changsha-71_hawkeagle-1",
+      "sourceId": "Changsha-71_hawkeagle-1",
+      "sourceValue": "in³³",
+      "sourceCharacters": "鷹",
+      "conceptId": "71_hawkeagle",
+      "concepticonId": "2683",
+      "line": 6773
+    },
+    {
+      "id": "beida1964-Changsha-72_owl-1",
+      "sourceId": "Changsha-72_owl-1",
+      "sourceValue": "miau³³təu¹³in³³",
+      "sourceCharacters": "貓 頭 鷹",
+      "conceptId": "72_owl",
+      "concepticonId": "735",
+      "line": 10399
+    },
+    {
+      "id": "beida1964-Changsha-73_wildgoose-1",
+      "sourceId": "Changsha-73_wildgoose-1",
+      "sourceValue": "tai²¹ŋan⁵⁵",
+      "sourceCharacters": "大 雁",
+      "conceptId": "73_wildgoose",
+      "concepticonId": "2776",
+      "line": 17517
+    },
+    {
+      "id": "beida1964-Changsha-76_magpie-1",
+      "sourceId": "Changsha-76_magpie-1",
+      "sourceValue": "ɕi⁴¹tɕʰio²⁴",
+      "sourceCharacters": "喜 鵲",
+      "conceptId": "76_magpie",
+      "concepticonId": "2039",
+      "line": 8831
+    },
+    {
+      "id": "beida1964-Changsha-77_sparrow-1",
+      "sourceId": "Changsha-77_sparrow-1",
+      "sourceValue": "ma¹³tɕʰio²⁴",
+      "sourceCharacters": "麻 雀",
+      "conceptId": "77_sparrow",
+      "concepticonId": "1854",
+      "line": 13620
+    },
+    {
+      "id": "beida1964-Changsha-85_malepig-1",
+      "sourceId": "Changsha-85_malepig-1",
+      "sourceValue": "tɕy³³kən³³",
+      "sourceCharacters": "豬 公",
+      "conceptId": "85_malepig",
+      "concepticonId": "2487",
+      "line": 8935
+    },
+    {
+      "id": "beida1964-Changsha-86_sow-1",
+      "sourceId": "Changsha-86_sow-1",
+      "sourceValue": "tɕy³³po¹³",
+      "sourceCharacters": "豬 婆",
+      "conceptId": "86_sow",
+      "concepticonId": "1351",
+      "line": 13577
+    },
+    {
+      "id": "beida1964-Changsha-89_donkeyass-1",
+      "sourceId": "Changsha-89_donkeyass-1",
+      "sourceValue": "ləu¹³",
+      "sourceCharacters": "驢",
+      "conceptId": "89_donkeyass",
+      "concepticonId": "1862",
+      "line": 4040
+    },
+    {
+      "id": "beida1964-Changsha-91_sheepgoat-1",
+      "sourceId": "Changsha-91_sheepgoat-1",
+      "sourceValue": "ian¹³",
+      "sourceCharacters": "羊",
+      "conceptId": "91_sheepgoat",
+      "concepticonId": "2684",
+      "line": 12750
+    },
+    {
+      "id": "beida1964-Changsha-94_capon-1",
+      "sourceId": "Changsha-94_capon-1",
+      "sourceValue": "ɕiẽ⁵⁵tɕi³³",
+      "sourceCharacters": "鏾 雞",
+      "conceptId": "94_capon",
+      "concepticonId": "2567",
+      "line": 2150
+    },
+    {
+      "id": "beida1964-Changsha-98_goose-1",
+      "sourceId": "Changsha-98_goose-1",
+      "sourceValue": "ŋo¹³",
+      "sourceCharacters": "鵝",
+      "conceptId": "98_goose",
+      "concepticonId": "1187",
+      "line": 6350
+    },
+    {
+      "id": "beida1964-Changsha-99_carp-1",
+      "sourceId": "Changsha-99_carp-1",
+      "sourceValue": "li⁴¹y¹³",
+      "sourceCharacters": "鯉 魚",
+      "conceptId": "99_carp",
+      "concepticonId": "2685",
+      "line": 2170
+    },
+    {
+      "id": "beida1964-Changsha-100_cruciancarp-1",
+      "sourceId": "Changsha-100_cruciancarp-1",
+      "sourceValue": "tɕi²⁴y¹³",
+      "sourceCharacters": "鯽 魚",
+      "conceptId": "100_cruciancarp",
+      "concepticonId": "2784",
+      "line": 3473
+    },
+    {
+      "id": "beida1964-Changsha-101_yellowcroaker-1",
+      "sourceId": "Changsha-101_yellowcroaker-1",
+      "sourceValue": "fan¹³fa³³y¹³",
+      "sourceCharacters": "黃 花 魚",
+      "conceptId": "101_yellowcroaker",
+      "concepticonId": "2347",
+      "line": 17888
+    },
+    {
+      "id": "beida1964-Changsha-102_crab-1",
+      "sourceId": "Changsha-102_crab-1",
+      "sourceValue": "pan¹³xai⁴¹",
+      "sourceCharacters": "螃 蟹",
+      "conceptId": "102_crab",
+      "concepticonId": "2348",
+      "line": 3376
+    },
+    {
+      "id": "beida1964-Changsha-104_oystersmussels-1",
+      "sourceId": "Changsha-104_oystersmussels-1",
+      "sourceValue": "pan²¹kʰo²⁴",
+      "sourceCharacters": "蚌 殼",
+      "conceptId": "104_oystersmussels",
+      "concepticonId": "2785",
+      "line": 10421
+    },
+    {
+      "id": "beida1964-Changsha-107_turtle-1",
+      "sourceId": "Changsha-107_turtle-1",
+      "sourceValue": "u³³kuei³³",
+      "sourceCharacters": "烏 龜",
+      "conceptId": "107_turtle",
+      "concepticonId": "112",
+      "line": 16409
+    },
+    {
+      "id": "beida1964-Changsha-108_snail-1",
+      "sourceId": "Changsha-108_snail-1",
+      "sourceValue": "o³³ȵiəu¹³",
+      "sourceCharacters": "蝸 牛",
+      "conceptId": "108_snail",
+      "concepticonId": "1543",
+      "line": 13347
+    },
+    {
+      "id": "beida1964-Changsha-111_bee-1",
+      "sourceId": "Changsha-111_bee-1",
+      "sourceValue": "mi²⁴xən³³",
+      "sourceCharacters": "蜜 蜂",
+      "conceptId": "111_bee",
+      "concepticonId": "665",
+      "line": 1079
+    },
+    {
+      "id": "beida1964-Changsha-112_butterfly-1",
+      "sourceId": "Changsha-112_butterfly-1",
+      "sourceValue": "xu¹³tʰie²⁴",
+      "sourceCharacters": "蝴 蝶",
+      "conceptId": "112_butterfly",
+      "concepticonId": "1791",
+      "line": 1912
+    },
+    {
+      "id": "beida1964-Changsha-113_dragonfly-1",
+      "sourceId": "Changsha-113_dragonfly-1",
+      "sourceValue": "ian¹³mie³³mie³³",
+      "sourceCharacters": "洋 哶 哶",
+      "conceptId": "113_dragonfly",
+      "concepticonId": "2352",
+      "line": 4119
+    },
+    {
+      "id": "beida1964-Changsha-115_firefly-1",
+      "sourceId": "Changsha-115_firefly-1",
+      "sourceValue": "in¹³xo⁴¹tsən¹³",
+      "sourceCharacters": "螢 火 蟲",
+      "conceptId": "115_firefly",
+      "concepticonId": "206",
+      "line": 5274
+    },
+    {
+      "id": "beida1964-Changsha-116_cricket-1",
+      "sourceId": "Changsha-116_cricket-1",
+      "sourceValue": "tɕʰi³³tɕʰi³³",
+      "sourceCharacters": "蛐 蛐",
+      "conceptId": "116_cricket",
+      "concepticonId": "2354",
+      "line": 3415
+    },
+    {
+      "id": "beida1964-Changsha-118_housefly-2",
+      "sourceId": "Changsha-118_housefly-2",
+      "sourceValue": "tɕʰin⁵³təu¹³mən³³",
+      "sourceCharacters": "靑 頭 蚊",
+      "conceptId": "118_housefly",
+      "concepticonId": "1504",
+      "line": 7268
+    },
+    {
+      "id": "beida1964-Changsha-120_bedbug-1",
+      "sourceId": "Changsha-120_bedbug-1",
+      "sourceValue": "tsʰəu⁴¹tsən¹³",
+      "sourceCharacters": "臭 蟲",
+      "conceptId": "120_bedbug",
+      "concepticonId": "1949",
+      "line": 1057
+    },
+    {
+      "id": "beida1964-Changsha-123_snake-1",
+      "sourceId": "Changsha-123_snake-1",
+      "sourceValue": "sə¹³",
+      "sourceCharacters": "蛇",
+      "conceptId": "123_snake",
+      "concepticonId": "730",
+      "line": 13365
+    },
+    {
+      "id": "beida1964-Changsha-125_wing-1",
+      "sourceId": "Changsha-125_wing-1",
+      "sourceValue": "tsʰɿ⁵⁵pan⁴¹",
+      "sourceCharacters": "翅 膀",
+      "conceptId": "125_wing",
+      "concepticonId": "1257",
+      "line": 17586
+    },
+    {
+      "id": "beida1964-Changsha-129_fishscales-1",
+      "sourceId": "Changsha-129_fishscales-1",
+      "sourceValue": "lin¹³",
+      "sourceCharacters": "鱗",
+      "conceptId": "129_fishscales",
+      "concepticonId": "266",
+      "line": 5321
+    },
+    {
+      "id": "beida1964-Changsha-130_plumblossom-1",
+      "sourceId": "Changsha-130_plumblossom-1",
+      "sourceValue": "mei¹³fa³³",
+      "sourceCharacters": "梅 花",
+      "conceptId": "130_plumblossom",
+      "concepticonId": "2744",
+      "line": 11173
+    },
+    {
+      "id": "beida1964-Changsha-131_apricotblossom-1",
+      "sourceId": "Changsha-131_apricotblossom-1",
+      "sourceValue": "ɕin⁵⁵fa³³",
+      "sourceCharacters": "杏 花",
+      "conceptId": "131_apricotblossom",
+      "concepticonId": "2745",
+      "line": 459
+    },
+    {
+      "id": "beida1964-Changsha-132_peachblossom-1",
+      "sourceId": "Changsha-132_peachblossom-1",
+      "sourceValue": "tau¹³fa³³",
+      "sourceCharacters": "桃 花",
+      "conceptId": "132_peachblossom",
+      "concepticonId": "2746",
+      "line": 10508
+    },
+    {
+      "id": "beida1964-Changsha-133_lotus-1",
+      "sourceId": "Changsha-133_lotus-1",
+      "sourceValue": "xo¹³fa³³",
+      "sourceCharacters": "荷 花",
+      "conceptId": "133_lotus",
+      "concepticonId": "2359",
+      "line": 8709
+    },
+    {
+      "id": "beida1964-Changsha-134_cassia-1",
+      "sourceId": "Changsha-134_cassia-1",
+      "sourceValue": "kuei⁵⁵fa³³",
+      "sourceCharacters": "桂 花",
+      "conceptId": "134_cassia",
+      "concepticonId": "2748",
+      "line": 2264
+    },
+    {
+      "id": "beida1964-Changsha-135_mugwort-1",
+      "sourceId": "Changsha-135_mugwort-1",
+      "sourceValue": "ŋai²¹",
+      "sourceCharacters": "艾",
+      "conceptId": "135_mugwort",
+      "concepticonId": "2361",
+      "line": 9672
+    },
+    {
+      "id": "beida1964-Changsha-136_cottonraw-1",
+      "sourceId": "Changsha-136_cottonraw-1",
+      "sourceValue": "miẽ¹³fa³³",
+      "sourceCharacters": "棉 花",
+      "conceptId": "136_cottonraw",
+      "concepticonId": "1850",
+      "line": 3249
+    },
+    {
+      "id": "beida1964-Changsha-137_riceplant-1",
+      "sourceId": "Changsha-137_riceplant-1",
+      "sourceValue": "o¹³",
+      "sourceCharacters": "禾",
+      "conceptId": "137_riceplant",
+      "concepticonId": "2026",
+      "line": 12089
+    },
+    {
+      "id": "beida1964-Changsha-138_ricecrops-1",
+      "sourceId": "Changsha-138_ricecrops-1",
+      "sourceValue": "ku²⁴",
+      "sourceCharacters": "谷",
+      "conceptId": "138_ricecrops",
+      "concepticonId": "2749",
+      "line": 12052
+    },
+    {
+      "id": "beida1964-Changsha-140_polishedglutinousrice-1",
+      "sourceId": "Changsha-140_polishedglutinousrice-1",
+      "sourceValue": "lo²¹mi⁴¹",
+      "sourceCharacters": "糯 米",
+      "conceptId": "140_polishedglutinousrice",
+      "concepticonId": "2750",
+      "line": 11207
+    },
+    {
+      "id": "beida1964-Changsha-142_flour-1",
+      "sourceId": "Changsha-142_flour-1",
+      "sourceValue": "fei³³miẽ²¹",
+      "sourceCharacters": "灰 面",
+      "conceptId": "142_flour",
+      "concepticonId": "1594",
+      "line": 5455
+    },
+    {
+      "id": "beida1964-Changsha-144_millet-1",
+      "sourceId": "Changsha-144_millet-1",
+      "sourceValue": "ɕiəu²⁴mi⁴¹",
+      "sourceCharacters": "粟 米",
+      "conceptId": "144_millet",
+      "concepticonId": "931",
+      "line": 9282
+    },
+    {
+      "id": "beida1964-Changsha-145_bran-1",
+      "sourceId": "Changsha-145_bran-1",
+      "sourceValue": "mə²⁴fu³³",
+      "sourceCharacters": "麥 麩",
+      "conceptId": "145_bran",
+      "concepticonId": "2362",
+      "line": 1559
+    },
+    {
+      "id": "beida1964-Changsha-146_chaffhusks-1",
+      "sourceId": "Changsha-146_chaffhusks-1",
+      "sourceValue": "kʰan³³kʰo²⁴",
+      "sourceCharacters": "糠 殼",
+      "conceptId": "146_chaffhusks",
+      "concepticonId": "2363",
+      "line": 2442
+    },
+    {
+      "id": "beida1964-Changsha-147_sorghum-1",
+      "sourceId": "Changsha-147_sorghum-1",
+      "sourceValue": "kau³³lian¹³",
+      "sourceCharacters": "髙 粱",
+      "conceptId": "147_sorghum",
+      "concepticonId": "347",
+      "line": 13539
+    },
+    {
+      "id": "beida1964-Changsha-148_maize-1",
+      "sourceId": "Changsha-148_maize-1",
+      "sourceValue": "y⁵⁵mi⁴¹",
+      "sourceCharacters": "玉 米",
+      "conceptId": "148_maize",
+      "concepticonId": "506",
+      "line": 8850
+    },
+    {
+      "id": "beida1964-Changsha-149_peanut-1",
+      "sourceId": "Changsha-149_peanut-1",
+      "sourceValue": "fa³³sən³³",
+      "sourceCharacters": "花 生",
+      "conceptId": "149_peanut",
+      "concepticonId": "595",
+      "line": 10529
+    },
+    {
+      "id": "beida1964-Changsha-150_sunflower-1",
+      "sourceId": "Changsha-150_sunflower-1",
+      "sourceValue": "tsau¹³ian¹³fa³³",
+      "sourceCharacters": "朝 陽 花",
+      "conceptId": "150_sunflower",
+      "concepticonId": "1956",
+      "line": 14544
+    },
+    {
+      "id": "beida1964-Changsha-151_sweetpotato-1",
+      "sourceId": "Changsha-151_sweetpotato-1",
+      "sourceValue": "xən¹³ɕy²¹",
+      "sourceCharacters": "紅 薯",
+      "conceptId": "151_sweetpotato",
+      "concepticonId": "159",
+      "line": 14713
+    },
+    {
+      "id": "beida1964-Changsha-154_cabbage-1",
+      "sourceId": "Changsha-154_cabbage-1",
+      "sourceValue": "pau³³tsʰai⁵⁵",
+      "sourceCharacters": "包 菜",
+      "conceptId": "154_cabbage",
+      "concepticonId": "774",
+      "line": 2056
+    },
+    {
+      "id": "beida1964-Changsha-155_pumpkin-1",
+      "sourceId": "Changsha-155_pumpkin-1",
+      "sourceValue": "lan¹³kua³³",
+      "sourceCharacters": "南 瓜",
+      "conceptId": "155_pumpkin",
+      "concepticonId": "864",
+      "line": 11656
+    },
+    {
+      "id": "beida1964-Changsha-156_waxgourdwhitegourd-1",
+      "sourceId": "Changsha-156_waxgourdwhitegourd-1",
+      "sourceValue": "tən³³kua⁵³",
+      "sourceCharacters": "冬 瓜",
+      "conceptId": "156_waxgourdwhitegourd",
+      "concepticonId": "411",
+      "line": 17129
+    },
+    {
+      "id": "beida1964-Changsha-157_cucumber-1",
+      "sourceId": "Changsha-157_cucumber-1",
+      "sourceValue": "uan¹³kua³³",
+      "sourceCharacters": "黃 瓜",
+      "conceptId": "157_cucumber",
+      "concepticonId": "496",
+      "line": 3491
+    },
+    {
+      "id": "beida1964-Changsha-158_radish-1",
+      "sourceId": "Changsha-158_radish-1",
+      "sourceValue": "lo¹³pu²¹",
+      "sourceCharacters": "蘿 蔔",
+      "conceptId": "158_radish",
+      "concepticonId": "2365",
+      "line": 11757
+    },
+    {
+      "id": "beida1964-Changsha-161_tuberonion-1",
+      "sourceId": "Changsha-161_tuberonion-1",
+      "sourceValue": "tɕiəu⁴¹tsʰai⁵⁵",
+      "sourceCharacters": "韭 榮",
+      "conceptId": "161_tuberonion",
+      "concepticonId": "",
+      "line": 16389
+    },
+    {
+      "id": "beida1964-Changsha-162_scallionsgreenonions-1",
+      "sourceId": "Changsha-162_scallionsgreenonions-1",
+      "sourceValue": "tsʰən³³",
+      "sourceCharacters": "蔥",
+      "conceptId": "162_scallionsgreenonions",
+      "concepticonId": "2366",
+      "line": 12476
+    },
+    {
+      "id": "beida1964-Changsha-163_garlic-1",
+      "sourceId": "Changsha-163_garlic-1",
+      "sourceValue": "tai²¹sõ⁵⁵",
+      "sourceCharacters": "大 蒜",
+      "conceptId": "163_garlic",
+      "concepticonId": "2368",
+      "line": 5953
+    },
+    {
+      "id": "beida1964-Changsha-164_chilliredpepper-1",
+      "sourceId": "Changsha-164_chilliredpepper-1",
+      "sourceValue": "la²⁴tɕiau³³",
+      "sourceCharacters": "辣 椒",
+      "conceptId": "164_chilliredpepper",
+      "concepticonId": "919",
+      "line": 2661
+    },
+    {
+      "id": "beida1964-Changsha-172_cherry-1",
+      "sourceId": "Changsha-172_cherry-1",
+      "sourceValue": "in³³tau¹³",
+      "sourceCharacters": "櫻 桃",
+      "conceptId": "172_cherry",
+      "concepticonId": "2765",
+      "line": 2541
+    },
+    {
+      "id": "beida1964-Changsha-173_olive-1",
+      "sourceId": "Changsha-173_olive-1",
+      "sourceValue": "tɕʰin³³ko⁴¹",
+      "sourceCharacters": "靑 果",
+      "conceptId": "173_olive",
+      "concepticonId": "1154",
+      "line": 10305
+    },
+    {
+      "id": "beida1964-Changsha-174_waterchestnut-1",
+      "sourceId": "Changsha-174_waterchestnut-1",
+      "sourceValue": "pu¹³tɕi⁵⁵",
+      "sourceCharacters": "蒲 齊",
+      "conceptId": "174_waterchestnut",
+      "concepticonId": "",
+      "line": 17077
+    },
+    {
+      "id": "beida1964-Changsha-176_chestnut-1",
+      "sourceId": "Changsha-176_chestnut-1",
+      "sourceValue": "pan⁴¹li²⁴",
+      "sourceCharacters": "板 栗",
+      "conceptId": "176_chestnut",
+      "concepticonId": "2318",
+      "line": 2566
+    },
+    {
+      "id": "beida1964-Changsha-177_walnut-1",
+      "sourceId": "Changsha-177_walnut-1",
+      "sourceValue": "xə²⁴tau¹³",
+      "sourceCharacters": "核 桃",
+      "conceptId": "177_walnut",
+      "concepticonId": "2042",
+      "line": 16961
+    },
+    {
+      "id": "beida1964-Changsha-180_longan-1",
+      "sourceId": "Changsha-180_longan-1",
+      "sourceValue": "kuei⁵⁵yẽ¹³",
+      "sourceCharacters": "桂 園",
+      "conceptId": "180_longan",
+      "concepticonId": "",
+      "line": 8629
+    },
+    {
+      "id": "beida1964-Changsha-181_watermelon-1",
+      "sourceId": "Changsha-181_watermelon-1",
+      "sourceValue": "ɕi³³kua³³",
+      "sourceCharacters": "西 瓜",
+      "conceptId": "181_watermelon",
+      "concepticonId": "2766",
+      "line": 17114
+    },
+    {
+      "id": "beida1964-Changsha-182_pitstoneoffruit-1",
+      "sourceId": "Changsha-182_pitstoneoffruit-1",
+      "sourceValue": "xə²⁴",
+      "sourceCharacters": "核",
+      "conceptId": "182_pitstoneoffruit",
+      "concepticonId": "1762",
+      "line": 11057
+    },
+    {
+      "id": "beida1964-Changsha-183_peelskinoffruit-1",
+      "sourceId": "Changsha-183_peelskinoffruit-1",
+      "sourceValue": "pi¹³",
+      "sourceCharacters": "皮",
+      "conceptId": "183_peelskinoffruit",
+      "concepticonId": "2373",
+      "line": 10607
+    },
+    {
+      "id": "beida1964-Changsha-184_breakfast-1",
+      "sourceId": "Changsha-184_breakfast-1",
+      "sourceValue": "tsau⁴¹fan²¹",
+      "sourceCharacters": "早 飯",
+      "conceptId": "184_breakfast",
+      "concepticonId": "1322",
+      "line": 1581
+    },
+    {
+      "id": "beida1964-Changsha-185_lunch-1",
+      "sourceId": "Changsha-185_lunch-1",
+      "sourceValue": "tsən³³fan²¹",
+      "sourceCharacters": "中 飯",
+      "conceptId": "185_lunch",
+      "concepticonId": "768",
+      "line": 8793
+    },
+    {
+      "id": "beida1964-Changsha-186_supper-1",
+      "sourceId": "Changsha-186_supper-1",
+      "sourceValue": "uan⁴¹fan²¹",
+      "sourceCharacters": "晚 飯",
+      "conceptId": "186_supper",
+      "concepticonId": "1833",
+      "line": 14585
+    },
+    {
+      "id": "beida1964-Changsha-187_cookedrice-1",
+      "sourceId": "Changsha-187_cookedrice-1",
+      "sourceValue": "fan²¹",
+      "sourceCharacters": "飯",
+      "conceptId": "187_cookedrice",
+      "concepticonId": "1191",
+      "line": 3173
+    },
+    {
+      "id": "beida1964-Changsha-188_ricegruelcongee-1",
+      "sourceId": "Changsha-188_ricegruelcongee-1",
+      "sourceValue": "ɕi³³fan²¹",
+      "sourceCharacters": "稀 飯",
+      "conceptId": "188_ricegruelcongee",
+      "concepticonId": "2049",
+      "line": 12072
+    },
+    {
+      "id": "beida1964-Changsha-189_thinriceormilletgruel-1",
+      "sourceId": "Changsha-189_thinriceormilletgruel-1",
+      "sourceValue": "mi⁴¹tʰan³³",
+      "sourceCharacters": "米 湯",
+      "conceptId": "189_thinriceormilletgruel",
+      "concepticonId": "",
+      "line": 15501
+    },
+    {
+      "id": "beida1964-Changsha-193_dumplingwonton-1",
+      "sourceId": "Changsha-193_dumplingwonton-1",
+      "sourceValue": "tɕiau⁴¹ə⁴¹",
+      "sourceCharacters": "餃 餌",
+      "conceptId": "193_dumplingwonton",
+      "concepticonId": "",
+      "line": 4297
+    },
+    {
+      "id": "beida1964-Changsha-195_cakespastry-1",
+      "sourceId": "Changsha-195_cakespastry-1",
+      "sourceValue": "kau³³",
+      "sourceCharacters": "糕",
+      "conceptId": "195_cakespastry",
+      "concepticonId": "2408",
+      "line": 2074
+    },
+    {
+      "id": "beida1964-Changsha-196_stuffinginfood-1",
+      "sourceId": "Changsha-196_stuffinginfood-1",
+      "sourceValue": "pau³³ɕin³³",
+      "sourceCharacters": "包 心",
+      "conceptId": "196_stuffinginfood",
+      "concepticonId": "",
+      "line": 14439
+    },
+    {
+      "id": "beida1964-Changsha-197_dishfood-1",
+      "sourceId": "Changsha-197_dishfood-1",
+      "sourceValue": "tsʰai⁵⁵",
+      "sourceCharacters": "菜",
+      "conceptId": "197_dishfood",
+      "concepticonId": "3542",
+      "line": 3985
+    },
+    {
+      "id": "beida1964-Changsha-198_meatdishes-1",
+      "sourceId": "Changsha-198_meatdishes-1",
+      "sourceValue": "fən³³tsʰai⁵⁵",
+      "sourceCharacters": "葷 菜",
+      "conceptId": "198_meatdishes",
+      "concepticonId": "2767",
+      "line": 9207
+    },
+    {
+      "id": "beida1964-Changsha-199_vegetabledishes-1",
+      "sourceId": "Changsha-199_vegetabledishes-1",
+      "sourceValue": "səu⁵⁵tsʰai⁵⁵",
+      "sourceCharacters": "素 菜",
+      "conceptId": "199_vegetabledishes",
+      "concepticonId": "",
+      "line": 16780
+    },
+    {
+      "id": "beida1964-Changsha-200_soup-1",
+      "sourceId": "Changsha-200_soup-1",
+      "sourceValue": "tʰan³³",
+      "sourceCharacters": "湯",
+      "conceptId": "200_soup",
+      "concepticonId": "1547",
+      "line": 13560
+    },
+    {
+      "id": "beida1964-Changsha-201_pork-1",
+      "sourceId": "Changsha-201_pork-1",
+      "sourceValue": "zeu²⁴",
+      "sourceCharacters": "肉",
+      "conceptId": "201_pork",
+      "concepticonId": "2769",
+      "line": 11285
+    },
+    {
+      "id": "beida1964-Changsha-202_porkliver-1",
+      "sourceId": "Changsha-202_porkliver-1",
+      "sourceValue": "tɕy³³kan³³",
+      "sourceCharacters": "豬 肝",
+      "conceptId": "202_porkliver",
+      "concepticonId": "2778",
+      "line": 11328
+    },
+    {
+      "id": "beida1964-Changsha-206_thinnoodlesfentiao-1",
+      "sourceId": "Changsha-206_thinnoodlesfentiao-1",
+      "sourceValue": "fən⁴¹",
+      "sourceCharacters": "粉",
+      "conceptId": "206_thinnoodlesfentiao",
+      "concepticonId": "",
+      "line": 15482
+    },
+    {
+      "id": "beida1964-Changsha-207_condimentsseasoning-1",
+      "sourceId": "Changsha-207_condimentsseasoning-1",
+      "sourceValue": "tso²⁴liau²¹",
+      "sourceCharacters": "作 料",
+      "conceptId": "207_condimentsseasoning",
+      "concepticonId": "",
+      "line": 3154
+    },
+    {
+      "id": "beida1964-Changsha-208_porkfat-1",
+      "sourceId": "Changsha-208_porkfat-1",
+      "sourceValue": "tɕy³³iəu¹³",
+      "sourceCharacters": "豬 油",
+      "conceptId": "208_porkfat",
+      "concepticonId": "2557",
+      "line": 11308
+    },
+    {
+      "id": "beida1964-Changsha-209_soysauce-1",
+      "sourceId": "Changsha-209_soysauce-1",
+      "sourceValue": "tɕian⁵⁵iəu¹³",
+      "sourceCharacters": "醬 油",
+      "conceptId": "209_soysauce",
+      "concepticonId": "1968",
+      "line": 13598
+    },
+    {
+      "id": "beida1964-Changsha-210_vinegar-1",
+      "sourceId": "Changsha-210_vinegar-1",
+      "sourceValue": "tsʰəu⁵⁵",
+      "sourceCharacters": "醋",
+      "conceptId": "210_vinegar",
+      "concepticonId": "985",
+      "line": 16844
+    },
+    {
+      "id": "beida1964-Changsha-211_sugarsweets-1",
+      "sourceId": "Changsha-211_sugarsweets-1",
+      "sourceValue": "tan¹³",
+      "sourceCharacters": "糖",
+      "conceptId": "211_sugarsweets",
+      "concepticonId": "874",
+      "line": 14480
+    },
+    {
+      "id": "beida1964-Changsha-212_honey-1",
+      "sourceId": "Changsha-212_honey-1",
+      "sourceValue": "xən³³mi²⁴",
+      "sourceCharacters": "蜂 蜜",
+      "conceptId": "212_honey",
+      "concepticonId": "942",
+      "line": 7154
+    },
+    {
+      "id": "beida1964-Changsha-213_alcoholicbeverage-1",
+      "sourceId": "Changsha-213_alcoholicbeverage-1",
+      "sourceValue": "tɕiəu⁴¹",
+      "sourceCharacters": "酒",
+      "conceptId": "213_alcoholicbeverage",
+      "concepticonId": "404",
+      "line": 246
+    },
+    {
+      "id": "beida1964-Changsha-215_icecream-1",
+      "sourceId": "Changsha-215_icecream-1",
+      "sourceValue": "pin³³tɕi¹³lin¹³",
+      "sourceCharacters": "冰 其 淋",
+      "conceptId": "215_icecream",
+      "concepticonId": "",
+      "line": 7445
+    },
+    {
+      "id": "beida1964-Changsha-216_popsicle-1",
+      "sourceId": "Changsha-216_popsicle-1",
+      "sourceValue": "pin³³pan⁵⁵",
+      "sourceCharacters": "冰 棒",
+      "conceptId": "216_popsicle",
+      "concepticonId": "",
+      "line": 11267
+    },
+    {
+      "id": "beida1964-Changsha-217_boiledwater-1",
+      "sourceId": "Changsha-217_boiledwater-1",
+      "sourceValue": "kʰai³³ɕyei⁴¹",
+      "sourceCharacters": "開 水",
+      "conceptId": "217_boiledwater",
+      "concepticonId": "3362",
+      "line": 1422
+    },
+    {
+      "id": "beida1964-Changsha-218_cigarette-1",
+      "sourceId": "Changsha-218_cigarette-1",
+      "sourceValue": "tsɿ⁴¹iẽ³³",
+      "sourceCharacters": "紙 煙",
+      "conceptId": "218_cigarette",
+      "concepticonId": "969",
+      "line": 2742
+    },
+    {
+      "id": "beida1964-Changsha-221_shirt-1",
+      "sourceId": "Changsha-221_shirt-1",
+      "sourceValue": "tsʰən⁵⁵i³³",
+      "sourceCharacters": "襯 衣",
+      "conceptId": "221_shirt",
+      "concepticonId": "1622",
+      "line": 12767
+    },
+    {
+      "id": "beida1964-Changsha-222_undershirt-1",
+      "sourceId": "Changsha-222_undershirt-1",
+      "sourceValue": "xan²¹san³³",
+      "sourceCharacters": "汗 衫",
+      "conceptId": "222_undershirt",
+      "concepticonId": "",
+      "line": 16667
+    },
+    {
+      "id": "beida1964-Changsha-223_jiaaocostume-1",
+      "sourceId": "Changsha-223_jiaaocostume-1",
+      "sourceValue": "ka²⁴ŋau⁴¹",
+      "sourceCharacters": "裌 襖",
+      "conceptId": "223_jiaaocostume",
+      "concepticonId": "",
+      "line": 54
+    },
+    {
+      "id": "beida1964-Changsha-225_coat-1",
+      "sourceId": "Changsha-225_coat-1",
+      "sourceValue": "uai²¹tʰau⁵⁵",
+      "sourceCharacters": "外 套",
+      "conceptId": "225_coat",
+      "concepticonId": "603",
+      "line": 2927
+    },
+    {
+      "id": "beida1964-Changsha-228_shorts-1",
+      "sourceId": "Changsha-228_shorts-1",
+      "sourceValue": "li⁴¹kʰu⁵⁵",
+      "sourceCharacters": "裏 褲",
+      "conceptId": "228_shorts",
+      "concepticonId": "",
+      "line": 12861
+    },
+    {
+      "id": "beida1964-Changsha-230_shoes-1",
+      "sourceId": "Changsha-230_shoes-1",
+      "sourceValue": "xai¹³",
+      "sourceCharacters": "鞋",
+      "conceptId": "230_shoes",
+      "concepticonId": "1381",
+      "line": 12804
+    },
+    {
+      "id": "beida1964-Changsha-231_slippers-1",
+      "sourceId": "Changsha-231_slippers-1",
+      "sourceValue": "tʰo³³xai¹³",
+      "sourceCharacters": "拖 鞋",
+      "conceptId": "231_slippers",
+      "concepticonId": "",
+      "line": 13248
+    },
+    {
+      "id": "beida1964-Changsha-234_shawl-1",
+      "sourceId": "Changsha-234_shawl-1",
+      "sourceValue": "uei¹³tɕin³³",
+      "sourceCharacters": "圍 巾",
+      "conceptId": "234_shawl",
+      "concepticonId": "2771",
+      "line": 12730
+    },
+    {
+      "id": "beida1964-Changsha-237_towelwashcloth-1",
+      "sourceId": "Changsha-237_towelwashcloth-1",
+      "sourceValue": "ɕi⁴¹liẽ⁴¹səu⁴¹tɕin³³",
+      "sourceCharacters": "洗 臉 手 巾",
+      "conceptId": "237_towelwashcloth",
+      "concepticonId": "1021",
+      "line": 16276
+    },
+    {
+      "id": "beida1964-Changsha-238_handkerchief-1",
+      "sourceId": "Changsha-238_handkerchief-1",
+      "sourceValue": "ɕiau⁴¹səu⁴¹tɕin³³",
+      "sourceCharacters": "小 手 巾",
+      "conceptId": "238_handkerchief",
+      "concepticonId": "1020",
+      "line": 6584
+    },
+    {
+      "id": "beida1964-Changsha-245_middleroominthewholehouse-1",
+      "sourceId": "Changsha-245_middleroominthewholehouse-1",
+      "sourceValue": "tʰau¹³u²⁴",
+      "sourceCharacters": "堂 屋",
+      "conceptId": "245_middleroominthewholehouse",
+      "concepticonId": "",
+      "line": 9250
+    },
+    {
+      "id": "beida1964-Changsha-246_wingroom-1",
+      "sourceId": "Changsha-246_wingroom-1",
+      "sourceValue": "ɕian³³fan¹³",
+      "sourceCharacters": "廂 房",
+      "conceptId": "246_wingroom",
+      "concepticonId": "",
+      "line": 17612
+    },
+    {
+      "id": "beida1964-Changsha-247_kitchen-1",
+      "sourceId": "Changsha-247_kitchen-1",
+      "sourceValue": "tsau⁵⁵u²⁴",
+      "sourceCharacters": "竈 屋",
+      "conceptId": "247_kitchen",
+      "concepticonId": "1365",
+      "line": 7955
+    },
+    {
+      "id": "beida1964-Changsha-250_beaminahouse-1",
+      "sourceId": "Changsha-250_beaminahouse-1",
+      "sourceValue": "u²⁴lian¹³",
+      "sourceCharacters": "屋 梁",
+      "conceptId": "250_beaminahouse",
+      "concepticonId": "1132",
+      "line": 989
+    },
+    {
+      "id": "beida1964-Changsha-251_wall-1",
+      "sourceId": "Changsha-251_wall-1",
+      "sourceValue": "tɕian¹³",
+      "sourceCharacters": "墻",
+      "conceptId": "251_wall",
+      "concepticonId": "933",
+      "line": 16942
+    },
+    {
+      "id": "beida1964-Changsha-253_buckettrap-1",
+      "sourceId": "Changsha-253_buckettrap-1",
+      "sourceValue": "mən¹³kʰan⁵⁵",
+      "sourceCharacters": "門 檻",
+      "conceptId": "253_buckettrap",
+      "concepticonId": "",
+      "line": 1782
+    },
+    {
+      "id": "beida1964-Changsha-254_flatroof-1",
+      "sourceId": "Changsha-254_flatroof-1",
+      "sourceValue": "sai⁵⁵tai¹³",
+      "sourceCharacters": "曬 臺",
+      "conceptId": "254_flatroof",
+      "concepticonId": "",
+      "line": 5392
+    },
+    {
+      "id": "beida1964-Changsha-255_balustrade-1",
+      "sourceId": "Changsha-255_balustrade-1",
+      "sourceValue": "lan¹³kan³³",
+      "sourceCharacters": "欄 幹",
+      "conceptId": "255_balustrade",
+      "concepticonId": "",
+      "line": 874
+    },
+    {
+      "id": "beida1964-Changsha-256_stepsofstairs-1",
+      "sourceId": "Changsha-256_stepsofstairs-1",
+      "sourceValue": "kai³³tɕi³³",
+      "sourceCharacters": "階 基",
+      "conceptId": "256_stepsofstairs",
+      "concepticonId": "1158",
+      "line": 14102
+    },
+    {
+      "id": "beida1964-Changsha-257_stairs-1",
+      "sourceId": "Changsha-257_stairs-1",
+      "sourceValue": "ləu¹³tʰi³³",
+      "sourceCharacters": "樓 梯",
+      "conceptId": "257_stairs",
+      "concepticonId": "34",
+      "line": 13778
+    },
+    {
+      "id": "beida1964-Changsha-259_courtyard-1",
+      "sourceId": "Changsha-259_courtyard-1",
+      "sourceValue": "tʰiẽ³³tɕin⁴¹",
+      "sourceCharacters": "天 井",
+      "conceptId": "259_courtyard",
+      "concepticonId": "",
+      "line": 3306
+    },
+    {
+      "id": "beida1964-Changsha-260_well-1",
+      "sourceId": "Changsha-260_well-1",
+      "sourceValue": "tɕin⁴¹",
+      "sourceCharacters": "井",
+      "conceptId": "260_well",
+      "concepticonId": "954",
+      "line": 17249
+    },
+    {
+      "id": "beida1964-Changsha-261_furniture-1",
+      "sourceId": "Changsha-261_furniture-1",
+      "sourceValue": "tɕia³³tɕy⁵⁵",
+      "sourceCharacters": "家 俱",
+      "conceptId": "261_furniture",
+      "concepticonId": "",
+      "line": 5899
+    },
+    {
+      "id": "beida1964-Changsha-264_stool-1",
+      "sourceId": "Changsha-264_stool-1",
+      "sourceValue": "pan⁴¹tən⁵⁵",
+      "sourceCharacters": "板 凳",
+      "conceptId": "264_stool",
+      "concepticonId": "2058",
+      "line": 14196
+    },
+    {
+      "id": "beida1964-Changsha-265_desk-1",
+      "sourceId": "Changsha-265_desk-1",
+      "sourceValue": "ɕy³³tso²⁴",
+      "sourceCharacters": "書 桌",
+      "conceptId": "265_desk",
+      "concepticonId": "",
+      "line": 3822
+    },
+    {
+      "id": "beida1964-Changsha-270_leathercase-1",
+      "sourceId": "Changsha-270_leathercase-1",
+      "sourceValue": "pi¹³ɕian³³",
+      "sourceCharacters": "皮 箱",
+      "conceptId": "270_leathercase",
+      "concepticonId": "",
+      "line": 8267
+    },
+    {
+      "id": "beida1964-Changsha-272_quilt-1",
+      "sourceId": "Changsha-272_quilt-1",
+      "sourceValue": "pei²¹o³³",
+      "sourceCharacters": "被 窩",
+      "conceptId": "272_quilt",
+      "concepticonId": "2048",
+      "line": 11727
+    },
+    {
+      "id": "beida1964-Changsha-273_puff-2",
+      "sourceId": "Changsha-273_puff-2",
+      "sourceValue": "tiẽ²¹pei²¹",
+      "sourceCharacters": "墊 被",
+      "conceptId": "273_puff",
+      "concepticonId": "",
+      "line": 11574
+    },
+    {
+      "id": "beida1964-Changsha-275_pillow-1",
+      "sourceId": "Changsha-275_pillow-1",
+      "sourceValue": "tsən⁴¹tou¹³",
+      "sourceCharacters": "枕 頭",
+      "conceptId": "275_pillow",
+      "concepticonId": "1044",
+      "line": 11021
+    },
+    {
+      "id": "beida1964-Changsha-278_cookingpot-1",
+      "sourceId": "Changsha-278_cookingpot-1",
+      "sourceValue": "ko³³",
+      "sourceCharacters": "鍋",
+      "conceptId": "278_cookingpot",
+      "concepticonId": "3653",
+      "line": 3204
+    },
+    {
+      "id": "beida1964-Changsha-280_kitchenknife-1",
+      "sourceId": "Changsha-280_kitchenknife-1",
+      "sourceValue": "tsʰai⁵⁵tau³³",
+      "sourceCharacters": "菜 刀",
+      "conceptId": "280_kitchenknife",
+      "concepticonId": "2772",
+      "line": 7976
+    },
+    {
+      "id": "beida1964-Changsha-283_earthenjug-1",
+      "sourceId": "Changsha-283_earthenjug-1",
+      "sourceValue": "kan³³",
+      "sourceCharacters": "缸",
+      "conceptId": "283_earthenjug",
+      "concepticonId": "270",
+      "line": 4454
+    },
+    {
+      "id": "beida1964-Changsha-284_baler-1",
+      "sourceId": "Changsha-284_baler-1",
+      "sourceValue": "piau¹³",
+      "sourceCharacters": "瓢",
+      "conceptId": "284_baler",
+      "concepticonId": "",
+      "line": 831
+    },
+    {
+      "id": "beida1964-Changsha-288_firewood-1",
+      "sourceId": "Changsha-288_firewood-1",
+      "sourceValue": "tsai¹³",
+      "sourceCharacters": "柴",
+      "conceptId": "288_firewood",
+      "concepticonId": "10",
+      "line": 5298
+    },
+    {
+      "id": "beida1964-Changsha-289_woodcharcoal-1",
+      "sourceId": "Changsha-289_woodcharcoal-1",
+      "sourceValue": "tʰan⁵⁵",
+      "sourceCharacters": "炭",
+      "conceptId": "289_woodcharcoal",
+      "concepticonId": "1188",
+      "line": 17719
+    },
+    {
+      "id": "beida1964-Changsha-290_stove-1",
+      "sourceId": "Changsha-290_stove-1",
+      "sourceValue": "xo⁴¹ləu¹³",
+      "sourceCharacters": "火 爐",
+      "conceptId": "290_stove",
+      "concepticonId": "859",
+      "line": 14253
+    },
+    {
+      "id": "beida1964-Changsha-291_thermosbottle-1",
+      "sourceId": "Changsha-291_thermosbottle-1",
+      "sourceValue": "ye²⁴ɕyei⁴¹pin¹³",
+      "sourceCharacters": "熱 水 瓶",
+      "conceptId": "291_thermosbottle",
+      "concepticonId": "",
+      "line": 15252
+    },
+    {
+      "id": "beida1964-Changsha-293_needle-1",
+      "sourceId": "Changsha-293_needle-1",
+      "sourceValue": "tsən³³",
+      "sourceCharacters": "針",
+      "conceptId": "293_needle",
+      "concepticonId": "1382",
+      "line": 9898
+    },
+    {
+      "id": "beida1964-Changsha-295_threadwire-1",
+      "sourceId": "Changsha-295_threadwire-1",
+      "sourceValue": "ɕiẽ⁵⁵",
+      "sourceCharacters": "綫",
+      "conceptId": "295_threadwire",
+      "concepticonId": "1161",
+      "line": 15680
+    },
+    {
+      "id": "beida1964-Changsha-297_lock-1",
+      "sourceId": "Changsha-297_lock-1",
+      "sourceValue": "so⁴¹",
+      "sourceCharacters": "鎖",
+      "conceptId": "297_lock",
+      "concepticonId": "1596",
+      "line": 8593
+    },
+    {
+      "id": "beida1964-Changsha-300_umbrella-1",
+      "sourceId": "Changsha-300_umbrella-1",
+      "sourceValue": "san⁴¹",
+      "sourceCharacters": "傘",
+      "conceptId": "300_umbrella",
+      "concepticonId": "3105",
+      "line": 16524
+    },
+    {
+      "id": "beida1964-Changsha-301_walkingstaff-1",
+      "sourceId": "Changsha-301_walkingstaff-1",
+      "sourceValue": "kuai⁴¹kuən⁵⁵",
+      "sourceCharacters": "拐 棍",
+      "conceptId": "301_walkingstaff",
+      "concepticonId": "1296",
+      "line": 16922
+    },
+    {
+      "id": "beida1964-Changsha-302_flashlight-1",
+      "sourceId": "Changsha-302_flashlight-1",
+      "sourceValue": "səu⁴¹tiẽ⁵⁵",
+      "sourceCharacters": "手 電",
+      "conceptId": "302_flashlight",
+      "concepticonId": "",
+      "line": 5356
+    },
+    {
+      "id": "beida1964-Changsha-303_candle-1",
+      "sourceId": "Changsha-303_candle-1",
+      "sourceValue": "la²⁴tsəu²⁴",
+      "sourceCharacters": "蠟 燭",
+      "conceptId": "303_candle",
+      "concepticonId": "1273",
+      "line": 2115
+    },
+    {
+      "id": "beida1964-Changsha-304_match-1",
+      "sourceId": "Changsha-304_match-1",
+      "sourceValue": "ian¹³xo⁴¹",
+      "sourceCharacters": "洋 火",
+      "conceptId": "304_match",
+      "concepticonId": "1133",
+      "line": 9116
+    },
+    {
+      "id": "beida1964-Changsha-306_toothbrush-1",
+      "sourceId": "Changsha-306_toothbrush-1",
+      "sourceValue": "ia¹³ɕya²⁴",
+      "sourceCharacters": "牙 刷",
+      "conceptId": "306_toothbrush",
+      "concepticonId": "2579",
+      "line": 16205
+    },
+    {
+      "id": "beida1964-Changsha-307_dishtowel-1",
+      "sourceId": "Changsha-307_dishtowel-1",
+      "sourceValue": "ma²⁴pu⁵⁵",
+      "sourceCharacters": "抹 布",
+      "conceptId": "307_dishtowel",
+      "concepticonId": "",
+      "line": 4004
+    },
+    {
+      "id": "beida1964-Changsha-308_broom-1",
+      "sourceId": "Changsha-308_broom-1",
+      "sourceValue": "sau⁵⁵pa⁴¹",
+      "sourceCharacters": "掃 把",
+      "conceptId": "308_broom",
+      "concepticonId": "245",
+      "line": 1672
+    },
+    {
+      "id": "beida1964-Changsha-311_spittoon-1",
+      "sourceId": "Changsha-311_spittoon-1",
+      "sourceValue": "tan¹³y¹³",
+      "sourceCharacters": "痰 盂",
+      "conceptId": "311_spittoon",
+      "concepticonId": "",
+      "line": 13682
+    },
+    {
+      "id": "beida1964-Changsha-312_abacus-1",
+      "sourceId": "Changsha-312_abacus-1",
+      "sourceValue": "sõ⁵⁵põ¹³",
+      "sourceCharacters": "算 盤",
+      "conceptId": "312_abacus",
+      "concepticonId": "2489",
+      "line": 110
+    },
+    {
+      "id": "beida1964-Changsha-313_scale-1",
+      "sourceId": "Changsha-313_scale-1",
+      "sourceValue": "tsʰən⁵⁵",
+      "sourceCharacters": "秤",
+      "conceptId": "313_scale",
+      "concepticonId": "2783",
+      "line": 12463
+    },
+    {
+      "id": "beida1964-Changsha-315_footmeasure-1",
+      "sourceId": "Changsha-315_footmeasure-1",
+      "sourceValue": "tsʰɿ²⁴",
+      "sourceCharacters": "尺",
+      "conceptId": "315_footmeasure",
+      "concepticonId": "2688",
+      "line": 5553
+    },
+    {
+      "id": "beida1964-Changsha-316_scissors-1",
+      "sourceId": "Changsha-316_scissors-1",
+      "sourceValue": "tɕiẽ⁴¹tau³³",
+      "sourceCharacters": "剪 刀",
+      "conceptId": "316_scissors",
+      "concepticonId": "356",
+      "line": 12546
+    },
+    {
+      "id": "beida1964-Changsha-322_sawtool-1",
+      "sourceId": "Changsha-322_sawtool-1",
+      "sourceValue": "kə⁵⁵",
+      "sourceCharacters": "鋸",
+      "conceptId": "322_sawtool",
+      "concepticonId": "1948",
+      "line": 12445
+    },
+    {
+      "id": "beida1964-Changsha-323_filetool-1",
+      "sourceId": "Changsha-323_filetool-1",
+      "sourceValue": "tsʰo⁵⁵",
+      "sourceCharacters": "銼",
+      "conceptId": "323_filetool",
+      "concepticonId": "3407",
+      "line": 5103
+    },
+    {
+      "id": "beida1964-Changsha-332_sickletool-1",
+      "sourceId": "Changsha-332_sickletool-1",
+      "sourceValue": "liẽ¹³tau³³",
+      "sourceCharacters": "鐮 刀",
+      "conceptId": "332_sickletool",
+      "concepticonId": "341",
+      "line": 12975
+    },
+    {
+      "id": "beida1964-Changsha-333_shoulderpole-1",
+      "sourceId": "Changsha-333_shoulderpole-1",
+      "sourceValue": "piẽ⁴¹tan⁵⁵",
+      "sourceCharacters": "扁 擔",
+      "conceptId": "333_shoulderpole",
+      "concepticonId": "",
+      "line": 12880
+    },
+    {
+      "id": "beida1964-Changsha-338_limestone-1",
+      "sourceId": "Changsha-338_limestone-1",
+      "sourceValue": "sɿ²⁴fei³³",
+      "sourceCharacters": "石 灰",
+      "conceptId": "338_limestone",
+      "concepticonId": "2540",
+      "line": 8479
+    },
+    {
+      "id": "beida1964-Changsha-339_cement-1",
+      "sourceId": "Changsha-339_cement-1",
+      "sourceValue": "ian¹³ȵi¹³",
+      "sourceCharacters": "洋 泥",
+      "conceptId": "339_cement",
+      "concepticonId": "",
+      "line": 2362
+    },
+    {
+      "id": "beida1964-Changsha-340_rubber-1",
+      "sourceId": "Changsha-340_rubber-1",
+      "sourceValue": "ɕian⁵⁵kau³³",
+      "sourceCharacters": "橡 膠",
+      "conceptId": "340_rubber",
+      "concepticonId": "",
+      "line": 12329
+    },
+    {
+      "id": "beida1964-Changsha-341_varnishpaint-1",
+      "sourceId": "Changsha-341_varnishpaint-1",
+      "sourceValue": "tɕʰi²⁴",
+      "sourceCharacters": "漆",
+      "conceptId": "341_varnishpaint",
+      "concepticonId": "647",
+      "line": 16743
+    },
+    {
+      "id": "beida1964-Changsha-343_money-1",
+      "sourceId": "Changsha-343_money-1",
+      "sourceValue": "tɕiẽ¹³",
+      "sourceCharacters": "錢",
+      "conceptId": "343_money",
+      "concepticonId": "1559",
+      "line": 9388
+    },
+    {
+      "id": "beida1964-Changsha-345_restaurant-1",
+      "sourceId": "Changsha-345_restaurant-1",
+      "sourceValue": "fan²¹kõ⁴¹",
+      "sourceCharacters": "飯 館",
+      "conceptId": "345_restaurant",
+      "concepticonId": "",
+      "line": 12000
+    },
+    {
+      "id": "beida1964-Changsha-346_postoffice-1",
+      "sourceId": "Changsha-346_postoffice-1",
+      "sourceValue": "iəu¹³tɕy²⁴",
+      "sourceCharacters": "郵 局",
+      "conceptId": "346_postoffice",
+      "concepticonId": "",
+      "line": 11385
+    },
+    {
+      "id": "beida1964-Changsha-347_postagestamp-1",
+      "sourceId": "Changsha-347_postagestamp-1",
+      "sourceValue": "iəu¹³pʰiau⁵⁵",
+      "sourceCharacters": "郵 票",
+      "conceptId": "347_postagestamp",
+      "concepticonId": "596",
+      "line": 11414
+    }
+  ]
+}

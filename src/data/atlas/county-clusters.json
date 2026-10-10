@@ -1,0 +1,370 @@
+[
+  {
+    "groupId": "mandarin",
+    "branchId": "southwestern",
+    "branchName": "Southwestern Mandarin",
+    "branchNativeName": "西南官話",
+    "id": "xishu",
+    "name": "Western Shu",
+    "nativeName": "西蜀片",
+    "kind": "classification",
+    "description": "The 西蜀片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 西南官话 · 方言片: 西蜀片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "southwestern",
+    "branchName": "Southwestern Mandarin",
+    "branchNativeName": "西南官話",
+    "id": "guiliu",
+    "name": "Gui–Liu",
+    "nativeName": "桂柳片",
+    "kind": "classification",
+    "description": "The 桂柳片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 西南官话 · 方言片: 桂柳片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "yanhe",
+    "name": "Yan–He",
+    "nativeName": "兖菏片",
+    "kind": "classification",
+    "description": "The 兖菏片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 兖菏片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "nanlu",
+    "name": "Southern Lu",
+    "nativeName": "南鲁片",
+    "kind": "classification",
+    "description": "The 南鲁片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 南鲁片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "shangfu",
+    "name": "Shang–Fu",
+    "nativeName": "商阜片",
+    "kind": "classification",
+    "description": "The 商阜片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 商阜片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "xinbeng",
+    "name": "Xin–Beng",
+    "nativeName": "信蚌片",
+    "kind": "classification",
+    "description": "The 信蚌片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 信蚌片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "luosong",
+    "name": "Luo–Song",
+    "nativeName": "洛嵩片",
+    "kind": "classification",
+    "description": "The 洛嵩片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 洛嵩片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "xuhuai",
+    "name": "Xu–Huai",
+    "nativeName": "徐淮片",
+    "kind": "classification",
+    "description": "The 徐淮片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 徐淮片"
+    }
+  },
+  {
+    "id": "tingzhou-county-references",
+    "groupId": "hakka",
+    "branchId": "tingzhou",
+    "branchName": "Tingzhou",
+    "branchNativeName": "汀州片",
+    "name": "Tingzhou county references",
+    "nativeName": "汀州縣區參照",
+    "kind": "geographic",
+    "description": "County references grouped geographically within this sourced branch; not a claimed linguistic subdivision.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "jianou-2012",
+    "groupId": "min",
+    "branchId": "northern-min",
+    "branchName": "Northern Min",
+    "branchNativeName": "閩北語",
+    "name": "Jian’ou division · 2012",
+    "nativeName": "建甌小片",
+    "kind": "classification",
+    "description": "The second-edition Atlas county dataset names this division explicitly. It is retained separately from the older east/west labels used by other references.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "puxian-county-references",
+    "groupId": "min",
+    "branchId": "puxian",
+    "branchName": "Puxian Min",
+    "branchNativeName": "莆仙語",
+    "name": "Puxian county references",
+    "nativeName": "莆仙縣區參照",
+    "kind": "geographic",
+    "description": "County references grouped geographically within this sourced branch; not a claimed linguistic subdivision.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "jiangle-2012",
+    "groupId": "min",
+    "branchId": "shaojiang",
+    "branchName": "Shao–Jiang Min",
+    "branchNativeName": "邵將片",
+    "name": "Jiangle division",
+    "nativeName": "將樂小片",
+    "kind": "classification",
+    "description": "The named division in Jing’s county tabulation of the second-edition Atlas. County records establish distribution, not a uniform local accent.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "longhua-2012",
+    "groupId": "hakka",
+    "branchId": "yuetai",
+    "branchName": "Yue–Tai",
+    "branchNativeName": "粵台片",
+    "name": "Long–Hua division",
+    "nativeName": "龍華小片",
+    "kind": "classification",
+    "description": "The named division in Jing’s county tabulation of the second-edition Atlas. County records establish distribution, not a uniform local accent.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "meihui-2012",
+    "groupId": "hakka",
+    "branchId": "yuetai",
+    "branchName": "Yue–Tai",
+    "branchNativeName": "粵台片",
+    "name": "Mei–Hui division",
+    "nativeName": "梅惠小片",
+    "kind": "classification",
+    "description": "The named division in Jing’s county tabulation of the second-edition Atlas. County records establish distribution, not a uniform local accent.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "yuebei-county-references",
+    "groupId": "hakka",
+    "branchId": "yuebei",
+    "branchName": "Northern Guangdong Hakka",
+    "branchNativeName": "粵北片",
+    "name": "Northern Guangdong county references",
+    "nativeName": "粵北縣區參照",
+    "kind": "geographic",
+    "description": "County references grouped geographically within this sourced branch; not a claimed linguistic subdivision.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "tonggui-county-references",
+    "groupId": "hakka",
+    "branchId": "tonggui",
+    "branchName": "Tong–Gui Hakka",
+    "branchNativeName": "銅桂片",
+    "name": "Tong–Gui county references",
+    "nativeName": "銅桂縣區參照",
+    "kind": "geographic",
+    "description": "County references grouped geographically within this sourced branch; not a claimed linguistic subdivision.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "piling-2012",
+    "groupId": "wu",
+    "branchId": "taihu",
+    "branchName": "Taihu",
+    "branchNativeName": "太湖片",
+    "name": "Piling division",
+    "nativeName": "毗陵小片",
+    "kind": "classification",
+    "description": "This second-edition Atlas division retains its exact source membership. It is not silently equated with the combined Su–Hu–Jia or Huzhou divisions used in other editions.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "su-jia-hu-2012",
+    "groupId": "wu",
+    "branchId": "taihu",
+    "branchName": "Taihu",
+    "branchNativeName": "太湖片",
+    "name": "Su–Jia–Hu · 2012",
+    "nativeName": "蘇嘉湖小片",
+    "kind": "classification",
+    "description": "This second-edition Atlas division retains its exact source membership. It is not silently equated with the combined Su–Hu–Jia or Huzhou divisions used in other editions.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "yuxin-county-references",
+    "groupId": "hakka",
+    "branchId": "yuxin",
+    "branchName": "Yu–Xin Hakka",
+    "branchNativeName": "于信片",
+    "name": "Yu–Xin county references",
+    "nativeName": "于信縣區參照",
+    "kind": "geographic",
+    "description": "County references grouped geographically within this sourced branch; not a claimed linguistic subdivision.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "ninglong-county-references",
+    "groupId": "hakka",
+    "branchId": "ninglong",
+    "branchName": "Ning–Long Hakka",
+    "branchNativeName": "寧龍片",
+    "name": "Ning–Long county references",
+    "nativeName": "寧龍縣區參照",
+    "kind": "geographic",
+    "description": "County references grouped geographically within this sourced branch; not a claimed linguistic subdivision.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "shanghai-2012",
+    "groupId": "wu",
+    "branchId": "taihu",
+    "branchName": "Taihu",
+    "branchNativeName": "太湖片",
+    "name": "Shanghai division · 2012",
+    "nativeName": "上海小片",
+    "kind": "classification",
+    "description": "This second-edition Atlas division retains its exact source membership. It is not silently equated with the combined Su–Hu–Jia or Huzhou divisions used in other editions.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "jinqu-county-references",
+    "groupId": "wu",
+    "branchId": "jinqu",
+    "branchName": "Jin–Qu Wu",
+    "branchNativeName": "金衢片",
+    "name": "Jin–Qu county references",
+    "nativeName": "金衢縣區參照",
+    "kind": "geographic",
+    "description": "County references in the second-edition Atlas’s Jin–Qu branch. This source rank is not an alias for the differently delimited Wuzhou branch used by older references.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  },
+  {
+    "id": "taizhou-county-references",
+    "groupId": "wu",
+    "branchId": "taizhou",
+    "branchName": "Taizhou",
+    "branchNativeName": "台州片",
+    "name": "Taizhou county references",
+    "nativeName": "台州縣區參照",
+    "kind": "geographic",
+    "description": "County references grouped geographically within this sourced branch; not a claimed linguistic subdivision.",
+    "source": {
+      "title": "Jing Liwen, 2025 · county tabulation of Language Atlas of China, second edition",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "《中国语言地图集（第2版）汉语方言卷》数据集.csv; county codes and exact 方言片 / 方言小片 fields; CC BY 4.0"
+    }
+  }
+]

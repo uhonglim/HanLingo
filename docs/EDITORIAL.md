@@ -64,7 +64,7 @@ Use the wording: **“Points mark selected varieties, not exclusive language bou
 
 All pronunciation transcriptions must use IPA, following the [International Phonetic Association’s official chart](https://www.internationalphoneticassociation.org/IPAcharts/IPA_charts_TI/IPA_charts_TI.html). Distinguish phonetic brackets `[ ]` from phonemic slashes `/ /`, and label the exact variety and transcription convention.
 
-The initial romanization proposal illustrates:
+The shared reading key retains these core distinctions:
 
 | Proposed spelling | IPA illustration | Intended distinction |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ The initial romanization proposal illustrates:
 | `ph` | `[pʰ]` | Voiceless aspirated bilabial stop |
 | `b` | `[b]` | Voiced bilabial stop |
 
-These are draft spelling correspondences, not a complete or approved Han romanization. The system has no agreed treatment yet for vowels, affricates, nasality, tone, sandhi, literary/colloquial readings, or contextual realization. Do not imply every variety has a three-way stop contrast. In particular, an orthographic or historical “voiced” category does not guarantee a fully voiced onset in every phonetic context; see [Chen’s discussion of Shanghai](https://assets.cambridge.org/052165/2723/sample/0521652723WS.pdf).
+HanLingo is a developing reading aid, not a phonemic standard. The same IPA receives the same spelling globally, with explicit many-to-one sound families to simplify reading. These mergers do not claim that the sounds are equivalent; source IPA preserves the differences. The current consonant, vowel, mark and tone rules are recorded in [the spelling proposal](ROMANIZATION.md). Source-category digits remain separate from pitch, and absent tones are never inferred. Source orthographies and community place names retain their documented forms. Do not imply every variety has a three-way stop contrast. In particular, an orthographic or historical “voiced” category does not guarantee a fully voiced onset in every phonetic context; see [Chen’s discussion of Shanghai](https://assets.cambridge.org/052165/2723/sample/0521652723WS.pdf).
 
 Do not generate IPA by substituting letters in an existing romanization. Full-letter IPA and audio require a documented local reading and review. The first edition supplies neither invented recordings nor unverified full-letter transcriptions.
 
@@ -168,3 +168,7 @@ Recommended fields for a future record:
 - Review status, review scope, reviewer attribution where authorized, and revision date.
 
 “Hakka 200 years ago” is insufficient as an entry. A useful historical record must identify which Hakka variety, where, approximately when, and the evidence for that claim. Present-day examples also vary by speaker, generation, and context; the map should not erase that variation.
+
+## Navigation rule
+
+Start URLs directly with the language group: `/min` → `/min/southern-min` → `/min/southern-min/xiamen`. Do not add a Languages layer. Keep one persistent tree and immediate, stationary navigation; no animated jumps or duplicate page-specific navigation. The homepage stays at `/`. See [AGENTS.md](../AGENTS.md) for the user-approved rules.

@@ -1,0 +1,4 @@
+.place-name { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0 .45em; min-width: 0; }
+.place-name-primary { color: inherit; font: inherit; }
+.place-name-reading { color: #596b79; font-size: .76em; font-weight: 400; letter-spacing: normal; }
+.place-name-han { color: #65737b; font-size: .76em; font-weight: 400; letter-spacing: normal; }

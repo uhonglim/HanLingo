@@ -1,0 +1,4528 @@
+{
+  "repository": "https://github.com/SequenceComparison/houchinese",
+  "commit": "38d6bd34af5678be7f0c481c6ed765cd0ddfd998",
+  "license": "CC BY 4.0",
+  "attribution": "Hou Jingyi (ed.) 2004; Johann-Mattis List, Sequence Comparison benchmark 2014, retro-standardized CLDF dataset.",
+  "sourceHashes": {
+    "cldf_forms.csv": "e87436fd1de60ff85faca41d833ca0f50ef570719507b02434717c2d27cc1f5a",
+    "cldf_parameters.csv": "f4b9d55f228ceff48e83e67001a777256abc6b12beed1bfb8315a03cc962d02c",
+    "cldf_languages.csv": "54dcbfb9827e38c7892232b27d7f559ac0ad17cb6f3294dc963325d360ca9492",
+    "raw_SIN.csv": "892fc43badf0991ee065a50ee1a10c3e52e516de06fc41f8c4734ce71b067da6",
+    "lexibank_houchinese.py": "0a811949f7d5da7a5f5e48148b76f6577cebe3c6a2f7867702d13d614dba2b41",
+    "LICENSE": "945fbcb37deca05bccd7c3ca0e261679f1f5373515504fdbad68f6f3cf6f49b9",
+    "NOTE.md": "8fe2e9c3349825dc41a6875fa4084ea3e8a25d70eed20f4148a5ad4435d57bbf",
+    "etc_orthography.tsv": "867a46305f8804ff412c267bc30f3106736cffc95273a0cfadaf838394f9acb4"
+  },
+  "sourceFiles": {
+    "cldf_forms.csv": ".evidence/min-expansion-2026/hou-cldf_forms.csv",
+    "cldf_parameters.csv": ".evidence/min-expansion-2026/hou-cldf_parameters.csv",
+    "cldf_languages.csv": ".evidence/min-expansion-2026/hou-cldf_languages.csv",
+    "raw_SIN.csv": ".evidence/hou-next/raw_SIN.csv",
+    "lexibank_houchinese.py": ".evidence/hou-next/lexibank_houchinese.py",
+    "LICENSE": ".evidence/hou-next/LICENSE",
+    "NOTE.md": ".evidence/hou-next/NOTE.md",
+    "etc_orthography.tsv": ".evidence/hou-next/etc_orthography.tsv"
+  },
+  "scope": {
+    "Hangzhou": "Dataset names Hangzhou; neighbourhood, individual speakers and fieldwork date unspecified. Existing city reference and anchor retained.",
+    "Shexian": "Dataset names Shexian; settlement, individual speakers and fieldwork date unspecified. Existing She County reference and LACD930 anchor retained."
+  },
+  "rejectedGeography": "Guixian/Guiyang/Hmong-Mien metadata conflict excluded. Shexian metadata latitude30.589829 not adopted.",
+  "notation": "Source Form/raw IPA preserved. Only canonical composition and inter-syllable display whitespace differ. Supplied pitch values preserved; no missing tones filled. Normalized Segments never replaces Form.",
+  "pitchKey": {
+    "source": "List2014, printedpp124,140,187",
+    "url": "https://www.hhu.de/fileadmin/redaktion/DUP/DLS__J.-M._List___Vol._1_Open_Access.pdf#page=146",
+    "description": "SCA table identifies example numeric pitch shapes; Chao tone system explicitly named onp140; SIN dataset listed onp187."
+  },
+  "peerReview": "All160 original candidates independently checked against rawSIN andCLDF; five semantic/duplicate holds replaced by six/seven and three/four/five readings, independently rechecked.",
+  "held": {
+    "Hangzhou-102_humpback-1": "Person-denoting local form versus condition heading; requires narrower source context.",
+    "Hangzhou-161_take-1": "Carry/take lexical range needs context.",
+    "Shexian-161_take-1": "Carry/take lexical range needs context.",
+    "Shexian-140_watery-1": "Raw light editorially recoded as watery; do not teach dilution without original questionnaire.",
+    "Shexian-92_girl-4": "Same written and spoken form as selected daughter record; retain lexical range in note, avoid duplicate card."
+  },
+  "structuralHoldCount": 115,
+  "rows": [
+    {
+      "id": "Hangzhou-2_moon-1",
+      "language": "Hangzhou",
+      "han": "月亮",
+      "ipa": "ɦɥəʔ²ljɑŋ¹³",
+      "displayIpa": "[ɦɥəʔ² ljɑŋ¹³]",
+      "segments": "ɦ ɥ ə ʔ ² + l j ɑ ŋ ¹³",
+      "english": "moon",
+      "glossQualification": "",
+      "concept": {
+        "ID": "2_moon",
+        "Name": "moon",
+        "Concepticon_ID": "1313",
+        "Concepticon_Gloss": "MOON",
+        "Number": "2"
+      },
+      "raw": {
+        "ID": "38",
+        "Languages": "Hangzhou",
+        "Gloss": "moon",
+        "GlossId": "2",
+        "Ortho": "月亮",
+        "IPA": "ɦɥəʔ²ljɑŋ¹³",
+        "CogID": "659"
+      },
+      "cldfLine": 39,
+      "rawLine": 42
+    },
+    {
+      "id": "Hangzhou-3_star-1",
+      "language": "Hangzhou",
+      "han": "星",
+      "ipa": "ɕin³³",
+      "displayIpa": "[ɕin³³]",
+      "segments": "ɕ i n ³³",
+      "english": "star",
+      "glossQualification": "",
+      "concept": {
+        "ID": "3_star",
+        "Name": "star",
+        "Concepticon_ID": "1430",
+        "Concepticon_Gloss": "STAR",
+        "Number": "3"
+      },
+      "raw": {
+        "ID": "57",
+        "Languages": "Hangzhou",
+        "Gloss": "star",
+        "GlossId": "3",
+        "Ortho": "星",
+        "IPA": "ɕin³³",
+        "CogID": "6"
+      },
+      "cldfLine": 58,
+      "rawLine": 62
+    },
+    {
+      "id": "Hangzhou-4_thunderverb-1",
+      "language": "Hangzhou",
+      "han": "打雷",
+      "ipa": "tɑ⁵³lej²¹³",
+      "displayIpa": "[tɑ⁵³ lej²¹³]",
+      "segments": "t ɑ ⁵³ + l e j ²¹³",
+      "english": "thundering (weather)",
+      "glossQualification": "Weather-event meaning, preserving the source verb concept.",
+      "concept": {
+        "ID": "4_thunderverb",
+        "Name": "thunder (verb)",
+        "Concepticon_ID": "2378",
+        "Concepticon_Gloss": "THUNDER (VERB)",
+        "Number": "4"
+      },
+      "raw": {
+        "ID": "73",
+        "Languages": "Hangzhou",
+        "Gloss": "thunder",
+        "GlossId": "4",
+        "Ortho": "打雷",
+        "IPA": "tɑ⁵³lej²¹³",
+        "CogID": "97"
+      },
+      "cldfLine": 74,
+      "rawLine": 79
+    },
+    {
+      "id": "Hangzhou-5_flashverb-1",
+      "language": "Hangzhou",
+      "han": "霍闪",
+      "ipa": "hwoʔ⁵sɥõ⁵³",
+      "displayIpa": "[hwoʔ⁵ sɥõ⁵³]",
+      "segments": "h w o ʔ ⁵ + s ɥ õ ⁵³",
+      "english": "lightning (weather)",
+      "glossQualification": "The raw source gloss is lightning; the derived heading is flash (verb). This is a weather expression.",
+      "concept": {
+        "ID": "5_flashverb",
+        "Name": "flash (verb)",
+        "Concepticon_ID": "2377",
+        "Concepticon_Gloss": "FLASH (VERB)",
+        "Number": "5"
+      },
+      "raw": {
+        "ID": "91",
+        "Languages": "Hangzhou",
+        "Gloss": "lightning",
+        "GlossId": "5",
+        "Ortho": "霍闪",
+        "IPA": "hwoʔ⁵sɥõ⁵³",
+        "CogID": "18"
+      },
+      "cldfLine": 92,
+      "rawLine": 98
+    },
+    {
+      "id": "Hangzhou-6_rain-1",
+      "language": "Hangzhou",
+      "han": "落雨",
+      "ipa": "loʔ²y⁵³",
+      "displayIpa": "[loʔ² y⁵³]",
+      "segments": "l o ʔ ² + y ⁵³",
+      "english": "raining",
+      "glossQualification": "The source Chinese expression denotes a rain event.",
+      "concept": {
+        "ID": "6_rain",
+        "Name": "rain",
+        "Concepticon_ID": "1253",
+        "Concepticon_Gloss": "RAIN (RAINING)",
+        "Number": "6"
+      },
+      "raw": {
+        "ID": "110",
+        "Languages": "Hangzhou",
+        "Gloss": "rain",
+        "GlossId": "6",
+        "Ortho": "落雨",
+        "IPA": "loʔ²y⁵³",
+        "CogID": "1162"
+      },
+      "cldfLine": 111,
+      "rawLine": 118
+    },
+    {
+      "id": "Hangzhou-7_snow-1",
+      "language": "Hangzhou",
+      "han": "落雪",
+      "ipa": "loʔ²ɕjəʔ⁵",
+      "displayIpa": "[loʔ² ɕjəʔ⁵]",
+      "segments": "l o ʔ ² + ɕ j ə ʔ ⁵",
+      "english": "snowing",
+      "glossQualification": "The source Chinese expression denotes a snow event.",
+      "concept": {
+        "ID": "7_snow",
+        "Name": "snow",
+        "Concepticon_ID": "1255",
+        "Concepticon_Gloss": "SNOWING",
+        "Number": "7"
+      },
+      "raw": {
+        "ID": "127",
+        "Languages": "Hangzhou",
+        "Gloss": "snow",
+        "GlossId": "7",
+        "Ortho": "落雪",
+        "IPA": "loʔ²ɕjəʔ⁵",
+        "CogID": "1163"
+      },
+      "cldfLine": 128,
+      "rawLine": 136
+    },
+    {
+      "id": "Hangzhou-8_hail-1",
+      "language": "Hangzhou",
+      "han": "冰雹",
+      "ipa": "pin³³bɔ²¹³",
+      "displayIpa": "[pin³³ bɔ²¹³]",
+      "segments": "p i n ³³ + b ɔ ²¹³",
+      "english": "hail",
+      "glossQualification": "",
+      "concept": {
+        "ID": "8_hail",
+        "Name": "hail",
+        "Concepticon_ID": "609",
+        "Concepticon_Gloss": "HAIL",
+        "Number": "8"
+      },
+      "raw": {
+        "ID": "145",
+        "Languages": "Hangzhou",
+        "Gloss": "hail",
+        "GlossId": "8",
+        "Ortho": "冰雹",
+        "IPA": "pin³³bɔ²¹³",
+        "CogID": "31"
+      },
+      "cldfLine": 146,
+      "rawLine": 155
+    },
+    {
+      "id": "Hangzhou-9_freeze-1",
+      "language": "Hangzhou",
+      "han": "结冰",
+      "ipa": "ʨjəʔ⁵pin³³",
+      "displayIpa": "[ʨjəʔ⁵ pin³³]",
+      "segments": "tɕ j ə ʔ ⁵ + p i n ³³",
+      "english": "freeze",
+      "glossQualification": "",
+      "concept": {
+        "ID": "9_freeze",
+        "Name": "freeze",
+        "Concepticon_ID": "1431",
+        "Concepticon_Gloss": "FREEZE",
+        "Number": "9"
+      },
+      "raw": {
+        "ID": "168",
+        "Languages": "Hangzhou",
+        "Gloss": "freeze",
+        "GlossId": "9",
+        "Ortho": "结冰",
+        "IPA": "ʨjəʔ⁵pin³³",
+        "CogID": "711"
+      },
+      "cldfLine": 169,
+      "rawLine": 179
+    },
+    {
+      "id": "Hangzhou-10_blow-1",
+      "language": "Hangzhou",
+      "han": "起风",
+      "ipa": "ʨʰi⁵³foŋ³³",
+      "displayIpa": "[ʨʰi⁵³ foŋ³³]",
+      "segments": "tɕʰ i ⁵³ + f o ŋ ³³",
+      "english": "wind is blowing",
+      "glossQualification": "The concept is blowing wind; the local phrase refers to a weather event.",
+      "concept": {
+        "ID": "10_blow",
+        "Name": "blow",
+        "Concepticon_ID": "175",
+        "Concepticon_Gloss": "BLOW (OF WIND)",
+        "Number": "10"
+      },
+      "raw": {
+        "ID": "185",
+        "Languages": "Hangzhou",
+        "Gloss": "blow",
+        "GlossId": "10",
+        "Ortho": "起风",
+        "IPA": "ʨʰi⁵³foŋ³³",
+        "CogID": "833"
+      },
+      "cldfLine": 186,
+      "rawLine": 197
+    },
+    {
+      "id": "Hangzhou-11_rainbow-1",
+      "language": "Hangzhou",
+      "han": "鱟",
+      "ipa": "hej⁴⁴⁵",
+      "displayIpa": "[hej⁴⁴⁵]",
+      "segments": "h e j ⁴⁴⁵",
+      "english": "rainbow",
+      "glossQualification": "",
+      "concept": {
+        "ID": "11_rainbow",
+        "Name": "rainbow",
+        "Concepticon_ID": "1733",
+        "Concepticon_Gloss": "RAINBOW",
+        "Number": "11"
+      },
+      "raw": {
+        "ID": "207",
+        "Languages": "Hangzhou",
+        "Gloss": "rainbow",
+        "GlossId": "11",
+        "Ortho": "鱟",
+        "IPA": "hej⁴⁴⁵",
+        "CogID": "809"
+      },
+      "cldfLine": 208,
+      "rawLine": 220
+    },
+    {
+      "id": "Hangzhou-20_today-1",
+      "language": "Hangzhou",
+      "han": "根朝",
+      "ipa": "ken³³ʦɔ³³",
+      "displayIpa": "[ken³³ ʦɔ³³]",
+      "segments": "k e n ³³ + ts ɔ ³³",
+      "english": "today",
+      "glossQualification": "",
+      "concept": {
+        "ID": "20_today",
+        "Name": "today",
+        "Concepticon_ID": "1283",
+        "Concepticon_Gloss": "TODAY",
+        "Number": "20"
+      },
+      "raw": {
+        "ID": "245",
+        "Languages": "Hangzhou",
+        "Gloss": "today",
+        "GlossId": "20",
+        "Ortho": "根朝",
+        "IPA": "ken³³ʦɔ³³",
+        "CogID": "1157"
+      },
+      "cldfLine": 246,
+      "rawLine": 260
+    },
+    {
+      "id": "Hangzhou-22_wheat-1",
+      "language": "Hangzhou",
+      "han": "麦子",
+      "ipa": "mɑʔ²ʦɿ⁵³",
+      "displayIpa": "[mɑʔ² ʦɿ⁵³]",
+      "segments": "m ɑ ʔ ² + ts ɿ ⁵³",
+      "english": "wheat",
+      "glossQualification": "",
+      "concept": {
+        "ID": "22_wheat",
+        "Name": "wheat",
+        "Concepticon_ID": "1077",
+        "Concepticon_Gloss": "WHEAT",
+        "Number": "22"
+      },
+      "raw": {
+        "ID": "263",
+        "Languages": "Hangzhou",
+        "Gloss": "wheat",
+        "GlossId": "22",
+        "Ortho": "麦子",
+        "IPA": "mɑʔ²ʦɿ⁵³",
+        "CogID": "939"
+      },
+      "cldfLine": 264,
+      "rawLine": 279
+    },
+    {
+      "id": "Hangzhou-24_sunflower-1",
+      "language": "Hangzhou",
+      "han": "葵花",
+      "ipa": "gwi²¹³hwɑ³³",
+      "displayIpa": "[gwi²¹³ hwɑ³³]",
+      "segments": "g w i ²¹³ + h w ɑ ³³",
+      "english": "sunflower",
+      "glossQualification": "",
+      "concept": {
+        "ID": "24_sunflower",
+        "Name": "sunflower",
+        "Concepticon_ID": "1956",
+        "Concepticon_Gloss": "SUNFLOWER",
+        "Number": "24"
+      },
+      "raw": {
+        "ID": "280",
+        "Languages": "Hangzhou",
+        "Gloss": "sunflower",
+        "GlossId": "24",
+        "Ortho": "葵花",
+        "IPA": "gwi²¹³hwɑ³³",
+        "CogID": "358"
+      },
+      "cldfLine": 281,
+      "rawLine": 297
+    },
+    {
+      "id": "Hangzhou-32_pig-1",
+      "language": "Hangzhou",
+      "han": "猪",
+      "ipa": "ʦy³³",
+      "displayIpa": "[ʦy³³]",
+      "segments": "ts y ³³",
+      "english": "pig",
+      "glossQualification": "",
+      "concept": {
+        "ID": "32_pig",
+        "Name": "pig",
+        "Concepticon_ID": "1337",
+        "Concepticon_Gloss": "PIG",
+        "Number": "32"
+      },
+      "raw": {
+        "ID": "354",
+        "Languages": "Hangzhou",
+        "Gloss": "pig",
+        "GlossId": "32",
+        "Ortho": "猪",
+        "IPA": "ʦy³³",
+        "CogID": "558"
+      },
+      "cldfLine": 355,
+      "rawLine": 375
+    },
+    {
+      "id": "Hangzhou-35_rooster-1",
+      "language": "Hangzhou",
+      "han": "雄鸡",
+      "ipa": "ɦjoŋ²¹³ʨi³³",
+      "displayIpa": "[ɦjoŋ²¹³ ʨi³³]",
+      "segments": "ɦ j o ŋ ²¹³ + tɕ i ³³",
+      "english": "rooster",
+      "glossQualification": "",
+      "concept": {
+        "ID": "35_rooster",
+        "Name": "rooster",
+        "Concepticon_ID": "1511",
+        "Concepticon_Gloss": "ROOSTER",
+        "Number": "35"
+      },
+      "raw": {
+        "ID": "370",
+        "Languages": "Hangzhou",
+        "Gloss": "rooster",
+        "GlossId": "35",
+        "Ortho": "雄鸡",
+        "IPA": "ɦjoŋ²¹³ʨi³³",
+        "CogID": "903"
+      },
+      "cldfLine": 371,
+      "rawLine": 392
+    },
+    {
+      "id": "Hangzhou-37_sparrow-1",
+      "language": "Hangzhou",
+      "han": "麻巧儿",
+      "ipa": "mɑ²¹³ʨʰjɔ⁵³əl²¹³",
+      "displayIpa": "[mɑ²¹³ ʨʰjɔ⁵³ əl²¹³]",
+      "segments": "m ɑ ²¹³ + tɕʰ j ɔ ⁵³ + ə l ²¹³",
+      "english": "sparrow",
+      "glossQualification": "",
+      "concept": {
+        "ID": "37_sparrow",
+        "Name": "sparrow",
+        "Concepticon_ID": "1854",
+        "Concepticon_Gloss": "SPARROW",
+        "Number": "37"
+      },
+      "raw": {
+        "ID": "414",
+        "Languages": "Hangzhou",
+        "Gloss": "sparrow",
+        "GlossId": "37",
+        "Ortho": "麻巧儿",
+        "IPA": "mɑ²¹³ʨʰjɔ⁵³əl²¹³",
+        "CogID": "20"
+      },
+      "cldfLine": 415,
+      "rawLine": 438
+    },
+    {
+      "id": "Hangzhou-38_mouse-1",
+      "language": "Hangzhou",
+      "han": "老鼠",
+      "ipa": "lɔ⁵³ʦʰy⁵³",
+      "displayIpa": "[lɔ⁵³ ʦʰy⁵³]",
+      "segments": "l ɔ ⁵³ + tsʰ y ⁵³",
+      "english": "mouse",
+      "glossQualification": "",
+      "concept": {
+        "ID": "38_mouse",
+        "Name": "mouse",
+        "Concepticon_ID": "1491",
+        "Concepticon_Gloss": "MOUSE",
+        "Number": "38"
+      },
+      "raw": {
+        "ID": "435",
+        "Languages": "Hangzhou",
+        "Gloss": "mouse",
+        "GlossId": "38",
+        "Ortho": "老鼠",
+        "IPA": "lɔ⁵³ʦʰy⁵³",
+        "CogID": "946"
+      },
+      "cldfLine": 436,
+      "rawLine": 460
+    },
+    {
+      "id": "Hangzhou-39_bedbug-1",
+      "language": "Hangzhou",
+      "han": "臭虫",
+      "ipa": "ʦʰej⁴⁴⁵ʣoŋ²¹³",
+      "displayIpa": "[ʦʰej⁴⁴⁵ ʣoŋ²¹³]",
+      "segments": "tsʰ e j ⁴⁴⁵ + dz o ŋ ²¹³",
+      "english": "bedbug",
+      "glossQualification": "",
+      "concept": {
+        "ID": "39_bedbug",
+        "Name": "bedbug",
+        "Concepticon_ID": "1949",
+        "Concepticon_Gloss": "BEDBUG",
+        "Number": "39"
+      },
+      "raw": {
+        "ID": "452",
+        "Languages": "Hangzhou",
+        "Gloss": "bedbug",
+        "GlossId": "39",
+        "Ortho": "臭虫",
+        "IPA": "ʦʰej⁴⁴⁵ʣoŋ²¹³",
+        "CogID": "1064"
+      },
+      "cldfLine": 453,
+      "rawLine": 478
+    },
+    {
+      "id": "Hangzhou-42_window-1",
+      "language": "Hangzhou",
+      "han": "窗门",
+      "ipa": "ʦʰɥɑŋ³³men²¹³",
+      "displayIpa": "[ʦʰɥɑŋ³³ men²¹³]",
+      "segments": "tsʰ ɥ ɑ ŋ ³³ + m e n ²¹³",
+      "english": "window",
+      "glossQualification": "",
+      "concept": {
+        "ID": "42_window",
+        "Name": "window",
+        "Concepticon_ID": "1375",
+        "Concepticon_Gloss": "WINDOW",
+        "Number": "42"
+      },
+      "raw": {
+        "ID": "486",
+        "Languages": "Hangzhou",
+        "Gloss": "window",
+        "GlossId": "42",
+        "Ortho": "窗门",
+        "IPA": "ʦʰɥɑŋ³³men²¹³",
+        "CogID": "475"
+      },
+      "cldfLine": 487,
+      "rawLine": 514
+    },
+    {
+      "id": "Hangzhou-45_kitchen-1",
+      "language": "Hangzhou",
+      "han": "厨房",
+      "ipa": "ʣy²¹³vɑŋ²¹³",
+      "displayIpa": "[ʣy²¹³ vɑŋ²¹³]",
+      "segments": "dz y ²¹³ + v ɑ ŋ ²¹³",
+      "english": "kitchen",
+      "glossQualification": "",
+      "concept": {
+        "ID": "45_kitchen",
+        "Name": "kitchen",
+        "Concepticon_ID": "1365",
+        "Concepticon_Gloss": "KITCHEN",
+        "Number": "45"
+      },
+      "raw": {
+        "ID": "527",
+        "Languages": "Hangzhou",
+        "Gloss": "kitchen",
+        "GlossId": "45",
+        "Ortho": "厨房",
+        "IPA": "ʣy²¹³vɑŋ²¹³",
+        "CogID": "514"
+      },
+      "cldfLine": 528,
+      "rawLine": 557
+    },
+    {
+      "id": "Hangzhou-48_stairs-1",
+      "language": "Hangzhou",
+      "han": "扶梯",
+      "ipa": "ɦu²¹³tʰi³³",
+      "displayIpa": "[ɦu²¹³ tʰi³³]",
+      "segments": "ɦ u ²¹³ + tʰ i ³³",
+      "english": "stairs",
+      "glossQualification": "",
+      "concept": {
+        "ID": "48_stairs",
+        "Name": "stairs",
+        "Concepticon_ID": "34",
+        "Concepticon_Gloss": "STAIRS",
+        "Number": "48"
+      },
+      "raw": {
+        "ID": "581",
+        "Languages": "Hangzhou",
+        "Gloss": "stairs",
+        "GlossId": "48",
+        "Ortho": "扶梯",
+        "IPA": "ɦu²¹³tʰi³³",
+        "CogID": "533"
+      },
+      "cldfLine": 582,
+      "rawLine": 614
+    },
+    {
+      "id": "Hangzhou-49_head-1",
+      "language": "Hangzhou",
+      "han": "头",
+      "ipa": "dej²¹³",
+      "displayIpa": "[dej²¹³]",
+      "segments": "d e j ²¹³",
+      "english": "head",
+      "glossQualification": "",
+      "concept": {
+        "ID": "49_head",
+        "Name": "head",
+        "Concepticon_ID": "1256",
+        "Concepticon_Gloss": "HEAD",
+        "Number": "49"
+      },
+      "raw": {
+        "ID": "599",
+        "Languages": "Hangzhou",
+        "Gloss": "head",
+        "GlossId": "49",
+        "Ortho": "头",
+        "IPA": "dej²¹³",
+        "CogID": "944"
+      },
+      "cldfLine": 600,
+      "rawLine": 633
+    },
+    {
+      "id": "Hangzhou-50_forehead-1",
+      "language": "Hangzhou",
+      "han": "额角头",
+      "ipa": "ŋɑʔ²koʔ⁵dej²¹³",
+      "displayIpa": "[ŋɑʔ² koʔ⁵ dej²¹³]",
+      "segments": "ŋ ɑ ʔ ² + k o ʔ ⁵ + d e j ²¹³",
+      "english": "forehead",
+      "glossQualification": "",
+      "concept": {
+        "ID": "50_forehead",
+        "Name": "forehead",
+        "Concepticon_ID": "123",
+        "Concepticon_Gloss": "FOREHEAD",
+        "Number": "50"
+      },
+      "raw": {
+        "ID": "621",
+        "Languages": "Hangzhou",
+        "Gloss": "forehead",
+        "GlossId": "50",
+        "Ortho": "额角头",
+        "IPA": "ŋɑʔ²koʔ⁵dej²¹³",
+        "CogID": "111"
+      },
+      "cldfLine": 622,
+      "rawLine": 656
+    },
+    {
+      "id": "Hangzhou-52_nose-1",
+      "language": "Hangzhou",
+      "han": "鼻头",
+      "ipa": "bɑʔ²dej²¹³",
+      "displayIpa": "[bɑʔ² dej²¹³]",
+      "segments": "b ɑ ʔ ² + d e j ²¹³",
+      "english": "nose",
+      "glossQualification": "",
+      "concept": {
+        "ID": "52_nose",
+        "Name": "nose",
+        "Concepticon_ID": "1221",
+        "Concepticon_Gloss": "NOSE",
+        "Number": "52"
+      },
+      "raw": {
+        "ID": "659",
+        "Languages": "Hangzhou",
+        "Gloss": "nose",
+        "GlossId": "52",
+        "Ortho": "鼻头",
+        "IPA": "bɑʔ²dej²¹³",
+        "CogID": "729"
+      },
+      "cldfLine": 660,
+      "rawLine": 696
+    },
+    {
+      "id": "Hangzhou-53_neck-1",
+      "language": "Hangzhou",
+      "han": "脰颈",
+      "ipa": "dej¹³ʨin⁵³",
+      "displayIpa": "[dej¹³ ʨin⁵³]",
+      "segments": "d e j ¹³ + tɕ i n ⁵³",
+      "english": "neck",
+      "glossQualification": "",
+      "concept": {
+        "ID": "53_neck",
+        "Name": "neck",
+        "Concepticon_ID": "1333",
+        "Concepticon_Gloss": "NECK",
+        "Number": "53"
+      },
+      "raw": {
+        "ID": "677",
+        "Languages": "Hangzhou",
+        "Gloss": "neck",
+        "GlossId": "53",
+        "Ortho": "脰颈",
+        "IPA": "dej¹³ʨin⁵³",
+        "CogID": "1176"
+      },
+      "cldfLine": 678,
+      "rawLine": 715
+    },
+    {
+      "id": "Hangzhou-54_lefthand-2",
+      "language": "Hangzhou",
+      "han": "小手",
+      "ipa": "ɕjɔ⁵³sej⁵³",
+      "displayIpa": "[ɕjɔ⁵³ sej⁵³]",
+      "segments": "ɕ j ɔ ⁵³ + s e j ⁵³",
+      "english": "left hand",
+      "glossQualification": "",
+      "concept": {
+        "ID": "54_lefthand",
+        "Name": "left hand",
+        "Concepticon_ID": "2182",
+        "Concepticon_Gloss": "LEFT HAND",
+        "Number": "54"
+      },
+      "raw": {
+        "ID": "698",
+        "Languages": "Hangzhou",
+        "Gloss": "left hand",
+        "GlossId": "54",
+        "Ortho": "小手",
+        "IPA": "ɕjɔ⁵³sej⁵³",
+        "CogID": "172"
+      },
+      "cldfLine": 699,
+      "rawLine": 737
+    },
+    {
+      "id": "Hangzhou-55_righthand-1",
+      "language": "Hangzhou",
+      "han": "顺手",
+      "ipa": "zɥen¹³sej⁵³",
+      "displayIpa": "[zɥen¹³ sej⁵³]",
+      "segments": "z ɥ e n ¹³ + s e j ⁵³",
+      "english": "right hand",
+      "glossQualification": "",
+      "concept": {
+        "ID": "55_righthand",
+        "Name": "right hand",
+        "Concepticon_ID": "2183",
+        "Concepticon_Gloss": "RIGHT HAND",
+        "Number": "55"
+      },
+      "raw": {
+        "ID": "718",
+        "Languages": "Hangzhou",
+        "Gloss": "right hand",
+        "GlossId": "55",
+        "Ortho": "顺手",
+        "IPA": "zɥen¹³sej⁵³",
+        "CogID": "690"
+      },
+      "cldfLine": 719,
+      "rawLine": 758
+    },
+    {
+      "id": "Hangzhou-56_fist-1",
+      "language": "Hangzhou",
+      "han": "拳头",
+      "ipa": "ʣɥõ²¹³dej²¹³",
+      "displayIpa": "[ʣɥõ²¹³ dej²¹³]",
+      "segments": "dz ɥ õ ²¹³ + d e j ²¹³",
+      "english": "fist",
+      "glossQualification": "",
+      "concept": {
+        "ID": "56_fist",
+        "Name": "fist",
+        "Concepticon_ID": "1473",
+        "Concepticon_Gloss": "FIST",
+        "Number": "56"
+      },
+      "raw": {
+        "ID": "737",
+        "Languages": "Hangzhou",
+        "Gloss": "fist",
+        "GlossId": "56",
+        "Ortho": "拳头",
+        "IPA": "ʣɥõ²¹³dej²¹³",
+        "CogID": "723"
+      },
+      "cldfLine": 738,
+      "rawLine": 778
+    },
+    {
+      "id": "Hangzhou-59_knee-1",
+      "language": "Hangzhou",
+      "han": "膝髁头",
+      "ipa": "ɕjəʔ⁵kʰo³³dej²¹³",
+      "displayIpa": "[ɕjəʔ⁵ kʰo³³ dej²¹³]",
+      "segments": "ɕ j ə ʔ ⁵ + kʰ o ³³ + d e j ²¹³",
+      "english": "knee",
+      "glossQualification": "",
+      "concept": {
+        "ID": "59_knee",
+        "Name": "knee",
+        "Concepticon_ID": "1371",
+        "Concepticon_Gloss": "KNEE",
+        "Number": "59"
+      },
+      "raw": {
+        "ID": "793",
+        "Languages": "Hangzhou",
+        "Gloss": "knee",
+        "GlossId": "59",
+        "Ortho": "膝髁头",
+        "IPA": "ɕjəʔ⁵kʰo³³dej²¹³",
+        "CogID": "326"
+      },
+      "cldfLine": 794,
+      "rawLine": 837
+    },
+    {
+      "id": "Hangzhou-60_leg-1",
+      "language": "Hangzhou",
+      "han": "脚膀",
+      "ipa": "ʨjɑʔ⁵pʰɑŋ⁵³",
+      "displayIpa": "[ʨjɑʔ⁵ pʰɑŋ⁵³]",
+      "segments": "tɕ j ɑ ʔ ⁵ + pʰ ɑ ŋ ⁵³",
+      "english": "leg",
+      "glossQualification": "",
+      "concept": {
+        "ID": "60_leg",
+        "Name": "leg",
+        "Concepticon_ID": "1297",
+        "Concepticon_Gloss": "LEG",
+        "Number": "60"
+      },
+      "raw": {
+        "ID": "810",
+        "Languages": "Hangzhou",
+        "Gloss": "leg",
+        "GlossId": "60",
+        "Ortho": "脚膀",
+        "IPA": "ʨjɑʔ⁵pʰɑŋ⁵³",
+        "CogID": "608"
+      },
+      "cldfLine": 811,
+      "rawLine": 855
+    },
+    {
+      "id": "Hangzhou-61_father-1",
+      "language": "Hangzhou",
+      "han": "爸爸",
+      "ipa": "pɑ³³pɑ³³",
+      "displayIpa": "[pɑ³³ pɑ³³]",
+      "segments": "p ɑ ³³ + p ɑ ³³",
+      "english": "father",
+      "glossQualification": "",
+      "concept": {
+        "ID": "61_father",
+        "Name": "father",
+        "Concepticon_ID": "1217",
+        "Concepticon_Gloss": "FATHER",
+        "Number": "61"
+      },
+      "raw": {
+        "ID": "839",
+        "Languages": "Hangzhou",
+        "Gloss": "father",
+        "GlossId": "61",
+        "Ortho": "爸爸",
+        "IPA": "pɑ³³pɑ³³",
+        "CogID": "172"
+      },
+      "cldfLine": 840,
+      "rawLine": 885
+    },
+    {
+      "id": "Hangzhou-62_mother-1",
+      "language": "Hangzhou",
+      "han": "妈妈",
+      "ipa": "mɑ³³mɑ³³",
+      "displayIpa": "[mɑ³³ mɑ³³]",
+      "segments": "m ɑ ³³ + m ɑ ³³",
+      "english": "mother",
+      "glossQualification": "",
+      "concept": {
+        "ID": "62_mother",
+        "Name": "mother",
+        "Concepticon_ID": "1216",
+        "Concepticon_Gloss": "MOTHER",
+        "Number": "62"
+      },
+      "raw": {
+        "ID": "871",
+        "Languages": "Hangzhou",
+        "Gloss": "mother",
+        "GlossId": "62",
+        "Ortho": "妈妈",
+        "IPA": "mɑ³³mɑ³³",
+        "CogID": "35"
+      },
+      "cldfLine": 872,
+      "rawLine": 918
+    },
+    {
+      "id": "Hangzhou-73_husband-1",
+      "language": "Hangzhou",
+      "han": "老公",
+      "ipa": "lɔ⁵³koŋ³³",
+      "displayIpa": "[lɔ⁵³ koŋ³³]",
+      "segments": "l ɔ ⁵³ + k o ŋ ³³",
+      "english": "husband",
+      "glossQualification": "",
+      "concept": {
+        "ID": "73_husband",
+        "Name": "husband",
+        "Concepticon_ID": "1200",
+        "Concepticon_Gloss": "HUSBAND",
+        "Number": "73"
+      },
+      "raw": {
+        "ID": "904",
+        "Languages": "Hangzhou",
+        "Gloss": "husband",
+        "GlossId": "73",
+        "Ortho": "老公",
+        "IPA": "lɔ⁵³koŋ³³",
+        "CogID": "89"
+      },
+      "cldfLine": 905,
+      "rawLine": 952
+    },
+    {
+      "id": "Hangzhou-74_wife-1",
+      "language": "Hangzhou",
+      "han": "老婆",
+      "ipa": "lɔ⁵³bo²¹³",
+      "displayIpa": "[lɔ⁵³ bo²¹³]",
+      "segments": "l ɔ ⁵³ + b o ²¹³",
+      "english": "wife",
+      "glossQualification": "",
+      "concept": {
+        "ID": "74_wife",
+        "Name": "wife",
+        "Concepticon_ID": "1199",
+        "Concepticon_Gloss": "WIFE",
+        "Number": "74"
+      },
+      "raw": {
+        "ID": "942",
+        "Languages": "Hangzhou",
+        "Gloss": "wife",
+        "GlossId": "74",
+        "Ortho": "老婆",
+        "IPA": "lɔ⁵³bo²¹³",
+        "CogID": "594"
+      },
+      "cldfLine": 943,
+      "rawLine": 991
+    },
+    {
+      "id": "Hangzhou-75_son-1",
+      "language": "Hangzhou",
+      "han": "儿子",
+      "ipa": "əl²¹³ʦɿ⁵³",
+      "displayIpa": "[əl²¹³ ʦɿ⁵³]",
+      "segments": "ə l ²¹³ + ts ɿ ⁵³",
+      "english": "son",
+      "glossQualification": "",
+      "concept": {
+        "ID": "75_son",
+        "Name": "son",
+        "Concepticon_ID": "1620",
+        "Concepticon_Gloss": "SON",
+        "Number": "75"
+      },
+      "raw": {
+        "ID": "976",
+        "Languages": "Hangzhou",
+        "Gloss": "son",
+        "GlossId": "75",
+        "Ortho": "儿子",
+        "IPA": "əl²¹³ʦɿ⁵³",
+        "CogID": "1127"
+      },
+      "cldfLine": 977,
+      "rawLine": 1026
+    },
+    {
+      "id": "Hangzhou-85_soyasauce-1",
+      "language": "Hangzhou",
+      "han": "酱油",
+      "ipa": "ʨjɑŋ⁴⁴⁵ɦjø²¹³",
+      "displayIpa": "[ʨjɑŋ⁴⁴⁵ ɦjø²¹³]",
+      "segments": "tɕ j ɑ ŋ ⁴⁴⁵ + ɦ j ø ²¹³",
+      "english": "soya sauce",
+      "glossQualification": "",
+      "concept": {
+        "ID": "85_soyasauce",
+        "Name": "soya sauce",
+        "Concepticon_ID": "1968",
+        "Concepticon_Gloss": "SOYA SAUCE",
+        "Number": "85"
+      },
+      "raw": {
+        "ID": "1090",
+        "Languages": "Hangzhou",
+        "Gloss": "soja sauce",
+        "GlossId": "85",
+        "Ortho": "酱油",
+        "IPA": "ʨjɑŋ⁴⁴⁵ɦjø²¹³",
+        "CogID": "279"
+      },
+      "cldfLine": 1091,
+      "rawLine": 1146
+    },
+    {
+      "id": "Hangzhou-90_woman-1",
+      "language": "Hangzhou",
+      "han": "女人家",
+      "ipa": "ny⁵³zen²¹³ʨjɑ³³",
+      "displayIpa": "[ny⁵³ zen²¹³ ʨjɑ³³]",
+      "segments": "n y ⁵³ + z e n ²¹³ + tɕ j ɑ ³³",
+      "english": "woman",
+      "glossQualification": "",
+      "concept": {
+        "ID": "90_woman",
+        "Name": "woman",
+        "Concepticon_ID": "962",
+        "Concepticon_Gloss": "WOMAN",
+        "Number": "90"
+      },
+      "raw": {
+        "ID": "1208",
+        "Languages": "Hangzhou",
+        "Gloss": "woman",
+        "GlossId": "90",
+        "Ortho": "女人家",
+        "IPA": "ny⁵³zen²¹³ʨjɑ³³",
+        "CogID": "485"
+      },
+      "cldfLine": 1209,
+      "rawLine": 1269
+    },
+    {
+      "id": "Hangzhou-92_girl-1",
+      "language": "Hangzhou",
+      "han": "女伢儿",
+      "ipa": "ny⁵³ɦjɑ²¹³əl²¹³",
+      "displayIpa": "[ny⁵³ ɦjɑ²¹³ əl²¹³]",
+      "segments": "n y ⁵³ + ɦ j ɑ ²¹³ + ə l ²¹³",
+      "english": "girl",
+      "glossQualification": "",
+      "concept": {
+        "ID": "92_girl",
+        "Name": "girl",
+        "Concepticon_ID": "1646",
+        "Concepticon_Gloss": "GIRL",
+        "Number": "92"
+      },
+      "raw": {
+        "ID": "1259",
+        "Languages": "Hangzhou",
+        "Gloss": "girl",
+        "GlossId": "92",
+        "Ortho": "女伢儿",
+        "IPA": "ny⁵³ɦjɑ²¹³əl²¹³",
+        "CogID": "520"
+      },
+      "cldfLine": 1260,
+      "rawLine": 1322
+    },
+    {
+      "id": "Hangzhou-93_oldman-1",
+      "language": "Hangzhou",
+      "han": "老头儿",
+      "ipa": "lɔ⁵³dej²¹³əl²¹³",
+      "displayIpa": "[lɔ⁵³ dej²¹³ əl²¹³]",
+      "segments": "l ɔ ⁵³ + d e j ²¹³ + ə l ²¹³",
+      "english": "old man",
+      "glossQualification": "",
+      "concept": {
+        "ID": "93_oldman",
+        "Name": "old man",
+        "Concepticon_ID": "406",
+        "Concepticon_Gloss": "OLD MAN",
+        "Number": "93"
+      },
+      "raw": {
+        "ID": "1284",
+        "Languages": "Hangzhou",
+        "Gloss": "old man",
+        "GlossId": "93",
+        "Ortho": "老头儿",
+        "IPA": "lɔ⁵³dej²¹³əl²¹³",
+        "CogID": "1058"
+      },
+      "cldfLine": 1285,
+      "rawLine": 1348
+    },
+    {
+      "id": "Hangzhou-94_doctor-1",
+      "language": "Hangzhou",
+      "han": "医生",
+      "ipa": "ʔi³³sen³³",
+      "displayIpa": "[ʔi³³ sen³³]",
+      "segments": "ʔ i ³³ + s e n ³³",
+      "english": "doctor",
+      "glossQualification": "",
+      "concept": {
+        "ID": "94_doctor",
+        "Name": "doctor",
+        "Concepticon_ID": "597",
+        "Concepticon_Gloss": "PHYSICIAN",
+        "Number": "94"
+      },
+      "raw": {
+        "ID": "1310",
+        "Languages": "Hangzhou",
+        "Gloss": "doctor",
+        "GlossId": "94",
+        "Ortho": "医生",
+        "IPA": "ʔi³³sen³³",
+        "CogID": "822"
+      },
+      "cldfLine": 1311,
+      "rawLine": 1375
+    },
+    {
+      "id": "Hangzhou-2315_cook-1",
+      "language": "Hangzhou",
+      "han": "厨房师傅",
+      "ipa": "ʣy²¹³vɑŋ²¹³sɿ³³vu¹³",
+      "displayIpa": "[ʣy²¹³ vɑŋ²¹³ sɿ³³ vu¹³]",
+      "segments": "dz y ²¹³ + v ɑ ŋ ²¹³ + s ɿ ³³ + v u ¹³",
+      "english": "cook",
+      "glossQualification": "",
+      "concept": {
+        "ID": "2315_cook",
+        "Name": "cook",
+        "Concepticon_ID": "2315",
+        "Concepticon_Gloss": "COOK (PERSON)",
+        "Number": "2315"
+      },
+      "raw": {
+        "ID": "1334",
+        "Languages": "Hangzhou",
+        "Gloss": "cook",
+        "GlossId": "95",
+        "Ortho": "厨房师傅",
+        "IPA": "ʣy²¹³vɑŋ²¹³sɿ³³vu¹³",
+        "CogID": "527"
+      },
+      "cldfLine": 1335,
+      "rawLine": 1400
+    },
+    {
+      "id": "Hangzhou-96_beggar-1",
+      "language": "Hangzhou",
+      "han": "叫化子",
+      "ipa": "ʨjɔ⁴⁴⁵hwɑ⁴⁴⁵ʦɿ⁵³",
+      "displayIpa": "[ʨjɔ⁴⁴⁵ hwɑ⁴⁴⁵ ʦɿ⁵³]",
+      "segments": "tɕ j ɔ ⁴⁴⁵ + h w ɑ ⁴⁴⁵ + ts ɿ ⁵³",
+      "english": "beggar",
+      "glossQualification": "",
+      "concept": {
+        "ID": "96_beggar",
+        "Name": "beggar",
+        "Concepticon_ID": "1934",
+        "Concepticon_Gloss": "BEGGAR",
+        "Number": "96"
+      },
+      "raw": {
+        "ID": "1360",
+        "Languages": "Hangzhou",
+        "Gloss": "beggar",
+        "GlossId": "96",
+        "Ortho": "叫化子",
+        "IPA": "ʨjɔ⁴⁴⁵hwɑ⁴⁴⁵ʦɿ⁵³",
+        "CogID": "363"
+      },
+      "cldfLine": 1361,
+      "rawLine": 1427
+    },
+    {
+      "id": "Hangzhou-99_catchacold-1",
+      "language": "Hangzhou",
+      "han": "伤风",
+      "ipa": "sɥɑŋ³³foŋ³³",
+      "displayIpa": "[sɥɑŋ³³ foŋ³³]",
+      "segments": "s ɥ ɑ ŋ ³³ + f o ŋ ³³",
+      "english": "catch a cold",
+      "glossQualification": "",
+      "concept": {
+        "ID": "99_catchacold",
+        "Name": "catch a cold",
+        "Concepticon_ID": "2184",
+        "Concepticon_Gloss": "CATCH A COLD",
+        "Number": "99"
+      },
+      "raw": {
+        "ID": "1441",
+        "Languages": "Hangzhou",
+        "Gloss": "catch a cold",
+        "GlossId": "99",
+        "Ortho": "伤风",
+        "IPA": "sɥɑŋ³³foŋ³³",
+        "CogID": "240"
+      },
+      "cldfLine": 1442,
+      "rawLine": 1511
+    },
+    {
+      "id": "Hangzhou-105_i-1",
+      "language": "Hangzhou",
+      "han": "我",
+      "ipa": "ŋo⁵³",
+      "displayIpa": "[ŋo⁵³]",
+      "segments": "ŋ o ⁵³",
+      "english": "I",
+      "glossQualification": "",
+      "concept": {
+        "ID": "105_i",
+        "Name": "I",
+        "Concepticon_ID": "1209",
+        "Concepticon_Gloss": "I",
+        "Number": "105"
+      },
+      "raw": {
+        "ID": "1522",
+        "Languages": "Hangzhou",
+        "Gloss": "I",
+        "GlossId": "105",
+        "Ortho": "我",
+        "IPA": "ŋo⁵³",
+        "CogID": "267"
+      },
+      "cldfLine": 1523,
+      "rawLine": 1595
+    },
+    {
+      "id": "Hangzhou-106_thou-1",
+      "language": "Hangzhou",
+      "han": "你",
+      "ipa": "ni⁵³",
+      "displayIpa": "[ni⁵³]",
+      "segments": "n i ⁵³",
+      "english": "you (singular)",
+      "glossQualification": "Modern English wording for the source singular-pronoun heading thou.",
+      "concept": {
+        "ID": "106_thou",
+        "Name": "thou",
+        "Concepticon_ID": "1215",
+        "Concepticon_Gloss": "THOU",
+        "Number": "106"
+      },
+      "raw": {
+        "ID": "1538",
+        "Languages": "Hangzhou",
+        "Gloss": "thou",
+        "GlossId": "106",
+        "Ortho": "你",
+        "IPA": "ni⁵³",
+        "CogID": "1185"
+      },
+      "cldfLine": 1539,
+      "rawLine": 1612
+    },
+    {
+      "id": "Hangzhou-107_he-1",
+      "language": "Hangzhou",
+      "han": "他",
+      "ipa": "tʰɑ³³",
+      "displayIpa": "[tʰɑ³³]",
+      "segments": "tʰ ɑ ³³",
+      "english": "he",
+      "glossQualification": "",
+      "concept": {
+        "ID": "107_he",
+        "Name": "he",
+        "Concepticon_ID": "1211",
+        "Concepticon_Gloss": "HE",
+        "Number": "107"
+      },
+      "raw": {
+        "ID": "1556",
+        "Languages": "Hangzhou",
+        "Gloss": "he",
+        "GlossId": "107",
+        "Ortho": "他",
+        "IPA": "tʰɑ³³",
+        "CogID": "704"
+      },
+      "cldfLine": 1557,
+      "rawLine": 1631
+    },
+    {
+      "id": "Hangzhou-108_we-1",
+      "language": "Hangzhou",
+      "han": "我们",
+      "ipa": "ŋo⁵³men²¹³",
+      "displayIpa": "[ŋo⁵³ men²¹³]",
+      "segments": "ŋ o ⁵³ + m e n ²¹³",
+      "english": "we",
+      "glossQualification": "",
+      "concept": {
+        "ID": "108_we",
+        "Name": "we",
+        "Concepticon_ID": "1212",
+        "Concepticon_Gloss": "WE",
+        "Number": "108"
+      },
+      "raw": {
+        "ID": "1574",
+        "Languages": "Hangzhou",
+        "Gloss": "we",
+        "GlossId": "108",
+        "Ortho": "我们",
+        "IPA": "ŋo⁵³men²¹³",
+        "CogID": "915"
+      },
+      "cldfLine": 1575,
+      "rawLine": 1650
+    },
+    {
+      "id": "Hangzhou-109_you-1",
+      "language": "Hangzhou",
+      "han": "你们",
+      "ipa": "ni⁵³men²¹³",
+      "displayIpa": "[ni⁵³ men²¹³]",
+      "segments": "n i ⁵³ + m e n ²¹³",
+      "english": "you (plural)",
+      "glossQualification": "The supplied plural-pronoun form is distinguished from singular you.",
+      "concept": {
+        "ID": "109_you",
+        "Name": "you",
+        "Concepticon_ID": "1213",
+        "Concepticon_Gloss": "YOU",
+        "Number": "109"
+      },
+      "raw": {
+        "ID": "1594",
+        "Languages": "Hangzhou",
+        "Gloss": "you",
+        "GlossId": "109",
+        "Ortho": "你们",
+        "IPA": "ni⁵³men²¹³",
+        "CogID": "1007"
+      },
+      "cldfLine": 1595,
+      "rawLine": 1671
+    },
+    {
+      "id": "Hangzhou-110_they-1",
+      "language": "Hangzhou",
+      "han": "他们",
+      "ipa": "tʰɑ³³men²¹³",
+      "displayIpa": "[tʰɑ³³ men²¹³]",
+      "segments": "tʰ ɑ ³³ + m e n ²¹³",
+      "english": "they",
+      "glossQualification": "",
+      "concept": {
+        "ID": "110_they",
+        "Name": "they",
+        "Concepticon_ID": "817",
+        "Concepticon_Gloss": "THEY",
+        "Number": "110"
+      },
+      "raw": {
+        "ID": "1611",
+        "Languages": "Hangzhou",
+        "Gloss": "they",
+        "GlossId": "110",
+        "Ortho": "他们",
+        "IPA": "tʰɑ³³men²¹³",
+        "CogID": "1200"
+      },
+      "cldfLine": 1612,
+      "rawLine": 1689
+    },
+    {
+      "id": "Hangzhou-112_self-1",
+      "language": "Hangzhou",
+      "han": "自家",
+      "ipa": "ʣɿ¹³ʨjɑ³³",
+      "displayIpa": "[ʣɿ¹³ ʨjɑ³³]",
+      "segments": "dz ɿ ¹³ + tɕ j ɑ ³³",
+      "english": "self",
+      "glossQualification": "",
+      "concept": {
+        "ID": "112_self",
+        "Name": "self",
+        "Concepticon_ID": "1993",
+        "Concepticon_Gloss": "SELF",
+        "Number": "112"
+      },
+      "raw": {
+        "ID": "1628",
+        "Languages": "Hangzhou",
+        "Gloss": "self",
+        "GlossId": "112",
+        "Ortho": "自家",
+        "IPA": "ʣɿ¹³ʨjɑ³³",
+        "CogID": "727"
+      },
+      "cldfLine": 1629,
+      "rawLine": 1707
+    },
+    {
+      "id": "Hangzhou-113_who-1",
+      "language": "Hangzhou",
+      "han": "哪个",
+      "ipa": "nɑ⁵³koʔ⁵",
+      "displayIpa": "[nɑ⁵³ koʔ⁵]",
+      "segments": "n ɑ ⁵³ + k o ʔ ⁵",
+      "english": "who",
+      "glossQualification": "",
+      "concept": {
+        "ID": "113_who",
+        "Name": "who",
+        "Concepticon_ID": "1235",
+        "Concepticon_Gloss": "WHO",
+        "Number": "113"
+      },
+      "raw": {
+        "ID": "1645",
+        "Languages": "Hangzhou",
+        "Gloss": "who",
+        "GlossId": "113",
+        "Ortho": "哪个",
+        "IPA": "nɑ⁵³koʔ⁵",
+        "CogID": "640"
+      },
+      "cldfLine": 1646,
+      "rawLine": 1725
+    },
+    {
+      "id": "Hangzhou-114_what-1",
+      "language": "Hangzhou",
+      "han": "啥西",
+      "ipa": "sɑ⁵³ɕi³³",
+      "displayIpa": "[sɑ⁵³ ɕi³³]",
+      "segments": "s ɑ ⁵³ + ɕ i ³³",
+      "english": "what",
+      "glossQualification": "",
+      "concept": {
+        "ID": "114_what",
+        "Name": "what",
+        "Concepticon_ID": "1236",
+        "Concepticon_Gloss": "WHAT",
+        "Number": "114"
+      },
+      "raw": {
+        "ID": "1662",
+        "Languages": "Hangzhou",
+        "Gloss": "what",
+        "GlossId": "114",
+        "Ortho": "啥西",
+        "IPA": "sɑ⁵³ɕi³³",
+        "CogID": "693"
+      },
+      "cldfLine": 1663,
+      "rawLine": 1743
+    },
+    {
+      "id": "Hangzhou-119_that-1",
+      "language": "Hangzhou",
+      "han": "那个",
+      "ipa": "nɑ⁵³koʔ⁵",
+      "displayIpa": "[nɑ⁵³ koʔ⁵]",
+      "segments": "n ɑ ⁵³ + k o ʔ ⁵",
+      "english": "that",
+      "glossQualification": "",
+      "concept": {
+        "ID": "119_that",
+        "Name": "that",
+        "Concepticon_ID": "78",
+        "Concepticon_Gloss": "THAT",
+        "Number": "119"
+      },
+      "raw": {
+        "ID": "1768",
+        "Languages": "Hangzhou",
+        "Gloss": "that",
+        "GlossId": "119",
+        "Ortho": "那个",
+        "IPA": "nɑ⁵³koʔ⁵",
+        "CogID": "888"
+      },
+      "cldfLine": 1769,
+      "rawLine": 1854
+    },
+    {
+      "id": "Hangzhou-130_on-1",
+      "language": "Hangzhou",
+      "han": "高头",
+      "ipa": "kɔ³³dej²¹³",
+      "displayIpa": "[kɔ³³ dej²¹³]",
+      "segments": "k ɔ ³³ + d e j ²¹³",
+      "english": "on",
+      "glossQualification": "",
+      "concept": {
+        "ID": "130_on",
+        "Name": "on",
+        "Concepticon_ID": "1741",
+        "Concepticon_Gloss": "ABOVE",
+        "Number": "130"
+      },
+      "raw": {
+        "ID": "1959",
+        "Languages": "Hangzhou",
+        "Gloss": "on",
+        "GlossId": "130",
+        "Ortho": "高头",
+        "IPA": "kɔ³³dej²¹³",
+        "CogID": "1085"
+      },
+      "cldfLine": 1960,
+      "rawLine": 2056
+    },
+    {
+      "id": "Hangzhou-131_under-1",
+      "language": "Hangzhou",
+      "han": "下底",
+      "ipa": "ɦjɑ¹³ti⁵³",
+      "displayIpa": "[ɦjɑ¹³ ti⁵³]",
+      "segments": "ɦ j ɑ ¹³ + t i ⁵³",
+      "english": "under",
+      "glossQualification": "",
+      "concept": {
+        "ID": "131_under",
+        "Name": "under",
+        "Concepticon_ID": "1485",
+        "Concepticon_Gloss": "BELOW OR UNDER",
+        "Number": "131"
+      },
+      "raw": {
+        "ID": "1993",
+        "Languages": "Hangzhou",
+        "Gloss": "under",
+        "GlossId": "131",
+        "Ortho": "下底",
+        "IPA": "ɦjɑ¹³ti⁵³",
+        "CogID": "524"
+      },
+      "cldfLine": 1994,
+      "rawLine": 2091
+    },
+    {
+      "id": "Hangzhou-134_inthemiddle-1",
+      "language": "Hangzhou",
+      "han": "当中",
+      "ipa": "tɑŋ³³ʦoŋ³³",
+      "displayIpa": "[tɑŋ³³ ʦoŋ³³]",
+      "segments": "t ɑ ŋ ³³ + ts o ŋ ³³",
+      "english": "in the middle",
+      "glossQualification": "",
+      "concept": {
+        "ID": "134_inthemiddle",
+        "Name": "in the middle",
+        "Concepticon_ID": "",
+        "Concepticon_Gloss": "",
+        "Number": "134"
+      },
+      "raw": {
+        "ID": "2065",
+        "Languages": "Hangzhou",
+        "Gloss": "in the middle",
+        "GlossId": "134",
+        "Ortho": "当中",
+        "IPA": "tɑŋ³³ʦoŋ³³",
+        "CogID": "405"
+      },
+      "cldfLine": 2066,
+      "rawLine": 2166
+    },
+    {
+      "id": "Hangzhou-135_inside-1",
+      "language": "Hangzhou",
+      "han": "里头",
+      "ipa": "li⁵³dej²¹³",
+      "displayIpa": "[li⁵³ dej²¹³]",
+      "segments": "l i ⁵³ + d e j ²¹³",
+      "english": "inside",
+      "glossQualification": "",
+      "concept": {
+        "ID": "135_inside",
+        "Name": "inside",
+        "Concepticon_ID": "1606",
+        "Concepticon_Gloss": "INSIDE",
+        "Number": "135"
+      },
+      "raw": {
+        "ID": "2090",
+        "Languages": "Hangzhou",
+        "Gloss": "inside",
+        "GlossId": "135",
+        "Ortho": "里头",
+        "IPA": "li⁵³dej²¹³",
+        "CogID": "689"
+      },
+      "cldfLine": 2091,
+      "rawLine": 2192
+    },
+    {
+      "id": "Hangzhou-138_sour-1",
+      "language": "Hangzhou",
+      "han": "酸",
+      "ipa": "sɥõ³³",
+      "displayIpa": "[sɥõ³³]",
+      "segments": "s ɥ õ ³³",
+      "english": "sour",
+      "glossQualification": "",
+      "concept": {
+        "ID": "138_sour",
+        "Name": "sour",
+        "Concepticon_ID": "1906",
+        "Concepticon_Gloss": "SOUR",
+        "Number": "138"
+      },
+      "raw": {
+        "ID": "2153",
+        "Languages": "Hangzhou",
+        "Gloss": "sour",
+        "GlossId": "138",
+        "Ortho": "酸",
+        "IPA": "sɥõ³³",
+        "CogID": "274"
+      },
+      "cldfLine": 2154,
+      "rawLine": 2258
+    },
+    {
+      "id": "Hangzhou-141_fat-1",
+      "language": "Hangzhou",
+      "han": "壮",
+      "ipa": "ʦɥɑŋ⁴⁴⁵",
+      "displayIpa": "[ʦɥɑŋ⁴⁴⁵]",
+      "segments": "ts ɥ ɑ ŋ ⁴⁴⁵",
+      "english": "fat",
+      "glossQualification": "",
+      "concept": {
+        "ID": "141_fat",
+        "Name": "fat",
+        "Concepticon_ID": "1279",
+        "Concepticon_Gloss": "FAT (OBESE)",
+        "Number": "141"
+      },
+      "raw": {
+        "ID": "2200",
+        "Languages": "Hangzhou",
+        "Gloss": "fat",
+        "GlossId": "141",
+        "Ortho": "壮",
+        "IPA": "ʦɥɑŋ⁴⁴⁵",
+        "CogID": "1143"
+      },
+      "cldfLine": 2201,
+      "rawLine": 2308
+    },
+    {
+      "id": "Hangzhou-142_thin-1",
+      "language": "Hangzhou",
+      "han": "瘦",
+      "ipa": "sej⁴⁴⁵",
+      "displayIpa": "[sej⁴⁴⁵]",
+      "segments": "s e j ⁴⁴⁵",
+      "english": "thin",
+      "glossQualification": "",
+      "concept": {
+        "ID": "142_thin",
+        "Name": "thin",
+        "Concepticon_ID": "1400",
+        "Concepticon_Gloss": "THIN (SLIM)",
+        "Number": "142"
+      },
+      "raw": {
+        "ID": "2218",
+        "Languages": "Hangzhou",
+        "Gloss": "thin",
+        "GlossId": "142",
+        "Ortho": "瘦",
+        "IPA": "sej⁴⁴⁵",
+        "CogID": "683"
+      },
+      "cldfLine": 2219,
+      "rawLine": 2327
+    },
+    {
+      "id": "Hangzhou-143_cold-1",
+      "language": "Hangzhou",
+      "han": "冷",
+      "ipa": "len⁵³",
+      "displayIpa": "[len⁵³]",
+      "segments": "l e n ⁵³",
+      "english": "cold",
+      "glossQualification": "",
+      "concept": {
+        "ID": "143_cold",
+        "Name": "cold",
+        "Concepticon_ID": "1287",
+        "Concepticon_Gloss": "COLD",
+        "Number": "143"
+      },
+      "raw": {
+        "ID": "2234",
+        "Languages": "Hangzhou",
+        "Gloss": "cold",
+        "GlossId": "143",
+        "Ortho": "冷",
+        "IPA": "len⁵³",
+        "CogID": "177"
+      },
+      "cldfLine": 2235,
+      "rawLine": 2344
+    },
+    {
+      "id": "Hangzhou-144_hot-1",
+      "language": "Hangzhou",
+      "han": "热",
+      "ipa": "zɥəʔ²",
+      "displayIpa": "[zɥəʔ²]",
+      "segments": "z ɥ ə ʔ ²",
+      "english": "hot",
+      "glossQualification": "",
+      "concept": {
+        "ID": "144_hot",
+        "Name": "hot",
+        "Concepticon_ID": "1286",
+        "Concepticon_Gloss": "HOT",
+        "Number": "144"
+      },
+      "raw": {
+        "ID": "2252",
+        "Languages": "Hangzhou",
+        "Gloss": "hot",
+        "GlossId": "144",
+        "Ortho": "热",
+        "IPA": "zɥəʔ²",
+        "CogID": "834"
+      },
+      "cldfLine": 2253,
+      "rawLine": 2363
+    },
+    {
+      "id": "Hangzhou-145_wellsmelling-1",
+      "language": "Hangzhou",
+      "han": "香",
+      "ipa": "ɕjɑŋ³³",
+      "displayIpa": "[ɕjɑŋ³³]",
+      "segments": "ɕ j ɑ ŋ ³³",
+      "english": "well smelling",
+      "glossQualification": "",
+      "concept": {
+        "ID": "145_wellsmelling",
+        "Name": "well smelling",
+        "Concepticon_ID": "376",
+        "Concepticon_Gloss": "FRAGRANT",
+        "Number": "145"
+      },
+      "raw": {
+        "ID": "2271",
+        "Languages": "Hangzhou",
+        "Gloss": "well smelling",
+        "GlossId": "145",
+        "Ortho": "香",
+        "IPA": "ɕjɑŋ³³",
+        "CogID": "1092"
+      },
+      "cldfLine": 2272,
+      "rawLine": 2383
+    },
+    {
+      "id": "Hangzhou-146_stinky-1",
+      "language": "Hangzhou",
+      "han": "臭",
+      "ipa": "ʦʰej⁴⁴⁵",
+      "displayIpa": "[ʦʰej⁴⁴⁵]",
+      "segments": "tsʰ e j ⁴⁴⁵",
+      "english": "stinky",
+      "glossQualification": "",
+      "concept": {
+        "ID": "146_stinky",
+        "Name": "stinky",
+        "Concepticon_ID": "42",
+        "Concepticon_Gloss": "STINKING",
+        "Number": "146"
+      },
+      "raw": {
+        "ID": "2286",
+        "Languages": "Hangzhou",
+        "Gloss": "stinky",
+        "GlossId": "146",
+        "Ortho": "臭",
+        "IPA": "ʦʰej⁴⁴⁵",
+        "CogID": "133"
+      },
+      "cldfLine": 2287,
+      "rawLine": 2399
+    },
+    {
+      "id": "Hangzhou-147_thick-1",
+      "language": "Hangzhou",
+      "han": "粗",
+      "ipa": "ʦʰu³³",
+      "displayIpa": "[ʦʰu³³]",
+      "segments": "tsʰ u ³³",
+      "english": "thick",
+      "glossQualification": "",
+      "concept": {
+        "ID": "147_thick",
+        "Name": "thick",
+        "Concepticon_ID": "1244",
+        "Concepticon_Gloss": "THICK",
+        "Number": "147"
+      },
+      "raw": {
+        "ID": "2301",
+        "Languages": "Hangzhou",
+        "Gloss": "thick",
+        "GlossId": "147",
+        "Ortho": "粗",
+        "IPA": "ʦʰu³³",
+        "CogID": "1146"
+      },
+      "cldfLine": 2302,
+      "rawLine": 2415
+    },
+    {
+      "id": "Hangzhou-149_long-1",
+      "language": "Hangzhou",
+      "han": "长",
+      "ipa": "ʣɑŋ²¹³",
+      "displayIpa": "[ʣɑŋ²¹³]",
+      "segments": "dz ɑ ŋ ²¹³",
+      "english": "long",
+      "glossQualification": "",
+      "concept": {
+        "ID": "149_long",
+        "Name": "long",
+        "Concepticon_ID": "1203",
+        "Concepticon_Gloss": "LONG",
+        "Number": "149"
+      },
+      "raw": {
+        "ID": "2329",
+        "Languages": "Hangzhou",
+        "Gloss": "long",
+        "GlossId": "149",
+        "Ortho": "长",
+        "IPA": "ʣɑŋ²¹³",
+        "CogID": "552"
+      },
+      "cldfLine": 2330,
+      "rawLine": 2445
+    },
+    {
+      "id": "Hangzhou-150_short-1",
+      "language": "Hangzhou",
+      "han": "短",
+      "ipa": "twõ⁵³",
+      "displayIpa": "[twõ⁵³]",
+      "segments": "t w õ ⁵³",
+      "english": "short",
+      "glossQualification": "",
+      "concept": {
+        "ID": "150_short",
+        "Name": "short",
+        "Concepticon_ID": "1645",
+        "Concepticon_Gloss": "SHORT",
+        "Number": "150"
+      },
+      "raw": {
+        "ID": "2345",
+        "Languages": "Hangzhou",
+        "Gloss": "short",
+        "GlossId": "150",
+        "Ortho": "短",
+        "IPA": "twõ⁵³",
+        "CogID": "868"
+      },
+      "cldfLine": 2346,
+      "rawLine": 2462
+    },
+    {
+      "id": "Hangzhou-151_dirty-2",
+      "language": "Hangzhou",
+      "han": "龌龊",
+      "ipa": "ʔoʔ⁵ʦʰoʔ⁵",
+      "displayIpa": "[ʔoʔ⁵ ʦʰoʔ⁵]",
+      "segments": "ʔ o ʔ ⁵ + tsʰ o ʔ ⁵",
+      "english": "dirty",
+      "glossQualification": "",
+      "concept": {
+        "ID": "151_dirty",
+        "Name": "dirty",
+        "Concepticon_ID": "1230",
+        "Concepticon_Gloss": "DIRTY",
+        "Number": "151"
+      },
+      "raw": {
+        "ID": "2366",
+        "Languages": "Hangzhou",
+        "Gloss": "dirty",
+        "GlossId": "151",
+        "Ortho": "龌龊",
+        "IPA": "ʔoʔ⁵ʦʰoʔ⁵",
+        "CogID": "1096"
+      },
+      "cldfLine": 2367,
+      "rawLine": 2484
+    },
+    {
+      "id": "Hangzhou-152_clean-2",
+      "language": "Hangzhou",
+      "han": "清爽",
+      "ipa": "ʨʰin³³sɥɑŋ⁵³",
+      "displayIpa": "[ʨʰin³³ sɥɑŋ⁵³]",
+      "segments": "tɕʰ i n ³³ + s ɥ ɑ ŋ ⁵³",
+      "english": "clean",
+      "glossQualification": "",
+      "concept": {
+        "ID": "152_clean",
+        "Name": "clean",
+        "Concepticon_ID": "704",
+        "Concepticon_Gloss": "CLEAN",
+        "Number": "152"
+      },
+      "raw": {
+        "ID": "2391",
+        "Languages": "Hangzhou",
+        "Gloss": "clean",
+        "GlossId": "152",
+        "Ortho": "清爽",
+        "IPA": "ʨʰin³³sɥɑŋ⁵³",
+        "CogID": "912"
+      },
+      "cldfLine": 2392,
+      "rawLine": 2510
+    },
+    {
+      "id": "Hangzhou-156_justright-1",
+      "language": "Hangzhou",
+      "han": "刚好",
+      "ipa": "kɑŋ³³hɔ⁵³",
+      "displayIpa": "[kɑŋ³³ hɔ⁵³]",
+      "segments": "k ɑ ŋ ³³ + h ɔ ⁵³",
+      "english": "just right",
+      "glossQualification": "",
+      "concept": {
+        "ID": "156_justright",
+        "Name": "just right",
+        "Concepticon_ID": "1725",
+        "Concepticon_Gloss": "CORRECT (RIGHT)",
+        "Number": "156"
+      },
+      "raw": {
+        "ID": "2428",
+        "Languages": "Hangzhou",
+        "Gloss": "just right",
+        "GlossId": "156",
+        "Ortho": "刚好",
+        "IPA": "kɑŋ³³hɔ⁵³",
+        "CogID": "733"
+      },
+      "cldfLine": 2429,
+      "rawLine": 2549
+    },
+    {
+      "id": "Hangzhou-157_and-1",
+      "language": "Hangzhou",
+      "han": "搭",
+      "ipa": "tɑʔ⁵",
+      "displayIpa": "[tɑʔ⁵]",
+      "segments": "t ɑ ʔ ⁵",
+      "english": "and",
+      "glossQualification": "",
+      "concept": {
+        "ID": "157_and",
+        "Name": "and",
+        "Concepticon_ID": "1577",
+        "Concepticon_Gloss": "AND",
+        "Number": "157"
+      },
+      "raw": {
+        "ID": "2455",
+        "Languages": "Hangzhou",
+        "Gloss": "and",
+        "GlossId": "157",
+        "Ortho": "搭",
+        "IPA": "tɑʔ⁵",
+        "CogID": "385"
+      },
+      "cldfLine": 2456,
+      "rawLine": 2577
+    },
+    {
+      "id": "Hangzhou-158_only-1",
+      "language": "Hangzhou",
+      "han": "只",
+      "ipa": "ʦəʔ⁵",
+      "displayIpa": "[ʦəʔ⁵]",
+      "segments": "ts ə ʔ ⁵",
+      "english": "only",
+      "glossQualification": "",
+      "concept": {
+        "ID": "158_only",
+        "Name": "only",
+        "Concepticon_ID": "1580",
+        "Concepticon_Gloss": "ONLY",
+        "Number": "158"
+      },
+      "raw": {
+        "ID": "2483",
+        "Languages": "Hangzhou",
+        "Gloss": "only",
+        "GlossId": "158",
+        "Ortho": "只",
+        "IPA": "ʦəʔ⁵",
+        "CogID": "597"
+      },
+      "cldfLine": 2484,
+      "rawLine": 2606
+    },
+    {
+      "id": "Hangzhou-159_from-1",
+      "language": "Hangzhou",
+      "han": "从",
+      "ipa": "ʣoŋ²¹³",
+      "displayIpa": "[ʣoŋ²¹³]",
+      "segments": "dz o ŋ ²¹³",
+      "english": "from",
+      "glossQualification": "",
+      "concept": {
+        "ID": "159_from",
+        "Name": "from",
+        "Concepticon_ID": "693",
+        "Concepticon_Gloss": "FROM",
+        "Number": "159"
+      },
+      "raw": {
+        "ID": "2501",
+        "Languages": "Hangzhou",
+        "Gloss": "from",
+        "GlossId": "159",
+        "Ortho": "从",
+        "IPA": "ʣoŋ²¹³",
+        "CogID": "1086"
+      },
+      "cldfLine": 2502,
+      "rawLine": 2625
+    },
+    {
+      "id": "Hangzhou-162_onpurpose-1",
+      "language": "Hangzhou",
+      "han": "特为",
+      "ipa": "dəʔ²wi¹³",
+      "displayIpa": "[dəʔ² wi¹³]",
+      "segments": "d ə ʔ ² + w i ¹³",
+      "english": "on purpose",
+      "glossQualification": "",
+      "concept": {
+        "ID": "162_onpurpose",
+        "Name": "on purpose",
+        "Concepticon_ID": "1031",
+        "Concepticon_Gloss": "ON PURPOSE",
+        "Number": "162"
+      },
+      "raw": {
+        "ID": "2560",
+        "Languages": "Hangzhou",
+        "Gloss": "on purpose",
+        "GlossId": "162",
+        "Ortho": "特为",
+        "IPA": "dəʔ²wi¹³",
+        "CogID": "445"
+      },
+      "cldfLine": 2561,
+      "rawLine": 2687
+    },
+    {
+      "id": "Hangzhou-163_one-1",
+      "language": "Hangzhou",
+      "han": "一",
+      "ipa": "ʔjəʔ⁵",
+      "displayIpa": "[ʔjəʔ⁵]",
+      "segments": "ʔ j ə ʔ ⁵",
+      "english": "one",
+      "glossQualification": "",
+      "concept": {
+        "ID": "163_one",
+        "Name": "one",
+        "Concepticon_ID": "1493",
+        "Concepticon_Gloss": "ONE",
+        "Number": "163"
+      },
+      "raw": {
+        "ID": "2582",
+        "Languages": "Hangzhou",
+        "Gloss": "one",
+        "GlossId": "163",
+        "Ortho": "一",
+        "IPA": "ʔjəʔ⁵",
+        "CogID": "637"
+      },
+      "cldfLine": 2583,
+      "rawLine": 2710
+    },
+    {
+      "id": "Hangzhou-164_two-1",
+      "language": "Hangzhou",
+      "han": "二",
+      "ipa": "əl⁴⁴⁵",
+      "displayIpa": "[əl⁴⁴⁵]",
+      "segments": "ə l ⁴⁴⁵",
+      "english": "two",
+      "glossQualification": "",
+      "concept": {
+        "ID": "164_two",
+        "Name": "two",
+        "Concepticon_ID": "1498",
+        "Concepticon_Gloss": "TWO",
+        "Number": "164"
+      },
+      "raw": {
+        "ID": "2598",
+        "Languages": "Hangzhou",
+        "Gloss": "two",
+        "GlossId": "164",
+        "Ortho": "二",
+        "IPA": "əl⁴⁴⁵",
+        "CogID": "1106"
+      },
+      "cldfLine": 2599,
+      "rawLine": 2727
+    },
+    {
+      "id": "Hangzhou-166_four-1",
+      "language": "Hangzhou",
+      "han": "四",
+      "ipa": "sɿ⁴⁴⁵",
+      "displayIpa": "[sɿ⁴⁴⁵]",
+      "segments": "s ɿ ⁴⁴⁵",
+      "english": "four",
+      "glossQualification": "",
+      "concept": {
+        "ID": "166_four",
+        "Name": "four",
+        "Concepticon_ID": "1500",
+        "Concepticon_Gloss": "FOUR",
+        "Number": "166"
+      },
+      "raw": {
+        "ID": "2628",
+        "Languages": "Hangzhou",
+        "Gloss": "four",
+        "GlossId": "166",
+        "Ortho": "四",
+        "IPA": "sɿ⁴⁴⁵",
+        "CogID": "1156"
+      },
+      "cldfLine": 2629,
+      "rawLine": 2759
+    },
+    {
+      "id": "Hangzhou-167_five-1",
+      "language": "Hangzhou",
+      "han": "五",
+      "ipa": "ʔu⁵³",
+      "displayIpa": "[ʔu⁵³]",
+      "segments": "ʔ u ⁵³",
+      "english": "five",
+      "glossQualification": "",
+      "concept": {
+        "ID": "167_five",
+        "Name": "five",
+        "Concepticon_ID": "493",
+        "Concepticon_Gloss": "FIVE",
+        "Number": "167"
+      },
+      "raw": {
+        "ID": "2643",
+        "Languages": "Hangzhou",
+        "Gloss": "five",
+        "GlossId": "167",
+        "Ortho": "五",
+        "IPA": "ʔu⁵³",
+        "CogID": "193"
+      },
+      "cldfLine": 2644,
+      "rawLine": 2775
+    },
+    {
+      "id": "Hangzhou-168_six-1",
+      "language": "Hangzhou",
+      "han": "六",
+      "ipa": "loʔ²",
+      "displayIpa": "[loʔ²]",
+      "segments": "l o ʔ ²",
+      "english": "six",
+      "glossQualification": "",
+      "concept": {
+        "ID": "168_six",
+        "Name": "six",
+        "Concepticon_ID": "1703",
+        "Concepticon_Gloss": "SIX",
+        "Number": "168"
+      },
+      "raw": {
+        "ID": "2658",
+        "Languages": "Hangzhou",
+        "Gloss": "six",
+        "GlossId": "168",
+        "Ortho": "六",
+        "IPA": "loʔ²",
+        "CogID": "813"
+      },
+      "cldfLine": 2659,
+      "rawLine": 2791
+    },
+    {
+      "id": "Hangzhou-169_seven-1",
+      "language": "Hangzhou",
+      "han": "七",
+      "ipa": "ʨʰjəʔ⁵",
+      "displayIpa": "[ʨʰjəʔ⁵]",
+      "segments": "tɕʰ j ə ʔ ⁵",
+      "english": "seven",
+      "glossQualification": "",
+      "concept": {
+        "ID": "169_seven",
+        "Name": "seven",
+        "Concepticon_ID": "1704",
+        "Concepticon_Gloss": "SEVEN",
+        "Number": "169"
+      },
+      "raw": {
+        "ID": "2673",
+        "Languages": "Hangzhou",
+        "Gloss": "seven",
+        "GlossId": "169",
+        "Ortho": "七",
+        "IPA": "ʨʰjəʔ⁵",
+        "CogID": "500"
+      },
+      "cldfLine": 2674,
+      "rawLine": 2807
+    },
+    {
+      "id": "Shexian-1_sun-1",
+      "language": "Shexian",
+      "han": "日头",
+      "ipa": "ni²²tʰju⁴⁴",
+      "displayIpa": "[ni²² tʰju⁴⁴]",
+      "segments": "n i ²² + tʰ j u ⁴⁴",
+      "english": "sun",
+      "glossQualification": "",
+      "concept": {
+        "ID": "1_sun",
+        "Name": "sun",
+        "Concepticon_ID": "1343",
+        "Concepticon_Gloss": "SUN",
+        "Number": "1"
+      },
+      "raw": {
+        "ID": "20",
+        "Languages": "Shexian",
+        "Gloss": "sun",
+        "GlossId": "1",
+        "Ortho": "日头",
+        "IPA": "ni²²tʰju⁴⁴",
+        "CogID": "184"
+      },
+      "cldfLine": 21,
+      "rawLine": 23
+    },
+    {
+      "id": "Shexian-2_moon-1",
+      "language": "Shexian",
+      "han": "月亮",
+      "ipa": "we²²lja²²",
+      "displayIpa": "[we²² lja²²]",
+      "segments": "w e ²² + l j a ²²",
+      "english": "moon",
+      "glossQualification": "",
+      "concept": {
+        "ID": "2_moon",
+        "Name": "moon",
+        "Concepticon_ID": "1313",
+        "Concepticon_Gloss": "MOON",
+        "Number": "2"
+      },
+      "raw": {
+        "ID": "45",
+        "Languages": "Shexian",
+        "Gloss": "moon",
+        "GlossId": "2",
+        "Ortho": "月亮",
+        "IPA": "we²²lja²²",
+        "CogID": "659"
+      },
+      "cldfLine": 46,
+      "rawLine": 49
+    },
+    {
+      "id": "Shexian-4_thunderverb-2",
+      "language": "Shexian",
+      "han": "打天雷",
+      "ipa": "ta³⁵tʰe³¹lɛ⁴⁴",
+      "displayIpa": "[ta³⁵ tʰe³¹ lɛ⁴⁴]",
+      "segments": "t a ³⁵ + tʰ e ³¹ + l ɛ ⁴⁴",
+      "english": "thundering (weather)",
+      "glossQualification": "Weather-event meaning, preserving the source verb concept.",
+      "concept": {
+        "ID": "4_thunderverb",
+        "Name": "thunder (verb)",
+        "Concepticon_ID": "2378",
+        "Concepticon_Gloss": "THUNDER (VERB)",
+        "Number": "4"
+      },
+      "raw": {
+        "ID": "81",
+        "Languages": "Shexian",
+        "Gloss": "thunder",
+        "GlossId": "4",
+        "Ortho": "打天雷",
+        "IPA": "ta³⁵tʰe³¹lɛ⁴⁴",
+        "CogID": "97"
+      },
+      "cldfLine": 82,
+      "rawLine": 87
+    },
+    {
+      "id": "Shexian-5_flashverb-1",
+      "language": "Shexian",
+      "han": "打热闪",
+      "ipa": "ta³⁵ne²²ɕɥe³²⁴",
+      "displayIpa": "[ta³⁵ ne²² ɕɥe³²⁴]",
+      "segments": "t a ³⁵ + n e ²² + ɕ ɥ e ³²⁴",
+      "english": "lightning (weather)",
+      "glossQualification": "The raw source gloss is lightning; the derived heading is flash (verb). This is a weather expression.",
+      "concept": {
+        "ID": "5_flashverb",
+        "Name": "flash (verb)",
+        "Concepticon_ID": "2377",
+        "Concepticon_Gloss": "FLASH (VERB)",
+        "Number": "5"
+      },
+      "raw": {
+        "ID": "97",
+        "Languages": "Shexian",
+        "Gloss": "lightning",
+        "GlossId": "5",
+        "Ortho": "打热闪",
+        "IPA": "ta³⁵ne²²ɕɥe³²⁴",
+        "CogID": "86"
+      },
+      "cldfLine": 98,
+      "rawLine": 104
+    },
+    {
+      "id": "Shexian-6_rain-1",
+      "language": "Shexian",
+      "han": "落雨",
+      "ipa": "lɔ²²y³⁵",
+      "displayIpa": "[lɔ²² y³⁵]",
+      "segments": "l ɔ ²² + y ³⁵",
+      "english": "raining",
+      "glossQualification": "The source Chinese expression denotes a rain event.",
+      "concept": {
+        "ID": "6_rain",
+        "Name": "rain",
+        "Concepticon_ID": "1253",
+        "Concepticon_Gloss": "RAIN (RAINING)",
+        "Number": "6"
+      },
+      "raw": {
+        "ID": "116",
+        "Languages": "Shexian",
+        "Gloss": "rain",
+        "GlossId": "6",
+        "Ortho": "落雨",
+        "IPA": "lɔ²²y³⁵",
+        "CogID": "1162"
+      },
+      "cldfLine": 117,
+      "rawLine": 124
+    },
+    {
+      "id": "Shexian-7_snow-1",
+      "language": "Shexian",
+      "han": "落雪",
+      "ipa": "lɔ²²ɕɥeʔ²¹",
+      "displayIpa": "[lɔ²² ɕɥeʔ²¹]",
+      "segments": "l ɔ ²² + ɕ ɥ e ʔ ²¹",
+      "english": "snowing",
+      "glossQualification": "The source Chinese expression denotes a snow event.",
+      "concept": {
+        "ID": "7_snow",
+        "Name": "snow",
+        "Concepticon_ID": "1255",
+        "Concepticon_Gloss": "SNOWING",
+        "Number": "7"
+      },
+      "raw": {
+        "ID": "133",
+        "Languages": "Shexian",
+        "Gloss": "snow",
+        "GlossId": "7",
+        "Ortho": "落雪",
+        "IPA": "lɔ²²ɕɥeʔ²¹",
+        "CogID": "1163"
+      },
+      "cldfLine": 134,
+      "rawLine": 142
+    },
+    {
+      "id": "Shexian-11_rainbow-1",
+      "language": "Shexian",
+      "han": "虹",
+      "ipa": "ka³²⁴",
+      "displayIpa": "[ka³²⁴]",
+      "segments": "k a ³²⁴",
+      "english": "rainbow",
+      "glossQualification": "",
+      "concept": {
+        "ID": "11_rainbow",
+        "Name": "rainbow",
+        "Concepticon_ID": "1733",
+        "Concepticon_Gloss": "RAINBOW",
+        "Number": "11"
+      },
+      "raw": {
+        "ID": "214",
+        "Languages": "Shexian",
+        "Gloss": "rainbow",
+        "GlossId": "11",
+        "Ortho": "虹",
+        "IPA": "ka³²⁴",
+        "CogID": "855"
+      },
+      "cldfLine": 215,
+      "rawLine": 227
+    },
+    {
+      "id": "Shexian-22_wheat-1",
+      "language": "Shexian",
+      "han": "小麦",
+      "ipa": "sjɔ³⁵mɛ²²",
+      "displayIpa": "[sjɔ³⁵ mɛ²²]",
+      "segments": "s j ɔ ³⁵ + m ɛ ²²",
+      "english": "wheat",
+      "glossQualification": "",
+      "concept": {
+        "ID": "22_wheat",
+        "Name": "wheat",
+        "Concepticon_ID": "1077",
+        "Concepticon_Gloss": "WHEAT",
+        "Number": "22"
+      },
+      "raw": {
+        "ID": "268",
+        "Languages": "Shexian",
+        "Gloss": "wheat",
+        "GlossId": "22",
+        "Ortho": "小麦",
+        "IPA": "sjɔ³⁵mɛ²²",
+        "CogID": "172"
+      },
+      "cldfLine": 269,
+      "rawLine": 284
+    },
+    {
+      "id": "Shexian-24_sunflower-1",
+      "language": "Shexian",
+      "han": "葵花莲",
+      "ipa": "kʰwe⁴⁴xwa³¹le⁴⁴",
+      "displayIpa": "[kʰwe⁴⁴ xwa³¹ le⁴⁴]",
+      "segments": "kʰ w e ⁴⁴ + x w a ³¹ + l e ⁴⁴",
+      "english": "sunflower",
+      "glossQualification": "",
+      "concept": {
+        "ID": "24_sunflower",
+        "Name": "sunflower",
+        "Concepticon_ID": "1956",
+        "Concepticon_Gloss": "SUNFLOWER",
+        "Number": "24"
+      },
+      "raw": {
+        "ID": "289",
+        "Languages": "Shexian",
+        "Gloss": "sunflower",
+        "GlossId": "24",
+        "Ortho": "葵花莲",
+        "IPA": "kʰwe⁴⁴xwa³¹le⁴⁴",
+        "CogID": "358"
+      },
+      "cldfLine": 290,
+      "rawLine": 306
+    },
+    {
+      "id": "Shexian-25_spinach-1",
+      "language": "Shexian",
+      "han": "菠菜",
+      "ipa": "po³¹ʦʰɛ³²⁴",
+      "displayIpa": "[po³¹ ʦʰɛ³²⁴]",
+      "segments": "p o ³¹ + tsʰ ɛ ³²⁴",
+      "english": "spinach",
+      "glossQualification": "",
+      "concept": {
+        "ID": "25_spinach",
+        "Name": "spinach",
+        "Concepticon_ID": "975",
+        "Concepticon_Gloss": "SPINACH",
+        "Number": "25"
+      },
+      "raw": {
+        "ID": "309",
+        "Languages": "Shexian",
+        "Gloss": "spinach",
+        "GlossId": "25",
+        "Ortho": "菠菜",
+        "IPA": "po³¹ʦʰɛ³²⁴",
+        "CogID": "249"
+      },
+      "cldfLine": 310,
+      "rawLine": 327
+    },
+    {
+      "id": "Shexian-26_cabbage-1",
+      "language": "Shexian",
+      "han": "甘蓝菜",
+      "ipa": "kɛ³¹lɛ⁴⁴ʦʰɛ³²⁴",
+      "displayIpa": "[kɛ³¹ lɛ⁴⁴ ʦʰɛ³²⁴]",
+      "segments": "k ɛ ³¹ + l ɛ ⁴⁴ + tsʰ ɛ ³²⁴",
+      "english": "cabbage",
+      "glossQualification": "",
+      "concept": {
+        "ID": "26_cabbage",
+        "Name": "cabbage",
+        "Concepticon_ID": "774",
+        "Concepticon_Gloss": "CABBAGE",
+        "Number": "26"
+      },
+      "raw": {
+        "ID": "327",
+        "Languages": "Shexian",
+        "Gloss": "cabbage",
+        "GlossId": "26",
+        "Ortho": "甘蓝菜",
+        "IPA": "kɛ³¹lɛ⁴⁴ʦʰɛ³²⁴",
+        "CogID": "861"
+      },
+      "cldfLine": 328,
+      "rawLine": 346
+    },
+    {
+      "id": "Shexian-29_sweetpotato-1",
+      "language": "Shexian",
+      "han": "山芋",
+      "ipa": "sa³¹y²²",
+      "displayIpa": "[sa³¹ y²²]",
+      "segments": "s a ³¹ + y ²²",
+      "english": "sweet potato",
+      "glossQualification": "",
+      "concept": {
+        "ID": "29_sweetpotato",
+        "Name": "sweet potato",
+        "Concepticon_ID": "159",
+        "Concepticon_Gloss": "SWEET POTATO",
+        "Number": "29"
+      },
+      "raw": {
+        "ID": "344",
+        "Languages": "Shexian",
+        "Gloss": "sweet potato",
+        "GlossId": "29",
+        "Ortho": "山芋",
+        "IPA": "sa³¹y²²",
+        "CogID": "146"
+      },
+      "cldfLine": 345,
+      "rawLine": 364
+    },
+    {
+      "id": "Shexian-32_pig-1",
+      "language": "Shexian",
+      "han": "猪",
+      "ipa": "ʨy³¹",
+      "displayIpa": "[ʨy³¹]",
+      "segments": "tɕ y ³¹",
+      "english": "pig",
+      "glossQualification": "",
+      "concept": {
+        "ID": "32_pig",
+        "Name": "pig",
+        "Concepticon_ID": "1337",
+        "Concepticon_Gloss": "PIG",
+        "Number": "32"
+      },
+      "raw": {
+        "ID": "360",
+        "Languages": "Shexian",
+        "Gloss": "pig",
+        "GlossId": "32",
+        "Ortho": "猪",
+        "IPA": "ʨy³¹",
+        "CogID": "558"
+      },
+      "cldfLine": 361,
+      "rawLine": 381
+    },
+    {
+      "id": "Shexian-37_sparrow-1",
+      "language": "Shexian",
+      "han": "麻雀",
+      "ipa": "ma⁴⁴ʦʰjɔʔ²¹",
+      "displayIpa": "[ma⁴⁴ ʦʰjɔʔ²¹]",
+      "segments": "m a ⁴⁴ + tsʰ j ɔ ʔ ²¹",
+      "english": "sparrow",
+      "glossQualification": "",
+      "concept": {
+        "ID": "37_sparrow",
+        "Name": "sparrow",
+        "Concepticon_ID": "1854",
+        "Concepticon_Gloss": "SPARROW",
+        "Number": "37"
+      },
+      "raw": {
+        "ID": "421",
+        "Languages": "Shexian",
+        "Gloss": "sparrow",
+        "GlossId": "37",
+        "Ortho": "麻雀",
+        "IPA": "ma⁴⁴ʦʰjɔʔ²¹",
+        "CogID": "91"
+      },
+      "cldfLine": 422,
+      "rawLine": 445
+    },
+    {
+      "id": "Shexian-38_mouse-1",
+      "language": "Shexian",
+      "han": "老鼠",
+      "ipa": "lɔ³⁵ʨʰy³⁵",
+      "displayIpa": "[lɔ³⁵ ʨʰy³⁵]",
+      "segments": "l ɔ ³⁵ + tɕʰ y ³⁵",
+      "english": "mouse",
+      "glossQualification": "",
+      "concept": {
+        "ID": "38_mouse",
+        "Name": "mouse",
+        "Concepticon_ID": "1491",
+        "Concepticon_Gloss": "MOUSE",
+        "Number": "38"
+      },
+      "raw": {
+        "ID": "439",
+        "Languages": "Shexian",
+        "Gloss": "mouse",
+        "GlossId": "38",
+        "Ortho": "老鼠",
+        "IPA": "lɔ³⁵ʨʰy³⁵",
+        "CogID": "946"
+      },
+      "cldfLine": 440,
+      "rawLine": 464
+    },
+    {
+      "id": "Shexian-39_bedbug-1",
+      "language": "Shexian",
+      "han": "木虱",
+      "ipa": "mɔ²²seʔ²¹",
+      "displayIpa": "[mɔ²² seʔ²¹]",
+      "segments": "m ɔ ²² + s e ʔ ²¹",
+      "english": "bedbug",
+      "glossQualification": "",
+      "concept": {
+        "ID": "39_bedbug",
+        "Name": "bedbug",
+        "Concepticon_ID": "1949",
+        "Concepticon_Gloss": "BEDBUG",
+        "Number": "39"
+      },
+      "raw": {
+        "ID": "457",
+        "Languages": "Shexian",
+        "Gloss": "bedbug",
+        "GlossId": "39",
+        "Ortho": "木虱",
+        "IPA": "mɔ²²seʔ²¹",
+        "CogID": "601"
+      },
+      "cldfLine": 458,
+      "rawLine": 483
+    },
+    {
+      "id": "Shexian-40_house-1",
+      "language": "Shexian",
+      "han": "屋",
+      "ipa": "uʔ²¹",
+      "displayIpa": "[uʔ²¹]",
+      "segments": "u ʔ ²¹",
+      "english": "house",
+      "glossQualification": "",
+      "concept": {
+        "ID": "40_house",
+        "Name": "house",
+        "Concepticon_ID": "1252",
+        "Concepticon_Gloss": "HOUSE",
+        "Number": "40"
+      },
+      "raw": {
+        "ID": "475",
+        "Languages": "Shexian",
+        "Gloss": "house",
+        "GlossId": "40",
+        "Ortho": "屋",
+        "IPA": "uʔ²¹",
+        "CogID": "589"
+      },
+      "cldfLine": 476,
+      "rawLine": 502
+    },
+    {
+      "id": "Shexian-42_window-1",
+      "language": "Shexian",
+      "han": "槛窗",
+      "ipa": "kʰɛ³⁵ʦʰo³¹",
+      "displayIpa": "[kʰɛ³⁵ ʦʰo³¹]",
+      "segments": "kʰ ɛ ³⁵ + tsʰ o ³¹",
+      "english": "window",
+      "glossQualification": "",
+      "concept": {
+        "ID": "42_window",
+        "Name": "window",
+        "Concepticon_ID": "1375",
+        "Concepticon_Gloss": "WINDOW",
+        "Number": "42"
+      },
+      "raw": {
+        "ID": "496",
+        "Languages": "Shexian",
+        "Gloss": "window",
+        "GlossId": "42",
+        "Ortho": "槛窗",
+        "IPA": "kʰɛ³⁵ʦʰo³¹",
+        "CogID": "493"
+      },
+      "cldfLine": 497,
+      "rawLine": 524
+    },
+    {
+      "id": "Shexian-45_kitchen-1",
+      "language": "Shexian",
+      "han": "灶下",
+      "ipa": "ʦɔ³²⁴xa³⁵",
+      "displayIpa": "[ʦɔ³²⁴ xa³⁵]",
+      "segments": "ts ɔ ³²⁴ + x a ³⁵",
+      "english": "kitchen",
+      "glossQualification": "",
+      "concept": {
+        "ID": "45_kitchen",
+        "Name": "kitchen",
+        "Concepticon_ID": "1365",
+        "Concepticon_Gloss": "KITCHEN",
+        "Number": "45"
+      },
+      "raw": {
+        "ID": "536",
+        "Languages": "Shexian",
+        "Gloss": "kitchen",
+        "GlossId": "45",
+        "Ortho": "灶下",
+        "IPA": "ʦɔ³²⁴xa³⁵",
+        "CogID": "208"
+      },
+      "cldfLine": 537,
+      "rawLine": 566
+    },
+    {
+      "id": "Shexian-47_table-1",
+      "language": "Shexian",
+      "han": "桌",
+      "ipa": "ʦɔʔ²¹",
+      "displayIpa": "[ʦɔʔ²¹]",
+      "segments": "ts ɔ ʔ ²¹",
+      "english": "table",
+      "glossQualification": "",
+      "concept": {
+        "ID": "47_table",
+        "Name": "table",
+        "Concepticon_ID": "1775",
+        "Concepticon_Gloss": "TABLE",
+        "Number": "47"
+      },
+      "raw": {
+        "ID": "570",
+        "Languages": "Shexian",
+        "Gloss": "table",
+        "GlossId": "47",
+        "Ortho": "桌",
+        "IPA": "ʦɔʔ²¹",
+        "CogID": "1047"
+      },
+      "cldfLine": 571,
+      "rawLine": 602
+    },
+    {
+      "id": "Shexian-48_stairs-1",
+      "language": "Shexian",
+      "han": "阁梯",
+      "ipa": "kɔ²¹tʰɛ³¹",
+      "displayIpa": "[kɔ²¹ tʰɛ³¹]",
+      "segments": "k ɔ ²¹ + tʰ ɛ ³¹",
+      "english": "stairs",
+      "glossQualification": "",
+      "concept": {
+        "ID": "48_stairs",
+        "Name": "stairs",
+        "Concepticon_ID": "34",
+        "Concepticon_Gloss": "STAIRS",
+        "Number": "48"
+      },
+      "raw": {
+        "ID": "586",
+        "Languages": "Shexian",
+        "Gloss": "stairs",
+        "GlossId": "48",
+        "Ortho": "阁梯",
+        "IPA": "kɔ²¹tʰɛ³¹",
+        "CogID": "16"
+      },
+      "cldfLine": 587,
+      "rawLine": 619
+    },
+    {
+      "id": "Shexian-49_head-1",
+      "language": "Shexian",
+      "han": "头",
+      "ipa": "tʰju⁴⁴",
+      "displayIpa": "[tʰju⁴⁴]",
+      "segments": "tʰ j u ⁴⁴",
+      "english": "head",
+      "glossQualification": "",
+      "concept": {
+        "ID": "49_head",
+        "Name": "head",
+        "Concepticon_ID": "1256",
+        "Concepticon_Gloss": "HEAD",
+        "Number": "49"
+      },
+      "raw": {
+        "ID": "606",
+        "Languages": "Shexian",
+        "Gloss": "head",
+        "GlossId": "49",
+        "Ortho": "头",
+        "IPA": "tʰju⁴⁴",
+        "CogID": "944"
+      },
+      "cldfLine": 607,
+      "rawLine": 640
+    },
+    {
+      "id": "Shexian-50_forehead-1",
+      "language": "Shexian",
+      "han": "额角头",
+      "ipa": "ŋɛ²¹kɔ²¹tʰju⁴⁴",
+      "displayIpa": "[ŋɛ²¹ kɔ²¹ tʰju⁴⁴]",
+      "segments": "ŋ ɛ ²¹ + k ɔ ²¹ + tʰ j u ⁴⁴",
+      "english": "forehead",
+      "glossQualification": "",
+      "concept": {
+        "ID": "50_forehead",
+        "Name": "forehead",
+        "Concepticon_ID": "123",
+        "Concepticon_Gloss": "FOREHEAD",
+        "Number": "50"
+      },
+      "raw": {
+        "ID": "627",
+        "Languages": "Shexian",
+        "Gloss": "forehead",
+        "GlossId": "50",
+        "Ortho": "额角头",
+        "IPA": "ŋɛ²¹kɔ²¹tʰju⁴⁴",
+        "CogID": "111"
+      },
+      "cldfLine": 628,
+      "rawLine": 662
+    },
+    {
+      "id": "Shexian-51_face-1",
+      "language": "Shexian",
+      "han": "面嘴",
+      "ipa": "me²²ʨy³⁵",
+      "displayIpa": "[me²² ʨy³⁵]",
+      "segments": "m e ²² + tɕ y ³⁵",
+      "english": "face",
+      "glossQualification": "",
+      "concept": {
+        "ID": "51_face",
+        "Name": "face",
+        "Concepticon_ID": "1560",
+        "Concepticon_Gloss": "FACE",
+        "Number": "51"
+      },
+      "raw": {
+        "ID": "647",
+        "Languages": "Shexian",
+        "Gloss": "face",
+        "GlossId": "51",
+        "Ortho": "面嘴",
+        "IPA": "me²²ʨy³⁵",
+        "CogID": "1129"
+      },
+      "cldfLine": 648,
+      "rawLine": 683
+    },
+    {
+      "id": "Shexian-52_nose-1",
+      "language": "Shexian",
+      "han": "鼻头",
+      "ipa": "pʰi²²tʰju⁴⁴",
+      "displayIpa": "[pʰi²² tʰju⁴⁴]",
+      "segments": "pʰ i ²² + tʰ j u ⁴⁴",
+      "english": "nose",
+      "glossQualification": "",
+      "concept": {
+        "ID": "52_nose",
+        "Name": "nose",
+        "Concepticon_ID": "1221",
+        "Concepticon_Gloss": "NOSE",
+        "Number": "52"
+      },
+      "raw": {
+        "ID": "664",
+        "Languages": "Shexian",
+        "Gloss": "nose",
+        "GlossId": "52",
+        "Ortho": "鼻头",
+        "IPA": "pʰi²²tʰju⁴⁴",
+        "CogID": "729"
+      },
+      "cldfLine": 665,
+      "rawLine": 701
+    },
+    {
+      "id": "Shexian-54_lefthand-1",
+      "language": "Shexian",
+      "han": "反手",
+      "ipa": "fɛ³⁵ɕju³⁵",
+      "displayIpa": "[fɛ³⁵ ɕju³⁵]",
+      "segments": "f ɛ ³⁵ + ɕ j u ³⁵",
+      "english": "left hand",
+      "glossQualification": "",
+      "concept": {
+        "ID": "54_lefthand",
+        "Name": "left hand",
+        "Concepticon_ID": "2182",
+        "Concepticon_Gloss": "LEFT HAND",
+        "Number": "54"
+      },
+      "raw": {
+        "ID": "706",
+        "Languages": "Shexian",
+        "Gloss": "left hand",
+        "GlossId": "54",
+        "Ortho": "反手",
+        "IPA": "fɛ³⁵ɕju³⁵",
+        "CogID": "569"
+      },
+      "cldfLine": 707,
+      "rawLine": 745
+    },
+    {
+      "id": "Shexian-56_fist-1",
+      "language": "Shexian",
+      "han": "锤",
+      "ipa": "ʨʰɥe⁴⁴",
+      "displayIpa": "[ʨʰɥe⁴⁴]",
+      "segments": "tɕʰ ɥ e ⁴⁴",
+      "english": "fist",
+      "glossQualification": "",
+      "concept": {
+        "ID": "56_fist",
+        "Name": "fist",
+        "Concepticon_ID": "1473",
+        "Concepticon_Gloss": "FIST",
+        "Number": "56"
+      },
+      "raw": {
+        "ID": "744",
+        "Languages": "Shexian",
+        "Gloss": "fist",
+        "GlossId": "56",
+        "Ortho": "锤",
+        "IPA": "ʨʰɥe⁴⁴",
+        "CogID": "810"
+      },
+      "cldfLine": 745,
+      "rawLine": 785
+    },
+    {
+      "id": "Shexian-58_fingernail-1",
+      "language": "Shexian",
+      "han": "手指甲",
+      "ipa": "ɕju³⁵ʦɿ³⁵kaʔ²¹",
+      "displayIpa": "[ɕju³⁵ ʦɿ³⁵ kaʔ²¹]",
+      "segments": "ɕ j u ³⁵ + ts ɿ ³⁵ + k a ʔ ²¹",
+      "english": "fingernail",
+      "glossQualification": "",
+      "concept": {
+        "ID": "58_fingernail",
+        "Name": "fingernail",
+        "Concepticon_ID": "1258",
+        "Concepticon_Gloss": "FINGERNAIL",
+        "Number": "58"
+      },
+      "raw": {
+        "ID": "779",
+        "Languages": "Shexian",
+        "Gloss": "fingernail",
+        "GlossId": "58",
+        "Ortho": "手指甲",
+        "IPA": "ɕju³⁵ʦɿ³⁵kaʔ²¹",
+        "CogID": "120"
+      },
+      "cldfLine": 780,
+      "rawLine": 822
+    },
+    {
+      "id": "Shexian-59_knee-1",
+      "language": "Shexian",
+      "han": "脚膝头",
+      "ipa": "ʨja²¹si²¹tʰju⁴⁴",
+      "displayIpa": "[ʨja²¹ si²¹ tʰju⁴⁴]",
+      "segments": "tɕ j a ²¹ + s i ²¹ + tʰ j u ⁴⁴",
+      "english": "knee",
+      "glossQualification": "",
+      "concept": {
+        "ID": "59_knee",
+        "Name": "knee",
+        "Concepticon_ID": "1371",
+        "Concepticon_Gloss": "KNEE",
+        "Number": "59"
+      },
+      "raw": {
+        "ID": "798",
+        "Languages": "Shexian",
+        "Gloss": "knee",
+        "GlossId": "59",
+        "Ortho": "脚膝头",
+        "IPA": "ʨja²¹si²¹tʰju⁴⁴",
+        "CogID": "609"
+      },
+      "cldfLine": 799,
+      "rawLine": 842
+    },
+    {
+      "id": "Shexian-60_leg-2",
+      "language": "Shexian",
+      "han": "大腿",
+      "ipa": "tʰo²²tʰɛ³⁵",
+      "displayIpa": "[tʰo²² tʰɛ³⁵]",
+      "segments": "tʰ o ²² + tʰ ɛ ³⁵",
+      "english": "leg",
+      "glossQualification": "",
+      "concept": {
+        "ID": "60_leg",
+        "Name": "leg",
+        "Concepticon_ID": "1297",
+        "Concepticon_Gloss": "LEG",
+        "Number": "60"
+      },
+      "raw": {
+        "ID": "819",
+        "Languages": "Shexian",
+        "Gloss": "leg",
+        "GlossId": "60",
+        "Ortho": "大腿",
+        "IPA": "tʰo²²tʰɛ³⁵",
+        "CogID": "207"
+      },
+      "cldfLine": 820,
+      "rawLine": 864
+    },
+    {
+      "id": "Shexian-61_father-2",
+      "language": "Shexian",
+      "han": "爷",
+      "ipa": "je⁴⁴",
+      "displayIpa": "[je⁴⁴]",
+      "segments": "j e ⁴⁴",
+      "english": "father",
+      "glossQualification": "",
+      "concept": {
+        "ID": "61_father",
+        "Name": "father",
+        "Concepticon_ID": "1217",
+        "Concepticon_Gloss": "FATHER",
+        "Number": "61"
+      },
+      "raw": {
+        "ID": "853",
+        "Languages": "Shexian",
+        "Gloss": "father",
+        "GlossId": "61",
+        "Ortho": "爷",
+        "IPA": "je⁴⁴",
+        "CogID": "594"
+      },
+      "cldfLine": 854,
+      "rawLine": 899
+    },
+    {
+      "id": "Shexian-62_mother-1",
+      "language": "Shexian",
+      "han": "姆妈",
+      "ipa": "m̩³⁵ma³¹",
+      "displayIpa": "[m̩³⁵ ma³¹]",
+      "segments": "m̩ ³⁵ + m a ³¹",
+      "english": "mother",
+      "glossQualification": "",
+      "concept": {
+        "ID": "62_mother",
+        "Name": "mother",
+        "Concepticon_ID": "1216",
+        "Concepticon_Gloss": "MOTHER",
+        "Number": "62"
+      },
+      "raw": {
+        "ID": "880",
+        "Languages": "Shexian",
+        "Gloss": "mother",
+        "GlossId": "62",
+        "Ortho": "姆妈",
+        "IPA": "m̩³⁵ma³¹",
+        "CogID": "35"
+      },
+      "cldfLine": 881,
+      "rawLine": 927
+    },
+    {
+      "id": "Shexian-73_husband-4",
+      "language": "Shexian",
+      "han": "家里",
+      "ipa": "ka³¹li³⁵",
+      "displayIpa": "[ka³¹ li³⁵]",
+      "segments": "k a ³¹ + l i ³⁵",
+      "english": "husband",
+      "glossQualification": "",
+      "concept": {
+        "ID": "73_husband",
+        "Name": "husband",
+        "Concepticon_ID": "1200",
+        "Concepticon_Gloss": "HUSBAND",
+        "Number": "73"
+      },
+      "raw": {
+        "ID": "917",
+        "Languages": "Shexian",
+        "Gloss": "husband",
+        "GlossId": "73",
+        "Ortho": "家里",
+        "IPA": "ka³¹li³⁵",
+        "CogID": "314"
+      },
+      "cldfLine": 918,
+      "rawLine": 965
+    },
+    {
+      "id": "Shexian-74_wife-1",
+      "language": "Shexian",
+      "han": "老婆",
+      "ipa": "lɔ³⁵pʰo⁴⁴",
+      "displayIpa": "[lɔ³⁵ pʰo⁴⁴]",
+      "segments": "l ɔ ³⁵ + pʰ o ⁴⁴",
+      "english": "wife",
+      "glossQualification": "",
+      "concept": {
+        "ID": "74_wife",
+        "Name": "wife",
+        "Concepticon_ID": "1199",
+        "Concepticon_Gloss": "WIFE",
+        "Number": "74"
+      },
+      "raw": {
+        "ID": "951",
+        "Languages": "Shexian",
+        "Gloss": "wife",
+        "GlossId": "74",
+        "Ortho": "老婆",
+        "IPA": "lɔ³⁵pʰo⁴⁴",
+        "CogID": "594"
+      },
+      "cldfLine": 952,
+      "rawLine": 1000
+    },
+    {
+      "id": "Shexian-75_son-1",
+      "language": "Shexian",
+      "han": "儿子",
+      "ipa": "ɛ⁴⁴ʦɿ³⁵",
+      "displayIpa": "[ɛ⁴⁴ ʦɿ³⁵]",
+      "segments": "ɛ ⁴⁴ + ts ɿ ³⁵",
+      "english": "son",
+      "glossQualification": "",
+      "concept": {
+        "ID": "75_son",
+        "Name": "son",
+        "Concepticon_ID": "1620",
+        "Concepticon_Gloss": "SON",
+        "Number": "75"
+      },
+      "raw": {
+        "ID": "982",
+        "Languages": "Shexian",
+        "Gloss": "son",
+        "GlossId": "75",
+        "Ortho": "儿子",
+        "IPA": "ɛ⁴⁴ʦɿ³⁵",
+        "CogID": "1127"
+      },
+      "cldfLine": 983,
+      "rawLine": 1032
+    },
+    {
+      "id": "Shexian-76_daughter-1",
+      "language": "Shexian",
+      "han": "女",
+      "ipa": "ny³⁵",
+      "displayIpa": "[ny³⁵]",
+      "segments": "n y ³⁵",
+      "english": "daughter",
+      "glossQualification": "The dataset also lists the same written and spoken form under girl. This card retains the daughter entry; it does not imply an exclusive sense.",
+      "concept": {
+        "ID": "76_daughter",
+        "Name": "daughter",
+        "Concepticon_ID": "1357",
+        "Concepticon_Gloss": "DAUGHTER",
+        "Number": "76"
+      },
+      "raw": {
+        "ID": "1001",
+        "Languages": "Shexian",
+        "Gloss": "daughter",
+        "GlossId": "76",
+        "Ortho": "女",
+        "IPA": "ny³⁵",
+        "CogID": "202"
+      },
+      "cldfLine": 1002,
+      "rawLine": 1052
+    },
+    {
+      "id": "Shexian-77_breakfast-2",
+      "language": "Shexian",
+      "han": "吃粥",
+      "ipa": "ʨʰi²¹ʦuʔ²¹",
+      "displayIpa": "[ʨʰi²¹ ʦuʔ²¹]",
+      "segments": "tɕʰ i ²¹ + ts u ʔ ²¹",
+      "english": "breakfast",
+      "glossQualification": "",
+      "concept": {
+        "ID": "77_breakfast",
+        "Name": "breakfast",
+        "Concepticon_ID": "1322",
+        "Concepticon_Gloss": "BREAKFAST",
+        "Number": "77"
+      },
+      "raw": {
+        "ID": "1022",
+        "Languages": "Shexian",
+        "Gloss": "breakfast",
+        "GlossId": "77",
+        "Ortho": "吃粥",
+        "IPA": "ʨʰi²¹ʦuʔ²¹",
+        "CogID": "250"
+      },
+      "cldfLine": 1023,
+      "rawLine": 1074
+    },
+    {
+      "id": "Shexian-79_supper-1",
+      "language": "Shexian",
+      "han": "夜饭",
+      "ipa": "ja²²fɛ²²",
+      "displayIpa": "[ja²² fɛ²²]",
+      "segments": "j a ²² + f ɛ ²²",
+      "english": "supper",
+      "glossQualification": "",
+      "concept": {
+        "ID": "79_supper",
+        "Name": "supper",
+        "Concepticon_ID": "1833",
+        "Concepticon_Gloss": "DINNER (SUPPER)",
+        "Number": "79"
+      },
+      "raw": {
+        "ID": "1059",
+        "Languages": "Shexian",
+        "Gloss": "supper",
+        "GlossId": "79",
+        "Ortho": "夜饭",
+        "IPA": "ja²²fɛ²²",
+        "CogID": "67"
+      },
+      "cldfLine": 1060,
+      "rawLine": 1113
+    },
+    {
+      "id": "Shexian-80_noodles-1",
+      "language": "Shexian",
+      "han": "面",
+      "ipa": "me²²",
+      "displayIpa": "[me²²]",
+      "segments": "m e ²²",
+      "english": "noodles",
+      "glossQualification": "",
+      "concept": {
+        "ID": "80_noodles",
+        "Name": "noodles",
+        "Concepticon_ID": "973",
+        "Concepticon_Gloss": "NOODLE",
+        "Number": "80"
+      },
+      "raw": {
+        "ID": "1077",
+        "Languages": "Shexian",
+        "Gloss": "noodles",
+        "GlossId": "80",
+        "Ortho": "面",
+        "IPA": "me²²",
+        "CogID": "229"
+      },
+      "cldfLine": 1078,
+      "rawLine": 1132
+    },
+    {
+      "id": "Shexian-85_soyasauce-1",
+      "language": "Shexian",
+      "han": "酱油",
+      "ipa": "ʦja³²⁴ju⁴⁴",
+      "displayIpa": "[ʦja³²⁴ ju⁴⁴]",
+      "segments": "ts j a ³²⁴ + j u ⁴⁴",
+      "english": "soya sauce",
+      "glossQualification": "",
+      "concept": {
+        "ID": "85_soyasauce",
+        "Name": "soya sauce",
+        "Concepticon_ID": "1968",
+        "Concepticon_Gloss": "SOYA SAUCE",
+        "Number": "85"
+      },
+      "raw": {
+        "ID": "1097",
+        "Languages": "Shexian",
+        "Gloss": "soja sauce",
+        "GlossId": "85",
+        "Ortho": "酱油",
+        "IPA": "ʦja³²⁴ju⁴⁴",
+        "CogID": "279"
+      },
+      "cldfLine": 1098,
+      "rawLine": 1153
+    },
+    {
+      "id": "Shexian-86_salt-1",
+      "language": "Shexian",
+      "han": "咸盐",
+      "ipa": "xɛ⁴⁴je⁴⁴",
+      "displayIpa": "[xɛ⁴⁴ je⁴⁴]",
+      "segments": "x ɛ ⁴⁴ + j e ⁴⁴",
+      "english": "salt",
+      "glossQualification": "",
+      "concept": {
+        "ID": "86_salt",
+        "Name": "salt",
+        "Concepticon_ID": "1274",
+        "Concepticon_Gloss": "SALT",
+        "Number": "86"
+      },
+      "raw": {
+        "ID": "1118",
+        "Languages": "Shexian",
+        "Gloss": "salt",
+        "GlossId": "86",
+        "Ortho": "咸盐",
+        "IPA": "xɛ⁴⁴je⁴⁴",
+        "CogID": "936"
+      },
+      "cldfLine": 1119,
+      "rawLine": 1175
+    },
+    {
+      "id": "Shexian-87_chopsticks-1",
+      "language": "Shexian",
+      "han": "筷",
+      "ipa": "kʰwa³²⁴",
+      "displayIpa": "[kʰwa³²⁴]",
+      "segments": "kʰ w a ³²⁴",
+      "english": "chopsticks",
+      "glossQualification": "",
+      "concept": {
+        "ID": "87_chopsticks",
+        "Name": "chopsticks",
+        "Concepticon_ID": "1987",
+        "Concepticon_Gloss": "CHOPSTICKS",
+        "Number": "87"
+      },
+      "raw": {
+        "ID": "1134",
+        "Languages": "Shexian",
+        "Gloss": "chopsticks",
+        "GlossId": "87",
+        "Ortho": "筷",
+        "IPA": "kʰwa³²⁴",
+        "CogID": "477"
+      },
+      "cldfLine": 1135,
+      "rawLine": 1192
+    },
+    {
+      "id": "Shexian-88_spoon-1",
+      "language": "Shexian",
+      "han": "瓢",
+      "ipa": "pʰjɔ⁴⁴",
+      "displayIpa": "[pʰjɔ⁴⁴]",
+      "segments": "pʰ j ɔ ⁴⁴",
+      "english": "spoon",
+      "glossQualification": "",
+      "concept": {
+        "ID": "88_spoon",
+        "Name": "spoon",
+        "Concepticon_ID": "1378",
+        "Concepticon_Gloss": "SPOON",
+        "Number": "88"
+      },
+      "raw": {
+        "ID": "1157",
+        "Languages": "Shexian",
+        "Gloss": "spoon",
+        "GlossId": "88",
+        "Ortho": "瓢",
+        "IPA": "pʰjɔ⁴⁴",
+        "CogID": "41"
+      },
+      "cldfLine": 1158,
+      "rawLine": 1216
+    },
+    {
+      "id": "Shexian-89_man-1",
+      "language": "Shexian",
+      "han": "官客",
+      "ipa": "kwɛ³¹kʰɛʔ²¹",
+      "displayIpa": "[kwɛ³¹ kʰɛʔ²¹]",
+      "segments": "k w ɛ ³¹ + kʰ ɛ ʔ ²¹",
+      "english": "man",
+      "glossQualification": "",
+      "concept": {
+        "ID": "89_man",
+        "Name": "man",
+        "Concepticon_ID": "1554",
+        "Concepticon_Gloss": "MAN",
+        "Number": "89"
+      },
+      "raw": {
+        "ID": "1186",
+        "Languages": "Shexian",
+        "Gloss": "man",
+        "GlossId": "89",
+        "Ortho": "官客",
+        "IPA": "kwɛ³¹kʰɛʔ²¹",
+        "CogID": "349"
+      },
+      "cldfLine": 1187,
+      "rawLine": 1246
+    },
+    {
+      "id": "Shexian-90_woman-1",
+      "language": "Shexian",
+      "han": "堂客",
+      "ipa": "tʰa⁴⁴kʰɛʔ²¹",
+      "displayIpa": "[tʰa⁴⁴ kʰɛʔ²¹]",
+      "segments": "tʰ a ⁴⁴ + kʰ ɛ ʔ ²¹",
+      "english": "woman",
+      "glossQualification": "",
+      "concept": {
+        "ID": "90_woman",
+        "Name": "woman",
+        "Concepticon_ID": "962",
+        "Concepticon_Gloss": "WOMAN",
+        "Number": "90"
+      },
+      "raw": {
+        "ID": "1218",
+        "Languages": "Shexian",
+        "Gloss": "woman",
+        "GlossId": "90",
+        "Ortho": "堂客",
+        "IPA": "tʰa⁴⁴kʰɛʔ²¹",
+        "CogID": "642"
+      },
+      "cldfLine": 1219,
+      "rawLine": 1279
+    },
+    {
+      "id": "Shexian-91_boy-3",
+      "language": "Shexian",
+      "han": "小鬼蒂",
+      "ipa": "sjɔ³⁵kwe³⁵ti³²⁴",
+      "displayIpa": "[sjɔ³⁵ kwe³⁵ ti³²⁴]",
+      "segments": "s j ɔ ³⁵ + k w e ³⁵ + t i ³²⁴",
+      "english": "boy",
+      "glossQualification": "",
+      "concept": {
+        "ID": "91_boy",
+        "Name": "boy",
+        "Concepticon_ID": "1366",
+        "Concepticon_Gloss": "BOY",
+        "Number": "91"
+      },
+      "raw": {
+        "ID": "1243",
+        "Languages": "Shexian",
+        "Gloss": "boy",
+        "GlossId": "91",
+        "Ortho": "小鬼蒂",
+        "IPA": "sjɔ³⁵kwe³⁵ti³²⁴",
+        "CogID": "90"
+      },
+      "cldfLine": 1244,
+      "rawLine": 1305
+    },
+    {
+      "id": "Shexian-2315_cook-2",
+      "language": "Shexian",
+      "han": "伙头师傅",
+      "ipa": "xo³⁵tʰju⁴⁴sɿ³¹fu³⁵",
+      "displayIpa": "[xo³⁵ tʰju⁴⁴ sɿ³¹ fu³⁵]",
+      "segments": "x o ³⁵ + tʰ j u ⁴⁴ + s ɿ ³¹ + f u ³⁵",
+      "english": "cook",
+      "glossQualification": "",
+      "concept": {
+        "ID": "2315_cook",
+        "Name": "cook",
+        "Concepticon_ID": "2315",
+        "Concepticon_Gloss": "COOK (PERSON)",
+        "Number": "2315"
+      },
+      "raw": {
+        "ID": "1346",
+        "Languages": "Shexian",
+        "Gloss": "cook",
+        "GlossId": "95",
+        "Ortho": "伙头师傅",
+        "IPA": "xo³⁵tʰju⁴⁴sɿ³¹fu³⁵",
+        "CogID": "256"
+      },
+      "cldfLine": 1347,
+      "rawLine": 1412
+    },
+    {
+      "id": "Shexian-105_i-1",
+      "language": "Shexian",
+      "han": "卬",
+      "ipa": "a³¹",
+      "displayIpa": "[a³¹]",
+      "segments": "a ³¹",
+      "english": "I",
+      "glossQualification": "",
+      "concept": {
+        "ID": "105_i",
+        "Name": "I",
+        "Concepticon_ID": "1209",
+        "Concepticon_Gloss": "I",
+        "Number": "105"
+      },
+      "raw": {
+        "ID": "1528",
+        "Languages": "Shexian",
+        "Gloss": "I",
+        "GlossId": "105",
+        "Ortho": "卬",
+        "IPA": "a³¹",
+        "CogID": "423"
+      },
+      "cldfLine": 1529,
+      "rawLine": 1601
+    },
+    {
+      "id": "Shexian-106_thou-1",
+      "language": "Shexian",
+      "han": "尔",
+      "ipa": "n̩³⁵",
+      "displayIpa": "[n̩³⁵]",
+      "segments": "n̩ ³⁵",
+      "english": "you (singular)",
+      "glossQualification": "Modern English wording for the source singular-pronoun heading thou.",
+      "concept": {
+        "ID": "106_thou",
+        "Name": "thou",
+        "Concepticon_ID": "1215",
+        "Concepticon_Gloss": "THOU",
+        "Number": "106"
+      },
+      "raw": {
+        "ID": "1544",
+        "Languages": "Shexian",
+        "Gloss": "thou",
+        "GlossId": "106",
+        "Ortho": "尔",
+        "IPA": "n̩³⁵",
+        "CogID": "117"
+      },
+      "cldfLine": 1545,
+      "rawLine": 1618
+    },
+    {
+      "id": "Shexian-112_self-1",
+      "language": "Shexian",
+      "han": "自家",
+      "ipa": "ʦʰɿ²²ka³¹",
+      "displayIpa": "[ʦʰɿ²² ka³¹]",
+      "segments": "tsʰ ɿ ²² + k a ³¹",
+      "english": "self",
+      "glossQualification": "",
+      "concept": {
+        "ID": "112_self",
+        "Name": "self",
+        "Concepticon_ID": "1993",
+        "Concepticon_Gloss": "SELF",
+        "Number": "112"
+      },
+      "raw": {
+        "ID": "1634",
+        "Languages": "Shexian",
+        "Gloss": "self",
+        "GlossId": "112",
+        "Ortho": "自家",
+        "IPA": "ʦʰɿ²²ka³¹",
+        "CogID": "727"
+      },
+      "cldfLine": 1635,
+      "rawLine": 1713
+    },
+    {
+      "id": "Shexian-117_where-2",
+      "language": "Shexian",
+      "han": "么唉落地",
+      "ipa": "mɛ⁴⁴ɛ²²lɔ²²tʰi²²",
+      "displayIpa": "[mɛ⁴⁴ ɛ²² lɔ²² tʰi²²]",
+      "segments": "m ɛ ⁴⁴ + ɛ ²² + l ɔ ²² + tʰ i ²²",
+      "english": "where",
+      "glossQualification": "",
+      "concept": {
+        "ID": "117_where",
+        "Name": "where",
+        "Concepticon_ID": "1237",
+        "Concepticon_Gloss": "WHERE",
+        "Number": "117"
+      },
+      "raw": {
+        "ID": "1741",
+        "Languages": "Shexian",
+        "Gloss": "where",
+        "GlossId": "117",
+        "Ortho": "么唉落地",
+        "IPA": "mɛ⁴⁴ɛ²²lɔ²²tʰi²²",
+        "CogID": "891"
+      },
+      "cldfLine": 1742,
+      "rawLine": 1825
+    },
+    {
+      "id": "Shexian-121_how-1",
+      "language": "Shexian",
+      "han": "何样",
+      "ipa": "xo⁴⁴ja²²",
+      "displayIpa": "[xo⁴⁴ ja²²]",
+      "segments": "x o ⁴⁴ + j a ²²",
+      "english": "how",
+      "glossQualification": "",
+      "concept": {
+        "ID": "121_how",
+        "Name": "how",
+        "Concepticon_ID": "1239",
+        "Concepticon_Gloss": "HOW",
+        "Number": "121"
+      },
+      "raw": {
+        "ID": "1810",
+        "Languages": "Shexian",
+        "Gloss": "how",
+        "GlossId": "121",
+        "Ortho": "何样",
+        "IPA": "xo⁴⁴ja²²",
+        "CogID": "1027"
+      },
+      "cldfLine": 1811,
+      "rawLine": 1898
+    },
+    {
+      "id": "Shexian-130_on-1",
+      "language": "Shexian",
+      "han": "上头",
+      "ipa": "ɕja²²tʰju⁴⁴",
+      "displayIpa": "[ɕja²² tʰju⁴⁴]",
+      "segments": "ɕ j a ²² + tʰ j u ⁴⁴",
+      "english": "on",
+      "glossQualification": "",
+      "concept": {
+        "ID": "130_on",
+        "Name": "on",
+        "Concepticon_ID": "1741",
+        "Concepticon_Gloss": "ABOVE",
+        "Number": "130"
+      },
+      "raw": {
+        "ID": "1973",
+        "Languages": "Shexian",
+        "Gloss": "on",
+        "GlossId": "130",
+        "Ortho": "上头",
+        "IPA": "ɕja²²tʰju⁴⁴",
+        "CogID": "210"
+      },
+      "cldfLine": 1974,
+      "rawLine": 2070
+    },
+    {
+      "id": "Shexian-131_under-1",
+      "language": "Shexian",
+      "han": "下头",
+      "ipa": "xa³⁵tʰju⁴⁴",
+      "displayIpa": "[xa³⁵ tʰju⁴⁴]",
+      "segments": "x a ³⁵ + tʰ j u ⁴⁴",
+      "english": "under",
+      "glossQualification": "",
+      "concept": {
+        "ID": "131_under",
+        "Name": "under",
+        "Concepticon_ID": "1485",
+        "Concepticon_Gloss": "BELOW OR UNDER",
+        "Number": "131"
+      },
+      "raw": {
+        "ID": "2004",
+        "Languages": "Shexian",
+        "Gloss": "under",
+        "GlossId": "131",
+        "Ortho": "下头",
+        "IPA": "xa³⁵tʰju⁴⁴",
+        "CogID": "611"
+      },
+      "cldfLine": 2005,
+      "rawLine": 2102
+    },
+    {
+      "id": "Shexian-132_left-1",
+      "language": "Shexian",
+      "han": "反边",
+      "ipa": "fɛ³⁵pe³¹",
+      "displayIpa": "[fɛ³⁵ pe³¹]",
+      "segments": "f ɛ ³⁵ + p e ³¹",
+      "english": "left",
+      "glossQualification": "",
+      "concept": {
+        "ID": "132_left",
+        "Name": "left",
+        "Concepticon_ID": "244",
+        "Concepticon_Gloss": "LEFT",
+        "Number": "132"
+      },
+      "raw": {
+        "ID": "2027",
+        "Languages": "Shexian",
+        "Gloss": "left",
+        "GlossId": "132",
+        "Ortho": "反边",
+        "IPA": "fɛ³⁵pe³¹",
+        "CogID": "463"
+      },
+      "cldfLine": 2028,
+      "rawLine": 2126
+    },
+    {
+      "id": "Shexian-133_right-2",
+      "language": "Shexian",
+      "han": "小边",
+      "ipa": "sjɔ³⁵pe³¹",
+      "displayIpa": "[sjɔ³⁵ pe³¹]",
+      "segments": "s j ɔ ³⁵ + p e ³¹",
+      "english": "right",
+      "glossQualification": "",
+      "concept": {
+        "ID": "133_right",
+        "Name": "right",
+        "Concepticon_ID": "1019",
+        "Concepticon_Gloss": "RIGHT",
+        "Number": "133"
+      },
+      "raw": {
+        "ID": "2051",
+        "Languages": "Shexian",
+        "Gloss": "right",
+        "GlossId": "133",
+        "Ortho": "小边",
+        "IPA": "sjɔ³⁵pe³¹",
+        "CogID": "172"
+      },
+      "cldfLine": 2052,
+      "rawLine": 2151
+    },
+    {
+      "id": "Shexian-135_inside-1",
+      "language": "Shexian",
+      "han": "里头",
+      "ipa": "li³⁵tʰju⁴⁴",
+      "displayIpa": "[li³⁵ tʰju⁴⁴]",
+      "segments": "l i ³⁵ + tʰ j u ⁴⁴",
+      "english": "inside",
+      "glossQualification": "",
+      "concept": {
+        "ID": "135_inside",
+        "Name": "inside",
+        "Concepticon_ID": "1606",
+        "Concepticon_Gloss": "INSIDE",
+        "Number": "135"
+      },
+      "raw": {
+        "ID": "2100",
+        "Languages": "Shexian",
+        "Gloss": "inside",
+        "GlossId": "135",
+        "Ortho": "里头",
+        "IPA": "li³⁵tʰju⁴⁴",
+        "CogID": "689"
+      },
+      "cldfLine": 2101,
+      "rawLine": 2202
+    },
+    {
+      "id": "Shexian-136_outside-1",
+      "language": "Shexian",
+      "han": "外头",
+      "ipa": "wɛ²²tʰju⁴⁴",
+      "displayIpa": "[wɛ²² tʰju⁴⁴]",
+      "segments": "w ɛ ²² + tʰ j u ⁴⁴",
+      "english": "outside",
+      "glossQualification": "",
+      "concept": {
+        "ID": "136_outside",
+        "Name": "outside",
+        "Concepticon_ID": "762",
+        "Concepticon_Gloss": "OUTSIDE",
+        "Number": "136"
+      },
+      "raw": {
+        "ID": "2125",
+        "Languages": "Shexian",
+        "Gloss": "outside",
+        "GlossId": "136",
+        "Ortho": "外头",
+        "IPA": "wɛ²²tʰju⁴⁴",
+        "CogID": "283"
+      },
+      "cldfLine": 2126,
+      "rawLine": 2228
+    },
+    {
+      "id": "Shexian-137_sweet-1",
+      "language": "Shexian",
+      "han": "甜",
+      "ipa": "tʰe⁴⁴",
+      "displayIpa": "[tʰe⁴⁴]",
+      "segments": "tʰ e ⁴⁴",
+      "english": "sweet",
+      "glossQualification": "",
+      "concept": {
+        "ID": "137_sweet",
+        "Name": "sweet",
+        "Concepticon_ID": "717",
+        "Concepticon_Gloss": "SWEET",
+        "Number": "137"
+      },
+      "raw": {
+        "ID": "2143",
+        "Languages": "Shexian",
+        "Gloss": "sweet",
+        "GlossId": "137",
+        "Ortho": "甜",
+        "IPA": "tʰe⁴⁴",
+        "CogID": "1177"
+      },
+      "cldfLine": 2144,
+      "rawLine": 2247
+    },
+    {
+      "id": "Shexian-138_sour-1",
+      "language": "Shexian",
+      "han": "酸",
+      "ipa": "so³¹",
+      "displayIpa": "[so³¹]",
+      "segments": "s o ³¹",
+      "english": "sour",
+      "glossQualification": "",
+      "concept": {
+        "ID": "138_sour",
+        "Name": "sour",
+        "Concepticon_ID": "1906",
+        "Concepticon_Gloss": "SOUR",
+        "Number": "138"
+      },
+      "raw": {
+        "ID": "2158",
+        "Languages": "Shexian",
+        "Gloss": "sour",
+        "GlossId": "138",
+        "Ortho": "酸",
+        "IPA": "so³¹",
+        "CogID": "274"
+      },
+      "cldfLine": 2159,
+      "rawLine": 2263
+    },
+    {
+      "id": "Shexian-139_salty-1",
+      "language": "Shexian",
+      "han": "咸",
+      "ipa": "xɛ⁴⁴",
+      "displayIpa": "[xɛ⁴⁴]",
+      "segments": "x ɛ ⁴⁴",
+      "english": "salty",
+      "glossQualification": "",
+      "concept": {
+        "ID": "139_salty",
+        "Name": "salty",
+        "Concepticon_ID": "1091",
+        "Concepticon_Gloss": "SALTY",
+        "Number": "139"
+      },
+      "raw": {
+        "ID": "2173",
+        "Languages": "Shexian",
+        "Gloss": "salty",
+        "GlossId": "139",
+        "Ortho": "咸",
+        "IPA": "xɛ⁴⁴",
+        "CogID": "38"
+      },
+      "cldfLine": 2174,
+      "rawLine": 2279
+    },
+    {
+      "id": "Shexian-141_fat-1",
+      "language": "Shexian",
+      "han": "壮",
+      "ipa": "ʦo³²⁴",
+      "displayIpa": "[ʦo³²⁴]",
+      "segments": "ts o ³²⁴",
+      "english": "fat",
+      "glossQualification": "",
+      "concept": {
+        "ID": "141_fat",
+        "Name": "fat",
+        "Concepticon_ID": "1279",
+        "Concepticon_Gloss": "FAT (OBESE)",
+        "Number": "141"
+      },
+      "raw": {
+        "ID": "2206",
+        "Languages": "Shexian",
+        "Gloss": "fat",
+        "GlossId": "141",
+        "Ortho": "壮",
+        "IPA": "ʦo³²⁴",
+        "CogID": "1143"
+      },
+      "cldfLine": 2207,
+      "rawLine": 2314
+    },
+    {
+      "id": "Shexian-142_thin-1",
+      "language": "Shexian",
+      "han": "瘦",
+      "ipa": "ɕju³²⁴",
+      "displayIpa": "[ɕju³²⁴]",
+      "segments": "ɕ j u ³²⁴",
+      "english": "thin",
+      "glossQualification": "",
+      "concept": {
+        "ID": "142_thin",
+        "Name": "thin",
+        "Concepticon_ID": "1400",
+        "Concepticon_Gloss": "THIN (SLIM)",
+        "Number": "142"
+      },
+      "raw": {
+        "ID": "2223",
+        "Languages": "Shexian",
+        "Gloss": "thin",
+        "GlossId": "142",
+        "Ortho": "瘦",
+        "IPA": "ɕju³²⁴",
+        "CogID": "683"
+      },
+      "cldfLine": 2224,
+      "rawLine": 2332
+    },
+    {
+      "id": "Shexian-143_cold-1",
+      "language": "Shexian",
+      "han": "冷",
+      "ipa": "lɛ³⁵",
+      "displayIpa": "[lɛ³⁵]",
+      "segments": "l ɛ ³⁵",
+      "english": "cold",
+      "glossQualification": "",
+      "concept": {
+        "ID": "143_cold",
+        "Name": "cold",
+        "Concepticon_ID": "1287",
+        "Concepticon_Gloss": "COLD",
+        "Number": "143"
+      },
+      "raw": {
+        "ID": "2240",
+        "Languages": "Shexian",
+        "Gloss": "cold",
+        "GlossId": "143",
+        "Ortho": "冷",
+        "IPA": "lɛ³⁵",
+        "CogID": "177"
+      },
+      "cldfLine": 2241,
+      "rawLine": 2350
+    },
+    {
+      "id": "Shexian-144_hot-1",
+      "language": "Shexian",
+      "han": "热",
+      "ipa": "ne²²",
+      "displayIpa": "[ne²²]",
+      "segments": "n e ²²",
+      "english": "hot",
+      "glossQualification": "",
+      "concept": {
+        "ID": "144_hot",
+        "Name": "hot",
+        "Concepticon_ID": "1286",
+        "Concepticon_Gloss": "HOT",
+        "Number": "144"
+      },
+      "raw": {
+        "ID": "2258",
+        "Languages": "Shexian",
+        "Gloss": "hot",
+        "GlossId": "144",
+        "Ortho": "热",
+        "IPA": "ne²²",
+        "CogID": "834"
+      },
+      "cldfLine": 2259,
+      "rawLine": 2369
+    },
+    {
+      "id": "Shexian-145_wellsmelling-1",
+      "language": "Shexian",
+      "han": "香",
+      "ipa": "ɕja³¹",
+      "displayIpa": "[ɕja³¹]",
+      "segments": "ɕ j a ³¹",
+      "english": "well smelling",
+      "glossQualification": "",
+      "concept": {
+        "ID": "145_wellsmelling",
+        "Name": "well smelling",
+        "Concepticon_ID": "376",
+        "Concepticon_Gloss": "FRAGRANT",
+        "Number": "145"
+      },
+      "raw": {
+        "ID": "2276",
+        "Languages": "Shexian",
+        "Gloss": "well smelling",
+        "GlossId": "145",
+        "Ortho": "香",
+        "IPA": "ɕja³¹",
+        "CogID": "1092"
+      },
+      "cldfLine": 2277,
+      "rawLine": 2388
+    },
+    {
+      "id": "Shexian-146_stinky-1",
+      "language": "Shexian",
+      "han": "臭",
+      "ipa": "ʨʰju³²⁴",
+      "displayIpa": "[ʨʰju³²⁴]",
+      "segments": "tɕʰ j u ³²⁴",
+      "english": "stinky",
+      "glossQualification": "",
+      "concept": {
+        "ID": "146_stinky",
+        "Name": "stinky",
+        "Concepticon_ID": "42",
+        "Concepticon_Gloss": "STINKING",
+        "Number": "146"
+      },
+      "raw": {
+        "ID": "2292",
+        "Languages": "Shexian",
+        "Gloss": "stinky",
+        "GlossId": "146",
+        "Ortho": "臭",
+        "IPA": "ʨʰju³²⁴",
+        "CogID": "133"
+      },
+      "cldfLine": 2293,
+      "rawLine": 2405
+    },
+    {
+      "id": "Shexian-147_thick-1",
+      "language": "Shexian",
+      "han": "粗",
+      "ipa": "ʦʰu³¹",
+      "displayIpa": "[ʦʰu³¹]",
+      "segments": "tsʰ u ³¹",
+      "english": "thick",
+      "glossQualification": "",
+      "concept": {
+        "ID": "147_thick",
+        "Name": "thick",
+        "Concepticon_ID": "1244",
+        "Concepticon_Gloss": "THICK",
+        "Number": "147"
+      },
+      "raw": {
+        "ID": "2305",
+        "Languages": "Shexian",
+        "Gloss": "thick",
+        "GlossId": "147",
+        "Ortho": "粗",
+        "IPA": "ʦʰu³¹",
+        "CogID": "1146"
+      },
+      "cldfLine": 2306,
+      "rawLine": 2419
+    },
+    {
+      "id": "Shexian-149_long-1",
+      "language": "Shexian",
+      "han": "长",
+      "ipa": "ʨʰja⁴⁴",
+      "displayIpa": "[ʨʰja⁴⁴]",
+      "segments": "tɕʰ j a ⁴⁴",
+      "english": "long",
+      "glossQualification": "",
+      "concept": {
+        "ID": "149_long",
+        "Name": "long",
+        "Concepticon_ID": "1203",
+        "Concepticon_Gloss": "LONG",
+        "Number": "149"
+      },
+      "raw": {
+        "ID": "2334",
+        "Languages": "Shexian",
+        "Gloss": "long",
+        "GlossId": "149",
+        "Ortho": "长",
+        "IPA": "ʨʰja⁴⁴",
+        "CogID": "552"
+      },
+      "cldfLine": 2335,
+      "rawLine": 2450
+    },
+    {
+      "id": "Shexian-150_short-1",
+      "language": "Shexian",
+      "han": "短",
+      "ipa": "to³⁵",
+      "displayIpa": "[to³⁵]",
+      "segments": "t o ³⁵",
+      "english": "short",
+      "glossQualification": "",
+      "concept": {
+        "ID": "150_short",
+        "Name": "short",
+        "Concepticon_ID": "1645",
+        "Concepticon_Gloss": "SHORT",
+        "Number": "150"
+      },
+      "raw": {
+        "ID": "2350",
+        "Languages": "Shexian",
+        "Gloss": "short",
+        "GlossId": "150",
+        "Ortho": "短",
+        "IPA": "to³⁵",
+        "CogID": "868"
+      },
+      "cldfLine": 2351,
+      "rawLine": 2467
+    },
+    {
+      "id": "Shexian-151_dirty-1",
+      "language": "Shexian",
+      "han": "邋遢",
+      "ipa": "la²¹tʰaʔ²¹",
+      "displayIpa": "[la²¹ tʰaʔ²¹]",
+      "segments": "l a ²¹ + tʰ a ʔ ²¹",
+      "english": "dirty",
+      "glossQualification": "",
+      "concept": {
+        "ID": "151_dirty",
+        "Name": "dirty",
+        "Concepticon_ID": "1230",
+        "Concepticon_Gloss": "DIRTY",
+        "Number": "151"
+      },
+      "raw": {
+        "ID": "2378",
+        "Languages": "Shexian",
+        "Gloss": "dirty",
+        "GlossId": "151",
+        "Ortho": "邋遢",
+        "IPA": "la²¹tʰaʔ²¹",
+        "CogID": "422"
+      },
+      "cldfLine": 2379,
+      "rawLine": 2496
+    },
+    {
+      "id": "Shexian-153_cheap-1",
+      "language": "Shexian",
+      "han": "便宜",
+      "ipa": "pʰe⁴⁴ni⁴⁴",
+      "displayIpa": "[pʰe⁴⁴ ni⁴⁴]",
+      "segments": "pʰ e ⁴⁴ + n i ⁴⁴",
+      "english": "cheap",
+      "glossQualification": "",
+      "concept": {
+        "ID": "153_cheap",
+        "Name": "cheap",
+        "Concepticon_ID": "1887",
+        "Concepticon_Gloss": "CHEAP",
+        "Number": "153"
+      },
+      "raw": {
+        "ID": "2415",
+        "Languages": "Shexian",
+        "Gloss": "cheap",
+        "GlossId": "153",
+        "Ortho": "便宜",
+        "IPA": "pʰe⁴⁴ni⁴⁴",
+        "CogID": "73"
+      },
+      "cldfLine": 2416,
+      "rawLine": 2535
+    },
+    {
+      "id": "Shexian-156_justright-2",
+      "language": "Shexian",
+      "han": "刚好",
+      "ipa": "ʨja³¹xɔ³⁵",
+      "displayIpa": "[ʨja³¹ xɔ³⁵]",
+      "segments": "tɕ j a ³¹ + x ɔ ³⁵",
+      "english": "just right",
+      "glossQualification": "",
+      "concept": {
+        "ID": "156_justright",
+        "Name": "just right",
+        "Concepticon_ID": "1725",
+        "Concepticon_Gloss": "CORRECT (RIGHT)",
+        "Number": "156"
+      },
+      "raw": {
+        "ID": "2439",
+        "Languages": "Shexian",
+        "Gloss": "just right",
+        "GlossId": "156",
+        "Ortho": "刚好",
+        "IPA": "ʨja³¹xɔ³⁵",
+        "CogID": "733"
+      },
+      "cldfLine": 2440,
+      "rawLine": 2560
+    },
+    {
+      "id": "Shexian-157_and-1",
+      "language": "Shexian",
+      "han": "搭",
+      "ipa": "taʔ²¹",
+      "displayIpa": "[taʔ²¹]",
+      "segments": "t a ʔ ²¹",
+      "english": "and",
+      "glossQualification": "",
+      "concept": {
+        "ID": "157_and",
+        "Name": "and",
+        "Concepticon_ID": "1577",
+        "Concepticon_Gloss": "AND",
+        "Number": "157"
+      },
+      "raw": {
+        "ID": "2468",
+        "Languages": "Shexian",
+        "Gloss": "and",
+        "GlossId": "157",
+        "Ortho": "搭",
+        "IPA": "taʔ²¹",
+        "CogID": "385"
+      },
+      "cldfLine": 2469,
+      "rawLine": 2590
+    },
+    {
+      "id": "Shexian-158_only-1",
+      "language": "Shexian",
+      "han": "只",
+      "ipa": "ʨiʔ²¹",
+      "displayIpa": "[ʨiʔ²¹]",
+      "segments": "tɕ i ʔ ²¹",
+      "english": "only",
+      "glossQualification": "",
+      "concept": {
+        "ID": "158_only",
+        "Name": "only",
+        "Concepticon_ID": "1580",
+        "Concepticon_Gloss": "ONLY",
+        "Number": "158"
+      },
+      "raw": {
+        "ID": "2490",
+        "Languages": "Shexian",
+        "Gloss": "only",
+        "GlossId": "158",
+        "Ortho": "只",
+        "IPA": "ʨiʔ²¹",
+        "CogID": "597"
+      },
+      "cldfLine": 2491,
+      "rawLine": 2613
+    },
+    {
+      "id": "Shexian-162_onpurpose-1",
+      "language": "Shexian",
+      "han": "有意",
+      "ipa": "ju³⁵i³²⁴",
+      "displayIpa": "[ju³⁵ i³²⁴]",
+      "segments": "j u ³⁵ + i ³²⁴",
+      "english": "on purpose",
+      "glossQualification": "",
+      "concept": {
+        "ID": "162_onpurpose",
+        "Name": "on purpose",
+        "Concepticon_ID": "1031",
+        "Concepticon_Gloss": "ON PURPOSE",
+        "Number": "162"
+      },
+      "raw": {
+        "ID": "2569",
+        "Languages": "Shexian",
+        "Gloss": "on purpose",
+        "GlossId": "162",
+        "Ortho": "有意",
+        "IPA": "ju³⁵i³²⁴",
+        "CogID": "808"
+      },
+      "cldfLine": 2570,
+      "rawLine": 2696
+    },
+    {
+      "id": "Shexian-163_one-1",
+      "language": "Shexian",
+      "han": "一",
+      "ipa": "iʔ²¹",
+      "displayIpa": "[iʔ²¹]",
+      "segments": "i ʔ ²¹",
+      "english": "one",
+      "glossQualification": "",
+      "concept": {
+        "ID": "163_one",
+        "Name": "one",
+        "Concepticon_ID": "1493",
+        "Concepticon_Gloss": "ONE",
+        "Number": "163"
+      },
+      "raw": {
+        "ID": "2587",
+        "Languages": "Shexian",
+        "Gloss": "one",
+        "GlossId": "163",
+        "Ortho": "一",
+        "IPA": "iʔ²¹",
+        "CogID": "637"
+      },
+      "cldfLine": 2588,
+      "rawLine": 2715
+    },
+    {
+      "id": "Shexian-165_three-1",
+      "language": "Shexian",
+      "han": "三",
+      "ipa": "sɛ³¹",
+      "displayIpa": "[sɛ³¹]",
+      "segments": "s ɛ ³¹",
+      "english": "three",
+      "glossQualification": "",
+      "concept": {
+        "ID": "165_three",
+        "Name": "three",
+        "Concepticon_ID": "492",
+        "Concepticon_Gloss": "THREE",
+        "Number": "165"
+      },
+      "raw": {
+        "ID": "2618",
+        "Languages": "Shexian",
+        "Gloss": "three",
+        "GlossId": "165",
+        "Ortho": "三",
+        "IPA": "sɛ³¹",
+        "CogID": "196"
+      },
+      "cldfLine": 2619,
+      "rawLine": 2748
+    },
+    {
+      "id": "Shexian-166_four-1",
+      "language": "Shexian",
+      "han": "四",
+      "ipa": "sɿ³²⁴",
+      "displayIpa": "[sɿ³²⁴]",
+      "segments": "s ɿ ³²⁴",
+      "english": "four",
+      "glossQualification": "",
+      "concept": {
+        "ID": "166_four",
+        "Name": "four",
+        "Concepticon_ID": "1500",
+        "Concepticon_Gloss": "FOUR",
+        "Number": "166"
+      },
+      "raw": {
+        "ID": "2633",
+        "Languages": "Shexian",
+        "Gloss": "four",
+        "GlossId": "166",
+        "Ortho": "四",
+        "IPA": "sɿ³²⁴",
+        "CogID": "1156"
+      },
+      "cldfLine": 2634,
+      "rawLine": 2764
+    },
+    {
+      "id": "Shexian-167_five-1",
+      "language": "Shexian",
+      "han": "五",
+      "ipa": "u³⁵",
+      "displayIpa": "[u³⁵]",
+      "segments": "u ³⁵",
+      "english": "five",
+      "glossQualification": "",
+      "concept": {
+        "ID": "167_five",
+        "Name": "five",
+        "Concepticon_ID": "493",
+        "Concepticon_Gloss": "FIVE",
+        "Number": "167"
+      },
+      "raw": {
+        "ID": "2648",
+        "Languages": "Shexian",
+        "Gloss": "five",
+        "GlossId": "167",
+        "Ortho": "五",
+        "IPA": "u³⁵",
+        "CogID": "193"
+      },
+      "cldfLine": 2649,
+      "rawLine": 2780
+    }
+  ]
+}

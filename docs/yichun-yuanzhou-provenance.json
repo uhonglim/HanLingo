@@ -1,0 +1,248 @@
+{
+  "status": "Independent source review passed; bounded factual selection for HanLingo",
+  "source": {
+    "author": "Xuping Li",
+    "year": 2018,
+    "title": "A Grammar of Gan Chinese: The Yichun Language",
+    "doi": "10.1515/9781501507328",
+    "officialUrl": "https://doi.org/10.1515/9781501507328",
+    "officialPreview": "https://api.pageplace.de/preview/DT0400.9781501507328_A33481764/preview-9781501507328_A33481764.pdf",
+    "accessCopy": "https://www.asau.ru/files/pdf/1722389.pdf",
+    "copyright": "©2018 Walter de Gruyter, Inc., Boston/Berlin",
+    "openLicense": null,
+    "reusePlan": "Bounded16 factual pronunciation/meaning records with attribution. No bulk monograph reproduction, extended prose, scan redistribution, photo reuse, or open-licence claim.",
+    "sha256": "493eaf0a64f677971211f1d27ad2395ff9679db45d5304cf906ad2355757d290"
+  },
+  "scope": {
+    "group": "Gan",
+    "branch": "Yi–Liu; explicitly p.6",
+    "locality": "Central–southern Yuanzhou variety of Yichun; explicitly pp.9–10",
+    "mainConsultant": "Rao Xing, native speaker and retired local university teacher; acknowledgements",
+    "date": "Published2018; project2009–2013, examples checked with additional local consultant fromSeptember2016; no single collection date assumed.",
+    "existingAtlasCandidate": "gan-county-360902 (Yuanzhou District, broader county-distribution reference)",
+    "anchorDecision": "Reuse gan-county-360902, the existing Yuanzhou District reference. Every word labels the narrower central–southern Yuanzhou study; no new point or consultant address is inferred."
+  },
+  "phonetics": {
+    "toneKey": "Printed p.18: Chao five-level contours34,44,42,213,5.",
+    "enteringToneConvention": "Printed p.19 explicitly omits entering-tone5 on stop-final forms throughout book; none of the selected16 requires a restored tone.",
+    "normalization": [
+      "h aspiration represented by modifierʰ; in tsʰ the h follows the whole affricate.",
+      "Sourceȵ retained. Source vowels includingœ andy retained.",
+      "Within-compound spaces inserted for syllable readability; pitch digits rendered superscript.",
+      "Source orthography retained, including native lexical compounds."
+    ]
+  },
+  "records": [
+    {
+      "id": "li2018-yichun-elder-brother",
+      "han": "老兄",
+      "english": "elder brother",
+      "ipa": "[lau⁴² ɕiaŋ³⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 30,
+      "pdfPage": 49,
+      "example": "14b",
+      "note": "Kinship form with the respectful/familiar prefix 老; source discusses its use on p.29."
+    },
+    {
+      "id": "li2018-yichun-younger-brother",
+      "han": "老弟",
+      "english": "younger brother",
+      "ipa": "[lau⁴² tʰi²¹³]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 30,
+      "pdfPage": 49,
+      "example": "14c",
+      "note": "Kinship form with the respectful/familiar prefix 老; no sandhi value has been supplied or substituted."
+    },
+    {
+      "id": "li2018-yichun-elder-male-cousin",
+      "han": "表哥",
+      "english": "elder male cousin",
+      "ipa": "[piɛu⁴² ko³⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 31,
+      "pdfPage": 50,
+      "example": "17a",
+      "note": "The source defines the 表 relationship through maternal relatives or the father’s sisters, pp.30–31."
+    },
+    {
+      "id": "li2018-yichun-younger-male-cousin",
+      "han": "表弟",
+      "english": "younger male cousin",
+      "ipa": "[piɛu⁴² tʰi²¹³]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 31,
+      "pdfPage": 50,
+      "example": "17c",
+      "note": "Younger male cousin within the source’s 表 kinship category."
+    },
+    {
+      "id": "li2018-yichun-younger-female-cousin",
+      "han": "表妹",
+      "english": "younger female cousin",
+      "ipa": "[piɛu⁴² mœ⁴⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 31,
+      "pdfPage": 50,
+      "example": "17d",
+      "note": "Younger female cousin within the source’s 表 kinship category."
+    },
+    {
+      "id": "li2018-yichun-kerosene",
+      "han": "洋油",
+      "english": "kerosene",
+      "ipa": "[ioŋ⁴⁴ iu⁴⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 31,
+      "pdfPage": 50,
+      "example": "19a",
+      "note": "The source gives this lexical meaning; do not broaden it to every kind of oil."
+    },
+    {
+      "id": "li2018-yichun-cloth",
+      "han": "洋布",
+      "english": "cloth in general",
+      "ipa": "[ioŋ⁴⁴ pu⁴⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 31,
+      "pdfPage": 50,
+      "example": "19b",
+      "note": "The full compound is explicitly glossed as cloth in general, despite its literal foreign-cloth structure."
+    },
+    {
+      "id": "li2018-yichun-tree",
+      "han": "树",
+      "english": "tree",
+      "ipa": "[tɕʰy²¹³]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 39,
+      "pdfPage": 58,
+      "example": "35a",
+      "note": "The complete unsuffixed noun, not the tone-changed diminutive in 35a-prime."
+    },
+    {
+      "id": "li2018-yichun-car",
+      "han": "车",
+      "english": "car",
+      "ipa": "[tɕʰia³⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 39,
+      "pdfPage": 58,
+      "example": "35b",
+      "note": "The source contrasts real cars with the suffixed toy-car noun; no suffix is dropped from an otherwise incomplete form."
+    },
+    {
+      "id": "li2018-yichun-knife",
+      "han": "刀",
+      "english": "knife",
+      "ipa": "[tau³⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 39,
+      "pdfPage": 58,
+      "example": "35c",
+      "note": "The full unsuffixed noun is separately given."
+    },
+    {
+      "id": "li2018-yichun-drizzle",
+      "han": "迷毛雨",
+      "english": "drizzle",
+      "ipa": "[mi⁴⁴ mau⁴⁴ y⁴²]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 39,
+      "pdfPage": 58,
+      "example": "36c",
+      "note": "The source marks the final diminutive suffix optional in both Han and IPA; this is the explicitly permitted complete bare compound."
+    },
+    {
+      "id": "li2018-yichun-apple",
+      "han": "苹果",
+      "english": "apple",
+      "ipa": "[pʰin⁴⁴ kuo⁴²]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 40,
+      "pdfPage": 59,
+      "example": "37a",
+      "note": "Whole noun in a sentence about three apples; retains the source example pronunciation."
+    },
+    {
+      "id": "li2018-yichun-vegetable",
+      "han": "菜",
+      "english": "vegetable",
+      "ipa": "[tsʰœ⁴⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 40,
+      "pdfPage": 59,
+      "example": "37b",
+      "note": "Whole noun in a phrase about a handful of vegetables; retains the source example pronunciation."
+    },
+    {
+      "id": "li2018-yichun-i",
+      "han": "我",
+      "english": "I; me",
+      "ipa": "[ŋo³⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 43,
+      "pdfPage": 62,
+      "example": "Table4-1 singular; section4.1",
+      "note": "First-person singular form; plural suffixes whose tone is not stated are not added."
+    },
+    {
+      "id": "li2018-yichun-you",
+      "han": "你",
+      "english": "you — singular",
+      "ipa": "[ȵi³⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 43,
+      "pdfPage": 62,
+      "example": "Table4-1 singular; section4.1",
+      "note": "Preserves the source’s alveolo-palatal nasal symbol ȵ rather than silently converting it to ɲ."
+    },
+    {
+      "id": "li2018-yichun-third-person",
+      "han": "渠",
+      "english": "third-person singular pronoun",
+      "ipa": "[kiɛ³⁴]",
+      "learningKind": "word",
+      "writingStatus": "attested",
+      "printedPage": 43,
+      "pdfPage": 62,
+      "example": "Table4-1 singular; section4.1",
+      "note": "The source identifies person and number; this selection adds no unsupported gender restriction."
+    }
+  ],
+  "held": [
+    {
+      "form": "表姐",
+      "reason": "42→33 source sandhi chain; no simplification into an invented citation/surface reading."
+    },
+    {
+      "form": "洋火",
+      "reason": "Tone-change chain on first syllable and no printed tone on second."
+    },
+    {
+      "form": "Plural pronouns",
+      "reason": "Suffixli has no printed tone; no invented suffix contour."
+    },
+    {
+      "form": "树仔",
+      "reason": "Different stem contour21 and suffix entering tone convention; not used to replace separately supplied tree213."
+    }
+  ],
+  "independentReview": "Second reader visually checked all16 source Han, IPA, gloss, scope and tone conventions against rendered primary pages. No transcription holds in the selected16."
+}

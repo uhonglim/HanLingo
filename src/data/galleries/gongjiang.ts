@@ -1,0 +1,143 @@
+import type { GalleryPhoto } from "./types";
+
+// Dated town scenes, not linguistic consultant locations.
+// Source and geography audit: docs/gallery-gongjiang.md.
+export const gongjiangGalleries: Record<string, GalleryPhoto[]> = {
+  "gongjiang-hakka": [
+    {
+      "id": "gongjiang-hakka-01",
+      "title": "Historic church building",
+      "category": "Culture",
+      "src": "/images/gongjiang-hakka-01.webp",
+      "alt": "A church building in Gongjiang’s old town, photographed in May 2014. The source identifies it as the former Gannan provincial committee site.",
+      "caption": "A church building in Gongjiang’s old town, photographed in May 2014. The source identifies it as the former Gannan provincial committee site.",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yudu_Gannan_Shengwei_Jiuzhi_2014.05.30_09-27-43.jpg",
+      "year": "2014",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "id": "gongjiang-hakka-02",
+      "title": "He family house",
+      "category": "Culture",
+      "src": "/images/gongjiang-hakka-02.webp",
+      "alt": "The street outside the He family house in Gongjiang, photographed in May 2014.",
+      "caption": "The street outside the He family house in Gongjiang, photographed in May 2014.",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yudu_Gannan_Sheng_Suwei%27ai_Zhengfu_Jiuzhi_2014.05.30_09-32-50.jpg",
+      "year": "2014",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "id": "gongjiang-hakka-03",
+      "title": "Hongqi Avenue",
+      "category": "Streets",
+      "src": "/images/gongjiang-hakka-03.webp",
+      "alt": "Traffic and shopfronts on Hongqi Avenue in Gongjiang, photographed in January 2017.",
+      "caption": "Traffic and shopfronts on Hongqi Avenue in Gongjiang, photographed in January 2017.",
+      "author": "Ee0703",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_photo_of_yudu_city_in_hongqi_avenue.jpg",
+      "year": "2017",
+      "width": 1440,
+      "height": 809
+    },
+    {
+      "id": "gongjiang-hakka-04",
+      "title": "Yudu railway platform",
+      "category": "Streets",
+      "src": "/images/gongjiang-hakka-04.webp",
+      "alt": "Platform 5 and the tracks at Yudu railway station in Gongjiang, photographed in February 2018.",
+      "caption": "Platform 5 and the tracks at Yudu railway station in Gongjiang, photographed in February 2018.",
+      "author": "Antigng",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BA%8E%E9%83%BD%E7%AB%995%E7%AB%99%E5%8F%B0%E5%92%8C%E7%AB%99%E5%86%85%E6%AD%A3%E7%BA%BF.jpg",
+      "year": "2018",
+      "width": 1440,
+      "height": 810
+    },
+    {
+      "id": "gongjiang-hakka-05",
+      "title": "Xie ancestral hall",
+      "category": "Culture",
+      "src": "/images/gongjiang-hakka-05.webp",
+      "alt": "The entrance to the Xie ancestral hall in Gongjiang, photographed in May 2014.",
+      "caption": "The entrance to the Xie ancestral hall in Gongjiang, photographed in May 2014.",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yudu_Gannan_Sheng_Sanji_Ganbu_Dahui_Jiuzhi_2014.05.30_08-48-43.jpg",
+      "year": "2014",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "id": "gongjiang-hakka-06",
+      "title": "Guan house lane entrance",
+      "category": "Culture",
+      "src": "/images/gongjiang-hakka-06.webp",
+      "alt": "The lane entrance to the Guan family house in Gongjiang, photographed in May 2014.",
+      "caption": "The lane entrance to the Guan family house in Gongjiang, photographed in May 2014.",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yudu_Hongsijun_Zhengzhibu_Jiuzhi_2014.05.30_10-03-43.jpg",
+      "year": "2014",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "id": "gongjiang-hakka-07",
+      "title": "Zhaozhong Hall",
+      "category": "Culture",
+      "src": "/images/gongjiang-hakka-07.webp",
+      "alt": "Zhaozhong Hall’s entrance on Jianguo Road in Gongjiang, photographed in May 2014.",
+      "caption": "Zhaozhong Hall’s entrance on Jianguo Road in Gongjiang, photographed in May 2014.",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yudu_Zhaozhong_Ci_2014.05.30_10-00-11.jpg",
+      "year": "2014",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "id": "gongjiang-hakka-08",
+      "title": "Memorial museum and garden path",
+      "category": "Culture",
+      "src": "/images/gongjiang-hakka-08.webp",
+      "alt": "A garden path leading to the memorial museum building at Gongjiang’s East Gate memorial garden, photographed in May 2014.",
+      "caption": "A garden path leading to the memorial museum building at Gongjiang’s East Gate memorial garden, photographed in May 2014.",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yudu_Zhongyang_Hongjun_Changzheng_Diyi_Dukou_2014.05.30_11-13-30.jpg",
+      "year": "2014",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "id": "gongjiang-hakka-09",
+      "title": "East Gate river landing",
+      "category": "Landscape",
+      "src": "/images/gongjiang-hakka-09.webp",
+      "alt": "The riverbank at Gongjiang’s East Gate landing, photographed in May 2014.",
+      "caption": "The riverbank at Gongjiang’s East Gate landing, photographed in May 2014.",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yudu_Zhongyang_Hongjun_Changzheng_Diyi_Dukou_2014.05.30_11-12-33.jpg",
+      "year": "2014",
+      "width": 1440,
+      "height": 960
+    }
+  ]
+};

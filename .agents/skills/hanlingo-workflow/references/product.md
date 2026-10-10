@@ -1,0 +1,49 @@
+# Product, names, and interface
+
+## Purpose and scope
+
+HanLingo teaches Han languages and their cultures. The initial geographic scope includes Mainland China, Taiwan, Singapore and Penang-area communities. Start with present-day localities; do not invent “Hakka 200 years ago” as a uniform variety. The original six letters supplied by Alan are illustrative texts, not authenticated translation or phonetic corpora.
+
+Amoy was the first deep prototype. The goal then expanded to comparable useful depth across every published branch. Maintain all five groups; Min-first development does not mean removing other groups.
+
+## Tree and routes
+
+`/` is the family-tree home. The left edge starts directly with Mandarin, Min, Yue, Hakka and Wu, without a Han wrapper. Keep a single persistent tree across pages, including its expansion, search and scroll state. The mobile version is the same tree in an expandable panel.
+
+Paths follow four classification levels: group → branch → cluster → locality, followed by an optional learning destination. The latest user request supersedes the earlier flattened cluster captions. Preserve compatibility redirects from old three-level locality URLs, including query and fragment. No Languages wrapper. Every cluster has a sourced page; distinguish true classification from an explicitly geographic collection rather than inventing an academic rank.
+
+Clicking a branch name toggles its children in both directions and opens its page when available. Its arrow toggles without navigating. Route-driven expansion must not immediately undo a deliberate collapse. Browser Back restores content position. Avoid slide/entrance/smooth-scroll/hover-translation effects and sibling-page jumping.
+
+## Equal levels and community names
+
+Before adding a place, check current map points, tree data, route aliases and learning packs so an existing locality is expanded rather than duplicated.
+
+Use **group → branch → cluster → locality**. Locality leaves may be comparable towns, urban districts or cities; do not mix Taigi, a regional language label, with Amoy or Taipak as if they were equal places.
+
+- 泉漳 displays as **Tsuân-Tsiang**, the attested Taigi community spelling; the earlier Tsuan-Chiang remains an alias. Source **Tsuân-Tsiang** and Mandarin **Quanzhang** remain distinct aliases/reference forms.
+- Amoy, Tsuân-tsiu, Tsiang-tsiu, Taipei · Tâi-pak, Tainan · Tâi-lâm, Kaohsiung · Ko-hiông, Yilan · Gî-lân, Lukang · Lo̍k-káng, Sanxia · Sam-kiap and overseas Hokkien localities retain documented local naming and exact scope.
+- Singapore can display Sin-ka-pho; George Town can display Pho Te. George Town is not all of Penang. Preserve source spelling conventions in reference notes. Secondary place names use only HanLingo generated from documented phonetic evidence.
+- Teochew and Swatow belong to the **Teo Swa** cluster under Southern Min, not Tsuân-Tsiang.
+- Meixian Hakka is the translation reference. Meizhou is a wider administrative area; its name does not imply one uniform accent.
+
+Use a primary common/community name plus the local reading in **HanLingo spelling**, without parentheses. The later 2026-10-09 correction forbids using source orthography for that second name. Use the shared IPA converter, never a hard-coded alternate spelling; keep exact source spellings in aliases and labelled notes. Explicitly sourced, manually checked spelling-to-IPA normalization is allowed with scope and tone convention recorded. The 2026-10-09 dual-name decision supersedes the earlier single-name rule. Use `PlaceName` and the shared registry; additional aliases belong in search and source notes. Never infer local pronunciation from Mandarin pinyin, and do not fabricate missing readings. Stable route IDs need not change with display names. Do not invent an endonym when documented evidence is missing. Use `src/data/site-terms.ts`, `src/data/language-names.ts` and `docs/NAMING.md` as the current sources of labels.
+
+## Design
+
+Keep one coherent visual system: calm spacing, readable typography, restrained cobalt accents, meaningful photography, concise English, and visible language examples. Avoid mixing old and new UI generations, badge clutter, decorative gradients, giant metadata panels, promotional filler, unnecessary bottom buttons or repeated navigation.
+
+Reference pages lead with name and content. Put source naming conventions/dictionary metadata inside reference notes, not a long “Group / Branch / Entry type / Map anchor” panel. Keep map qualifications beside the map. Map dragging should feel controlled; markers are geographic anchors, never dialect boundaries. Do not infer the ethnicity or language of pictured people from appearance.
+
+Use existing HanLingo identity assets (`public/hanlingo-logo.svg`, `public/hanlingo-mark.svg`, `BrandMark.tsx`) and `docs/BRAND.md`. Do not restore the rejected 言/言語 logo. Verify IPA and tone glyphs in real browser screenshots; an uninstalled serif fallback previously produced missing glyphs. The bundled DM Sans is the current tested UI font.
+
+Use ordinary learning examples. Do not restore the removed Xi Jinping romanization demonstration; this was a specific editorial removal, not a rule to erase linguistic or geographic facts.
+
+If a new direct request clearly changes an earlier naming preference, follow the new instruction while keeping geographic and evidence scope explicit. If the wording ambiguously mixes a place with a regional language, explain that concrete distinction and clarify only the unresolved choice. A user-chosen label is not automatically a documented community endonym; never fabricate evidence to justify it.
+
+## Uniform navigation depth
+
+The latest 2026-10-09 request defines four linguistic browsing levels: group → branch → cluster → locality. Lessons sit below localities but do not count as classification. `src/data/atlas/` stores source-attested catalogue references separately from the developed learning collection. Count and label these separately; never claim a newly catalogued place has IPA lessons or a completed gallery. Preserve source editions, geographical scope and competing classifications.
+
+## Whole-atlas learning and map
+
+Use `/map` in the persistent top bar and the shared AtlasMap for every geography view. Preserve canonical four-level locality links and URL-addressable selections. Branch and cluster pages expose real descendant learning, with each item labelled by locality. Neighbouring collections are links, not substituted local pronunciation. Audit all catalogue leaves, including zeros, against the actual Amoy reading/photo counts; distinguish research-era survey references from contemporary speaker records.

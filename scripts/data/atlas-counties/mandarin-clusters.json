@@ -1,0 +1,226 @@
+[
+  {
+    "groupId": "mandarin",
+    "branchId": "southwestern",
+    "branchName": "Southwestern Mandarin",
+    "branchNativeName": "西南官話",
+    "id": "yunnan",
+    "name": "Yunnan",
+    "nativeName": "云南片",
+    "kind": "classification",
+    "description": "The 云南片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 西南官话 · 方言片: 云南片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "southwestern",
+    "branchName": "Southwestern Mandarin",
+    "branchNativeName": "西南官話",
+    "id": "xishu",
+    "name": "Western Shu",
+    "nativeName": "西蜀片",
+    "kind": "classification",
+    "description": "The 西蜀片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 西南官话 · 方言片: 西蜀片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "southwestern",
+    "branchName": "Southwestern Mandarin",
+    "branchNativeName": "西南官話",
+    "id": "chuanxi",
+    "name": "Western Sichuan",
+    "nativeName": "川西片",
+    "kind": "classification",
+    "description": "The 川西片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 西南官话 · 方言片: 川西片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "southwestern",
+    "branchName": "Southwestern Mandarin",
+    "branchNativeName": "西南官話",
+    "id": "guiliu",
+    "name": "Gui–Liu",
+    "nativeName": "桂柳片",
+    "kind": "classification",
+    "description": "The 桂柳片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 西南官话 · 方言片: 桂柳片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "southern-xinjiang",
+    "name": "Southern Xinjiang",
+    "nativeName": "南疆片",
+    "kind": "classification",
+    "description": "The 南疆片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 南疆片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "qinlong",
+    "name": "Qin–Long",
+    "nativeName": "秦陇片",
+    "kind": "classification",
+    "description": "The 秦陇片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 秦陇片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "yanhe",
+    "name": "Yan–He",
+    "nativeName": "兖菏片",
+    "kind": "classification",
+    "description": "The 兖菏片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 兖菏片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "nanlu",
+    "name": "Southern Lu",
+    "nativeName": "南鲁片",
+    "kind": "classification",
+    "description": "The 南鲁片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 南鲁片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "shangfu",
+    "name": "Shang–Fu",
+    "nativeName": "商阜片",
+    "kind": "classification",
+    "description": "The 商阜片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 商阜片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "xinbeng",
+    "name": "Xin–Beng",
+    "nativeName": "信蚌片",
+    "kind": "classification",
+    "description": "The 信蚌片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 信蚌片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "luosong",
+    "name": "Luo–Song",
+    "nativeName": "洛嵩片",
+    "kind": "classification",
+    "description": "The 洛嵩片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 洛嵩片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "xuhuai",
+    "name": "Xu–Huai",
+    "nativeName": "徐淮片",
+    "kind": "classification",
+    "description": "The 徐淮片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 徐淮片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "luoxiang",
+    "name": "Luo–Xiang",
+    "nativeName": "漯项片",
+    "kind": "classification",
+    "description": "The 漯项片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 漯项片"
+    }
+  },
+  {
+    "groupId": "mandarin",
+    "branchId": "central-plains",
+    "branchName": "Central Plains Mandarin",
+    "branchNativeName": "中原官話",
+    "id": "longzhong",
+    "name": "Central Long",
+    "nativeName": "陇中片",
+    "kind": "classification",
+    "description": "The 陇中片 division in the 2012 Atlas county catalogue. Lower source subdivisions remain in each locality’s reference notes.",
+    "source": {
+      "title": "Jing Liwen · Language Atlas of China, second-edition county catalogue, 2025",
+      "url": "https://doi.org/10.5281/zenodo.15897647",
+      "locator": "方言区: 中原官话 · 方言片: 陇中片"
+    }
+  }
+]

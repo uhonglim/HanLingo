@@ -1,7 +1,14 @@
-export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu";
+import { additionalLanguages } from "./additional-languages";
+import { placeLabel, clusterLabel } from "./language-names";
+import { siteTerms } from "./site-terms";
+import { chaoshanPoints } from "./chaoshan";
+import { expandedBranches, expandedPlaces } from "./expansion";
+
+export type LanguageId = "mandarin" | "min" | "yue" | "hakka" | "wu" | "gan" | "xiang" | "jin" | "hui" | "pinghua" | "tuhua" | "contact";
 
 export interface Language {
   id: LanguageId;
+  collectionKind?: "geographic";
   name: string;
   nativeName: string;
   shortName: string;
@@ -21,7 +28,7 @@ export interface Language {
 }
 
 /** A curated introduction to present-day varieties, not a complete taxonomy. */
-export const languages: Language[] = [
+const baseLanguages: Language[] = [
   {
     id: "mandarin",
     name: "Mandarin",
@@ -75,7 +82,7 @@ export const languages: Language[] = [
     shortName: "閩",
     color: "#cf593c",
     intro:
-      "A notably diverse group rooted in Fujian and carried far beyond it. Southern Min and Eastern Min are different branches; Xiamen and Fuzhou should not be treated as interchangeable examples.",
+      "A notably diverse group rooted in Fujian and carried far beyond it. Southern Min and Eastern Min are different branches; Amoy and Foochow should not be treated as interchangeable examples.",
     feature: "Distinct branches across Fujian and coastal communities.",
     geography:
       "Fujian, parts of neighboring provinces, Taiwan, and overseas communities",
@@ -85,16 +92,30 @@ export const languages: Language[] = [
         name: "Southern Min",
         nativeName: "閩南語",
         description:
-          "Includes the Quanzhang cluster: Quanzhou, Zhangzhou, and Xiamen. Southern Min extends beyond this cluster.",
-        places: ["Xiamen", "Quanzhou", "Zhangzhou"],
+          "Includes Tsuân-Tsiang and Teo Swa, represented by separate clusters of localities.",
+        places: [
+          "Xiamen",
+          "Quanzhou",
+          "Zhangzhou",
+          "Taipak",
+          "Tâi-lâm",
+          "Ko-hiông",
+          "Gî-lân",
+          "Lo̍k-káng",
+          "Sam-kiap",
+          "Singapore",
+          "George Town",
+          "Teochew",
+          "Swatow",
+        ],
       },
       {
         id: "eastern-min",
         name: "Eastern Min",
         nativeName: "閩東語",
         description:
-          "A separate Min branch with Fuzhou as one familiar local variety.",
-        places: ["Fuzhou"],
+          "A separate Min branch with Foochow as one familiar local variety.",
+        places: ["Foochow"],
       },
       {
         id: "northern-min",
@@ -134,24 +155,24 @@ export const languages: Language[] = [
     shortName: "粵",
     color: "#748463",
     intro:
-      "The group that includes Cantonese as spoken in Guangzhou and Hong Kong, alongside varieties such as Taishanese. Cantonese is an entry point into Yue, rather than a name for every local variety.",
-    feature: "Guangzhou Cantonese, Taishanese, and other Yue varieties.",
+      "The group that includes Cantonese as spoken in Canton and Hong Kong, alongside varieties such as Taishanese. Cantonese is an entry point into Yue, rather than a name for every local variety.",
+    feature: "Cantonese, Toishan speech, and other Yue varieties.",
     geography: "Guangdong, Guangxi, Hong Kong, Macau, and overseas communities",
     subgroups: [
       {
         id: "guangfu",
         name: "Guangfu",
         nativeName: "廣府片",
-        description: "Includes Guangzhou and Hong Kong Cantonese.",
-        places: ["Guangzhou", "Hong Kong"],
+        description: "Includes Canton and Hong Kong Cantonese.",
+        places: ["Canton", "Hong Kong"],
       },
       {
         id: "siyi",
         name: "Siyi",
         nativeName: "四邑片",
         description:
-          "Includes Taishan and neighboring communities west of the Pearl River Delta.",
-        places: ["Taishan"],
+          "Includes Toishan and neighboring communities west of the Pearl River Delta.",
+        places: ["Toishan"],
       },
       {
         id: "goulou",
@@ -162,8 +183,8 @@ export const languages: Language[] = [
         places: ["Yulin"],
       },
     ],
-    featuredPlace: "Guangzhou",
-    hierarchy: ["Sinitic", "Yue", "Guangfu", "Guangzhou"],
+    featuredPlace: "Canton",
+    hierarchy: ["Sinitic", "Yue", "Guangfu", "Canton"],
   },
   {
     id: "hakka",
@@ -243,6 +264,7 @@ export const languages: Language[] = [
   },
 ];
 
+
 export interface MapPoint {
   id: string;
   name: string;
@@ -255,7 +277,7 @@ export interface MapPoint {
 }
 
 /** Points locate examples; they do not claim exclusive language territories. */
-export const mapPoints: MapPoint[] = [
+const sourceMapPoints: MapPoint[] = [
   {
     id: "beijing-city",
     name: "Beijing",
@@ -338,13 +360,133 @@ export const mapPoints: MapPoint[] = [
     ],
   },
   {
+    id: "taipak",
+    name: "Taipak",
+    nativeName: "臺北",
+    coordinates: [121.5654, 25.033],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Taipak",
+    ],
+  },
+  {
+    id: "tainan",
+    name: "Tâi-lâm",
+    nativeName: "臺南",
+    coordinates: [120.205, 22.997],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Tâi-lâm",
+    ],
+  },
+  {
+    id: "kaohsiung",
+    name: "Ko-hiông",
+    nativeName: "高雄",
+    coordinates: [120.3014, 22.6273],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Ko-hiông",
+    ],
+  },
+  {
+    id: "yilan",
+    name: "Gî-lân",
+    nativeName: "宜蘭",
+    coordinates: [121.753, 24.7554],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Gî-lân",
+    ],
+  },
+  {
+    id: "lukang",
+    name: "Lo̍k-káng",
+    nativeName: "鹿港",
+    coordinates: [120.435, 24.052],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Lo̍k-káng",
+    ],
+  },
+  {
+    id: "sanxia",
+    name: "Sam-kiap",
+    nativeName: "三峽",
+    coordinates: [121.369, 24.934],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Sam-kiap",
+    ],
+  },
+  {
+    id: "singapore",
+    name: "Singapore",
+    nativeName: "新加坡",
+    coordinates: [103.8198, 1.3521],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "Singapore",
+    ],
+  },
+  {
+    id: "george-town",
+    name: "George Town",
+    nativeName: "喬治市",
+    coordinates: [100.3327, 5.4141],
+    groupId: "min",
+    subgroupId: "southern-min",
+    hierarchy: [
+      "Sinitic",
+      "Min",
+      "Southern Min",
+      "Quanzhang cluster",
+      "George Town",
+    ],
+  },
+  {
     id: "fuzhou",
-    name: "Fuzhou",
+    name: "Foochow",
     nativeName: "福州",
     coordinates: [119.3, 26.07],
     groupId: "min",
     subgroupId: "eastern-min",
-    hierarchy: ["Sinitic", "Min", "Eastern Min", "Fuzhou"],
+    hierarchy: ["Sinitic", "Min", "Eastern Min", "Foochow"],
   },
   {
     id: "jianou",
@@ -375,12 +517,12 @@ export const mapPoints: MapPoint[] = [
   },
   {
     id: "guangzhou",
-    name: "Guangzhou",
+    name: "Canton",
     nativeName: "廣州",
     coordinates: [113.26, 23.13],
     groupId: "yue",
     subgroupId: "guangfu",
-    hierarchy: ["Sinitic", "Yue", "Guangfu", "Guangzhou"],
+    hierarchy: ["Sinitic", "Yue", "Guangfu", "Canton"],
   },
   {
     id: "hong-kong",
@@ -393,12 +535,12 @@ export const mapPoints: MapPoint[] = [
   },
   {
     id: "taishan",
-    name: "Taishan",
+    name: "Toishan",
     nativeName: "台山",
     coordinates: [112.79, 22.25],
     groupId: "yue",
     subgroupId: "siyi",
-    hierarchy: ["Sinitic", "Yue", "Siyi", "Taishan"],
+    hierarchy: ["Sinitic", "Yue", "Siyi", "Toishan"],
   },
   {
     id: "yulin",
@@ -481,10 +623,41 @@ export const mapPoints: MapPoint[] = [
     subgroupId: "chuqu",
     hierarchy: ["Sinitic", "Wu", "Chuqu", "Lishui"],
   },
+  ...chaoshanPoints,
+  ...expandedPlaces.map((place) => place.point),
 ];
 
+export const mapPoints: MapPoint[] = sourceMapPoints.map((point) => ({
+  ...point,
+  name: placeLabel(point),
+  hierarchy: point.hierarchy.map((label, index) => index === point.hierarchy.length - 1 ? placeLabel(point) : clusterLabel(label)),
+}));
+
+
+export const languages: Language[] = [...baseLanguages, ...additionalLanguages].map((group) => {
+  const resolvePlace = (label: string) => {
+    const point = sourceMapPoints.find((item) => item.groupId === group.id && item.name === label);
+    return point ? placeLabel(point) : label;
+  };
+  return {
+    ...group,
+    featuredPlace: resolvePlace(group.featuredPlace),
+    hierarchy: group.hierarchy.map((label, index) => index === group.hierarchy.length - 1 ? resolvePlace(label) : clusterLabel(label)),
+    subgroups: [
+      ...group.subgroups,
+      ...expandedBranches.filter((branch) => branch.groupId === group.id),
+    ].map((branch) => ({
+      ...branch,
+      places: [...new Set([
+        ...branch.places.map(resolvePlace),
+        ...mapPoints.filter((point) => point.groupId === group.id && point.subgroupId === branch.id).map((point) => point.name),
+      ])],
+    })),
+  };
+});
+
 export interface Letter {
-  id: LanguageId | "formal";
+  id: "mandarin" | "min" | "yue" | "hakka" | "wu" | "formal";
   label: string;
   nativeName: string;
   place: string;
@@ -581,9 +754,9 @@ export const letters: Letter[] = [
   },
   {
     id: "formal",
-    label: "Formal written Chinese",
+    label: siteTerms.writtenChinese,
     nativeName: "現代標準書面語",
-    place: "Modern Standard Written Chinese · formal register",
+    place: `${siteTerms.writtenChinese} · formal register`,
     salutation: "親愛的媽媽：",
     paragraphs: [
       "我抵達這裡已有一週，飲食起居一切安好，請您放心。",
@@ -592,6 +765,6 @@ export const letters: Letter[] = [
     ],
     closing: "想念您的兒子",
     english: englishLetter,
-    note: "A written register for comparison · not a sixth spoken branch",
+    note: "A written register for comparison · not a sixth spoken group",
   },
 ];

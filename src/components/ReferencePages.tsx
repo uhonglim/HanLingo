@@ -1,0 +1,322 @@
+import { learningPlaces } from "../data/learning/places";
+import PlaceNameNotes from "./PlaceNameNotes";
+import PlaceName from "./PlaceName";
+import { atlasLocalities, atlasLocalityPath } from "../data/atlas";
+import { AtlasBranchCards } from "../pages/AtlasCatalogue";
+import { getBranchLearning, getLocalLearning } from "../data/learning";
+import BranchLearning from "./BranchLearning";
+import LocalityScenes from "./LocalityScenes";
+import RegionalDifferences from "./RegionalDifferences";
+import { getLocalGallery } from "../data/galleries";
+import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { ArrowLeft, ArrowRight, BookOpen, MapPin } from "lucide-react";
+import { languages, letters } from "../data/languages";
+import { placeLabel, clusterLabel, placeNameReference } from "../data/language-names";
+import {
+  groupArticles,
+  subgroupArticles,
+  varietyArticles,
+} from "../data/encyclopedia";
+import { groupPhotos } from "../data/photography";
+import { minCommunityPhotos } from "../data/min-community-photos";
+import {
+  groupPath,
+  resolveReferenceRoute,
+} from "../routing";
+import LanguageNameNotes from "./LanguageNameNotes";
+import AtlasMap from "./AtlasMap";
+import "./ReferencePages.css";
+
+const pointNameReference = (point: { id: string } | undefined) => point ? placeNameReference(point) : undefined;
+
+export default function ReferencePage() {
+  const params = useParams<{
+    languageId: string;
+    subgroupId: string;
+    varietyId: string;
+  }>();
+  const navigate = useNavigate();
+  const route = resolveReferenceRoute(params);
+  const [showEnglish, setShowEnglish] = useState(false);
+  const entry = route?.point
+    ? varietyArticles[route.point.id]
+    : route?.subgroup
+      ? subgroupArticles[`${route.language.id}/${route.subgroup.id}`]
+      : route
+        ? groupArticles[route.language.id]
+        : undefined;
+
+  useEffect(() => {
+    setShowEnglish(false);
+  }, [entry?.title, params.languageId, params.subgroupId, params.varietyId]);
+
+  const group = route?.language;
+  const point = route?.point;
+  const subgroup = route?.subgroup;
+  const englishName = entry?.facts.find(
+    (fact) => fact.label === "English name",
+  )?.value;
+  const mapAnchor = entry?.facts.find(
+    (fact) => fact.label === "Map anchor",
+  )?.value;
+  const nameReference = pointNameReference(route?.point);
+  const referenceFacts =
+    entry?.facts.filter(
+      (fact) =>
+        ![
+          "Group",
+          "Branch",
+          "Cluster",
+          "Entry type",
+          "English name",
+          "Map anchor",
+        ].includes(fact.label),
+    ) ?? [];
+  const localCluster =
+    point && point.hierarchy.length > 4 ? point.hierarchy[3] : undefined;
+  const learningPhoto = point
+    ? getLocalLearning(point).culture.find((item) => item.photo)?.photo
+    : group && subgroup
+      ? getBranchLearning(group.id, subgroup.id)?.culture.find(
+          (item) => item.photo,
+        )?.photo
+      : undefined;
+  const photo =
+    (point
+      ? (getLocalGallery(point.id)[0] ?? minCommunityPhotos[point.id])
+      : group && route?.level === "group"
+        ? (groupPhotos[group.id] ?? learningPlaces.filter(place => place.groupId === group.id).flatMap(place => getLocalGallery(place.id))[0])
+        : undefined) ?? learningPhoto;
+  const localLetter =
+    point && ["xiamen", "guangzhou", "meixian", "shanghai"].includes(point.id)
+      ? letters.find((letter) => letter.id === point.groupId)
+      : undefined;
+  const localPoints = group
+    ? learningPlaces.filter(
+        (place) =>
+          place.groupId === group.id &&
+          (!subgroup || place.subgroupId === subgroup.id) &&
+          (!localCluster || place.hierarchy[3] === localCluster),
+      )
+    : [];
+
+  return (
+    <div
+      className="reference-layout"
+      style={{ "--reference-color": "#2155f5" } as CSSProperties}
+    >
+      {!route || !entry || !group ? (
+        <div className="reference-not-found">
+          <h1>Entry not found</h1>
+          <div className="reference-recovery-links">
+            {languages.map((language) => (
+              <Link key={language.id} to={groupPath(language.id)}>
+                <span lang="zh-Hant">{language.shortName}</span>
+                {language.name}
+                <ArrowRight size={16} />
+              </Link>
+            ))}
+          </div>
+          <Link className="reference-back" to="/">
+            <ArrowLeft size={14} />
+            Return to HanLingo
+          </Link>
+        </div>
+      ) : (
+        <article className="reference-entry">
+          <header
+            className={`reference-entry-header${photo ? " has-photo" : ""}`}
+          >
+            <div className="reference-title-row">
+              <h1>{point ? <PlaceName point={point}/> : entry.title}</h1>
+              <span className="reference-native-title" lang="zh-Hant">
+                {point?.nativeName ?? subgroup?.nativeName ?? group.nativeName}
+              </span>
+            </div>
+            {englishName && !point && (
+              <p className="reference-english-name">{englishName}</p>
+            )}
+            <p className="reference-dek">{entry.dek}</p>
+            <div className="reference-geography">
+              <MapPin size={14} />
+              <span>
+                {point
+                  ? localCluster
+                    ? clusterLabel(localCluster)
+                    : subgroup?.name
+                  : subgroup
+                    ? `${localPoints.map(placeLabel).join(" · ")}`
+                    : group.geography}
+              </span>
+            </div>
+          </header>
+
+          {point && <LocalityScenes key={`scenes-${point.id}`} point={point} />}
+          {photo && !point && (
+            <figure className="reference-hero-photo">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                style={{ objectPosition: photo.position ?? "center" }}
+                fetchPriority="high"
+              />
+              <figcaption>
+                <span>{photo.caption}</span>
+                <span>
+                  <a href={photo.sourceUrl} target="_blank" rel="noreferrer">
+                    {photo.author}
+                  </a>{" "}
+                  ·{" "}
+                  <a href={photo.licenseUrl} target="_blank" rel="noreferrer">
+                    {photo.license}
+                  </a>
+                </span>
+              </figcaption>
+            </figure>
+          )}
+
+          {!point && <AtlasBranchCards groupId={group.id} />}
+
+          <BranchLearning
+            groupId={group.id}
+            subgroupId={subgroup?.id}
+            point={point}
+            heroPhotoSrc={photo?.src}
+          />
+
+          {point && (
+            <RegionalDifferences key={`differences-${point.id}`} localityId={point.id} />
+          )}
+
+          <details className="reference-language-notes">
+            <summary>Language notes</summary>
+            <div className="reference-reading-layout">
+              <div className="reference-prose">
+                {entry.sections.map((section, index) => (
+                  <section key={section.heading} id={`entry-section-${index}`}>
+                    <h2>{section.heading}</h2>
+                    {section.paragraphs.map((paragraph, paragraphIndex) => (
+                      <p key={paragraphIndex}>{paragraph}</p>
+                    ))}
+                  </section>
+                ))}
+              </div>
+            </div>
+          </details>
+
+          <section className="reference-map-section" id="reference-map">
+            <div className="reference-section-heading">
+              <div>
+                <h2>{point ? `${placeLabel(point)} on the map` : "Map"}</h2>
+              </div>
+            </div>
+            <div className="reference-map-frame">
+              <AtlasMap
+                points={point ? localPoints : atlasLocalities.filter(place => place.groupId === group.id)}
+                selectedGroup={group.id}
+                selectedPoint={point?.id ?? null}
+                onSelectPoint={(id) => {
+                  const selected = atlasLocalities.find((place) => place.id === id);
+                  if (selected && selected.id !== point?.id)
+                    navigate(atlasLocalityPath(selected));
+                }}
+                compact
+              />
+            </div>
+            <p className="reference-curation-note">
+              {mapAnchor ??
+                "Map markers locate reference places, not dialect boundaries."}
+            </p>
+          </section>
+
+          {localLetter && (
+            <section className="reference-local-letter" id="reference-letter">
+              <div className="reference-section-heading">
+                <div>
+                  <h2>Letter</h2>
+                </div>
+                <label className="reference-translation-toggle">
+                  <input
+                    type="checkbox"
+                    checked={showEnglish}
+                    onChange={(event) => setShowEnglish(event.target.checked)}
+                  />
+                  English meaning
+                </label>
+              </div>
+              <div
+                className={`reference-letter-columns${showEnglish ? " with-translation" : ""}`}
+              >
+                <div className="reference-letter-chinese" lang="zh-Hant">
+                  <p>{localLetter.salutation}</p>
+                  {localLetter.paragraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                  <p>{localLetter.closing}</p>
+                </div>
+                {showEnglish && (
+                  <div className="reference-letter-english">
+                    <span className="reference-kicker">English meaning</span>
+                    <p>Mom,</p>
+                    {localLetter.english.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
+                    <p>Your son, who misses you.</p>
+                  </div>
+                )}
+              </div>
+              <p className="reference-letter-note">
+                {localLetter.note}. This written sample does not supply a
+                verified pronunciation recording or IPA transcription.
+              </p>
+              <Link
+                className="reference-inline-link"
+                to={`/compare?left=${group.id}&right=formal`}
+              >
+                Compare letters
+                <ArrowRight size={15} />
+              </Link>
+            </section>
+          )}
+
+          {!point && group.id === "min" && <LanguageNameNotes/>}
+
+          <section className="reference-sources" id="reference-sources">
+            <div>
+              <BookOpen size={17} />
+              <h2>Sources</h2>
+            </div>
+            {(referenceFacts.length > 0 || nameReference || point) && (
+              <details className="reference-notes" key={entry.title}>
+                <summary>Reference notes</summary>
+                {point && <PlaceNameNotes point={point}/>}
+                <dl>
+                  {referenceFacts.map((fact) => (
+                    <div key={fact.label}>
+                      <dt>{fact.label}</dt>
+                      <dd>{fact.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </details>
+            )}
+            <ol>
+              {entry.sources.map((source, index) => (
+                <li key={`${source.url}-${index}`}>
+                  <a href={source.url} target="_blank" rel="noreferrer">
+                    {source.title}
+                  </a>
+                  <span>
+                    {new URL(source.url).hostname.replace(/^www\./, "")}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </article>
+      )}
+    </div>
+  );
+}

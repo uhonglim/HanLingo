@@ -1,0 +1,172 @@
+{
+  "source": {
+    "author": "Huang Xuezhen 黄雪贞",
+    "title": "江永方言研究",
+    "publisher": "Social Sciences Academic Press",
+    "publicationDate": "1993-06",
+    "focusedSurveyYear": 1987,
+    "isbn": "9787800503879",
+    "url": "https://archive.org/details/jiangyong-fangyan-yanjiu-9787800503879",
+    "sha256": "f20800f77ad111b06c6fc599b4f8fbbd82b02f2576c7e47d5bbf8d3c08d95da0",
+    "rights": "Original-author copyright; no open-content license found. Bounded factual reading selection; no scans or extended source prose redistributed."
+  },
+  "scope": {
+    "localityId": "jiangyong-chengguan",
+    "sourceLocality": "江永城关土话",
+    "excludes": [
+      "Baishui village",
+      "Shangjiangxu speech",
+      "Nüshu Unicode common-reading dataset"
+    ],
+    "printedPage": 41,
+    "pdfPageOneBased": 56,
+    "toneKeyPrintedPage": 9,
+    "transcription": "Manual visual reading. Source five-degree tone marks transcribed to contour digits; displayed as superscript digits. Not inferred from tone classes. Source simplified characters retained. No selected entry assigned a literary/colloquial status without a source mark.",
+    "learningKinds": {
+      "character-reading": 11,
+      "word": 1
+    }
+  },
+  "toneKey": [
+    {
+      "category": "陰平",
+      "contour": "44"
+    },
+    {
+      "category": "陽平",
+      "contour": "42"
+    },
+    {
+      "category": "陰上",
+      "contour": "35"
+    },
+    {
+      "category": "陽上",
+      "contour": "13"
+    },
+    {
+      "category": "陰去",
+      "contour": "21"
+    },
+    {
+      "category": "陽去／陽入",
+      "contour": "33"
+    },
+    {
+      "category": "陰入",
+      "contour": "5",
+      "duration": "short"
+    }
+  ],
+  "readings": [
+    {
+      "han": "妈",
+      "contourTranscription": "ma44",
+      "displayIpa": "[ma⁴⁴]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 妈"
+    },
+    {
+      "han": "弥",
+      "contourTranscription": "ma42",
+      "displayIpa": "[ma⁴²]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 弥"
+    },
+    {
+      "han": "迷",
+      "contourTranscription": "ma42",
+      "displayIpa": "[ma⁴²]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 迷"
+    },
+    {
+      "han": "眉",
+      "contourTranscription": "ma42",
+      "displayIpa": "[ma⁴²]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 眉"
+    },
+    {
+      "han": "奶",
+      "contourTranscription": "ma35",
+      "displayIpa": "[ma³⁵]",
+      "printedPage": 41,
+      "qualification": "Source explicitly glosses grandmother as address term; lexical sense is attested here, not generic milk.",
+      "learningKind": "word",
+      "english": "grandmother; used in address",
+      "sourceGloss": "祖母，面称"
+    },
+    {
+      "han": "美",
+      "contourTranscription": "ma13",
+      "displayIpa": "[ma¹³]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 美"
+    },
+    {
+      "han": "媚",
+      "contourTranscription": "ma21",
+      "displayIpa": "[ma²¹]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 媚"
+    },
+    {
+      "han": "蜜",
+      "contourTranscription": "ma33",
+      "displayIpa": "[ma³³]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 蜜"
+    },
+    {
+      "han": "密",
+      "contourTranscription": "ma33",
+      "displayIpa": "[ma³³]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 密"
+    },
+    {
+      "han": "肥",
+      "contourTranscription": "fa42",
+      "displayIpa": "[fa⁴²]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 肥"
+    },
+    {
+      "han": "非",
+      "contourTranscription": "fa44",
+      "displayIpa": "[fa⁴⁴]",
+      "printedPage": 41,
+      "qualification": "Character reading only",
+      "learningKind": "character-reading",
+      "english": "Character 非"
+    },
+    {
+      "han": "飞",
+      "contourTranscription": "fa44",
+      "displayIpa": "[fa⁴⁴]",
+      "printedPage": 41,
+      "qualification": "Source illustrates 飞机 and cross-refers another reading elsewhere; not transferred to every use of 飞.",
+      "learningKind": "character-reading",
+      "english": "Character 飞"
+    }
+  ]
+}

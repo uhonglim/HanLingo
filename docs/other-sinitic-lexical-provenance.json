@@ -1,0 +1,2988 @@
+{
+  "commit": "54f6742d9fa60315ae41b91d0d1e02f04036efb5",
+  "source": "https://github.com/lexibank/liusinitic/blob/54f6742d9fa60315ae41b91d0d1e02f04036efb5/cldf/forms.csv",
+  "hashes": {
+    "liusinitic-cldf_forms.csv": "7496caf7dd62373791d700c0eb05e154ed7f8d7f9c8a41fb5a9b060a07c70fca",
+    "liusinitic-cldf_parameters.csv": "6ea8a355d2dec1090010b6c2f77e806bf73b6231061be7dcf693721e8cf3d11d",
+    "liusinitic-cldf_languages.csv": "4e796ba750c9e93e86c2398a8bc4199b6501888b181276ca2c46de13575ccec0",
+    "liusinitic-cldf_sources.bib": "f235e5f01e749761e40e9d9b56ea80899714bac80e79c8612f3698b1f0bcd783"
+  },
+  "records": [
+    {
+      "id": "liu2007-Taiyuan-92_fear-1",
+      "row": 30,
+      "sourceValue": "pʰa⁴⁵",
+      "sourceCharacters": "怕",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-93_skin-1",
+      "row": 52,
+      "sourceValue": "pʰi²¹ fu²¹",
+      "sourceCharacters": "皮 膚",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-94_float-1",
+      "row": 73,
+      "sourceValue": "pʰiɑu²¹",
+      "sourceCharacters": "漂",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-95_smooth-1",
+      "row": 100,
+      "sourceValue": "pʰiŋ²¹",
+      "sourceCharacters": "平",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-98_hot-1",
+      "row": 172,
+      "sourceValue": "zəʔ²",
+      "sourceCharacters": "熱",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-99_person-1",
+      "row": 191,
+      "sourceValue": "zəŋ²¹",
+      "sourceCharacters": "人",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-1_white-1",
+      "row": 235,
+      "sourceValue": "pai²¹",
+      "sourceCharacters": "白",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-2_back-1",
+      "row": 255,
+      "sourceValue": "pei⁴⁵",
+      "sourceCharacters": "背",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-4_ice-1",
+      "row": 297,
+      "sourceValue": "piŋ²¹",
+      "sourceCharacters": "冰",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-7_not-1",
+      "row": 359,
+      "sourceValue": "pəʔ²",
+      "sourceCharacters": "不",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-8_rub-1",
+      "row": 380,
+      "sourceValue": "tsʰaʔ²",
+      "sourceCharacters": "擦",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-9_grass-1",
+      "row": 405,
+      "sourceValue": "tsʰau⁵³",
+      "sourceCharacters": "草",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-10_long-1",
+      "row": 424,
+      "sourceValue": "tsʰɒ̃²¹",
+      "sourceCharacters": "長",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-101_flesh-1",
+      "row": 443,
+      "sourceValue": "zəu⁴⁵",
+      "sourceCharacters": "肉",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-102_if-1",
+      "row": 462,
+      "sourceValue": "zu²¹ kuɤ⁵³",
+      "sourceCharacters": "如 果",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-103_breasts-1",
+      "row": 487,
+      "sourceValue": "nai⁵³",
+      "sourceCharacters": "奶",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-104_three-1",
+      "row": 507,
+      "sourceValue": "sæ̃²¹",
+      "sourceCharacters": "三",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-105_woods-1",
+      "row": 526,
+      "sourceValue": "səŋ²¹ liŋ²¹",
+      "sourceCharacters": "森 林",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-106_kill-1",
+      "row": 549,
+      "sourceValue": "saʔ²",
+      "sourceCharacters": "杀",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-107_sand-1",
+      "row": 569,
+      "sourceValue": "sa²¹",
+      "sourceCharacters": "沙",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-108_mountain-1",
+      "row": 591,
+      "sourceValue": "sæ̃²¹",
+      "sourceCharacters": "山",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-109_burn-1",
+      "row": 610,
+      "sourceValue": "sau²¹",
+      "sourceCharacters": "烧",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-110_few-1",
+      "row": 629,
+      "sourceValue": "sau⁵³",
+      "sourceCharacters": "少",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-111_tongue-2",
+      "row": 650,
+      "sourceValue": "ʂəʔ⁵⁴ tʰəur²¹",
+      "sourceCharacters": "舌 頭",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-112_snake-1",
+      "row": 671,
+      "sourceValue": "sɤ²¹",
+      "sourceCharacters": "蛇",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-113_rope-1",
+      "row": 691,
+      "sourceValue": "səŋ²¹",
+      "sourceCharacters": "繩",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-114_louse-1",
+      "row": 715,
+      "sourceValue": "səʔ²",
+      "sourceCharacters": "虱",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-115_wet-1",
+      "row": 736,
+      "sourceValue": "səʔ²",
+      "sourceCharacters": "湿",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-116_what-1",
+      "row": 756,
+      "sourceValue": "səŋ⁴⁵ ləʔ²",
+      "sourceCharacters": "甚 仂",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-117_stone-1",
+      "row": 776,
+      "sourceValue": "səʔ⁵⁴ tʰəu²¹",
+      "sourceCharacters": "石 頭",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-118_hand-1",
+      "row": 795,
+      "sourceValue": "səu⁵³",
+      "sourceCharacters": "手",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-119_tree-1",
+      "row": 815,
+      "sourceValue": "su⁴⁵",
+      "sourceCharacters": "树",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-120_bark-1",
+      "row": 834,
+      "sourceValue": "su⁴⁵ pʰi²¹",
+      "sourceCharacters": "树 皮",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-121a_countnoun-1",
+      "row": 853,
+      "sourceValue": "su⁴⁵",
+      "sourceCharacters": "數",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-121b_countverb-1",
+      "row": 872,
+      "sourceValue": "su⁵³",
+      "sourceCharacters": "數",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-122_who-1",
+      "row": 891,
+      "sourceValue": "suei²¹",
+      "sourceCharacters": "誰",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-123_water-1",
+      "row": 912,
+      "sourceValue": "suei⁵³",
+      "sourceCharacters": "水",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-125_sleep-1",
+      "row": 950,
+      "sourceValue": "suei⁴⁵",
+      "sourceCharacters": "睡",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-126_suck-1",
+      "row": 970,
+      "sourceValue": "ɕiəʔ²",
+      "sourceCharacters": "吸",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-127_say-1",
+      "row": 994,
+      "sourceValue": "suəʔ²",
+      "sourceCharacters": "說",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-128_split-2",
+      "row": 1018,
+      "sourceValue": "sɿ²¹ lie⁴⁵",
+      "sourceCharacters": "撕 裂",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-129_die-1",
+      "row": 1043,
+      "sourceValue": "sɿ⁵³",
+      "sourceCharacters": "死",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-130_four-1",
+      "row": 1064,
+      "sourceValue": "sɿ⁴⁵",
+      "sourceCharacters": "四",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-131_he-1",
+      "row": 1083,
+      "sourceValue": "tʰa²¹",
+      "sourceCharacters": "他",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-134_lie-1",
+      "row": 1146,
+      "sourceValue": "tʰɒ̃⁴⁵",
+      "sourceCharacters": "躺",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-135_day-1",
+      "row": 1171,
+      "sourceValue": "tʰie²¹",
+      "sourceCharacters": "天",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-136_sky-1",
+      "row": 1191,
+      "sourceValue": "tʰie²¹ sɒ̃⁴⁵",
+      "sourceCharacters": "天 上",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-137_hear-1",
+      "row": 1211,
+      "sourceValue": "tʰiŋ²¹ tɕie⁴⁵",
+      "sourceCharacters": "聽 見",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-138_head-1",
+      "row": 1230,
+      "sourceValue": "tʰəu²¹",
+      "sourceCharacters": "頭",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-139_hair-1",
+      "row": 1252,
+      "sourceValue": "tʰəu²¹ faʔ²",
+      "sourceCharacters": "頭 髮",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-140_earth-1",
+      "row": 1272,
+      "sourceValue": "tʰu⁵³ ti⁴⁵",
+      "sourceCharacters": "土 地",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-141_spit-1",
+      "row": 1298,
+      "sourceValue": "tʰu⁵³",
+      "sourceCharacters": "吐",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-142_push-1",
+      "row": 1317,
+      "sourceValue": "tʰuei²¹",
+      "sourceCharacters": "推",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-143_leg-1",
+      "row": 1340,
+      "sourceValue": "tʰuei⁵³",
+      "sourceCharacters": "腿",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-144_dig-1",
+      "row": 1360,
+      "sourceValue": "va²¹",
+      "sourceCharacters": "挖",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-145_play-1",
+      "row": 1381,
+      "sourceValue": "sua⁵³",
+      "sourceCharacters": "耍",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-146_night-1",
+      "row": 1404,
+      "sourceValue": "væ̃⁵³ sɒ̃⁴⁵",
+      "sourceCharacters": "晚 上",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-148_smell-1",
+      "row": 1446,
+      "sourceValue": "vəŋ²¹",
+      "sourceCharacters": "聞",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-149_i-1",
+      "row": 1466,
+      "sourceValue": "ɣɤ⁵³",
+      "sourceCharacters": "我",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-151_five-1",
+      "row": 1507,
+      "sourceValue": "u⁵³",
+      "sourceCharacters": "五",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-152_fog-1",
+      "row": 1526,
+      "sourceValue": "u⁴⁵",
+      "sourceCharacters": "霧",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-153_knee-2",
+      "row": 1547,
+      "sourceValue": "ɕiəʔ² kai⁴⁵",
+      "sourceCharacters": "膝 蓋",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-154_wash-1",
+      "row": 1572,
+      "sourceValue": "ɕi⁵³",
+      "sourceCharacters": "洗",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-155_think-1",
+      "row": 1591,
+      "sourceValue": "ɕɪɒ̃⁵³",
+      "sourceCharacters": "想",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-156_small-1",
+      "row": 1610,
+      "sourceValue": "ɕiau⁵³",
+      "sourceCharacters": "小",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-157_laugh-1",
+      "row": 1632,
+      "sourceValue": "ɕiau⁴⁵",
+      "sourceCharacters": "笑",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-158_heart-1",
+      "row": 1651,
+      "sourceValue": "ɕin²¹",
+      "sourceCharacters": "心",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-202_heartcompound-1",
+      "row": 1670,
+      "sourceValue": "ɕin²¹ tsɒ̃⁴⁵",
+      "sourceCharacters": "心 臟",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-159_new-1",
+      "row": 1689,
+      "sourceValue": "ɕiŋ²¹",
+      "sourceCharacters": "新",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-161_snow-1",
+      "row": 1728,
+      "sourceValue": "ɕyəʔ²",
+      "sourceCharacters": "雪",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-162_blood-1",
+      "row": 1747,
+      "sourceValue": "ɕyəʔ²",
+      "sourceCharacters": "血",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-163_squeeze-1",
+      "row": 1766,
+      "sourceValue": "ia⁴⁵",
+      "sourceCharacters": "壓",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-164_tooth-1",
+      "row": 1791,
+      "sourceValue": "ia²¹ tsʰɿ⁵³",
+      "sourceCharacters": "牙 齒",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-165_smoke-1",
+      "row": 1810,
+      "sourceValue": "ie²¹",
+      "sourceCharacters": "煙",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-166_salt-1",
+      "row": 1830,
+      "sourceValue": "ɕie²¹ ie²¹",
+      "sourceCharacters": "咸 盐",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-168_bite-1",
+      "row": 1870,
+      "sourceValue": "iau⁵³",
+      "sourceCharacters": "咬",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-169_leaf-1",
+      "row": 1889,
+      "sourceValue": "ie⁴⁵",
+      "sourceCharacters": "叶",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-170_one-1",
+      "row": 1910,
+      "sourceValue": "iəʔ²",
+      "sourceCharacters": "一",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-171_because-1",
+      "row": 1931,
+      "sourceValue": "iŋ²¹ vei⁴⁵",
+      "sourceCharacters": "因 为",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-172_swim-1",
+      "row": 1950,
+      "sourceValue": "iəu²¹ yŋ⁵³",
+      "sourceCharacters": "游 泳",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-174_fish-1",
+      "row": 1997,
+      "sourceValue": "y²¹",
+      "sourceCharacters": "鱼",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-175_feather-1",
+      "row": 2017,
+      "sourceValue": "y⁵³ mau²¹",
+      "sourceCharacters": "羽 毛",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-176_rain-1",
+      "row": 2040,
+      "sourceValue": "y⁵³",
+      "sourceCharacters": "雨",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-177_round-1",
+      "row": 2059,
+      "sourceValue": "ye²¹",
+      "sourceCharacters": "圆",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-178_far-1",
+      "row": 2078,
+      "sourceValue": "ye⁵³",
+      "sourceCharacters": "远",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-180_cloud-1",
+      "row": 2118,
+      "sourceValue": "yŋ²¹",
+      "sourceCharacters": "云",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-181_in-1",
+      "row": 2137,
+      "sourceValue": "tsai⁴⁵",
+      "sourceCharacters": "在",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-182_dirty-1",
+      "row": 2158,
+      "sourceValue": "tsɒ̃²¹",
+      "sourceCharacters": "脏",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-183_how-1",
+      "row": 2184,
+      "sourceValue": "tsaʔ² ti⁴⁵",
+      "sourceCharacters": "怎 底",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-184_narrow-1",
+      "row": 2206,
+      "sourceValue": "tsai⁵³",
+      "sourceCharacters": "窄",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-185_stand-1",
+      "row": 2225,
+      "sourceValue": "tsæ̃⁴⁵",
+      "sourceCharacters": "站",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-189_know-1",
+      "row": 2319,
+      "sourceValue": "tsɿ²¹ tau⁴⁵",
+      "sourceCharacters": "知 道",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-190_grease-2",
+      "row": 2343,
+      "sourceValue": "iəu²¹",
+      "sourceCharacters": "油",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-191_straight-1",
+      "row": 2365,
+      "sourceValue": "tsɛʔ²",
+      "sourceCharacters": "直",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-192_swell-1",
+      "row": 2384,
+      "sourceValue": "tsuŋ⁵³",
+      "sourceCharacters": "肿",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-194_heavy-1",
+      "row": 2423,
+      "sourceValue": "tsuŋ⁴⁵",
+      "sourceCharacters": "重",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-195_scratch-1",
+      "row": 2443,
+      "sourceValue": "tsua²¹",
+      "sourceCharacters": "抓",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-196_claw-1",
+      "row": 2468,
+      "sourceValue": "tsua⁵³",
+      "sourceCharacters": "爪",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-197_turn-1",
+      "row": 2489,
+      "sourceValue": "tsuæ̃⁴⁵",
+      "sourceCharacters": "转",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-198_walk-1",
+      "row": 2517,
+      "sourceValue": "tsəu⁵³",
+      "sourceCharacters": "走",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-199_mouth-1",
+      "row": 2537,
+      "sourceValue": "tsuei⁵³",
+      "sourceCharacters": "嘴",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-200_leftside-1",
+      "row": 2559,
+      "sourceValue": "tsuɤ⁵³ mie²¹",
+      "sourceCharacters": "左 面",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-201_sit-1",
+      "row": 2580,
+      "sourceValue": "tsuɤ⁴⁵",
+      "sourceCharacters": "坐",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-12_sing-1",
+      "row": 2619,
+      "sourceValue": "tsʰɒ̃⁴⁵",
+      "sourceCharacters": "唱",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-13_dust-1",
+      "row": 2638,
+      "sourceValue": "tsʰəŋ²¹ tʰu⁵³",
+      "sourceCharacters": "塵 土",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-14_eat-1",
+      "row": 2664,
+      "sourceValue": "tsʰəʔ²",
+      "sourceCharacters": "吃",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-15_wing-1",
+      "row": 2683,
+      "sourceValue": "tsʰɿ⁴⁵ pɒ̃⁵³",
+      "sourceCharacters": "翅 膀",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-16_worm-1",
+      "row": 2707,
+      "sourceValue": "tsʰuŋ²¹",
+      "sourceCharacters": "蟲",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-17_blow-1",
+      "row": 2726,
+      "sourceValue": "tsʰuei²¹",
+      "sourceCharacters": "吹",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-18_stab-1",
+      "row": 2746,
+      "sourceValue": "tsʰɿ⁴⁵",
+      "sourceCharacters": "刺",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-19_hit-1",
+      "row": 2766,
+      "sourceValue": "ta⁵³",
+      "sourceCharacters": "打",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-20_fight-1",
+      "row": 2787,
+      "sourceValue": "ta⁵³ tɕia⁴⁵",
+      "sourceCharacters": "打 架",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-21_hunt-1",
+      "row": 2809,
+      "sourceValue": "ta⁵³ liəʔ²",
+      "sourceCharacters": "打 獵",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-22_big-1",
+      "row": 2828,
+      "sourceValue": "ta⁴⁵",
+      "sourceCharacters": "大",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-23_dull-1",
+      "row": 2847,
+      "sourceValue": "tai²¹",
+      "sourceCharacters": "呆",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-24_fall-1",
+      "row": 2873,
+      "sourceValue": "tiau⁴⁵",
+      "sourceCharacters": "掉",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-27_short-1",
+      "row": 2936,
+      "sourceValue": "tuæ̃⁵³",
+      "sourceCharacters": "短",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-28_correct-1",
+      "row": 2955,
+      "sourceValue": "tuei⁴⁵",
+      "sourceCharacters": "對",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-29_many-1",
+      "row": 2974,
+      "sourceValue": "tuo²¹",
+      "sourceCharacters": "多",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-31_two-1",
+      "row": 3018,
+      "sourceValue": "ər⁴⁵",
+      "sourceCharacters": "二",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-32_fly-1",
+      "row": 3051,
+      "sourceValue": "fei²¹",
+      "sourceCharacters": "飛",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-33_wind-1",
+      "row": 3070,
+      "sourceValue": "fəŋ²¹",
+      "sourceCharacters": "風",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-34_sew-1",
+      "row": 3089,
+      "sourceValue": "fəŋ²¹",
+      "sourceCharacters": "縫",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-35_rotten-1",
+      "row": 3111,
+      "sourceValue": "fu⁵³ læ̃⁴⁵",
+      "sourceCharacters": "腐 爛",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-36_father-2",
+      "row": 3138,
+      "sourceValue": "fu⁴⁵ tɕʰiŋ²¹",
+      "sourceCharacters": "父 親",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-37_dry-1",
+      "row": 3173,
+      "sourceValue": "kæ̃²¹",
+      "sourceCharacters": "干",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-38_liver-1",
+      "row": 3194,
+      "sourceValue": "kæ̃²¹",
+      "sourceCharacters": "肝",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-39_give-1",
+      "row": 3213,
+      "sourceValue": "kei⁵³",
+      "sourceCharacters": "給",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-40_root-1",
+      "row": 3234,
+      "sourceValue": "kəŋ²¹",
+      "sourceCharacters": "根",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-41_dog-1",
+      "row": 3255,
+      "sourceValue": "kəu⁵³",
+      "sourceCharacters": "狗",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-43_stick-1",
+      "row": 3297,
+      "sourceValue": "kuŋ⁴⁵",
+      "sourceCharacters": "棍",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-45_sea-1",
+      "row": 3348,
+      "sourceValue": "xai⁵³",
+      "sourceCharacters": "海",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-46_good-1",
+      "row": 3369,
+      "sourceValue": "xau⁵³",
+      "sourceCharacters": "好",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-47_drink-1",
+      "row": 3388,
+      "sourceValue": "xəʔ²",
+      "sourceCharacters": "喝",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-48_and-1",
+      "row": 3410,
+      "sourceValue": "xɤ²¹",
+      "sourceCharacters": "和",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-49_river-1",
+      "row": 3429,
+      "sourceValue": "xɤ²¹",
+      "sourceCharacters": "河",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-50_river-1",
+      "row": 3448,
+      "sourceValue": "tɕɪɒ̃²¹",
+      "sourceCharacters": "江",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-51_black-1",
+      "row": 3467,
+      "sourceValue": "xəʔ²",
+      "sourceCharacters": "黑",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-52_red-1",
+      "row": 3486,
+      "sourceValue": "xuŋ²¹",
+      "sourceCharacters": "紅",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-53_thick-1",
+      "row": 3506,
+      "sourceValue": "xəu⁴⁵",
+      "sourceCharacters": "厚",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-54_breathe-1",
+      "row": 3525,
+      "sourceValue": "tsʰuəʔ² tɕʰi⁴⁵",
+      "sourceCharacters": "出 氣",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-55_lake-1",
+      "row": 3548,
+      "sourceValue": "xu²¹",
+      "sourceCharacters": "湖",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-56_flower-1",
+      "row": 3567,
+      "sourceValue": "xua²¹",
+      "sourceCharacters": "花",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-57_bad-1",
+      "row": 3587,
+      "sourceValue": "xuai⁴⁵",
+      "sourceCharacters": "壞",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-58_yellow-1",
+      "row": 3610,
+      "sourceValue": "xuɒ̃²¹",
+      "sourceCharacters": "黃",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-59_ash-1",
+      "row": 3629,
+      "sourceValue": "xuei²¹",
+      "sourceCharacters": "灰",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-61_fire-1",
+      "row": 3668,
+      "sourceValue": "xuɤ⁵³",
+      "sourceCharacters": "火",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-62_egg-1",
+      "row": 3687,
+      "sourceValue": "tɕi²¹ tæ̃⁴⁵",
+      "sourceCharacters": "雞 蛋",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-63_sharp-1",
+      "row": 3706,
+      "sourceValue": "tɕie²¹",
+      "sourceCharacters": "尖",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-64_horn-1",
+      "row": 3725,
+      "sourceValue": "tɕyəʔ²",
+      "sourceCharacters": "角",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-65_foot-1",
+      "row": 3746,
+      "sourceValue": "tɕiau⁵³",
+      "sourceCharacters": "腳",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-68_cut-1",
+      "row": 3806,
+      "sourceValue": "kʰæ̃⁵³",
+      "sourceCharacters": "砍",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-69_see-1",
+      "row": 3828,
+      "sourceValue": "kʰæ̃⁴⁵ tɕie⁴⁵",
+      "sourceCharacters": "看 見",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-70_wide-1",
+      "row": 3849,
+      "sourceValue": "kʰuæ̃²¹",
+      "sourceCharacters": "寬",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-71_tie-1",
+      "row": 3869,
+      "sourceValue": "kʰuŋ⁵³",
+      "sourceCharacters": "捆",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-72_pull-1",
+      "row": 3898,
+      "sourceValue": "la²¹",
+      "sourceCharacters": "拉",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-73_come-1",
+      "row": 3919,
+      "sourceValue": "lai²¹",
+      "sourceCharacters": "來",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-74_old-1",
+      "row": 3938,
+      "sourceValue": "lau⁵³",
+      "sourceCharacters": "老",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-75_cold-1",
+      "row": 3958,
+      "sourceValue": "ləŋ⁵³",
+      "sourceCharacters": "冷",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-76_flow-1",
+      "row": 3981,
+      "sourceValue": "liəu²¹",
+      "sourceCharacters": "流",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-77_path-1",
+      "row": 4002,
+      "sourceValue": "lu⁴⁵",
+      "sourceCharacters": "路",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-78_green-1",
+      "row": 4021,
+      "sourceValue": "ly⁴⁵",
+      "sourceCharacters": "綠",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-79_full-1",
+      "row": 4040,
+      "sourceValue": "mæ̃⁵³",
+      "sourceCharacters": "滿",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-80_name-1",
+      "row": 4061,
+      "sourceValue": "miŋ²¹ tsɿ⁴⁵",
+      "sourceCharacters": "名 字",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-81_mather-1",
+      "row": 4081,
+      "sourceValue": "mu⁵³ tɕʰiŋ²¹",
+      "sourceCharacters": "母 親",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-82_holdtake-1",
+      "row": 4112,
+      "sourceValue": "na²¹",
+      "sourceCharacters": "拿",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-85_there-1",
+      "row": 4177,
+      "sourceValue": "nar⁴⁵",
+      "sourceCharacters": "那",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-86_man-1",
+      "row": 4198,
+      "sourceValue": "næ̃²¹ zəŋ²¹",
+      "sourceCharacters": "男 人",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-87_you-1",
+      "row": 4221,
+      "sourceValue": "ni⁵³",
+      "sourceCharacters": "你",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-88_year-1",
+      "row": 4242,
+      "sourceValue": "nie²¹",
+      "sourceCharacters": "年",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-89_bird-1",
+      "row": 4264,
+      "sourceValue": "niau⁵³",
+      "sourceCharacters": "鳥",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Taiyuan-90_woman-1",
+      "row": 4285,
+      "sourceValue": "ny⁵³ zəŋ²¹",
+      "sourceCharacters": "女 人",
+      "localityId": "taiyuan-jin"
+    },
+    {
+      "id": "liu2007-Jixi-92_fear-1",
+      "row": 35,
+      "sourceValue": "pʰo³⁵",
+      "sourceCharacters": "怕",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-93_skin-1",
+      "row": 57,
+      "sourceValue": "pʰɿ⁴⁴",
+      "sourceCharacters": "皮",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-94_float-2",
+      "row": 81,
+      "sourceValue": "pʰie⁵⁵ fu⁴⁴",
+      "sourceCharacters": "漂 浮",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-95_smooth-1",
+      "row": 104,
+      "sourceValue": "pʰiɑ̃⁴⁴",
+      "sourceCharacters": "平",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-96_wife-2",
+      "row": 131,
+      "sourceValue": "ȵy²¹³ iɑ̃⁴⁴",
+      "sourceCharacters": "女 人",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-99_person-1",
+      "row": 195,
+      "sourceValue": "iɑ̃⁴⁴",
+      "sourceCharacters": "人",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-100_throw-1",
+      "row": 215,
+      "sourceValue": "pʰɤ⁵⁵",
+      "sourceCharacters": "拋",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-2_back-1",
+      "row": 260,
+      "sourceValue": "pa³⁵",
+      "sourceCharacters": "背",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-4_ice-1",
+      "row": 301,
+      "sourceValue": "piɑ̃⁵⁵",
+      "sourceCharacters": "冰",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-9_grass-1",
+      "row": 409,
+      "sourceValue": "tsʰɤ²¹³",
+      "sourceCharacters": "草",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-10_long-1",
+      "row": 428,
+      "sourceValue": "tɕʰiõ⁴⁴",
+      "sourceCharacters": "長",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-104_three-1",
+      "row": 511,
+      "sourceValue": "sɔ⁵⁵",
+      "sourceCharacters": "三",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-108_mountain-1",
+      "row": 595,
+      "sourceValue": "sɔ⁴⁴",
+      "sourceCharacters": "山",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-109_burn-1",
+      "row": 614,
+      "sourceValue": "ɕio⁵⁵",
+      "sourceCharacters": "烧",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-110_few-1",
+      "row": 634,
+      "sourceValue": "ɕie²¹³",
+      "sourceCharacters": "少",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-112_snake-1",
+      "row": 676,
+      "sourceValue": "so⁴⁴",
+      "sourceCharacters": "蛇",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-113_rope-1",
+      "row": 699,
+      "sourceValue": "ɕiɑ̃⁴⁴",
+      "sourceCharacters": "繩",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-118_hand-1",
+      "row": 799,
+      "sourceValue": "si²¹³",
+      "sourceCharacters": "手",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-119_tree-1",
+      "row": 819,
+      "sourceValue": "ɕy³¹",
+      "sourceCharacters": "树",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-121a_countnoun-1",
+      "row": 857,
+      "sourceValue": "su³⁵",
+      "sourceCharacters": "數",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-121b_countverb-1",
+      "row": 876,
+      "sourceValue": "su²¹³",
+      "sourceCharacters": "數",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-123_water-1",
+      "row": 916,
+      "sourceValue": "ɕy²¹³",
+      "sourceCharacters": "水",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-125_sleep-1",
+      "row": 954,
+      "sourceValue": "kʰuɑ̃³⁵",
+      "sourceCharacters": "睏",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-127_say-2",
+      "row": 1001,
+      "sourceValue": "kõ²¹³",
+      "sourceCharacters": "講",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-128_split-1",
+      "row": 1024,
+      "sourceValue": "tɕʰiɔ²¹³",
+      "sourceCharacters": "扯",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-129_die-1",
+      "row": 1047,
+      "sourceValue": "sɿ²¹³",
+      "sourceCharacters": "死",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-130_four-1",
+      "row": 1068,
+      "sourceValue": "sɿ³⁵",
+      "sourceCharacters": "四",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-131_he-1",
+      "row": 1087,
+      "sourceValue": "ki⁴⁴",
+      "sourceCharacters": "渠",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-134_lie-2",
+      "row": 1154,
+      "sourceValue": "tʰõ²¹³",
+      "sourceCharacters": "躺",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-135_day-1",
+      "row": 1175,
+      "sourceValue": "tʰẽ⁵⁵",
+      "sourceCharacters": "天",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-136_sky-1",
+      "row": 1195,
+      "sourceValue": "tʰẽ⁵⁵ kʰuɑ̃⁵⁵",
+      "sourceCharacters": "天 空",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-138_head-1",
+      "row": 1236,
+      "sourceValue": "tʰi⁴⁴",
+      "sourceCharacters": "頭",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-139_hair-1",
+      "row": 1256,
+      "sourceValue": "tʰi⁴⁴ mɤ⁴⁴",
+      "sourceCharacters": "頭 毛",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-141_spit-1",
+      "row": 1302,
+      "sourceValue": "tʰu²¹³",
+      "sourceCharacters": "吐",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-142_push-1",
+      "row": 1322,
+      "sourceValue": "tʰa⁵⁵",
+      "sourceCharacters": "推",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-143_leg-1",
+      "row": 1344,
+      "sourceValue": "tʰa²¹³",
+      "sourceCharacters": "腿",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-145_play-1",
+      "row": 1385,
+      "sourceValue": "sɿ⁵⁵",
+      "sourceCharacters": "嬉",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-148_smell-1",
+      "row": 1450,
+      "sourceValue": "pʰɑ̃³⁵",
+      "sourceCharacters": "碰",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-149_i-1",
+      "row": 1470,
+      "sourceValue": "ɔ²¹³",
+      "sourceCharacters": "我",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-151_five-1",
+      "row": 1511,
+      "sourceValue": "vu²¹³",
+      "sourceCharacters": "五",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-152_fog-1",
+      "row": 1530,
+      "sourceValue": "vu³¹",
+      "sourceCharacters": "霧",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-154_wash-1",
+      "row": 1576,
+      "sourceValue": "si²¹³",
+      "sourceCharacters": "洗",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-155_think-1",
+      "row": 1595,
+      "sourceValue": "ɕiõ²¹³",
+      "sourceCharacters": "想",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-156_small-1",
+      "row": 1614,
+      "sourceValue": "ɕie²¹³",
+      "sourceCharacters": "小",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-157_laugh-1",
+      "row": 1636,
+      "sourceValue": "ɕie³⁵",
+      "sourceCharacters": "笑",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-158_heart-1",
+      "row": 1655,
+      "sourceValue": "ɕiɑ̃⁵⁵",
+      "sourceCharacters": "心",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-159_new-1",
+      "row": 1693,
+      "sourceValue": "ɕiɑ̃⁵⁵",
+      "sourceCharacters": "新",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-160_star-1",
+      "row": 1713,
+      "sourceValue": "ɕiɑ̃⁵⁵ ɕiɑ⁵⁵",
+      "sourceCharacters": "星 星",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-163_squeeze-1",
+      "row": 1774,
+      "sourceValue": "tso³⁵",
+      "sourceCharacters": "榨",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-165_smoke-1",
+      "row": 1815,
+      "sourceValue": "iẽ⁵⁵",
+      "sourceCharacters": "煙",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-166_salt-1",
+      "row": 1834,
+      "sourceValue": "iẽ⁴⁴",
+      "sourceCharacters": "盐",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-168_bite-1",
+      "row": 1874,
+      "sourceValue": "ŋɤ²¹³",
+      "sourceCharacters": "咬",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-171_because-1",
+      "row": 1935,
+      "sourceValue": "iɑ̃⁵⁵ vi⁵⁵",
+      "sourceCharacters": "因 为",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-174_fish-1",
+      "row": 2001,
+      "sourceValue": "ȵy⁴⁴",
+      "sourceCharacters": "鱼",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-176_rain-1",
+      "row": 2044,
+      "sourceValue": "y²¹³",
+      "sourceCharacters": "雨",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-177_round-1",
+      "row": 2063,
+      "sourceValue": "yẽ⁴⁴",
+      "sourceCharacters": "圆",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-178_far-1",
+      "row": 2082,
+      "sourceValue": "yẽ²¹³",
+      "sourceCharacters": "远",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-180_cloud-1",
+      "row": 2122,
+      "sourceValue": "yɑ̃⁴⁴",
+      "sourceCharacters": "云",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-181_in-1",
+      "row": 2141,
+      "sourceValue": "tsʰa³⁵",
+      "sourceCharacters": "在",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-187_this-1",
+      "row": 2281,
+      "sourceValue": "n̩²¹³",
+      "sourceCharacters": "尔",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-190_grease-1",
+      "row": 2349,
+      "sourceValue": "iɵ⁴⁴",
+      "sourceCharacters": "油",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-192_swell-1",
+      "row": 2388,
+      "sourceValue": "tsɑ̃²¹³",
+      "sourceCharacters": "肿",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-194_heavy-1",
+      "row": 2427,
+      "sourceValue": "tsʰɑ̃²¹³",
+      "sourceCharacters": "重",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-195_scratch-1",
+      "row": 2449,
+      "sourceValue": "tso⁵⁵",
+      "sourceCharacters": "抓",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-197_turn-1",
+      "row": 2495,
+      "sourceValue": "tɕyẽ²¹³",
+      "sourceCharacters": "转",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-198_walk-1",
+      "row": 2521,
+      "sourceValue": "xẽ⁴⁴",
+      "sourceCharacters": "行",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-199_mouth-1",
+      "row": 2543,
+      "sourceValue": "tɕy²¹³",
+      "sourceCharacters": "嘴",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-201_sit-1",
+      "row": 2584,
+      "sourceValue": "kʰui²¹³",
+      "sourceCharacters": "跪",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-11_guts-1",
+      "row": 2604,
+      "sourceValue": "tɕʰiõ⁵⁵",
+      "sourceCharacters": "腸",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-12_sing-1",
+      "row": 2623,
+      "sourceValue": "tɕʰiõ³⁵",
+      "sourceCharacters": "唱",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-16_worm-1",
+      "row": 2711,
+      "sourceValue": "tsʰɑ̃⁴⁴",
+      "sourceCharacters": "蟲",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-17_blow-1",
+      "row": 2730,
+      "sourceValue": "tɕʰy⁵⁵",
+      "sourceCharacters": "吹",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-19_hit-1",
+      "row": 2770,
+      "sourceValue": "tɔ²¹³",
+      "sourceCharacters": "打",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-22_big-1",
+      "row": 2832,
+      "sourceValue": "tʰɵ³¹",
+      "sourceCharacters": "大",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-27_short-1",
+      "row": 2940,
+      "sourceValue": "tɑ̃²¹³",
+      "sourceCharacters": "短",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-28_correct-1",
+      "row": 2959,
+      "sourceValue": "ta³⁵",
+      "sourceCharacters": "對",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-29_many-1",
+      "row": 2978,
+      "sourceValue": "tɵ⁵⁵",
+      "sourceCharacters": "多",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-31_two-1",
+      "row": 3026,
+      "sourceValue": "ẽ³¹",
+      "sourceCharacters": "二",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-32_fly-1",
+      "row": 3055,
+      "sourceValue": "fi⁵⁵",
+      "sourceCharacters": "飛",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-33_wind-1",
+      "row": 3074,
+      "sourceValue": "fɑ̃⁵⁵",
+      "sourceCharacters": "風",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-34_sew-1",
+      "row": 3093,
+      "sourceValue": "fɑ̃⁴⁴",
+      "sourceCharacters": "縫",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-35_rotten-1",
+      "row": 3116,
+      "sourceValue": "nɔ³¹",
+      "sourceCharacters": "爛",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-37_dry-1",
+      "row": 3177,
+      "sourceValue": "kɔ⁵⁵",
+      "sourceCharacters": "干",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-38_liver-1",
+      "row": 3198,
+      "sourceValue": "kɔ⁵⁵",
+      "sourceCharacters": "肝",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-40_root-1",
+      "row": 3238,
+      "sourceValue": "kɑ̃⁵⁵",
+      "sourceCharacters": "根",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-41_dog-1",
+      "row": 3259,
+      "sourceValue": "ki²¹³",
+      "sourceCharacters": "狗",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-43_stick-1",
+      "row": 3302,
+      "sourceValue": "kuɑ̃³⁵ tsɿ⁵³",
+      "sourceCharacters": "棍 子",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-45_sea-1",
+      "row": 3352,
+      "sourceValue": "xa²¹³",
+      "sourceCharacters": "海",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-46_good-1",
+      "row": 3373,
+      "sourceValue": "xɤ²¹³",
+      "sourceCharacters": "好",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-47_drink-1",
+      "row": 3392,
+      "sourceValue": "xɤ⁵⁵",
+      "sourceCharacters": "喝",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-49_river-1",
+      "row": 3433,
+      "sourceValue": "xɵ⁴⁴",
+      "sourceCharacters": "河",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-50_river-1",
+      "row": 3452,
+      "sourceValue": "kõ⁵⁵",
+      "sourceCharacters": "江",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-52_red-1",
+      "row": 3490,
+      "sourceValue": "fɑ̃⁴⁴",
+      "sourceCharacters": "紅",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-53_thick-1",
+      "row": 3510,
+      "sourceValue": "xi²¹³",
+      "sourceCharacters": "厚",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-55_lake-1",
+      "row": 3552,
+      "sourceValue": "fu⁴⁴",
+      "sourceCharacters": "湖",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-57_bad-1",
+      "row": 3591,
+      "sourceValue": "vɔ³¹",
+      "sourceCharacters": "壞",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-58_yellow-1",
+      "row": 3614,
+      "sourceValue": "õ⁴⁴",
+      "sourceCharacters": "黃",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-59_ash-1",
+      "row": 3633,
+      "sourceValue": "fa⁵⁵",
+      "sourceCharacters": "灰",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-61_fire-1",
+      "row": 3672,
+      "sourceValue": "xɵ²¹³",
+      "sourceCharacters": "火",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-63_sharp-1",
+      "row": 3710,
+      "sourceValue": "tsẽ⁵⁵",
+      "sourceCharacters": "尖",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-70_wide-1",
+      "row": 3853,
+      "sourceValue": "kʰuɔ⁵⁵",
+      "sourceCharacters": "寬",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-71_tie-1",
+      "row": 3876,
+      "sourceValue": "põ²¹³",
+      "sourceCharacters": "綁",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-72_pull-1",
+      "row": 3902,
+      "sourceValue": "lɔ⁵⁵",
+      "sourceCharacters": "拉",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-73_come-1",
+      "row": 3923,
+      "sourceValue": "na⁴⁴",
+      "sourceCharacters": "來",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-74_old-1",
+      "row": 3942,
+      "sourceValue": "nɤ²¹³",
+      "sourceCharacters": "老",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-75_cold-1",
+      "row": 3962,
+      "sourceValue": "nẽ²¹³",
+      "sourceCharacters": "冷",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-76_flow-1",
+      "row": 3986,
+      "sourceValue": "ni⁴⁴",
+      "sourceCharacters": "流",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-77_path-1",
+      "row": 4006,
+      "sourceValue": "nu³¹",
+      "sourceCharacters": "路",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-79_full-1",
+      "row": 4045,
+      "sourceValue": "mɑ̃²¹³",
+      "sourceCharacters": "滿",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-81_mather-3",
+      "row": 4088,
+      "sourceValue": "ȵiõ⁴⁴",
+      "sourceCharacters": "娘",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-82_holdtake-1",
+      "row": 4116,
+      "sourceValue": "tɔ⁵⁵",
+      "sourceCharacters": "擔",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-84_that-1",
+      "row": 4160,
+      "sourceValue": "na³¹",
+      "sourceCharacters": "那",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-87_you-1",
+      "row": 4225,
+      "sourceValue": "n̩²¹³",
+      "sourceCharacters": "你",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-88_year-1",
+      "row": 4247,
+      "sourceValue": "ȵie⁴⁴",
+      "sourceCharacters": "年",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Jixi-89_bird-1",
+      "row": 4270,
+      "sourceValue": "ȵie²¹³",
+      "sourceCharacters": "鳥",
+      "localityId": "jixi-hui"
+    },
+    {
+      "id": "liu2007-Guilin-91_vomit-1",
+      "row": 22,
+      "sourceValue": "tʰu²⁵",
+      "sourceCharacters": "吐",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-95_smooth-1",
+      "row": 111,
+      "sourceValue": "pei²²",
+      "sourceCharacters": "平",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-96_wife-1",
+      "row": 142,
+      "sourceValue": "lɑu²³ puo²²",
+      "sourceCharacters": "老 婆",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-98_hot-1",
+      "row": 183,
+      "sourceValue": "lie⁵⁵",
+      "sourceCharacters": "熱",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-99_person-1",
+      "row": 202,
+      "sourceValue": "liŋ²²",
+      "sourceCharacters": "人",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-100_throw-1",
+      "row": 225,
+      "sourceValue": "tiou⁴²",
+      "sourceCharacters": "丟",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-2_back-1",
+      "row": 267,
+      "sourceValue": "pei²⁵",
+      "sourceCharacters": "背",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-4_ice-1",
+      "row": 309,
+      "sourceValue": "piŋ⁴²",
+      "sourceCharacters": "冰",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-5_neck-1",
+      "row": 332,
+      "sourceValue": "kei²³",
+      "sourceCharacters": "頸",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-6_thin-1",
+      "row": 351,
+      "sourceValue": "pɑu²²",
+      "sourceCharacters": "薄",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-7_not-1",
+      "row": 370,
+      "sourceValue": "pu²²",
+      "sourceCharacters": "不",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-8_rub-1",
+      "row": 397,
+      "sourceValue": "mɑ⁵⁵",
+      "sourceCharacters": "抹",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-9_grass-1",
+      "row": 416,
+      "sourceValue": "tsʰɑu²³",
+      "sourceCharacters": "草",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-10_long-1",
+      "row": 435,
+      "sourceValue": "tsɑŋ²²",
+      "sourceCharacters": "長",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-101_flesh-1",
+      "row": 454,
+      "sourceValue": "iou⁵⁵",
+      "sourceCharacters": "肉",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-102_if-1",
+      "row": 475,
+      "sourceValue": "y²² kuo²³",
+      "sourceCharacters": "如 果",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-103_breasts-1",
+      "row": 499,
+      "sourceValue": "lai²³ fɑŋ²²",
+      "sourceCharacters": "奶 房",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-104_three-1",
+      "row": 518,
+      "sourceValue": "sã⁴²",
+      "sourceCharacters": "三",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-105_woods-1",
+      "row": 541,
+      "sourceValue": "ɕy²¹ liŋ²²",
+      "sourceCharacters": "树 林",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-108_mountain-1",
+      "row": 602,
+      "sourceValue": "sã⁴²",
+      "sourceCharacters": "山",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-109_burn-1",
+      "row": 621,
+      "sourceValue": "sɑu⁴²",
+      "sourceCharacters": "烧",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-110_few-1",
+      "row": 641,
+      "sourceValue": "sɑu²³",
+      "sourceCharacters": "少",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-114_louse-1",
+      "row": 728,
+      "sourceValue": "sɤ⁵⁵",
+      "sourceCharacters": "虱",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-115_wet-1",
+      "row": 747,
+      "sourceValue": "ɕi⁵⁵",
+      "sourceCharacters": "湿",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-117_stone-1",
+      "row": 787,
+      "sourceValue": "sei²² tai²²",
+      "sourceCharacters": "石 頭",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-118_hand-1",
+      "row": 807,
+      "sourceValue": "sou²³",
+      "sourceCharacters": "手",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-119_tree-1",
+      "row": 826,
+      "sourceValue": "ɕy²¹",
+      "sourceCharacters": "树",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-120_bark-1",
+      "row": 845,
+      "sourceValue": "ɕy²¹ pi²²",
+      "sourceCharacters": "树 皮",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-121a_countnoun-1",
+      "row": 864,
+      "sourceValue": "su²⁵",
+      "sourceCharacters": "數",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-121b_countverb-1",
+      "row": 883,
+      "sourceValue": "su²⁵",
+      "sourceCharacters": "數",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-123_water-1",
+      "row": 923,
+      "sourceValue": "suei²³",
+      "sourceCharacters": "水",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-126_suck-1",
+      "row": 983,
+      "sourceValue": "suo⁵⁵",
+      "sourceCharacters": "嗍",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-127_say-1",
+      "row": 1009,
+      "sourceValue": "kɑŋ²³",
+      "sourceCharacters": "講",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-129_die-1",
+      "row": 1056,
+      "sourceValue": "sɿ²³",
+      "sourceCharacters": "死",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-130_four-1",
+      "row": 1075,
+      "sourceValue": "sɿ²⁵",
+      "sourceCharacters": "四",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-133_sun-1",
+      "row": 1138,
+      "sourceValue": "lie⁵⁵ tai²²",
+      "sourceCharacters": "日 頭",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-134_lie-1",
+      "row": 1163,
+      "sourceValue": "tʰɑŋ²³",
+      "sourceCharacters": "躺",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-135_day-1",
+      "row": 1182,
+      "sourceValue": "tʰiã⁴²",
+      "sourceCharacters": "天",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-138_head-1",
+      "row": 1244,
+      "sourceValue": "tai²²",
+      "sourceCharacters": "頭",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-139_hair-1",
+      "row": 1264,
+      "sourceValue": "tai²² mau²²",
+      "sourceCharacters": "頭 毛",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-140_earth-1",
+      "row": 1290,
+      "sourceValue": "tʰu²³ ti²¹",
+      "sourceCharacters": "土 地",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-141_spit-1",
+      "row": 1309,
+      "sourceValue": "tʰu²³",
+      "sourceCharacters": "吐",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-142_push-1",
+      "row": 1330,
+      "sourceValue": "tʰei⁴²",
+      "sourceCharacters": "推",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-149_i-1",
+      "row": 1477,
+      "sourceValue": "uo²³",
+      "sourceCharacters": "我",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-151_five-1",
+      "row": 1518,
+      "sourceValue": "ŋ̍²³",
+      "sourceCharacters": "五",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-153_knee-1",
+      "row": 1564,
+      "sourceValue": "ɕy⁵⁵ tai²²",
+      "sourceCharacters": "膝 頭",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-154_wash-1",
+      "row": 1583,
+      "sourceValue": "ɕi²³",
+      "sourceCharacters": "洗",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-155_think-1",
+      "row": 1602,
+      "sourceValue": "ɕiɑŋ²³",
+      "sourceCharacters": "想",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-156_small-1",
+      "row": 1622,
+      "sourceValue": "ɕi²⁴",
+      "sourceCharacters": "細",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-157_laugh-1",
+      "row": 1643,
+      "sourceValue": "ɕiɑu²⁵",
+      "sourceCharacters": "笑",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-158_heart-1",
+      "row": 1662,
+      "sourceValue": "ɕiŋ⁴²",
+      "sourceCharacters": "心",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-159_new-1",
+      "row": 1700,
+      "sourceValue": "ɕiŋ⁴²",
+      "sourceCharacters": "新",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-161_snow-1",
+      "row": 1739,
+      "sourceValue": "ɕye⁵⁵",
+      "sourceCharacters": "雪",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-162_blood-1",
+      "row": 1758,
+      "sourceValue": "ɕye⁵⁵",
+      "sourceCharacters": "血",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-163_squeeze-1",
+      "row": 1783,
+      "sourceValue": "ŋa⁵⁵",
+      "sourceCharacters": "壓",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-165_smoke-1",
+      "row": 1822,
+      "sourceValue": "iã⁴²",
+      "sourceCharacters": "煙",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-166_salt-1",
+      "row": 1841,
+      "sourceValue": "iã²²",
+      "sourceCharacters": "盐",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-168_bite-1",
+      "row": 1881,
+      "sourceValue": "ŋɑu²³",
+      "sourceCharacters": "咬",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-170_one-1",
+      "row": 1921,
+      "sourceValue": "i⁵⁵",
+      "sourceCharacters": "一",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-171_because-1",
+      "row": 1942,
+      "sourceValue": "iŋ⁴² uei²²",
+      "sourceCharacters": "因 为",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-172_swim-1",
+      "row": 1967,
+      "sourceValue": "iou²² suei²³",
+      "sourceCharacters": "游 水",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-175_feather-1",
+      "row": 2031,
+      "sourceValue": "mɑu²²",
+      "sourceCharacters": "毛",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-176_rain-1",
+      "row": 2051,
+      "sourceValue": "y²³",
+      "sourceCharacters": "雨",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-177_round-1",
+      "row": 2070,
+      "sourceValue": "yã²²",
+      "sourceCharacters": "圆",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-178_far-1",
+      "row": 2089,
+      "sourceValue": "yã²³",
+      "sourceCharacters": "远",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-180_cloud-1",
+      "row": 2129,
+      "sourceValue": "yŋ²²",
+      "sourceCharacters": "云",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-181_in-1",
+      "row": 2149,
+      "sourceValue": "tsai²³",
+      "sourceCharacters": "在",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-183_how-1",
+      "row": 2197,
+      "sourceValue": "y²² xuo²²",
+      "sourceCharacters": "如 何",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-188_here-1",
+      "row": 2311,
+      "sourceValue": "i²⁵ kuo⁵⁵ ti²¹ fɑŋ²²",
+      "sourceCharacters": "这 个 地 方",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-190_grease-1",
+      "row": 2358,
+      "sourceValue": "pã²³ iou²²",
+      "sourceCharacters": "板 油",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-191_straight-1",
+      "row": 2376,
+      "sourceValue": "tsɿ²²",
+      "sourceCharacters": "直",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-192_swell-1",
+      "row": 2396,
+      "sourceValue": "tsuɤŋ²³",
+      "sourceCharacters": "肿",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-194_heavy-1",
+      "row": 2434,
+      "sourceValue": "tsuɤŋ²³",
+      "sourceCharacters": "重",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-195_scratch-1",
+      "row": 2459,
+      "sourceValue": "tsuo⁵⁵",
+      "sourceCharacters": "捉",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-197_turn-1",
+      "row": 2507,
+      "sourceValue": "tsuã²³",
+      "sourceCharacters": "转",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-198_walk-1",
+      "row": 2528,
+      "sourceValue": "xei²²",
+      "sourceCharacters": "行",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-199_mouth-1",
+      "row": 2550,
+      "sourceValue": "tsuei²³",
+      "sourceCharacters": "嘴",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-201_sit-1",
+      "row": 2591,
+      "sourceValue": "tsuo²³",
+      "sourceCharacters": "坐",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-12_sing-1",
+      "row": 2630,
+      "sourceValue": "tsʰɑŋ²⁵",
+      "sourceCharacters": "唱",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-16_worm-1",
+      "row": 2718,
+      "sourceValue": "tsuɤŋ²²",
+      "sourceCharacters": "蟲",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-17_blow-1",
+      "row": 2737,
+      "sourceValue": "tsʰuei⁴²",
+      "sourceCharacters": "吹",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-18_stab-1",
+      "row": 2758,
+      "sourceValue": "tsʰɿ²⁵",
+      "sourceCharacters": "刺",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-20_fight-1",
+      "row": 2801,
+      "sourceValue": "tɑ²³ kɑ²⁵",
+      "sourceCharacters": "打 架",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-21_hunt-1",
+      "row": 2820,
+      "sourceValue": "tɑ²³ lie²³",
+      "sourceCharacters": "打 獵",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-22_big-1",
+      "row": 2839,
+      "sourceValue": "tai²¹",
+      "sourceCharacters": "大",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-23_dull-1",
+      "row": 2864,
+      "sourceValue": "tai⁴²",
+      "sourceCharacters": "呆",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-25_animal-1",
+      "row": 2908,
+      "sourceValue": "tɤn²⁵ u²²",
+      "sourceCharacters": "動 物",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-27_short-1",
+      "row": 2947,
+      "sourceValue": "tuã²³",
+      "sourceCharacters": "短",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-28_correct-1",
+      "row": 2966,
+      "sourceValue": "tei²⁵",
+      "sourceCharacters": "對",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-29_many-1",
+      "row": 2985,
+      "sourceValue": "tuo⁴²",
+      "sourceCharacters": "多",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-31_two-1",
+      "row": 3041,
+      "sourceValue": "i²¹",
+      "sourceCharacters": "二",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-32_fly-1",
+      "row": 3062,
+      "sourceValue": "fei⁴²",
+      "sourceCharacters": "飛",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-33_wind-1",
+      "row": 3081,
+      "sourceValue": "fɤn⁴²",
+      "sourceCharacters": "風",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-34_sew-1",
+      "row": 3102,
+      "sourceValue": "fɤn²²",
+      "sourceCharacters": "縫",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-35_rotten-1",
+      "row": 3124,
+      "sourceValue": "fu²³ lã²¹",
+      "sourceCharacters": "腐 爛",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-37_dry-1",
+      "row": 3185,
+      "sourceValue": "kã²³",
+      "sourceCharacters": "干",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-38_liver-1",
+      "row": 3205,
+      "sourceValue": "kuɑ⁴²",
+      "sourceCharacters": "肝",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-40_root-1",
+      "row": 3247,
+      "sourceValue": "kɤn⁴²",
+      "sourceCharacters": "根",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-41_dog-1",
+      "row": 3266,
+      "sourceValue": "kai²³",
+      "sourceCharacters": "狗",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-42_bone-1",
+      "row": 3288,
+      "sourceValue": "ku⁵⁵ tai²²",
+      "sourceCharacters": "骨 頭",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-45_sea-1",
+      "row": 3359,
+      "sourceValue": "xai²³",
+      "sourceCharacters": "海",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-46_good-1",
+      "row": 3380,
+      "sourceValue": "xɑu²³",
+      "sourceCharacters": "好",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-48_and-1",
+      "row": 3421,
+      "sourceValue": "kɤn⁴²",
+      "sourceCharacters": "跟",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-49_river-1",
+      "row": 3440,
+      "sourceValue": "xuo²²",
+      "sourceCharacters": "河",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-50_river-1",
+      "row": 3459,
+      "sourceValue": "tɕiɑŋ⁴²",
+      "sourceCharacters": "江",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-51_black-1",
+      "row": 3478,
+      "sourceValue": "xei⁵⁵",
+      "sourceCharacters": "黑",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-52_red-1",
+      "row": 3497,
+      "sourceValue": "xɤn²²",
+      "sourceCharacters": "紅",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-53_thick-1",
+      "row": 3517,
+      "sourceValue": "xai²⁵ ɕi²²",
+      "sourceCharacters": "厚 實",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-55_lake-1",
+      "row": 3559,
+      "sourceValue": "fu²²",
+      "sourceCharacters": "湖",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-57_bad-1",
+      "row": 3601,
+      "sourceValue": "fai²¹",
+      "sourceCharacters": "壞",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-58_yellow-1",
+      "row": 3621,
+      "sourceValue": "uɑŋ²²",
+      "sourceCharacters": "黃",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-59_ash-1",
+      "row": 3640,
+      "sourceValue": "fei⁴²",
+      "sourceCharacters": "灰",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-61_fire-1",
+      "row": 3679,
+      "sourceValue": "xuo²³",
+      "sourceCharacters": "火",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-62_egg-1",
+      "row": 3698,
+      "sourceValue": "tɕi⁴² tã²¹",
+      "sourceCharacters": "雞 蛋",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-63_sharp-1",
+      "row": 3717,
+      "sourceValue": "tɕiã⁴²",
+      "sourceCharacters": "尖",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-64_horn-1",
+      "row": 3737,
+      "sourceValue": "kɑu⁵⁵",
+      "sourceCharacters": "角",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-67_near-1",
+      "row": 3797,
+      "sourceValue": "tɕiŋ²⁵",
+      "sourceCharacters": "進",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-68_cut-1",
+      "row": 3818,
+      "sourceValue": "kʰã²³",
+      "sourceCharacters": "砍",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-70_wide-1",
+      "row": 3860,
+      "sourceValue": "kʰuã⁴²",
+      "sourceCharacters": "寬",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-71_tie-1",
+      "row": 3888,
+      "sourceValue": "kʰuɤŋ²²",
+      "sourceCharacters": "捆",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-72_pull-1",
+      "row": 3911,
+      "sourceValue": "tʰuo⁴²",
+      "sourceCharacters": "拖",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-73_come-1",
+      "row": 3930,
+      "sourceValue": "lai²²",
+      "sourceCharacters": "來",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-74_old-1",
+      "row": 3949,
+      "sourceValue": "lɑu²³",
+      "sourceCharacters": "老",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-75_cold-1",
+      "row": 3969,
+      "sourceValue": "lei²³",
+      "sourceCharacters": "冷",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-76_flow-1",
+      "row": 3993,
+      "sourceValue": "liou²²",
+      "sourceCharacters": "流",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-77_path-1",
+      "row": 4013,
+      "sourceValue": "lu²¹",
+      "sourceCharacters": "路",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-78_green-1",
+      "row": 4032,
+      "sourceValue": "liou⁵⁵",
+      "sourceCharacters": "綠",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-79_full-1",
+      "row": 4052,
+      "sourceValue": "mã²³",
+      "sourceCharacters": "滿",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-80_name-1",
+      "row": 4072,
+      "sourceValue": "mei²² tsɿ²¹",
+      "sourceCharacters": "名 字",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-82_holdtake-1",
+      "row": 4124,
+      "sourceValue": "kei²²",
+      "sourceCharacters": "給",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-86_man-1",
+      "row": 4212,
+      "sourceValue": "lã²² liŋ²²",
+      "sourceCharacters": "男 人",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-87_you-1",
+      "row": 4232,
+      "sourceValue": "lio²³",
+      "sourceCharacters": "你",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-88_year-1",
+      "row": 4254,
+      "sourceValue": "liã²²",
+      "sourceCharacters": "年",
+      "localityId": "guilin-pinghua"
+    },
+    {
+      "id": "liu2007-Guilin-89_bird-1",
+      "row": 4277,
+      "sourceValue": "tiɑu²³",
+      "sourceCharacters": "鳥",
+      "localityId": "guilin-pinghua"
+    }
+  ],
+  "rejected": {
+    "taiyuan-jin": {
+      "tone transition, neutral tone or marked reading": 28,
+      "annotated or edited form": 26,
+      "peer-review character hold": 2,
+      "additional alternative": 4,
+      "unresolved written form": 2
+    },
+    "jixi-hui": {
+      "annotated or edited form": 24,
+      "tone transition, neutral tone or marked reading": 76,
+      "unresolved written form": 3,
+      "peer-review character hold": 3,
+      "additional alternative": 2
+    },
+    "guilin-pinghua": {
+      "unsupported source vowel ᴀ": 20,
+      "tone transition, neutral tone or marked reading": 25,
+      "annotated or edited form": 15,
+      "unresolved written form": 9
+    }
+  },
+  "peerReviewHolds": {
+    "Jixi-39_give-1": "Missing-character placeholder 囗; no written headword established.",
+    "Jixi-185_stand-1": "乃豈 may encode a decomposed rare character; one syllable, unresolved notation.",
+    "Taiyuan-100_throw-1": "Source character 仍 contradicts throw gloss; possible typo, not silently corrected.",
+    "Taiyuan-67_near-1": "Source character 進 contradicts near gloss; possible typo, not silently corrected.",
+    "Jixi-67_near-1": "Source character 進 contradicts near gloss; possible typo, not silently corrected."
+  }
+}

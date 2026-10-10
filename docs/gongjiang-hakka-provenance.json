@@ -1,0 +1,237 @@
+{
+  "status": "Reviewed bounded factual selection",
+  "source": {
+    "author": "Wendi Xue",
+    "year": 2023,
+    "title": "Uncle-type Kinship Terms in Sinitic Languages: An NSM-based Semantic Typological Approach",
+    "institution": "Australian National University",
+    "doi": "10.25911/QAKP-6V62",
+    "url": "https://openresearch-repository.anu.edu.au/server/api/core/bitstreams/5a3fa239-4e92-4217-861b-e88d6b33d9c3/content",
+    "rights": "Copyright retained; all rights reserved. Bounded factual lexical IPA/meaning selection only. No prose, tables, scans or audio republished; no CC grant assumed.",
+    "pdfSha256": "2d92836eef9ff60a56c683bdaa2744362379c8be4ec8997a08e0117d6b43d643"
+  },
+  "scope": {
+    "place": "Gongjiang Town, Yudu County, Jiangxi",
+    "evidencePage": 118,
+    "statement": "The study says its Yudu uncle terms chiefly reflect the traditional prestige variety spoken in Gongjiang Town, citing Xie 1998. It assigns Yudu to Yu-Xin Hakka. Town reference, not an assertion of uniform speech throughout the county.",
+    "method": "Literature-based terms checked with consultants; p.80 says Yudu data fall within the varieties verified online during2018–2022. Table3-3,p.82 lists YDH-1, a male in his30s, as a key informant, not an exhaustive consultant count. The verification period is not an item recording date. No audio is supplied with this selection.",
+    "notation": "Section 3.3.3 p.83 explicitly calls the superscript numbers tone values, generally disregarding sandhi unless necessary. Retain single 5 as supplied, never expand to 55. Zero-containing forms held because the key does not explain zero.",
+    "register": "Referential kinship terms; source excludes terms of address and non-kin uses (p.83)."
+  },
+  "records": [
+    {
+      "id": "gongjiang-hakka-xue2023-father-elder-brother-reduplicated",
+      "han": "伯伯",
+      "sourceForm": "paʔ⁵paʔ⁵",
+      "ipa": "[paʔ⁵ paʔ⁵]",
+      "english": "father’s elder brother",
+      "sourcePage": 136,
+      "pdfPage": 155,
+      "sourceLocator": "Table 5-1, Yudu row",
+      "note": "",
+      "meaningPracticeExclude": false
+    },
+    {
+      "id": "gongjiang-hakka-xue2023-father-elder-brother-big",
+      "han": "大伯",
+      "sourceForm": "tʰæ⁴²paʔ⁵",
+      "ipa": "[tʰæ⁴² paʔ⁵]",
+      "english": "father’s elder brother",
+      "sourcePage": 136,
+      "pdfPage": 155,
+      "sourceLocator": "Table 5-1, Yudu row",
+      "note": "",
+      "meaningPracticeExclude": false
+    },
+    {
+      "id": "gongjiang-hakka-xue2023-father-elder-brother-old",
+      "han": "伯老",
+      "sourceForm": "paʔ⁵lɔ³⁵",
+      "ipa": "[paʔ⁵ lɔ³⁵]",
+      "english": "father’s elder brother",
+      "sourcePage": 136,
+      "pdfPage": 155,
+      "sourceLocator": "Table 5-1, Yudu row",
+      "note": "",
+      "meaningPracticeExclude": false
+    },
+    {
+      "id": "gongjiang-hakka-xue2023-father-younger-brother",
+      "han": "叔",
+      "sourceForm": "ʂuʔ⁵",
+      "ipa": "[ʂuʔ⁵]",
+      "english": "father’s younger brother",
+      "sourcePage": 209,
+      "pdfPage": 228,
+      "sourceLocator": "Table 6-1, Yudu row",
+      "note": "",
+      "meaningPracticeExclude": false
+    },
+    {
+      "id": "gongjiang-hakka-xue2023-father-younger-brother-old",
+      "han": "叔老",
+      "sourceForm": "ʂuʔ⁵lɔ³⁵",
+      "ipa": "[ʂuʔ⁵ lɔ³⁵]",
+      "english": "father’s younger brother",
+      "sourcePage": 209,
+      "pdfPage": 228,
+      "sourceLocator": "Table 6-1, Yudu row",
+      "note": "",
+      "meaningPracticeExclude": false
+    },
+    {
+      "id": "gongjiang-hakka-xue2023-elder-brother",
+      "han": "老伯",
+      "sourceForm": "lɔ³⁵paʔ⁵",
+      "ipa": "[lɔ³⁵ paʔ⁵]",
+      "english": "elder brother",
+      "sourcePage": 201,
+      "pdfPage": 220,
+      "sourceLocator": "Section 5.3.5, final paragraph",
+      "note": "The source separately discusses the elder-brother sense; this selection is not an exhaustive definition.",
+      "meaningPracticeExclude": false
+    },
+    {
+      "id": "gongjiang-hakka-xue2023-wife-elder-brother",
+      "han": "内兄",
+      "sourceForm": "lui⁴²ɕiəŋ³¹",
+      "ipa": "[lui⁴² ɕiəŋ³¹]",
+      "english": "wife’s elder brother",
+      "sourcePage": 354,
+      "pdfPage": 373,
+      "sourceLocator": "Paragraph above Table 7-20",
+      "note": "Page 355 describes this as a refined, literary expression.",
+      "meaningPracticeExclude": false
+    },
+    {
+      "id": "gongjiang-hakka-xue2023-wife-brother",
+      "han": "老婆舅",
+      "sourceForm": "lɔ³⁵pʰɤ⁴⁴tɕʰiu³¹",
+      "ipa": "[lɔ³⁵ pʰɤ⁴⁴ tɕʰiu³¹]",
+      "english": "wife’s brother",
+      "sourcePage": 354,
+      "pdfPage": 373,
+      "sourceLocator": "Table 7-20, Yudu WB cell",
+      "note": "The source gives the broader sense wife’s brother, without specifying elder or younger.",
+      "meaningPracticeExclude": true
+    }
+  ],
+  "held": [
+    {
+      "han": "内弟",
+      "sourceForm": "lui⁴²thi³¹",
+      "page": 354,
+      "reason": "Source baseline h in thi differs from explicitly superscript aspiration elsewhere. Hold pending interpretation; do not silently normalize."
+    },
+    {
+      "han": "爷老",
+      "sourceForm": "ia⁴⁴lɔ⁰",
+      "reason": "Unexplained zero notation."
+    },
+    {
+      "han": "大伯子",
+      "sourceForm": "ʰæ⁴²paʔ⁵tsɿ⁰",
+      "page": 200,
+      "reason": "Unexplained zero; source also lacks initial t in this printed form."
+    },
+    {
+      "han": "小叔子",
+      "sourceForm": "siɔ³⁵ʂuʔ⁵tsɿ⁰",
+      "reason": "Unexplained zero notation."
+    },
+    {
+      "han": "母舅",
+      "sourceForm": "məŋ³¹tɕʰiu⁰",
+      "page": 354,
+      "reason": "Unexplained zero notation."
+    },
+    {
+      "han": "舅舅",
+      "sourceForm": "tɕʰiu³¹tɕʰiu⁰",
+      "reason": "Unexplained zero notation."
+    },
+    {
+      "han": "舅公子",
+      "sourceForm": "tɕʰiu³¹kəŋ³¹tsɿ⁰",
+      "page": 354,
+      "reason": "Unexplained zero notation."
+    }
+  ],
+  "candidateSha256": "708d7f8863fa392021e8a55585d25f854e75776a147a26ee5e4c43a9766a25c1",
+  "independentReview": {
+    "reviewer": "min_reading_depth",
+    "candidateSha256": "708d7f8863fa392021e8a55585d25f854e75776a147a26ee5e4c43a9766a25c1",
+    "recordsReviewed": 8,
+    "result": "Pass: all eight selected Han/IPA/meaning joins match rendered source pages.",
+    "images": [
+      "xue2023-pdf102.png",
+      "xue2023-pdf137.png",
+      "xue2023-pdf155.png",
+      "xue2023-pdf220.png",
+      "xue2023-pdf228.png",
+      "xue2023-pdf373.png",
+      "xue2023-pdf374.png"
+    ],
+    "checks": [
+      "p83 explicitly uses IPA and says superscript numbers are tone values, generally excluding sandhi; retain single5 without doubling.",
+      "p118 scopes Yudu data chiefly to traditional prestige variety of Gongjiang town. Do not label every source form a uniquely timestamped recording or uniform county speech.",
+      "伯伯/大伯/伯老 match father elder brother table; 叔/叔老 match father younger brother table.",
+      "p201 explicitly attests reversed 老伯 for elder brother, not an inferred literal rearrangement.",
+      "内兄 matches wife elder brother; p355 qualifies nei+bother forms as originally refined/literary, so preserve register.",
+      "老婆舅 broad wife brother overlaps narrower内兄; meaningPracticeExclude true is appropriate.",
+      "Baselineh in held内弟 remains unresolved. All unexplained0 forms remain excluded.",
+      "Copyright retained: bounded factual eight examples only; no scans/table/prose republication."
+    ],
+    "limits": [
+      "This pass verifies selected renderings and stated sample scope; not all thesis kinship terms.",
+      "No map anchor or external cultural source audit yet."
+    ]
+  },
+  "geography": {
+    "coordinates": [
+      115.4128,
+      25.96422
+    ],
+    "sourceUrl": "https://www.wikidata.org/wiki/Q14570698",
+    "cache": ".evidence/hakka-empty-next/gongjiang-wikidata.json",
+    "scope": "Approximate public Gongjiang town anchor; not an interview site or private address."
+  },
+  "cultureSources": [
+    {
+      "title": "Yudu County government · Long March history museum · 5 June 2026",
+      "url": "https://www.yudu.gov.cn/ydxxxgk/c108277/202606/5d09e126b6544fcfb73be519b0bbe11d.shtml"
+    },
+    {
+      "title": "Ganzhou government · Jinqiao wetland and recreation · 3 June 2026",
+      "url": "https://www.ganzhou.gov.cn/gzszf/c100022/202606/cfca1089a6024404a827f8e279d2188d.shtml"
+    }
+  ],
+  "finalReview": {
+    "reviewer": "review_gongjiang",
+    "date": "2026-10-10",
+    "result": "All eight Han/IPA/meaning joins independently verified against rendered PDF pages; no material correction needed.",
+    "checkedPrintedPages": [
+      80,
+      82,
+      83,
+      118,
+      136,
+      201,
+      209,
+      354,
+      355
+    ],
+    "checks": [
+      "Superscript digits are explicitly source tone values; single 5 remains 5.",
+      "Gongjiang Town is the study reference, not all Yudu County. Key consultant table is not an exhaustive speaker count.",
+      "Referential scope, literary 内兄 and broader wife-brother quiz exclusion preserved.",
+      "Cached Wikidata Q14570698 supplies the exact town coordinate; P625 has no attached bibliographic reference, so retain approximate public anchor qualification.",
+      "Both government cultural source pages freshly opened and matched exact town/village and dated claims."
+    ],
+    "validation": "npx vitest run src/data/learning/gongjiang-hakka.test.ts src/data/atlas/gongjiang-hakka.test.ts: 2 files, 5 tests passed.",
+    "limitations": [
+      "Official ANU PDF tool fetch returned 403 on this review; rendered cached official PDF and its SHA-256 were inspected.",
+      "No item-level audio or collection dates, complete pronunciation inventory, place-name IPA or licensed photo collection added."
+    ]
+  }
+}

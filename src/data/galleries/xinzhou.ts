@@ -1,0 +1,143 @@
+import type { GalleryPhoto } from "./types";
+
+// Urban cultural scenes; language-consultant locations remain unspecified.
+// Source audit: docs/gallery-xinzhou.md.
+export const xinzhouGalleries: Record<string, GalleryPhoto[]> = {
+  "xinzhou-jin": [
+    {
+      "title": "Gongchen Gate",
+      "category": "Culture",
+      "author": "N509FZ",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gongchen_Gate,_Xinzhou_from_the_north_(20250712095715).jpg",
+      "width": 1440,
+      "height": 960,
+      "caption": "Gongchen Gate in Xinzhou, seen from the north in July 2025.",
+      "id": "xinzhou-xinzhou-jin-01",
+      "src": "/images/xinzhou-xinzhou-jin-01.webp",
+      "alt": "Gongchen Gate in Xinzhou, seen from the north in July 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "Xiurong Academy courtyard",
+      "category": "Culture",
+      "author": "N509FZ",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Upper_Court,_Xiurong_Academy_(20250712084031).jpg",
+      "width": 1440,
+      "height": 960,
+      "caption": "Steps lead between the courtyards of Xiurong Academy in Xinzhou, photographed in July 2025.",
+      "id": "xinzhou-xinzhou-jin-02",
+      "src": "/images/xinzhou-xinzhou-jin-02.webp",
+      "alt": "Steps lead between the courtyards of Xiurong Academy in Xinzhou, photographed in July 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "Xiurong Academy stage",
+      "category": "Culture",
+      "author": "N509FZ",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stage_of_Xiurong_Academy_(20250712090744).jpg",
+      "width": 1440,
+      "height": 960,
+      "caption": "The open theatre stage at Xiurong Academy in Xinzhou, photographed in July 2025.",
+      "id": "xinzhou-xinzhou-jin-03",
+      "src": "/images/xinzhou-xinzhou-jin-03.webp",
+      "alt": "The open theatre stage at Xiurong Academy in Xinzhou, photographed in July 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "Caishen Temple",
+      "category": "Culture",
+      "author": "Yumeto",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250603_Caishen_Miao.jpg",
+      "width": 1440,
+      "height": 1080,
+      "caption": "The entrance to Caishen Temple in Xinzhou’s old town, photographed in June 2025.",
+      "id": "xinzhou-xinzhou-jin-04",
+      "src": "/images/xinzhou-xinzhou-jin-04.webp",
+      "alt": "The entrance to Caishen Temple in Xinzhou’s old town, photographed in June 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "Huguo Temple",
+      "category": "Culture",
+      "author": "Yumeto",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250603_Huguo_Si.jpg",
+      "width": 1440,
+      "height": 1080,
+      "caption": "The entrance to Huguo Temple in Xinzhou’s old town, photographed in June 2025.",
+      "id": "xinzhou-xinzhou-jin-05",
+      "src": "/images/xinzhou-xinzhou-jin-05.webp",
+      "alt": "The entrance to Huguo Temple in Xinzhou’s old town, photographed in June 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "Taishan Temple",
+      "category": "Culture",
+      "author": "Yumeto",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250603_Taishan_Miao.jpg",
+      "width": 1440,
+      "height": 1080,
+      "caption": "A street view beside the entrance to Taishan Temple in Xinzhou, photographed in June 2025.",
+      "id": "xinzhou-xinzhou-jin-06",
+      "src": "/images/xinzhou-xinzhou-jin-06.webp",
+      "alt": "A street view beside the entrance to Taishan Temple in Xinzhou, photographed in June 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "Normal university old campus",
+      "category": "Streets",
+      "author": "N509FZ",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xinzhou_Teachers_University,_old_campus_(20250712135251).jpg",
+      "width": 1440,
+      "height": 960,
+      "caption": "The old campus entrance of Xinzhou Normal University, photographed in July 2025.",
+      "id": "xinzhou-xinzhou-jin-07",
+      "src": "/images/xinzhou-xinzhou-jin-07.webp",
+      "alt": "The old campus entrance of Xinzhou Normal University, photographed in July 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "Xinzhou railway station",
+      "category": "Streets",
+      "author": "Yumeto",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250603_Xinzhou_Zhan.jpg",
+      "width": 1440,
+      "height": 1080,
+      "caption": "Xinzhou railway station and the square outside, photographed in June 2025.",
+      "id": "xinzhou-xinzhou-jin-08",
+      "src": "/images/xinzhou-xinzhou-jin-08.webp",
+      "alt": "Xinzhou railway station and the square outside, photographed in June 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "title": "A bus at Tushaomen",
+      "category": "Streets",
+      "author": "N509FZ",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:0-6642_at_Xinzhou_Gucheng,_Tushaomen_(20250712103245).jpg",
+      "width": 1440,
+      "height": 960,
+      "caption": "A route 920 bus at Tushaomen in Xinzhou’s old town, photographed in July 2025.",
+      "id": "xinzhou-xinzhou-jin-10",
+      "src": "/images/xinzhou-xinzhou-jin-10.webp",
+      "alt": "A route 920 bus at Tushaomen in Xinzhou’s old town, photographed in July 2025.",
+      "year": "2025",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ]
+};

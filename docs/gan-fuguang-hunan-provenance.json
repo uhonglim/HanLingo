@@ -1,0 +1,302 @@
+{
+  "source": {
+    "title": "Chen Nuo · Fu–Guang Gan · 2026 · p.110, Table 2",
+    "url": "https://ccj.pku.edu.cn/article/info?aid=828203532660805",
+    "pdfUrl": "https://ccj.pku.edu.cn/Article/DownLoad?id=828203532660805&type=ArticleFile",
+    "pdfSha256": "9b339d93cad1a0a94a702095cd607638a4fb96ac5935acd79a98bb187bd83f77",
+    "rights": "No open reuse licence found. Limited factual selection of 16 character readings; source tables, article prose and PDF are not redistributed."
+  },
+  "scope": "Hunan Township, Linchuan/Fuzhou, Jiangxi; the paper labels its row 抚州湖南. One male consultant, Zheng Hairong 郑海荣, age 76, bamboo worker, primary education (p.109 footnote b). Collection date, age-reference year and precise village are unspecified. Publication is 2026, not the recording year.",
+  "classification": "Chen 2026 explicitly adopts Xie Liuwen 2006 for Fu–Guang scope. Linchuan localities is an editorial geographic collection, not a formal linguistic subbranch. The paper’s sound-change types are not promoted to genealogical subdivisions.",
+  "transcription": {
+    "sourceConvention": "Chinese corner tone-category marks; no local pitch contours supplied for these forms.",
+    "unicodeSource": "https://www.unicode.org/charts/PDF/UA700.pdf",
+    "normalization": "Preserve exact source segments; move the corner sign to an editorial numeric category suffix. The suffix is processed as source-category and displayed by HanLingo as ·Tn. These numbers are editorial identifiers of the source categories, not printed source digits, local tone numbers, or pitch. Exact original forms remain in each reading note.",
+    "categoryMap": [
+      {
+        "symbol": "꜀",
+        "unicode": "U+A700",
+        "category": "陰平",
+        "editorialId": "T1"
+      },
+      {
+        "symbol": "꜁",
+        "unicode": "U+A701",
+        "category": "陽平",
+        "editorialId": "T2"
+      },
+      {
+        "symbol": "꜂",
+        "unicode": "U+A702",
+        "category": "陰上",
+        "editorialId": "T3"
+      },
+      {
+        "symbol": "꜄",
+        "unicode": "U+A704",
+        "category": "陰去",
+        "editorialId": "T5"
+      },
+      {
+        "symbol": "꜆",
+        "unicode": "U+A706",
+        "category": "陰入",
+        "editorialId": "T7"
+      }
+    ]
+  },
+  "geography": {
+    "sourceUrl": "https://www.wikidata.org/wiki/Q14585730",
+    "coordinates": [
+      116.38064,
+      28.00253
+    ],
+    "parent": "Q1356329 · Linchuan District",
+    "rights": "CC0 structured data",
+    "qualification": "P625 and P131 have no references in the inspected entity. Public approximate township anchor, not a speaker address or dialect boundary. Government heritage lists independently identify 湖南乡 within Linchuan; their 2019 traditional-village list notes Donglin New District management.",
+    "governmentContext": "https://www.jxlc.gov.cn/art/2019/10/16/art_9792_3241603.html"
+  },
+  "cultureSources": [
+    {
+      "title": "Zhuxi village architecture · report by He Manhua · 5 January 2015",
+      "url": "https://www.jxlc.gov.cn/art/2015/1/5/art_1505_1853452.html",
+      "scope": "湖南乡竹溪村; dated report records old theatre and halls with carved architectural work, theft and damage. Not current condition or consultant village."
+    },
+    {
+      "title": "Linchuan government heritage protection boundaries · 30 October 2023",
+      "url": "https://www.jxlc.gov.cn/art/2023/10/30/art_24204_4127750.html",
+      "scope": "Row 131: 游国恩故居, 临川区湖南乡洪塘村委会游家村, 清. Document dated 23 October, published 30 October. Not a language recording location."
+    }
+  ],
+  "held": [
+    "Other places and later tables are outside this bounded starter. Do not copy their forms into Hunan.",
+    "No local place-name IPA, pitch contours, complete tone inventory, word recordings or photo rights have been established.",
+    "Do not apply Dongxiang Xiaogang consultant metadata to the differently labelled Yangqiaodian row."
+  ],
+  "rows": [
+    {
+      "id": "chen2026-hunan-fuzhou-t2-1",
+      "localityId": "hunan-fuzhou",
+      "han": "栽",
+      "sourceForm": "꜀tsai",
+      "segments": "tsai",
+      "category": "陰平",
+      "editorialCategory": "1",
+      "ipa": "[tsai1]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 1
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-2",
+      "localityId": "hunan-fuzhou",
+      "han": "节",
+      "sourceForm": "tɕiet꜆",
+      "segments": "tɕiet",
+      "category": "陰入",
+      "editorialCategory": "7",
+      "ipa": "[tɕiet7]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 2
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-3",
+      "localityId": "hunan-fuzhou",
+      "han": "草",
+      "sourceForm": "꜂tsʰau",
+      "segments": "tsʰau",
+      "category": "陰上",
+      "editorialCategory": "3",
+      "ipa": "[tsʰau3]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 3
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-4",
+      "localityId": "hunan-fuzhou",
+      "han": "全",
+      "sourceForm": "꜁tɕʰyon",
+      "segments": "tɕʰyon",
+      "category": "陽平",
+      "editorialCategory": "2",
+      "ipa": "[tɕʰyon2]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 4
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-5",
+      "localityId": "hunan-fuzhou",
+      "han": "三",
+      "sourceForm": "꜀san",
+      "segments": "san",
+      "category": "陰平",
+      "editorialCategory": "1",
+      "ipa": "[san1]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 5
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-6",
+      "localityId": "hunan-fuzhou",
+      "han": "摘",
+      "sourceForm": "tsaʔ꜆",
+      "segments": "tsaʔ",
+      "category": "陰入",
+      "editorialCategory": "7",
+      "ipa": "[tsaʔ7]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 6
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-7",
+      "localityId": "hunan-fuzhou",
+      "han": "茶",
+      "sourceForm": "꜁tsʰa",
+      "segments": "tsʰa",
+      "category": "陽平",
+      "editorialCategory": "2",
+      "ipa": "[tsʰa2]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 7
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-8",
+      "localityId": "hunan-fuzhou",
+      "han": "猪",
+      "sourceForm": "꜀te",
+      "segments": "te",
+      "category": "陰平",
+      "editorialCategory": "1",
+      "ipa": "[te1]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 8
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-9",
+      "localityId": "hunan-fuzhou",
+      "han": "斋",
+      "sourceForm": "꜀tsai",
+      "segments": "tsai",
+      "category": "陰平",
+      "editorialCategory": "1",
+      "ipa": "[tsai1]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 9
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-10",
+      "localityId": "hunan-fuzhou",
+      "han": "壮",
+      "sourceForm": "tsoŋ꜄",
+      "segments": "tsoŋ",
+      "category": "陰去",
+      "editorialCategory": "5",
+      "ipa": "[tsoŋ5]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 10
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-11",
+      "localityId": "hunan-fuzhou",
+      "han": "初",
+      "sourceForm": "꜀tsʰu",
+      "segments": "tsʰu",
+      "category": "陰平",
+      "editorialCategory": "1",
+      "ipa": "[tsʰu1]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 11
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-12",
+      "localityId": "hunan-fuzhou",
+      "han": "床",
+      "sourceForm": "꜁soŋ",
+      "segments": "soŋ",
+      "category": "陽平",
+      "editorialCategory": "2",
+      "ipa": "[soŋ2]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 12
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-13",
+      "localityId": "hunan-fuzhou",
+      "han": "山",
+      "sourceForm": "꜀san",
+      "segments": "san",
+      "category": "陰平",
+      "editorialCategory": "1",
+      "ipa": "[san1]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 13
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-14",
+      "localityId": "hunan-fuzhou",
+      "han": "蒸",
+      "sourceForm": "꜀tiŋ",
+      "segments": "tiŋ",
+      "category": "陰平",
+      "editorialCategory": "1",
+      "ipa": "[tiŋ1]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 14
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-15",
+      "localityId": "hunan-fuzhou",
+      "han": "丑",
+      "sourceForm": "꜂tʰiu",
+      "segments": "tʰiu",
+      "category": "陰上",
+      "editorialCategory": "3",
+      "ipa": "[tʰiu3]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 15
+    },
+    {
+      "id": "chen2026-hunan-fuzhou-t2-16",
+      "localityId": "hunan-fuzhou",
+      "han": "蛇",
+      "sourceForm": "꜁sa",
+      "segments": "sa",
+      "category": "陽平",
+      "editorialCategory": "2",
+      "ipa": "[sa2]",
+      "printedPage": 110,
+      "pdfPage": 2,
+      "table": 2,
+      "column": 16
+    }
+  ]
+}

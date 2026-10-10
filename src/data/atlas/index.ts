@@ -19,8 +19,8 @@ import { atlasMandarinClusters, atlasMandarinLocalities } from './mandarin';
 import { atlasMinYueClusters, atlasMinYueLocalities } from './min-yue';
 import { atlasWuHakkaClusters, atlasWuHakkaLocalities } from './wu-hakka';
 export type { AtlasCluster, AtlasLocality, AtlasSource } from './types';
-export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters, ...atlasGanXiangClusters, ...atlasOtherSiniticClusters, ...atlasGanToneClusters, ...atlasOverseasYueClusters, ...atlasLexicalStudyClusters, ...atlasLaiyuanContactClusters, ...atlasTongguXihuClusters];
-export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities, ...atlasGanXiangLocalities, ...atlasOtherSiniticLocalities, ...atlasGanToneLocalities, ...atlasXiangReadingLocalities, ...atlasJiangyongChengguanLocalities, ...atlasGanHuaiyueLocalities, ...atlasHuiWuyuanLocalities, ...atlasOverseasYueLocalities, ...atlasLexicalStudyLocalities, ...atlasYunlouGanLocalities, ...atlasWeiziluLocalities, ...atlasQiyangLocalities, ...atlasLaiyuanContactLocalities, ...atlasTongguXihuLocalities].map((point) => ({
+export const atlasClusters = [...atlasMandarinClusters, ...atlasMinYueClusters, ...atlasWuHakkaClusters, ...atlasOverseasMinClusters, ...atlasCountyClusters, ...atlasGanXiangClusters, ...atlasOtherSiniticClusters, ...atlasGanToneClusters, ...atlasOverseasYueClusters, ...atlasLexicalStudyClusters, ...atlasLaiyuanContactClusters, ...atlasTongguXihuClusters, ...atlasGongjiangHakkaClusters, ...atlasGanFuguangHunanClusters];
+export const atlasLocalities = [...atlasMandarinLocalities, ...atlasMinYueLocalities, ...atlasWuHakkaLocalities, ...atlasOverseasMinLocalities, ...atlasCountyLocalities, ...atlasGanXiangLocalities, ...atlasOtherSiniticLocalities, ...atlasGanToneLocalities, ...atlasXiangReadingLocalities, ...atlasJiangyongChengguanLocalities, ...atlasGanHuaiyueLocalities, ...atlasHuiWuyuanLocalities, ...atlasOverseasYueLocalities, ...atlasLexicalStudyLocalities, ...atlasYunlouGanLocalities, ...atlasWeiziluLocalities, ...atlasQiyangLocalities, ...atlasLaiyuanContactLocalities, ...atlasTongguXihuLocalities, ...atlasGongjiangHakkaLocalities, ...atlasGanFuguangHunanLocalities].map((point) => ({
   ...point,
   name: placeLabel(point),
   aliases: [...new Set([...placeNameAliases(point), ...(point.aliases ?? [])])],
@@ -34,3 +34,5 @@ export const findAtlasLocality = (id: string) => localityById.get(id);
 export const findAtlasCluster = (groupId: string, branchId: string, id: string) => clusterByPath.get(`${groupId}/${branchId}/${id}`);
 export const atlasClusterPath = (c: {groupId: string; branchId: string; id: string}) => `/${c.groupId}/${c.branchId}/${c.id}`;
 export const atlasLocalityPath = (p: {groupId: string; branchId: string; clusterId: string; id: string}) => `/${p.groupId}/${p.branchId}/${p.clusterId}/${p.id}`;
+import { atlasGongjiangHakkaClusters, atlasGongjiangHakkaLocalities } from "./gongjiang-hakka";
+import { atlasGanFuguangHunanClusters, atlasGanFuguangHunanLocalities } from "./gan-fuguang-hunan";

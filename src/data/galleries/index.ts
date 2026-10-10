@@ -18,6 +18,7 @@ import { xiamenPhotos } from "../xiamen-photos";
 import type { GalleryPhoto } from "./types";
 
 export const localityGalleries: Record<string, GalleryPhoto[]> = {
+  ...xinzhouGalleries,
   ...otherSiniticGalleries,
   ...jinTunxiGalleries,
   ...jinyunYuehuGalleries,
@@ -47,3 +48,4 @@ export const localityGalleries: Record<string, GalleryPhoto[]> = {
 };
 export const getLocalGallery = (localityId: string): GalleryPhoto[] =>
   localityGalleries[localityId] ?? [];
+import { xinzhouGalleries } from "./xinzhou";

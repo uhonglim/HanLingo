@@ -54,7 +54,7 @@ export const branchLearning: BranchLearning[] = mergeLearningPacks([...expandLea
   ...southernMinLearning,
   ...mandarinYueLearning,
   ...hakkaWuLearning,
-]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning, ...atlasLexibankDeeperPacks, ...yichunYuanzhouLearning, ...jinComparativeLearning, ...houHangzhouShexianLearning, ...qiyangXiangLearning, ...laiyuanContactLearning, ...wuJinyunWuzhouLearning, ...yingtanGanLearning, ...xinzhouQuestionsLearning, ...tongguXihuLearning, ...ganTongchengReadings]).map((pack) => ({
+]), ...atlasLearningPacks, ...atlasCulturePacks, huangyanCulture, ...minExpandedReadings, ...minSouthernExpanded, ...overseasMinLearning, ...minMainlandCulture, ...ganXiangLearning, ...otherSiniticLearning, ...xiangComparativeLearning, ...jiangyongChengguanLearning, ...ganHuaiyueLearning, ...huiWuyuanLearning, ...singaporeCantoneseLearning, ...lexicalExpansionLearning, ...shanghaiCharacterSupplement, ...yunlouGanLearning, ...tunxiLearning, ...weiziluLearning, ...atlasLexibankDeeperPacks, ...yichunYuanzhouLearning, ...jinComparativeLearning, ...houHangzhouShexianLearning, ...qiyangXiangLearning, ...laiyuanContactLearning, ...wuJinyunWuzhouLearning, ...yingtanGanLearning, ...xinzhouQuestionsLearning, ...tongguXihuLearning, ...ganTongchengReadings, ...gongjiangHakkaLearning, ...ganFuguangHunanLearning]).map((pack) => ({
   ...pack,
   culture: [
     ...pack.culture,
@@ -180,3 +180,5 @@ export function searchWords(words: AttestedWord[], query: string) {
     ),
   );
 }
+import { gongjiangHakkaLearning } from "./gongjiang-hakka";
+import { ganFuguangHunanLearning } from "./gan-fuguang-hunan";
